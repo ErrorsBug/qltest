@@ -1,0 +1,24 @@
+.live-topic-list-container {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+
+    .color-danger {
+        color: #f46262;
+    }
+
+    .live-topic-list {
+        padding-bottom: 30px;
+    }
+}
+
+.finish-dialog-wrap {
+    padding: 0 20px;
+    text-align: left;
+    line-height: 36px; /*px*/
+    font-size: 28px; /*px*/
+    color: #5d5b5b;
+}

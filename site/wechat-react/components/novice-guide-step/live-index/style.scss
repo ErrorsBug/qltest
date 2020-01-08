@@ -1,0 +1,137 @@
+.live-index-guide.novice-guide-step {
+    padding-bottom: 100px;
+    background: linear-gradient(to top, rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)) no-repeat bottom / 100% 100px;
+
+    .step-block {
+        position: absolute;
+    }
+
+    .ok-btn {
+        position: absolute;
+        left: 50%;
+        bottom: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .jump-btn {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        padding: 5px 10px;
+        font-size: 28px; /* px */
+        color: #FFF;
+    }
+
+    .step-point {
+        &.live-setting-point {
+            left: 64%;
+            top: 3.7%;
+            width: 9%;
+            padding-top: 9%;
+            border-radius: 50%;
+        }
+    
+        &.live-qr-point {
+            left: 77%;   
+            top: 3.7%;
+            width: 9%;
+            padding-top: 9%;
+            border-radius: 50%;
+        }
+    
+        &.live-share-point {
+            left: 90%;   
+            top: 3.7%;
+            width: 9%;
+            padding-top: 9%;
+            border-radius: 50%;
+        }
+    
+        &.live-banner-point {    
+            left: 2.6%;
+            top: 6.6%;
+            width: 94.8%;
+            padding-top: 27.5%;
+            border-radius: 10px;
+        }
+
+        &.live-classify-point {
+            left: 2.5%;
+            top: 33%;
+            width: 96%;
+            padding-top: 10%;
+        }
+    }
+
+
+    .live-guide-tips {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .left {
+            align-self: flex-start;
+        }
+        .right {
+            align-self: flex-end;
+        }
+
+        &.live-settting {
+            left: 52%;
+            top: 5.7%;
+
+            .guide-tips {
+                width: 246px;
+                height: 99px;
+                background: url('./img/guide-tips-1.png') no-repeat center / contain;
+            }
+        }
+
+        &.live-qr {
+            left: 28.2%;
+            top: 5.7%;
+
+            .guide-tips {
+                width: 418px;
+                height: 114px;
+                background: url('./img/guide-tips-2.png') no-repeat center / contain;
+            }
+        }
+
+        &.live-share {
+            left: 31%;
+            top: 5.7%;
+
+            .guide-tips {
+                width: 494px;
+                height: 109px;
+                background: url('./img/guide-tips-3.png') no-repeat center / contain;
+            }
+        }
+
+        &.live-banner {
+            left: 0;
+            top: 13%;
+            width: 100%;
+
+            .guide-tips {
+                width: 713px;
+                height: 119px;
+                background: url('./img/guide-tips-4.png') no-repeat center / contain;
+            }
+        }
+
+        &.live-classify {
+            left: 0;
+            top: 36%;
+            width: 100%;
+
+            .guide-tips {
+                width: 713px;
+                height: 119px;
+                background: url('./img/guide-tips-5.png') no-repeat center / contain;
+            }
+        }
+    }
+}

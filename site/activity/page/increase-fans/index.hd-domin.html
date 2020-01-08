@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="https://img.qlchat.com/qlLive/ico/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="../../components_modules/fonts/style.css">
+    <script src="../../components_modules/lib-flexible/1.0.0/lib-flexible.js"></script><!--ignore-->
+    <script src="//res.wx.qq.com/open/js/jweixin-1.2.0.js"></script><!--ignore-->
+    <script type="text/javascript" src="../../components_modules/require/2.1.18/require.js"></script><!--ignore-->
+</head>
+
+<body>
+    <div id="container">
+        <div class="main-container">
+            <div class="head-img" style="background-image:url({{imageUrl}})"></div>
+            <div class="content-area">
+                    <div class="tips">
+                        
+                    </div>
+                    <div class="content-detail">
+                        
+                    </div>
+                    <!-- <div class="get-course-btn">
+                        <span>立即免费领取</span>
+                    </div> -->
+
+            </div>
+
+        </div>
+
+        <div class="modal">
+            <div class="bg"></div>
+            <main>
+                
+            </main>
+        </div>
+
+        <div class="qr-modal">
+            <div class="bg"></div>
+        </div>
+
+        <!-- global audio tag -->
+        <audio id="course-player"></audio>
+    </div>
+
+    <!--SCRIPT_PLACEHOLDER-->
+    <script>
+        (function (win) {
+            require(['./index.hd-domin'], function (index) {
+                initData = [[INITDATA]]
+                index.init(initData);
+            });
+        })(window);
+    </script><!--ignore-->
+    <script type="text/javascript">
+        var _uaq = window._uaq || [];
+        // 配置站点名,默认值为： ql-h5
+        _uaq.push(['set', 'site', 'activity']);
+        // 配置站点版本, 默认值为: 1.0.0
+        _uaq.push(['set', 'sitever', '1.0.0']);
+        // 配置日志采集服务地址INITDATA志,默认地址为： //collect.qlchat.com
+        _uaq.push(['set', 'server', '[[collectApiPrefix]]']);
+        // 配置渠道参数
+        _uaq.push(['set', 'ch', 'query.ch']);
+    </script><!--ignore-->
+    <script type="text/javascript" src="[[collectjs]]"></script><!--ignore-->
+    <script>
+            // 百度统计
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "//hm.baidu.com/hm.js?9f8c5d323a26421cb966b5e405d629c3";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script><!--ignore-->
+</body>
+
+</html>

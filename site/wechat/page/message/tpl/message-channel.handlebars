@@ -1,0 +1,20 @@
+{{#each channels}}
+<dd class="on-log on-visible" data-log-region="channel-item" data-log-pos="{{@index}}">
+    <a href="/wechat/page/live/messageManage/{{topicId}}?type=channel">
+    <div>
+        <span class="topic-name multi-elli">{{name}}</span>
+        <span  class="topic-newestday">{{dateFormat beginTime 'MM-dd hh:mm'}}</span>
+    </div>
+    {{#compare isReply "==" "Y"}}
+    <div class="topic-status status1">
+        <var>{{count}}</var> 条未处理
+    </div>
+    {{/compare}}
+    {{#compare isReply "!=" "Y"}}
+    <div class="topic-status status2">
+        暂无新留言
+    </div>
+    {{/compare}}
+    </a>
+</dd>
+{{/each}}

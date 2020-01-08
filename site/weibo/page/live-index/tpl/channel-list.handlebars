@@ -1,0 +1,29 @@
+{{#each channels}}
+<li class="channel-item" data-channel-id="{{id}}">
+    <img class="portrait img-default" data-imgloaded="false" data-imgsrc="{{headImage}}@75h_75w_1e_1c_2o">
+    <div class="channel-content">
+
+        <p class="channel-name">{{name}}</p>
+
+        <div class="channel-intro">
+            {{#if latestTopicName}}
+                {{#compare latestTopicStatus "==" "beginning"}}
+                    <span class="status-badge ing">热播中</span>
+                {{/compare}}
+                {{#compare latestTopicStatus "==" "ended"}}
+                    <span class="status-badge over">已结束</span>
+                {{/compare}}
+                <span class="intor-text">{{latestTopicName}}</span>
+            {{else}}
+                <span>暂无课程</span>
+            {{/if}}
+        </div>
+
+        {{!--<div class="channel-stat">
+            <span>{{defaultVal sum 0}}人已参加</span>
+            <span>共{{defaultVal topicNum 0}}个话题</span>
+            <span>{{defaultVal beginTopicNum 0}}个正在进行</span>
+        </div>--}}
+    </div>
+</li>
+{{/each}}

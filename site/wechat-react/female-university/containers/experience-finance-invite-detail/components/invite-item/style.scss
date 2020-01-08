@@ -1,0 +1,68 @@
+.finance-invite-item-box{
+    padding-bottom: 48px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    .tr-item-pic{
+        position: relative; 
+        margin-right: 20px;
+        >div{
+            background: #e5e5e5;
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            border-radius:100px;
+            display: block;
+            border: 1px solid #eee;/*no*/
+        }
+    }
+    .tr-item-info{
+        position: relative; 
+        display: flex;
+        align-items: center; 
+        min-height: 100px;
+        flex: 1;
+        .name{
+            display: flex;
+            font-size: 30px;
+            align-items: center;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 8px;
+            line-height:42px;
+            position: relative;
+            padding-right: 78px; 
+        }
+        .info{
+            font-size: 26px;
+            color: #999;
+            line-height: 36px;
+            display: flex;
+            align-items: center;
+            span{
+                display: inline-block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                max-width: 240px;
+            }
+        }
+    }
+    .ivi-right{
+        .ivi-time{
+            font-size:26px; 
+            color:rgba(102,102,102,1);
+            margin-bottom: 8px;
+            line-height:42px;
+        }
+        text-align: right;
+        margin-left: 20px;
+        .ivi-money{
+            font-size:26px; /* px */
+            color:rgba(224,65,79,1);
+            line-height:36px;
+        }
+
+    }
+}

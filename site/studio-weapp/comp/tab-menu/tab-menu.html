@@ -1,0 +1,9 @@
+<view class="co-white-pd"></view>
+<view class="co-tab-menu">
+    <block wx:for="{{tabs}}" wx:key="{{key}}" wx:for-index="tabIndex" wx:for-item="tab">
+        <view class="co-tab-item" data-url="{{tab.url}}" data-iscurrent="{{activeTabKey == tab.key}}" bindtap="handleTabTap">
+            <image class="co-tab-img index-img" src="{{activeTabKey == tab.key ? tab.activeIcon: tab.icon}}" mode="widthFix"></image>
+            <text class="co-tab-name {{activeTabKey == tab.key ? 'co-active-name': ''}}"> {{tab.name}}</text>
+        </view>
+    </block>
+</view>

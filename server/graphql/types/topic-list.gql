@@ -1,0 +1,65 @@
+
+# 话题类
+type TopicItem {
+    # 话题ID
+    id: String
+    # 话题名称
+    topic: String
+    # 背景图
+    backgroundUrl: String
+    # 预计开播时间
+    planTime: String
+    # 付费人数
+    authNum: String
+    # 价格，分
+    money: String
+    # 话题浏览数
+    browseNum: String
+    # 是否频道话题如果有，则返回频道ID
+    channelId: String
+    # 是否转播Y是，N否
+    isRelay: String
+    # 话题开始时间yyyy/MM/dd HH:mm
+    startTime: String
+    # 话题状态beginning=开始中，ended=已结束，delete=删除
+    status: String
+    # 话题风格normal-讲座，ppt-PPt风格
+    style: String
+    # 话题类型public=免费，charge=收费，encrypt=加密
+    type: String
+    # 频道话题列表：查看是当前用户否已经为话题付费true
+    isAuthTopic: Boolean
+    # 话题开始时间yyyy/MM/dd HH:mm
+    beginTime: String
+    # 是否单节付费Y N
+    isSingleBuy: String
+    # 是否单节购买YN
+    isAuditionOpen: String
+    # 显示或者隐藏话题
+    displayStatus: String
+}
+
+extend type Query {
+    # 获取话题列表
+    topicList(
+        # 直播间id
+        liveId: String,
+        # 频道ID表示该频道下的话题
+        channelId: String,
+        # 用户ID频道列表必填
+        userId: String,
+        # 系列课下面的话题名称
+        queryData: String,
+        # 系列课下面话题的类型
+        style: String,
+        # 页码
+        page: Int,
+        # 每页数量
+        size: Int
+    ): [TopicItem]
+}
+
+extend type Mutation {
+    # 显示或者隐藏一个话题
+    changeTopicHidden(topicId: String, displayStatus: String): Response
+}

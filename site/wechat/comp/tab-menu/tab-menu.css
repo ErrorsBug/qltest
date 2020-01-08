@@ -1,0 +1,88 @@
+.co-tab-menu {
+    width: 100%;
+    height: 98px; /*px*/
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid #e5e5e5; /*no*/
+    z-index: 100;
+    overflow: hidden;
+    background-color: rgba(255,255,255,.95);
+    font-size: 0;
+    max-width: 1280px; /*px*/
+    min-width: 640px; /*px*/
+}
+
+.co-tab-menu .co-menus {
+    height: 100%;
+}
+
+.co-tab-menu .co-menu {
+    display: inline-block;
+    width: 33.3%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.co-tab-menu .co-menu .co-wrap {
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+.co-tab-menu .co-menu-icon {
+    width: 100%;
+    text-align: center;
+}
+
+ .co-tab-menu .co-menu-icon span {
+    display: inline-block;
+    width: 48px; /*px*/
+    height: 48px; /*px*/
+    vertical-align: middle;
+}
+
+.co-tab-menu .co-menu .index-icon {
+    background: url(./img/index-icon.png?__inline) no-repeat center center;
+    background-size: 46px 46px; /*px*/
+}
+
+.co-tab-menu .co-menu.active .index-icon {
+    background: url(./img/index-icon-active.png?__inline) no-repeat center center;
+    background-size: 46px 46px; /*px*/
+}
+
+.co-tab-menu .co-menu .theme-icon {
+    background: url(./img/theme-icon.png?__inline) no-repeat center center;
+    background-size: 46px 46px; /*px*/
+}
+
+.co-tab-menu .co-menu.active .theme-icon {
+    background: url(./img/theme-icon-active.png?__inline) no-repeat center center;
+    background-size: 46px 46px; /*px*/
+}
+
+.co-tab-menu .co-menu .mine-icon {
+    background: url(./img/mine-icon.png?__inline) no-repeat center center;
+    background-size: 46px 46px; /*px*/
+}
+
+.co-tab-menu .co-menu.active .mine-icon {
+    background: url(./img/mine-icon-active.png?__inline) no-repeat center center;
+    background-size: 46px 46px; /*px*/
+}
+
+.co-tab-menu .co-title {
+    width: 100%;
+    margin-top: 8px; /*px*/
+    color: #909499;
+    font-size: 22px; /*px*/
+    margin-bottom: 2px; /*px*/
+}
+
+.co-tab-menu .co-menu.active .co-title {
+    color: #2984e2;
+}

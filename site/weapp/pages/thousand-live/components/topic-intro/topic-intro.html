@@ -1,0 +1,19 @@
+<view class="topic-intro">
+    <view class="topic-intro-title">
+        <text class="topic-intro-title-content"> {{topicName}}</text>
+    </view>
+    <view wx:if="{{isShowTimer}}" class="topic-intro-timer">
+        <text>距离课程开始：</text>
+        <view class="topic-intro-timer-item"> {{startTimer[0]}}<text class="topic-intro-timer-text">天</text></view>
+        <view class="topic-intro-timer-item"> {{startTimer[1]}}<text class="topic-intro-timer-text">时</text></view>
+        <view class="topic-intro-timer-item"> {{startTimer[2]}}<text class="topic-intro-timer-text">分</text></view>
+        <view class="topic-intro-timer-item"> {{startTimer[3]}}<text class="topic-intro-timer-text">秒</text></view>
+    </view>
+    <view wx:else class="topic-intro-time">
+        本次课程于{{topicStartTimeView}}开始
+    </view>
+    <!-- <navigator class="btn-goto-intro" open-type="redirect" url="/pages/topic-listening/topic-listening?topicId={{topicId}}">
+        <image src="./img/audio.png" mode="widthFix"/>
+        <text>使用极简模式收听</text>
+    </navigator> -->
+</view>

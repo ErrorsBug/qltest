@@ -1,0 +1,36 @@
+.ls-hot-sort{
+    padding-left: 32px;
+    .ls-sort-title{
+        padding-right: 32px;
+        margin-bottom: 32px;
+    }
+    .ls-hot-items{
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 18px;
+        margin-bottom: 46px;
+        position: relative;
+        &:before{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 32px;
+            height: 2px; /*no*/
+            background: #F7F7F7;
+            content: '';
+        }
+        p{
+            height: 72px;
+            padding: 0 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background:rgba(247,247,247,1);
+            border-radius:8px;
+            color: #333;
+            font-size: 28px; /*px*/
+            margin-right: 32px;
+            margin-bottom: 32px;
+        }
+    }
+}

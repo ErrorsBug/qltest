@@ -1,0 +1,14 @@
+
+<div class="pay-sheet-container">
+    <header class="pay-sheet-header">选择购买类型</header>
+
+    <main class="pay-sheet-main" id="do-pay-channel">
+        {{#each chargeConfigs}}
+            <span class="pay-item" data-config-id="{{@index}}"><span>￥{{amount}}/{{chargeMonths}}个月</span></span>
+        {{/each}}
+    </main>
+
+    <footer class="pay-sheet-footer btn-row">
+        <span class="pay-btn" id="pay-btn">购买系列课：{{#each chargeConfigs}}<span>￥{{amount}}/{{chargeMonths}}个月</span>、{{/each}}</span>
+    </footer>
+</div>

@@ -1,0 +1,9 @@
+{{#each dates}}
+    <li class="timelist on-log" data-log-region="period_select" data-log-pos="{{this.date}}">
+        {{#if this.dateEnd}}
+            <span>{{this.date}}至{{this.dateEnd}}</span>
+        {{else}}
+            <span>{{this.date}}</span>
+        {{/if}}
+    </li>
+{{/each}}

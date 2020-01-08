@@ -1,0 +1,14 @@
+<import src="../../tpl/speak-time.wxml"/>
+<import src="../../tpl/speak-user-name.wxml"/>
+<import src="../../tpl/speak-other-msg.wxml"/>
+
+<view class="speak-bubble " id="{{speak.id}}">
+  <template is="speak-tpl-time" data="{{speak}}"/>
+  <view class="sp-flex-box left-bubble">
+    <include src="../../tpl/speak-head.wxml"/>
+    <view class="sp-flex">
+      <template is="speak-tpl-user-name" data="{{speak}}"/>
+      <template is="speak-tpl-other-msg"/>
+    </view>
+  </view>
+</view>

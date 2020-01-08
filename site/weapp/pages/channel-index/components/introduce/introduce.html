@@ -1,0 +1,45 @@
+<view class="introduce" wx:if="{{introList.length || isRebate || !notSummary}}">
+    
+    <view class="intro-block" wx:if="{{isRebate}}">
+        <view class="title">购买返现</view>
+        <view class="content-text">
+            <view class="bold">活动介绍：</view>
+            本系列课程已加入购买返现活动，可以通过完成返现任务获得收益，最高可达到课程金额的80%，返现收益直接到达微信钱包。
+        </view>
+        <view class="content-text">
+            <view class="bold">活动时间：</view>
+            {{rebateDate}}
+        </view>
+        <view class="content-text">
+            <view class="bold">返现金额：</view>
+            最高可达到课程金额的80%
+        </view>
+        <view class="content-text">
+            <view class="bold">提现说明：</view>
+            收益直接到达微信钱包，微信钱包提现即可使用。
+        </view>
+        <view class="content-text">
+            <view class="bold">如何购买：</view>
+            直接点击下面红色按钮，即可获得返现收益
+        </view>
+    </view>
+
+    <view class="intro-block" wx:if="{{notSummary}}" wx:for="{{introList}}" wx:key="index" wx:for-item="desc">
+        <view class="title">{{desc.title}}</view>
+
+        <block wx:for="{{desc.content}}" wx:key="id" wx:for-item="content">
+            <image wx:if="{{content.type == 'image'}}" src="{{content.content}}" mode="widthFix" class="content-image"></image>
+            <text wx:if="{{content.type == 'text'}}" class="content-text">
+                {{content.content}}
+            </text>
+        </block>
+    </view>
+
+    
+    <!-- 富文本的介绍 -->
+    <view wx:if="{{!notSummary}}" class="rich-text-box">
+        <rich-text nodes="{{summary}}" bindtap="tap"></rich-text>
+    </view>
+</view>
+
+<view class="no-intro" wx:if="{{!introList.length && notSummary}}">暂无简介</view>

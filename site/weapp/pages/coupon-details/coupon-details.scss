@@ -1,0 +1,133 @@
+@import "../../comp/style-variables.scss";
+
+page {
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+}
+
+
+$red: #ed4d4e;
+$fontC4: #c8c8c8;
+
+.coupon {
+  position: relative;
+  margin: 30rpx auto 20rpx;
+  width: 670rpx;
+  height: 640rpx;
+  background: url("./img/coupon-red-pocket.png") no-repeat center;
+  background-size: 100%;
+
+  .mark {
+    position: absolute;
+    top: 64rpx;
+    right: 75rpx;
+    width: 118rpx;
+    height: 165rpx;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-image: url("./img/coupon-mark-ch-new.png");
+
+    &.disabled {
+      background-image: url("./img/coupon-mark-ch-disabled.png");
+    }
+  }
+
+  .price {
+    position: absolute;
+    width: 100%;
+    top: 16%;
+    text-align: center;
+    font-size: 70rpx;
+    color: $red;
+    font-weight: bold;
+    line-height:1;
+
+    &.disabled {
+      color: $fontC4;
+    }
+
+    .num {
+      font-size: 100rpx;
+      display: inline;
+    }
+  }
+
+  .disabled-tips {
+    position: absolute;
+    width: 100%;
+    top: 32%;
+    text-align: center;
+    font-size: 24rpx;
+    color: $fontC4;
+  }
+
+  .coupon-desc {
+    position: absolute;
+    width: 500rpx;
+    top: 298rpx;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 24rpx;
+    color: $fontC4;
+    display:-webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .source {
+    position: absolute;
+    width: 100%;
+    bottom: 80rpx;
+    text-align: center;
+    font-size: 24rpx;
+    color: #fff;
+    line-height: 1.8;
+    
+    .name {
+      font-size: 32rpx;
+      white-space: nowrap;
+      view {
+        display: inline-block;
+        max-width: 520rpx;
+        margin:0 auto;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        vertical-align: text-bottom;
+      }
+    }
+  }
+}
+
+.btns {
+  width: 600rpx;
+  margin: 0 auto;
+
+  .btn {
+    height: 88rpx;
+    line-height: 86rpx;
+    color: #fff;
+    font-size: 34rpx;
+    text-align: center;
+    background: $red;
+    box-sizing: border-box;
+    border: 1rpx solid $red;
+    border-radius: 88rpx;
+    margin-bottom: 20rpx;
+
+    &.hollow {
+      color: $red;
+      background: transparent;
+    }
+
+    &::after {
+      content: none;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.store-info-container {
+    padding: 10px 40px;
+    background-color: #fafafa;
+}
+.head-tip {
+    color: #333333;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 0 0 0 10px;
+    margin: 20px 0;
+    border-left: 5px solid #bebebe;
+}
+.info {
+    font-size: 14px;
+    > div {
+        margin: 10px 0;
+        > span:nth-child(1) {
+            color: #666666;
+            margin-right: 20px;
+        }
+        > span:nth-child(2) {
+            color: #333333;
+        }
+    }
+}
+.upgrade-button {
+    color: #ffffff;
+    margin-left: 10px;
+    border-radius: 12px;
+}

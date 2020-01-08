@@ -1,0 +1,107 @@
+.template-intro-component_DFDSGD {
+    background: #fff;
+    border-radius: 26px;
+    width: 660px;
+    overflow: hidden;
+
+    .header {
+        height: 100px;
+        display: flex;
+        padding-top: 48px;
+        line-height: 46px;
+        justify-content: center;
+
+        font-family: PingFangSC-Medium;
+        font-size: 32px;
+        color: #333;
+        text-align: center;
+        box-sizing: border-box;
+        position: relative;
+        .close {
+            position: absolute;
+            font-size: 22px;/*px*/
+            color: #979797;
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+            text-align: center;
+            line-height: 60px;
+        }
+    }
+
+    .intro {
+        padding: 20px 30px 16px 30px;
+        font-family: PingFangSC-Regular;
+        font-size: 28px;
+        color: #666666;
+        text-align: left;
+        line-height: 40px;
+    }
+
+    .backend-wbesite {
+        padding: 0 30px;
+        display: flex;
+        margin-bottom: 38px;
+        line-height: normal;
+        justify-content: space-between;
+        align-items: center;
+        .label {
+            font-family: PingFangSC-Regular;
+            font-size: 28px;
+            color: #333;
+            text-align: left;
+        }
+
+        .url {
+            font-family: PingFangSC-Regular;
+            font-size: 28px;
+            color: #FF9F00;
+            text-align: left;
+            flex: 1;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+        }
+
+        .copy-url {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            width:162px;
+            height:62px;
+            border-radius:32px;
+            border:1px solid rgba(247,54,87,1);
+            color: #F73657;
+            font-size: 28px;/*px*/
+            margin-left: 8px;
+        }
+    }
+
+    .img-wrap {
+        padding: 0 30px;
+        margin-bottom: 40px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .btn-look {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 40px;
+        width:468px;
+        height:76px;
+        background:rgba(247,54,87,1);
+        border-radius:50px;
+        font-size: 32px;/*px*/
+        color: #fff;
+        cursor: pointer;
+    }
+}

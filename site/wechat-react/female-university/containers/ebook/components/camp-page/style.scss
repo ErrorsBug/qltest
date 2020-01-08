@@ -1,0 +1,63 @@
+.eb-camp-page{
+    display: flex;
+    width: 100%;
+    height:100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & > div{
+        text-align: center;
+        .eb-camp-img{
+            width: 406px;
+            height: 254px;
+            border-radius:8px;
+            margin: 0 auto 60px;
+            overflow: hidden;
+            img{
+                width:100%;
+                height: auto;
+            }
+        }
+        h4{
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            font-size: 52px; /*px*/
+            line-height: 1.5;
+            color: #A47474;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        span{
+            display: block;
+            text-align: center;
+            font-size: 28px; /*px*/
+            line-height: 1.4;
+            color: #999;
+            margin-bottom: 56px;
+        }
+        p{
+            text-align: center;
+            font-size: 30px; /*px*/
+            line-height: 1.4;
+            color: #A47474;
+            margin-bottom: 56px;
+        }
+        .eb-camp-btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 240px;
+            height: 70px;
+            border-radius: 8px;
+            font-size: 32px; /*px*/
+            color: #A47474;
+            font-weight: bold;
+            border: 2px solid rgba(164,116,116,1); /*px*/
+            margin: 0 auto;
+        }
+    }
+}

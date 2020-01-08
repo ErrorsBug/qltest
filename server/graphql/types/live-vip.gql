@@ -1,0 +1,17 @@
+
+# 直播间VIP信息对象
+type LiveVipInfo {
+    # VIP收费描述
+    vipDesc: String
+    # VIP过期时间
+    expiryTime: String
+    # 直播间是否打开VIP: Y or N
+    isOpenVip: String
+    # 是否直播间VIP: Y or N
+    isVip: String
+}
+
+extend type Query {
+    # 用户的直播间VIP信息
+    liveVipInfo(liveId: String): LiveVipInfo
+}

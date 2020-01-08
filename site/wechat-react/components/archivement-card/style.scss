@@ -1,0 +1,78 @@
+// 成就卡浮层按钮
+.archivementcard-btn {
+    width: 112px;
+    height: 68px;
+    margin: 10px 0;
+    cursor: pointer;
+    box-sizing: border-box;
+    pointer-events: auto;
+    background: url(./img/achievement_card_logo.png) no-repeat center center;
+    background-size: 98%;
+    transform: rotate(-8deg);
+}
+.audio-grapic .archivementcard-btn,
+.thousand-live-video .archivementcard-btn {
+    position: absolute;
+    right: 20px;
+    bottom: 150px;
+    z-index: 2;
+}
+
+// 成就卡模态框
+.archivementcard-modal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    background-color: rgba(0, 0, 0, .7);
+    .archivementcard-wrap {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 600px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        border-radius: 15px;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+    }
+    .close-modal-wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .icon-close-modal {
+        display: block;
+        width: 43px;
+        height: 38px;
+        background: url(./img/icon_close_modal.png) no-repeat center center;
+        background-size: 100%;
+    }
+    .archivementcard-badge {
+        height: 260px;
+        margin: 10px 0;
+        background: url(./img/achivement_card_badge.png) no-repeat center center;
+        background-size: 60%;
+    }
+    .archivementcard-text {
+        color: #666666;
+        font-size: 28px;
+        line-height: 45px;
+        margin: 30px 0;
+    }
+    .get-card-btn {
+        color: #f83657;
+        font-size: 32px;
+        width: 395px;
+        height: 76px;
+        line-height: 76px;
+        margin: 30px auto;
+        border-radius: 38px;
+        border: 1px solid #f83657;
+    }
+}

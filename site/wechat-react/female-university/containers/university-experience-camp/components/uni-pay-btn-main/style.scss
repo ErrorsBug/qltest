@@ -1,0 +1,91 @@
+
+.uni-pay-btn-main{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    height:144px !important;
+    background:rgba(255,255,255,1);
+    padding:0 32px;
+    z-index: 2;
+    .uni-pay-com{
+        height: 100px;
+        display: flex;
+        &.uni-pay-info {
+            flex: 1;
+            flex-direction: column;
+            justify-content: center;
+            background: #fff;
+            p{
+                font-size: 20px;  
+                color: #666;
+                line-height:50px;
+                margin-bottom: 4px;
+                strong{ 
+                    font-size:36px; 
+                    font-weight:bold;
+                    color:rgba(247,54,87,1);
+                }
+                em{
+                    text-decoration: line-through;
+                    padding-left: 10px;
+                }
+            }
+            span{
+                font-size: 22px;  
+                color: #999; 
+                line-height:32px;
+            }
+        }
+        
+         
+        
+        @keyframes scaleBtnRed
+        {
+            0%   {transform:scale(1);}         
+            25%   {transform:scale(0.9); }   
+            50%   {transform:scale(1); }   
+            75%   {transform:scale(0.9); }   
+            100%   {transform:scale(1); }   
+        }
+        &.uni-pay-red{ 
+            line-height: normal;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width:382px;
+            height:112px;
+            background:rgba(247,54,87,1);
+            border-radius:16px;
+            font-weight:bold;
+            animation: scaleBtnRed 2s  linear infinite;
+            .uni-pay-red-text{
+                font-size:40px;
+                color:rgba(255,255,255,1);
+                line-height:56px;
+            }
+            .uni-pay-red-timer{
+                color:rgba(254,255,0,1);
+                line-height:34px;
+                span{
+                    color:rgba(51,51,51,1);
+                    font-size:20px;
+                    height:26px;
+                    background:rgba(254,255,0,1);
+                    border-radius:3px;
+                    display: inline-flex;
+                    align-items: center;
+                    padding:0 4px;
+                    margin:0 8px;
+                    justify-content: center;
+                    min-width: 24px;
+                    &:last-child{
+                        min-width: 12px; 
+                    }
+                }
+            }
+        } 
+    }
+}

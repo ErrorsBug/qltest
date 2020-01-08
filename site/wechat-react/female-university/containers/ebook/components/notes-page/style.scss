@@ -1,0 +1,74 @@
+.eb-notes-page{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    .eb-notes-tilte{
+        padding-bottom: 20px;
+        font-size: 36px; /*px*/
+        color: #A47474;
+        font-weight: bold;
+        line-height: 1.4;
+    }
+    .eb-notes-cont{
+        flex: 1 1 0;
+        overflow: hidden;
+        height: fit-content;
+        overflow: hidden;
+        overflow-y: auto;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        .eb-notes-fouce{
+            padding-bottom: 46px;
+            margin-bottom: 46px;
+            border-bottom: 2px solid #E5D7D7; /*no*/
+            &:last-child{
+                margin-bottom: 0;
+                border-bottom: none; /*no*/
+            }
+        }
+        h4{
+            font-size: 36px; /*px*/
+            color: #A47474;
+            font-weight: bold;
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+        .eb-notes-txt, p{
+            font-size: 30px; /*px*/
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        .eb-notes-content{
+            img{
+                width: 100%;
+                height: auto;
+                margin-bottom: 22px;
+            }
+        }
+    }
+    .eb-notes-emt{
+        height: 100%;
+        display: flex;
+        justify-items: center;
+        justify-content: center;
+        flex-direction: column;
+        h4{
+            font-size: 36px; /*px*/
+            color: #A47474;
+            font-weight: bold;
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+        p{
+            font-size: 30px; /*px*/
+            color: #BBB;
+            line-height: 1.6;
+        }
+    }
+}

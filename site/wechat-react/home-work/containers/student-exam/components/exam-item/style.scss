@@ -1,0 +1,119 @@
+.exam-item {
+    background: #FFF;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0px 25px 40px 0px rgba(0, 0, 0, .05);
+
+    .exam-item-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 28px; /* px */
+        color: #999;
+
+        span {
+            color: #333;
+        }
+
+        s {
+            text-decoration: none;
+        }
+    }
+
+    .exam-item-content {
+        line-height: 1.4;
+
+        .item-content-title {
+            color: #333;
+            font-size: 32px; /* px */
+            padding: 30px 0;
+            font-weight: bold;
+        }
+
+        .item-content-option {
+            font-size: 28px; /* px */
+            color: #666;
+            margin-bottom: 20px;
+            display: flex;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            & > p {
+                padding-top: 2px;
+                display: flex;
+                & > span {
+                    flex-shrink: 0;
+                }
+            }
+
+            &::before {
+                flex-shrink: 0;
+                content: '';
+                width: 40px;
+                height: 40px;
+                box-sizing: border-box;
+                border-radius: 50%;
+                margin-right: 10px;
+                flex-shrink: 0;
+                background: url('./image/not_selecte.png') no-repeat center;
+                background-size: contain;
+            }
+            
+            &.check::before {
+                background: url('./image/correct.png') no-repeat center;
+                background-size: contain;
+            }
+
+            &.error::before {
+                background: url('./image/error.png') no-repeat center;
+                background-size: contain;
+            }
+
+            &.miss::before {
+                background: url('./image/miss.png') no-repeat center;
+                background-size: contain;
+            }
+        }
+
+        
+        .analysis-content {
+            margin-top: 30px;
+            font-size: 28px; /* px */
+            line-height: 1.4;
+            text-size-adjust: none;
+
+            .answer {
+                color: #F73657;
+                padding-bottom: 8px;
+            }
+
+            .speak-content {
+                font-size: 28px; /* px */
+                line-height: 1.4;
+                color: #333;
+                
+                &.normal {
+                    height: 210px; /* px */
+                    overflow: hidden;
+                }
+
+                &.ellipsis {
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    text-overflow: ellipsis;
+                    -webkit-line-clamp: 5;
+                }
+            }
+
+            .shrink {
+                display: inline-block;
+                color: #708DB7;
+                font-size: 24px; /* px */
+                margin: 16px 0;
+            }
+        }
+    }
+}

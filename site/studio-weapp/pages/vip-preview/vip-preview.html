@@ -1,0 +1,74 @@
+<view class='vip-card-container' style="background-image:url({{uri_card}})">
+    <view class='vip-info' wx:if="{{vipInfo.isVip==='Y'}}">
+        <image src="{{logo}}" mode="aspectFill" class="live-logo"/>
+
+        <view class='vip-base-info'>
+            <view class="live-name">
+                {{liveInfo.name}}
+                <image class='vip-badge' src="{{uri_badge}}" mode="aspectFill"/>
+            </view>
+            <view class="expire-time">有效期至 {{expireTime}}</view>
+        </view>
+    </view>
+
+    <view class="no-vip" wx:if="{{vipInfo.isVip !== 'Y'}}">
+        <view class='vip-title'>会员特权</view>
+        <view class='vip-desc'>立即开通，获得会员专享</view>
+    </view>
+
+    <section class='icon-group-container'>
+        <view class='icon-group'>
+            <image src="{{uri_icon_v}}" class="icon-image" mode="aspectFill"/>
+            <view class="group-text">尊贵标识</view>
+        </view>
+
+        <view class='icon-group'>
+            <image src="{{uri_icon_lession}}" class="icon-image" mode="aspectFill" />
+            <view class="group-text">付费课程</view>
+        </view>
+
+        <view class='icon-group'>
+            <image src="{{uri_icon_service}}" class="icon-image" mode="aspectFill" />
+            <view class="group-text">专属服务</view>
+        </view>
+    </section>
+
+    <!-- 更改支付方案 -->
+    <!-- <button wx:if="{{vipInfo.isOpenVip === 'Y'}}" class='vip-btn' open-type="contact" session-from="pay_vip_{{liveInfo.id}}_{{liveInfo.name}}">
+        {{vipInfo.isVip === 'Y' ? '续费' : '开通会员'}}
+    </button> -->
+    <view bind:tap="onBuyVipTap" class="vip-btn" wx:if="{{vipInfo.isOpenVip === 'Y'}}">
+        {{vipInfo.isVip === 'Y' ? '续费' : '开通会员'}}
+    </view>
+    <button wx:else class='vip-btn' bind:tap="onViewVipTap" loading="{{!vipInfo.isVip}}" disabled="{{!vipInfo.isVip}}">查看会员</button>
+</view>
+
+<view class='intro-container'>
+    <view class='intro-head'>特权说明</view>
+
+    <view class='power-list'>
+        <view class="power-item">
+            <view class="title">尊贵标识</view>
+            <view class="desc">直播间VIP将带有醒目的会员标识，尽显尊贵的学员身份</view>
+        </view>
+        <view class="power-item">
+            <view class="title">付费课程</view>
+            <view class="desc">直播间VIP在会员期间内可享受收听所有加密和付费课程，性价比更高</view>
+        </view>
+        <view class="power-item">
+            <view class="title">专属服务</view>
+            <view class="desc">直播间VIP与讲师走得更近，享有更多一对一的专属会员服务</view>
+        </view>
+        <view wx:if="{{vipInfo.vipDesc}}" class="power-item">
+            <view class="title">*直播间VIP服务描述*</view>
+            <text class="desc">{{vipInfo.vipDesc}}</text>
+        </view>
+    </view>
+</view>
+
+<pay-by-contact-modal   wx:if="{{system !='ios'}}"
+    visible="{{contactModalVisible}}" 
+    sessionFrom="pay_vip_{{liveInfo.id}}_{{liveInfo.name}}"
+    payTipsContent="{{payTipsContent}}"
+    bind:hidePayContactModal="hidePayContactModal"
+/>

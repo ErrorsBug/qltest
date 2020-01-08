@@ -1,0 +1,240 @@
+.red-envelope-page {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden auto;
+    background-color: rgb(241,241,241);
+    -webkit-overflow-scrolling: touch;
+    padding: 0 30px;
+    box-sizing: border-box;
+
+    .red-envelope-tip {
+        height: 80px;
+        line-height: 80px;
+        padding-right: 30px;
+        margin-left: 20px;
+        font-size: 28px;/*px*/
+        color: #999;
+        .btn-rule{
+            float: right;
+            color: #64AEFF;
+            font-size: 24px;/*px*/
+        }
+    }
+    .red-envelope-input-container {
+        width: 100%;
+        margin-bottom: 33px;
+        .input-container {
+            width: 100%;
+            height: 100px;
+            background-color: #fff;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            box-sizing: border-box;
+
+            >span {
+                font-size: 28px;/*px*/
+                color: #333;
+            }
+
+            >input {
+                flex: 1;
+                height: 40px;
+                line-height: 40px;
+                margin: 0 20px;
+                outline: none;
+                border: none;
+                background-color: transparent;
+                font-size: 28px;/*px*/
+                color: #333;
+                text-align: right;
+            }
+        }
+        .tip {
+            font-size: 22px;/*px*/
+            color: #999;
+            line-height: 30px;
+            margin-top: 8px;
+            margin-left: 20px;
+
+            >span {
+                color: #EB5F39;
+            }
+        }
+    }
+
+    .red-envelope-textarea-container {
+        width: 100%;
+        height: 150px;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 30px 20px 40px;
+        box-sizing: border-box;
+        position: relative;
+
+        .textarea {
+            width: 100%;
+            height: 100%;
+            outline: none;
+            border: none;
+            resize: none;
+            color: #333;
+            font-size: 28px;/*px*/
+            line-height: 36px;
+        }
+
+        .word-num {
+            position: absolute;
+            bottom: 8px;
+            right: 20px;
+            font-size: 20px;/*px*/
+            color: #b2b2b2;
+        }
+    }
+
+    .money-container {
+        text-align: center;
+        margin-top: 40px;
+        .money {
+            font-size: 86px;/*px*/
+            line-height: 86px;
+            display: inline-block;
+            color: #333;
+            margin: 0 auto;
+            position: relative;
+
+            &::before {
+                content: '￥';
+                position: absolute;
+                font-size: 58px;/*px*/
+                font-weight: bold;
+                top: 0;
+                left: -60px;
+            }
+        }
+        .pay {
+            margin: 20px auto;
+            height: 86px;
+            width: 590px;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            background-color: #EB5F39;
+            font-size: 32px;/*px*/
+        }
+        .return-class {
+            width: 200px;
+            height: 66px;
+            font-size: 32px;/*px*/
+            color: #666;
+            cursor: pointer;
+            margin: 8px auto;
+            line-height: 66px;
+        }
+    }
+    .return-tip {
+        font-size: 22px;/*px*/
+        color: #999;
+        position: absolute;
+        bottom: 44px;
+        width: 100%;
+        left: 0;
+        text-align: center;
+
+        &.hide {
+            display: none;
+        }
+    }
+
+    .red-envelope-tip-dialog-container {
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        z-index: 5;
+
+        .bg {
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            background-color: rgba(0,0,0,0.6);
+        }
+
+        .red-envelope-tip-dialog {
+            // height: 550px;
+            width: 570px;
+            background: #FFFFFF;
+            border-radius: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+
+            .top {
+                padding-top: 140px;
+                height: 56px;
+                text-align: center;
+                font-size: 40px;/*px*/
+                color: #333;
+                line-height: 56px;
+                font-weight: bold;
+                background: {
+                    image: url(./img/icon-rule.png);
+                    position: center 60px;
+                    size: 70px 70px;
+                    repeat: no-repeat;
+                }
+            }
+
+            .tip-content {
+                margin: 30px auto 0;
+                width: 476px;
+                max-height: 600px;
+                overflow: hidden;
+                overflow-y: auto;
+                p {
+                    font-size: 26px;/*px*/
+                    color: #666666;
+                    line-height: 40px;
+                }
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .bottom-bar{
+                display: flex;
+                padding: 15px;
+                >div{
+                    flex: 1;
+                    margin: 0 15px;
+                    padding: 10px 20px;
+                    font-size: 32px;/*px*/
+                    text-align: center;
+                }
+                .btn-set{
+                    color: #EB5F39;
+                    border: 1px solid #EB5F39;/*px*/
+                    border-radius: 43px;
+                }
+    
+                .btn-ok {
+                    background: #EB5F39;
+                    border-radius: 43px;
+                    color: #fff;
+                }
+            }
+            
+        }
+    }
+}

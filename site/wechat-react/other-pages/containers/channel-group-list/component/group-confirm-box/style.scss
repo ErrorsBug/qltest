@@ -1,0 +1,298 @@
+@import '../../../../../assets/styles/base-definition.scss';
+
+.group-confirm-box-container {
+
+    .box {
+        z-index: 2;
+        width: 100%;
+        background-color:  #fff;
+        padding: 40px 30px;
+        box-sizing: border-box;
+        .input-wrap{
+            overflow-x: hidden;
+            max-height: 800px;
+        }
+        .input {
+            .str1{
+                font-size: 28px;/*px*/
+                color:#333;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .tips-box{
+                font-size: 24px;/*px*/
+                color:#666;
+                background-color: #fff4f4;
+                width: 100%;
+                margin-bottom: 30px;
+                position: relative;
+                border-radius: 16px;
+                .circle-num{
+                    width: 38px;
+                    height: 38px;
+                    line-height: 38px;
+                    border: 2px solid #F73657;/*px*/
+                    color: #F73657;
+                    text-align: center;
+                    font-size: 30px; /*px*/
+                    border-radius: 50%;
+                    display: inline-block;
+                    margin-right: 15px;
+                }
+
+                ul{
+                    overflow: hidden;
+                    padding: 34px 18px;
+                    display:flex;
+			        align-items: center;
+                    display: flex;
+                    justify-content: space-around;
+                    li{
+                        color:#999;
+                        float: left;
+                        line-height: 40px;
+                        white-space: nowrap;
+                    }
+                }
+            }
+
+            input {
+                height: 100%;
+                font-size: 30px;/*px*/
+                width: 100%;
+                box-shadow: none;
+                background-color: #F7F7F7; 
+                padding: 24px 20px;
+                border:none;
+                outline: none;
+            }
+            .input-box{
+                width: 100%;
+                border-radius: 16px;
+            }
+            .money-icon{
+                position: relative;
+                input{padding-left:40px;}
+                span{
+                    position: absolute;
+                    top:20px;
+                    left:10px;
+                }
+            }
+            .input-tips{
+                font-size: 26px;/*px*/
+                color:#B2B2B2;
+                padding: 18px 0 30px 20px;
+                text-size-adjust: none;
+                line-height: 35px;
+            }
+            .switch-box {
+                padding-top: 30px;
+                border-top: 1px solid #EEEEEE;
+            }
+            .switch-set {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 20px;
+                
+            }
+            .switch-word {
+                font-size: 30px; /*px*/
+                color: #666666;
+            }
+            .switch-tips {
+                font-size: 26px;/*px*/
+                color:#B2B2B2;
+                text-size-adjust: none;
+                line-height: 30px;
+            }
+            .auto-percent{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                .input-box{
+                    width: 93%;
+                    margin-right: 10px;
+                }
+                .percent-icon{
+                    flex: 1;
+                    color: #666666;
+                    font-size: 50px; /*px*/
+                }
+
+            }
+        }
+
+        .discount {
+            margin: 20px 0;
+            font-size: 24px;/*px*/
+            color: #666;
+            width: 100%;
+            display: flex;
+
+            img {
+                height: 24px;/*px*/
+                margin-top: 6px;/*px*/
+                margin-right: 12px;/*px*/
+            }
+
+            span {
+                line-height: 36px;/*px*/
+            }
+        }
+
+        .btn-row {
+            font-size: 30px;/*px*/
+            background: #F73657;
+            color: #fff;
+            width: 100%;
+            padding: 24px 0;
+            text-align: center;
+            margin-top: 30px;
+            border-radius: 45px;
+        }
+
+        .set-group-step{
+           display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            .str1{
+                font-size: 28px;/*px*/
+                color:#333;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .tips-box{
+                font-size: 24px;/*px*/
+                color:#666;
+                background-color: #fff4f4;
+                width: 100%;
+                margin-bottom: 30px;
+                position: relative;
+                .str2{
+                    color: #666;
+                    display: block;
+                    padding:20px;
+                    padding-bottom: 0;
+                }
+                &::before{
+                    content: '';
+                    display: block;
+                    width:0;
+                    height: 0;
+                    border:10px solid rgba(0, 0, 0, 0);
+                    border-bottom: 10px solid #fff4f4;
+                    position: absolute;
+                    top:-18px;
+                    left:20px;
+                }
+                ul{
+                    overflow: hidden;
+                    padding:10px 20px 20px;
+                    li{
+                        color:#999;
+                        float: left;
+                    }
+                    i{
+                        float: left;
+                    }
+                    
+                    .icon-jian{
+                        background: url(../../img/icon-jian.png) center center no-repeat;
+                        background-size: 80% auto;
+                        display: inline-block;
+                        width:40px;
+                        height: 20px;
+                    }
+
+                }
+            }
+            
+        }
+    }
+    .data-wrap {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        border-top: 1px solid #EEEEEE;
+        .select-tag {
+            padding: 30px 0;
+            color: #999999;
+            font-size: 30px;
+        }
+        .icon_enter{
+            color: #B2B2B2;
+        }
+        .switch-tips {
+            padding-top: 8px;
+        }
+    }
+    .icon-question {
+        display: inline-block;
+        width: 13px;
+        height: 10px;
+        border: 1px solid #666666;/*px*/
+        border-radius: 50%;
+        line-height: 10px;
+        padding: 10px;
+        margin-left: 15px;
+    }
+    .confirm-free-tip {
+        color: #666666;
+        font-size: 30px;
+        padding: 10px 50px;
+    }
+    .co-dialog-title.white {
+        padding: 40px 50px 20px 50px;/*px*/
+    }
+     // 模拟拼课
+ .confirm-like-wrap {
+    .confirm-like-title {
+        text-align: center;
+        color: #333333;
+        font-size: 36px; /*px*/
+        padding: 25px 0;
+        font-weight: 600;
+    }
+    .confirm-like-step {
+        display: flex;
+        align-items: center;
+        background: #FBF0F0;
+        padding: 40px 30px;
+    }
+    .red-line {
+        width: 26px;
+        height: 2px;
+        background: #F73657;
+        margin-right: 10px;
+    }
+    .step-word {
+        margin: 0 10px;
+        color: #666666;
+        line-height: 1.3;
+    }
+    .confirm-step-item {
+        display: flex;
+        align-items: center;
+    }
+    .confirm-like-tip {
+       color: #999999; 
+       font-size: 24px; /*px*/
+       line-height: 1.3;
+    }
+    .confirm-like-main {
+        padding: 25px 26px 0 26px;
+    }
+    .confirm-like-img {
+        width: 100%;
+        margin-top: 31px;
+    }
+}
+}
+
+.group-confirm-box-container-hide {
+    visibility: hidden;
+    display: none;
+}

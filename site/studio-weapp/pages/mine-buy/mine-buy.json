@@ -1,0 +1,11 @@
+{
+    "navigationBarTitleText": "购买记录",
+    "usingComponents": {
+        "audio-box": "../../comp/audio-box/audio-box",
+        "channel-list": "./components/channel-list/channel-list",
+        "topic-list": "./components/topic-list/topic-list",
+        "vip-list": "./components/vip-list/vip-list",
+        "tab-bar": "./components/tab-bar/tab-bar",
+        "no-more": "../../comp/no-more/no-more"
+    }
+}

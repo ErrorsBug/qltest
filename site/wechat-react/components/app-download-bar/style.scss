@@ -1,0 +1,168 @@
+.co-app-download-bar {
+    height: 88px;
+    background: #FFF;
+
+    .open-btn {
+        display: inline-flex;
+        align-items:center;
+        width:104px;
+        height:42px;
+        background:rgba(247,54,87,1);
+        box-shadow:0px 4px 8px 0px rgba(255,214,221,1);
+        border-radius:25px;
+        color: #FFF;
+        justify-content: center;
+        font-size:24px;
+        font-family:PingFangSC-Medium;
+        font-weight:500;
+        line-height:normal;
+        cursor: pointer;
+    }
+
+    .co-app-download-content {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        box-sizing: border-box;
+        padding: 20px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .ql-logo {
+            flex-shrink: 0;
+            width: 48px;
+            height: 40px;
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(./img/open_eyes.png);
+                background-size: contain;
+                animation-name: ql-logo-animation;
+                animation-delay: 2s;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+            }
+        }
+
+        .desc {
+            flex: 1;
+            padding-left: 14px;
+            height: 48px;
+            overflow: hidden;
+
+            .desc-content {
+                font-size: 26px;
+                color: #F73657;
+                font-weight: 500;
+                line-height: 48px;
+                animation: scroll-text 20s linear 5s infinite;
+                position: relative;
+
+                & > p {
+                    height: 48px;
+                }
+            }
+        }
+
+        .icon-double-arrow {
+            width: 20px;
+            height: 16px;
+            background: url('./img/double-arrow.png') no-repeat center;
+            background-size: cover;
+        }
+    }
+    
+    @keyframes ql-logo-animation {
+        from {
+            transform: translateX(0) rotateZ(0deg);
+            animation-timing-function: ease-in;
+        }
+        15% {
+            transform: translateX(-120px) rotateZ(-720deg);
+            animation-timing-function: ease-out;
+        }
+        20% {
+            transform: translateX(-120px) rotateZ(-720deg);
+            animation-timing-function: ease-out;
+        }
+        35% {
+            transform: translateX(0) rotateZ(0deg);
+            animation-timing-function: linear;
+        }
+        44% {
+            background-image: url(./img/open_eyes.png);
+        }
+        45% {
+            background-image: url(./img/close_eyes.png);
+        }
+        46% {
+            background-image: url(./img/open_eyes.png);
+        }
+        47% {
+            background-image: url(./img/close_eyes.png);
+        }
+        48% {
+            background-image: url(./img/open_eyes.png);
+        }
+    }
+
+    @keyframes scroll-text {
+        6.25% {
+            transform: translateY(0);
+        }
+        12.5% {
+            transform: translateY(-48px);
+        }
+        18.75% {
+            transform: translateY(-48px);
+        }
+        25% {
+            transform: translateY(-2 * 48px);
+        }
+        31.25% {
+            transform: translateY(-2 * 48px);
+        }
+        37.5% {
+            transform: translateY(-3 * 48px);
+        }
+        43.75% {
+            transform: translateY(-3 * 48px);
+        }
+        50% {
+            transform: translateY(-4 * 48px);
+        }
+        56.25% {
+            transform: translateY(-4 * 48px);
+        }
+        62.5% {
+            transform: translateY(-5 * 48px);
+        }
+        68.75% {
+            transform: translateY(-5 * 48px);
+        }
+        75% {
+            transform: translateY(-6 * 48px);
+        }
+        81.25% {
+            transform: translateY(-6 * 48px);
+        }
+        87.5% {
+            transform: translateY(-7 * 48px);
+        }
+        93.75% {
+            transform: translateY(-7 * 48px);
+        }
+        to {
+            transform: translateY(-8 * 48px);
+        }
+    }
+}

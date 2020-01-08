@@ -1,0 +1,46 @@
+.tab-container {
+    background: #FFF;
+
+    .tab-bar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 88px; /* px */
+        border-bottom: 1px solid #EEE; /* no */
+
+        .tab-item {
+            flex: 1;
+            text-align: center;
+            color: #666;
+            font-size: 28px; /* px */
+            height: 88px; /* px */
+            line-height: 88px; /* px */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .tab-num {
+                font-size: 22px; /*px*/
+                margin-left: 10px;
+                color: #F73657;
+            }
+            &.activity {
+                font-size: 32px; /* px */
+                color: #333;
+                font-weight:600;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    width: 36px;
+                    height: 6px;
+                    border-radius:3px;
+                    background: #F73657;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+}

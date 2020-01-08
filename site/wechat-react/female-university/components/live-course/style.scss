@@ -1,0 +1,100 @@
+.un-live-box{
+    padding: 0 32px; 
+    .un-live-cont{
+        width: 100%;
+        height: 100%;  
+        padding: 32px;
+        box-sizing: border-box;
+        background:rgba(255,255,255,1);
+        box-shadow:0px 4px 80px 0px rgba(0,0,0,0.05);
+        border-radius:12px;
+        h3{
+            font-size: 40px; /*px*/
+            color: #333;
+            line-height: 1.4;
+            margin-bottom: 30px;
+            font-family: 'SourceHanSans','Times New Roman', Times, serif;
+            font-weight: 900;
+        }
+        .un-live-itme{
+            display: flex;
+            .un-live-pic{
+                width: 160px;
+                height: 204px;
+                overflow: hidden;
+                background: #e5e5e5;
+                margin-right: 24px;
+                border-radius: 8px;
+                border: 1px solid #eee; /*no*/
+                img{
+                    width: 100%;
+                }
+            }
+            .un-live-info{
+                box-sizing: border-box;
+                flex-grow: 1;
+                flex-basis: 0;
+                max-width: 100%;
+                position: relative;
+                & > div{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    // display: flex;
+                    // align-items: center;
+                    .un-live-play{
+                        vertical-align: initial;
+                    }
+                    .un-live-status{
+                        margin-top: 8px;
+                        margin-bottom: 16px;
+                        display: inline-block;
+                        font-size: 22px; /*px*/
+                        height: 40px;
+                        line-height: 40px;
+                        border-radius: 40px;
+                        &.processing{
+                            padding: 0 12px 0 5px;
+                            background: #E0414F;
+                            color: #fff;
+                            .un-live-txt{
+                                padding-left: 10px;
+                            }
+                        }
+                        &.start{
+                            padding: 0 12px;
+                            border: 1px solid #E0414F;
+                            color: #E0414F;
+                        }
+                        &.end{
+                            height: 0;
+                            line-height: normal;
+                        }
+                    }
+                    h4{
+                        font-size: 30px; /*px*/
+                        color: #333;
+                        font-weight: bold;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        line-height: 1.5;
+                        margin-bottom: 8px;
+                    }
+                    p{
+                        font-size: 26px; /*px*/
+                        color: #666;
+                        line-height: 1.5;
+                        overflow : hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                    }
+                }
+            }
+        }
+    }
+}

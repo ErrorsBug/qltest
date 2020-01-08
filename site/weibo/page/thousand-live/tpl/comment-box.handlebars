@@ -1,0 +1,19 @@
+<div class="commentContentBox">
+    <div class="btn-load-history btnLoadComment">
+        <i></i>
+    </div>
+    <div class="scrollContentBox">
+    <dd class="comment-count"><span class="icon-consult"></span>讨论(<span id="commentNum">{{topicPo.commentNum}}</span>)</dd>
+    <div class="none-record none-pic5" id="loadNone"><span class="none-tip">在此处留言或提问～</span></div>
+    <dl id="commentDlTemp" class="comment-dl"></dl>
+    <dl id="commentDl" class="comment-dl">
+    </dl>
+    </div>
+</div>
+<!--底部评论框-->
+<div id="teacher-comment" class="bottom-content-area webkitBox newCommentBox {{#compare topicPo.isBanned "==" 'Y'}}disabled{{/compare}}">
+    <textarea class="input-box boxFlex auto-height" attr-minHeight="35" {{#compare topicPo.isBanned "==" 'Y'}}disabled="disabled"{{/compare}}></textarea>
+    <span class="area-placeholder icon-write"></span>
+    {{#compare topicPo.isRelay "!=" 'Y'}}<span class="btn-ask" onmousedown="return false"><i></i>提问</span>{{/compare}}
+    <span class="submit" >发送</span>
+</div>

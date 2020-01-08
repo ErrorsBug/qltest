@@ -1,0 +1,21 @@
+.user-manage-container {
+   
+}
+
+
+
+
+
+.common-bg-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.common-multi-text {
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}

@@ -1,0 +1,20 @@
+<view class="comment-section">
+    <view class="comment-preview">
+        评价
+        <text class="sum"> {{sum}}</text>
+    </view>
+    <view class="comment-list" wx:if="{{viewList.length}}">
+        <view class="list-item" wx:for="{{viewList}}" wx:key="id">
+            <image class="avatar`" src="{{item.createByHeadImgUrl}}"></image>
+            <view class="info">
+                <view class="name"> {{item.createByName}}</view>
+                <view class="addition">
+                    <text class="time"> {{item.createTime}}</text>
+                </view>
+                <view class="content"> {{item.content}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="comment-noneone" wx:if="{{noneOne}}">暂无评论数据</view>
+    <view class="comment-nomore" wx:if="{{noMore && !noneOne}}">就这么多了</view>
+</view>

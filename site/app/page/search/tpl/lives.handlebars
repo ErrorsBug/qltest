@@ -1,0 +1,22 @@
+<section class="live-section list-section">
+    <h1>
+        直播间
+    </h1>
+    <ul class="lives" id="lives">
+        {{#each lives}}
+            <li class="live" data-id="{{id}}"  log-business_id="{{id}}" log-name="{{killEm name}}"  log-business_type="live" data-url="{{url}}">
+                <span>
+                    <img src="{{logo}}" alt="">
+                </span>
+                <section>
+                    <h2 class="elli">{{{name}}}</h2>
+                    <p>
+                        {{followNum}}人关注
+                    </p>
+                </section>
+            </li>
+        {{/each}}
+    </ul>
+    <div class="loading-next">加载数据中...</div>
+    <div class="no-more">已全部加载完毕</div>
+</section>

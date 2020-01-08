@@ -1,0 +1,189 @@
+.my-shares-container {
+
+    .my-shares-flex{
+        position: absolute;
+        left: 0;
+        top: 0;
+        
+    }
+
+    .tab-head{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        height: 80px;
+        line-height: 80px;
+        text-align: center;
+        background: #fff;
+        box-shadow: 0 0 10px #ccc;
+        z-index: 1;
+        
+        .tab-item{
+            position: relative;
+            display: block;
+            flex: 1;
+            font-size: 30px;/*px*/
+            color: #4d4d4d;
+            cursor: pointer;
+
+            &.on{
+                color: #ff4b69;
+
+                &::before{
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    width: 100px;
+                    height: 1px;/*no*/
+                    transform: translate(-50%,0);
+                    background: #ff4b69;
+                }
+            }
+        }
+    }
+
+
+    .live-flex-main{
+        &.hide{
+            display: none;
+        }
+        .no-more{
+            display: block;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+            font-size: 24px;/*px*/
+            color: #ccc;
+        }
+
+        .share-dl{
+            display: block;
+
+            .share-dd{
+                display: block;
+                background: #fff;
+                box-sizing: border-box;
+                margin-top: 20px;
+                
+                .top-flex-box{
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    padding: 30px;
+                    box-sizing: border-box;
+                    .logo{
+                        display: block;
+                        height: 140px;
+                        width: 140px;
+
+                        img{
+                            display: block;
+                            height: 140px;
+                            width: 140px;
+                            border-radius: 5px;
+                        }
+
+                    }
+
+                    .info-box{
+                        display: block;
+                        padding-left: 30px;
+                        width: 100%;
+                        box-sizing: border-box;
+                        overflow: hidden;
+                    }
+
+                    .title{
+                        display: block;
+                        height: 40px;
+                        line-height: 40px;
+                        font-size: 32px;/*px*/
+                        color: #2e3033;
+                        width: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        font-weight: normal;
+                    }
+                    .p-one{
+                        display: block;
+                        height: 30px;
+                        line-height: 30px;
+                        margin-top: 10px;
+                        font-size: 24px;/*px*/
+                        color: #b4b4b4;
+                        width: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                    .p-two{
+                        display: block;
+                        height: 30px;
+                        line-height: 30px;
+                        margin-top: 30px;
+                        font-size: 28px;/*px*/
+                        color: #999999;
+                        width: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        font-weight: normal;
+                    }
+
+
+                }
+
+
+                .bottom-btn-bar{
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    text-align: center;
+                    border-top: solid 1px #f0f0f0;/*no*/
+
+                    a{
+                        position: relative;
+                        flex: 1;
+                        height: 80px;/*px*/
+                        line-height: 80px;/*px*/
+                        font-size: 28px;/*px*/
+
+                        &::after{
+                            content: "";
+                            width: 1px;/*no*/
+                            height: 40px;
+                            background: #f0f0f0;
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            transform: translate(0,-50%);
+                        }
+                        &:first-of-type::after{
+                            content: none;
+                            display: none;
+                        }
+
+                        &.btn-one{
+                            color: #44a9f7;
+                        }
+                        &.btn-two{
+                            color: #ff4b69;
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+
+    }
+
+
+
+
+
+
+}

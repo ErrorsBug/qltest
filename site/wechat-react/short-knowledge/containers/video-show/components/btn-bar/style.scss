@@ -1,0 +1,164 @@
+.video-show-btn-bar{
+    position: absolute;
+    bottom: 80px;
+    right: 20px;
+    z-index: 20;
+    &.B{
+        bottom: 164px;
+    }
+    >div{
+        margin: 0px auto 0;
+        width: 100px;
+        text-align: center;
+        color: #fff;
+        font-size: 24px;
+        text-shadow:0px 0px 5px rgba(0,0,0,0.4), 1px 1px 0px rgba(0,0,0,0.2);
+        &::before{
+            content: '';
+            display: block;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+        }
+        >span{
+            display: block;
+            margin-top: -10px;
+        }
+    }
+
+    .btn-more{
+        &::before{
+            background: url('./img/icon-more.png') center bottom no-repeat;
+            background-size: 100% auto;
+        }
+    }
+    .btn-edit{
+        &::before{
+            background: url('./img/icon-edit.png') center bottom no-repeat;
+            background-size: 100% auto;
+        }
+    }
+    .btn-like{
+        position: relative;
+        margin-top: 30px;
+        &.active{
+            &::before{
+                background: url('./img/icon-like-active.png') center bottom no-repeat;
+                background-size: 100% auto;
+            }
+            
+        }
+        .click-gif{
+            display: block;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background-size: 100% auto;
+            background-position: center top;
+        }
+        &::after{
+            content: '';
+            display: block;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background-size: 100% auto;
+            background-position: center top;
+            background-image: url('./img/like-animate.gif');
+            pointer-events: none;
+        }
+        
+        &::before{
+            background: url('./img/icon-like.png') center bottom no-repeat;
+            background-size: 100% auto;
+        }
+    }
+    .btn-focus{
+        position: relative;
+        width: 90px;
+        height: auto;
+        margin: 0 auto;
+        &::before{display: none;}
+        >span{
+            margin-top: -20px;
+            margin-bottom: 8px;
+        }
+        
+        img{
+            display: block;
+            width: 86px;
+            height: 86px;
+            margin: 0 auto 30px;
+            border-radius: 60px;
+            border: 2px solid #fff;/*no*/
+            box-shadow: 1px 1px 10px rgba($color: #000000, $alpha: 0.3);
+        }
+        .btn-focus-live{
+            display: block;
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            width: 40px;
+            height: 40px;
+            transform: translateX(-50%);
+            background: url('./img/icon-focus.png') center bottom no-repeat;
+            background-size: 100% auto;
+            box-shadow: none;
+        }
+        &.focused{
+            &::before{
+                display: block;
+                position: absolute;
+                bottom: -20px;
+                left: 50%;
+                width: 40px;
+                height: 40px;
+                transform: scale(0.1,0.1) translateX(-50%);
+                background: url('./img/icon-focused.png') center bottom no-repeat;
+                background-size: 100% auto;
+                box-shadow: none;
+                animation: focusShortScale 2s both 0s linear;
+            }
+        }
+    }
+    .btn-comment{
+        &::before{
+            background: url('./img/icon-comment.png') center bottom no-repeat;
+            background-size: 100% auto;
+        }
+    }
+    .btn-share{
+        margin-top: 4px;
+        &::before{
+            background: url('./img/icon-share.png') center bottom no-repeat;
+            background-size: 100% auto;
+        }
+    }
+    .btn-create{
+        &::before{
+            background: url('./img/icon-create.png') center bottom no-repeat;
+            background-size: 100% auto;
+        }
+    }
+    
+}
+
+@keyframes focusShortScale {
+    0% {
+        transform: scale(0.1,0.1) translateX(-50%);
+    }
+    10% {
+        transform: scale(0.9,0.9) translateX(-50%);
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.9,0.9) translateX(-50%);
+    }
+}

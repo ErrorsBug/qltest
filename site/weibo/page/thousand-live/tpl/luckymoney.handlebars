@@ -1,0 +1,22 @@
+<div class="main">
+    <a href="javascript:;" class="qlbmi-redbag-cancel icon-cancel "></a>
+    <div class="live-headpic"><img src=""></div>
+    <div class="live-towho" attr-id=""></div>
+    <div class="live-towhy"><p>{{defaultVal entityExtend.rewardIntroduce "爱赞赏的人，运气不会差哦~"}}</p></div>
+    <div class="live-redbaglist">
+        <ul data-price = "{{defaultVal entityExtend.rewardPrice '2;5;10;50;100;200'}}">
+            <li><a class="rglist" href="javascript:;"><var class="rglist">2</var>元</a></li>
+            <li><a class="rglist" href="javascript:;"><var class="rglist">5</var>元</a></li>
+            <li><a class="rglist" href="javascript:;"><var class="rglist">10</var>元</a></li>
+            <li><a class="rglist" href="javascript:;"><var class="rglist">50</var>元</a></li>
+            <li><a class="rglist" href="javascript:;"><var class="rglist">100</var>元</a></li>
+            <li><a class="rglist" href="javascript:;"><var class="rglist">200</var>元</a></li>
+        </ul>
+    </div>
+    <div class="live-othermoney"><a href="javascript:;" class="rglist"> 其他金额 </a></div>
+    {{#if entityExtend.rewardPic}}
+        <div class="iM-ad-box">
+            <img data-src="" src="{{entityExtend.rewardPic}}"/>
+        </div>
+    {{/if}}
+</div>

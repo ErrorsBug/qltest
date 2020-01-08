@@ -1,0 +1,142 @@
+{
+    "topicView": {
+        "topicExtendPo": {
+            "isAuditionOpen": "Y",
+            "isAuthOpen": "Y",
+            "isAutoShareOpen": "Y",
+            "isGiftOpen": "Y",
+            "isShareOpen": "Y",
+            "isSingleBuy": "Y",
+            "isWhisperOpen": "Y",
+            "limitEach": 18632,
+            "topicProfit": 0.5,
+            "userProfit": 0.5
+        },
+        "topicPo": {
+            "audioAssemblyStatus": 86450,
+            "audioAssemblyUrl": "1",
+            "authNum": 25086,
+            "backgroundUrl": "http://img.qlchat.com/qlLive/followQRCode/3L5HCJ2B-1EUQ-7F87-1477707363955-VLBC6T3GG8F1.jpg",
+            "browseNum": 73740,
+            "businessOpProfit": 0.5,
+            "channelId": "",
+            "commentNum": 66144,
+            "createBy": "90000112074092",
+            "endTime": "",
+            "guestIntr": "测试内容4k1i",
+            "id": "240000168014505",
+            "isBanned": "Y",
+            "isEnableReward": "Y",
+            "isRelay": "N",
+            "liveId": "530000007079562",
+            "money": 2345,
+            "password": "测试内容3n7s",
+            "planTime": "2016-12-05 14:10:00",
+            "remark": "测试内容p1b4测试内容p1b4测试内容p1b4测试内容p1b4测试内容p1b4测试内容p1b4",
+            "speaker": "测试内容9jyq",
+            "startTime": "2016-12-05 14:10:00",
+            "startTimeStamp": "1480918230067",
+            "status": "beginning",
+            "style": "normal",
+            "topic": "测试内容jcj2",
+            "type": "charge",
+            "userProfit": 0.5
+        }
+    },
+    "power": {
+        "powerEntity": {
+            "allowCreateTopic": true,
+            "allowDelComment": true,
+            "allowDelInviteMg": true,
+            "allowDelSpeak": false,
+            "allowInviteMg": true,
+            "allowMGBanned": false,
+            "allowMGLive": true,
+            "allowMGReward": false,
+            "allowMGTopic": true,
+            "allowMGTopicInvite": false,
+            "allowReplyComment": false,
+            "allowSearchReward": true,
+            "allowSpeak": false,
+            "allowTopicInvite": false,
+            "liveId": "530000007079562",
+            "topicId": "240000168014505"
+        }
+    },
+    "profile": {
+        "TopicProfileList": [
+            {
+                "headImgUrl": "http://img.qlchat.com/qlLive/followQRCode/3L5HCJ2B-1EUQ-7F87-1477707363955-VLBC6T3GG8F1.jpg",
+                "id": "90000112074092",
+                "isCheck": "Y",
+                "msg": "测试内容w2xl",
+                "name": "测试内容hh42",
+                "role": "creator",
+                "sortNum": 1,
+                "status": "Y",
+                "time": 24,
+                "topicId": "240000168014505",
+                "type": "audio",
+                "url": "http://media.qlchat.com/qlLive/audio/KLFR8JGK-VIVY-SD39-1480919174819-67HKE3CV2K97"
+            },
+            {
+                "headImgUrl": "http://img.qlchat.com/qlLive/followQRCode/3L5HCJ2B-1EUQ-7F87-1477707363955-VLBC6T3GG8F1.jpg",
+                "id": "90000112074092",
+                "isCheck": "Y",
+                "msg": "测试内容w2xl",
+                "name": "测试内容hh42",
+                "role": "creator",
+                "sortNum": 1,
+                "status": "Y",
+                "time": 24,
+                "topicId": "240000168014505",
+                "type": "audio",
+                "url": "http://media.qlchat.com/qlLive/audio/K24V7UZP-BPJD-F5RU-1480919199438-2FTV999A2QBK"
+            },
+            {
+                "headImgUrl": "http://img.qlchat.com/qlLive/followQRCode/3L5HCJ2B-1EUQ-7F87-1477707363955-VLBC6T3GG8F1.jpg",
+                "id": "90000112074092",
+                "isCheck": "Y",
+                "msg": "测试内容w2xl",
+                "name": "测试内容hh42",
+                "role": "creator",
+                "sortNum": 1,
+                "status": "Y",
+                "time": 24,
+                "topicId": "240000168014505",
+                "type": "image",
+                "url": "http://img.qlchat.com/qlLive/followQRCode/3L5HCJ2B-1EUQ-7F87-1477707363955-VLBC6T3GG8F1.jpg"
+            },
+            {
+                "headImgUrl": "http://img.qlchat.com/qlLive/followQRCode/3L5HCJ2B-1EUQ-7F87-1477707363955-VLBC6T3GG8F1.jpg",
+                "id": "90000112074092",
+                "isCheck": "Y",
+                "msg": "测试内容w2xl",
+                "name": "测试内容hh42",
+                "role": "creator",
+                "sortNum": 1,
+                "status": "Y",
+                "time": 24,
+                "topicId": "240000168014505",
+                "type": "image",
+                "url": "http://img.qlchat.com/qlLive/followQRCode/3L5HCJ2B-1EUQ-7F87-1477707363955-VLBC6T3GG8F1.jpg"
+            }
+        ]
+    },
+    "qualify": {
+        "shareQualify": {
+            "businessId": "240000168014505",
+            "invitedCount": 122,
+            "shareKey": "测试内容mf51",
+            "shareUrl": "测试内容be3r",
+            "status": "Y",
+            "type": "topic"
+        }
+    },
+    "isAuth":true,
+    "coupon":{
+        "diffNum": 1234,
+        "isHaveCoupon": "Y",
+        "qlCouponMoney": 1111
+    }
+}

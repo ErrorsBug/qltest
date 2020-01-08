@@ -1,0 +1,12 @@
+{
+    "component": true,
+    "usingComponents": {
+        "speak-audio": "./components/speak-audio/speak-audio",
+        "speak-image": "./components/speak-image/speak-image",
+        "speak-invite": "./components/speak-invite/speak-invite",
+        "speak-redpacket": "./components/speak-redpacket/speak-redpacket",
+        "speak-text": "./components/speak-text/speak-text",
+        "speak-tips": "./components/speak-tips/speak-tips",
+        "speak-other": "./components/speak-other/speak-other"
+    }
+}

@@ -1,0 +1,36 @@
+.pl-list-box{
+    background: #FFE7E7;
+    .clock-rank-container{
+        padding-bottom: 60px;
+    }
+    .pl-list-head{
+        padding: 32px;
+        h4{
+            font-size: 36px; /*px*/
+            color: #814848;
+            font-weight: bold;
+            margin-bottom: 32px;
+            line-height: 1.4;
+            text-align: center;
+        }
+        img{
+            width: 100%;
+            height: auto;
+            margin-bottom: 32px;
+        }
+        p{
+            font-size: 24px; /*px*/
+            color: #E0414F;
+            line-height: 1.4;
+            text-align: center;
+        }
+    }
+    .common-empty{
+        position: relative !important;
+        transform: translate(0,0);
+        margin: 32px auto 0;
+        left: 0;
+        top: 32px;
+        background: #fff;
+    }
+}

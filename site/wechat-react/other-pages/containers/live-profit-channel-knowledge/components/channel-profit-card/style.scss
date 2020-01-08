@@ -1,0 +1,50 @@
+.profit-record {
+    padding: 0 28px;
+    margin: 20px 0;
+    background-color: #ffffff;
+    .profit-header {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        height: 120px;
+        border-bottom: 1px solid #ebebeb;
+    }
+    .headImage {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-right: 20px;
+    }
+    .username {
+        font-size: 28px; /*px*/
+        color: #333333;
+    }
+    .vertical-bar {
+        width: 2px;
+        height: 80px;
+        background-color: #f0f0f0;
+    }
+    .profit-detail {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        height: 130px;
+        font-size: 26px; /*px*/
+        line-height: 1.8;
+        color: #666666;
+    }
+    .order-detail {
+        margin-left: 25px;
+    }
+    .order-income {
+        margin-right: 25px;
+    }
+    .order-tip {
+        margin-right: 20px;
+    }
+    .order-count {
+        color: #ff4b69;
+        font-weight: 500;
+    }
+}

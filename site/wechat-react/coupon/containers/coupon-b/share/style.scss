@@ -1,0 +1,164 @@
+$main-color: #ff995d;
+
+.coupon-b-share-container
+{
+	background-color: $main-color;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	.coupon
+	{
+		width: 690px;
+		margin: 30px auto;
+		background-color: #fff;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+
+		 > header
+		{
+			height: 80px;
+			width: calc(100% - 20px);
+			margin: 0 auto; 
+			font-size: 24px;/* px */
+			color: #333;
+			border-bottom: 1px dashed #e5e5e5;/* no */
+			text-align: center;
+			line-height: 80px;
+			position: relative;
+			white-space: nowrap;
+			
+			// overflow: hidden;
+			// text-overflow: ellipsis;
+			&::after,
+			&::before{
+				content: '';
+				width: 20px;
+				height: 20px;
+				border-radius: 100%;
+				background-color: $main-color;
+				position: absolute;
+				bottom: -10px;
+			}
+			&::before{
+				left: -20px;
+			}
+			&::after{
+				right: -20px;
+			}
+		}
+
+		 > main
+		{
+			padding: 0 40px;
+			.info
+			{
+				padding: 74px 0 80px;
+				text-align: center;
+				.coupon-type
+				{
+					font-size: 24px;/* px */
+					color: #333;
+					margin-top: 20px;
+				}
+				.money
+				{
+					color: #fe8139;
+					font-size: 40px;/* px */
+					font-weight: 700;
+					 > var
+					{
+						font-size: 100px;/* px */
+						font-style: none;
+					}
+				}
+			}
+			.rules
+			{
+                padding-bottom: 20px;
+    			border-bottom: 1px dashed #e5e5e5;/* no */
+				 > h2
+				{
+					font-size: 26px;/* px */
+					color: #666;
+					font-weight: normal;
+					margin-bottom: 30px;
+				}
+				 > ul
+				{
+					list-style: none;
+					li
+					{
+						color: #666;
+                        font-size: 26px;/* px */
+                        margin: 10px 0;
+					}
+				}
+				strong {
+					font-weight: normal;
+					color: #f73657;
+				}
+			}
+        }
+        
+        >footer{
+			padding: 30px 40px 40px;
+			position: relative;
+			&::after{
+				content: '';
+				width: 690px;
+				height: 9px;
+				position: absolute;
+				bottom: -8px;
+				left: 0;
+				background-image: url(./img/saw.png);
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+            p{
+				font-size: 24px;/* px */
+				line-height: 1.5;
+				color: #999;
+				&.title{
+					color: #333;
+					font-size: 26px;/* px */
+					margin-bottom: 20px;
+				}
+			}
+			
+            .copy-button{
+				position: relative;
+                display: inline-block;
+                border: none;
+                background-color: $main-color;
+                color: #fff;
+                width: 60px;/* px */
+                height: 38px;/* px */
+                border-radius: 6px;
+				font-size: 24px;/* px */
+				
+				&:after {
+					content: '';
+					width: 200%;
+					height: 200%;
+					position: absolute;
+					top: -50%;
+					left: -50%;
+				}
+			}
+        }
+	}
+
+	.send-friend-btn {
+		background: #473022;
+		padding: 16px 0;
+		font-size: 32px; /* px */
+		color: #FFF;
+		margin: 20px 30px 0;
+		text-align: center;
+		border-radius: 50px;
+	}
+}

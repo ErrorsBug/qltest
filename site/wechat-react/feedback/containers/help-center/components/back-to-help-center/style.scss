@@ -1,0 +1,28 @@
+.p-help-cen-back-to-cen {
+    position: relative;
+    z-index: 2;
+    flex-grow: 1;
+    min-height: 156px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    .btn {
+        color: #F73657;
+        text-align: center;
+        border: 1px solid #F73657;/*no*/
+        font-size: 32px;
+        line-height: 76px;
+        border-radius: 76px;
+        cursor: pointer;
+        margin-bottom: 40px;
+        margin-right: 40px;
+        width: 10em;
+        &:last-child {
+            margin-right: 0;
+        }
+        &:active {
+            background-color: #f7f7f7;
+        }
+
+    }
+}

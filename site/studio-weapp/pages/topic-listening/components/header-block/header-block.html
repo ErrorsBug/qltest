@@ -1,0 +1,41 @@
+<view class="header">
+    <view class="card-wrap">
+        <view class="shadow-origin"></view>
+        <view class="card" style="background-image:url({{topicInfo.backgroundUrl}})"></view>
+    </view>
+
+    <view class="progress-wrap {{playTime>0?'playing':''}}">
+        <view class="play-time"> {{playTimeStr}}</view>
+        <view class="bar-wrap">
+            <slider
+                 min="{{0}}"
+                 max="{{100}}"
+                 step="{{1}}"
+                 value="{{ratio}}"
+                 color="#ebebeb"
+                 activeColor="#ef5670"
+                 bindchange="onSliderChange"
+            />
+        </view>
+        <view class="duration"> {{durationStr}}</view>
+    </view>
+
+    <view class="controls">
+        <view class="prev-btn disabled"></view>
+        <view 
+            class="play-btn {{status==='playing'?'status-playing':'status-paused'}}" 
+            animation="{{playBtnAnimation}}"
+            bindtap="onPlayClick">
+        </view>
+        <view class="next-btn disabled"></view>
+
+        <view class="backto-topic" bindtap="onRedirectClick">
+            <image 
+                class="icon-backto-topic-small" 
+                src="../../img/icon-backto-topic-small.png?__inline" 
+                mode="widthFix"
+            ></image>
+            <view class="text">上课模式</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,41 @@
+.liveroom-bar{
+    height: 100rpx;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30rpx;
+    align-items: center;
+    background-color: #fff;
+    margin-top: 18rpx;
+
+    .logo{
+        width: 64rpx;
+        height: 64rpx;
+        border-radius: 100%;
+        margin-right: 16rpx;
+    }
+
+    .name{
+        flex: 1;
+        color: #424242;
+        font-size: 28rpx;
+    }
+
+    .focus-btn{
+        height: 46rpx;
+        width: 106rpx;
+        line-height: 50rpx;
+        border: none;
+        background-color: transparent;
+        border-radius: 100rpx;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 0;
+        &::after{
+            display: none;
+        }
+        .btn-image{
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

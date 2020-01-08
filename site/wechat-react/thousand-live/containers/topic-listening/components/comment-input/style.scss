@@ -1,0 +1,211 @@
+.footer-options{
+    background: #fff;
+    border-top: solid 1px #d9d9d9;/* no */
+    display:flex;
+    box-sizing: border-box;
+    height: 108px;
+
+    .option-button {
+        position: relative;
+        flex: 1;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-size: 28px;/* px */
+        color: #333333;
+
+        .icon-wrap{
+            display: inline-block;
+            height:48px;
+            width:48px;
+            margin-right: 20px;
+            position:relative;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            .remaining {
+                position: absolute;
+                color: #666;
+                font-size: 20px;/*px*/
+                line-height: 24px;
+                width: 100%;
+                text-align: center;
+                height: 24px;
+                top: -4px;
+                left: -45%;
+                white-space: nowrap;
+            }
+            img {
+                height:48px;
+                display:block;
+            }
+            .count{
+                font-size:22px;/*px*/
+                color: #666;
+                font-weight: bold;
+                line-height:1.1;
+                position:absolute;
+                top:-8px;
+                left:18px;
+                padding:0 5px;
+                background:#fff;
+                white-space: nowrap;
+                border-radius: 10px;
+            }
+        }
+
+        &.app-download-btn {
+            .icon-wrap {
+                background-image: url(./img/icon-admin.png);
+            }
+        }
+        &.like {
+            .icon-wrap {
+                background-image: url(./img/like.png);
+                .count{
+                    color: #999;
+                    left: 34px;
+                }
+            }
+        }
+        &.active-like{
+            .icon-wrap {
+                background-image: url(./img/like-red.png);
+                .count{
+                    color: #F73657;
+                    left: 34px;
+                }
+            }
+            
+        }
+        &.share {
+            .icon-wrap {
+                background-image: url(./img/share-gray.png);
+            }
+        }
+        &.show-tips{
+            position: relative;
+            &::before{
+                content: '';
+                position: absolute;
+                top: -63px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: block;
+                width: 364px;
+                height: 62px;
+                background: url('./img/like-tips.png') center center no-repeat;
+                background-size: 100% auto;
+            }
+        }
+        &.invite-listen {
+            .icon-wrap {
+                background-image: url(./img/invite-gray.png);
+            }
+        }
+        &.cancel-collect {
+            .icon-wrap {
+                background-image: url(./img/heart-red.png);
+            }
+        }
+        &.do-collect {
+            .icon-wrap {
+                background-image: url(./img/favor.png);
+            }
+        }
+        &.interaction {
+            .icon-wrap {
+                background-image: url(./img/speak.png);
+            }
+        }
+        &.more {
+            .icon-wrap {
+                background-image: url(./img/icon-more.png);
+            }
+        }
+        &.buy-serise-lessons {
+            .icon-wrap{
+                background-image: url(./img/intro.png);
+            }
+        }
+        &.comment {
+            .icon-wrap {
+                background-image: url(./img/comment.png);
+                .count{
+                    left: 28px;
+                }
+            }
+        }
+
+        &:first-child {
+            .content {
+                color: #F73657;
+            }
+            &.app-download-btn {
+                .icon-wrap {
+                    background-image: url(./img/icon-admin.png);
+                }
+            }
+            &.share {
+                .icon-wrap {
+                    background-image: url(./img/share.png);
+                }
+            }
+        }
+
+        .red-point {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(80px,-30px);/* px */
+            width: 18px;/* px */
+            height: 18px;/* px */
+            font-size: 24px;/* px */
+            color: #ffffff;
+            background-color: #fb4040;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &.listen-by-share {
+        color: #FF9F00;
+        background: #FFF9E6;
+        padding: 0 40px;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 28px; /* px */
+
+        .listen-by-buy-btn {
+            font-size: 32px; /* px */
+            color: #FFF;
+            background: #FFA30B;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 40px;
+        }
+    }
+    
+    &.column {
+        .option-button {
+            flex-direction: column;
+            font-size: 20px;/*px*/
+            line-height: 28px;/*px*/
+            color: #999;
+
+            .icon-wrap {
+                margin-right: 0;
+            }
+
+            .red-point {
+                display: none;
+            }
+        }
+    }
+}

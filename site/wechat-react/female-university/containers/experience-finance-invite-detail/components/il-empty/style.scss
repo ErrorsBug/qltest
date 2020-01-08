@@ -1,0 +1,33 @@
+.il-empty{
+    min-height: 100vh;
+    position: relative;
+    .il-container{
+        position: absolute;
+        top:50%;
+        left:0;
+        width:100% ;
+        text-align: center;
+        transform: translate(0,-50%);
+        .il-img{
+            img{ 
+                width: 337px;
+                margin-bottom: 32px;
+            }
+        }
+        .il-text{
+            font-size:28px; 
+            color:rgba(153,153,153,1);
+            line-height:40px;
+        }
+        .il-btn{
+            width:320px;
+            line-height:76px;
+            border-radius:50px;
+            border:2px solid rgba(224,65,79,1); /*no*/
+            font-size:32px; 
+            font-weight:bold;
+            color:rgba(224,65,79,1); 
+            margin:78px auto;
+        }
+    }
+}

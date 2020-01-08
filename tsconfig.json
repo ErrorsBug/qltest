@@ -1,0 +1,38 @@
+{
+    "compilerOptions": {
+        "plugins": [
+            {
+                "name": "typescript-tslint-plugin",
+                "alwaysShowRuleFailuresAsWarnings": true,
+                "ignoreDefinitionFiles": true,
+                "configFile": "./tslint.json",
+                "suppressWhileTypeErrorsPresent": false,
+                "mockTypeScriptVersion": false
+            }
+        ],
+        "noUnusedLocals": true,
+        "noImplicitAny": false,
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "target": "es5",
+        "jsx": "preserve",
+        "allowJs": true,
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "lib": [
+            "es5",
+            "es6",
+            "dom",
+            "es2015.core",
+            "es2015.collection",
+            "es2015.generator",
+            "es2015.iterable",
+            "es2015.promise",
+            "es2015.proxy",
+            "es2015.reflect",
+            "es2015.symbol",
+            "es2015.symbol.wellknown",
+            "esnext.asynciterable"
+        ]
+    }
+}

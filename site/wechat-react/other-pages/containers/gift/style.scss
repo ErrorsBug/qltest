@@ -1,0 +1,207 @@
+.gift-page{
+    .gift-header {
+        box-sizing: border-box;
+        padding-top: 65px;
+        padding-bottom: 50px;
+        text-align: center;
+        min-height: 219px;
+    }
+
+    .gift-header-main {
+        font-size: 48px; /*px*/
+        line-height: 60px; /*px*/
+        color: #ff4b69;
+        margin-bottom: 24px;
+    }
+
+    .gift-header-sub {
+        font-family: PingFangSC-Regular;
+        font-size: 30px; /*px*/
+        line-height: 40px; /*px*/
+        color: #999999;
+        text-align: center;
+    }
+
+    .gift-body {
+        margin: 0 50px;
+    }
+
+    .gift-card {
+        position: relative;
+        margin: 0;
+        border: solid 1px #e5e5e5;
+        background: #ffffff;
+        text-align: left;
+        padding-bottom: 20px;
+    }
+
+    .gift-card-get-success , .gift-card-get-empty {
+        position: absolute;
+        display: inline-block;
+        width: 160px;
+        height: 160px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .gift-card-get-success {
+        background-image: url('./no_receive.png');    
+    }
+
+    .gift-card-get-empty {
+        background-image: url('./receive.png');    
+    }
+
+    .gift-card-header {
+        display: flex;
+        justify-content: space-between;
+        font-size: 42px; /*px*/
+        color: #ffffff;
+        line-height: 48px; /*px*/
+        padding: 39px 40px 35px 33px;
+        background: #ffb400;
+        overflow: hidden;
+        .gift-card-header-content {
+            flex: 1;
+            overflow: hidden;
+            white-space: nowrap;
+            text-align: right;
+        }
+    }
+
+    .gift-card-title {
+        font-family: PingFangSC-Regular;
+        font-size: 34px; /*px*/
+        color: #333333;
+        height: 52px; /*px*/
+        line-height: 52px; /*px*/
+        padding: 46px 42px 37px 32px;
+        border-bottom: dashed 1px #e5e5e5;
+    }
+
+    .gift-card-item {
+        line-height: 48px; /*px*/
+        padding: 10px 32px;
+        &-up {
+            color: #999999;
+            font-size: 28px; /*px*/
+        }
+        &-down {
+            color: #333333;
+            font-size: 28px; /*px*/
+            line-height: 35px; /*px*/
+        }
+    }
+
+    .gift-btn-box {
+        margin-top: 20px;
+    }
+
+    .gift-button {
+        display: block;
+        margin: 20px 0;
+        line-height: 88px; /*px*/
+        font-size: 34px; /*px*/
+        text-align: center;
+        border-radius: 8px;
+        cursor: pointer;
+        text-decoration: none;
+        &:active {
+            text-decoration: none;
+        }
+        &:hover {
+            text-decoration: none;
+        }
+        &:visited {
+            text-decoration: none;
+        }
+    }
+    .primary {
+        color: #ffffff;
+        background: #ff4b69;
+    }
+    .default {
+        color: #333333;
+        background: white;
+    }
+
+    .gift-send-wrap {
+        margin: 40px 0 40px 0;
+    }
+
+    .grey {
+        background: #999999;
+        color: #ffffff;
+    }
+    .gift-send {
+        display: block;
+        text-align: center;
+        font-size: 28px; /*px*/
+        line-height: 48px; /*px*/
+        color: #ff4b69;
+        text-align: center;
+        text-decoration: underline;
+    }
+
+    .gift-seperate {
+        font-size: 28px; /*px*/
+        color: #999999;
+        text-align: center;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            content: ' ';
+            height: 1px;  /*no*/
+            top: 50%;
+            left: 0;
+            width: 36%;
+            background: #cccccc;
+        }
+        &:after {
+            position: absolute;
+            content: ' ';
+            height: 1px;  /*no*/
+            top: 50%;
+            right: 0;
+            width: 36%;
+            background: #cccccc;
+        }
+    }
+
+    .gift-got-info {
+        margin-top: 21px;
+        font-size: 28px; /*px*/
+        line-height: 48px; /*px*/
+        color: #999999;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+    .gift-got-nobody {
+        margin-top: 21px;
+        font-size: 28px; /*px*/
+        line-height: 48px; /*px*/
+        color: #999999;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .gift-accept-list {
+        margin-top: 20px;
+    }
+
+    .disable {
+        color: #999;
+    }
+
+    .use-by-me {
+        color: rgb(124, 124, 124);
+    }
+}

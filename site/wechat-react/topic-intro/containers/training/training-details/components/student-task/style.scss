@@ -1,0 +1,294 @@
+._student-task-wrap {
+    padding: 40px 40px 0;
+
+    .student-task-item {
+        padding: 40px;
+        //border-bottom: 1px solid #EEE; /* no */
+        box-shadow:0px 10px 40px 0px rgba(0,0,0,0.07); /*px*/
+        border-radius:20px; /*px*/
+
+        .item-user-info {
+            display: flex;
+            .user-poster {
+                width: 60px;
+                height: 60px;
+                border:1px solid #E5E5E5;
+                border-radius: 50%;
+                overflow: hidden;
+
+                & img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .user-info {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-left: 20px;
+                .user-name {
+                    font-size:28px; /*px*/
+                    font-weight:400;
+                    color:#666666;
+                    line-height:40px; /*px*/
+                }
+                .user-date {
+                    font-size:20px; /*px*/
+                    font-weight:400;
+                    color:#999999;
+                    line-height:28px; /*px*/
+                }
+            }
+
+
+        }
+
+        .item-content {
+            margin-top: 16px;
+        }
+
+        .speak-content-box {
+            text-size-adjust: none;
+
+            .speak-content {
+                font-size: 30px; /* px */
+                line-height: 1.4;
+                color: #333;
+                
+                &.normal {
+                    height: 210px; /* px */
+                    overflow: hidden;
+                }
+
+                &.ellipsis {
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    text-overflow: ellipsis;
+                    -webkit-line-clamp: 5;
+                }
+            }
+
+            .shrink {
+                display: inline-block;
+                color: #708DB7;
+                font-size: 24px; /* px */
+                margin: 16px 0;
+            }
+        }
+
+        .audio-wrap {
+            margin-top: 40px;
+        }
+        
+        .img-list{
+            width:620px;
+            margin-top:40px;
+            display:flex;
+            flex-wrap:wrap;
+            &.sp{
+                width:470px;
+            }
+            .img-item{
+                width: 140px;
+                height: 140px;
+                border-radius: 8px;
+                background-repeat: no-repeat;
+                background-position:center;
+                background-size:cover;
+                margin:0 10px 10px 0;
+                overflow: hidden;
+                position:relative;
+                cursor:pointer;
+                &.sp{
+                    width: auto;
+                    height: auto;
+                    max-width:425px;
+                    max-height:425px;
+                    margin:0;
+                    overflow: inherit;
+                }
+                img{
+                    display:block;
+                }
+            }
+        }
+        .img-sigle{
+            margin-top: 40px;
+        }
+        
+        .video-list {
+            margin-top:40px;
+            .video-wrapper {
+                
+            }
+        }
+
+        // .task-ascription {
+        //     margin-top: 18px;
+        //     font-size: 24px; /* px */
+        //     color: #FF9400;
+        //     display: flex;
+        //     align-items: center;
+
+        //     &::before {
+        //         content: "";
+        //         width: 32px;
+        //         height: 32px;
+        //         background: url('./img/camp_icon_homework.png') no-repeat center;
+        //         background-size: contain;
+        //         margin-right: 8px;
+        //     }
+        // }
+
+        .item-footer {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            //margin-top: 32px;
+            //display: flex;
+            //justify-content: space-between;
+            //align-items: center;
+            //font-size: 22px; /* px */
+            //color: #999;
+            //.homework-operate {
+            //    display: flex;
+            //}
+            //.comment-btn {
+            //    width: 32px;
+            //    height: 32px;
+            //    background: url('./img/icon_comment.png') no-repeat center;
+            //    background-size: contain;
+            //    margin-right: 30px;
+            //}
+            .fabulous-btn {
+                width: 120px; /*px*/
+                height: 120px; /*px*/
+                background: #F73657;
+                border-radius: 50%;
+                box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.12);
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                //overflow: hidden;
+
+                &.animate {
+                    img {
+                        animation: training-detail-fabulous 0.5s ease-in-out;
+                    }
+                }
+
+                img {
+                    width: 118px; /*px*/
+                    height: 118px; /*px*/
+                    //background-color: #fff;
+                    pointer-events: none;
+                }
+
+                span.countNum {
+                    position: absolute;
+                    top: -55px;
+                    left: 50%;
+                    width: 76px; /*px*/
+                    height: 45px; /*px*/
+                    //background: #F73657;
+                    margin-left: -38px;
+                    text-align: center;
+                    line-height: 38px; /*px*/
+                    font-size: 26px; /*px*/
+                    color: #fff;
+                    background: url("./img/icon-bubble.png") 0 0 no-repeat;
+                    background-size: 76px 45px; /*px*/
+                }
+
+            }
+
+            @keyframes training-detail-fabulous {
+                0% {
+                    transform: rotate(0) scale(1);
+                }
+                //12.5% {
+                //    transform: translateX(-20px)
+                //}
+                //25% {
+                //    transform: translateX(0px)
+                //}
+                //37.5% {
+                //    transform: translateX(20px)
+                //}
+                50% {
+                    transform: rotate(-15deg) scale(1.2);
+                }
+                //62.5% {
+                //    transform: translateX(-20px)
+                //}
+                //75% {
+                //    transform: translateX(0px)
+                //}
+                //87.5% {
+                //    transform: translateX(20px)
+                //}
+                100% {
+                    transform: rotate(0) scale(1);
+                }
+            }
+
+        }
+        .commemt-wrap {
+            background: #FFF;
+            box-shadow: 0px 14px 40px 0px rgba(0, 0, 0, .07);
+            border-radius: 8px;
+            padding: 30px 24px 30px 30px;
+            margin-bottom: 20px;
+            text-size-adjust: none;
+            .teacher-comment {
+                padding-bottom: 30px;
+                border-bottom: 1px dotted #DCDCDC;
+                &:last-child{
+                    border-bottom: none;
+                }
+                .teacher-name {
+                    //font-size: 32px; /*px*/
+                    display: inline-block;
+                    font-size: 20px; /*px*/
+                    font-weight: 400;
+                    color: #F73657;
+                    //line-height: 28px;
+                    padding: 2px 7px;/*px*/
+                    border: 1px solid #F73657;/*no*/
+                    margin-right: 10px;
+                    vertical-align: text-bottom;
+                    border-radius: 4px;
+                }
+            }
+            .comment-item {
+                padding-top: 20px;
+                line-height: 1.25;
+                font-size: 30px; /*px*/
+                color: #333333;
+                font-weight:400;
+                //display: flex;
+                //align-items: center;
+                &>strong {
+                    color: #F73657;
+                    font-weight: inherit;
+                }
+                color: #333333;
+            }
+            .leave-comment {
+                padding-top: 30px;
+                .leave-name {
+                    color: #333333;
+                    font-size: 32px; /*px*/
+                    font-weight: 500;
+                }
+                .leave-content {
+                    color: #666666;
+                }
+            }
+        }
+    }
+    
+}

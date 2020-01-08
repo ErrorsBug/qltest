@@ -1,0 +1,110 @@
+/* 通用*/
+#container
+{
+	-webkit-overflow-scrolling: touch;
+	position: static;
+	overflow-x: hidden;
+	overflow-y:scroll;
+	width: 100%;
+}
+
+h1.title
+{
+	display: block !important;
+	color: #333;
+	font-size: 32px;/*px*/
+	width: 100% !important;
+	margin-bottom: 40px;
+}
+
+
+h1.title span
+{
+	float: right;
+	font-size: 28px;/*px*/
+	color: #909499;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+span[class*='label-']
+{
+	display: block;
+	position: absolute;
+	padding: 8px 12px;
+	border-radius: 4px;
+	bottom: 5px;
+	left: 5px;
+	text-align: center;
+	font-size: 20px;/*px*/
+}
+
+.label-charge
+{
+	background-color: #fff;
+	color: #505559;
+}
+
+.label-public
+{
+	background-color: #24d04d;
+	color: #fff;
+}
+
+.arrow::after
+{
+	content: '';
+	background-image: url(./img/more.png?__inline);
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 10px;
+	width: 9px;
+	height: 14px;
+	background-size: contain;
+	margin-top: 5px;
+}
+
+.loading-next,
+.no-more
+{
+	display: none;
+	bottom: 0;
+	text-align: center;
+	width: 100%;
+	color: #909499;
+	padding: 20px 0;
+	font-size: 26px; /*px*/
+}
+
+.ribbon
+{
+	position: relative;
+}
+
+.ribbon::before
+{
+	white-space: nowrap;
+	content: attr(data-index);
+	color: #fff;
+	text-align: center;
+	font-size: 20px;/*px*/
+	display: block;
+	position: absolute;
+	width: 32px;
+	height: 38px;
+	line-height: 30px;
+	background-image: url(./img/grey.png?__inline);
+	background-size: contain;
+	top: -5px;
+	left: -5px;
+	z-index: 2;
+}
+
+
+.topic:first-child .ribbon::before,
+.topic:nth-child(2) .ribbon::before,
+.topic:nth-child(3) .ribbon::before
+{
+	background-image: url(./img/red.png?__inline);
+}
+

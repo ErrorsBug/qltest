@@ -1,0 +1,53 @@
+.main-enter-bar{
+    color: #666;
+    font-size: 24px;/*px*/
+    display: flex;
+    margin: 30px;
+    box-shadow: 0px 4px 40px 0px rgba(0,0,0,0.05);
+    border-radius: 4px;
+    padding: 40px 20px;
+
+    
+
+    .main-enter{
+        flex: 1;
+        text-align: center;
+        line-height: 52px;
+        color: #333;
+        font-size: 32px;/*px*/
+        &::before{
+            content: '';
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        
+    }
+    .btn-personal{
+        position: relative;
+        &::before{
+            background: url('./img/studio_icon_personal.png') center center no-repeat;
+            background-size: 100% auto;
+        }
+        &:after{
+            content: '';
+            display: block;
+            position: absolute;
+            right: 0;
+            top:50%;
+            transform: translateY(-50%);
+            background: #999999;
+            width: 1px;/*px*/
+            height: 30px;
+        }
+    }
+    .btn-setting{
+        &::before{
+            background: url('./img/studio_icon_setting.png') center center no-repeat;
+            background-size: 100% auto;
+        }
+    }
+    
+}

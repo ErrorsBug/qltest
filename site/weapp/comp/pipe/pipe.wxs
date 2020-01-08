@@ -1,0 +1,15 @@
+var imgUrlFormat = function imgUrlFormat(url, formatStrQ, ) {
+    var formatStrW = "/64"
+    var reg = getRegExp('/(img\.qlchat\.com)/', "img")
+    var wxReg = getRegExp('/(wx\.qlogo\.cn\/mmopen)/','img')
+
+    if (reg.test(url)) {
+        url = url.replace(getRegExp('/@.*/', 'img'), '') + formatStrQ
+    } else if (wxReg.test(url)) {
+        url = url.replace(getRegExp('/(\/(0|132|64|96)$)/', 'img'), '') + formatStrW
+    }
+
+    return url
+}
+
+module.exports.imgUrlFormat = imgUrlFormat

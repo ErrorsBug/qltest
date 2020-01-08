@@ -1,0 +1,52 @@
+<view class="topic-listening-container">
+    <scroll-view 
+        class="body" 
+        scroll-y 
+        enable-back-to-top 
+        lower-threshold="200"
+        bindscrolltolower="loadComment"
+    >
+        <!-- 顶部播放器区 -->
+        <header-block 
+            topicInfo="{{topicView.topicPo}}"
+            topicId="{{topicId}}"
+            liveId="{{liveId}}"
+            userInfo="{{userInfo}}"
+            playTimeStr="{{playTimeStr}}"
+            durationStr="{{durationStr}}"
+            ratio="{{ratio}}"
+            status="{{status}}"
+
+            bindonSliderChange="onSliderChange"
+            bindonPlayClick="onPlayClick"
+            bindonRedirectClick="redirectToThousanLive"
+        />
+
+        <!-- 介绍信息 -->
+        <introduce 
+            topicInfo="{{topicView.topicPo}}" 
+            profiles="{{profile}}" 
+            summary="{{summary}}"
+            notSummary="{{notSummary}}"
+        />
+
+        <!-- 评论区域 -->
+        <comment-list
+            sum="{{topicView.topicPo.commentNum}}"
+            noMore="{{commentNoMore}}"
+            noneOne="{{commentNoneOne}}"
+            list="{{commentList}}"
+        />
+    </scroll-view>
+    
+    <!-- 底栏 -->
+    <footer-bar 
+        class="footer-bar"
+        liveId="{{liveId}}"
+        topicId="{{topicId}}"
+        bindprependComment="prependComment"
+    />
+
+    <!-- 引导图 -->
+    <guide class="guide-wrap"/>
+</view>

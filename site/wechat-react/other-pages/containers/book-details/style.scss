@@ -1,0 +1,74 @@
+@font-face {
+    font-family: "SourceHanSans";
+    font-weight: 900;
+    font-display: swap;
+    src: local('SourceHanSans'),
+         url('https://static.qianliaowang.com/rs/library/fonts/SourceHanSerifCN-Bold.woff2') format('woff2'),
+         url('https://static.qianliaowang.com/rs/library/fonts/SourceHanSerifCN-Bold.woff') format('woff'),
+         url('https://static.qianliaowang.com/rs/library/fonts/SourceHanSerifCN-Bold.ttf') format('ttf');
+}
+
+
+.bd-book-box{
+    height: 100%;
+    .bl-book-scroll{
+        box-sizing: border-box; 
+        background: #fff;
+        padding-bottom: 60px;
+    }
+    .bd-book-header{
+        padding: 24px 32px 0;
+        position: relative;
+        margin-bottom: 48px;
+        z-index: 1;
+        &::before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 308px;
+            z-index: 1;
+            background: url("./img/bg01.png") no-repeat center top;
+            background-size: 100%;
+            content: '';
+        }
+        & > div{
+            background: url("./img/bg.png") no-repeat center top;
+            background-size: 100% 100%;
+            padding: 32px 32px 74px;
+            position: relative;
+            z-index: 3;
+        }
+        h4{
+            font-size: 40px;/*px*/
+            font-family: 'SourceHanSans', 'Times New Roman', Times, serif !important;
+            font-weight: bold;
+            color: rgba(51,51,51,1);
+            background: linear-gradient(135deg, rgba(166,132,67,1) 0%, rgba(118,86,52,1) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.4;
+            margin-bottom: 24px;
+        }
+        p{
+            font-size: 26px; /*px*/
+            color: #B37C4A;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 4;
+            overflow: hidden;
+            i{
+                font-size: 26px; /*px*/
+                color: #F0DFCD;
+                padding-right: 10px;
+            }
+        }
+    }
+    .bd-book-cont{
+        padding: 0 32px;
+        position: relative;
+        z-index: 2;
+    }
+}

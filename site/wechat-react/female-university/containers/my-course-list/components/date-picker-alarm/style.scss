@@ -1,0 +1,60 @@
+.my-cousrse-page-date-dialog{
+    .co-dialog-bottom{
+        background: #fff;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    .header{
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 80px;
+        padding: 110px 40px 20px;
+        .title{
+            flex: 1;
+            color: #333;
+            font-weight: bold;
+            font-size: 32px;/* px */
+        }
+        .control-switch {
+            flex-shrink: 0;
+            &.co-switch.active {
+                background-color: #E0414F;
+                border: 2px solid #E0414F;
+            }
+        }
+
+        .btn-close{
+            position: absolute;
+            top: 20px; 
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+            font-size: 30px;
+        }
+    }
+
+    .bottom{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0;
+
+        .btn-save{
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width:670px;
+            height:76px;
+            background: #E0414F;
+            border-radius:50px;
+            color: #fff;
+            font-size: 32px;/* px */
+        }
+    }
+}

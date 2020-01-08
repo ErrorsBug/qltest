@@ -1,0 +1,25 @@
+<scroll-view 
+    scroll-y="true" 
+    lower-threshold="200" 
+    bindscrolltolower="loadList" 
+    name="channel" 
+    hidden="{{!visible}}"
+>
+    <view class="topic-purchase-list">
+        <block wx:for="{{list}}" wx:key="key" wx:for-index="buyIndex">
+            <view class="list-item" data-topicId="{{item.topicId}}" bindtap="linkTotopic">
+                <image class="image" wx:if="{{item.pic}}" src="{{item.pic}}"></image>
+                <view class="info">
+                    <view class="title multi-elli"> {{item.title}}</view>
+                    <view class="livename-wrap">
+                        <view class="livename">
+                            {{item.liveName}}
+                        </view>
+                    </view>
+                    <view class="learning elli"> {{item.learningNum}}人在学</view>
+                </view>
+            </view>
+        </block>
+    </view>
+    <no-more noMore="{{noMore}}" noneOne="{{noneOne}}" />
+</scroll-view>

@@ -1,0 +1,15 @@
+{{#each topics}}
+<li class="topic on-log" data-id="{{id}}" data-lsharekey="{{lshareKey}}" log-business_id="{{id}}" log-name="{{killEm topic}}" log-business_type="topic"
+    data-url="{{url}}">
+    <span>
+        <img src="{{backgroundUrl}}" alt="">
+    </span>
+    <section>
+        <h2 class="multi-elli">{{{topic}}}</h2>
+        <p>
+            <span>{{dateFormat startTime 'MM-dd hh:mm'}}</span>
+            <span>{{browseNum}}次学习</span>
+        </p>
+    </section>
+</li>
+{{/each}}

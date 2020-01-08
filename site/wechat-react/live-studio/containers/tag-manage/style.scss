@@ -1,0 +1,117 @@
+.p-ls-tm {
+    height: 100%;
+    background-color: #ededed;
+    line-height: 1.4;
+    text-size-adjust: none;
+    display: flex;
+    flex-direction: column;
+    .scroll-wrap {
+        flex: 1;
+        overflow-y: auto;
+    }
+    .desc {
+        padding: 20px 40px;
+        font-size: 24px;
+        color: #666;
+    }
+    .tag-item {
+        position: relative;
+        height: 88px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        padding-left: 40px;
+        .index {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-size: 24px;
+            color: #999;
+            background-color: #eee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: normal;
+        }
+        .name {
+            flex: 1;
+            font-size: 28px;
+            color: #333;
+            font-weight: bolder;
+            padding: 0 16px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .btn-operate {
+            color: #999;
+            font-size: 40px;
+            padding: 20px 40px 20px 20px;
+            cursor: pointer;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 40px;
+            right: 40px;
+            height: 1px;/*no*/
+            background-color: #eee;
+        }
+        &:last-child::after {
+            content: none;
+        }
+    }
+    >.footer {
+        background-color: #fff;
+        padding: 12px 40px;
+        >[class|=btn] {
+            background-color: #f73657;
+            color: #fff;
+            font-size: 32px;
+            line-height: normal;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 76px;
+            border-radius: 76px;
+        }
+    }
+}
+
+.ls-tm-actionsheet {
+    .c-mask-view-body {
+        background-color: #f7f7f7;
+    }
+    .as-item {
+        position: relative;
+        height: 90px;
+        line-height: normal;
+        color: #333;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        cursor: pointer;
+        &.disabled {
+            color: #ccc;
+            cursor: none;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;/*no*/
+            background-color: #eee;
+        }
+        &:last-child::after {
+            content: none;
+        }
+    }
+    .btn-cancel {
+        margin-top: 20px;
+    }
+}

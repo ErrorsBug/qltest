@@ -1,0 +1,80 @@
+.consult-manage-container {
+    background: #fff;
+    height: 100%;
+    .header {
+        padding: 27px 20px 40px 20px;
+        .header-banner {
+            box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    .message-container {
+        padding: 0 30px;
+
+        .message-title {
+            .all-msg {
+                font-family: PingFangSC-Semibold;
+                font-size: 32px;
+                color: #333333;
+                letter-spacing: 0;
+                margin-right: 10px;
+            }
+
+            .msg-num {
+                color: #f73657;
+                font-family: PingFangSC-Semibold;
+                font-size: 32px;
+                letter-spacing: 0;
+            }
+        }
+    }
+
+    .selection-dialog {
+        .co-dialog-content {
+            width: 600px;
+            border-radius: 26px;
+            
+            .title {
+                padding: 40px 0 30px 0;
+                text-align: center;
+                font-family: PingFangSC-Semibold;
+                font-size: 36px;
+                color: #333333;
+                letter-spacing: 0;
+            }
+
+            .body {
+                font-family: PingFangSC-Regular;
+                font-size: 30px;
+                color: #999999;
+                letter-spacing: 0;
+                text-align: center;
+                margin-bottom: 39px;
+            }
+
+            .footer {
+                border-top: 1px #eee solid; /*no*/ 
+                height: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .btn {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                    flex: 1;
+                    font-family: PingFangSC-Regular;
+                    font-size: 30px;
+                    color: #666666;
+                    letter-spacing: 1px;
+                }
+
+                .btn-cancel {
+                    border-right: 1px solid #eee; /*no*/
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.channel-list
+{
+	background-color: #fff;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	box-sizing: border-box;
+	padding: 0 30rpx 30rpx 30rpx;
+}
+
+.channel-item
+{
+	width: 334rpx;
+	margin-top: 30rpx;
+	// padding: 0 16rpx;
+	box-sizing: border-box;
+	display: inline-flex;
+	flex-direction: column;
+}

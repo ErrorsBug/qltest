@@ -1,0 +1,38 @@
+.c-distri-re-detail-item {
+    display: flex;
+    padding-left: 24px;
+    font-size: 28px;/*px*/
+    line-height: 40px;
+    background: #fff;
+    &:last-child {
+        .distri-time, .sign-up {
+            border-bottom: 0;/*no*/
+        }
+    }
+    .distri-time {
+        flex: 0 0 3em;
+        padding: 24px 0;
+        width: 3em;
+        margin-left: 23px;
+        color: #999;
+        border-bottom: 2px solid #eaeaea;/*no*/
+    }
+    .sign-up {
+        flex: 1 1;
+        padding: 24px 24px 24px 48px;
+        border-bottom: 2px solid #eaeaea;/*no*/
+        .user {
+            color: #333;
+        }
+        .money {
+            color: #ffa200;
+        }
+        .percent{
+            color: #999;
+        }
+        .earning{
+            color: #333;
+            float:right;
+        }
+    }
+}

@@ -1,0 +1,200 @@
+@import "../../../../../assets/styles/mixins.scss";
+
+.recommend-exclusive{ 
+    position: relative;
+    @include afterBorderBottom1px;
+    &::after {
+        left: 40px;
+        right: 40px;
+    }
+    .list-wrap{
+        padding:0 32px;
+        display:flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .list-item{
+            width:49%;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom:32px;
+            position: relative;
+            .poster{
+                width:100%;
+                height:0;
+                padding-top:62.39%;
+                overflow: hidden;
+                position:relative;
+                img{
+                    width:100%;
+                    height:100%;
+                    display:block;
+                    position:absolute;
+                    left:0;
+                    top:0;
+                }
+            }
+            .info{
+                background:rgb(245,245,245);
+                padding:15px 20px;
+                height: 155px;
+                box-sizing: border-box;
+                display:flex;
+                flex-direction: column;
+                justify-content: space-between;
+                position:relative;
+                overflow: hidden;
+                .name{
+                    font-size:26px;/*px*/
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    text-overflow: ellipsis;
+                    -webkit-line-clamp: 2;
+                    line-height: 1.4;
+                }
+                .tips{
+                    display:flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .tag{
+                        height:28px;
+                        display: flex;
+                        color:#fff;
+                        align-items: center;
+                        justify-content: center;
+                        background:#fa3936;
+                        font-size:18px;/*px*/
+                        padding: 0 5px;
+                        border-radius: 3px;
+                    }
+                    .category{
+                        font-size:22px;/*px*/
+                        color:#999090;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    .play-btn{
+                        height:36px;
+                        width: 118px;
+                        color: #F73657;
+                        background-color: #FFF0F0;
+                        font-size: 24px; /*px*/
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        line-height: normal;
+                        height: 47px;
+                        padding-left: 20px;
+                        background-image: url("./img/play-btn.png");
+                        background-size: 20px;
+                        background-position: 20px center;
+                        background-repeat: no-repeat;
+                        border-radius: 118px;
+                        box-sizing: border-box;
+                        .pause{
+                            margin-left: -17px;
+                        }
+                        &.loading{
+                            background-image: none;
+                            padding: 0;
+                            i{
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                                background: url("./img/loading.png") no-repeat center;
+                                background-size: 30px;
+                                animation: loadingAni 1.5s linear backwards infinite;  
+                            }   
+                        }
+                        & > div{
+                            opacity: 0;
+                            visibility: hidden;
+                        }
+                        &.played{
+                            background-image: none;
+                            & > div {
+                                opacity: 1;
+                                visibility: initial;
+                                width: 20px;
+                                height: 20px;
+                                display: flex;
+                                // transform: ;
+                                transform: rotate(180deg) translateX(24px);
+                                transform-origin: left;
+                                span {
+                                    display: inline-block;
+                                    width: 3px;
+                                    margin-bottom: 0;
+                                    background-color: #FF5F7A;
+                                    margin-right: -10px;
+                                    border-radius: 3px;
+                                }
+                                .line1 {
+                                    // alternate意为应该轮流反向播放动画
+                                    animation: lineOne 0.6s infinite ease-in-out alternate;
+                                }
+                            
+                                .line2 {
+                                    animation: lineOne 0.6s infinite  0.5s ease-in-out alternate;
+                                }
+                            
+                                .line3 {
+                                    animation: lineOne 0.6s infinite 0.3s  ease-in-out alternate;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .details{
+                position:absolute;
+                height: 155px;
+                left:0;
+                width:100%;
+                bottom: 0;
+                background: rgb(245,245,245);
+                overflow: hidden;
+                padding:15px 20px;
+                box-sizing: border-box;
+                transform: translate3d(0, 100%, 0);
+                transition:transform .2s;
+                line-height:1.2;
+                display:flex;
+                flex-direction: column;
+                justify-content: space-between;
+                &.show{
+                    transform: translate3d(0, 0, 0);
+                }
+                .details-name{
+                    font-size:26px;/*px*/
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    text-overflow: ellipsis;
+                    -webkit-line-clamp: 1;
+                    line-height: 36px;
+                }
+                .details-category{
+                    font-size:24px;/*px*/
+                    color:#999090;
+                }
+                .tip-container {
+                    display: flex;
+                    .tip{
+                        font-size:22px;/*px*/
+                        color:#999090;
+                        flex: 1;
+                    }
+                    .tip-icon {
+                        width:50px;
+                        height:23px;
+                        background: url(./img/icon-ellipsis.png) no-repeat right / 5px 100%;
+                        background-position: center center;
+                        margin-right: -20px;
+                    }
+                }
+            }
+        }
+    }
+}

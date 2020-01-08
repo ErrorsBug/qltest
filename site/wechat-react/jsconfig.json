@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "module": "es2015",
+        "target": "es2015",
+        "jsx": "preserve",
+        "baseUrl": ".",
+        "paths": {
+            "actions": ["./actions"],
+            "components/*": ["./components/*"]
+        }
+    },
+    "exclude": [
+        "node_modules",
+        "public",
+        "dest",
+        "video-admin",
+        "qlchat-weapp-collection",
+        "main"
+    ]
+}

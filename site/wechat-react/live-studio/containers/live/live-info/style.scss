@@ -1,0 +1,83 @@
+.live-info-page {
+    padding: 40px 0 60px 0;
+    background-color: #fff;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    .header-logo-con {
+        margin: 0 40px;
+        img {
+            display: block;
+            margin: auto;
+            border-radius: 100px;
+            width: 140px;
+            height: 140px;
+        }
+
+        .name {
+            margin-top: 30px;
+            font-size: 32px; /*px*/
+            font-weight: bold;
+            color: #424242;
+            text-align: center;
+        }
+    }
+
+    .info-con {
+        margin: 60px 40px 0 40px;
+        
+        .title {
+            font-size: 32px; /*px*/
+            font-weight: bold;
+            line-height: 45px;
+            color: #424242;
+        }
+
+        .content {
+            margin-top: 20px;
+            font-size: 30px; /*px*/
+            line-height: 1.4;
+            color: #807878;
+        }
+
+        .intro-photo {
+            img {
+                margin-top: 20px;
+                width: 100%;
+            }
+        }
+
+        .qrcode-con {
+            // border: 6px solid #f0eded; /*no*/
+            padding: 6px;
+            margin-top: 30px;
+
+            .con2 {
+                // border: 2px solid #f0eded; /*no*/
+                height: 314px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 33px;
+
+                img {
+                    display: block;
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+        }
+        .tip {
+            text-align: center;
+            font-size:28px;/*px*/
+            color:rgba(102,102,102,1);
+            line-height:40px;
+        }
+
+    }
+}

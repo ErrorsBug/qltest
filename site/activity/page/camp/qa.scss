@@ -1,0 +1,70 @@
+#tuiwen-container {
+    height: 100%;
+}
+
+.main-container {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    background-color: #fff;
+    // 解决防漏底情况下IOS滑动不顺畅的问题
+    -webkit-overflow-scrolling: touch;
+    
+    >.qa-container{
+        margin: 0 40px;
+
+        >li{
+            padding: 40px 0;
+            .question{
+                display: flex;
+                line-height: 44px;
+                
+                .q{
+                    color: rgb(239,86,112);
+                    font-size: 40px; /*px*/
+                    margin-right: 20px;
+                    display: flex;
+                    >span{
+                        margin-left: 4px;
+                        font-size: 28px; /*px*/
+                    }
+                }
+                .title{
+                    color: rgb(66,66,66);
+                    font-size: 28px; /*px*/
+                    flex: 1;
+                }
+            }
+            .answer{
+                display: flex;
+                line-height: 44px;
+                margin-top: 20px;
+                .a{
+                    color: rgb(184,176,176);
+                    font-size: 40px; /*px*/
+                    margin-right: 20px;
+                    display: flex;
+                    >span{
+                        margin-left: 6px;
+                        font-size: 28px; /*px*/
+                    }
+                }
+                .title{
+                    color: rgb(184,176,176);
+                    font-size: 28px; /*px*/
+                    flex: 1;
+                }
+            }
+            &:not(:first-child){
+                border-top: 1px solid rgb(240,240,240);/*no*/
+            }
+        }
+    }
+	
+}
+

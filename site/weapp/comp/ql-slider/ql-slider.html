@@ -1,0 +1,10 @@
+
+<movable-area class="ql-slider">
+    <view class="ql-slider-line"></view>
+    <view class="ql-slider-select-line" style="width: {{selectWidth}}%;"></view>
+    <!-- <movable-area class="ql-slider-movable-area"> -->
+    <movable-view class="ql-slider-drag-wrap" x="{{x}}" direction="horizontal" bind:touchstart="onTouchStart" bind:touchmove="onTouchmove" bind:touchcancel="onTouchcancel" bind:touchend="onTouchend">
+        <view class="ql-slider-drag-point" ></view>
+    </movable-view>
+    <!-- </movable-area> -->
+</movable-area>

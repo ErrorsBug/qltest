@@ -1,0 +1,84 @@
+.bottom-pay-control-container {
+    flex-shrink: 0;
+    width: 100%;
+
+    .bottom-pay-control-wrapper {
+        bottom: 0;
+        z-index: 9;
+        width: 100%;
+        cursor: pointer;
+        height: 100px;
+        display: flex;
+        flex-flow: row nowrap;
+        background-color: #ffffff;
+        box-sizing: border-box;
+        .price-tip {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            flex: 1;
+            padding: 0 0 0 40px;
+            .price {
+                color: #333333;
+                font-size: 28px; /*px*/
+                font-weight: bold;
+                line-height: 40px;/* px */
+                .rmb-sign {
+                    color: #fe5670;
+                    font-size: 22px; /*px*/
+                }
+                .amount {
+                    color: #fe5670;
+                }
+                .free {
+                    color: #07C160;
+                }
+                .del-price{
+                    color: #999;
+                    font-size: 22px;/* px */
+                    text-decoration: line-through;
+                    margin-left: 5px;
+                    font-weight: normal;
+                }
+            }
+            .info{
+                display: flex;
+                line-height: 30px;/* px */
+                font-size: 22px;
+                align-content: center;
+                color: #999999;
+
+                .bonus {
+                    font-size: 22px; /*px*/
+                    margin-right: 20px;
+                }
+
+                .amount{
+                    color: #fe5670;
+                }
+            }
+        }
+        .pay-button {
+            width: 310px;
+            margin-left: 40px;
+            text-align: center;
+            height: 100px;
+            line-height: normal;
+            color: #ffffff;
+            background-color: #fe5670;
+            font-size: 32px; /*px*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .buy-tip-confirm-box {
+        .co-dialog-confirm {
+            font-size: 26px; /*px*/
+            color: #666666;
+            line-height: 2;
+            padding: 0 50px;
+            box-sizing: border-box;
+        }
+    }
+}

@@ -1,0 +1,81 @@
+@import "../../../assets/styles/base-definition";
+
+.share-income-channel-list{
+    position: absolute;  
+    width:100%;
+    height: 100%;
+
+    .flow-dl{
+        padding-top:20px;
+        
+        dd{
+            margin:0 20px 20px 20px;  
+            padding:40px 30px;          
+            position:relative;
+            background-color:#fff;
+            border-radius: 5px;            
+        }
+        a{
+            display: block;
+            
+        }
+        .content{
+            color:#333;
+            font-size: 30px;/*px*/
+            display: block;
+            padding-right:130px; /*px*/
+            word-break: break-all;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            margin-bottom:40px;
+        }
+        .channel-status-delete{
+            color:#ff4b69; 
+            font-size: 22px;/*px*/
+            position:absolute;
+            right:30px;
+            top:35px;
+            display: block;
+            width:100px; /*px*/
+            padding:10px;
+            text-align: center;
+            border:1px solid #f0f0f0;/*no*/
+            border-radius:5px;
+        }
+        .live-name{
+            color:#333;
+            font-size: 26px;/*px*/
+            display:inline-block;
+            max-width: 260px;
+            word-break: break-all;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        .time{
+            color:#333;
+            font-size: 26px;/*px*/
+        }
+        .money{
+            color:#ff4b69;
+            font-size: 26px;/*px*/
+        }
+        .check-detail{
+            display: block;
+            border:1px solid $main-color;/*no*/
+            color: $main-color;
+            font-size: 28px;/*px*/
+            padding:20px;
+            border-radius:5px;
+            text-align: center;
+            margin-top:20px;
+        }
+        .span_1{
+            color:#666;
+            font-size: 24px;/*px*/
+            line-height: 50px;
+            margin-right:20px;
+        }
+    }
+}

@@ -1,0 +1,80 @@
+.card-section
+{
+	height: 350rpx;
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.card
+	{
+		height: 290rpx;
+		width: 690rpx;
+		padding-top: 35rpx;
+		box-sizing: border-box;
+		// background-image: linear-gradient(174deg,#fcf7f0 0%,#eeddbf 100%), linear-gradient(#fef8ee,#fef8ee);
+		background-blend-mode: normal, normal;
+		border-radius: 6px;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		.live-logo
+		{
+			width: 100rpx;
+			height: 100rpx;
+			border-radius: 100%;
+			border: 4px solid #dab473;
+			flex-shrink: 0;
+		}
+
+		.live-name
+		{
+			font-size: 32rpx;
+			color: #544732;
+			font-weight: bold;
+			margin-top: 17rpx;
+		}
+
+		.slogan
+		{
+			margin-top: 28rpx;
+			width: 450rpx;
+			height: 30rpx;
+			color: #a58046;
+			font-size: 28rpx;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			&::before,
+			&::after
+			{
+				content: '';
+				position: absolute;
+				top: 50%;
+				width: 64rpx;
+				height: 1rpx;
+				background-color: #ae956e;
+			}
+			&::before
+			{
+				left: 0;
+			}
+			&::after
+			{
+				right: 0;
+			}
+			.icon-vip
+			{
+				width: 24rpx;
+				height: 27rpx;
+				margin-right: 10rpx;
+			}
+		}
+	}
+}

@@ -1,0 +1,74 @@
+ {{#each data}}
+<dl class="theme-type" attr-type-index="{{name}}">
+    {{#each content}}
+    <dt class="theme-type-img" name="{{name}}" attr-index="{{@index}}">
+        <div  class="theme-type-img-box">
+            {{#if url}}
+                <img data-imgloaded="false" data-imgsrc="{{url}}"  alt="{{name}}"/>
+            {{else}}
+                <img data-imgloaded="true" src="{{img-empty 'empty'}}"  alt="{{name}}"/>
+            {{/if}}
+        </div>
+    </dt>
+    <dd class="theme-topic">
+        <ul class="topic-ul">
+            {{#each topics}}
+                <li class="topic-ul-li on-log on-visible" data-id="{{id}}" data-lkey="{{lshareKey}}" data-key="{{shareKey}}" data-type="topic" log-region="topic_list" log-business_id="{{id}}" log-name="{{title}}" log-business_type="topic">
+                    <span class="topic-ul-li-head">
+                        
+                        {{#if imgUrl}}
+                            <img class="img-default" data-imgloaded="false" data-imgsrc="{{img-format imgUrl '@300w_200h_1e_1c_2o'}}" />
+                        {{else}}
+                            <img class="img-default" data-imgloaded="true" src="{{img-empty 'empty'}}" />
+                        {{/if}}
+                        
+                    </span>
+                    <span class="topic-title multi-elli">
+                        {{title}}
+                    </span>
+                    
+                    <span class="topic-span-money1 {{desStyle}}">{{desMoney}}</span>
+                   {{#if isdes}} {{#compare desMoney "!=" "免费"}}<span class="topic-span-money2">￥{{money}}</span>{{/compare}}{{/if}}
+                    <span class="topic-join-btn">立即报名</span>
+                </li>
+            {{/each}}
+        </ul>
+    </dd>
+    <dd class="theme-channel">
+        <ul class="channel-ul">
+        {{#each channels}}
+            {{#if isfour}}
+             </ul>
+             <ul class="channel-ul">
+            {{/if}}
+                <li class="channel-ul-li on-log on-visible"  data-id="{{id}}" data-lkey="{{lshareKey}}" data-key="{{shareKey}}" data-type="channel" log-region="channel_list" log-business_id="{{id}}" log-name="{{title}}" log-business_type="channel">
+                    <div class="channel-top">
+                        <div class="channel-head">
+                            <i class="channel-head-box">
+                            {{#if imgUrl}}
+                                <img class="img-default" data-imgloaded="false" data-imgsrc="{{img-format imgUrl '@200w_200h_1e_1c_2o'}}" />
+                            {{else}}
+                                <img class="img-default" data-imgloaded="true" src="{{img-empty 'empty'}}" />
+                            {{/if}}
+                            </i>
+                        </div>
+                    </div>
+                    <div class="channel-name">
+                        <span class="multi-elli">{{title}}</span>
+                    </div>
+                    <div class="channel-price">
+                        <span class="channel-money1 {{desStyle}}">{{desMoney}}</span>
+                       {{#if isdes}} 
+                        {{#compare desMoney "!=" "免费"}}
+                            <span class="channel-money2">￥{{money}}</span>
+                        {{/compare}}
+                       
+                       {{/if}}
+                    </div>
+                </li>
+        {{/each}}    
+        </ul>
+    </dd>
+    {{/each}}
+</dl>
+{{/each}}

@@ -1,0 +1,13 @@
+{{#each channels}}
+<li class="channel" data-id="{{id}}" log-business_id="{{id}}" log-name="{{killEm name}}" log-business_type="channel">
+    <span>
+                <img src="{{headImage}}" alt="">
+            </span>
+    <section>
+        <h2 class="elli">{{{name}}}</h2>
+        <p>
+            {{subscribeNum}}次学习
+        </p>
+    </section>
+</li>
+{{/each}}

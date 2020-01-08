@@ -1,0 +1,49 @@
+.coupon-bottom{
+    .co-dialog-bottom, .co-dialog-bottom-title{
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    .co-dialog-bottom-title {
+        padding: 0 30px;
+
+        .dialog-sure {
+            position: absolute;
+            right: 30px;
+            font-size: 30px;
+            color: #666;
+        }
+    }
+    .co-dialog-bottom-list{
+
+    }
+    .co-dialog-bottom-title-content{
+        position: relative;
+        text-align: center;
+        font-weight: 700;
+        font-size: 36px!important;
+        height: 100px;
+    }
+    .co-dialog-bottom-item{
+        position: relative;
+        padding: 0 30px;
+        &:after{
+            content: '';
+            display: block;
+            width:30px;
+            height:30px;
+            background: url(../../img/bottom-box.png) center center no-repeat;
+            background-size: 100% auto;
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &.co-dialog-bottom-item-active{
+            &:after{
+                content: '';
+                background: url(../../img/bottom-active.png) center center no-repeat;
+                background-size: 100% auto;
+            }
+        }
+    }
+}

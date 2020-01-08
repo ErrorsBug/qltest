@@ -1,0 +1,35 @@
+{{#each topics}}
+    <li class="topic" data-id="{{id}}" data-url="{{url}}">
+        <!--图片-->
+        <span>
+            <img src="{{img-format backgroundUrl '@270w_180h_1e_1c_2o'}}" alt="">
+            {{#compare type '==' 'charge'}}
+                {{#compare money '==' 0}}
+                    <span class="label-public">免费</span>
+                {{/compare}}
+                {{#compare money '!=' 0}}
+                    <span class="label-charge">￥{{calc money '/100'}}</span>
+                {{/compare}}
+            {{/compare}}
+        </span>
+        <!--介绍-->
+        <div class="detail">
+            <h1 class="multi-elli">{{topic}}</h1>
+            <span>{{liveName}}</span>
+            <p class="status">
+                {{#compare status '===' 'beginning'}}
+                <span class="beginning"><i style="background-image: url({{img-format liveLogo '@34w_34h_1e_1c_2o'}})"></i>进行中</span>
+                {{/compare}}
+                {{#compare status '===' 'ended'}}
+                <span class="ended">{{speakCount}}条语音</span>
+                {{/compare}}
+                {{#compare status '===' 'plan'}}
+                <span class="plan">{{time-status startTime}}</span>
+                {{/compare}}
+                <span class="member">
+                    {{browseNum}}人次
+                </span>
+            </p>
+        </div>
+    </li>
+{{/each}}

@@ -1,0 +1,117 @@
+// 首页底部tab zIndex 200
+.co-phone-auth-modal {
+    z-index: 201!important;
+}
+.co-phone-auth {
+    padding: 48px 40px;
+    background-color: #fff;
+    font-size: 28px;
+    text-align: center;
+    line-height: 1.4;
+    .title {
+        font-size: 32px;
+        color: #333;
+        font-weight: bold;
+    }
+    .desc {
+        color: #F73657;
+        font-size: 28px;
+        margin-top: 15px;
+    }
+    .line-wrap {
+        margin-top: 30px;
+    }
+    .btn-bind {
+        display: flex;
+        margin: 48px auto 0;
+        width: 310px;
+        height: 76px;
+        background:rgba(247,54,87,1);
+        border-radius: 50px;
+        color: #fff;
+        font-size: 32px;
+        line-height: normal;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: .4em;
+        &.disabled {
+            color: #999;
+            background-color: #eee;
+            cursor: auto;
+        }
+    }
+}
+
+.co-phone-auth-input {
+    flex: 1;
+    position: relative;
+    border-radius: 4px;
+    height: 76px;
+    box-sizing: border-box;
+    background-color: #F7F7F7;
+    display: flex;
+    align-items: center;
+    [class|=icon] {
+        flex-shrink: 0;
+        margin-left: 20px;
+        width: 32px;
+        height: 32px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    .icon-phone {
+        background-image: url(./img/icon-phone.png);
+    }
+    .icon-message {
+        background-image: url(./img/icon-message.png);
+    }
+    .icon-password {
+        background-image: url(./img/icon-password.png);
+    }
+    input {
+        flex: 1;
+        display: block;
+        width: 100%;
+        height: 100%;
+        font-size: 26px;
+        color: #333;
+        line-height: normal;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        padding: 0 20px 0 72px;
+        
+        margin-left: -52px;
+        cursor: pointer;
+        &::placeholder {
+            color: #999;
+        }
+    }
+}
+
+.co-get-veri-code {
+    width: 225px;
+    margin-left: 30px;
+    background-color: #FF9F00;
+    color: #fff;
+    font-size: 26px;
+    border-radius: 4px;
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    &.disabled {
+        color: #999;
+        background-color: #eee;
+        cursor: auto;
+    }
+}
+
+.phone-auth-guide {
+    p {
+        word-break: break-word;
+        padding: 0 48px;
+    }
+}

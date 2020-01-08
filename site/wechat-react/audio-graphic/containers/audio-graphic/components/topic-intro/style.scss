@@ -1,0 +1,148 @@
+@import "../../basis-definition";
+.topic-intro-container{
+    background: #fff;
+    margin-top: 20px;
+    padding: 0 30px 20px;
+
+    // 频道信息部分
+    .channel-info-container{
+        display: flex;
+        padding: 20px 0 30px;
+        border-bottom: solid 1px #f0f0f0;/* px */
+        align-items: center;
+
+        .logo-channel{
+            display: block;
+            width: 70px;
+            height: 70px;
+            border-radius: 5px;
+            margin-right: 20px;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .channel-info{
+            display: block;
+            flex: 1;
+            overflow: hidden;
+
+            h2{
+                display: block;
+                width: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-size: 28px;/* px */
+                line-height: 40px;
+                color: #333333;
+                font-weight: normal;
+                cursor: pointer;
+                
+            }
+            h3{
+                font-size: 22px;/* px */
+                line-height: 35px;
+                color: #b2b2b2;
+                font-weight: normal;
+            }
+        }
+
+        .btn{
+            display: block;
+            padding: 12px 20px;
+            font-size: 24px;/* px */
+            line-height: 30px;
+            color: $main-color;
+            border: solid 1px $main-color;/* no */
+            border-radius: 100px;
+            background: #fff;
+            text-align: center;
+            white-space: nowrap;
+            margin:0 0 0 20px ;
+            flex-shrink: 0;
+
+            &.disable{
+                color: #999;
+                border-color: #999;
+            }
+
+        }
+
+    }
+
+    // 标题
+    .topic-remark{
+        padding:20px 0 0;
+
+        .title{
+            font-size: 34px;/* px */
+            line-height: 40px;/* px */
+            color: #333333;
+            padding: 20px 0 ;/* px */
+            font-weight: bold;
+        }
+
+        .view{
+            font-size: 22px;/* px */
+            color: #999999;
+            line-height: 40px;/* px */
+            padding-right: 20px;
+            text-size-adjust: none;
+        }
+        .time{
+            font-size: 22px;/* px */
+            color: #999999;
+            line-height: 40px;/* px */
+            text-size-adjust: none;
+        }
+        
+
+    }
+
+    // 话题介绍内容
+    .intro-list{
+        padding: 0 0 20px;
+        position: relative;
+        color: #333333;
+        margin: 10px 0 0;
+
+        &.fold{
+            height: 200px;/* no */
+            overflow: hidden;
+
+        }
+
+        pre{
+            margin: 20px 0;/* px */
+            font-size: 28px;/* px */
+            line-height: 45px;/* px */
+            white-space: pre-wrap;
+            word-break: break-word;
+            min-height: 20px;
+        }
+        img{
+            max-width: 100%;
+            // display: block;
+            margin: 0 auto;
+        }
+
+
+    }
+
+
+    .btn-switch{
+        margin: 0;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        height: 90px;
+        width: 100%;
+        font-size: 24px;/* px */
+        color: #999999;
+    }
+
+
+
+
+}

@@ -1,0 +1,235 @@
+@import "../../../../../assets/styles/base-definition";
+@import "../../../../../assets/styles/mixins.scss";
+
+.my-coupon-container{
+	height:100%;
+	display: flex;
+	flex-direction: column;
+
+	.title-bar{
+		display: inline-flex;
+		height:44px;
+		font-size:32px;
+		align-items: center;
+		color: #333;
+		font-weight: bold;
+		margin: 20px 40px 0;
+		padding: 20px 0 0;
+
+	}
+}
+.my-coupon-type{
+	display:flex;
+	align-items: center;
+	padding:40px 20px 0 40px;
+	overflow: hidden;
+	flex-wrap:wrap;
+	flex-shrink: 0;
+	.type-item{
+		height:52px;
+		padding:0 20px;
+		background:#F7F7F7;
+		border-radius: 100px;
+		color:#666;
+		@include flex-center;
+		margin:0 20px 20px 0;
+		cursor: pointer;
+		&.current{
+			color:$main-color;
+		}
+		&:last-child{
+			margin-right:0;
+		}
+	}
+}
+.my-coupon-scroll-box{
+	flex:1;
+	.my-coupon-list{
+		margin:0 20px;
+		.my-coupon-item{
+			padding-top:33.24%;
+			position:relative;
+			background:url(../../img/my-coupon-bg.png) no-repeat center / 100%;
+			.coupon-item-wrap{
+				position: absolute;
+				top:20px;
+				left:20px;
+				right:20px;
+				bottom:20px;
+				display:flex;
+				.course-info{
+					flex:1;
+					display:flex;
+					align-items: flex-start;
+					justify-content: center;
+					flex-direction: column;
+					.vip-tip{
+						border: 1px solid #BB9671;/*no*/
+						border-radius: 100px;
+						color:#BB9671;
+						@include flex-center;
+						padding:0 20px;
+						margin:0 40px 10px;
+					}
+					.title{
+						font-size:24px;/*px*/
+						line-height:1.5;
+						overflow: hidden;
+						display: -webkit-box;
+						-webkit-box-orient: vertical;
+						text-overflow: ellipsis;
+						-webkit-line-clamp: 2;
+						font-weight: bolder;
+						margin:0 40px;
+					}
+					.tip{
+						margin:10px 40px 0;
+						color:$gray-tip;
+						.expiration-time.highlight{
+							color:#FF9400;
+						}
+					}
+				}
+				.coupon-info{
+					width:28.1%;
+					display:flex;
+					align-content: center;
+					justify-content: center;
+					flex-direction: column;
+					color:#fff;
+					text-align:center;
+					cursor:pointer;
+					.price{
+						font-size:48px;/*px*/
+						font-weight: bolder;
+						.unit{
+							font-size:32px;/*px*/
+							font-style: normal;
+						}
+					}
+					.tip{
+						margin-top:10px;
+					}
+				}
+			}
+			&.disable{
+				background:url(../../img/my-coupon-disable-bg.png) no-repeat center / 100%;
+				.coupon-item-wrap{
+					.course-info{
+						color:#999;
+						.title{
+							font-weight: normal;
+						}
+						.tip{
+							.expiration-time{
+								color:#999;
+							}
+						}
+					}
+				}
+				.coupon-info{
+					color:#999;
+				}
+			}
+			&.hide{
+				display:none;
+			}
+		}
+		.check-invalid-btn{
+			color:$gray-tip;
+			text-align: center;
+			padding:40px 0;
+		}
+	}
+}
+.no-my-coupon-box{
+	flex:1;
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	.no-my-coupon-icon{
+		width: 200px;
+		height: 200px;
+		background:url(//img.qlchat.com/qlLive/liveCommon/empty-page-no-coupon.png) no-repeat center / 100% 100%;
+	}
+	.tip{
+		color: $gray-tip;
+		margin-top: 32px;
+	}
+	.get-coupon-btn{
+		width:320px;
+		height:38 * 2px;
+		border-radius: 100px;
+		border: 1px solid $main-color;
+		color:$main-color;
+		@include flex-center;
+		font-size:32px;
+		margin-top:80px;
+	}
+}
+
+
+
+.my-qfu-coupon-item{
+	margin:0 20px;
+	padding-top:33.24%;
+	position:relative;
+	background:url(../../img/my-qfu-coupon-bg.png) no-repeat center / 100%;
+	transition: 0.05s;
+	.coupon-item-wrap{
+		position: absolute;
+		top:20px;
+		left:20px;
+		right:20px;
+		bottom:20px;
+		display:flex;
+		.course-info{
+			flex:1;
+			display:flex;
+			align-items: flex-start;
+			justify-content: center;
+			flex-direction: column;
+			.title{
+				font-size:24px;/*px*/
+				line-height:1.5;
+				overflow: hidden;
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				text-overflow: ellipsis;
+				-webkit-line-clamp: 2;
+				font-weight: bolder;
+				margin:0 40px;
+			}
+			.tip{
+				margin:10px 40px 0;
+				color:$gray-tip;
+				.expiration-time.highlight{
+					color:#f73657;
+				}
+			}
+		}
+		.coupon-info{
+			width:28.1%;
+			display:flex;
+			align-content: center;
+			justify-content: center;
+			flex-direction: column;
+			color:#fff;
+			text-align:center;
+			cursor:pointer;
+			.price{
+				font-size:48px;/*px*/
+				font-weight: bolder;
+				.unit{
+					font-size:32px;/*px*/
+					font-style: normal;
+				}
+			}
+			.tip{
+				margin-top:10px;
+				
+			}
+		}
+	}
+}

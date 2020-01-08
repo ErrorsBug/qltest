@@ -1,0 +1,67 @@
+.p-train-list {
+    height: 100%;
+    background-color: #fff;
+    .ls-tag-course-list {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .co-scroll-view {
+            flex: 1;
+        }
+    }
+}
+
+.ls-tag-course-list {
+    .tag-list {
+        flex-shrink: 0;
+        display: flex;
+        overflow-x: auto;
+        border-bottom: 2px solid #eee; /*px*/
+        .tag-item {
+            position: relative;
+            flex: none;
+            height: 88px;
+            font-size: 28px;/*px*/
+            color: #666;
+            line-height: normal;
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            padding: 0 30px;
+            &.current {
+                font-size: 32px;/*px*/
+                color: #333;
+                font-weight: bolder;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 36px;
+                    height: 6px;
+                    background-color: #f73657;
+                    border-radius: 6px;
+                }
+            }
+            &:first-child {
+                margin-left: 10px;
+            }
+            &:last-child {
+                margin-right: 10px;
+            }
+        }
+    }
+    .course-list-wrap {
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+}
+.checkin-camp-list-container.live-checkin-camp-page {
+    background: #fff;
+    height: 100%; 
+    .checkin-camp-list {
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+}

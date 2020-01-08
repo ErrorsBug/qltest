@@ -1,0 +1,91 @@
+.comment-input {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    height: 98px;
+    padding: 0 0 0 40px;
+    z-index: 1;
+    position: relative;
+    flex-shrink: 0;
+    border-top:1px solid #eee;
+
+    &.with-padding{
+        padding-right:40px;
+    }
+
+    .input-area{
+        flex: 1;
+        height: 68px;
+        line-height: normal;
+        padding: 14px 140px 14px 40px;
+        color:#333;
+        background: #f7f7f7;
+        border:none;
+        border-radius: 34px;
+        font-size: 30px;/*px*/
+        outline: none;
+    }
+    .input-area::-webkit-input-placeholder{
+        color:#b2b2b2;
+    }
+
+    .question {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &.adapt-send-btn{
+            right:170px;
+        }
+
+        .check-box-unselected {
+            height: 26px;
+            width: 26px;
+            border-radius: 50%;
+            border: 1px solid #ccc;/* no */
+        }
+
+        .check-box-selected {
+            height: 26px;
+            width: 26px;
+            border-radius: 50%;
+            border: 1px solid #333;/* no */
+            // border: 2px solid #20cd59;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .check-box-selected::after {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background-color: #333;
+            border-radius: 50%;
+        }
+
+        span {
+            height: 40px;
+            line-height: 40px;
+            margin-left: 10px;
+            font-size: 28px;
+            color: #666;
+        }
+    }
+
+    .btn-send-text{
+        display: block;
+        width: 140px;
+        text-align: center;
+        white-space: nowrap;
+        padding:20px 0;
+        color: #F73657;
+        font-size: 30px;/*px*/
+        &.disable{
+            color:#bbb;
+        }
+    }
+}

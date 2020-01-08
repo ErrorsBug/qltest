@@ -1,0 +1,156 @@
+<view class="container" wx:if="{{system !='ios'}}">
+
+  <!-- 业务介绍 -->
+  <view class="section business-intro" wx:if="{{businessInfo}}">
+    <view class="main">
+      <view class="left" style="background-image: url({{businessInfo.img}})">
+        <image class="superscript-rebate" mode="scaleToFill" src="../../comp/img/superscript-rebate.png" wx:if="{{isRebate}}"/>
+      </view>
+      <view class="right">
+        <view class="name">
+          {{businessInfo.name}}
+        </view>
+        <view class="price" wx:if="{{isRebate}}">
+          <view class="price-original">原价￥{{channelInfo.rebateChannelAmount}}</view>
+          <view class="price-rebate">返现￥{{channelInfo.totalRebate}}</view>
+        </view>
+        <view class="price" wx:else>
+          <view>{{businessInfo.originalPriceStr}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="desc" wx:if="{{businessInfo.desc.length}}">
+      <view wx:for="{{businessInfo.desc}}" wx:key="{{index}}">{{item}}</view>
+    </view>
+  </view>
+
+
+  <!-- 相关配置项  -->
+  <view class="section cells" wx:if="{{businessInfo && (chargeConfigs.length > 1 || canUseCoupon)}}">
+    <view class="cell" bind:tap="tapSelectCharge" wx:if="{{chargeConfigs.length > 1}}">
+      <view class="content">购买类型</view>
+      <view class="desc">{{chargeConfigs[activeChargeIndex].chargeStr}}</view>
+      <image class="arrow" src="../../comp/img/arrow_1.png" mode="aspectFit"/>
+    </view>
+
+    <view class="cell" bind:tap="tapSelectCoupon" wx:if="{{canUseCoupon}}">
+      <view class="content">优惠券</view>
+      <view class="desc red" wx:if="{{activeCoupon}}">
+        已使用优惠券抵扣￥{{couponPrice > originalPrice ? originalPrice : couponPrice}}
+        <view class="icon-discount"></view>
+      </view>
+      <view class="desc" wx:else>不使用</view>
+      <image class="arrow" src="../../comp/img/arrow_1.png" mode="aspectFit"/>
+    </view>
+
+    <view class="cell" wx:if="{{activeCoupon}}">
+      <view class="content">还需支付</view>
+      <view class="desc">
+        <view class="need-to-pay">
+          ￥<view class="price">{{finalPrice}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <!-- 活动须知（返现活动） -->
+  <view class="section purchase-notes" wx:if="{{isRebate}}">
+    <view class="title">活动须知</view>
+    <view class="p">
+      <view class="bold">活动时间：</view>
+      {{rebateDate}}
+    </view>
+    <view class="p">
+      <view class="bold">返现金额：</view>
+      最高可达到课程金额的80%
+    </view>
+    <view class="p">
+      <view class="bold">返现收益说明：</view>
+      <view class="ol">
+        <view class="li">
+          <view class="order">①</view>
+          购买成功即返利{{channelInfo.rebates[0]}}元；
+        </view>
+        <view class="li">
+          <view class="order">②</view> 
+          购买成功后有专属邀请海报，转发朋友圈和社群，如有朋友通过海报成功购买，即可获得相对应收益，返现金额依次为{{channelInfo.rebates[0]}}元{{channelInfo.rebates[1]?'、'+channelInfo.rebates[1]+'元' : ''}}{{channelInfo.rebates[2]?'、'+channelInfo.rebates[2]+'元' : ''}}。
+        </view>
+      </view>
+    </view>
+    <view class="p">
+      <view class="bold">举例：</view>
+      <view>第1人成功购买即返现{{channelInfo.rebates[0]}}元{{channelInfo.rebates[1]?'，第2人购买返现'+channelInfo.rebates[1]+'元' : ''}}{{channelInfo.rebates[2]?'，第3人购买返现'+channelInfo.rebates[2]+'元' : ''}}......以此类推，直到领完全部返现金额。</view>
+    </view>
+    <view class="p">
+      <view class="bold">提现说明：</view>
+      收益会通过【公众号：千聊课程】实时通知并下发红包，领取即可到微信钱包，请务必关注【公众号：千聊课程】否则您的返现可能无法领取。
+    </view>
+    <view class="p">
+      <view class="bold">分销说明：</view>
+      本活动不参与分销
+    </view>
+    <view class="p">
+      <view class="bold">如何购买：</view>
+      <view style="color: #fe5670">直接点击下面红色按钮，即可获得返现收益</view>
+    </view>
+  </view>
+
+
+  <!-- 购买须知 -->
+  <view class="section purchase-notes" wx:if="{{businessType === 'channel'}}">
+    <view class="title">购买须知</view>
+    <view class="ol">
+      <view class="li">
+        <view class="order">①</view>
+        该课程为付费系列课程，定期更新，每节课程可在开课时直播学习，也可反复回听
+      </view>
+      <view class="li">
+        <view class="order">②</view>
+        购买课程后可在「最近学习」或「我的已购」里进入听课
+      </view>
+      <view class="li">
+        <view class="order">③</view>
+        该课程为虚拟内容服务，购买成功后概不退款，敬请原谅
+      </view>
+    </view>
+  </view>
+
+  <view class="section purchase-notes" wx:if="{{businessType === 'topic'}}">
+    <view class="title">购买须知</view>
+    <view class="ol">
+      <view class="li">
+        <view class="order">①</view>
+        购买课程后可在「最近学习」或「我的已购」里进入听课
+      </view>
+      <view class="li">
+        <view class="order">②</view>
+        该课程为虚拟内容服务，购买成功后概不退款，敬请原谅
+      </view>
+    </view>
+  </view>
+
+
+  <!-- 底部按钮 -->
+  <view class="section footer" wx:if="{{businessInfo}}">
+    <view class="pay-btn" bindtap="pay">确认支付￥{{finalPrice}}</view>
+  </view>
+
+
+  <view class="win-select-charge" wx:if="{{showWinSelectCharge}}" bindtap="cancelSelectCoupon">
+    <view class="panel" catchtap>
+      <view class="title">选择购买类型</view>
+      <scroll-view class="list" scroll-y>
+        <view class="item" wx:for="{{chargeConfigs}}" wx:key="{{index}}" data-index="{{index}}" catchtap="tapChargeItem">
+          <view class="content">{{item.chargeStr}}</view>
+          <view class="tick {{index == activeChargeIndex ? 'active' : ''}}"></view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+
+</view>
+
+<view class="container" wx:if="{{system ==='ios'}}">
+  由于相关规范，iOS功能暂不可用
+</view>

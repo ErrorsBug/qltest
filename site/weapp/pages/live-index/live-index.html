@@ -1,0 +1,78 @@
+<view class="container">
+
+        <!--课程列表-->
+        <scroll-view 
+            scroll-y="{{true}}" 
+            bindscrolltolower="onLoadData"
+            lower-threshold="200"
+            bindscroll="onPageScroll"
+            scroll-top="{{scrollTop}}"
+            scroll-with-animation="true"
+            enable-back-to-top="true"
+            style="height: {{scrollHeight}};" >
+
+            <!-- 顶部轮播图区域 -->
+            <header 
+                liveInfo="{{liveInfo}}" 
+                headImage="{{headImage}}" 
+                banners="{{banners.LiveBanners}}"
+                liveId="{{liveId}}"
+                wx:if="{{showMain}}"
+            />
+            
+            <!-- tab 栏 -->
+            <tab-bar
+                id="tab-bar"
+                items="{{tabItems}}"
+                fixedBar="{{canFixedBar}}"
+                bindtabclick="onTabClick"
+            />
+
+            <!--课程列表-->
+            <view hidden="{{currentTab!=='topic'}}">
+
+                <topic-list
+                    list="{{topic.list}}"
+                    noMore="{{topic.noMore && topic.page != 1}}"
+                    noneOne="{{topic.isEmpty}}"
+                    system="{{system}}"
+                />
+                
+                <text wx:if="{{topic.loading}}" class="loading-more">正在加载中...</text>
+            </view>
+
+            <!--系列课列表-->
+            <view hidden="{{currentTab!=='channel'}}">
+                <!--系列课tab bar-->
+                <channel-types
+                    wx:if="{{channelTypes.list.length > 1}}"
+                    list="{{channelTypes.list}}"
+                    currentChannelTab="{{currentChannelTab}}"
+                    bind:switchChannelTab="switchChannelTab"
+                />
+                
+                <!--系列课列表-->
+                <channel-list
+                    list="{{channel.list}}"
+                    noMore="{{channel.noMore && channel.page != 1}}"
+                    noneOne="{{channel.isEmpty}}"
+                    system="{{system}}"
+                />
+                
+                <text wx:if="{{channel.loading}}" class="loading-more">正在加载中...</text>
+            </view>
+            
+            <!-- 动态列表 -->
+            <view hidden="{{currentTab!=='timeline'}}">
+                <timeline
+                    list="{{timeline.list}}"
+                    noMore="{{timeline.noMore && timeline.page != 1}}"
+                    noneOne="{{timeline.isEmpty}}"
+                    serverTime="{{serverTime}}"
+                    bind:onLikeTap="onLikeTap"
+                />
+            </view>
+
+        </scroll-view>
+
+</view>

@@ -1,0 +1,24 @@
+@import "../base-definition";
+
+.homework-error{
+	width:100%;
+	height:100%;
+	position: absolute;
+	left:0;
+	top:0;
+	background:$gray--background;
+	@include flex-center;
+	flex-direction:column;
+	.error-img{
+		width:295px;
+		height:198px;
+		background:url(./img/empty.png) no-repeat center / 100%;
+	}
+	.error-tip{
+		margin-top:20px;
+		font-size:36px;/*px*/
+		text-align: center;
+		color:$gray--lighter-tip;
+		line-height:1.5;
+	}
+}

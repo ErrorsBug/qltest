@@ -1,0 +1,57 @@
+.uni-family-home{
+    padding: 0 92px !important;
+    .uni-card-content{
+        padding: 48px 26px 26px !important;
+        border-radius: 16px;
+        border-style: solid;
+        border-width: 18px;
+        border-image: linear-gradient(136deg, rgba(255,233,194,1), rgba(241,177,95,1)) 14 14 !important;
+        -moz-border-image: linear-gradient(136deg, rgba(255,233,194,1), rgba(241,177,95,1)) 14 14 !important;
+        background:linear-gradient(180deg,rgba(249,163,172,1) 0%,rgba(246,81,100,1) 100%) !important;
+    }
+    .uni-family-title{
+        height: 64px;
+        width: 100%;
+        background: url('../../img/icon-title.png') no-repeat center;
+        background-size: auto 100%;
+        margin-bottom: 40px;
+    }
+    p{
+        font-size: 28px; /*px*/
+        color: #FFEEC5; 
+        line-height: 1.5;
+        margin-bottom: 40px;
+        &.last{
+            margin-bottom: 24px;
+        }
+        span{
+            color: #fff;
+        }
+        strong{
+            font-size: 36px; /*px*/
+            font-weight: bold;
+            color: #fff;
+        }
+    }
+    .uni-family-decs{
+        display: flex;
+        align-items: center;
+        font-size: 20px; /*px*/
+        color: rgba(255,255,255,0.5);
+        height: 58px; /*px*/
+        position: relative;
+        &::before{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 58px; /*px*/
+            height: 58px; /*px*/
+            font-size: 52px; /*px*/
+            font-family: 'iconfont';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            content: "\e613";
+        }
+    }
+}

@@ -1,0 +1,99 @@
+.team-status-container {
+    padding: 10px 40px;
+    border-top: 1px solid #f2f2f2;
+}
+.head-tip {
+    color: #333333;
+    font-size: 16px;
+    padding: 0 0 0 10px;
+    margin: 20px 0;
+    border-left: 5px solid #bebebe;
+    em {
+        color: #999999;
+        font-size: 12px;
+        font-style: normal;
+        margin-left: 15px;
+    }
+}
+.portrait-index {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #f2f2f2;
+}
+.last-portrait-index {
+    border-bottom: none;
+}
+.tags-label {
+    min-width: 60px;
+    display: flex;
+    flex-flow: column nowrap;
+    margin-right: 30px;
+    flex-shrink: 0;
+    span {
+        font-size: 14px;
+        color: #666666;
+        text-align: center;
+    }
+    em {
+        font-size: 12px;
+        font-style: normal;
+        color: #999999;
+        text-align: center;
+    }
+}
+.tags-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+}
+.tag {
+    color: #666666;
+    cursor: pointer;
+    font-size: 14px;
+    height: 30px;
+    padding: 0 15px;
+    line-height: 30px;
+    border-radius: 15px;
+    background-color: #f6f3ee;
+    margin: 10px 20px 10px 0;
+}
+.tag-selected {
+    color: #ffffff;
+    background-color: #c9a96e;
+    box-shadow: 0 0 16px 8px #f4f4f4;
+}
+.remark {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    textarea {
+        resize: none;
+        width: 1100px;
+        height: 130px;
+        outline: none;
+        border: none;
+        background-color: #fcfbf9;
+        color: #999999;
+        font-size: 14px;
+        line-height: 1.5;
+        padding: 5px 10px 15px 10px;
+    }
+}
+.remark-tip {
+    margin-right: 30px;
+    flex-shrink: 0;
+    font-size: 14px;
+    color: #666666;
+}
+.remark-textarea {
+    position: relative;
+}
+.word-count {
+    color: #999999;
+    font-size: 14px;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}

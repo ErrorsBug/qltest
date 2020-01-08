@@ -1,0 +1,20 @@
+<svg width="72px" height="72px" viewBox="0 0 72 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M12.3878149,28.1880164 C12.3055056,28.1880164 12.227769,28.1834022 12.1454597,28.1695598 C11.5784401,28.0911191 11.0845842,27.7542856 10.8010744,27.2559565 L0.974765833,14.9105212 C0.471764516,14.024603 0.778138046,12.8987485 1.65610398,12.3911911 C2.53406992,11.8836338 3.64981829,12.1927824 4.15281961,13.0787006 L12.7856432,23.3246942 L35.2377929,0.599967456 C35.9511402,-0.119841147 37.1080433,-0.124455305 37.8259633,0.595353298 C38.5393106,1.3151619 38.5438834,2.4825438 37.8305361,3.20696656 L13.7687822,27.5604909 L13.6819001,27.6481599 C13.3343719,27.9988359 12.8679525,28.1880164 12.3878149,28.1880164 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-3" transform="translate(3.000000, 3.000000)">
+            <g>
+                <g id="Icon/Check-circle" transform="translate(13.824757, 19.692783)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" stroke="#FE4E45" stroke-width="2.89409383" fill="#FE4E45" fill-rule="nonzero" xlink:href="#path-1"></use>
+                </g>
+                <ellipse id="Oval-5" stroke="#FE4E45" stroke-width="5.12166908" cx="33.1129286" cy="33.3866865" rx="32.8870714" ry="33.0643473"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>

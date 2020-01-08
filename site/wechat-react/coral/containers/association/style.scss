@@ -1,0 +1,39 @@
+@import "../../../assets/styles/base-definition";
+
+.page-association {
+	.operation-list{
+		background:#fff;
+		.item{
+			padding:0 30px;
+			cursor:pointer;
+			border-bottom:1px solid $gray-border;/*no*/
+			@include flex-center(vertical);
+			justify-content: space-between;
+			font-size:26px;/*px*/
+			height:100px;
+			.name.red-spot{
+				padding-right:16px;
+				position: relative;
+				&:after{
+					width:13px;
+					height:13px;
+					background:#f83657;
+					border-radius: 100%;
+					position: absolute;
+					top:0;
+					right:0;
+					content:'';
+				}
+			}
+			.num{
+				font-size:22px;/*px*/
+				@include flex-center(vertical);
+				color:$gray-tip;
+				.arrow{
+					color:$gray-tip--lighter;
+					margin-left:10px;
+				}
+			}
+		}
+	}
+}

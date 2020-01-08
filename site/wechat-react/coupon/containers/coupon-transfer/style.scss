@@ -1,0 +1,20 @@
+.coupon-transfer{
+    .middle-tips{
+        max-width:400px;
+        background:rgba(0,0,0,0.8);
+        border-radius:6px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        color: #fff;
+        font-size:28px;/* px */
+        font-family:PingFangSC-Regular;
+        display: inline-flex;
+        align-items: center;
+        padding: 18px 30px;
+        word-wrap: break-word;
+        line-height: 40px;/* px */
+
+    }
+}

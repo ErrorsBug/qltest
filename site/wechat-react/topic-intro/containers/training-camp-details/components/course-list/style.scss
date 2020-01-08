@@ -1,0 +1,82 @@
+.course-list {
+    
+
+    .coure-item {
+        padding: 32px 32px 0;
+
+        &.future {
+            .item-name {
+                color: #999;
+            }
+        }
+
+        .item-content {
+            display: flex;
+            line-height: 1.4;
+            padding-bottom: 32px;
+            border-bottom: 1px solid #EEE; /* no */
+        }
+
+        .right {
+            width: 0;
+            flex: 1;
+            margin-left: 36px;
+        }
+
+        .item-rank {
+            width: 60px; /* px */
+            text-align: center;
+            font-size: 30px; /* px */
+            color: #999;
+        }
+
+        .item-name {
+            font-size: 30px; /* px */
+            color: #333;
+        }
+
+        .item-info {
+            margin-top: 26px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #999;
+            font-size: 22px; /* px */
+
+            .learn-num {
+                margin-left: 32px;
+            }
+
+            .label {
+                display: inline-block;
+                padding: 2px 8px;
+                font-size: 20px; /* px */
+                &.future {
+                    border: 1px solid #B2B2B2; /* no */
+                    color: #B2B2B2;
+                }
+            }
+
+            .go-task-btn {
+                font-size: 24px; /* px */
+
+                &.finish {
+                    color: #666;
+                }
+
+                &.not-finish {
+                    padding: 0 24px;
+                    border-radius: 25px;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    line-height: normal;
+                    background: #FFF0F0;
+                    color: #F73657;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

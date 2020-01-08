@@ -1,0 +1,182 @@
+.idea-d-item{
+    min-height: 100px;
+    text-size-adjust: none; 
+    position: relative;
+    padding:0 32px 40px; 
+    margin-bottom: 40px;
+    border-bottom:16px solid #F7F7F7;
+    &:last-child{ 
+        border-bottom: none;
+    } 
+    .idea-d-title{
+        font-size:26px; 
+        color:rgba(153,153,153,1);
+        line-height:32px; 
+        .on{    
+            padding-left: 52px;
+            background:url('https://img.qlchat.com/qlLive/business/R3LOBS6V-5QEF-118T-1559728755448-DITOXWZOD4MK.png') no-repeat 0 center;
+            background-size: 32px 32px;   
+        }
+    } 
+}
+
+.idea-d-topic{
+    display: flex; 
+    align-items: center;
+    max-width: 478px;
+    margin:32px 0 0;
+    .idea-d-topic-content{  
+        background:rgba(255,240,240,1);
+        border-radius:30px;
+        padding:10px 16px 8px; 
+        font-weight:bold;
+        color:rgba(224,65,79,1);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; 
+        i{
+            position: relative;
+            top:-2px;
+            font-size: 28px; 
+            margin-right: 8px;
+            font-weight: normal;
+            vertical-align: middle;
+        }
+    }
+}
+ 
+.idea-item-content{ 
+    margin-top: 32px;
+    .fhl-d-desc{
+        text-align: justify;
+        font-size:30px;   /*px*/
+        line-height:46px;   /*px*/
+    }
+    .fhl-d-img{
+        margin-top: 32px;
+        &::after{
+            content: '';
+            display: table;
+            clear: both;
+        }
+        img{
+            width:32%;  
+            border-radius:6px;
+            float: left;
+            margin-right: 2%;
+            margin-bottom: 2%;
+            &:nth-child(3n){
+                margin-right: 0;
+            }
+            &.iic-one{
+                width: 57%;
+            }
+            &.iic-two{
+                width: 37%;
+            }
+        }
+    } 
+    .tc-container .tc-toggle span{
+        height: 39px;/*px*/
+    }
+}
+ 
+
+.card-item-click{
+    
+    .tc-container{
+        background:rgba(247,247,247,1);
+        border-radius:4px;
+        padding: 10px 20px;
+        margin-top: 12px;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            right:12px;
+            top:-7px;
+            width: 15px;
+            height: 15px;
+            transform: rotate(45deg);
+            background:rgba(247,247,247,1); 
+        }
+        .tc-item{
+            color:rgba(102,102,102,1);
+            line-height:34px;   /*px*/  
+            text-align: justify;
+            &.push{
+                height: auto;
+            }
+        }
+        .tc-toggle{
+            display: block;
+            color:rgba(112,141,183,1);  
+            bottom:8px;
+            right: 20px;
+            span{
+                padding-left: 100px;
+                height:34px;   
+                font-size:24px;   
+                background: linear-gradient(90deg, rgba(247, 247, 247, 0) 0%, rgba(247, 247, 247, 1) 50%, rgba(247, 247, 247, 1) 100%);
+            }
+        }
+    }
+}
+
+.idea-item-userinfo{
+    padding: 32px;
+    border-bottom: 16px solid #F7F7F7;
+}
+
+
+.iic-top{ 
+    display: flex; 
+    align-items: center; 
+    .iic-time{
+        margin-top: 16px;
+        color:rgba(153,153,153,1);
+    }
+}
+.iic-item{
+    margin-top: 32px;
+    display: flex; 
+    align-items: center;
+    position: relative;
+    color:#666; 
+    width: 120px;
+    i{
+        font-size: 40px;
+        margin-right: 10px;
+        font-weight: normal;
+    }
+    &.on{
+        color:rgba(224,65,79,1);
+        font-weight: bold;
+        .iic-icon{
+            background: url('https://img.qlchat.com/qlLive/business/GAAYMH2I-1SQN-G9EG-1564652386680-QGPCSL7RPHXE.png') no-repeat center;
+            background-size: 40px;
+        }
+
+    } 
+}
+.idea-item-jing{
+    margin-top: 32px;
+    img{
+        width: 100px; 
+        vertical-align: bottom;
+    }
+}
+.idea-d-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .idea-d-del{
+        width:100px;
+        height:36px;
+        font-size:24px; 
+        color:rgba(102,102,102,1);
+        line-height:36px;
+        text-align: right;
+        margin-top: 32px;
+    }
+}

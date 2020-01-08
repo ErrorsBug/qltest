@@ -1,0 +1,59 @@
+@import '../../../../comp/timer/timer';
+
+.group-list{
+    padding:30rpx 30rpx  0 30rpx;
+    background-color: #fff;
+    border-top:20rpx solid #f0f0f0;
+}
+.group-list-title{
+    color: #333;
+    font-size: 32rpx;
+}
+.grouping-list{
+    display: flex;
+    padding:30rpx 0;
+    border-bottom:1rpx solid #f0f0f0;
+}
+.grouping-list-last{
+    border-bottom: none;
+}
+.group-info{
+    flex: 1;
+}
+.group-head{
+    width:160rpx;
+    padding-left:20rpx;
+    padding-top:15rpx;
+}
+.group-str{
+    display: block;
+    color:#666666;
+    font-size: 24rpx;
+    margin-bottom:10rpx;
+}
+.group-str-also{
+    display: block;
+    color:#999;
+    font-size: 24rpx;
+}
+.group-btn{
+    color:#fff;
+    font-size: 26rpx;
+    background-color: #ef5670;
+    border-radius: 40rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    padding:5rpx 20rpx;
+    margin-top:10rpx;
+}
+
+.head-box-img{
+    width:50rpx;
+    height: 50rpx;
+    border-radius: 50%;
+    float: left;
+    margin-left:-10rpx;
+}
+.num-var{
+    color:#ef5670;
+}

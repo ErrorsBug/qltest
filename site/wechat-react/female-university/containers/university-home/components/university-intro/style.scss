@@ -1,0 +1,70 @@
+.un-intro-box{
+    padding: 32px;
+    .un-intro-cont{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .un-intro-user{
+            flex: 1;
+            display: flex;
+            align-items: center;
+            .un-intro-pic{
+                width: 96px;
+                height: 96px;
+                border-radius: 50%;
+                overflow: hidden;
+                margin-right: 16px;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .un-intro-info{
+                p{
+                    font-size: 30px; /*px*/
+                    color: #333;
+                    font-weight: 500;
+                    line-height: 1.4;
+                    max-width: 350px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    margin-bottom: 8px;
+                }
+                span{
+                    font-size: 24px; /*px*/
+                    color: #333;
+                    line-height: 1.4;
+                    padding-right: 28px; /*px*/
+                    background: url("../../img/icon-jian.png") no-repeat right center;
+                    background-size: 20px 12px; /*px*/
+                    display: inline-flex;
+                    height: 24px; /*px*/
+                    align-items: center;
+                    line-height: normal;
+                }
+            }
+        }
+        .un-intro-controll{
+            display: flex;
+            align-items: center;
+            .un-intro-search{
+                padding: 0 16px; /*px*/
+                height: 56px; /*px*/
+                background: #fff;
+                border-radius: 56px;
+                display: flex;
+                align-items: center;
+                font-size: 28px; /*px*/
+                color: #666;
+                font-weight: 500;
+                line-height: normal;
+                i{
+                    padding-right: 6px;
+                    font-size: 30px; /*px*/
+                    color: #666;
+                }
+            }
+        }
+    }
+}

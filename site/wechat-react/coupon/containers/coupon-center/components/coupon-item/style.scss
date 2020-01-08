@@ -1,0 +1,186 @@
+
+.coupon-list-item{
+    height: 196px;
+    padding: 20px;
+    margin: 0 20px;
+    background:url('./../../img/ticket-bg.png') no-repeat center / 100% 100%;
+    display: flex;
+
+    .item-content{
+        height:100%;
+        flex:1;
+        padding:20px;
+        box-sizing: border-box;
+        display: flex;
+        .poster-box {
+            display: flex;
+            flex-direction: column;
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid #F7F7F7; /* no */
+        }
+        .poster{
+            width:192px;
+            height:120px;
+            flex: 1;
+            border-radius: 4px;
+            overflow: hidden;
+            img{
+                width:100%;
+                height:100%;
+                display: block;
+            }
+        }
+        .popularity{
+            height: 36px;
+            line-height: 36px;
+            text-align: center;
+            font-size: 20px;/*px*/
+            color:#666;
+            background: #F7F7F7;
+            flex-shrink: 0;
+        }
+        .channel-info{
+            margin-left:24px;
+            flex:1;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .title{
+                font-size:24px;/*px*/
+                line-height:1.5;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 3;
+                font-weight: 500;
+            }
+            .statistics{
+                height: 36px;
+                line-height: 36px;
+                font-size:20px;/*px*/
+                .discount{
+                    color:#F73657;
+                    .original {
+                        color: #B2B2B2;
+                        text-decoration: line-through;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .coupon-info{
+        position: relative;
+        width:28.5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .price{
+            color:rgba(255,148,0,1);
+            font-size:48px;/*px*/
+            font-weight: bolder;
+            font-family: PingFangSC-Semibold;
+
+            &.disable {
+                color: #B2B2B2;
+            }
+
+            .sign{
+                font-size:22px;/*px*/
+                font-weight:normal;
+                font-style: normal;
+            }
+        }
+        .get-coupon-btn{
+            width:140px;
+            height:50px;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            line-height:normal;
+            color:#FFF;
+            background-image: linear-gradient(-144deg, #FF7D00 0%, #FFA200 97%);
+            border-radius: 100px;
+            margin-top:10px;
+            font-size:24px;/*px*/
+            font-weight: bold;
+            box-sizing: border-box;
+
+            &.disable {
+                border-color: #EEE;
+                color: #B2B2B2;
+                background: #f7f7f7;
+            }
+            
+            &.use {
+                border: 1px solid #FF9400; /* no */
+                background: #FFF;
+                color: #FF9400;
+            }
+        }
+        .label-app-type {
+            position: absolute;
+            right: 42px;
+            top: 0;
+            width: 100px;
+            height: 28px; 
+            background: url(https://img.qlchat.com/qlLive/liveComment/TG7LIOG4-8RY5-KF82-1552632154320-DG92FQOSZS5W.png) center top no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &.holder {
+        .poster-box {
+            background: #F7F7F7;
+        }
+        .channel-info {
+            .title > p {
+                height: 24px;
+                width: 100px;
+                background: #F7F7F7;
+                margin-top: 12px;
+                &:first-of-type {
+                    margin-top: 0;
+                    width: 200px;
+                }
+            }
+            .statistics {
+                width: 100px;
+                height: 16px;
+                background: #F7F7F7;
+            }
+        }
+        .coupon-info {
+            .price {
+                width: 140px;
+                height: 60px;
+                background: #F7F7F7;
+            }
+            .get-coupon-btn {
+                height: 40px;
+                background: #F7F7F7;
+            }
+        }
+
+        .animation-short {
+            animation: swim-short 1s linear infinite alternate;
+        }
+        .animation-long {
+            animation: swim-long 1s linear infinite alternate;
+        }
+
+        @keyframes swim-short {
+            to {
+                width: 100px;
+            }
+        }
+        @keyframes swim-long {
+            to {
+                width: 200px;
+            }
+        }
+    }
+}

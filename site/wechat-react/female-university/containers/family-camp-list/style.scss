@@ -1,0 +1,66 @@
+.uni-exp-card{
+    height: 100%;
+    background: #F2F2F2;
+    .uni-exp-scroll{
+        padding: 32px 32px 80px !important;
+        box-sizing: border-box;
+    }
+    .uf-camp-item{
+        width: 100%;
+        height: 266px;
+        margin-bottom: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius:15px;
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: auto;
+        }
+        &::before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background: rgba(0,0,0,0.5);
+            content:'';
+        }
+        & > div{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            h4{
+                padding: 0 32px;
+                font-size: 48px; /*px*/
+                color: #fff;
+                line-height: 1.5;
+                text-align: center;
+                font-weight: bold;
+                display: block;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            p{
+                font-size: 24px; /*px*/
+                color: rgba(255,255,255,0.8);
+                line-height: 1.5;
+                text-align: center;
+            }
+        }
+    }
+}

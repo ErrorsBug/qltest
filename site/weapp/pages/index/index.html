@@ -1,0 +1,19 @@
+<tab-page
+    tabs = "{{tabs}}"
+    binditemclick = "onItemClick"
+>
+    <block wx:if="{{showContent}}">
+
+        <view slot="index">
+            <ios-recommend-b wx:if="{{system == 'ios'}}"></ios-recommend-b>
+            <recommend-b wx:else></recommend-b>
+        </view>
+        <view slot="joined">
+            <joined></joined>
+        </view>
+        <view slot="mine">
+            <mine></mine>
+        </view>
+    </block>      
+</tab-page>
+<!-- <audio-box/> -->

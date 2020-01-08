@@ -1,0 +1,98 @@
+.live-workbench-guide.novice-guide-step {
+    padding-bottom: 100px;
+    background: linear-gradient(to top, rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)) no-repeat bottom / 100% 100px;
+
+    .step-block {
+        position: absolute;
+    }
+
+    .ok-btn {
+        position: absolute;
+        left: 50%;
+        bottom: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .jump-btn {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        padding: 5px 10px;
+        font-size: 28px; /* px */
+        color: #FFF;
+    }
+
+    .step-point {
+        &.live-user-point {
+            left: 1%;
+            top: 2.7%;
+            width: 15%;
+            padding-top: 15%;
+            border-radius: 50%;
+        }
+    
+        &.live-reprint-point {
+            left: 8.8%;
+            top: 22.8%;
+            width: 11.5%;
+            padding-top: 11.5%;
+            border-radius: 50%;
+        }
+    
+        &.live-recovery-point {
+            left: 79.8%;
+            top: 44.6%;
+            width: 11.5%;
+            padding-top: 11.5%;
+            border-radius: 50%;
+        }
+    }
+
+
+    .live-guide-tips {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .left {
+            align-self: flex-start;
+        }
+        .right {
+            align-self: flex-end;
+        }
+
+        &.live-user {
+            left: 6.5%;
+            top: 6%;
+
+            .guide-tips {
+                width: 494px;
+                height: 109px;
+                background: url('./img/guide-tips-1.png') no-repeat center / contain;
+            }
+        }
+
+        &.live-reprint {
+            left: 11%;
+            top: 26%;
+
+            .guide-tips {
+                width: 552px;
+                height: 109px;
+                background: url('./img/guide-tips-2.png') no-repeat center / contain;
+            }
+        }
+
+        &.live-recovery {
+            left: 26%;
+            top: 48%;
+
+            .guide-tips {
+                width: 461px;
+                height: 99px;
+                background: url('./img/guide-tips-3.png') no-repeat center / contain;
+            }
+        }
+    }
+}

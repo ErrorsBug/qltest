@@ -1,0 +1,20 @@
+.send-coupon-container {
+    width: 100%;
+    height: 100%;
+    ul {
+        padding: 30px;
+        .tips {
+            margin-bottom: 20px;
+            font-size: 30px;/*px*/
+        }
+    }
+
+    .notice {
+        width: 100%;
+        position: absolute;
+        bottom: 40px;
+        text-align: center;
+        font-size:  30px;/*px*/
+        color: #ccc;
+    }
+}

@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>授权</title>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Cache-Control" content="no-siteapp">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="format-detection" content="email=no">
+        <meta name="format-detection" content="address=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    </head>
+<body class="gra_1">
+<div class="main_box_4">
+</div>
+
+</body>
+<script type="text/javascript" src="/api/js-sdk/wx?actions=hide_all"></script>
+<script>
+    wx.ready(function() {
+        if (window.__wxjs_environment === 'miniprogram') {
+
+            // 获取redirect参数
+            var search = location.search,
+                redirect = '';
+            if (search) {
+                redirect = search.match(/[\?&]redirect=([^&]*)/)
+                redirect && (redirect = decodeURIComponent(redirect[1]))
+            }
+
+            // 兼容bug
+            if (redirect === 'undefined') {
+                redirect = null;
+            }
+
+            wx.miniProgram.reLaunch({
+                url: redirect || '/pages/index/index'
+            });
+        }
+    })
+</script>
+</html>

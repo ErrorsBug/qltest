@@ -1,0 +1,45 @@
+.p-phone-auth {
+    height: 100%;
+    overflow-y: auto;
+    padding: 0 40px;
+    line-height: 1.4;
+    .desc {
+        padding: 25px 0;
+        font-size: 26px;
+        color: #333;
+        margin-bottom: -30px;
+        span {
+            color: #F73657;
+        }
+    }
+    .line-wrap {
+        padding-top: 30px;
+    }
+    .co-phone-auth-input {
+        background-color: #fff;
+    }
+    .btn-bind {
+        display: flex;
+        margin: 166px auto 0;
+        height: 76px;
+        background:rgba(247,54,87,1);
+        border-radius: 50px;
+        color: #fff;
+        font-size: 32px;
+        line-height: normal;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: .4em;
+        &.disabled {
+            color: #999;
+            background-color: #eee;
+            cursor: auto;
+        }
+    }
+    .tips {
+        margin-top: 20px;
+        color: #999;
+        font-size: 26px;
+        text-align: center;
+    }
+}

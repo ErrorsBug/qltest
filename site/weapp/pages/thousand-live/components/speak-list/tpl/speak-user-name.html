@@ -1,0 +1,8 @@
+<template name="speak-tpl-user-name">
+  <view class="sp-user-name">
+    {{speak.speakCreateByName}}
+    <block wx:if="{{speak.creatorRole == 'topicCreater' || !speak.creatorRole}}">主持人</block>
+    <block wx:elif="{{speak.creatorRole == 'compere'}}">特邀主持人</block>
+    <block wx:else>嘉宾</block>
+  </view>
+</template>

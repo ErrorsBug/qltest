@@ -1,0 +1,301 @@
+.introduction-container {
+    // 版本信息
+    background: #EDEDED;
+
+    .middle-container{
+        background: #fff;
+        padding: 30px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+    }
+
+
+    // 版本介绍
+    .org-tip {
+        padding-left: 50px;
+        line-height: 70px;
+        font-size: 28px; /*px*/
+        color: #333333;
+        background-repeat: no-repeat;
+        background-size: 36px;
+        background-position: 0px center;
+    }
+    
+    .org-edition-intro {
+        color: #999999;
+        font-size: 26px; /*px*/
+        line-height: 45px;
+        margin-bottom: 25px;
+        padding-top: 10px;
+        border-top: solid 1px #e5e5e5;
+        .title-bar{
+            display: flex;
+            align-items: center;
+            .org-tip {
+                flex: 1;
+                background-image: url(./imgs/icon_diamond.png);
+            }
+            .btn-info-link{
+                font-size: 24px;/* px */
+                color: #999999;
+            }
+        }
+
+        p {
+            font-size: 26px;/* px */
+            color: #333333;
+            i{
+                font-style: normal;
+                color: #d7af6f;
+            }
+        }
+    }
+
+
+
+    // 购买须知
+    .purchase-tips-wrap {
+        padding-top: 20px;
+        .org-tip {
+            background-image: url(./imgs/icon_tip.png);
+        }
+        .purchase-tips {
+            padding: 20px 50px 30px 0;
+            font-size: 26px; /*px*/
+            color: #999999;
+            line-height: 40px;
+        }
+        .purchase-tip {
+            display: flex;
+            flex-flow: row nowrap;
+            margin-bottom: 20px;
+            .number-icon {
+                width: 35px; /*px*/
+                height: 35px; /*px*/
+                line-height: 35px; /*px*/
+                flex-shrink: 0;
+                margin: 5px 20px 0 0;
+                text-align: center;
+                border-radius: 50%;
+                background-color: #b8b8b8;
+                font-size: 26px; /*px*/
+                color: #ffffff;
+            }
+            .purchase-tip-text {
+                width: 580px;
+                line-height: 45px;
+            }
+        }
+    }
+
+    // 购买按钮
+    .purchase-button-container {
+        bottom: 0;
+        width: 100%;
+        max-width: 1280px; /*px*/
+        display: flex;
+        .purchase-button {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 1 1 auto;
+            height: 90px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            color: #ffffff;
+            font-size: 32px; /*px*/
+            font-weight: bold;
+            background-color: #c9a96e;
+            border-radius: 0;
+
+            &.has-coupon{
+                
+                color: #333333;
+                font-size: 30px;/* px */
+                line-height: 35px;/* px */
+                .coupon-info{
+                    color: #6b4810;
+                    font-size: 22px;/* px */
+                }
+            }
+        }
+        .advisory-button {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            flex: 0 0 auto;
+            width: 190px;
+            height: 90px;
+            border: none;
+            outline: none;
+            color: #333;
+            cursor: pointer;
+            background-color: #fff;
+            .advisory-icon {
+                display: block;
+                width: 35px;
+                height: 35px;
+                margin-bottom: 7px;
+                background: url('./imgs/icon_advisory.png') no-repeat center center;
+                background-size: 100%;
+            }
+        }
+    }
+
+   
+
+    // 客服咨询二维码
+    .advisory-qr-wrap {
+        position: relative;
+        color: #333333;
+        font-size: 28px; /* px */
+        line-height: 50px;
+        text-align: center;
+        padding: 60px 0;
+        .advisory-qr {
+        display: block;
+        width: 325px;
+        height: 325px;
+        margin: 0 auto;
+        padding: 15px;
+        border: 1px solid #e4e4e4;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        }
+        
+    }
+    
+
+    // 老用户邀新弹框
+    .old-belt-new-dialog {
+        position: relative;
+        & img {
+            width: 100%;
+            height: auto;
+        }
+        .close-modal {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: -25px;
+            right: -25px;
+            background: url(./imgs/icon_close_modal.png) no-repeat center center;
+            background-size: 100%;
+            cursor: pointer;
+        }
+    }
+    .old-belt-new-small {
+        position: absolute;
+        right: 20px;
+        bottom: 150px;
+        width: 100px;
+        height: 100px;
+        background: url('./imgs/small-gift.png') no-repeat center;
+        background-size: cover;
+    }
+
+    // 专业版购买确认弹窗
+    .purchase-confirm {
+        font-size: 28px; /*px*/
+        line-height: 1.8;
+        color: #666666;
+        .co-dialog-confirm {
+            padding: 0 30px;
+            box-sizing: border-box;
+        }
+        .co-dialog-content {
+            width: 670px;
+        }
+        .co-dialog-btn-line-confirm {
+            color: #c9a96e;
+        }
+        .tip {
+            color: #999999;
+        }
+    }
+
+    // 购买协议勾选
+    .agreement-checked {
+        padding: 0 50px 0 40px;
+        font-size: 24px; /*px*/
+        .agree-label {
+            position: relative;
+        }
+        .fake-checkbox {
+            position: absolute;
+            top: 3px;
+            left: -40px;
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            background-position: center center;
+            background-size: 30px 30px;
+            background-repeat: no-repeat;
+            background-image: url('./imgs/icon_not_check.png');
+        }
+        .fake-checkbox-checked {
+            background-image: url('./imgs/icon_check.png');
+        }
+        .label-text {
+            display: block;
+            color: #999999;
+            font-size: 24px; /*px*/
+            line-height: 36px;
+        }
+        .agreement-link {
+            color: #c9a96e;
+            text-decoration: underline;
+        }
+    }
+
+    
+}
+
+.main-box {
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.introduction-org-dialog {
+    .co-dialog-content {
+        overflow: visible;
+    }
+   
+    .id-close-modal {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: -25px;
+        right: -25px;
+        background: url(./imgs/icon_close_modal.png) no-repeat center center;
+        background-size: 100%;
+        cursor: pointer;
+    }
+}
+
+.purchase-confirm-container{
+    li{
+        display: inline-flex;
+        width: 100%;
+        .tip{
+            color: #999999;
+        }
+        .content{
+            flex: 1;
+            text-align: right;
+            color: #333333;
+            justify-content: right;
+        }
+        .favourable{
+            color:#d7af6f;
+        }
+    }
+}
+
+

@@ -1,0 +1,74 @@
+.new-like-list {
+    .scroll-box {
+        background-color: #fff;
+    }
+    .like-item {
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .head-img {
+            height: 100px;
+            width: 100px;
+            border-radius: 100px;
+            margin: 25px 25px 25px 30px;
+            flex-shrink: 0;
+            flex-basis: 100px;
+            img {
+                height: 100px;
+                width: 100px;
+                border-radius: 100px;
+            }
+        }
+        .right-con {
+            flex-grow: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            padding: 26px 0 26px 0;
+            .text-con {
+                
+                .name {
+                    font-size: 30px;/*px*/
+                    line-height: 1.2;
+                    color: #333;
+                    margin-bottom: 10px;
+                    position: relative;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    width: 400px;
+                    &:after {
+                        content: "";
+                        display: inline-block;
+                        width: 28px; /*px*/
+                        height: 28px; /*px*/
+                        background-image: url(../img/like.png) ;
+                        background-size: contain;
+                        margin-left: 2px; /*px*/
+                    }
+                }
+                .time{
+                    color: #999;
+                }
+                .focus-num {
+                    color: #999;
+                    font-size: 24px;
+                    /*px*/
+                }
+            }
+            border-bottom: 1px solid #e6e6e6;
+            /*no*/
+        }
+        .course-img {
+            height: 100px;
+            width: 100px;
+            margin-right: 30px;
+            img {
+                height: 100px;
+                width: 100px;
+            }
+        }
+    }
+}

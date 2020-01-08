@@ -1,0 +1,126 @@
+.try-list-share-mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba($color: #000000, $alpha: 0.6);
+    z-index: 100;
+
+    .arrow {
+        position: absolute;
+        top: 0;
+        right: 28px;
+        transform: translate(0, -130%);
+        text-align: right;
+        .pic-arrow {
+            height: 240px;
+        }
+    }
+
+    .middle-section {
+        position: absolute;
+        line-height: normal;
+        left: 0;
+        right: 0;
+        top: 46%;
+        transform: translate(0, -50%);
+
+        .middle-section-inner {
+            width: 628px;
+            background: rgba(255, 255, 255, 1);
+            border-radius: 32px;
+            text-align: center;
+            padding: 81px 0 37px;
+            margin: 0 auto;
+        }
+
+        .icon-share {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 114px;
+            height: 114px;
+        }
+
+        .title {
+            height: 45px;
+            font-size: 32px;
+            font-family: PingFangSC-Semibold;
+            font-weight: 600;
+            color: rgba(51, 51, 51, 1);
+            text-align: center;
+            margin-bottom: 2px;
+        }
+
+        .prompt {
+            font-size: 28px;
+            font-family: PingFangSC-Medium;
+            font-weight: 500;
+            color: rgba(102, 102, 102, 1);
+            margin-bottom: 26px;
+
+            span {
+                color: #f73657;
+            }
+        }
+
+        .invite {
+            font-size: 24px;
+            font-family: PingFangSC-Regular;
+            font-weight: 400;
+            color: rgba(102, 102, 102, 1);
+            text-align: center;
+        }
+
+        .require {
+            font-size: 24px;
+            font-family: PingFangSC-Regular;
+            font-weight: 400;
+            color: rgba(102, 102, 102, 1);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .head-img-list {
+            .head-img {
+                display: inline-block;
+                width: 62px;
+                height: 63px;
+                border-radius: 50%;
+                vertical-align: middle;
+            }
+
+            .head-img + .head-img {
+                margin-left: 26px;
+            }
+        }
+    }
+
+    .bottom {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding-top: 20px;
+
+        .prompt {
+            text-align: center;
+            font-size: 24px;
+            font-family: PingFangSC-Regular;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 1);
+            line-height: normal;
+            margin-bottom: 10px;
+        }
+
+        .qr-code-wrap {
+            text-align: center;
+            .qr-code {
+                width: 180px;
+                height: 180px;
+            }
+        }
+    }
+}

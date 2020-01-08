@@ -1,0 +1,22 @@
+.img-upload-btn{
+    position: absolute;
+    display: inline-flex;
+    flex: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+    
+    .media-file-uploader, .media-file-uploader>div, .media-file-input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        opacity: 0;
+    }
+}

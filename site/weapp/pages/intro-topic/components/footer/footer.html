@@ -1,0 +1,65 @@
+<view class="bottom-container">
+    <view class="icon" wx:if="{{ !systemIos && switch === 'Y' && (channelId ? isDistribution && isSingleBuy==='Y' : isDistribution)}}" bind:tap="onShowShareModel"  data-log_region="share" data-log_name="{{isDistribution ? 'shareAndEarn' : 'onlyShare'}}">
+        <image src="../../img/share.gif" class="share-img"></image>
+        <text>
+            <text>分享赚</text>
+            <text wx:if="{{money}}" class="red">{{money}}</text>
+            <text wx:else>钱</text>
+        </text>
+    </view>
+    <form bindsubmit="onFormSubmit" report-submit>
+        <view class="footer-section {{topicType==='encrypt' ?'footer-encrypt':''}}">
+            <!-- 可以进入的课程 -->
+            <view class="footer-tab" bind:tap="linkToTopic" wx:if="{{isManager || isVip || isAuth}}">
+                进入课程
+            </view>
+
+            <!-- 系列课课程 -->
+            <block wx:elif="{{isChannel}}">
+                <block wx:if="{{systemIos}}">
+                    <view class="grey" >
+                        由于相关规范，iOS功能暂不可用
+                    </view>
+                </block>
+                <block wx:else>
+                    <view class="footer-tab {{singleBuy ? 'yellow-item' : 'red-item'}}">
+                        <view bind:tap="buyChannel" class="footer-tab-text">购买系列课</view>
+                    </view>
+                    <view wx:if="{{singleBuy}}" class=" footer-tab">
+                        <view class="footer-tab-text" bind:tap="doOrder">
+                            购买单课
+                        </view>
+                    </view>
+                </block>
+                
+            </block>
+
+            <!-- 不可进入且非系列课课程 -->
+            <block wx:else>
+                <!-- 免费课程 -->
+                <button wx:if="{{topicType==='public'}}" class="footer-tab" bind:tap="enterPublic" formType="submit">
+                    报名进入
+                </button>
+
+                <!-- 加密课程 -->
+                <block wx:if="{{topicType==='encrypt'}}">
+                    <input type="text" bindinput="passwordInput" class="footer-password-input" placeholder="输入密码进入课程" placeholder-class="footer-password-input-placeholder"/>
+                    <button class="footer-password-confirm" bind:tap="enterEncrypt" formType="submit">进入课程</button>
+                </block>
+
+                <!-- 付费课程 -->
+                <block wx:if="{{systemIos && topicType !=='encrypt' && topicType !=='public'}}">
+                    <view class="grey" >
+                        由于相关规范，iOS功能暂不可用
+                    </view>
+                </block>
+                <block wx:else>
+                    <view wx:if="{{topicType==='charge' && !systemIos}}" class="footer-tab" bind:tap="doOrder">
+                        付费进入
+                    </view>
+                </block>
+                
+            </block>
+        </view>
+    </form>
+</view>

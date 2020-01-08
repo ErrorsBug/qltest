@@ -1,0 +1,129 @@
+.bottom-recorder{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    .main{
+        display: block;
+        height: 350px;
+        width: 100%;
+        position: relative;
+
+        .tips-bar{
+            position: absolute;
+            width: 300px;/* px */
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;/* px */
+            color: #999999;
+            left: 50%;
+            bottom: 10%;
+            transform: translate(-50%,0);/* px */
+            cursor: pointer;
+
+            i{
+                font-style: normal;
+                color: #333333;
+            }
+        }
+
+        .btn-rec-start,
+        .btn-rec-stop,
+        .btn-rec-send{
+            position: absolute;
+            width: 170px;/* px */
+            height: 170px;/* px */
+            left: 50%;
+            top: 50%;
+            border-radius: 300px;
+            // margin-top: 30px;/* px */
+            transform: translate(-50%,-50%);
+            overflow: hidden;
+        }
+        
+
+
+        .btn-rec-start{
+            background: url('./img/icon_start_recording.png') center center no-repeat;
+            background-size: 100% auto;
+            // border: solid 2px #e45772;/* no */
+            // background: #fff;
+
+            // &::before{
+            //     content: '';
+            //     background: #e45772;
+            //     width: 140px;/* px */
+            //     height: 140px;/* px */
+            //     border-radius: 140px;/* px */
+            //     position: absolute;
+            //     left: 50%;
+            //     top: 50%;
+            //     transform: translate(-50%,-50%);
+            //     overflow: hidden;
+            // }
+        }
+        .btn-rec-stop{
+            background: url('./img/icon_pause_recording.png') center center no-repeat;
+            background-size: 100% auto;
+            // border: solid 2px #e45772;/* no */
+            // background: #fff;
+            // overflow: hidden;
+            // z-index: 2;
+
+            // &::before{
+            //     content: '';
+            //     background: #e45772;
+            //     width: 60px;/* px */
+            //     height: 60px;/* px */
+            //     border-radius: 10px;/* px */
+            //     position: absolute;
+            //     left: 50%;
+            //     top: 50%;
+            //     transform: translate(-50%,-50%);
+            //     overflow: hidden;
+            //     border: none;
+            // }
+        }
+        .btn-rec-send{
+            border: solid 2px #33bb49;/* no */
+            background: #33bb49;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;/* px */
+        }
+
+        .btn-play-rec,
+        .btn-reset-recording {
+            position: absolute;
+            top:50%;
+            left: 50%;
+            display: inline-block;
+            width: 70px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: #666666;
+            margin-left: 200px;
+            font-size: 30px;/* px */
+            white-space: nowrap;
+            transform: translate(-50%,0);
+        }
+
+        .btn-pause {
+            color: #33bb49;
+        }
+
+        .btn-play {
+            color: #F73657;
+        }
+
+        .btn-play-rec {
+            margin-left: -200px;
+        }
+    }
+
+}

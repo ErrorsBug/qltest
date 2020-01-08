@@ -1,0 +1,89 @@
+@import '../../comp/load-list-bar/load-list-bar';
+@import '../../comp/none-page/none-page';
+
+/* pages/mine-buy/mine-buy.wxss */
+page,.container{
+  height:100%;
+  background-color:#fff;
+}
+scroll-view{
+    margin:0;
+    position: absolute;
+    top:90rpx;
+    bottom:0;
+}
+
+.elli{
+    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.multi-elli {
+    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.purchase-list{
+    width:100%;
+    padding-left: 30rpx;
+    background-color: #fff;
+
+    .list-item{
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          height: 210rpx;
+          padding-right: 30rpx;
+          border-bottom: 1rpx solid #f0f0f0;
+          .image{
+              width: 240rpx;
+              height: 150rpx;
+              flex-shrink: 0;
+          }
+          .info{
+              margin-left: 25rpx;
+              padding-right: 30rpx;
+              width: 425rpx;
+              view{
+                  width: 100%;
+                  line-height: normal;
+              }
+              .title{
+                  font-size: 28rpx;
+                  color: #424242;
+                  font-weight: 700;
+              }
+              .livename-wrap{
+                  font-size: 24rpx;
+                  color: #b8b0b0;
+                  margin-top: 12rpx;
+                  display: flex;
+                  flex-wrap: nowrap;
+                  justify-content: flex-start;
+                  align-items: flex-start;
+                  .livename{
+                    flex: 1;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                  }
+                  .topic-count{
+                    flex-shrink: 0;
+                  }
+              }
+              .learning{
+                  font-size: 22rpx;
+                  color: #b8b0b0;
+                  margin-top: 12rpx;
+              }
+          }
+    }
+}

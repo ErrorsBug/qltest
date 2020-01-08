@@ -1,0 +1,35 @@
+@import "../../common";
+
+.night-answer{
+    padding:0 28rpx;
+    background:#fff;
+    display:flex;
+    align-items: center;
+    height: 120rpx;
+    .night-answer-icon{
+        width:60rpx;
+        height:64rpx;
+    }
+    .info{
+        font-size:26rpx;
+        margin-left:30rpx;
+        flex:1;
+        width:10rpx;
+        color: #424242;
+        .span{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .tips{
+            color:#999090;
+            font-size:22rpx;
+        }
+    }
+    .play-btn{
+        margin-left:10rpx;
+        background:url(../../img/icon-play.png?__inline) no-repeat center / 100%;
+        width:48rpx;
+        height:48rpx;
+    }
+}

@@ -1,0 +1,350 @@
+.media-studio-container {
+    //  支付页面
+
+    // 版本价格
+    .media-studio-header {
+        background-color: #f5f5f5;
+        border-bottom: 1px solid #e5e5e5;
+    }
+    .header-item {
+        width: 100%;
+        height: 160px;
+        display: flex;
+        flex-flow: row nowrap;
+        .header-tip {
+            width: 140px;
+            line-height: 140px;
+            color: #666666;
+            font-size: 26px; /*px*/
+            text-align: center;
+        }
+        .header-detail {
+            flex-grow: 1;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            .head-image {
+                display: block;
+                width: 80px;
+                height: 80px;
+                margin-right: 20px;
+                border-radius: 50%;
+            }
+            .studio-info {
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                .username {
+                    font-size: 26px; /*px*/
+                    color: #323333;
+                    font-weight: bold;
+                    line-height: 45px;
+                }
+                .org-edition-wrap {
+                    font-size: 22px; /*px*/
+                    line-height: 40px;
+                    color: #666666;
+                }
+                .edition-tip {
+                    color: #999999;
+                    margin-right: 8px;
+                }
+                .vertical-separator {
+                    margin: 0 8px;
+                }
+            }
+        }
+    }
+    .header-item:first-child {
+        .header-detail {
+            border-bottom: 1px solid #e5e5e5;
+        }
+    }
+    .header-item:last-child {
+        .header-detail {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: flex-start;
+            color: #c9a96e;
+            font-size: 26px; /*px*/
+            .media-edition-text {
+                line-height: 50px;
+            }
+            .price-delta {
+                color: #c9a96e;
+                font-size: 50px; /*px*/
+                font-weight: bold;
+                .icon-rmb {
+                    font-style: normal;
+                    font-size: 26px; /*px*/
+                }
+            }
+            .price-original {
+                margin-left: 10px;
+                text-decoration: line-through;
+                color: #b3b3b3;
+            }
+        }
+    }
+
+    // 版本介绍
+    .media-edition-wrap {
+        background-color: #ffffff;
+        border-bottom: 1px solid #e5e5e5;
+    }
+    .media-edition-intro {
+        color: #999999;
+        font-size: 26px; /*px*/
+        line-height: 45px;
+        .media-tip {
+            background: url(./images/icon_diamond.png) no-repeat 27px center;
+            background-size: 36px;
+        }
+        p {
+            padding: 0 80px;
+        }
+    }
+    .media-tip {
+        font-size: 28px; /*px*/
+        color: #333333;
+        padding-left: 80px;
+        line-height: 110px;
+    }
+    .benefits-list {
+        padding-left: 80px;
+        li {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-right: 60px;
+        }
+        .benifit-icon {
+            width: 80px;
+            height: 80px;
+            flex-shrink: 0;
+            margin-right: 20px;
+            border: 2px solid #e8e8e8;
+            border-radius: 50%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 40px;
+        }
+        .icon-shop {
+            background-image: url(./images/icon_shop.png);
+        }
+        .icon-mall {
+            background-image: url(./images/icon_mall.png);
+        }
+        .icon-fans {
+            background-image: url(./images/icon_fans.png);
+        }
+        .icon-flow {
+            background-image: url(./images/icon_flow.png);
+        }
+        .icon-market {
+            background-image: url(./images/icon_market.png);
+        }
+        .icon-vip {
+            background-image: url(./images/icon_vip.png);
+        }
+        .icon-analysis {
+            background-image: url(./images/icon_analysis.png);
+        }
+        .benefit {
+            h1 {
+                font-size: 28px; /*px*/ 
+                color: #333333;
+                line-height: 60px;
+            }
+            span {
+                font-size: 24px; /*px*/ 
+                color: #999999;
+                line-height: 40px;
+            }
+        }
+    }
+
+    // 购买须知
+    .purchase-tips-wrap {
+        background-color: #ffffff;
+        padding-bottom: 60px;
+        .media-tip {
+            background: url(./images/icon_tip.png) no-repeat 27px center;
+            background-size: 36px;
+        }
+        .purchase-tips {
+            padding: 0 50px 0 80px;
+            font-size: 26px; /*px*/
+            color: #999999;
+            line-height: 40px;
+        }
+        .purchase-tip {
+            display: flex;
+            flex-flow: row nowrap;
+            margin-bottom: 20px;
+            .number-icon {
+                width: 35px; /*px*/
+                height: 35px; /*px*/
+                line-height: 35px; /*px*/
+                flex-shrink: 0;
+                margin: 5px 20px 0 0;
+                text-align: center;
+                border-radius: 50%;
+                background-color: #b8b8b8;
+                font-size: 26px; /*px*/
+                color: #ffffff;
+            }
+            .purchase-tip-text {
+                width: 580px;
+                line-height: 45px;
+            }
+        }
+    }
+
+    // 购买按钮
+    .purchase-button {
+        width: 100%;
+        height: 90px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        line-height: 90px;
+        text-align: center;
+        color: #ffffff;
+        font-size: 32px; /*px*/
+        font-weight: bold;
+        background-color: #c9a96e;
+    }
+
+    // 支付成功页面
+    .success-container
+	{
+		.result
+		{
+			background-color: #fff;
+			padding: 0 30px;
+			.mention
+			{
+				padding: 40px 0 30px;
+				 > h1
+				{
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					font-size: 34px;/* px */
+                    color: #333;
+                    line-height: normal;
+					.icon-success
+					{
+						width: 50px;/* px */
+						height: 50px;/* px */
+						background-image: url(./images/success.png);
+						background-repeat: no-repeat;
+						background-size: cover;
+						margin-right: 16px;
+					}
+				}
+				 > p
+				{
+					margin-top: 38px;
+					text-align: center;
+				}
+			}
+			.info
+			{
+				padding: 30px 0;
+				border-top: 1px solid #f0f0f0;
+				li
+				{
+					margin-top: 20px;
+					&:first-child
+					{
+						margin-top: 0;
+					}
+					.label
+					{
+						font-size: 24px;/* px */
+						color: #999;
+						margin-right: 30px;
+					}
+					.content
+					{
+						font-size: 24px;/* px */
+						color: #333;
+					}
+				}
+			}
+		}
+	}
+
+	.guide
+	{
+		margin-top: 20px;
+		background-color: #fff;
+		padding: 60px 0 60px;
+		
+        .shop{
+			position: relative;
+            background-image: url(./images/shop-01.png);
+            background-size: 448px 243px;
+            background-position: center 50px;
+            background-repeat: no-repeat;
+            height: 300px;
+			
+            .forgive-hat{
+				width: 278px;
+                height: 73px;
+                background-image: url(./images/roof-01.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                position: absolute;
+                top: -8px;
+                left: 218px;
+            }
+			
+            .qrcode{
+				width: 220px;
+                height: 220px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-color: #fff;
+                position: absolute;
+                bottom: 26px;
+				left: 248px;
+				box-sizing: content-box;
+				padding: 200px;
+				background-color: transparent;
+				transform: translate(-200px,200px);
+            }
+        }
+
+		.tips
+		{
+			margin-top: 25px;
+			color: #333;
+            font-size: 24px;/* px */
+            text-align: center;
+        }
+        
+        .gotoAdmin {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            outline: none;
+            border: none;
+            width: 300px;
+            height: 80px;
+            line-height: 80px;
+            border-radius: 40px;
+            font-size: 28px; /*px*/
+            background-color: #33bb49;
+            color: #ffffff;
+        }
+	}
+}
+
+.co-dialog-container {
+    position: absolute !important;
+}

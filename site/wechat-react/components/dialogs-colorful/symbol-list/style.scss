@@ -1,0 +1,47 @@
+.symbol-list{
+    i{
+        display: inline-block;
+        width:50px;/*px*/
+        height:60px;/*px*/
+        margin-left:6px;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+    .real-name-y{
+        background:url(../../../assets/images/symbol-icon/realname-icon-y.png) center center no-repeat;
+        background-size: 80% auto;
+    }
+    .pyramid{
+        background:url(../../../assets/images/symbol-icon/pyramid-icon.png) center center no-repeat;
+        background-size: 80% auto;
+    }
+    .real-name-n{
+        background:url(../../../assets/images/symbol-icon/realname-icon-n.png) center center no-repeat;
+        background-size: 80% auto;
+        
+    }
+    .livev{
+        background:url(../../../assets/images/symbol-icon/jiav-icon.png) center center no-repeat;
+        background-size: 80% auto;
+    }
+    .doctor{
+        background:url(../../../assets/images/symbol-icon/doctor.png) center center no-repeat;
+        background-size: 60% auto;
+    }
+    .livet{
+        background:url(../../../assets/images/symbol-icon/jiat-icon.png) center center no-repeat;
+        background-size: 80% auto;
+    }
+    .dai{
+        background:url(../../../assets/images/symbol-icon/dai-icon.png) center center no-repeat;
+        background-size: 80% auto;
+    }
+    .hot{
+        background:url(../../../assets/images/symbol-icon/hot-icon.png) center center no-repeat;
+        background-size: 80% auto;
+    }
+    .company{
+        background:url(../../../assets/images/symbol-icon/icon_enterprise.png) center center no-repeat;
+        background-size: 100% auto;
+    }
+}

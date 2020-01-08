@@ -1,0 +1,47 @@
+
+    .un-pay-main{
+        padding: 40px 0 12px;
+        .un-pay-item{
+            margin: 0 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size:30px; 
+            color:rgba(102,102,102,1);
+            height:42px;
+            margin-bottom: 40px;
+            &.un-pay-confirm{
+                margin: 0 40px;
+                padding:40px 0;
+                border-top:2px solid #eee; 
+                height:50px;
+                font-size:36px; 
+                font-weight:bold;
+                color:rgba(51,51,51,1); 
+            }
+            .on{
+                color:rgba(224,65,79,1)
+            }
+        }
+        .un-pay-btn{
+            margin: 12px 40px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height:76px;
+            background:rgba(224,65,79,1);
+            border-radius:50px;
+            font-size:32px; 
+            font-weight:bold;
+            color:rgba(255,255,255,1);
+        }
+        .un-pay-decs{
+            height: 76px;
+            background: #F7F7F7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px; /*px*/
+            color: #E0414F;
+        }
+    }

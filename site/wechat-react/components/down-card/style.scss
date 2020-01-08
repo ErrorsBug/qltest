@@ -1,0 +1,56 @@
+.down-card_FGET {
+    background: #fff;
+    line-height: normal;
+    padding: 0 32px;
+
+    .down-card-header {
+        height:80px;
+        background:rgba(255,255,255,1);
+        border-radius:8px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+
+        .circle-dot {
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            border: 1px solid #BBBBBB; /*px*/
+            box-sizing: border-box;
+        }
+
+        .selected {
+            border: none!important;
+        }
+
+        .down-card-title {
+            display: inline-block;
+            font-size:30px;
+            font-family:PingFangSC-Medium;
+            font-weight:500;
+            color:rgba(51,51,51,1);
+            margin: 0 10px;
+            vertical-align: middle;
+        }
+
+        .down-card-info {
+            font-size:22px;
+            font-family:PingFangSC-Regular;
+            color:rgba(102,102,102,1);
+            flex: 1;
+        }
+    }
+
+    .arrow-img {
+        height: 18px;
+        width: 10px;
+    }
+
+    .down-card-body {
+        border-radius:8px;
+        border-top: 1px solid #EEEEEE; /*no*/
+    }
+}

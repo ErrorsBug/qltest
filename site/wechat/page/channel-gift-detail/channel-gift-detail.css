@@ -1,0 +1,140 @@
+.gift-head{
+    width:100%;
+    text-align: center;
+    padding-top:40px;
+}
+.gift-status{
+    color:#f46262;
+    font-size:48px;
+    line-height: 80px;
+}
+.gift-tips{
+    color:#999999;
+    font-size:30px;
+    line-height: 40px;
+}
+.gift-box{
+    border-radius: 10px;
+    overflow: hidden;
+    margin:30px 50px 0;
+}
+.gift-box .gift-top{
+    width: 100%;
+    height: 119px;
+    padding: 0 34px;
+    background-color: #ffb400;
+    color: #fff;
+    font-size: 32px;
+    line-height: 119px;
+}
+.gift-box .gift-top .gift-top-money{
+    float: right;
+    font-size: 42px;
+}
+.gift-box .gift-mid{
+    width: 100%;    
+    padding:50px 34px;
+    background-color: #fff;
+}
+.gift-box .gift-mid span{
+    display: block;
+    width: 100%;
+    max-height: 100px;
+    line-height: 50px;
+    overflow: hidden;
+    color: #333;
+    font-size: 34px;
+}
+.gift-box .gift-bottom{
+    width: 100%;
+    border-top:1px dashed #e5e5e5;
+    color:#333;
+    font-size: 28px;
+    background-color: #fff;
+    padding:34px;
+}
+.gift-box .gift-bottom span{
+    display: block;
+    color: #999;
+    padding-bottom: 40px;
+    padding-top: 20px;
+}
+.gift-btn-box{
+    padding:40px 50px;
+    text-align: center;
+}
+.gift-btn{
+    display: block;
+    width:100%;
+    height: 88px;
+    line-height: 88px;
+    color: #fff;
+    background-color: #f84c69;
+    font-size: 34px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.gift-btn.none{
+    background-color: #999;
+}
+.gift-btn.me {
+    background: #ffffff;
+    color: #333333;
+}
+.me {
+    display: none;
+}
+.gift-btn-more {
+    display: block;
+    margin-top:40px;
+    color:#f84c69;
+    font-size: 28px;
+    
+    text-decoration: underline;
+}
+.gift-self {
+    color: rgb(124, 124, 124);
+    display: none;
+}
+.gift-btn-more.none{
+    color:#999;
+}
+.gift-list-box{
+    border-top: 1px solid #ccc;
+    text-align: center;
+    margin:40px 50px;
+    display: none;
+}
+.gift-list-box .gift-list-header{
+    display: block;
+    width:165px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #f2f2f2;
+    color:#999;
+    font-size: 28px;
+    /*margin-top:-15px;*/
+    margin: -15px auto;
+}
+.gift-list-box .gift-detail-ul{
+    line-height: 50px;
+    padding-top:20px;
+}
+.gift-list-box .gift-detail-ul .gift-ul-item{
+    line-height: 50px;
+    color:#999;
+    overflow: hidden;
+}
+.gift-list-box .gift-detail-ul .gift-ul-item-span1{
+    float: left;
+    font-size: 28px;
+}
+.gift-ul-item-span1 var{
+    display: inline-block;
+    max-width:200px;
+    vertical-align: top;
+}
+.gift-list-box .gift-detail-ul .gift-ul-item-span2{
+    float: right;
+    font-size: 28px;
+}

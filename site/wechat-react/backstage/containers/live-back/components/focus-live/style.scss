@@ -1,0 +1,58 @@
+.focus-live {
+    position: relative;
+    display: flex;
+    margin: 40px 20px;
+    // padding: 30px;
+    border-radius: 10px;
+    // background: #FFF;
+
+    .icon-close {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        width: 32px;
+        height: 32px;
+        border-radius: 50px;
+        cursor: pointer;
+        background: #999 url('../../img/icon-close.png') no-repeat center / contain;
+        transform: translate(50%, -100%);
+    }
+
+    .paster-qr {
+        // width: 100%;
+        margin: 0 auto;
+        height: 190px;
+        display: block;
+    }
+
+    .img-wrap {
+        margin-right: 30px;
+        img {
+            width: 126px;
+            height: 126px;
+        }
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .hed {
+            font-size: 30px; /* px */
+            font-family:PingFangSC-Medium;
+            font-weight:500;
+            color: #333;
+            line-height:42px;
+            font-weight: bold;
+        }
+
+        .body {
+            width:100%;
+            font-size: 24px; /* px */
+            font-family:PingFangSC-Regular;
+            font-weight:400;
+            color: #999;
+            line-height:33px;
+        }
+    }
+}

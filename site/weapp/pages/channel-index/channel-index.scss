@@ -1,0 +1,152 @@
+page{
+    height: 100%;
+}
+
+.scroll-view-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f0;
+
+    .top-section{
+        background-color: #fff;
+    }
+
+    .main {
+        width: 100%;
+        background-color: #ffffff;
+        padding-bottom: 120rpx;
+        margin-top: 20rpx;
+
+        .tab-content {
+        	background-color: #ffffff;
+        }
+
+        .loading-more {
+        	display: block;
+        	width: 100%;
+        	padding: 20rpx;
+        	text-align: center;
+        	color: #999999;
+        	font-size: 26rpx;
+        }
+    }
+}
+
+
+.follow-then-rebate {
+	position: fixed;
+	right: 10rpx;
+	top: 560rpx;
+	width: 151rpx;
+	height: 106rpx;
+	background-color: transparent;
+	background-image: url('../../comp/img/follow-then-rebate.png');
+	background-repeat: no-repeat;
+	background-position: center;
+    background-size: contain;
+    border: none;
+    border-radius: 0;
+	&::after {
+		content: none;
+	}
+}
+
+//icon-help.png
+.btn-help{
+    width: 148rpx;
+    height: 148rpx;
+    background: url(./img/icon-help.png?__inline) center center no-repeat;
+    background-size: contain;
+    position: absolute;
+    right: 10rpx;
+    bottom: 300rpx;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    animation: cloud 1.5s infinite;
+    &::after {
+		content: none;
+    }
+    
+
+}
+@keyframes cloud {
+	0%{transform:translateY(0)}
+	50%{transform:translateY(25rpx)}
+	100%{transform:translateY(0)}
+}
+.dialog-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 100;
+}
+.dialog-main{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    min-height: 100rpx;
+    padding-bottom: 140rpx;
+    background: #fff;
+    border-radius: 15rpx;
+    overflow: hidden;
+}
+.already-buy-dialog {
+    .dialog-main {
+        position: relative;
+        padding-bottom: 0;
+    }
+    .buy-channel-dialog {
+        padding: 60rpx 60rpx 30rpx 60rpx;
+        font-size: 32rpx;
+        .des {
+            display: block;
+            font-weight: bold;
+            color: #333;
+            font-size: 30rpx;
+            text-align: center;
+            line-height: 1.4;
+        }
+    
+        .red-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30rpx;
+            margin-top: 50rpx;
+            height: 88rpx;
+            background-color: #f73657;
+            color: #fff;
+            border-radius: 100rpx;
+            border: 1rpx solid #f73657;
+        }
+        .view-tutorial-wrapper {
+            display: block;
+            color: #999999;
+            font-size: 28rpx;
+            line-height: 3;
+            margin-bottom: 30rpx;
+            text-align: center;
+            .view-tutorial-btn {
+                color: #bca182;
+                margin-left: 20rpx;
+                text-decoration: underline;
+            }
+        }
+    }
+    .close-btn {
+        position: absolute;
+        right: 10rpx;
+        top: 5rpx;
+        color: #dcdcdc;
+        font-size: 50rpx;
+        &::after {
+            content: "\D7";
+        }
+    }
+}

@@ -1,0 +1,155 @@
+@import "../../assets/styles/base-definition";
+@import './icon.scss';
+
+$gray-border: #eee;
+
+/**
+ * 各种1px线段、边框
+ */
+
+@mixin pixelRatioGT($pixelRatio) {
+    @media (-webkit-min-device-pixel-ratio: $pixelRatio) {
+        @content;
+    }
+}
+
+@mixin afterBorderBottom1px($color: $gray-border) {
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px; /*px*/
+        right: 0;
+        // background-color: $color;
+        transform-origin: 0 100%;
+    }
+    @include pixelRatioGT(3.1) { // scale实现1px方案下android的显示效果不好，此处用于优化部分android
+        &::after {
+            transform: scaleY(.3);
+        }
+    }
+}
+
+@mixin beforeBorderBottom1px($color: $gray-border) {
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px; /*no*/
+        right: 0;
+        background-color: $color;
+        transform-origin: 0 100%;
+    }
+    @include pixelRatioGT(3.1) {
+        &::before {
+            transform: scaleY(.5);
+        }
+    }
+}
+
+@mixin beforeBorderTop1px($color: $gray-border) {
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 1px; /*no*/
+        right: 0;
+        background-color: $color;
+        transform-origin: 0 0;
+    }
+    @include pixelRatioGT(3.1) {
+        &::before {
+            transform: scaleY(.5);
+        }
+    }
+}
+
+@mixin afterBorderRight1px($color: $gray-border) {
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 1px; /*no*/
+        background-color: $color;
+        transform-origin: 100% 0;
+        @content;
+    }
+    @include pixelRatioGT(3.1) {
+        &::after {
+            transform: scaleX(.5);
+        }
+    }
+}
+
+@mixin beforeBorder1pxRadius($color: $gray-border, $borderRadius: 6px) {
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 1px solid $color;/*no*/
+        border-radius: $borderRadius;
+    }
+    @include pixelRatioGT(3.1) {
+        &::before {
+            right: -100%;
+            bottom: -100%;
+            transform-origin: 0 0;
+            transform: scale(.5);
+            border-radius: $borderRadius * 2;
+        }
+    }
+}
+
+@mixin ellipsis-text() {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+// 多行文本超出，省略号
+@mixin webkitLineClamp($line: 2) {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+}
+
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: block;
+        height: 0;
+        visibility: hidden;
+        clear: both;
+    }
+}
+
+
+// 限制fixed元素的宽度
+@mixin limitFixedWidth {
+    max-width: 1280px; /*px*/
+}
+
+@mixin bg-image($url) {
+  background-image: url($url + "@2x.png");
+    @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3) {
+        background-image: url($url + "@3x.png");
+    }
+}
+
+// 定义font-size
+@mixin fontSize($value) {
+    font-size: $value; /*px*/
+}

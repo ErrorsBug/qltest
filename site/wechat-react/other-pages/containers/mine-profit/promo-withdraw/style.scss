@@ -1,0 +1,87 @@
+@import "../../../../assets/styles/base-definition";
+
+.my-promo-withdraw {
+    height: 100%;
+    background: #fff;
+    .container {
+        height: 100%;
+        text-size-adjust: none;
+    }
+    
+    .tips {
+        font-size: 28px; /*px*/
+        color: rgba(153, 153, 153, 1);
+        line-height: 40px;
+        margin-bottom: 42px;
+    }
+    
+    .profit-scroll-box {
+        padding: 40px;
+        height: 100%;
+        box-sizing: border-box;
+        width: 100%;
+        .common-empty {
+            top: 65%;
+        }
+    }
+
+    .record {
+        background:rgba(255,255,255,1);
+        box-shadow:0px 4px 40px 0px rgba(0,0,0,0.05);
+        border-radius:8px;
+        padding: 22px 40px 0;
+        font-size: 26px; /*px*/
+        margin-bottom: 20px;
+        overflow: hidden;
+        color: #999999;
+        p {
+            margin-bottom: 10px;
+            line-height:36px;
+        }
+        .withdraw-money {
+            font-weight: bold;
+            color: #333;
+            span {
+                color: #F73657;
+            }
+        }
+        .status {
+            margin-bottom: 20px;
+        }
+        .footer {
+            padding-top: 20px;
+            .btn-wrap {
+                border-top: 2px solid #eee; /*px*/
+                color: #666;
+                display: flex;
+                .btn {
+                    flex: 1;
+                    padding: 20px 0 28px;
+                    text-align: center;
+                    .btn-text {
+                        position: relative;
+                        display: block;
+                        line-height: 36px;
+                        font-size: 26px; /*px*/
+                    }
+    
+                    &:not(:last-child) {
+                        .btn-text {
+                            &::after {
+                                content: "";
+                                display: block;
+                                height: 100%;
+                                width: 0;
+                                border-right: 2px solid #eee; /*px*/
+                                position: absolute;
+                                right: 0;
+                                top: 50%;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

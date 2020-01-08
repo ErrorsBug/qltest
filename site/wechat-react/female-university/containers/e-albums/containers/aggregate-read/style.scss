@@ -1,0 +1,130 @@
+
+.two-page{
+    // height: 100%;
+    color: white;
+    font-family:"PingFangSC-Regular","PingFang SC";
+    font-weight:400;
+    color:rgba(255,255,255,1);
+    line-height:50px;
+    background: url(../../img/moon.png) no-repeat 44px 44px;
+    background-position: 534px 680px;
+    .two-page-box{
+        position: relative;
+        z-index: 5;
+        margin-top: 60px;
+        margin-left:60px;
+        span{
+            font-size: 40px;
+            color: #ffdfa7;
+            font-weight: bold;
+        }
+        .timer{
+            width: 414px;
+            position: relative;
+            top: 0;
+            font-size: 32px;
+            opacity: 1;
+        }
+        .one-flash{
+            opacity: 0;
+            animation: deferAni 1s ease-in-out 1s forwards;
+        }
+        .addBook,.subject{
+            position: relative;
+            top: 0;
+            font-size: 32px;
+            opacity: 1;
+        }
+        .cont-one{
+            width: 502px;
+            position: relative;
+            top: 0;
+            margin-top: 40px;
+            font-size: 32px;
+        }
+        .three-flash{
+            opacity: 0;
+            animation: deferAni 1s ease-in-out 3s forwards;
+        }
+        .f-bottom{
+            position: relative;
+            top: 0;
+            margin-top: 48px;
+            width: 592px;
+            font-size:48px;
+            color:rgba(255,255,255,1);
+            line-height:70px;
+            i{
+                display: inline-block;
+                font-size: 32px;
+                vertical-align: top;
+                &:nth-of-type(2){
+                    transform:rotate(180deg);
+                }
+            }
+        }
+        .five-flash{
+            opacity: 0;
+            animation: deferAni 1s ease-in-out 5s forwards;
+        }
+        .seven-flash{
+            opacity: 0;
+            animation: deferAni 1s ease-in-out 7s forwards;
+            font-weight: bold;
+        }
+    }
+    .jt{
+        width: 100%;
+        position: absolute;
+        bottom: 34px;
+        display: flex;
+        justify-content: center;
+        z-index: 5;
+        animation: JtFlash 4s infinite;
+        img{
+            width: 44px;
+        }
+    }
+    .two-page-bg{
+        img{
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            width: 100%;
+        }
+        .bg1-flash{
+            animation:FaleInMove 1s 
+        }
+        .bg2-flash{
+            opacity: 0;
+            animation: deferAni 0.5s ease-in-out 1s forwards;
+            font-weight: bold;
+        }
+    }
+}
+@keyframes deferAni {
+    0% { 
+        opacity: 0;
+    }
+    100% { 
+        opacity: 1;
+    }
+}
+@keyframes FaleIn {
+    0% { 
+        opacity: 0;
+    }
+    100% { 
+        opacity: 1;
+    }
+}
+@keyframes FaleInMove {
+    0% { 
+        opacity: 0;
+        bottom: -100px;
+    }
+    100% { 
+        opacity: 1;
+        bottom: 0;
+    }
+}

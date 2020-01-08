@@ -1,0 +1,99 @@
+@import "../../../../assets/styles/base-definition";
+
+.page-withdraw{
+	.gettable{
+		padding:50px 0 50px;
+		background:#FFE4B8;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.tip{
+			color: #DFAE60;
+			font-size: 24px; /*px*/
+		}
+		.num{
+			font-size:60px;/*px*/
+			color:#FF9F00;
+			margin-top:15px;
+			text-align: center;
+			&:after{
+				content:'￥';
+				font-size:24px;/*px*/
+				margin-left:10px;
+				display:inline;
+				color: #FF9F00;
+			}
+		}
+	}
+	.form-box{
+		background:#fff;
+		font-size:30px;/*px*/
+		.row{
+			padding:0 30px;
+			height:100px;
+			@include flex-center(vertical);
+			border-bottom:1px solid $gray-border;/*no*/
+			.name{
+				width:180px;
+			}
+			input{
+				display: block;
+				flex:1;
+				border:0;
+				outline: none;
+				height:60px;
+				line-height:60px;
+				font-size:30px;/*px*/
+				text-align: right;
+				&::placeholder{
+					font-size: 22px;/*px*/
+				}
+			}
+			.disable{
+				color:$gray-tip;
+			}
+		}
+	}
+	.notice{
+		padding: 29px 30px;
+		color:$gray-tip;
+		height:64px;
+		@include flex-center(vertical);
+		font-size:26px;/*px*/
+	}
+	.intro-box{
+		padding:20px 30px;
+		background:#fff;
+		line-height:1.5;
+		color:$gray-content;
+		font-size:26px;/*px*/
+		
+		span{
+			color: #F73657;
+		}
+	}
+	.withdraw-mam{
+		padding:50px 30px;
+		background: #fff;
+		.withdraw-btn{
+			background:$main-color--lighter;
+			color:#fff;
+			font-size:32px;/*px*/
+			@include flex-center;
+			height:84px;
+			border-radius: 100px;
+			&.disable{
+				opacity:.5;
+				cursor:default;
+			}
+		}
+	}
+	.money-link {
+        cursor: pointer;
+        padding: 25px 41px 0;
+        color: #FF9F00;
+		text-decoration: none;
+		font-size: 28px; /*px*/
+		background: #fff;
+	}
+}

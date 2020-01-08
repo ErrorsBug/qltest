@@ -1,0 +1,15 @@
+<view class="modal">
+  <view class="panel">
+    <view class="content">
+      <slot />
+    </view>
+    <view class="btns">
+      <view class="btn" wx:if="{{showCancel}}" bindtap="tapCancel">
+        {{cancelText}}
+      </view>
+      <view class="btn red" bindtap="tapConfirm">
+        {{confirmText}}
+      </view>
+    </view>
+  </view>
+</view>

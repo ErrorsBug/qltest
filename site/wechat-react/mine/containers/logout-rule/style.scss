@@ -1,0 +1,102 @@
+@import url('//at.alicdn.com/t/font_1378800_maia3r0xwu8.css');
+.logout-rule{
+    height: 100%;
+    background: white;
+    .logout-rule-box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: white;
+        .notice{
+            position: relative;
+            width: 686px;
+            height: 244px;
+            border-radius:8px;
+            margin-top: 32px;
+            background: #F7F7F7;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            .importance{
+                position: absolute;
+                top: 32px;
+                left: 32px;
+                width: 140px;
+                height: 52px;
+                background: #F73657;
+                border-radius:8px;
+                color: white;
+                img{
+                    position: absolute;
+                    top: -1px;
+                    left: 10px;
+                    width: 50px;
+                    height: 50px;
+                }
+                p{
+                    display: inline-block;
+                    text-align: center;
+                    font-size:32px;/*px*/
+                    font-weight:600;
+                    line-height:52px;
+                    margin-left: 60px;
+                }
+            }
+            .notice-content{
+                margin-top: 28px;
+                width: 622px;
+                height: 180px;
+                font-size:36px;/*px*/
+                font-weight:600;
+                color:rgba(51,51,51,1);
+                line-height:60px;
+                text-indent: 168px;
+            }
+        }
+        .earnest-read{
+            margin-top: 48px;
+            width: 686px;
+            height: 84px;
+            p{
+                font-size:30px; /*px*/
+                color:rgba(51,51,51,1);
+                line-height:42px;
+            }
+        }
+        .condition{
+            margin-top: 48px;
+            width: 686px;
+            .title{
+                font-size:36px;/*px*/
+                font-weight:600;
+                line-height:50px;
+            }
+            p{
+                font-size:0.4rem;
+                font-weight:400;
+                color:rgba(51,51,51,1);
+                line-height:42px;
+                margin-bottom: 16px;
+                &:nth-last-of-type(1){
+                    margin-bottom: 0;
+                }
+            }
+        }
+        
+    }
+}
+
+.agree-bottom{
+    height: 76px;
+    background:rgba(247,54,87,1);
+    border-radius: 76px;
+    bottom: 16px;
+    left: 40px;
+    right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px; /*px*/
+    color:white;
+}

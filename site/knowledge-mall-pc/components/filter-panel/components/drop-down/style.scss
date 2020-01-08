@@ -1,0 +1,88 @@
+.drop-down-wrap {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    margin-left: 40px;
+
+    .content {
+        display: flex;
+        align-items: center;
+        line-height: 35px;
+    }
+
+    .triangle {
+        width: 0;
+        height: 0;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 6px solid #b9b9b9;
+        margin-left: 16px;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+    &:hover {
+        .triangle {
+            transform: rotate(180deg);
+        }
+    }
+
+    span {
+        color: #d1b686;
+    }
+    .visible {
+        visibility: initial;
+    }
+    .drop-down-outer {
+        position: absolute;
+        top: 0px;
+        left: 0;
+        padding-top: 40px;
+
+        &:before {
+            content: ' ';
+            position: absolute;
+            left: 50%;
+            top: 40px;
+            width: 10px;
+            height: 10px;
+            transform-origin: center center;
+            transform: rotate(45deg) translate(-50%, -50%);
+            background: #fff;
+            z-index: 100;
+        }
+
+        .drop-down {
+            list-style: none;
+            overflow: hidden;
+            border-radius: 4px;
+            box-shadow: 0px -1px 20px 0px rgba(0, 0, 0, 0.15);
+            z-index: 40;
+            padding: 0;
+            background: #fff;
+            .drop-down-item {
+                position: relative;
+                background: #fff;
+                color: #666;
+                border-bottom: solid 1px #f0f0f0;
+                height: 40px;
+                line-height: 40px;
+                width: 100%;
+                box-sizing: border-box;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                padding-left: 20px;
+                width: 144px;
+                cursor: pointer;
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+            .selected {
+                color: #d1b686;
+            }
+        }
+    }
+}

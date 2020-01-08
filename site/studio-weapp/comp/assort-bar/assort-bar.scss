@@ -1,0 +1,43 @@
+.co-assort-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30rpx;
+  overflow: hidden;
+}
+
+.co-assort-title-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.co-assort-title {
+  font-size: 32rpx;
+  color: #2e3133;
+  font-weight: 500;
+  // margin-left: 16rpx;
+}
+
+.co-assort-block-icon {
+  width: 8rpx;
+  height: 36rpx;
+}
+
+.co-assort-more-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 4rpx 0 4rpx 16rpx;
+}
+
+.co-assort-more-title {
+  color: #568cc3;
+  font-size: 28rpx;
+  margin-right: 10rpx;
+}
+
+.co-assort-more-icon {
+  width: 9rpx;
+  height: 14rpx;
+}

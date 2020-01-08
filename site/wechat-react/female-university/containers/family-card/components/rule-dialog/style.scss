@@ -1,0 +1,26 @@
+
+.uni-rule-box{
+    .rl-rule-info{
+        ul{
+            margin-bottom: 64px;
+            li{
+                font-size: 26px; /*px*/
+                color: #A67378;
+                line-height: 1.4;
+                margin-bottom: 24px;
+                strong{
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    .rl-rule-flow{
+        height: 230px;
+        padding: 0 38px;
+        text-align: center;
+        img{
+            width: auto;
+            height: 100%;
+        }
+    }
+}

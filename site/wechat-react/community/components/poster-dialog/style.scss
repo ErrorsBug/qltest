@@ -1,0 +1,220 @@
+ .un-flag-poster-dialog{
+    position: fixed !important;
+    scroll-behavior: smooth;
+    &.app{
+        .co-dialog-content { 
+            top:40%;
+        } 
+    }
+    .co-dialog-content {
+        background: none; 
+        width: 80%; 
+        border-radius: 0; 
+    } 
+    
+    &.pd-day{
+        .co-dialog-content{
+            width: 65%;
+        }
+    }
+    .fpd-img{
+        text-align: center;
+        // width: 80%;
+        // margin: 0 auto;
+        img{
+            // width:604px;
+            width: 100%;
+            margin-bottom: 40px;
+            border-radius: 8px;
+        }
+    }
+    h4{
+        text-align: center;
+        font-size: 32px;  
+        color: #333;
+        margin-bottom: 16px;
+        font-weight: 600;
+        line-height: 1.5;
+        
+    }
+    h5{
+        font-size:28px; 
+        font-weight: bold;
+        color:rgba(51,51,51,1);
+        line-height:40px;
+        margin-bottom: 16px;
+    }
+    p{
+        font-size: 28px;  
+        color: #666;
+        line-height: 1.5;
+        margin-bottom: 32px;
+        &.txt-center{
+            text-align: center;
+        }
+    } 
+    .fl-btn-container{ 
+        display: flex;
+        padding: 0 30px;
+        &.get{ 
+            padding: 0 54px 48px;
+        }
+        .fl-poster-btn{
+            flex: 1;
+            line-height:70px;
+            border-radius:35px;
+            border:2px solid rgba(255,255,255,1);
+            font-size:28px; 
+            text-align: center;
+            margin-right: 44px; 
+            font-weight: bold;
+            color:rgba(255,255,255,1); 
+            &:last-child{
+                margin: 0;
+            }
+            &.on{ 
+                background:rgba(224,65,79,1);
+                border:2px solid rgba(224,65,79,1);
+            }
+        } 
+    }
+    
+    &.pd-success {
+        .co-dialog-bg::after{ 
+           content:''; 
+           background: url('https://img.qlchat.com/qlLive/business/TUG2BWRX-3VIU-458Z-1559206347211-9DDN37TGE8RR.png') no-repeat 0 center;
+           background-size: 100%;
+           position: absolute;
+           width: 100px;
+           height: 100px;    
+           left: 49%;
+           top: 50%;  
+           animation: myfirst 5s linear infinite ;
+        }
+        @keyframes myfirst
+           {
+               0%   {transform:translate(-50%,-50%) scale(15) rotate(0deg);}  
+               100% {transform:translate(-50%,-50%) scale(15) rotate(360deg);}
+           }
+    }
+    .co-dialog-bg { 
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+}
+.un-community-poster-dialog{
+    position: fixed !important;
+    scroll-behavior: smooth;
+    &.app{
+       .co-dialog-content { 
+           top:40%;
+       } 
+    }
+    &.app-tab{
+        padding-top: 150px;
+    }
+   .co-dialog-content {
+       background: none; 
+       width: 80%; 
+       border-radius: 0; 
+   } 
+   
+   &.pd-day{
+       .co-dialog-content{
+           width: 65%;
+       }
+   }
+   .fpd-img{
+       text-align: center;
+       // width: 80%;
+       // margin: 0 auto;
+       img{
+           // width:604px;
+           width: 100%;
+           margin-bottom: 40px;
+           border-radius: 8px;
+       }
+   }
+   h4{
+       text-align: center;
+       font-size: 32px;  
+       color: #333;
+       margin-bottom: 16px;
+       font-weight: 600;
+       line-height: 1.5;
+       
+   }
+   h5{
+       font-size:28px; 
+       font-weight: bold;
+       color:rgba(51,51,51,1);
+       line-height:40px;
+       margin-bottom: 16px;
+   }
+   p{
+       font-size: 28px;  
+       color: #666;
+       line-height: 1.5;
+       margin-bottom: 32px;
+       &.txt-center{
+           text-align: center;
+       }
+   } 
+   .fl-btn-container{ 
+       display: flex;
+       padding: 0 30px;
+       &.get{ 
+           padding: 0 54px 48px;
+       }
+       .fl-poster-btn{
+           flex: 1;
+           line-height:70px;
+           border-radius:35px;
+           border:2px solid rgba(255,255,255,1);
+           font-size:28px; 
+           text-align: center;
+           margin-right: 44px; 
+           font-weight: bold;
+           color:rgba(255,255,255,1); 
+           &:last-child{
+               margin: 0;
+           }
+           &.on{ 
+               background:rgba(224,65,79,1);
+               border:2px solid rgba(224,65,79,1);
+           }
+       } 
+   }
+   
+   &.pd-success {
+       .co-dialog-bg::after{ 
+          content:''; 
+          background: url('https://img.qlchat.com/qlLive/business/TUG2BWRX-3VIU-458Z-1559206347211-9DDN37TGE8RR.png') no-repeat 0 center;
+          background-size: 100%;
+          position: absolute;
+          width: 100px;
+          height: 100px;    
+          left: 49%;
+          top: 50%;  
+          animation: myfirst 5s linear infinite ;
+       }
+       @keyframes myfirst
+          {
+              0%   {transform:translate(-50%,-50%) scale(15) rotate(0deg);}  
+              100% {transform:translate(-50%,-50%) scale(15) rotate(360deg);}
+          }
+   }
+   .co-dialog-bg { 
+       background-color: rgba(0, 0, 0, 0.7);
+   }
+}
+.un-app-show{
+    z-index: 300;
+}  
+.un-community-tip{
+    .fl-dialog-link{
+        background:rgba(224,65,79,1);
+        &::after{
+            background:rgba(224,65,79,1);
+        }
+    }
+}

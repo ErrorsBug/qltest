@@ -1,0 +1,85 @@
+.job-list-dialog {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+
+    > header {
+        flex-shrink: 0;
+        position: relative;
+        height: 88px;/* px */
+        text-align: center;
+        line-height: 88px;/* px */
+        font-size: 32px;/* px */
+        color: #333;
+        font-weight:600;
+        border-bottom: 1px solid #EEE; /* no */
+
+        > i {
+            position: absolute;
+            padding: 0 30px;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #333;
+            font-size: 32px; /* px */
+        }
+    }
+
+    > .job-scroll-box {
+        position: relative;
+        padding: 20px 0;
+        width: 100%;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        .job-item {
+            padding: 0 40px;
+            height: 80px;
+            line-height: 80px;
+            color: #333;
+            font-size: 28px; /* px */
+            white-space: nowrap;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            .title {
+                flex-grow: 1;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .status {
+                flex-shrink: 0;
+                height: 55px;
+                border-radius: 55px;
+                line-height: normal;
+                display: flex;
+                align-items: center;
+                padding: 0 1em;
+                font-size: 28px;
+                color: #fff;
+                background-color: #f73657;
+                margin-left: 1em;
+            }
+            &.complete {
+                color: #999;
+                .status {
+                    background-color: #eee;
+                    color: #999;
+                }
+            }
+
+            &.select {
+                background: #F7F7F7;
+            }
+        }
+    }
+}
+
+.job-list-dialog-box .co-dialog-bottom, .job-list-dialog {
+    border-radius:28px 28px 0px 0px;
+}
+.job-list-dialog-box .co-dialog-bottom{
+    height: 60% !important;
+    background: #fff;
+}

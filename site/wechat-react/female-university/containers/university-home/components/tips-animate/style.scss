@@ -1,0 +1,29 @@
+.uni-tips-box{
+    font-size: 26px; /*px*/
+    color: #666;
+    text-align: center;
+    line-height: 1.5;
+    height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: tipAnimate 3s linear;
+}
+@keyframes tipAnimate{
+    0% {
+        padding: 0;
+        height: 0;
+    }
+    10% {
+        padding: 40px 0 20px;
+        height: 40px;
+    }
+    90% {
+        padding: 40px 0 20px;
+        height: 40px;
+    }
+    100% {
+        padding: 0;
+        height: 0;
+    }    
+}

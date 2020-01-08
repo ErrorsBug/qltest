@@ -1,0 +1,25 @@
+.detail-course-box{
+  display: flex;
+  > div{
+    margin-right: 40px;
+    padding-left: 32px;
+    font-size: 22px; /* px */
+    line-height: 1.4;
+    color: #999;
+    &:last-child{
+      margin: 0;
+    }
+    &.icon-one{
+      background: url("./img/course.png") no-repeat left center;
+      background-size: 26px;
+    }
+    &.icon-two{
+      background: url("./img/play.png") no-repeat left center;
+      background-size: 26px;
+    }
+    &.icon-three{
+      background: url("./img/replay.png") no-repeat left center;
+      background-size: 26px;
+    }
+  }
+}

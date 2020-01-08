@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+$viColor: #F73657;
+$darkViColor: #009486;
+$linearViColor: linear-gradient(to right, #31D5A1, #00B4A5);
+$lightGray: #ddd;
+$darkGray: #bbb;
+
+.ql-s-picker-bar{
+	min-height: 20px;
+}
+// Picker
+.ql-s-picker-box {
+  min-height: 20px;
+  .ql-s-picker-popup-mask {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    background-color: rgba(0,0,0,.4);
+    transition: all .3s;
+
+    &.hide {
+      z-index: -1;  
+      background-color: rgba(0,0,0,0);
+    }
+  }
+
+  .ql-s-picker-popup-wrap {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: -100%;
+    z-index: 1000;
+    background-color: #fff;
+    transition: all .3s;
+
+    &.popup {
+      bottom: 0;
+    }
+
+    .ql-s-picker-popup-header {
+      display: flex;
+      border-bottom: 1px solid #ddd;
+
+      .ql-s-picker-popup-item {
+        padding: 10px 30px;
+        height: 60px;
+        font-size: 34px;
+        line-height: 60px;
+        color: #000;
+        text-align: center;
+
+        &.ql-s-header-title {
+          flex: 1;
+        }
+
+        &.ql-s-header-left {
+          // 左边按钮统一改成999
+            color: #999999;
+        }
+        &.ql-s-header-right {
+          color: $viColor;
+        }
+      }
+    }
+  }
+}

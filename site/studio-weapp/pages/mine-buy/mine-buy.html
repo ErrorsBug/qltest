@@ -1,0 +1,7 @@
+<tab-bar bindonTabClick="onTabClick" active="{{activeTab}}"/>
+
+<channel-list visible="{{activeTab==='channel'}}" wx:if="{{initTab.channel}}" liveId="{{liveId}}"/>
+
+<topic-list visible="{{activeTab==='topic'}}" wx:if="{{initTab.topic}}" liveId="{{liveId}}"/>
+
+<vip-list sysTime="{{sysTime}}" visible="{{activeTab==='vip'}}" wx:if="{{initTab.vip}}"/>

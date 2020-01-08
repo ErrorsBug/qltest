@@ -1,0 +1,43 @@
+.redpack-card {
+    position: relative;
+    display: block;
+    // background: #fff;
+    margin: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 6px;
+    // border: solid 1px #ededed; /*no*/
+
+    .title {
+        display: block;
+        height: 80px;
+        line-height: 40px;
+        font-size: 28px; /*px*/
+        color: #666;
+        display: flex;
+        .text{
+            flex: 1;
+        }
+        &::before{
+            content: '';
+            display: inline-block;
+            height: 80px;
+            width: 50px;
+            background: url("./img/redpack-icon.png") center center no-repeat;
+            background-size: 100% auto;
+            vertical-align: top;
+            margin-right: 20px;
+        }
+    }
+
+    .btn{
+        border-top: 1px solid #eee;/*px*/
+        color: #999;
+        margin-top: 20px;
+        padding-top: 20px;
+        .icon_enter{
+            color: #999;
+            float: right;
+        }
+    }
+}

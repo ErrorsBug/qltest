@@ -1,0 +1,194 @@
+.invite-rank{
+    .ch-section5-inner{
+        >div{
+            flex:1;
+        } 
+    }
+    .ch-section5-outer{
+        height: 106px;
+    }
+    .experience-camp-invite-container{
+        background:rgba(255,255,255,1);
+        border-radius:0px 0px 20px 20px;
+        margin:0 2.67%;
+        .section5-top{
+            display: flex;
+            height: 106px;
+            border-bottom: 2px solid #F7F7F7; 
+            >div{
+                flex:1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size:40px;
+                font-weight:bold;
+                color:rgba(51,51,51,1);
+            }
+            .active{
+                color:rgba(247,54,87,1);
+                position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    bottom:12px;
+                    left: 50%;
+                    width:60px;
+                    height:8px;
+                    background:rgba(247,54,87,1);
+                    border-radius:4px;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+        .section5-item{
+            display: flex;
+            align-items: center;
+            height: 128px;
+            border-bottom: 2px solid #F7F7F7;
+            &.invite-rank-my{
+                background:rgba(247,54,87,0.1);
+            }
+            .section5-num{
+                font-size:28px;
+                font-weight:bold;
+                color:rgba(153,153,153,1);
+                width: 100px; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                height: 100%;
+                &.section5-num-1{
+                    background: url('https://img.qlchat.com/qlLive/business/LAJA8XGO-DRCW-ZBOM-1576227471169-8FY84VLO8V9E.png') no-repeat center center;
+                    background-size: 40px;
+                }
+                &.section5-num-2{
+                    background: url('https://img.qlchat.com/qlLive/business/LAX5NHER-1HE9-VTJL-1576227606075-EWER2XECYZ1F.png') no-repeat center center;
+                    background-size: 40px;
+                }
+                &.section5-num-3{
+                    background: url('https://img.qlchat.com/qlLive/business/DXPF4AWL-HMNZ-3XPF-1576227614466-FTRD5QPNZ5D2.png') no-repeat center center;
+                    background-size: 40px;
+                }
+            }
+            .section5-avator{
+                img{
+                    width:80px;
+                    height:80px;
+                    border-radius: 50%;
+                    margin-right: 24px;
+                }
+            }
+            .section5-name{
+                font-size:32px;
+                font-weight:bold;
+                color:rgba(51,51,51,1);
+                flex: 1;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+                overflow: hidden;
+                line-height: 1.4;
+            }
+            .section5-right{
+                margin-right: 32px;
+                font-size:22px; 
+                .section5-right-num{
+                    color:rgba(102,102,102,1);
+                    margin-bottom: 4px;
+                    text-align: center;
+                }
+                .section5-right-btn{
+                    width:178px;
+                    height:40px;
+                    background:rgba(247,54,87,1);
+                    border-radius:21px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight:500;
+                    color:rgba(255,255,255,1);
+                }
+            }
+        }
+        
+        .section5-more{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 82px;
+            font-size:26px; 
+            color:rgba(102,102,102,1);
+            i{
+                transform: rotate(90deg);
+                font-size: 18px;
+                margin-left: 10px;
+            }
+        }
+        .section5-empty{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 406px;
+            img{
+                width: 150px; 
+                margin-bottom: 24px;
+            }
+            .empty-text{
+                font-size:32px; 
+                color:rgba(153,153,153,1);
+                line-height:44px;
+                margin-bottom: 16px;
+            }
+            .empty-tip{
+                font-size:26px; 
+                color:rgba(187,187,187,1);
+                line-height:36px;
+            }
+        }
+    }
+}
+
+.experience-camp-invite-item{
+    display: flex;
+    align-items: center;
+    height: 128px;
+    border-bottom: 2px solid #F7F7F7; 
+    .section5-avator{
+        width:80px;
+        height:80px;
+        margin-right: 24px;
+        margin-left: 32px;
+        img{
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .section5-center{
+        flex: 1;
+        .section5-name{
+            font-size:32px;
+            font-weight:bold;
+            color:rgba(51,51,51,1);
+            margin-bottom: 4px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+            line-height: 1.4
+        }
+        .section5-time{
+            font-size:22px; 
+            color:rgba(102,102,102,1);
+            line-height:32px;
+        }
+    } 
+    .section5-money{
+        font-size:32px;
+        font-weight:bold;
+        color:rgba(247,54,87,1);
+        padding-right: 32px;
+    }
+}

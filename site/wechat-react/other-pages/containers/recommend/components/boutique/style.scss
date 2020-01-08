@@ -1,0 +1,113 @@
+@import "../../../../../assets/styles/mixins.scss";
+
+.recommend-boutique{
+    position: relative; 
+    @include afterBorderBottom1px;
+    &::after {
+        left: 40px;
+        right: 40px;
+    }
+
+    .boutique-container{
+        display:flex;
+        padding:0 32px 32px;
+        justify-content: space-between;
+        .main-item{
+            width:49%;
+            padding-top:66.4%;
+            height:0;
+            border-radius: 8px;
+            background:#f1f1f1;
+            position:relative;
+            overflow: hidden;
+            .content-wrap{
+                padding:20px;
+                position: absolute;
+                width:100%;
+                height:100%;
+                top:0;
+                left:0;
+                box-sizing: border-box;
+                z-index: 2;
+                line-height:1.5;
+            }
+        }
+        .sub-item-wrap{
+            width:49%;
+            padding-top:66.4%;
+            height:0;
+            position:relative;
+            overflow: hidden;
+            .content-wrap{
+                display:flex;
+                justify-content: space-between;
+                flex-direction: column;
+                position:absolute;
+                width:100%;
+                height:100%;
+                top:0;
+                left:0;
+            }
+        }
+        .sub-item{
+            width:100%;
+            height:49%;
+            border-radius: 4px;
+            background:#f1f1f1;
+            padding:20px;
+            box-sizing: border-box;
+            overflow: hidden;
+            position:relative;
+            line-height:1.5;
+            &:first-child{
+                margin-bottom: 16px;
+            }
+        }
+        .tag{
+            height:32px;
+            line-height: 32px;
+            border-radius: 32px;
+            padding: 0 .7em;
+            display:inline-flex;
+            align-items: center;
+            justify-content: center;
+            line-height:normal;
+            color:#fff;
+            background:#F73657;
+            font-size:22px;/*px*/
+            position:relative;
+            z-index: 2;
+            margin-bottom: 8px;
+        }
+        .name{
+            color: #333;
+            font-size:30px;/*px*/
+            line-height:42px;/*px*/
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 2;
+            position:relative;
+            z-index: 2;
+        }
+        .aud-count{
+            color: #666;
+            font-size:22px;/*px*/
+            line-height:32px;/*px*/
+            position:relative;
+            z-index: 2;
+        }
+        .bg{
+            width:100%;
+            height:100%;
+            position:absolute;
+            top:0;
+            left:0;
+            border-radius: 8px;
+            border: 1px solid #eee;/*no*/
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+    }
+}

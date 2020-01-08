@@ -1,0 +1,381 @@
+#container {
+    height: 100%;
+    overflow: hidden;
+
+}
+
+.bottom-tips {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    width: 100%;
+    font-size: 24px;/*px*/;
+    color: #333;
+    background-color: #e5e5e5;
+}
+
+.main-container {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    background-color: #f5f5f5;
+
+    // 解决防漏底情况下IOS滑动不顺畅的问题
+    -webkit-overflow-scrolling: touch;
+
+    .head-img {
+        width: 100%;
+        height: 320px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: #ffffff;
+        flex-shrink: 0;
+    }
+
+    .content-area {
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
+        // justify-content: flex-start;
+        flex-grow: 1;
+        flex-shrink: 0;
+        position: relative;
+        // padding-bottom: 50px;
+
+        .tips {
+            text-align: center;
+            font-size: 28px;/*px*/;
+            margin: 30px 0;
+            color: #333;
+            // margin-bottom: 4\30px;
+        }
+
+        .got-course {
+            color: #ed3b59;
+            font-size: 40px;/*px*/
+        }
+
+        .get-course-btn {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 88px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ed3b59;
+            color: #fff;
+            font-size: 32px;/*px*/;
+            // border-radius: 40px;
+            margin: 0 auto;
+        }
+
+        .shared-btn {
+            position: relative;
+            z-index: 99;
+            height: 88px;
+            width: 350px;
+            border-radius: 44px;
+        }
+
+        .content-detail {
+            width: 100%;
+            padding-bottom: 88px;
+            .shared-text {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                margin-bottom: 40px;
+                margin-top: 40px;
+
+                & > span {
+                    font-size: 28px;/*px*/
+                    color: #333;
+                    line-height: 1.4;
+                
+                }
+            }
+        }
+    }
+}
+
+.course-wrap {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin: 0 20px 20px 20px;
+    border-radius: 12px;
+    background-color: #fff;
+    padding: 30px;
+    border: 2px solid rgba(0,0,0,0);
+    
+    .title {
+        width: 100%;
+        text-align: left;
+        font-size: 32px;/*px*/;
+        margin-bottom: 28px;
+        color: #333;
+        line-height: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        // font-weight: bold;
+
+        & > .select-btn {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            margin-right: 18px;
+            // border: 1px solid #666;
+            border-radius: 50%;
+            background-color: #dadada;
+
+        }
+        & > .selected {
+            color: #fff;
+            background-color: #ed3b59;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;/*px*/
+            border: none;
+        }
+        & > .already-got {
+            color: #ed3b59;
+            font-size: 24px;/*px*/
+            position: absolute;
+            right: 30px;
+            top: 33px;
+        }
+
+        & > .check-got {
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;/*px*/
+            border: none;
+        }
+    }
+
+    .disabled-course {
+        position: relative;
+        &:after{
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            display: block;
+            background-color: rgba(0,0,0,.5);
+            content: '';
+        }
+    }
+
+    .course-data {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .course-img {
+            width: 310px;
+            height: 193px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+
+            .play-btn {
+                width: 70px;
+                height: 70px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                font-size: 20px;/*px*/
+                background-color: rgba(0,0,0,.6);
+                border-radius: 50%;
+            }
+        }
+
+        .icon-audio-loading:before {
+            content: '';
+            background-image: url(./img/loading.gif);
+            background-size: contain;
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+        }
+    }
+
+    .weixin-share {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .prompt {
+        font-size: 40px;
+        text-align: center;
+        font-weight: normal;
+    }
+    .success-prompt {
+        color: #ed3b59;
+        line-height: 110px;
+    }
+    .share-prompt {
+        color: #333333;
+        padding-top: 50px;
+    }
+    .prompt-detail {
+        font-size: 24px;
+        color: #666666;
+        margin-top: 20px;
+    }
+}
+
+
+.course-selected {
+    border: 2px solid #ed3b59;
+}
+
+
+.modal, .qr-modal
+{
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+    //z-index: 5;
+    z-index: 100;
+	.bg{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-color: rgba(0, 0, 0, .7);
+	}
+    .qr-code {
+		position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 600px;
+        width: 570px;
+        background-color: #fff;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+
+        .title {
+            color: #ed3b59;
+            font-size: 36px/*px*/;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            margin: 50px 0 34px 0;
+            
+            & > span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 35px;
+                width: 35px;
+                border: 1px solid #ed3b59;
+                border-radius: 50%;
+                margin-right: 10px;
+                font-size: 25px;/*px*/
+            }
+        }
+
+        img {
+            width: 310px;
+            height: 310px;
+            display: block;
+            margin-bottom: 30px;
+        }
+
+        .qr-tips {
+            font-size: 28px;/*px*/
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .qr-close-btn {
+            position: absolute;
+            top: 17px;
+            right: 17px;
+            font-size: 34px;/*px*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 35px;
+            width: 35px;
+            color: #666;
+        }
+	}
+}
+
+.share-guide {
+    width: 560px;
+    height: 250px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 5px dotted #fff;
+    .share-text {
+        color: #fff;
+        text-align: left;
+        font-size: 30px;/*px*/
+        line-height: 55px;
+    }
+
+    .tail {
+        background-image: url(./img/tail@2x.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 155px;
+        height: 109px;
+        position: absolute;
+        top: -109px;
+        right: -35px;
+        // background-color: #fff;
+    }
+}

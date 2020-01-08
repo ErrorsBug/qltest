@@ -1,0 +1,151 @@
+.preparation-test-container{
+    background-color: rgb(254,181,191);
+    height: 100%;
+    padding-top: 120px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+
+    >.test-top-container{
+        width: 750px;
+        height: 350px;
+        background: {
+            image: url(./img/test-top.png);
+            repeat: no-repeat;
+            size: 100% 100%;
+        }
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    >.test-container{
+        background-color: rgb(247,246,249);
+        box-shadow: 0 7px 18px 0 rgba(64,50,25,0.23);
+        width: 660px;
+        margin: 0 auto;
+        border-radius: 10px;
+        padding-top: 240px;
+        padding-bottom: 70px;
+
+        >.test-container-title{
+            width: 340px;
+            margin: 0 auto;
+            text-align: center;
+            .b-title{
+                color: rgb(66,66,66);
+                font-size: 32px; /*px*/
+                letter-spacing: 9px;
+                position: relative;
+                line-height: 44px;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    height: 24px;
+                    width: 18px;
+                    background: {
+                        image: url(./img/tip.png);
+                        repeat: no-repeat;
+                        size: 100% 100%;
+                    }
+                    right: 0;
+                    top: 10px;
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    height: 24px;
+                    width: 18px;
+                    background: {
+                        image: url(./img/tip.png);
+                        repeat: no-repeat;
+                        size: 100% 100%;
+                    }
+                    left: -6px;
+                    top: 10px;
+                }
+            }
+            .s-title{
+                font-size: 24px; /*px*/
+                letter-spacing: 2px;
+                color: rgb(102,102,102);
+                margin-top: 10px;
+            }
+        }
+        >.test-content {
+            width: 590px;
+            margin: 0 auto;
+            >.question-container{
+                margin-top: 50px;
+                >.title{
+                    display: flex;
+                    .index{
+                        background-color: rgb(239,86,112);
+                        height: 28px;
+                        width: 28px;
+                        border-radius: 28px;
+                        color: rgb(255,255,255);
+                        font-size: 26px; /*px*/
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 12px;
+                        margin-top: 10px;
+                    }
+                    >p{
+                        color: rgb(66,66,66);
+                        font-size: 24px; /*px*/
+                        flex: 1;
+                        line-height: 46px;
+                        font-weight: bold;
+                    }
+                }
+                >.answer{
+                    margin-top: 20px;
+                    >li {
+                        width: 100%;
+                        height: 70px;
+                        border-radius: 36px;
+                        background: linear-gradient(150deg, rgb(255,224,137), rgb(255,230,170));
+                        margin-bottom: 10px;
+                        display: flex;
+                        align-items: center;
+                        padding: 0 28px;
+                        box-sizing: border-box;
+                        color: rgb(189,104,28);
+                        cursor: pointer;
+                        .index {
+                            // color: rgb(189,104,28);
+                            font-size: 32px; /*px*/
+                        }
+                        .list {
+                            font-size: 26px; /*px*/
+                            margin-left: 20px;
+                            flex: 1;
+                        }
+                        &.active{
+                            background: linear-gradient(150deg, rgb(255,147,161), rgb(255,167,178));
+                            color: rgb(255,255,255);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    >.test-result-confirm {
+        margin: 30px auto 50px;
+        cursor: pointer;
+        height: 76px;
+        width: 660px;
+        background-color: rgb(239,86,112);
+        border-radius: 38px;
+        color: rgb(255,255,255);
+        font-size: 28px; /*px*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,15 @@
+.bg-voice-ripple{
+    position: absolute;
+    left: 50%;
+    bottom: -1px;/* no */
+    transform:translate(-50%,0); 
+    text-align: center;
+    opacity: 0.1;
+    z-index: -1;
+    svg{
+        transform: rotate(180deg);
+        rect.on{
+            transition: 1.2s;
+        }
+    }
+}

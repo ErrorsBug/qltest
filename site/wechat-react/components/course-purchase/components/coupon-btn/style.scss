@@ -1,0 +1,73 @@
+
+.intro-page-coupon-btn {
+	height: 48px;
+	font-size: 24px;
+	color: #FFF;
+	background-image: linear-gradient(-90deg, #FF7D00 0%, #FFA200 100%);
+	display: flex;
+	border-radius: 6px;
+	line-height: 48px;
+	overflow: hidden;
+	background-clip: content-box;
+	padding: 2px;
+
+	&.fixed {
+		position: fixed;
+		right: 40px;
+		z-index: 10;
+	}
+
+	.tips, .price {
+		padding: 0 8px;
+		height: 100%;
+	}
+
+	.tips {
+		position: relative;
+		width: 155px;
+		text-align: center;
+
+		&.animation {
+			transition: width .3s linear;
+		}
+
+		&.receive {
+			width: 225px;
+		}
+		&.auto-bind {
+			width: 205px;
+		}
+
+		&::before, &::after {
+			content: '';
+			position: absolute;
+			right: 0;
+			width: 8px;
+			height: 8px;
+			background: #FFF;
+			border-radius: 50%;
+		}
+
+		&::before {
+			top: 0;
+			transform: translate(50%, -50%);
+		}
+		&::after {
+			bottom: 0;
+			transform: translate(50%, 50%);
+		}
+	}
+	
+	.price {
+		padding: 0 8px;
+		&::before {
+			content: '￥';
+			font-size: 16px;
+		}
+	}
+	.more{
+		padding: 0 8px;
+		border-left: 1px dashed #FFF; /* no */	
+		font-size: 24px;
+	}
+}

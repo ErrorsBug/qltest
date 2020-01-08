@@ -1,0 +1,28 @@
+.option-menus{
+	background-color: #fff;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	height: 150rpx;
+
+	.option{
+		.icon-course{
+			width: 40rpx;
+			height: 47rpx;
+		}	
+		.icon-vip{
+			width: 52rpx;
+			height: 46rpx;
+		}	
+		.icon-intro{
+			width: 40rpx;
+			height: 46rpx;
+		}	
+		.text{
+			font-size: 22rpx;
+			color: #333;
+			margin-top: 18rpx;
+		}
+	}
+}

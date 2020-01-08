@@ -1,0 +1,458 @@
+.cp-activity-box{
+    font-size: 0;
+    height: 100%;
+    position: relative;
+    .scroll-content-container{
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 100px;
+        overflow-y: scroll;
+    }
+    .img-box{
+        width: 100%;
+        height: auto;
+    }
+    .cp-model-item{
+        width: 100%;
+        box-sizing: border-box;
+        background-color: #EB2D14;
+        overflow: hidden;
+        .img-box{
+            width: 100%;
+            height: auto;
+        }
+    }
+    .cp-course-item{
+        box-sizing: border-box;
+        margin:0 24px 24px;
+        background-color: #fff;
+        width: 702px;
+        height: 278px;
+        border-radius: 4px;
+        padding:24px;
+        overflow: hidden;
+        .cp-course-info{
+            display: flex;
+            width:100%;
+            height: 100%;
+            .cp-course-pic{
+                width: 294px;
+                height: 230px;
+                font-size: 0;
+                margin-right: 16px;
+                img{
+                    width: 100%;
+                    height: 180px;
+                    border-radius: 4px 4px 0 0;
+                }
+                p{
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    height: 50px;
+                    padding: 0 10px;
+                    width: 100%;
+                    box-sizing: border-box;
+                    background: #FF2828 url('./img/icon-no.png') no-repeat 10px center;
+                    background-size: auto 28px; /*px*/
+                    border-radius: 0 0 4px 4px;
+                    font-size: 20px; /*px*/
+                    color: #fff;
+                }
+            }
+        }
+        .cp-course-decs{
+            flex: 1;
+            position: relative;
+            box-sizing: border-box;
+            flex-grow: 1;
+            flex-basis: 0;
+            height: 230px;
+            & > div{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .cp-course-title{
+                    flex: 1;
+                }
+                h4{
+                    font-size: 28px; /*px*/
+                    color: #4D3028;
+                    line-height: 1.4;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 3;
+                    overflow: hidden;
+                    margin-bottom: 10px;
+                    i{
+                        display: inline-block;
+                        padding: 3px 8px; 
+                        line-height: normal;
+                        background: #F14227;
+                        font-size: 16px; /*px*/
+                        color: #fff;
+                        vertical-align: middle;
+                        margin-right: 8px;
+                        font-style: normal;
+                        border-radius: 4px;
+                        transform: translateY(-4px);
+
+                    }
+                }
+                p{
+                    font-size: 24px; /*px*/
+                    color: #EB2D14;
+                    line-height: 1.4;
+                    >span{
+                        padding-left: 8px;
+                        color: #bbb;
+                        font-weight: normal;
+                        text-decoration: line-through
+                    }
+                }
+                .cp-course-price{
+                    // padding-bottom: 10px;
+                    display:flex;
+                    justify-content: space-between;
+                    align-items: end;
+                    .price-desc{
+                        padding-bottom: 10px;
+                        font-size: 24px; /*px*/
+                        color: #EB2D14;
+                        font-weight: bold;
+                        b{
+                            font-size: 48px; /*px*/
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .cp-course-btn{
+        // float: right;
+        width: 136px;
+        height: 52px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background:rgba(241,66,39,1);
+        box-shadow:0px 6px 0px 0px rgba(186,36,13,1);
+        border-radius:8px;
+        span{
+            font-size: 32px; /*px*/
+            color: #fff;
+            &.loading{
+                animation: loopAnimate 1.2s linear backwards infinite;
+            }
+        }
+        &.select{
+            background: #F7F7F7;
+            box-shadow:0px 6px 0px 0px rgba(238,238,238,1);
+            span{
+                color: #666;
+            }
+        }
+        &.right-btn-animate{
+            animation: scaleBtn .5s linear infinite; 
+        }
+        @keyframes scaleBtn
+        { 
+            0%   {transform: scale(0.8)}        
+            50%   { transform: scale(0.9)}   
+            100%   { transform: scale(1)}             
+        }
+    }
+}
+
+.cp-buy-byn{
+    left: 0 ;
+    width: 100%;
+    bottom: 0;
+    height: 100px;
+    background: #fff;
+    z-index: 10;
+    display: flex;
+    .cp-buy-shapp{
+        padding-left: 32px;
+        height: 100%;
+        flex: 1;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        .cp-shapp-btn{
+            margin-right: 10px;
+            width: 80px;
+            height: 100%;
+            background: url('./img/icon-shapp.png') no-repeat center;
+            background-size: 80px auto;
+            position: relative;
+            span{
+                position: absolute;
+                top: -18px;/*px*/
+                right: -10px;/*px*/
+                width: 36px; /*px*/
+                height: 36px;/*px*/
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #EB2D14;
+                border-radius: 50%;
+                color: #fff;
+                font-size: 24px; /*px*/
+                font-weight: bold;
+            }
+        }
+        p{
+            font-size: 24px; /*px*/
+            color: #EB2D14;
+            b{
+                font-size: 48px; /*px*/
+            }
+            span{
+                padding: 0 8px;
+                color: #bbb;
+                text-decoration: line-through
+            }
+        }
+    }
+    .cp-buy-btn{
+        width: 280px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #F12727;
+        color: #fff;
+        font-size: 44px; /*px*/
+        font-weight: bold;
+        &.blcok{
+            background: #333;
+        }
+    }
+    .cp-no-btn{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #666;
+        font-size: 44px; /*px*/
+        &.end{
+            background: #666;
+            color: #fff;
+        }
+    }
+}
+.cp-countdown-box{
+    left: 0;
+    bottom: 99px;
+    width: 100%;
+    height: 76px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 6;
+    background: #FFEAC8;
+    font-size:26px; /*px*/
+    color: #4D3028;
+    font-weight: bold;
+    line-height: 1.4;
+    span{
+        color: #F12727;
+    }
+    p{
+        display: flex;
+        align-items: center;
+        padding: 0 6px;
+    }
+    i{
+        padding: 0 5px;
+        background: #F12727;
+        border-radius: 3px;
+        color: #fff;
+        font-size: 20px; /*px*/
+        font-style: normal;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.cp-purchased-box{
+    right: 18px;
+    bottom: 206px;
+    width: 130px;
+    height: 130px;
+    z-index: 5;
+    background: url('./img/icon-buyed.png') no-repeat center;
+    background-size: 130px;
+    &.btm{
+        bottom: 110px;
+    }
+}
+
+.cp-selected-box{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 8;
+    .cp-selected-cont{
+        width: 100%;
+        height: 70%;
+        padding-bottom: 132px;
+        box-sizing: border-box;
+        background: #fff;
+        border-radius: 16px 16px 0 0;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        .cp-selected-close{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 88px;
+            height: 88px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i{
+                font-size: 30px; /*px*/
+                color: #333;
+            }
+        }
+        h4{
+            height: 88px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px; /*px*/
+            color: #333;
+            border-bottom: 2px solid #F7F7F7; /*no*/
+            margin-bottom: 8px;
+        }
+        .cp-selected-lists{
+            flex: 1;
+            position: relative;
+            & > div{
+                padding: 0 32px;
+                box-sizing: border-box;
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                overflow-y: scroll;
+            }
+            .cp-course-item{
+                display: flex;
+                justify-content: space-between;
+                padding: 24px 0;
+                align-items: center;
+                p{
+                    max-width: 68%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    font-size: 32px; /*px*/
+                    line-height: 1.4;
+                }
+                .cp-course-controll{
+                    display: flex;
+                    align-items: center;
+                    p{
+                        font-size: 32px; /*px*/
+                        line-height: 1.4;
+                        color: #F12727;
+                        margin-right: 32px;
+                    }
+                    .remove{
+                        width: 48px;
+                        height: 48px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background: #F7F7F7;
+                        border-radius: 50%;
+                        i{
+                            font-size: 24px; /*px*/
+                            color: #333;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .cp-no-data{
+        padding: 100px 0;
+        line-height: 1.4;
+        font-size: 28px; /*px*/
+        color: #666;
+        text-align: center;
+    }
+}
+
+.cp-ercode-box{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    background: rgba(0,0,0,0.7);
+    padding: 0 75px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .un-ercode-bg{
+        width: 100%;
+        height: 70%;
+        position: relative;
+        .close{
+            position: absolute;
+            top: -100px;
+            right: -20px;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 24px; /*px*/
+                color: #fff;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                border: 3px solid #fff; /*no*/
+            }
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@keyframes loopAnimate{
+    0%{
+        transform: rotate(0)
+    }
+    100%{
+        transform: rotate(360deg)
+    }
+}

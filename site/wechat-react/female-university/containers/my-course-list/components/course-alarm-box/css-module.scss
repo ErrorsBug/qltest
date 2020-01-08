@@ -1,0 +1,83 @@
+.course-list-page-alarm{
+    
+    .main{
+        display: flex; 
+        align-items: center; 
+        .left{
+            flex:1;
+
+            .course-num{
+                display: flex;
+                align-items: center;
+                font-size: 28px;/* px */
+                color: #666;
+                font-weight: bold;
+                height: 40px;
+                var{
+                    color: #E0414F;
+                    padding: 0 10px
+                }
+            }
+
+            .course-duration{
+                font-size: 26px;/* px */
+                color: #999;line-height: 36px;
+                margin-top: 8px;
+            }
+
+        }
+
+        .btn-alarm{
+            width:172px;
+            height:50px;
+            border-radius:32px;
+            border:1px solid #666; /*no*/
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            color: #666;
+            font-size: 24px;/* px */
+
+            &::before{
+                content: '';
+                width: 32px;
+                height: 32px;
+                display: inline-block;
+                background: url(./img/icon-clock.png) center center no-repeat;
+                background-size: 100%;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    
+
+}
+
+.courseList-page-followDialog{
+    .main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 0 50px;
+
+        span{
+            font-size: 26px;/*px*/
+            line-height: 45px;
+            color: #666;
+            text-align: center;
+            padding: 0 80px;
+        }
+    }
+    .co-dialog-close{
+        background: url('./img/icon-clock.png')
+    }
+    .qrcode{
+        display: block;
+        width:280px;
+        height:280px;  
+        margin-bottom: 16px;     
+    }
+
+}

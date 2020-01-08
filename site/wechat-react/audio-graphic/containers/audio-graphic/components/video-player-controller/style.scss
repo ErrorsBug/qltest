@@ -1,0 +1,73 @@
+.video-wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    bottom: 0;
+
+    // 暂时不需要浮框了
+    &.video-fixed{
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 250px !important;
+        height: 156px !important;
+        left: auto;
+        transition:0.5s;
+        z-index: 2;
+
+        .prism-big-play-btn{
+            transform: translate(-50%, 50%) scale(0.4);
+        }
+         /*播放器直播样式控制*/
+         .prism-controlbar  {
+            display: none !important;
+            height: 52px; /*px*/
+    
+            .prism-controlbar-bg {
+                height: 50px; /*px*/
+            }
+            .prism-play-btn {
+                margin-left: 0 !important;
+                margin-top:0 !important; 
+                left: 15px;/* px */
+                top: 50%;
+                position: absolute;
+                transform:  translateY(-50%) scale(0.6);
+            }
+        }
+    }
+
+    .min-cover{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .prism-player {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        width: 100%;
+        height: 100% !important;
+        background: #000;
+        overflow: hidden;
+    }
+
+
+
+    /*播放器全局样式*/
+    .prism-big-play-btn {
+        position: absolute;
+        bottom: 56% !important;
+        left: 50% !important;
+        transform: translate(-50%, 50%);
+    }
+
+
+
+}

@@ -1,0 +1,14 @@
+{{#each themes}}
+<li class="on-log tap-on tap-bgc" log-region="theme_list" log-name="{{name}}" log-business_id="{{id}}" log-business_type="{{type}}" data-id="{{id}}" data-type="{{type}}">
+    <div class="li-body">
+        <div class="img-wrap">
+            <div class="img">
+                <img class="img-default" data-imgloaded="false" data-imgsrc="{{img-format logo '@330w_194h_1e_1c_2o_1l'}}" />
+            </div>
+        </div>
+        <div class="desc">
+            <span class="title">{{name}}</span>
+        </div>
+    </div>
+</li>
+{{/each}}

@@ -1,0 +1,22 @@
+<wxs src="../../../../../../comp/util.wxs" module="util" />
+
+<view 
+    class="night-answer" 
+    wx:if="{{info && info.courses.length}}" 
+    wx:for="{{info.courses}}" 
+    wx:key="{{index}}" 
+    wx:for-item="c"
+    data-course="{{c}}" 
+    catchtap="courseItemTapHandle" 
+    data-log-id="{{c.businessId}}" 
+    data-log-type="{{c.businessType}}" 
+    data-log-region="{{info.code}}">
+    <image class="night-answer-icon" src="{{icon}}"></image>
+    <view class="info">
+        <view class="span">{{c.businessName}}</view>
+        <view class="span">
+            <text class="tips">{{c.remark}} | {{util.digitFormat(c.learningNum)}}人收听</text>
+        </view>
+    </view>
+    <view class="play-btn"></view>
+</view>

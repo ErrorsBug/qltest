@@ -1,0 +1,117 @@
+.info-card {
+    background: #fff;
+    border: solid 1px #ededed; /*no*/
+    border-radius: 6px;
+    margin: 20px;
+
+    .name {
+        padding: 40px 30px 20px;
+        font-size: 30px; /*px*/
+        color: #383838;
+        line-height: 1.4;
+        font-weight: bold;
+        word-break: break-all;
+        overflow: hidden;
+    }
+
+    .start-date {
+        position: relative;
+        display: block;
+        padding: 6px 0 26px 0;
+        margin: 0 30px;
+        line-height: 1.4;
+        color: #737373;
+        font-size: 26px; /*px*/
+
+        // &:before {
+        //     content: "";
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     width: 70px;
+        //     height: 4px;
+        //     background: #f73657;
+        // }
+    }
+
+    .tip {
+        position: relative;
+        display: inline-block;
+        line-height: 1.4;
+        color: #737373;
+        font-size: 26px; /*px*/
+    }
+
+    .count-down {
+        display: inline-block;
+        text-align: center;
+
+        dd {
+            display: inline-block;
+            padding: 0 4px 0 0;
+            color: #f73657;
+        }
+
+        .day {
+
+        }
+
+        .hour {
+
+        }
+
+        .minute {
+
+        }
+    }
+
+    .bottom {
+        display: flex;
+        text-align: center;
+
+        div {
+            position: relative;
+            flex: 1;
+            height: 100px;
+            line-height: 100px;
+            font-size: 30px; /*px*/
+            color: #333;
+            border-top: solid 1px #f2f2f2; /*no*/
+        }
+
+        .remind-btn {
+            cursor: pointer;
+        }
+
+        .remind-tip {
+            color: #999;
+        }
+
+        .cancel-remind {
+            color: #f73657;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+
+        .push {
+            cursor: pointer;
+        }
+
+        .invite {
+            cursor: pointer;
+
+            &:before {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 1px; /*no*/
+                height: 50px;
+                left: 0;
+                top: 50%;
+                -webkit-transform: translate(-50%,-50%);
+                transform: translate(-50%,-50%);
+                background: #f2f2f2;
+            }
+        }
+    }
+}

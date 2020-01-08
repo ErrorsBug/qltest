@@ -1,0 +1,61 @@
+.co-scroll-to-load {
+    position: absolute;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+	-webkit-overflow-scrolling: touch;
+	padding-bottom: 120px;
+
+	.list-loading, .list-nomore {
+		padding: 30px 15px;
+		text-align: center;
+		color: #999999;
+		font-size: 24px;/*px*/
+	}
+
+	.list-loading{
+		display:flex;
+		justify-content: center;
+		.dynamic-ellipsis{
+			position:relative;
+			&:after{
+				position:absolute;
+				right:0;
+				top:0;
+				height:100%;
+				width:100%;
+				background:#fff;
+				content:'';
+				display: block;
+				animation: dynamic-ellipsis 1s infinite linear;
+			}
+			@keyframes dynamic-ellipsis {
+				0%{
+					width:100%;
+				}
+				1%{
+					width:50%;
+				}
+				33%{
+					width:50%;
+				}
+				34%{
+					width:0;
+				}
+				66%{
+					width:0;
+				}
+				67%{
+					width:100%;
+				}
+				100%{
+					width:100%;
+				}
+			}
+		}
+	}
+
+	.need-space{height:50px;}
+}

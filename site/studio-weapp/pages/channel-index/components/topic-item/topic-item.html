@@ -1,0 +1,45 @@
+<view class="topic-item" bindtap="onItemClick">
+    <view class="image-container">
+        <image class="image-content" mode="scrllFill" src="{{topic.backgroundUrl || '//img.qlchat.com/qlLive/topicHeaderPic/thp-3.jpg'}}@180h_272w_1e_1c_2o"></image>
+        <view class="topic-type" wx:if="{{topic.style == 'video'}}">
+            <image class="topic-type-icon" src="./img/video-icon.png"></image>
+        </view>
+        <view class="topic-type" wx:if="{{topic.style == 'audio'}}">
+            <image class="topic-type-icon" src="./img/audio-icon.png"></image>
+        </view>
+        <view class="topic-type" wx:if="{{topic.style == 'audioGraphic'}}">
+            <image class="topic-type-icon" src="./img/audio-graphic-tag.png"></image>
+        </view>
+        <view class="topic-type" wx:if="{{topic.style == 'videoGraphic'}}">
+            <image class="topic-type-icon" src="./img/video-graphic-tag.png"></image>
+        </view>
+    </view>
+
+    <view class="topic-content">
+        <text class="topic-title multi-elli"> {{topic.topic}} </text>
+        <view class="topic-time"> {{topic.beginTime}} </view>
+
+        <view class="topic-cate">
+
+            <block wx:if="topic.status == 'beginning'">
+                <view class="not-start-topic" wx:if="{{topic.startTime > timeNow}}">
+                    <image class="not-start-icon" src="./img/red-clock.png"></image>
+                    {{topic.timeStr}}
+                </view>
+                <image class="beginning-topic" wx:else src="./img/beginning.png"></image>
+            </block>
+
+            <text class="auth-num"> {{browseNum}}人在学 </text>
+
+            <view class="topic-money" wx:if="{{topic.isSingleBuy == 'Y'}}">
+                <block wx:if="{{topic.type == 'encrypt'}}">加密</block>
+                <block wx:elif="{{topic.type == 'public'}}">
+                    <text class="topic-free">免费</text>
+                </block>
+                <block wx:elif="{{topic.type == 'charge' && system !='ios'}}">
+                    ￥{{topic.money / 100}}
+                </block>
+            </view>
+        </view>
+    </view>
+</view>

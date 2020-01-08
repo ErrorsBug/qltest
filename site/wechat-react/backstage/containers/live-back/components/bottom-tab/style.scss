@@ -1,0 +1,49 @@
+.backstage-bottom{
+    display: flex;
+    background: #fff;
+    width: 100%;
+    padding: 10px 0;
+    border-top: 1px solid #eee;/*px*/
+    .bottom-tab{
+        flex: 1;
+        width: 100%;
+        text-align: center;
+        color: #999;
+        font-size: 24px;/*px*/
+        &.active{
+            color: #F73657;
+        }
+        &::before{
+            content: '';
+            display: block;
+            width: 40px;
+            height: 40px;
+            background-size: 100% auto;
+            background-position: center center;
+            background-repeat: no-repeat;
+            margin: 10px auto;
+        }
+    }
+
+    .btn-index{
+        &::before{
+            background-image: url('./img/nav_home.png');
+        }
+        &.active{
+            &::before{
+                background-image: url('./img/nav_home_active.png');
+            }
+        }
+    }
+    .btn-backstage{
+        &::before{
+            background-image: url('./img/nav_backstage.png');
+        }
+        &.active{
+            &::before{
+                background-image: url('./img/nav_backstage_active.png');
+            }
+        }
+    }
+    
+}

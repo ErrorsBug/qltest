@@ -1,0 +1,105 @@
+.takeincome-record {
+    height: 100%;
+    text-size-adjust: none;
+
+    .scroller{
+        box-sizing: border-box;
+        background: #fff;
+        &::before {
+            content: "";
+            display: block;
+            background: #F2F2F2;
+            height: 20px;
+        }
+    }
+    .content {
+        padding: 40px;
+    }
+    .header-tip {
+        font-size: 24px; /*px*/
+        line-height: 33px;
+        font-weight: 400;
+        color: #999999;
+        margin-bottom: 30px;
+    }
+    .record-item {
+        padding: 30px;
+        background: #fff;
+        box-shadow: 0 4px 29px rgba(0, 0, 0, 0.07);
+
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+
+        border-radius: 32px;
+        p {
+            font-size: 20px; /*px*/
+            line-height: 28px;
+            // font-weight: 500;
+            color: #333333;
+            &:not(:last-child) {
+                margin-bottom: 2px;
+            }
+
+            .title {
+                color: #999;
+            }
+            .desc {
+                &.money {
+                    color: #F73657;
+                }
+                &.withdraw-status {
+                    font-weight: bold;
+                }
+
+                &.success {
+                    color: #00c353;
+                }
+                &.fail,
+                &.no_pass {
+                    color: #f73657;
+                }
+                &.pwaiting,
+                &.awating {
+                    color: #ff9f00;
+                }
+            }
+        }
+    }
+    .btn-wrapper {
+        display: flex;
+        justify-content: center;
+        padding-top: 15px;
+
+        .link-btn {
+            display: block;
+            text-align: center;
+            width: 216px;
+            height: 60px;
+            line-height: 60px;
+            border-radius: 30px;
+            box-sizing: border-box;
+            font-size: 26px; /*px*/
+            margin: 0 30px;
+        }
+        .verify-again {
+            color: #f73657;
+            border: 2px solid #f73657; /*px*/
+            background: #fff;
+        }
+        .send-again {
+            color: #fff;
+            background: #f73657;
+        }
+    }
+}
+
+.takeincome-record-resend-name {
+    padding: 0 40px;
+    .resend-name-input {
+        border: 2px solid #ddd; /*px*/
+        font-size: 24px; /*px*/
+        height: 64px;
+        width: 100%;
+    }
+}

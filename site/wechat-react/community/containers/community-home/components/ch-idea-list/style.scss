@@ -1,0 +1,152 @@
+
+.ch-idea-list{   
+    position: relative;
+    &::before{
+        display: block;
+        width: 100%;
+        height: 32px;
+        content: '';
+        box-shadow:0px 16px 80px 0px rgba(0,0,0,0.07);
+    }
+    border-radius:16px 16px 8px 8px;
+    .ch-idea-title{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size:32px; 
+        font-weight:bold;
+        color:rgba(51,51,51,1);
+        line-height:40px; 
+        margin-top: -32px;
+        background: #fff;
+        text-size-adjust: none;
+        
+    }
+    .un-empty-status{
+        transform: translate(-50%,50%)
+    }
+    .ch-i-details{
+        .un-topic-item{
+            padding: 32px;
+        }
+    }
+    
+}
+
+.ch-idea-total{
+    .ch-idea-tag{
+        display: flex;
+        justify-content: space-between;
+        height: 88px;
+        border-bottom: 2px solid rgba(247,247,247,1); /*no*/
+        margin-bottom: 32px;
+        & > div{
+            display: flex;
+            align-items: center;
+        }
+        p{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 24px;
+            font-size: 28px; /*px*/
+            color: #666;
+            line-height: normal;
+            font-weight: normal;
+            &:first-child{
+                padding: 0 24px 0 32px;
+            }
+            &.action{
+                font-size: 36px; /*px*/
+                color: #333;
+                position: relative;
+                font-weight: bold;
+                &::before{
+                    position: absolute;
+                    left: 50%;
+                    bottom: 8px;
+                    transform: translateX(-50%);
+                    width: 36px;
+                    height: 6px;
+                    background:rgba(224,65,79,1);
+                    border-radius:6px;
+                    content: "";
+                }
+            }
+        }
+        .ch-idea-tip{
+            padding-right: 32px;
+            display: flex;
+            align-items: center;
+            font-size:24px; 
+            color:rgba(153,153,153,1);
+            font-weight: normal;
+            .co-switch{
+                z-index: 20;
+                margin-left: 16px;
+                &.show-tip:before {
+                    position: absolute;
+                    right: 30px;
+                    top: -184px;
+                    content: "";
+                    width: 622px;
+                    height: 164px;
+                    z-index: 11;
+                    background: url('https://img.qlchat.com/qlLive/business/KJCHXDZ5-MKEL-WC1P-1568268963246-NT44HCR65S3D.png') no-repeat 50%;
+                    -webkit-background-size: 100% 100%;
+                    background-size: 100%;
+                }
+            }
+            .co-switch.active{
+                background: #E0414F;
+                border: 2px solid #E0414F; /*no*/
+            }
+        }
+    }
+    .ch-idea-collect{ 
+        padding: 0 32px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 32px;
+        .ch-collect-tag{
+            display: flex;
+            width: 256px; /*px*/
+            height: 60px;
+            border-radius: 60px;
+            border:2px solid rgba(221,221,221,1);
+            box-sizing: border-box;
+            span{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 50%;
+                height: 100%;
+                font-size: 32px; /*px*/
+                color: #333;
+                font-weight: normal;
+                &.action{
+                    background: #333;
+                    border-radius: 60px;
+                    color: #fff;
+                    height: 60px;
+                    margin-top: -2px;
+                }
+            }
+        }
+    }
+}
+
+.ch-idea-outer{
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 32px;
+    height: 88px;
+    &.max-height{
+        height: 188px;
+    }
+    .ch-idea-inner{
+        & > div{
+            width: 100%;
+        }
+    }
+}

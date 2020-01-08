@@ -1,0 +1,31 @@
+@import "../../../../assets/styles/base-definition";
+
+.page-performance-history {
+	.history-list{
+		background:#fff;
+		.item{
+			padding:0 30px;
+			border-bottom:1px solid $gray-border;/*no*/
+			cursor:pointer;
+			@include flex-center(vertical);
+			justify-content: space-between;
+			font-size:26px;/*px*/
+			height:100px;
+			.total-num{
+				font-size:22px;/*px*/
+				@include flex-center(vertical);
+				.arrow{
+					color:$gray-tip--lighter;
+					margin-left:10px;
+				}
+			}
+		}
+	}
+	.no-data{
+		margin-top:200px;
+		padding-top:280px;
+		background:url(../img/no-data.png) no-repeat center top / 288px 230px;
+		text-align: center;
+		font-size:28px;/*px*/
+	}
+}

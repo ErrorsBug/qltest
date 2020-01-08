@@ -1,0 +1,177 @@
+@import "../../../../assets/styles/base-definition";
+
+.page-confirm-order {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    .write-wrap{
+        height: 100%;
+        overflow: auto;
+        .section{
+            .title{
+                padding:20px 30px;
+                color:#999;
+                font-size: 22px;/*px*/
+            }
+            ul{
+                background: #fff;
+                li{
+                    padding:10px 30px;
+                    border-bottom: 1px solid #e5e5e5;
+                    display: flex;
+                    &:last-child{
+                        border-bottom: none;
+                    }
+                    .write{
+                        flex:1;
+                        width:100%;
+                        input{
+                            width:100%;
+                            outline: none;
+                            border:none;
+                            padding:10px 20px;
+                            line-height: 30px;/*px*/
+                            color:#333;
+                            font-size: 26px;/*px*/
+                            &::-webkit-input-placeholder{
+                                color:#999;
+                            }
+                        }
+                        textarea{
+                            margin:10px 0;
+                            width:100%;
+                            outline: none;
+                            border:none;
+                            resize: none;
+                            padding:0;
+                            line-height: 30px;
+                            color:#333;
+                            font-size: 26px;/*px*/
+                            display: flex;
+                            &::-webkit-input-placeholder{
+                                color:#999;
+                            }
+                        }
+                    }
+                    .press{
+                        flex: 1;
+                        width:100%;
+                        span{
+                            display: block;
+                            text-align: right;
+                            color:#d2d2d2;
+                            font-size: 26px;/*px*/
+                            line-height: 60px;
+                            i{
+                                color:#d2d2d2;
+                                font-size: 26px;/*px*/
+                            }
+                        }
+                        &.active{
+                            span{
+                                color:#333;
+                            }
+                        }
+                    }
+                    .str{
+                        font-size: 26px;/*px*/
+                        line-height: 30px;/*px*/
+                        padding:10px 0;
+                    }
+                }
+            }
+
+            .info-part{
+                display: flex;
+                padding:30px;
+                .pic{
+                    width:250px;
+                    overflow: hidden;
+                    img{
+                        width:100%;
+                        height: auto;
+                    }
+                }
+                .info{
+                    flex: 1;
+                    width: 100%;
+                    padding-left:20px;
+                    position: relative;
+                    .name{
+                        color:#333;
+                        font-size: 26px;/*px*/
+                        max-height: 100px;
+                        line-height: 45px;
+                    }
+                    .subsidiary{
+                        color:$gray-tip;
+                        font-size: 22px;/*px*/
+                    }
+                    .price{
+                        color:$main-color;
+                        font-size: 22px;/*px*/
+                        position: absolute;
+                        bottom: 0;
+                    }
+
+                }
+            }
+            .all-price{
+                text-align: right;
+                span{
+                    color:$main-color;
+                    font-size: 26px;/*px*/
+                    flex:1;
+                }
+                
+                
+            }
+                
+        }
+
+        &:after{
+            content:'';
+            display: block;
+            height: 100px;
+        }
+        
+    }
+    .confirm-wrap{
+        position: absolute;
+        bottom:0;
+        width:100%;
+        height: 98px;
+        display: flex;
+
+        .btn-confirm{
+            width:300px;
+            line-height: 98px;
+            color:#fff;
+            font-size: 32px;/*px*/
+            background: $main-color--lighter;
+            text-align: center;
+
+        }
+        .info{
+            flex: 1;
+            padding-right:20px;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            .all-price{
+                color:$main-color;
+                font-size: 26px;/*px*/
+                text-align: right;
+                line-height: 40px;
+            }
+            .tips{
+                color:$gray-content;
+                font-size: 22px;/*px*/
+                text-align: right;
+                line-height: 30px;
+            }
+        }
+            
+    }
+}

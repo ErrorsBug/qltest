@@ -1,0 +1,64 @@
+.coral-share{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background:url(https://img.qlchat.com/qlLive/coral/gift-share-bgpic.png) center 285px no-repeat;
+    background-size: 50% auto;
+    .top{
+        padding:30px;
+        color:#333;
+        font-size: 26px;/*px*/
+        background: #fff;
+        text-align: center;
+        line-height: 34px;/*px*/
+        .tips_2{
+            &:before{
+                content:'';
+                display: inline-block;
+                width:8px;
+                height: 8px;
+                background: #333;
+                border-radius: 10px;
+                margin-right: 5px;
+            }
+            var{
+                color:#f83657;
+                font-size: 30px;/*px*/
+            }
+        }
+        .tips_3{
+            color:#999;
+            font-size: 22px;/*px*/
+        }
+        .icon_dots_horizontal{
+            color:#fff;
+            background: #000;
+            border-radius: 80px;
+            padding:4px;
+            margin:0 10px;
+        }
+    }
+    .name{
+        margin-top:81%;
+        font-size: 26px;/*px*/
+        text-align: center;
+        &:after{
+            content:'';
+            display: block;
+            width: 100%;
+            height: 30px;
+            background: url(https://img.qlchat.com/qlLive/coral/gift-share-tips.png) center top no-repeat;
+            background-size: auto 100%;
+            margin-top:20px;
+        }
+    }
+    .btn-get-card{
+        color:#f83657;
+        font-size: 30px;/*px*/
+        padding:20px;
+        margin:30px 30px;
+        text-align: center;
+        border:1px solid #f83657;/*no*/
+        border-radius: 40px;
+    }
+}

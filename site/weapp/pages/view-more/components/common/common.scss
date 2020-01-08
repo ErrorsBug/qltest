@@ -1,0 +1,96 @@
+.view-more-common {
+    height: 100%;
+    .view-more-scroll {
+        height: 100%;
+        .container {
+            position: relative;
+            height: 100%;
+            .course-list {
+                .list-item {
+                    height: 210rpx;
+                    display: flex;
+                    align-items: center;
+                    padding: 0 30rpx;
+                    border-bottom: 1rpx solid rgb(240,240,240);
+                    .course-header {
+                        height: 148rpx;
+                        width: 240rpx;
+                        margin-right: 30rpx;
+                        border-radius: 4rpx;
+                    }
+                    .info {
+                        flex: 1;
+                        .title {
+                            color: rgb(66,66,66);
+                            font-size: 30rpx;
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 2;
+                            overflow: hidden;
+                            line-height: 38rpx;
+                            font-weight: bold;
+                        }
+                        .desc {
+                            font-size: 24rpx;
+                            color: rgb(184,176,176);
+                            margin-top: 12rpx;
+                            display: flex;
+                            height: 26rpx;
+                            align-items: center;
+                            .liveName {
+                                display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 1;
+                                overflow: hidden;
+                            }
+                            .courseCount {
+                                white-space: nowrap;
+                                flex: 1;
+                                position: relative;
+                                margin-left: 30rpx;
+                                &::before {
+                                    position: absolute;
+                                    content: '';
+                                    width: 2rpx;
+                                    height: 26rpx;
+                                    left: -16rpx;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    background-color: rgb(184,176,176);
+                                }
+                            }
+                        }
+                        .num {
+                            margin-top: 12rpx;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            height: 24rpx;
+                            .learnNum {
+                                font-size: 24rpx;
+                                color: rgb(189,181,181);
+                            }
+                            .price {
+                                .money {
+                                    color: rgb(204,196,196);
+                                    font-size: 24rpx;
+                                    margin-right: 15rpx;
+                                }
+                                .discount {
+                                    color: rgb(247,78,94);
+                                    font-size: 26rpx;
+                                }
+
+                                .free {
+                                    color: #3eba3d;
+                                    font-size: 22rpx;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

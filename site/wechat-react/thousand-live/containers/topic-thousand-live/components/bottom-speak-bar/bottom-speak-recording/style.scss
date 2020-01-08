@@ -1,0 +1,173 @@
+.recording-container {
+    position: relative;
+    display: block;
+    min-height: 350px;
+    padding-top: 40px;
+    text-align: center;
+    background: #fff;
+    border-top: solid 1px #e8e8e8;/*no*/
+
+    &.hide{
+        display: none;
+    }
+    &.rec-hide{
+        display: none;
+    }
+    .recording-tips-one {
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        color: #737373;
+        font-size: 28px;/*px*/
+        max-width: 90%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0 auto;
+
+        var {
+            color: #ff5962;
+        }
+    }
+
+    .recording-tips-two {
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        color: #737373;
+        font-size: 28px;/*px*/
+        max-width: 60%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0 auto;
+
+        var {
+            color: #ff5962;
+        }
+    }
+
+    .tab-bar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 30px;
+
+        .tab-item {
+            color: #888;
+            position: relative;
+            padding: 0 20px;
+            color: #888;
+            font-size: 24px;/*px*/
+            cursor: pointer;
+
+            &.on {
+                color: #f73657;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 10px; /*px*/
+                    height: 10px; /*px*/
+                    position: absolute;
+                    left: 50%;
+                    top:  -20px;
+                    border-radius: 100%;
+                    transform: translateX(-50%);
+                    background: #f73657;
+                }
+            }
+        }
+
+        .app-link {
+            position: absolute;
+            right: 30px;
+            bottom: auto;
+            top: auto;
+            color: #888;
+            font-size: 24px;/*px*/
+            cursor: pointer;
+        }
+    }
+
+    .btn-start-rec {
+        position: relative;
+        display: inline-block;
+        width: 180px;
+        height: 180px;
+        border-radius: 180px;
+        background: #fff;
+        border: solid 4px #f73657; /*px*/
+        margin: 30px auto 0;
+        cursor: pointer;
+
+        &::before {
+            content: "";
+            width: 160px;
+            height: 160px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 160px;
+            background: #f73657;
+
+        }
+    }
+
+
+    .btn-stop-rec {
+        position: relative;
+        display: inline-block;
+        width: 180px;
+        height: 180px;
+        border-radius: 180px;
+        background: #fff;
+        border: solid 4px #f73657; /*px*/
+        margin: 40px auto 0;
+
+        &::before {
+            content: "";
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 5px;
+            background: #f73657;
+
+        }
+    }
+
+    .btn-send-rec {
+        position: relative;
+        display: inline-block;
+        width: 180px;
+        height: 180px;
+        line-height: 180px;
+        border-radius: 180px;
+        background: #fff;
+        border: solid 2px #fff;
+        margin: 40px auto 0;
+        background: #20cd59;
+        color: #fff;
+        font-size: 34px;/*px*/
+    }
+
+    .btn-play-rec,
+    .btn-reset-recording {
+        display: inline-block;
+        width: 70px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: #20cd59;
+        margin-left: 10px;
+    }
+
+    .btn-play-rec {
+        margin-left: 20px;
+    }
+}

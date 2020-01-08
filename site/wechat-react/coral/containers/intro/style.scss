@@ -1,0 +1,309 @@
+@import "../../../assets/styles/base-definition";
+
+.coral-intro{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    left:0;
+    top:0;
+    overflow: hidden;
+    
+    .tip-top{
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        background: rgba(0,0,0,0.5);
+        color:#fff;
+        font-size: 28px;/*px*/
+        padding:30px 0;
+        z-index: 1;
+        @include flex-center;
+        .avatar{
+            @include round-avatar(40px);
+            margin-right:10px;
+        }
+        var{
+            color:#eff12e;
+        }
+    }
+        
+    .intro-box{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        overflow: auto;
+
+        .head{
+            position: relative;
+            width:100%;
+            overflow: hidden;
+            img{
+                width:100%;
+                display:block;
+            }
+        }
+        .content{
+            padding:20px 30px;
+            background-color: #fff;
+            .name{
+                color:#333;
+                font-size: 32px;/*px*/
+                line-height: 60px;
+                font-weight: 500;
+            }
+            .price{
+                color:#f73657;
+                font-size: 36px;/*px*/
+                line-height: 50px;
+                font-weight: 500;
+                span{
+                    color:#999;
+                    font-size: 24px;/*px*/
+                    text-decoration:line-through;
+                    margin-left:20px;
+                    font-weight: normal;
+                }
+            }            
+        }
+
+        .intro{
+            background-color: #fff;
+            margin-top:30px;
+            padding:30px 30px 100px;
+            span{
+                color:#333;
+                font-size: 32px;/*px*/
+                line-height: 60px;
+                font-weight: 500;
+            }
+            div{
+                margin-top:20px;
+                width:100%;
+                img{
+                    width:100%;
+                    height: auto;
+                    display: block;
+                }
+            }
+        }
+    }
+    .choose-subsidiary{
+        position: absolute;
+        width:100%;
+        height: 100%;
+        z-index: 1;
+        overflow: hidden;
+        display: none;
+        &.active{
+            display: block;
+            .box{
+                animation:mymove 0.5s ease-out;
+                -webkit-animation:mymove 0.5s ease-out;
+            }
+        }
+        .bg{
+            width:100%;
+            height: 100%;
+            background:rgba(0,0,0,0.5);
+        }
+        .box{
+            position: absolute;
+            bottom: 0;
+            display: block;
+            width:100%;
+            background: #fff;
+            
+            .content{
+                padding:0 0 0 20px;
+                li{
+                    padding:20px 20px 20px 0;
+                    border-bottom: 1px solid #e5e5e5;/*no*/
+                    &:last-child{
+                        border-bottom: none;
+                    }
+                }
+                .top{
+                    display: flex;
+                    .pic{
+                        width:240px;
+                        overflow: hidden;
+                        img{
+                            width:100%;
+                            height: auto;
+                        }
+                    }
+                    .info{
+                        flex: 1;
+                        width: 100%;
+                        padding-left:20px;
+                        position: relative;
+                        .icon_delete{
+                            float: right;
+                            color:#666;
+                            font-size: 26px;/*px*/
+                        }
+                        .title{
+                            position: absolute;
+                            bottom:10px;
+                            color:#333;
+                            font-size: 24px;/*px*/
+                        }
+                        .price{
+                            position: absolute;
+                            bottom:50px;
+                            color:#f83657;
+                            font-size: 36px;/*px*/
+                            font-weight: 500;
+                        }
+                    }
+                }
+                .choosen{
+                    line-height: 40px;
+                    .title{
+                        color:#333;
+                        font-size: 26px;/*px*/
+                    }
+                    .subsidiary-box{
+                        margin-top: 0px;
+                        margin-bottom:20px;
+                        max-height: 680px;
+                        overflow: auto;
+                        .subsidiary{    
+                            padding:20px 0 0;                
+                            span{
+                                display: inline-block;
+                                padding:10px 20px;
+                                font-size: 24px;/*px*/
+                                border-radius: 10px;
+                                color:#666;                        
+                                background-color: #f5f5f5;
+                                
+                            }
+                            &.active{
+                                span{
+                                    color:#fff;                        
+                                    background-color: #f1627a;
+                                }
+                            }   
+                        }
+                    }
+                        
+                }
+            }
+            .btn-buy-confirm{
+                display: block;
+                padding:30px;
+                text-align: center;
+                color:#fff;
+                font-size: 32px;/*px*/
+                background: #f73657;
+            }
+        }
+            
+    }
+    .buy-box{
+        width:100%;
+        position: absolute;
+        bottom:0;
+        color:#fff;
+        font-size: 32px;/*px*/
+        box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        >div{
+            display: block;
+            padding:30px;
+            text-align: center;
+        }
+        .btn-buy{
+            background: #f73657;
+        }
+        .btn-into{
+            background: #fff;
+            color:#ed3b59;
+            @include flex-center;
+            &:before{
+                width:26px;
+                height:32px;
+                background:url(./img/icon-earn.png) no-repeat center / 100%;
+                display:block;
+                content:'';
+                margin-right:10px;
+            }
+        }
+        .btn-kefu{
+            position: absolute;
+            top:-120px;
+            right:30px;
+            display: block;
+            width:80px;
+            height: 80px;
+            border-radius: 50%;
+            box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+            background: url(./img/kefu.png) center 14px no-repeat;
+            background-size: 32px 34px;
+            background-color:#fff;
+            
+            &:after{
+                content:'客服';
+                color:#999;
+                font-size: 20px;/*px*/
+                position: absolute;
+                bottom:14px;
+                display: block;
+                width: 100%;
+                text-align: center;
+                
+            }
+        }
+    }
+    @keyframes mymove
+    {
+    from {transform: translateY(100%)}
+    to {transform: translateY(0)}
+    }
+    
+    @-webkit-keyframes mymove
+    {
+        from {transform: translateY(100%)}
+        to {transform: translateY(0)}
+    }
+    .change-parent-dialog{
+        text-align: center;
+        .current-parent-tip{
+            color:$gray-content;
+            font-size:28px;/*px*/
+            padding-top:30px;
+            span{
+                color:$gray-title;
+            }
+        }
+        .switch-tip{
+            margin-top:25px;
+            color:$gray-content;
+        }
+        .content{
+            padding:30px 0;
+            @include flex-center;
+            .current-parent,
+            .new-parent{
+
+            }
+            .avatar{
+                @include round-avatar(90px);
+                margin:0 auto;
+                background:#f2f2f2;
+            }
+            .name{
+                color:$gray-title;
+                margin-top:8px
+            }
+            .switch-arrow{
+                width:62px;
+                height:37px;
+                background:url(./img/icon-switch-arrow.png) no-repeat center top / 100%;
+                margin:0 40px;
+                padding-bottom:30px;
+            }
+        }
+    }
+}

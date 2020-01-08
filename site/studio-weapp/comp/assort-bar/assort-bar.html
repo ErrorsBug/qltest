@@ -1,0 +1,29 @@
+<!--
+  data: {
+      name: '标题',
+      id: 'id',
+      url: 'url',
+      moreBtn: true  // 是否显示更多按钮
+  }
+
+  event: handleAssortMoreBtnTap 更多按钮点击事件
+-->
+<template name="assort-bar">
+    <view class="co-assort-bar">
+        <view class="co-assort-title-wrap">
+            <!-- <image class="co-assort-block-icon" src="./img/block-icon.png?__inline" mode="widthFix"></image> -->
+            <text class="co-assort-title"> {{name}}</text>
+        </view>
+        <view 
+            wx:if="{{moreBtn}}" 
+            class="co-assort-more-wrap"
+            data-name="{{name}}" 
+            data-id="{{id}}" 
+            data-url="{{url}}" 
+            bindtap="handleAssortMoreBtnTap"
+        >
+            <text class="co-assort-more-title">更多</text>
+            <image class="co-assort-more-icon" src="./img/more-icon.png?__inline" mode="widthFix"></image>
+        </view>
+    </view>
+</template>

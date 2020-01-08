@@ -1,0 +1,34 @@
+.customer-list-wrap{
+    border-top: solid 1px #e5e5e5;
+    .org-tip {
+        background-image: url(./imgs/icon_tv.png);
+    }
+    
+    .customer-list {
+        overflow-x: scroll;
+        padding: 0 0 20px;
+        margin: 0 -30px;
+        -webkit-overflow-scrolling: touch;
+        .scrll-bar{
+            display: flex;
+            flex-flow: row wrap;
+            height: 270px;
+            overflow-y: hidden;
+            width: 10*135px;
+            padding: 0 20px;
+            
+        }
+        .curtomer-live {
+            display: block;
+            width: 115px;
+            height: 115px;
+            margin: 10px 10px 10px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+
+}

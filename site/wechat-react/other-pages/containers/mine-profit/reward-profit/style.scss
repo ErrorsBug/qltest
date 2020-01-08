@@ -1,0 +1,29 @@
+.my-reward-profit {
+    height: 100%;
+    .container {
+        height: 100%;
+    }
+    .profit-scroll-box {
+        padding: 20px 40px 0;
+        box-sizing: border-box;
+        .common-empty {
+            top: 65%;
+        }
+    }
+    .reward-withdraw-list {
+        padding: 0 40px;
+    }
+}
+.rename-confirm {
+	.rename-confirm-content {
+		padding: 0 20px;
+	}
+	.rename-input {
+		height: 52px;
+		line-height: 52px;
+		width: 100%;
+		font-size: 28px; /*px*/
+		outline: none;
+		border: 2px solid #ccc;
+    }
+}

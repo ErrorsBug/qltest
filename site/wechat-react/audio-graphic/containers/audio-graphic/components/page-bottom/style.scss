@@ -1,0 +1,60 @@
+@import "../../basis-definition";
+.page-bottom{
+    background: #fff;
+    border-top: 1px solid #f0f0f0;/* px */
+
+    .btn-edit{
+        display: block;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        font-size: 32px;/* px */
+        background-color: #fafafa;
+
+        .icon-setting{
+            margin-right: 6px;
+            display: inline-block;
+            width: 40px;/* px */
+            height: 40px;/* px */
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url(./img/setting.png);
+            transform: translateY(6px);/* px */
+        }
+
+    }
+
+    .btn-buy-bar{
+        display: flex;
+        align-items: center;
+
+        span{
+            flex: 1;
+            display: flex;
+            text-align: center;
+            height: 100px;
+            align-items: center;
+            justify-content: center;
+            flex-direction:column;
+            font-size: 24px;/* px */
+            cursor: pointer;
+
+            b{
+                display: block;
+                font-weight: normal;
+                font-size: 32px;/* px */
+            }
+
+            &.btn-buy-topic{
+                color: #f83e62;
+            }
+            &.btn-buy-channel{
+                background: #f83e62;
+                color: #fff;
+            }
+
+        }
+
+    }
+}

@@ -1,0 +1,40 @@
+@import "../../../assets/styles/base-definition";
+
+.page-performance {
+	.banner {
+		height: 400px;
+		background: url(./img/banner-bg.png) #424355 no-repeat center bottom / 100% auto;
+		@include flex-center;
+		.content {
+			color: #fff;
+			text-align: center;
+			.num {
+				font-size: 70px; /*px*/
+				margin-top: 10px;
+				font-weight: 500;
+			}
+			.check-btn {
+				height: 58px; /*px*/
+				padding:0 20px;
+				font-size: 28px; /*px*/
+				border: 1px solid #fff; /*no*/
+				@include flex-center;
+				margin-top: 10px;
+				border-radius: 60px;
+			}
+		}
+	}
+	.history-btn{
+		padding:0 28px;
+		height:100px;
+		@include flex-center(vertical);
+		justify-content: space-between;
+		font-size:26px;/*px*/
+		background:#fff;
+		border-top:1px solid $gray-border;/*no*/
+		border-bottom:1px solid $gray-border;/*no*/
+		.arrow{
+			color:$gray-tip--lighter;
+		}
+	}
+}

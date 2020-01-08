@@ -1,0 +1,206 @@
+@import '../definition.scss';
+.page-studio-coupon
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	&.coupon-wrap{
+		background-color: $main-color;
+	}
+	&.overtime-wrap{
+		background-color: #f5f5f5;
+	}
+	.overtime-container{
+		margin-top: 96px;
+		.image{
+			width: 266px;
+			height: 283px;
+			background-image: url(./img/balloon.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+			margin: 0 auto;
+		}
+		>p{
+			text-align: center;
+			margin-top: 27px;
+			font-size: 28px;/* px */
+			color: #333;
+		}
+	}
+	.coupon-container
+	{
+		margin: 50px auto 0;
+		width: 690px;
+		background-color: #fff;
+		border-radius: 8px;
+		height: 650px;
+		position: relative;
+		.options
+		{
+			text-align: center;
+			padding-top: 102px;
+			.tips
+			{
+				font-size: 24px;/* px */
+				color: #999;
+			}
+			 > h1
+			{
+				font-size: 50px;/* px */
+				color: #333;
+				margin-top: 17px;
+			}
+			 > button
+			{
+				font-size: 34px;/* px */
+				color: #fefefe;
+				width: 370px;
+				background-color: $main-color;
+				height: 80px;
+				line-height: normal;
+				text-align: center;
+				// display: flex;
+				// justify-content: center;
+				// align-items: center;
+				border-radius: 100px;
+				border: none;
+				margin: 0 auto;
+				margin-top: 40px;
+				outline: none;
+				cursor: pointer;
+			}
+		}
+		.info
+		{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			border-top: 1px dashed #f0f0f0;/* no */
+			padding: 0 20px;
+			li
+			{
+				padding: 0 10px;
+				height: 100px;
+				border-bottom: 1px solid #f0f0f0;/* no */
+				display: flex;
+				flex-wrap: nowrap;
+				justify-content: space-between;
+				align-items: center;
+				.title
+				{
+					font-size: 32px;/* px */
+					color: #333;
+					flex-shrink: 0;
+					margin-right: 10px;
+				}
+				.desc
+				{
+					font-size: 30px;/* px */
+					color: #999;
+					flex: 1;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					text-align: right;
+					line-height: normal;
+				}
+				&:last-child
+				{
+					border-bottom: none;
+				}
+			}
+		}
+	}
+	.modal
+	{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		.bg
+		{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,.502);
+		}
+		 .content
+		{
+			background-color: #fff;
+			border-radius: 8px;
+			z-index: 10;
+		}
+	}
+	.modal-success
+	{
+		 .content
+		{
+			width: 380px;
+			padding: 56px 0;
+			.icon
+			{
+				width: 120px;
+				height: 120px;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-image: url(./img/icon-success.png);
+				margin: 0 auto;
+			}
+			.tips
+			{
+				font-size: 34px;/* px */
+				color: #333;
+				text-align: center;
+				margin-top: 40px;
+			}
+		}
+	}
+	.modal-input{
+		
+		.content{
+			width: 580px;
+			.input-area{
+				padding: 50px 40px 40px;
+				>label{
+					font-size: 34px;/* px */
+					color: #333;
+					text-align: center;
+					display: block;
+					font-weight: 400;
+				}
+				>input{
+					width: 100%;
+					height: 88px;/* px */
+					background-color: #f5f5f5;
+					border-radius: 100px;
+					border: none;
+					margin-top: 45px;
+					padding: 0 44px;/* px */
+					outline: none;
+					font-size: 32px;/* px */
+				}
+			}
+			>footer{
+				border-top: 1px solid #f0f0f0;/* no */
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 88px;
+				color: $main-color;
+				font-size: 34px;/* px */
+				cursor: pointer;
+			}
+		}
+	}
+
+}

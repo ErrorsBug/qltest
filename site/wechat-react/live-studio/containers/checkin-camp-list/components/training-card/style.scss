@@ -1,0 +1,70 @@
+@import '../../../../../assets/styles/mixins.scss';
+
+.checkin-camp-card2 {
+    background-color: #ffffff;
+    &:last-of-type {
+        .checkin-camp-container {
+            border-bottom: 0 none !important;
+        }
+    }
+
+    .checkin-camp-container {
+        padding: 40px;
+        position: relative;
+
+        .checkin-camp-poster {
+            position: relative;
+            width: 252px; /*px*/
+            height: 158px; /*px*/
+            margin-right: 20px;
+            box-sizing: content-box;
+            flex-shrink: 0;
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 6px;
+
+            .hide-icon {
+                position: absolute;
+                padding: 0 2px;
+                background: rgba(0,0,0,.5);
+                top: 0;
+                right: 0;
+                color: #fff;
+            }
+            .community-sign {
+                padding: 5px;
+                @include fontSize(22px);
+                color: #fff;
+                text-align: center;
+                background-color: #f73657;
+                border-radius: 4px 0 4px 0;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+        }
+
+        .checkin-camp-detail {
+            flex-grow: 1;
+            
+            .checkin-camp-name {
+                color: #333;
+                @include fontSize(28px);
+                font-weight: bold;
+                cursor: pointer;
+                line-height: 1.4;
+            }
+
+            .checkin-camp-arrange {
+                width: 34px; /*px*/
+                height: 34px; /*px*/
+                background: url('./img/icon-horizontal-dots.png') no-repeat center center / contain;
+                cursor: pointer;
+            }
+
+            .training-desc {
+                color: #999;
+            }
+        }
+    }
+}

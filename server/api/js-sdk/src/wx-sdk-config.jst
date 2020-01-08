@@ -1,0 +1,51 @@
+/**
+ * 微信 配置
+ * @type {Array}
+ */
+wx.config({
+  debug: [[debug]],
+  appId: '[[appId]]',
+  timestamp: [[timestamp]],
+  nonceStr: '[[nonceStr]]',
+  signature: '[[signature]]',
+  jsApiList: [
+    'checkJsApi',
+    'onMenuShareTimeline',
+    'onMenuShareAppMessage',
+    'onMenuShareQQ',
+    'onMenuShareWeibo',
+    'onMenuShareQZone',
+    'hideMenuItems',
+    'showMenuItems',
+    'hideAllNonBaseMenuItem',
+    'showAllNonBaseMenuItem',
+    'translateVoice',
+    'startRecord',
+    'stopRecord',
+    'onVoiceRecordEnd',
+    'playVoice',
+    'onVoicePlayEnd',
+    'pauseVoice',
+    'stopVoice',
+    'uploadVoice',
+    'downloadVoice',
+    'chooseImage',
+    'previewImage',
+    'uploadImage',
+    'downloadImage',
+    'getNetworkType',
+    'openLocation',
+    'getLocation',
+    'hideOptionMenu',
+    'showOptionMenu',
+    'closeWindow',
+    'scanQRCode',
+    'chooseWXPay',
+    'openProductSpecificView',
+    'addCard',
+    'chooseCard',
+    'openCard'
+  ]
+});
+
+wx._wxAppId = '[[appId]]';

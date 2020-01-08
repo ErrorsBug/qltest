@@ -1,0 +1,14 @@
+@import "../../../../../assets/styles/mixins.scss";
+
+
+.recommend-rank{ 
+    position: relative;
+    @include afterBorderBottom1px;
+    &::after {
+        left: 40px;
+        right: 40px;
+    }
+    .common-course-item .learn-num{
+        background: none;
+    }
+}

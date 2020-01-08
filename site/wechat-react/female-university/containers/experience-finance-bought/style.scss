@@ -1,0 +1,181 @@
+
+    .experience-finance-bought-header{
+        display: flex;
+        align-items: center;
+        height: 98px !important;
+        padding:0 30px;
+        box-shadow:0px 1px 0px 0px rgba(238,238,238,1);
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        background: #fff;
+        box-sizing: border-box;
+        .ef-header-avator{
+            margin-right: 24px;
+            img{
+                width:66px;
+                height:66px;
+                border-radius: 50%;
+            }
+        }
+        .ef-header-middle{
+            flex:1;
+            .ef-header-name{ 
+                font-weight:bold; 
+                line-height:33px; 
+                margin-bottom: 5px;
+            }
+            .ef-header-tip{ 
+                font-size:20px; 
+                color:rgba(153,153,153,1);
+                line-height:28px;
+            }
+        }
+        .ef-header-btn{ 
+            height:50px;
+            background:rgba(247,54,87,1);
+            border-radius:33px;
+            display: flex;
+            align-items: center;
+            padding-left:5px;
+            .experience-finance-icon{ 
+                animation: rotateIconFinance 2s linear infinite;
+                img{
+                    vertical-align: middle;
+                    width: 41px;
+                    height: 41px;
+                } 
+                @keyframes rotateIconFinance {
+                    0%{
+                        transform:rotateY(0deg)
+                    }
+                    50%{
+                        transform:rotateY(360deg)
+                    }
+                    100%{
+                        transform:rotateY(360deg)
+                    }
+                }
+            }
+            .ef-header-text{
+                font-size:27px; 
+                color:rgba(255,255,255,1); 
+                padding:0 11px;
+            }
+        }
+    }
+.experience-finance-bought{
+    .experience-finance-scroll-box{
+        background:rgba(255,255,255,1);
+        &.experience-finance-is-share{
+            padding-top: 98px;
+        }
+    }
+    .efb-list{
+        padding:40px 30px;
+        .efb-list-item{
+            background:rgba(255,255,255,1);
+            box-shadow:0px 10px 40px 0px rgba(0,0,0,0.07);
+            border-radius:20px;
+            padding:22px 20px 30px;
+            margin-bottom: 40px;
+            .efb-list-item-title{
+                display: flex;
+                align-items: center; 
+                font-size:32px; 
+                font-weight:bold;
+                color:rgba(51,51,51,1);
+                height:45px;  
+                margin-bottom: 32px;   
+                line-height: 40px;
+                span{
+                    display: -webkit-box;
+                    text-overflow: ellipsis;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden; 
+                }
+                &::before{
+                    content:'';
+                    display: inline-block;
+                    width:5px;
+                    height:28px;
+                    background: #F73657;
+                    margin-right: 10px;
+                    border-radius: 10px;
+                }
+            }
+            .efb-list-item-list{
+                .efb-list-item-list-item{
+                    display: flex;
+                align-items: center;
+                margin-bottom: 40px;
+                &:last-child{
+                    margin:0;
+                }
+                .finance-item-img{
+                    width:267px;
+                    height:166px;
+                    border-radius:8px;
+                    margin-right: 20px;
+                    overflow: hidden;
+                }
+                .finance-item-content{
+                    flex:1;
+                    .finance-item-title{
+                        font-size:28px;
+                        font-weight:bold; 
+                        line-height:40px;
+                        margin-bottom: 23px;
+                        display: -webkit-box;
+                        text-overflow: ellipsis;
+                        -webkit-line-clamp: 1;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        span{ 
+                            line-height:34px;
+                            background:rgba(255,240,240,1);
+                            border-radius:4px;
+                            color:rgba(247,54,87,1);
+                            padding:0 10px;
+                            margin-right: 13px;
+                        }
+                    }
+                    .finance-item-time{
+                        font-size:24px;  
+                        line-height:33px;
+                        margin-bottom: 13px;
+                    }
+                    .finance-item-bottom{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        .finance-item-state{ 
+                            color:rgba(153,153,153,1);
+                            line-height:33px;
+                        }
+                        .finance-item-btn{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            height:45px; 
+                            border-radius:25px;    
+                            font-size:24px;
+                            color:rgba(247,54,87,1);
+                            width:130px;
+                            &.on{
+                                background:rgba(247,54,87,1);
+                                color:rgba(255,255,255,1);
+                            }
+                            &.end{ 
+                                color:rgba(102,102,102,1);
+                            }
+                        }
+                    }
+                }
+                }
+            }
+        }
+    }
+}

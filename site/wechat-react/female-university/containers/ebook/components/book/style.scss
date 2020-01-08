@@ -1,0 +1,158 @@
+.eb-book-box{
+    height: 100%;
+    width: 100%;
+	padding: 40px 38px 40px 26px;
+	box-sizing: border-box;
+	.turn-box{
+		width: 100% !important;
+		height: 100% !important;
+		z-index: 1;
+	}
+	&::before, &::after{
+		position: absolute;
+		z-index: 1;
+		left: 26px;
+		top: 40px;
+		bottom: 40px;
+		right: 38px;
+		border-radius: 0 38px 38px 0;
+		box-shadow: 10px 4px 8px -10px rgba(0,0,0,0.15);
+	}
+	&::after, &::before{
+		background: #fff;
+		content: '';
+	}
+	&::after{
+		z-index: 0;
+		right: 32px;
+		border-radius: 0 46px 46px 0
+	}
+    .eb-book-cont{
+        width: 100%;
+		height: 100%;
+		border-radius: 0 32px 32px 0;
+		box-sizing: border-box;
+		position: relative;
+		box-shadow: 10px 4px 8px -10px rgba(0,0,0,0.15);
+		z-index: 2;
+		&::before, &::after{
+			position: absolute;
+			top: 0;
+			height: 100%;
+			z-index: 15;
+			content: '';
+		}
+		&::before{
+			left: - 26px;
+			width: 26px;
+			background: rgba(#813B3B, 0.12);
+			filter:blur(18px);
+		}
+		&::after{
+			left: 0;
+			width: 26px;
+			background:rgba(91,21,21,0.16);
+			filter:blur(12px);
+		}
+		.eb-book-bg{
+			position: absolute;
+			top: 0;
+			height: 100%;
+			z-index: 1;
+			left: - 26px;
+			width: 26px;
+			background: #fff;
+		}
+		.page-ture-box{
+			padding-right: 6px;
+			box-sizing: border-box;
+			&.dir{
+				.page-ture-cont{
+					position: relative;
+					height: calc(100vh - 80px);
+					&::before{
+						position: absolute;
+						top: 0;
+						right: 0;
+						z-index: 0;
+						width: 240px;
+						height: 296px;
+						border-radius: 0 32px 0 0;
+						background: url('../../img/share-bg.png') no-repeat center;
+						background-size: 100% 100%;
+						content: '';
+					}
+				}
+			}
+			.page-ture-cont{
+				width: 100%;
+				height: 100%;
+				padding: 80px 36px 52px 60px;
+				border-radius: 0 32px 32px 0;
+				box-sizing: border-box;
+				position: relative;
+				background: #FFFEFC;
+				z-index: 1;
+				box-shadow: 10px 4px 8px -10px rgba(0,0,0,0.15);
+				position: relative;
+				.turn-share{
+					position: absolute;
+					top: 0 ;
+					right: 176px;
+					width: 90px;
+					height: 120px;
+					background: url('../../img/icon-share.png') no-repeat center;
+					background-size: 100%;
+				}
+				.page-ture-footer{
+					position: absolute;
+					bottom: 0;
+					left: 60px;
+					right: 0;
+					height: 52px;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					z-index: 20;
+					&.flex-end{
+						justify-content: flex-end;
+					}
+					p{
+						font-size: 20px; /*px*/
+						color: #CCB4B4;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+						line-height: 1.5;
+					}
+					span{
+						border-radius: 200px 0px 132px 0px;
+						width: 130px;
+						height: 52px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						background: #B45858;
+						i{
+							font-size: 28px; /*px*/
+							color: #fff;
+						}
+					}
+				}
+			}
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+	.eb-no-data{
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 28px; /*px*/
+		color: #6666;
+	}
+}

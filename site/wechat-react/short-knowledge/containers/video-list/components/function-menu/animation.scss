@@ -1,0 +1,27 @@
+$prefix: function-menu-animation;
+
+
+/* 底部二维码弹出动画*/
+.#{$prefix}-dialog-enter {
+    margin-top: -95px;
+    opacity: 0.01;
+    transform: translate3d(0,200%,0);
+}
+
+.#{$prefix}-dialog-enter-active {
+    opacity: 1;
+    margin-top: 0;
+    transform: translate3d(0,0,0);
+    transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.#{$prefix}-dialog-leave {
+    opacity: 1;
+    transform: translate3d(0,0);
+}
+
+.#{$prefix}-dialog-leave-active {
+    transform: translateY(100%);
+    opacity: 0.01;
+    transition: all 300ms cubic-bezier(0.42,0,1,1);
+}

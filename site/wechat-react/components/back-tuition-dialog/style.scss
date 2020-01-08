@@ -1,0 +1,141 @@
+.back-tuition-dialog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0,0,0,.6);
+    line-height: 1.4;
+    .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .back-tuition-share-tip {
+        position: absolute;
+        height: 97px;
+        width: 660px;
+        background: {
+            image: url(./img/back-tuition-share-tip.png);
+            position: center center;
+            size: 100% 100%;
+            repeat: no-repeat;
+        }
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .back-tuition-dialog-content {
+        width: 660px;
+        min-height: 450px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 20px;
+        padding-top: 156px;
+        padding-bottom: 20px;
+        box-sizing: border-box;
+        background-color: #fff;
+        text-align: center;
+        >img {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 280px;
+            top: -120px;
+        }
+        .invite-count {
+            color: #000;
+            font-size: 40px;/*px*/
+            margin-bottom: 24px;
+        }
+        .count-down-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            > span {
+                height: 36px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 24px;/*px*/
+            }
+            .time {
+                width: 36px;
+                background: rgba(168,118,255,1);
+                border-radius: 6px;
+                color: #fff;
+                &:first-child {
+                    position: relative;
+                    &::before {
+                        content: '';
+                        width: 70px;
+                        height: 1px;
+                        background-color: rgba(51,51,51,.7);
+                        position: absolute;
+                        left: -90px;
+                        top: 50%;
+                    }
+                }
+            }
+            .unit {
+                color: #333;
+                width: 50px;
+                font-weight: bold;
+                &:last-child {
+                    width: 36px;
+                    position: relative;
+                    &::after {
+                        content: '';
+                        width: 70px;
+                        height: 1px;
+                        background-color: rgba(51,51,51,.7);
+                        position: absolute;
+                        right: -80px;
+                        top: 50%;
+                    }
+                }
+            }
+        }
+        .come-on {
+            font-size: 30px;/*px*/
+            color: #999;
+        }
+        .invite-item {
+            margin: 22px auto 0;
+            max-width: 440px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            > img {
+                width: 66px;
+                height: 66px;
+                border: 2px solid rgba(153,153,153,1);
+                margin-right: 18px;
+                border-radius: 50%;
+                margin-bottom: 20px;
+            }
+            .invite {
+                width: 66px;
+                height: 66px;
+                border: 2px dashed rgba(153,153,153,.7);
+                border-radius: 50%;
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-sizing: border-box;
+                span {
+                    color: #999;
+                    font-size: 28px;/*px*/
+                }
+            }
+        }
+    }
+}

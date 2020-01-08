@@ -1,0 +1,63 @@
+.coupon-exchange {
+    padding: 20px; /*px*/
+
+    .img-wrap {
+
+        text-align: center;
+
+        .img-inner {
+            position: relative;
+            display: inline-block;
+            width: 120px; /*px*/
+            height: 120px; /*px*/
+            border-radius: 50%;
+            line-height: 120px; /*px*/
+            background: #ffac00;
+            margin: 40px auto; /*px*/
+        }
+        .img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px; /*px*/
+            height: 80px; /*px*/
+        }
+    }
+
+    .input-wrap {
+        margin-bottom: 40px; /*px*/
+    
+        .coupon-code {
+            width: 100%;
+            outline: none;
+            border: none;
+            font-size: 28px; /*px*/
+            appearance: none;
+            background: #fff;
+            padding: 20px; /*px*/
+        }
+    }
+
+    .btn-wrap {
+
+        .btn {
+            display: inline-block;
+            width: 100%;
+            font-size: 30px; /*px*/
+            background: #fe5670;
+            border-radius: 6px; /*px*/
+            cursor: pointer;
+            color: #fff;
+            line-height: 92px; /*px*/
+            height: 92px; /*px*/
+            outline: none;
+            -webkit-tap-highlight-color: #fff;
+            border: none;
+
+            &.disable{
+                background: #ccc; 
+            }
+        }
+    }
+}

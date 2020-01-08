@@ -1,0 +1,23 @@
+
+{{#each commentList}}
+    <li>
+        <div class="avatar"><img src="{{headImgUrl}}" alt=""></div>
+
+
+        {{#if isLike }}
+            <div class="liked" data-id={{id}}>
+                <var>{{likeNum}}</var>
+                <span class="liked-icon"></span>
+            </div>
+        {{else}}
+            <div class="like" data-id={{id}}>
+                <var>{{likeNum}}</var>
+                <span class="like-icon"></span>
+            </div>
+        {{/if}}
+
+        <p class="name">{{userName}}</p>
+        <p class="date">{{createTime}}</p>
+        <p class="content">{{content}}</p>
+    </li>
+{{/each}}

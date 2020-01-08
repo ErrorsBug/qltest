@@ -1,0 +1,28 @@
+.tips-card {
+    position: relative;
+    display: block;
+    // background: #fff;
+    margin: 20px;
+    padding: 0 30px 30px 30px;
+    // border: solid 1px #ededed; /*no*/
+
+    .title {
+        display: block;
+        height: 60px;
+        line-height: 60px;
+        font-size: 28px; /*px*/
+        color: #999;
+    }
+
+    li {
+        list-style-type: decimal;
+        line-height: 1.4;
+        font-size: 24px; /*px*/
+        padding: 0 10px 0 4px;
+        margin-left: 40px;
+        color: #999;
+        .btn-create-live-enter{
+            color: #F73657;
+        }
+    }
+}

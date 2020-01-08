@@ -1,0 +1,40 @@
+<view class="hot-lives">
+    <view class="title">
+        <image class="red-spot" src="../../img/red-spot.png"></image>
+        <view class="text">
+            热门直播间
+        </view>
+        <image class="red-spot" src="../../img/red-spot.png"></image>
+    </view>
+
+    <view class="live-list">
+        <view class="flex-wrap">
+            <scroll-view scroll-x>
+                <view class="live-container">
+                    <block 
+                        wx:for="{{hotLives}}" 
+                        wx:key="{{id}}" 
+                        wx:for-index="liveIndex" 
+                        wx:for-item="liveItem"
+                    >
+                        <view class="live-item" catchtap="hotItemClick" data-id="{{liveItem.id}}">
+                            <view class="head-img">
+                                <image 
+                                    class="img"
+                                    src="{{liveItem.logo}}?x-oss-process=image/resize,m_fill,limit_0,h_100,w_100"
+                                    mode="aspectFill"
+                                />
+                            </view>
+                            
+                            <text class="live-name">{{liveItem.name}}</text>
+    
+                            <text class="focus-num">{{liveItem.fansNumFormat}}关注</text>
+                        </view>
+                    </block>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+
+    <image class="bg" src="../../img/hot-live-back.jpg"></image>
+</view>

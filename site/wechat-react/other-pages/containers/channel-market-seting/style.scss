@@ -1,0 +1,503 @@
+@import '../../../assets/styles/base-definition.scss';
+
+.market-type-set{
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    .money-tip{
+        color:#666;
+        font-size: 24px;/*px*/
+        padding: 30px;
+        padding-bottom: 0;
+        
+    }
+    .market-main{
+        flex: 1;
+        overflow: hidden;
+        overflow-y: auto;
+    }
+    .market-type-box{
+        padding:30px 30px 200px;
+        
+        .market-type-select{
+            display: flex;
+            .btn-market-type{
+                flex:1;
+                margin:0 15px 0;
+                padding:0px 5px;
+                text-align: center;
+                font-weight: 700;
+                color: #666666;
+                font-size: 30px;/*px*/
+                line-height: 40px;
+                box-sizing: border-box;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                &::before{
+                    content: '';
+                    display: block;
+                    border-radius: 14px;
+                    width: 100%;
+                    height: 180px;
+                    background: #F7F7F7;
+                    margin-bottom: 10px;
+                }
+                &::after{
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 180px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                }
+                &.pin{
+                    &::after{
+                        background: url('./img/pinke.png') center center no-repeat;
+                    }
+                }
+                &.cut{
+                    &::after{
+                        background: url('./img/cut.png') center center no-repeat;
+                    }
+                }
+                &.te{
+                    &::after{
+                        background: url('./img/te.png') center center no-repeat;
+                    }
+                }
+                
+                &:last-child{
+                    margin-right: 0;
+                }
+
+                &:first-child{
+                    margin-left: 0;
+                }
+                
+                &.active{
+                    &::before{
+                        background: url('./img/select-bg-1.png') center center no-repeat;
+                        background-size: 120% 100%;
+                    }
+
+                    &.pin{
+                        &::after{
+                            background: url('./img/pinke-active.png') center center no-repeat;
+                        }
+                    }
+                    &.cut{
+                        &::after{
+                            background: url('./img/cut-active.png') center center no-repeat;
+                        }
+                    }
+                    &.te{
+                        &::after{
+                            background: url('./img/te-active.png') center center no-repeat;
+                        }
+                    }
+                    
+                }
+                >i{
+                    display: block;
+                    font-size: 24px;/*px*/
+                    color:#999;
+                    font-style: normal;
+                    font-weight: normal;
+                    margin-top: 5px;
+                }
+            }
+        }
+
+        dd{
+            &.active{
+				.group-notice,
+                &.input-box{
+                    display: block;
+
+                }
+            }
+        }
+    }
+
+    $btn-type-height:30px;
+    
+    .group-notice{
+		display:none;
+		margin-top:10px;
+        padding:10px 0;
+        .subtitle{
+            color: #333;
+            font-size: 28px;/*px*/
+        }
+		
+		.flow{
+			font-size:20px;/*px*/
+			display:flex;
+			align-items: center;
+			color:#999;
+			border-radius:10px;
+			margin-top:10px;
+			.order{
+				width:22px;
+				height:22px;
+				border:1px solid #999;
+				color:#999;
+				border-radius: 44px;
+				font-style: normal;
+				margin-right:7px;
+				display:flex;
+				justify-content: center;
+				align-items: center;
+				line-height:normal;
+			}
+			.arrow{
+				width:36px;
+				height:8px;
+				background:url(./img/arrow.png) no-repeat center / 100%;
+				margin:0 10px;
+			}
+		}
+    }
+    .input-box{
+        display: none;
+        margin-top:26px;
+        position: relative;
+        background: #fff;
+        border-radius:26px;
+        overflow: hidden;
+
+        
+        .check-wrap{
+            padding: 20px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .label-title {
+                font-size: 28px;/*px*/
+            }
+            &.flex-coloum {
+                flex-direction: column;
+            }
+            .flex-justrify-between {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+            }
+            .btn-check{
+                float: right;
+                width:30px;
+                height: 30px;
+                background:url(./img/unchecked.png) center center no-repeat;
+                background-size: 90% auto;
+                &.active{
+                    background:url(./img/checked.png) center center no-repeat;
+                    background-size: 90% auto;
+                }
+            }
+        }
+        .label-title-tip {
+            color: #B2B2B2;
+            font-size: 24px; /*px*/
+            margin-top: 8px;
+            line-height: 1.4;
+        }
+        .moni-style {
+            display: inline-flex;
+            align-items: center;
+            img {
+                width: 27px;
+                height: 27px;
+                margin-left: 12px;
+            }
+        }
+        .date-picker-wrap {
+            .select-tag {
+                padding: 30px 0;
+                color: #999999;
+                font-size: 30px;/*px*/
+            }
+        }
+        .padding-tip {
+            padding: 20px 0;
+            .tip{
+                color: #666;
+                font-size: 26px;/* px */
+                line-height: 40px;/* px */
+            }
+        }
+		.tip{
+            color:$gray-tip;
+            line-height:30px;
+		}
+		
+        
+        .bottom-tip{
+            padding: 20px 30px;
+            min-height: 90px;
+            box-sizing: border-box;
+        }
+        >label{
+            display: block;
+            padding: 20px 0 0;
+
+            .edit-title{
+                display: block;
+                width: 100%;
+                font-style: normal;
+                font-size: 26px;/*px*/
+                color: #999;
+                flex-shrink: 0;
+                margin-bottom: 20px;
+                margin-top: 30px;
+                &.must::before{
+                    content:'*';
+                    color: #f84c69;
+                }
+            }
+
+            input{
+                width:100%;
+                outline: none;
+                border: none;
+                font-size: 28px;/*px*/
+                @include flex-center(vertical);
+                line-height: normal;
+                border-radius: 40px;
+                background: #F7F7F7;
+                padding: 16px 20px;
+                
+                &::placeholder{
+                    color:#B2B2B2;
+                }
+            }
+            .number-input-box{
+                display: flex;
+                .money-input{
+                    flex: 1;
+                    width: 100%;
+                    
+                }
+                .msg-span-one{
+                    font-size: 26px;/* px */
+                    color: #B2B2B2;
+                    flex-shrink: 0;
+                    margin-left: 50px;
+                    line-height: 60px;
+                }
+            }
+            .date-picker{
+                border-radius: 40px;
+                background: #F7F7F7;
+                padding: 16px 20px;
+            }
+            .cut-start-time-input-box{
+                flex: 1;
+                height: 35px ;/* px */
+                font-size: 28px;/*px*/
+                @include flex-center(vertical);
+                display: flex;
+                .value{
+                    flex: 1;
+                    font-style: normal;
+                    color:#333;
+                    text-align: left;
+                    &.placeholder{
+                        color:#b3b3b3;
+                    }
+                }
+    
+                .icon_enter{
+                    color: #B2B2B2;
+                }
+                
+                
+            }
+            .btn-del-date{
+                position: relative;
+                display: inline-block;
+                flex-shrink: 0;
+                width: 30px;
+                height: 30px;
+                background: url(./img/icon-cross.png) center center no-repeat;
+                background-size:cover;
+                cursor: pointer;
+                margin-left: 10px;
+                &::before{
+                    content: '';
+                    width: 40px;
+                    height: 40px;
+                    position: absolute;
+                    left: 50%;
+                    top:50%;
+                    transform: translate(-50%,-50%);
+                }
+            }
+
+            .msg-left{  
+                flex: 1;
+                display: block;
+                color: #666;
+                font-size: 26px;/* px */
+                line-height: 40px;/* px */
+                flex-wrap: wrap;
+                margin-bottom: 20px;
+            }
+            .msg-btn{
+                color: #0091FF;
+                float: right;
+            }
+            
+        }
+        
+        
+        
+    }
+    .bottom-confirm{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        .btn-save-market{
+            display: block;
+            margin:10px 30px 20px;
+            padding:30px;
+            background-color: #f84c69;
+            color:#fff;
+            border-radius:50px;
+            font-size:32px;/*px*/
+            text-align: center;
+        }
+        .back-noselect{
+            text-align: center;
+            padding-bottom: 30px;
+            .btn-not-select{
+                color: #666;
+                font-size: 24px;/*px*/
+                
+            }
+        }
+    }
+
+    
+    .co-dialog-title.white {
+        padding: 40px 50px 20px 50px;/*px*/
+    }
+    .confirm-free-tip {
+        color: #666666;
+        font-size: 30px;
+        padding: 10px 50px;
+    }
+   
+
+    .sale-tips-dialog{
+
+        .tips-img{
+            display: block;
+            margin: 0 auto;
+            width: 520px;
+        }
+    
+        .tips-info{
+            color: #999999;
+            font-size: 26px;/* px */
+            line-height: 35px;/* px */
+            padding: 20px 50px 0;
+            margin: 0 auto;
+        }
+    }
+
+
+}
+
+//时间控件
+.ql-s-picker-box {
+    .market-t-time-picker{
+        border-top-left-radius: 26px;
+        border-top-right-radius: 26px;
+    
+        &.ql-s-picker-popup-wrap{
+            .ql-s-picker-popup-body{
+                padding:0 30px;
+                
+                .ql-s-picker-view-box{
+                    border-radius: 26px;
+                    overflow: hidden;
+                    background: #F7F7F7;
+                    -webkit-transform: translate3d(0, 0, 0);
+                    -moz-transform: translate3d(0, 0, 0);
+                    .ql-s-picker-view-window{
+                        background-image: linear-gradient(to bottom, rgba(247, 247, 247, 0.95), rgba(247, 247, 247, 0.4)), linear-gradient(to top, rgba(247, 247, 247, 0.95), rgba(247, 247, 247, 0.4));
+                    }
+                }
+            }
+            .ql-s-picker-popup-header{
+                border-bottom: none;
+                
+                .ql-s-picker-popup-item{
+                    color: #333;
+                    height: 40px;
+                    padding:30px;
+                    line-height: 40px;
+
+                    &.ql-s-header-left,
+                    &.ql-s-header-right{
+                        color:#666;
+                        font-size: 30px;
+                    }
+                }
+            }
+            
+        }
+    } 
+}
+ // 模拟拼课
+ .confirm-like-wrap {
+    .confirm-like-title {
+        text-align: center;
+        color: #333333;
+        font-size: 36px; /*px*/
+        padding: 25px 0;
+        font-weight: 600;
+    }
+    .confirm-like-step {
+        display: flex;
+        align-items: center;
+        background: #FBF0F0;
+        padding: 40px 30px;
+    }
+    .red-line {
+        width: 26px;
+        height: 2px;
+        background: #F73657;
+        margin-right: 10px;
+    }
+    .step-word {
+        margin: 0 10px;
+        color: #666666;
+        line-height: 1.3;
+    }
+    .confirm-step-item {
+        display: flex;
+        align-items: center;
+    }
+    .confirm-like-tip {
+       color: #999999; 
+       font-size: 24px; /*px*/
+       line-height: 1.3;
+    }
+    .confirm-like-main {
+        padding: 25px 26px 0 26px;
+    }
+    .confirm-like-img {
+        width: 100%;
+        margin-top: 31px;
+    }
+}

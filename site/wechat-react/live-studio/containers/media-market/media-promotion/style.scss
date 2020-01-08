@@ -1,0 +1,581 @@
+.media-promotion-container {
+    $primary-color: #33bb49;
+    $gray-border: 1px solid #ebebeb;
+    $padding: 30px;
+    $background-color: #fff;
+    .invisible-block {
+        display: none;
+    }
+    .promote-tip-button {
+        position: absolute;
+        top: 150px;
+        right: 0;
+        z-index: 2;
+        background-color: #fea03c;
+        color: #ffffff;
+        font-size: 24px; /*px*/
+        height: 50px;
+        line-height: 50px;
+        padding: 0 10px;
+        border-radius: 25px 0 0 25px;
+        cursor: pointer;
+        .icon_ask2 {
+            position: relative;
+            top: 3px;
+            font-size: 28px; /*px*/
+            margin-right: 10px;
+        }
+    }
+    // 顶部按钮
+    // .topbar {
+    //     display: flex;
+    //     flex-flow: row nowrap;
+    //     justify-content: space-between;
+    //     align-items: center;
+    //     padding: 0 $padding;
+    //     height: 90px;
+    //     font-size: 28px; /*px*/
+    //     color: #333333;
+    //     background-color: $background-color;
+    //     margin-bottom: 20px;
+    //     .promote-tip-button {
+    //         color: #a1a1a1;
+    //         font-size: 24px; /*px*/
+    //         margin-left: 25px;
+    //         border: 1px solid #b3b3b3;
+    //         border-radius: 30px;
+    //         padding: 10px 15px;
+    //         cursor: pointer;
+    //         .icon_ask2 {
+    //             position: relative;
+    //             top: 5px;
+    //             margin-left: 10px;
+    //             font-size: 30px; /*px*/
+    //         }
+    //     }
+    //     .promote-switch {
+    //         &:after {
+    //             left: 0;
+    //             right: auto;
+    //             position: absolute;
+    //             top: 50%;
+    //             transform: translateY(-50%);
+    //         }
+    //     }
+    //     .promote-switch.active {
+    //         background-color: $primary-color;
+    //         border-color: $primary-color;
+    //         &:after {
+    //             border: $primary-color;
+    //             right: 0;
+    //             left: auto;
+    //         }
+    //     }
+    // }
+
+    // Tab切换按钮
+    .tabbar {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        border-bottom: 1px solid #e5e5e5;
+        background-color: $background-color;
+        .tab-item {
+            font-size: 30px; /*px*/
+            color: #333333;
+            line-height: 80px;/*px*/
+            position: relative;
+            top: 1px;
+        }
+        .active-tab-item {
+            color: $primary-color;
+            border-bottom: 3px solid $primary-color;
+        }
+    }
+
+    // > .tabbar {
+    //     position: absolute;
+    //     left: 0;
+    //     top: 0;
+    //     z-index: 1;
+    //     width: 100%;
+    // }
+
+    // 系列课滚动列表
+    .channel-list-wrapper {
+        position: absolute;
+        left: 0;
+        //top: 194px;
+        top: 84px;
+        bottom: 0;
+        width: 100%;
+        // 系列课列表项目公共样式
+        .channel-card {
+            background-color: $background-color;
+            margin-bottom: 20px;
+            .channel-card-content {
+                padding: $padding;
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                border-bottom: $gray-border;
+                .channel-coverpic {
+                    width: 240px;
+                    height: 150px;
+                    margin-right: 20px;
+                    overflow: hidden;
+                    flex-shrink: 0;
+                    img {
+                        height: 100%;
+                        border-radius: 6px;
+                    }
+                }
+                .channel-detail {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: space-between;
+                    height: 150px;
+                    .channel-title {
+                        color: #333333;
+                        font-size: 28px; /*px*/
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                        overflow: hidden;
+                        cursor: pointer;
+                        line-height: 1.2;
+                        flex-shrink: 0;
+                    }
+                    .channel-detail-middle {
+                        color: #b6b6b6;
+                        font-size: 24px; /*px*/
+                        line-height: 1.3;
+                    }
+                    .channel-detail-footer {
+                        color: #666666;
+                        font-size: 24px; /*px*/
+                        .price-number {
+                            color: $primary-color;
+                            font-size: 36px; /*px*/
+                            font-weight: bold;
+                        }
+                        .rmb-sign,
+                        .months-sign {
+                            font-size: 24px; /*px*/
+                            font-style: normal;
+                        }
+                    }
+                }
+            }
+            .channel-card-footer {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-around;
+                align-items: center;
+                height: 90px;
+                .icon-bg {
+                    display: inline-block;
+                    width: 25px;
+                    height: 25px;
+                    margin-right: 10px;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                }
+                .icon-tweet {
+                    background-image: url(./img/icon_tweet.png);
+                }
+                .icon-exchange-green {
+                    background-image: url(./img/icon_exchange_green.png);
+                }
+                .icon-exchange-gray {
+                    background-image: url(./img/icon_exchanxge_gray.png);
+                }
+                .icon-down {
+                    background-image: url(./img/icon_down.png);
+                }
+                .icon-edit {
+                    background-image: url(./img/icon_edit.png);
+                }
+                .icon-enlarge {
+                    background-image: url(./img/icon_enlarge.png);
+                }
+            }
+        }
+
+        // 备选系列课
+        .alternative-channel-card {
+            .channel-stat {
+                span:first-child {
+                    margin-right: 15px;
+                }
+            }
+            .footer-button {
+                line-height: 90px;
+                color: #666666;
+                font-size: 28px; /*px*/
+                width: 50%;
+                span {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+            .footer-button:first-child {
+                border-right: $gray-border;
+            }
+        }
+
+        // 成功投放系列课
+        .promotional-channel-card {
+            .footer-button {
+                display: block;
+                height: 100%;
+                position: relative;
+                display: flex;
+                flex-flow: column nowrap;
+                //width: 25%;
+                width: 33.3%;
+                font-size: 24px; /*px*/
+                color: #333333;
+                justify-content: center;
+                align-items: center;
+                .icon-bg {
+                    margin: 0 0 6px 0;
+                }
+                em {
+                    line-height: 42px;
+                    font-style: normal;
+                    font-weight: bold;
+                }
+                .vertical-bar {
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 0;
+                    height: 35px;
+                    border-right: $gray-border;
+                }
+                .to-be-offshelf {
+                    color: #F73657;
+                }
+            }
+        }
+    }
+
+    // 课程上架协议
+    .agreement-statement-container {
+        font-size: 28px; /*px*/
+        line-height: 1.5;
+        color: #666666;
+        padding-top: $padding;
+        box-sizing: border-box;
+        .agreement-statement-content {
+            padding-bottom: 120px;
+        }
+        h1 {
+            font-size: 32px; /*px*/
+            line-height: 100px;
+            text-align: center;
+            color: #000000;
+        }
+        p, dl {
+            margin-bottom: $padding;
+            padding: 0 $padding;
+            line-height: 1.8;
+        }
+        dt {
+            font-weight: bold;
+            color: #000000;
+            line-height: 2;
+            text-indent: 32px;
+        }
+        dd {
+            text-indent: 32px;
+            margin-bottom: 10px;
+        }
+        strong {
+            color: #000000;
+        }
+        .red-text {
+            color: #f73b3b;
+            font-weight: bold;
+        }
+        .underline {
+            text-decoration: underline;
+        }
+        .goback-button {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            max-width: 1280px; /*px*/
+            height: 90px;
+            line-height: 90px;
+            text-align: center;
+            color: #33bb49;
+            font-size: 32px; /*px*/
+            cursor: pointer;
+            background-color: #ffffff;
+        }
+    }
+
+    /* 各种模态窗 */
+
+    // 0. 模态窗公共样式
+    .confirm-dialog {
+        z-index: 10;
+        .co-dialog-confirm {
+            padding: 0 30px;
+            box-sizing: border-box;
+            line-height: 1.4;
+            color: #666666;
+            font-size: 28px; /*px*/
+        }
+        .co-dialog-btn-line-confirm {
+            color: $primary-color;
+        }
+        .textarea-field, 
+        .input-field {
+            width: 100%;
+            background-color: #f5f5f5;
+            color: #333333;
+            font-size: 26px; /*px*/
+            line-height: 1.5;
+            padding: 20px;
+            box-sizing: border-box;
+            border: $gray-border;
+            resize: none;
+            border-radius: 8px; /*px*/
+            outline: none;
+        }
+    }
+
+    // 1. 什么是推广投放
+    .whatis-media-promotion {
+        .co-dialog-content {
+            overflow: visible;
+            width: 650px;
+        }
+        .media-promotion-wrapper {
+            position: relative;
+            .close-modal {
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                top: -25px;
+                right: -25px;
+                background: url(./img/icon_close_modal.png) no-repeat center center;
+                background-size: 100%;
+                cursor: pointer;
+            }
+            .modal-header {
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                width: 100%;
+                height: 245px;
+                background: #ffc36b url(./img/modal_bg.png) no-repeat;
+                background-size: 100%;
+                color: #ffffff;
+                font-style: italic;
+                border-radius: 10px 10px 0 0; /*px*/
+                .modal-title {
+                    margin-left: 80px;
+                    font-weight: normal;
+                    line-height: 1.2;
+                }
+                .first-line {
+                    font-size: 55px; /*px*/
+                }
+                .second-line {
+                    font-size: 60px; /*px*/
+                }
+            }
+            .modal-body {
+                padding: 40px;
+                .modal-content-item {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    .icon-item {
+                        flex-shrink: 0;
+                        margin-right: 20px;
+                        width: 80px;
+                        height: 80px;
+                        background-repeat: no-repeat;
+                        background-size: 100%;
+                        background-position: center center;
+                    }
+                    .icon-tip {
+                        background-image: url(./img/icon_tip.png);
+                    }
+                    .icon-people {
+                        background-image: url(./img/icon_people.png);
+                    }
+                    h1 {
+                        font-size: 28px; /*px*/
+                        color: #333333;
+                        line-height: 60px;
+                    }
+                    p {
+                        font-size: 24px; /*px*/
+                        color: #999999;
+                        line-height: 1.5;
+                        margin-bottom: 30px;
+                        em {
+                            color: #fe9626;
+                        }
+                    }
+                }
+            }
+            .i-know-button {
+                display: block;
+                border: none;
+                outline: none;
+                width: 350px;
+                height: 80px;
+                line-height: 80px;
+                text-align: center;
+                background-color: #fea13d;
+                color: #ffffff;
+                font-size: 30px; /*px*/
+                border-radius: 40px;
+                margin: 0 auto 50px auto;
+                cursor: pointer;
+                font-weight: bold;
+            }
+        }
+    }
+
+    // 2. 查看推文链接
+    .tweet-view-confirm {
+        dl {
+            text-align: left;
+        }
+        dt {
+            font-size: 28px; /*px*/
+            color: #999999;
+            margin-bottom: 15px;
+        }
+        dd {
+            font-size: 24px; /*px*/
+            color: #666666;
+            margin-bottom: 20px;
+        }
+    }
+
+    // 3. 提供推文链接
+    .tweet-edit-confirm {
+        .co-dialog-btn-line-cancel {
+            display: none;
+        }
+        .desciption {
+            font-size: 28px; /*px*/
+            color: #666666;
+            border-bottom: $gray-border;
+            padding: 0 30px 20px 30px;
+        }
+        .form-control {
+            margin-top: 30px;
+        }
+        .form-label {
+            font-size: 28px; /*px*/
+            color: #999999;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .textarea-field {
+            width: 100%;
+        }
+    }
+
+    // 4. 修改分成比例
+    .proportion-edit-confirm {
+        .co-dialog-confirm {
+            text-align: left;
+        }
+        .label, 
+        .proportion-tip {
+            font-size: 28px; /*px*/
+            color: #999999;
+            line-height: 2;
+        }
+        .proportion-tip {
+            font-size: 26px; /*px*/
+            margin-top: 30px;
+        }
+        .current-proportion {
+            padding-bottom: 15px;
+            border-bottom: $gray-border;
+            font-size: 28px; /*px*/
+            color: #666666;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+        .proportion-edit-wrapper {
+            .input-field-wrapper {
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                width: 500px;
+                &:after {
+                    content: "%";
+                    font-size: 26px; /*px*/
+                    color: #666666;
+                    line-height: 1.5;
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+
+    // 5. 申请推广
+    .switch-confirm {
+        .law-statement-paragraph {
+            margin-top: 20px;
+        }
+        .view-protocol-link {
+            cursor: pointer;
+            color: #33bb49;
+        }
+    }
+
+    // 6. 滞后下架提示
+    .delay-offshelf-tip {
+        text-align: center;
+        p {
+            font-size: 28px; /*px*/
+            line-height: 1.5;
+            color: #666;
+            margin-bottom: 32px;
+            text-align: left;
+            strong {
+                color: #F73657;
+            }
+        }
+        img {
+            width: 320px;
+        }
+    }
+
+
+    /* 空页面提示 */
+    .empty-tips {
+        text-align: center;
+        line-height: 2;
+        margin-top: 120px;
+        color: #999999;
+        font-size: 24px; /*px*/
+        img {
+            width: 200px;
+        }
+        .promote-condition {
+            padding: 0 50px;
+            display: inline-block;
+            text-align: left;
+            line-height: 1.6;
+        }
+    }
+}

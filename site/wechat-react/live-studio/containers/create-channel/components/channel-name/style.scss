@@ -1,0 +1,96 @@
+.channel-name-container {
+    .channel-name {
+        height: 438px;
+        border-top-left-radius: 26px;
+        border-top-right-radius: 26px;
+        background-color: #fff;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+
+        .header {
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: #666;
+            font-size: 36px;/*px*/
+            font-weight: bold;
+            .complete {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0;
+                padding: 20px 30px;
+                font-size: 30px;/*px*/
+                color: #666;
+                font-weight: normal;
+            }
+        }
+        textarea {
+            width: 690px;
+            height: 274px;
+            background:rgba(247,247,247,1);
+            border-radius:20px;
+            border: none;
+            outline: none;
+            font-size: 30px;/*px*/
+            color: #666;
+            padding: 30px;
+            box-sizing: border-box;
+            margin: 0 auto;
+            font-weight: bold;
+
+            &::placeholder {
+                font-weight: normal;
+            }
+        }
+    }
+    .black {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,.6);
+        z-index: 5;
+    }
+    .black-enter {
+        opacity: 0.01;
+    }
+    .black-enter.black-enter-active {
+        opacity: 1;
+        transition: all 300ms ease-in;
+    }
+    .black-leave {
+        opacity: 1;
+    }
+    .black-leave.black-leave-active {
+        opacity: 0.01;
+        transition: all 300ms ease-in;
+    }
+    .channel-name-tst-enter {
+        opacity: 0.01;
+        transform: translateY(100%);
+    }
+    .channel-name-tst-enter.channel-name-tst-enter-active {
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 300ms ease-in;
+    }
+    .channel-name-tst-leave {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .channel-name-tst-leave.channel-name-tst-leave-active {
+        opacity: 0.01;
+        transform: translateY(100%);
+        transition: all 300ms ease-in;
+    }
+}

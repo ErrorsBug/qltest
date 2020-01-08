@@ -1,0 +1,70 @@
+.coral-focus-middle{
+    .user-info-box{
+        width: 90%;
+        padding:20px;
+        display: flex;
+        margin: 0 auto;
+        .head-pic{
+            width:110px;
+            height: 110px;
+            border-radius: 60px;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+            margin-right: 30px;
+        }
+        .head-info{
+            flex: 1;
+            overflow: hidden;
+            .name{
+                color: #333;
+                font-size: 30px;/*px*/
+                margin: 15px 0 20px;
+                line-height: 50px;
+                span{
+                    color: #FF9F00;
+                    font-size: 22px;/*px*/
+                    border: 1px solid #FF9F00;/*px*/
+                    border-radius: 10px;
+                    vertical-align: middle;
+                    padding: 4px;
+                    margin-right: 20px;
+                }
+                
+            }
+            .guid{
+                color: #999;
+                font-size: 24px;/*px*/
+            }
+        }
+    }
+    .card{
+        width:90%;
+        margin: 0 auto;
+        img{
+            width:100%;
+            height: auto;
+        }
+    }
+    .bottom{
+        width: 100%;
+        height: 60px;
+        color: #999;
+        font-size: 26px;/*px*/
+        text-align: center;
+        margin: 30px auto;
+        
+        &::before{
+            content: '';
+            display: inline-block;
+            width:140px;
+            height: 34px;
+            background: url('./img/ql-logo.png') center center no-repeat;
+            background-size: auto 100%;
+            vertical-align: middle;
+        }
+        
+    }
+}

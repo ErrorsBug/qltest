@@ -1,0 +1,77 @@
+{{#if isLogIn}}
+<div id="speakBottom" class="speakBottom">
+    <ul class="tab-bar-ul tab-speak">
+        <li class="tab-voice icon-mic" bottom-class="voiceBottom">语音<b class="first-record" hidden><i></i>点击开始语音讲课</b></li><li class="tab-text icon-keyboard" bottom-class="textBottom">文字</li><li class="tab-media icon-medias" bottom-class="mediaBottom">媒体库</li><li class="btn-mLibrary icon-ppt">{{#compare topicPo.style '===' 'ppt'}}课件{{else}}素材库{{/compare}}</li>
+    </ul>
+
+    <div class="recording-tab-box">
+        <span id="save-button" style="position: absolute; left: 0px; top: 0px; z-index: 100;"> 
+            <span id="flashcontent">  
+                <p><a href="https://get.adobe.com/cn/flashplayer/">如未安装Flash，请点击此处下载</a></p>   
+            </span>   
+        </span>  
+        <dl class="recording-click">
+            <dd class="btn-dd ">
+                <i></i>
+                <div id="btnStartRec" class="btn-recording start-rec" onmousedown="return false"></div>
+                <div id="btnStopRec" class="btn-recording stop-rec" onmousedown="return false"></div>
+                <div id="btnSentRec" class="btn-recording send-rec" onmousedown="return false"><b>点击发送</b></div>
+                <div id="btnCancelRec" class="btn-cancel-clickRec" onmousedown="return false">刷新</div>
+            </dd>
+        </dl>
+        <dl class="recording-box">
+            <dd class="btn-dd">
+                <i></i>
+                <div id="btnRecording" class="btn-recording"></div>
+            </dd>
+            <!--<dd class="tips-dd">按住说话</dd>-->
+        </dl>
+        <span class="second-dd"><i></i><var>0</var>s/60s<i></i></span>
+        <span class="rec-Title-box"><b>点击一下录音</b><b>按住说话</b></span>
+        <span class="tab-recordingType">
+            <a class="recType-1" href="javascript:;">单击模式</a><a class="recType-2" href="javascript:;">长按模式</a>
+        </span>
+        <a class="btn-down-app" href="http://a.app.qq.com/o/simple.jsp?pkgname=com.thinkwu.live">下A<br>P<br>P<br>音质翻倍<i>》</i></a>
+    </div>
+    
+    <div class="text-input-box">
+        <span class="boxFlex">
+            <textarea class="speakInput" placeholder="来说点什么吧..."  onfocus="if(this.getAttribute('placeholder')=='来说点什么吧...')this.setAttribute('placeholder','')" onblur="if(this.getAttribute('placeholder')=='')this.setAttribute('placeholder','来说点什么吧...')" ></textarea>
+        </span>
+        <i class="btnLiveTalk" onmousedown="return false">发送</i>
+    </div>
+    
+    <div class="media-box">
+        <span class="icon-pictures btnImgUpload">图片</span>
+        <span id="btnUploadMP3" class="icon-records btnUploadMP3">音频</span>
+        <span class="icon-videos btnInsertVideo">视频</span>
+    </div>
+    
+    
+    <div class="recordingTips rTips-1">录满60秒将自动发送，并启动下一条录音</div>
+    <div class="recordingTips rTips-3">手指划出此区域，取消发送</div>
+    <div class="recordingTips rTips-4">松开手指，取消录音</div>
+    <div class="recordingTips rTips-2"><var>3</var>秒后将自动发出</div>
+    <div class="recordingTips rTips-5">发送后即可录制下一条</div>
+</div>
+<!--底部评论框-->
+<div id="student-comment">
+    <div class="background"></div>
+<div class="bottom-content-area webkitBox newCommentBox  {{#compare  topicPo.isBanned "==" 'Y'}}disabled{{/compare}}">
+    <textarea class="input-box boxFlex auto-height" attr-minHeight="35" {{#compare  topicPo.isBanned "==" 'Y'}}disabled="disabled"{{/compare}} ></textarea>
+    <span class="area-placeholder icon-write"></span>
+    {{#compare topicPo.isRelay "!=" "Y"}}<span class="btn-ask" onmousedown="return false"><i></i>提问</span>{{/compare}}
+    <span class="submit" onmousedown="return false">发送</span>
+</div>
+</div>
+
+<!--半透明正在输入小弹窗-->
+<div class="inputing-areowindow">
+    <p><span id="input-person-name"></span>正在输入...</p>
+</div>
+
+{{else}}
+<div class="login-box">
+    <a class="login-btn" href="javascript:;" id="loginbtn">点击登录</a> 
+</div>
+{{/if}}

@@ -1,0 +1,38 @@
+.try-listen-status-bar {
+    display: flex;
+    align-items: center;
+    padding: 12px 35px;
+    justify-content: space-between;
+    line-height: normal;
+    background:rgba(255,249,230,1);
+
+    .content {
+        font-size:28px;
+        font-family:PingFangSC-Regular;
+        font-weight:400;
+        color:rgba(255,159,0,1);
+        display: inline-flex;
+        align-items: center;
+        
+        .icon-playing {
+            width: 36px;
+            height: 36px;
+            margin-right: 10px;
+        }
+    }
+
+    .buy-button,
+    .invite-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 180px;
+        height: 76px;
+        background: rgba(255, 163, 11, 1);
+        border-radius: 10px;
+        font-size: 32px;
+        font-family: PingFangSC-Regular;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 1);
+    }
+}

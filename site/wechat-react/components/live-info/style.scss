@@ -1,0 +1,130 @@
+.co-live-info {
+    position: relative;
+    background: #fff;
+    display: block;
+    padding: 40px;
+    cursor: pointer;
+    .co-live-info-main {
+        display: flex;
+        align-items: center;
+    }
+    .co-live-info-content {
+        overflow: hidden;
+        flex-grow: 1;
+    }
+    .co-live-info-desc {
+        display: flex;
+        align-items: center;
+        margin-top: 2px;
+        white-space: nowrap;
+        margin-left: 14px;
+        .desc-item {
+            font-size: 24px;/*px*/
+            line-height: 34px;/*px*/
+            color: #999;
+            margin-right: 2em;
+            span {
+                color: #333;
+                margin-right: .5em;
+                // font-weight: bold;
+            }
+        }
+    }
+    .avator {
+        flex-shrink: 0;
+        width: 80px;/*px*/
+        height: 80px;/*px*/
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .live-name {
+        margin-left: 14px;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        p {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-size: 32px;/*px*/
+            line-height: 44px;/*px*/
+            color: #4b4b4b;
+        }
+        .live-symbol-list {
+            flex-shrink: 0;
+        }
+    }
+    .follow-btn {
+        flex-shrink: 0;
+        padding: 0 .9em;
+        height: 52px;/*px*/
+        border-radius: 52px;/*px*/
+        color: #f73657;
+        font-size: 24px;/*px*/
+        border: 1px solid #f73657; /*no*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: .5em;
+        background-color: #fff;
+        i {
+            margin-right: .3em;
+        }
+        &.is-follow {
+            color: #b2b2b2;
+            border-color: #b2b2b2;
+        }
+    }
+    .icon_enter {
+        color: #b2b2b2;
+        font-size: 24px;/*px*/
+    }
+}
+
+
+.co-live-info-symbol-list {
+    display: flex;
+    align-items: center;
+    padding-left: .5em;
+    padding-right: .2em;
+    .symbol-item {
+        flex-shrink: 0;
+        width: 34px;/*px*/
+        height: 34px;/*px*/
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin-right: .3em;
+        cursor: pointer;
+    }
+    .s-notidentity {
+        background-image: url("../../assets/images/symbol-icon/realname-icon-n.png");
+    }
+    .s-identity {
+        background-image: url("../../assets/images/symbol-icon/realname-icon-y.png");
+    }
+    .s-livev {
+        background-image: url("../../assets/images/symbol-icon/jiav-icon.png");
+    }
+    .s-livet {
+        background-image: url("../../assets/images/symbol-icon/jiat-icon.png");
+    }
+    .s-hot {
+        background-image: url("../../assets/images/symbol-icon/hot-icon.png");
+    }
+    .s-dai {
+        background-image: url("../../assets/images/symbol-icon/dai-icon.png");
+    }
+    .s-doctor {
+        background-image: url("../../assets/images/symbol-icon/doctor.png");
+    }
+    .s-pyramid {
+        background-image: url("../../assets/images/symbol-icon/pyramid-icon.png");
+    }
+    .s-company {
+        background-image: url("../../assets/images/symbol-icon/icon_enterprise.png");
+    }
+}

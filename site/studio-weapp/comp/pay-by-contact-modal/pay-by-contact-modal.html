@@ -1,0 +1,9 @@
+<view class="modal" wx:if="{{visible}}">
+    <view class="mask"></view>
+    <view class="main">
+        <view class="content">进入客服消息后，发送"{{payTipsContent}}"获取购买链接</view>
+        <view class="btns">
+            <button bind:tap="onConfirmClick" class="confirm" open-type="contact" session-from="{{session}}">好的</button>
+        </view>
+    </view>
+</view>

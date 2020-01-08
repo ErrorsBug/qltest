@@ -1,0 +1,11 @@
+.protal-box{
+    position: absolute;
+    z-index: 11;
+    transform-origin:calc(100% - 32px - 58px) calc(100% - 32px - 58px);
+    transition:transform 1.3s ease;
+}
+
+.protal-box-end{
+    background-color:transparent !important;
+    transform: scale(0);
+}

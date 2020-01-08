@@ -1,0 +1,230 @@
+.check-in-ranking-container {
+    // variable
+    $common_padding: 30px;
+    // style
+    .avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-right: 20px;
+    }
+    .camp-info-wrapper {
+        height: 320px;
+        padding: 0 $common_padding;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        .blur-camp-poster-img {
+            width: auto;
+            height: 100%;
+        }
+        .blur-camp-poster-canvas {
+            width: 100% !important;
+            height: 100% !important;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+        .camp-info {
+            width: 100%;
+            display: flex;
+            flex-flow: row nowrap;
+            margin-top: -30px;
+            .pic {
+                flex-shrink: 0;
+                height: 150px;
+                margin-right: 20px;
+                img {
+                    width: auto;
+                    height: 100%;
+                    border-radius: 8px;
+                    cursor: pointer;
+                }
+            }
+            .info {
+                color: #ffffff;
+                .name {
+                    height: 80px;
+                    line-height: 40px;
+                    font-size: 30px; /*px*/
+                    font-weight: bold;
+                    cursor: pointer;
+                    a {
+                        color: #ffffff;
+                    }
+                }
+                .stat {
+                    line-height: 70px;
+                    font-size: 22px; /*px*/
+                }
+            }
+        }
+    }
+
+    .user-checkin-info-wrapper {
+        height: 130px;
+        position: relative;
+        background-color: #ffffff;
+        .user-checkin-info {
+            position: absolute;
+            left: 50%;
+            top: -40px;
+            transform: translateX(-50%);
+            z-index: 1;
+            background-color: #ffffff;
+            box-shadow: 0px 10px 20px #e5e5e5;
+            width: 690px;
+            height: 160px;
+            padding: 0 $common_padding;
+            box-sizing: border-box;
+            border-radius: 10px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            .user {
+                height: 100px;
+                display: flex;
+                flex-flow: row;
+                .info {
+                    height: 100%;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    .name {
+                        max-width: 350px;
+                        color: #333333;
+                        font-size: 32px; /*px*/
+                        line-height: 1.5;
+                    }
+                    .ranking {
+                        color: #999999;
+                        font-size: 26px; /*px*/
+                    }
+                }
+            }
+            .share-button {
+                width: 120px;
+                height: 60px;
+                line-height: 60px;
+                text-align: center;
+                border-radius: 30px;
+                border: solid #ff97a9;
+                border-width: 2px; /*px*/
+                color: #ff97a9;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .check-in-ranking-list {
+        top: 450px;
+        background-color: #ffffff;
+        .ranking-list-item {
+            margin: 0 $common_padding;
+            padding: $common_padding 0;
+            border-bottom: solid #ebebeb;
+            border-width: 2px; /*px*/
+            height: 80px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            .left {
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                .ranking-number {
+                    font-size: 26px; /*px*/
+                    color: #333333;
+                    width: 56px;
+                    height: 46px;
+                    line-height: 50px;
+                    text-align: center;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: 52px auto;
+                    font-weight: 500;
+                }
+                .small-avatar {
+                    width: 80px;
+                    height: 80px;
+                    margin-left: 20px;
+                }
+                .name {
+                    font-size: 32px; /*px*/
+                    color: #333333;
+                    max-width: 380px;
+                }
+            }
+            .checkin-count {
+                font-size: 46px; /*px*/
+                color: #999999;
+                font-weight: 700;
+                &:after {
+                    content: "次";
+                    font-weight: normal;
+                    font-size: 24px; /*px*/
+                }
+            }
+        }
+        .first-ranking {
+            .ranking-number {
+                background-image: url(./img/first_ranking.png);   
+            }
+        }
+        .second-ranking {
+            .ranking-number {
+                background-image: url(./img/second_ranking.png);
+            }
+        }
+        .third-ranking {
+            .ranking-number {
+                background-image: url(./img/third_ranking.png);
+            }
+        }
+        .first-ranking,
+        .second-ranking,
+        .third-ranking {
+            .checkin-count {
+                color: #fe5670;
+            }
+        }
+    }
+
+    .goto-checkin-button {
+        cursor: pointer;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        font-size: 34px; /*px*/
+        color: #ffffff;
+        background-color: #fe5670;
+        border-radius: 50px;
+        position: fixed;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 690px;
+        max-width: 1280px; /*px*/
+        box-shadow: 0 6px 6px #f8dadf;
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: #ffffff;
+        }
+    }
+
+    .vip-user {
+        display: inline-block;
+        background: url('./img/icon_vip.png') no-repeat right center;
+        background-size: 36px 30px;
+        padding-right: 56px;
+    }
+}

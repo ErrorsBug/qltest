@@ -1,0 +1,20 @@
+{{#compare period '===' 'livegoing'}}
+<div class="head-menu {{#if hidden}} hidden {{/if}}" data-period="livegoing">
+    <span class="icon-livegoing icon-pd"></span><span>进行中</span>
+</div>
+{{/compare}}
+{{#compare period '===' 'seven'}}
+<div class="head-menu {{#if hidden}} hidden {{/if}}" data-period="seven">
+    <span class="icon-seven icon-pd"></span><span>过去7天</span>
+</div>
+{{/compare}}
+{{#compare period '===' 'thirty'}}
+<div class="head-menu {{#if hidden}} hidden {{/if}}" data-period="thirty">
+    <span class="icon-thirty icon-pd"></span><span>过去30天</span>
+</div>
+{{/compare}}
+{{#compare period '===' 'morethree'}}
+<div class="head-menu {{#if hidden}} hidden {{/if}}" data-period="morethree">
+    <span class="icon-morethree icon-pd"></span><span>30天以前</span>
+</div>
+{{/compare}}

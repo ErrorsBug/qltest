@@ -1,0 +1,55 @@
+.ch-personal-image-box{ 
+
+    .ch-personal-add{
+        font-size:24px; 
+        color:rgba(224,65,79,1);
+        display: flex;
+        align-items: center;
+        height:40px;
+        line-height: normal;
+        border-radius:30px;
+        border:1px solid rgba(224,65,79,1); /*no*/
+        padding: 0 16px;
+        i{
+            font-size: 20px;
+            margin-right: 8px;
+        }
+    }
+    .ch-personal-empty{ 
+        padding:32px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+        .ch-personal-left{
+            font-size:24px; 
+            color:rgba(153,153,153,1);
+        }
+    }
+    .ch-personal-image{ 
+        padding:32px;
+        margin-bottom: -16px;
+        &::after{
+            content: '';
+            clear: both;
+            display: table;
+        }
+        .ch-personal-add{ 
+            height:46px; 
+            float: left;
+            margin-right: 16px;
+        }
+        .ch-personal-item{ 
+            float: left;
+            display: flex;
+            align-items: center; 
+            padding: 0 16px;
+            height:48px;
+            background:rgba(247,247,247,1);
+            border-radius:30px;
+            margin-right: 16px;
+            margin-bottom: 16px;
+        }
+    }
+    
+    
+}

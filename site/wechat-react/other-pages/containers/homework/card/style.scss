@@ -1,0 +1,55 @@
+@import "../base-definition";
+
+.homework-card{
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	overflow: auto;
+	background:#fff;
+	.container{
+		padding:40px 80px;
+		img{
+			width:100%;
+			display: block;
+		}
+		.tips{
+			margin-top:10px;
+			display:flex;
+			justify-content: space-between;
+			flex-wrap:wrap;
+			line-height:1.5;
+			font-size:24px;/*px*/
+			.item{
+				white-space: nowrap;
+				display:inline-block;
+				padding-left:15px;
+				position: relative;
+				&:before{
+					width:8px;/*px*/
+					height:8px;/*px*/
+					border-radius:50%;
+					position: absolute;
+					left:0;
+					top:50%;
+					margin-top:-4px;/*px*/
+					background:#faa688;
+					content:'';
+
+				}
+			}
+		}
+		.return-btn{
+			width:400px;
+			height:70px;
+			@include flex-center;
+			margin:60px auto 0;
+			border:1px solid $gray--split-line;
+			border-radius: 50px;
+			background: $gray--background;
+			font-size:28px;/*px*/
+			cursor:pointer;
+		}
+	}
+}

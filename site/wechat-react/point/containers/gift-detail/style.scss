@@ -1,0 +1,101 @@
+
+.gift-detail-page {
+    background: #FFF;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .container {
+        flex: 1;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+    .header {
+        .poster {
+            height: 466px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .title {
+            line-height: 1.4;
+            font-size: 36px; /* px */
+            color: #333;
+            padding: 32px 40px;
+            font-weight: bold;
+        }
+        .line-1 {
+            display: block;
+            margin: 0 32px;
+            height: 1px; /* no */
+            background: #EEE;
+        }
+    }
+
+    .section {
+        padding: 0 40px;
+        .section-title  {
+            font-size: 32px; /* px */
+            color: #333;
+            font-weight: bold;
+            position: relative;
+            padding-left: 28px;
+            margin: 20px 0;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                width: 8px;
+                background: #F73657;
+            }
+        }
+        .section-content {
+            .mark {
+                font-size: 30px; /* px */
+                color: #666;
+            }
+            .pic-list {
+                margin-top: 20px;
+
+                font-size: 0;
+                line-height: 0;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    .footer {
+        flex-shrink: 0;
+        height: 100px; /* px */
+        display: flex;
+        background: #FFF;
+
+        .btn {
+            flex: 1;
+            margin: 12px 40px;
+            font-size: 32px; /* px */
+            // font-weight: bold;
+            background: #F73657;
+            border-radius: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #FFF;
+
+            &.disable {
+                color: #999;
+                background: #EEE;
+            }
+        }
+    }
+}

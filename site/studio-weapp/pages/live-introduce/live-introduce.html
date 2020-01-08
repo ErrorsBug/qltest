@@ -1,0 +1,20 @@
+<view class="live-preview">
+    <image class="live-logo" src="{{liveLogo}}" mode="aspectFill"/>
+    <view class="name">{{liveName}}</view>
+</view>
+
+<view class="intro-section">
+    <view class="title">简介</view>
+    <text class="intro-text" wx:if="{{introText}}">{{introText}}</text>
+    <block wx:for="{{introList}}" wx:key="id">
+        <image class="intro-image" mode="widthFix" src="{{item.url}}"> </image>
+        <text class="intro-text">{{item.msg}}</text>
+    </block>
+</view>
+
+<view class="intro-section" wx:if="{{liveInfo.entity.qrCode}}">
+    <view class="title">公众号</view>
+    <view class="qrcode-wrap">
+        <image class="qrcode-image" mode="widthFix" src="{{liveInfo.entity.qrCode}}"> </image>
+    </view>
+</view>

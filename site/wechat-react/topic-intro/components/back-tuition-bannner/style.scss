@@ -1,0 +1,79 @@
+.back-tuition-banner {
+    height: 90px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    line-height: 1.4;
+    background: {
+        image: url(./img/back-tuition.png);
+        position: center center;
+        size: 100% 100%;
+        repeat: no-repeat;
+    }
+    .icon {
+        height: 66px;
+        width: 66px;
+        margin-right: 10px;
+        background: {
+            image: url(./img/icon-back-tuition.png);
+            position: center center;
+            size: 100% 100%;
+            repeat: no-repeat;
+        }
+    }
+    .back-tuition {
+        color: #fff;
+        flex: 1;
+        .how-much-money {
+            font-size: 24px;/*px*/
+            font-weight: bold;
+        }
+        .how-many-people {
+            font-size: 16px;/*px*/
+        }
+    }
+    .receive {
+        color: #5A15C2;
+        font-size: 32px;/*px*/
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+        >i {
+            margin-left: 6px;
+            font-weight: bold;
+        }
+    }
+    .count-down-container {
+        text-align: right;
+        .label {
+            color: #4A009D;
+            font-size: 20px;/*px*/
+            margin-bottom: 4px;
+            font-weight: bold;
+        }
+        .count-down {
+            display: flex;
+            align-items: center;
+            margin-right: -6px;
+            >span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                font-size: 18px;/*px*/
+                height: 34px;
+            }
+            .time {
+                width: 34px;
+                background: rgba(51,51,51,1);
+                border-radius: 3px;
+                color: #FFDEA4;
+            }
+            .unit {
+                width: 26px;
+                color: #4A009D;
+            }
+        }
+    }
+}

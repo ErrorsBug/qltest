@@ -1,0 +1,283 @@
+/**
+ * @fileoverview 默认皮肤的样式
+ * @author 首作<aloysious.ld@taobao.com>
+ * @date 2015-01-12
+ *
+ * 约定：
+ * 1. 这个文件只定义所有ui组件的尺寸、在prite图中的位置（background、width、height）；
+ * 2. 与layout相关的属性（position、margin等）不在此定义，而交由js的layout模块完成；
+ * 3. 对于复杂的ui组件，其内层的所有样式都可以在这个文件定制（如进度条、音量控制条）；
+ * 4. 在首次迭代中，这个文件开发者会手动编辑，以后与sprite图相关的属性应由代码自动化生成。
+ */
+
+
+.prism-player  {
+    background-color: #000;
+    position: relative;
+
+    .prism-controlbar  {
+        width: 100%;
+        height: 90px;
+        position: relative;
+        z-index: 1;
+        background:#000;
+        display: flex!important;
+        align-items: center;
+        padding:0 32px;
+        box-sizing: border-box;
+
+        .prism-controlbar-bg {
+            display:none;
+        }
+
+        .prism-play-btn {
+            width: 26px;
+            height: 30px;
+            background: url("./img/btn-play.png") no-repeat;
+            background-size: 100%;
+            &.playing {
+                width: 26px;
+                height: 30px;
+                background: url("./img/btn-pause.png") no-repeat;
+                background-size: 100%;
+            }
+        }
+
+        .prism-progress {
+            flex:1;
+            height: 4px;
+            background-color: #808080;
+            position: relative;
+            border-radius: 10px;
+            margin:0 114px 0 97px!important;
+
+            .prism-progress-loaded {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 100%;
+                background-color: #7e2c1f;
+                border-radius: 10px;
+            }
+
+            .prism-progress-played {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 100%;
+                background-color: #fff;
+                border-radius: 10px;
+            }
+            .prism-progress-cursor {
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                top: 50%;
+                margin-top:-8px;
+                left: 0;
+                border-radius: 50px;
+                box-shadow: 0 0 5px #000;
+                background:#fff;
+
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 200%;
+                    height: 200%;
+                    top: 50%;
+                    left: 50%;
+                    margin-top:-100%;
+                    margin-left:-100%;
+                }
+            }
+        }
+
+        .prism-fullscreen-btn,
+        .prism-fullscreen-btn.fullscreen{
+            width: 36px;
+            height: 36px;
+            background: url("./img/btn-fullscreen.png") no-repeat center / 100%;
+        }
+
+        .prism-time-display {
+            height: 100%;
+            width:100%;
+            padding:0 68px 0 58px;
+            box-sizing: border-box;
+            font-size:24px;
+            display: flex;
+            justify-content: space-between;
+            .current-time,
+            .duration{
+                width:97px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #b2b2b2;
+            }
+            .duration{
+                width:114px;
+            }
+            .time-bound{
+                display: none;
+            }
+        }
+    }
+
+    .prism-big-play-btn {
+      width: 100px; 
+      height: 100px;
+      background: url("./img/btn-play-cover.png") center center no-repeat;
+      background-size: 98% 98%;
+    }
+
+    .prism-live-display {
+      width: 56px;/*no*/
+      height: 19px; /*no*/
+      background: url("//gw.alicdn.com/tps/TB1YuE3KFXXXXaAXFXXXXXXXXXX-256-512.png") no-repeat -186px -2px; /*no*/
+    }
+
+    .prism-volume {
+      width: 33px;/*no*/
+      height: 30px;/*no*/
+      background: url("./img/btn-voice.png") no-repeat; /*no*/
+      background-size: 100%;
+    }
+    .prism-volume.mute {
+      width: 33px; /*no*/
+      height: 33px;/*no*/
+      background: url("./img/btn-mute.png") no-repeat; /*no*/
+      background-size: 100%;
+    }
+
+    .prism-cover {
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .prism-ErrorMessage {
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: table;
+        line-height: 60px !important; /*px*/
+        text-align: center;
+        color: rgb(255, 255, 255);
+        z-index: 99;
+    }
+
+
+
+    .prism-loading {
+        width: 110px;
+        height: 110px;
+        margin-top: -54px !important;
+        margin-left: -54px !important;
+
+        .circle {
+            background-color: rgba(0, 0, 0, 0);
+            border: 5px solid; /*no*/
+            border-color: rgba(0, 193, 222, 0.2) rgba(0, 193, 222, 0.5) rgba(0, 193, 222, 0.7) rgba(0, 193, 222, 0.1);
+            opacity: .9;
+            border-radius: 100px;
+            width: 90px;
+            height: 90px;
+            margin: 0 auto;
+            -moz-animation: spinoffPulse 0.9s infinite linear;
+            -webkit-animation: spinoffPulse 0.9s infinite linear;
+        }
+    }
+
+    .prism-hide {
+        display: none;
+    }
+}
+
+@-moz-keyframes spinoffPulse {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spinoffPulse {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+:-webkit-full-screen {
+  width: 100% !important;
+  height: 100% !important;
+}
+:-moz-full-screen {
+  width: 100% !important;
+  height: 100% !important;
+}
+:-ms-full-screen {
+  width: 100% !important;
+  height: 100% !important;
+}
+:-ms-fullscreen {
+  width: 100% !important;
+  height: 100% !important;
+}
+:fullscreen {
+  width: 100% !important;
+  height: 100% !important;
+}
+body.prism-full-window {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  overflow-y: auto;
+}
+.prism-fullscreen {
+  position: fixed;
+  overflow: hidden;
+  z-index: 99999;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100% !important;
+  height: 100% !important;
+  _position: absolute;
+}
+
+
+
+.prism-volume {
+    float: right;
+    margin-right: 40px !important; /*px*/
+    margin-top: 30px !important; /*px*/
+}
+
+[data-dpr="3"] .prism-volume {
+    transform-origin: top;
+    transform: scale(3);
+}
+
+[data-dpr="2"] .prism-volume {
+    transform-origin: top;
+    transform: scale(2);
+}

@@ -1,0 +1,37 @@
+<wxs src="../../../../comp/util.wxs" module="util" />
+
+<view class="container">
+    <scroll-view
+        scroll-y
+        class="recommend-list"
+        style="height: {{scrollHeight}}px"
+        scroll-with-animation="{{true}}"
+        scroll-into-view="{{anchor}}"
+        bindscrolltolower="loadCourseData"
+        bindscroll="handleScroll"
+        lower-threshold="300"
+    >
+        <view class="list-header" id="top"><text>精选免费内容</text></view>
+        <view class="list-wrap">
+            <navigator url="/pages/thousand-live/thousand-live?topicId={{course.businessId}}" wx:for="{{courseList}}" wx:for-item="course" wx:key="businessId">
+                <view class="list-item">
+                    <image class="poster" src="{{course.logo}}"></image>
+                    <view class="info">
+                        <view class="name">{{course.businessName}}</view>
+                        <view class="category">
+                            {{course.liveName}}
+                            <block wx:if="{{course.businessType === 'channel'}}">
+                                <text> </text>| 共{{course.topicCount}}节课
+                            </block>
+                        </view>
+                        <view class="tips">
+                            <view class="count">{{util.digitFormat(course.learningNum)}}次学习</view>
+                        </view>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+        <view class="list-footer" wx:if="{{noMore}}"><text>没有更多了</text></view>
+    </scroll-view>
+    <image hidden="{{!showBackTop}}" class="back-top" mode="widthFix" src="./img/back-top.png" bindtap="backToTop" />
+</view>

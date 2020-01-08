@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>填写收货地址</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="https://img.qlchat.com/qlLive/ico/favicon.ico" type="image/x-icon" />
+    <script src="../../components_modules/lib-flexible/1.0.0/lib-flexible.js"></script><!--ignore-->
+    <script type="text/javascript" src="../../components_modules/require/2.1.18/require.js"></script><!--ignore-->
+</head>
+
+<body>
+    <div id="container">
+        <div class="info">
+            <p>为了将刘媛媛畅销书《我不惧怕成为这样强硬的姑娘》送到您的手中，请完善好以下资料：</p>
+        </div>
+        <div class="item">
+            <div class="lb">姓名</div>
+            <div class="input-wrap"><input id="name" type="text" ></div>
+        </div>
+        <div class="item">
+            <div class="lb">手机号码</div>
+            <div class="input-wrap"><input id="mobile" type="number" ></div>
+        </div>
+        <div class="item">
+            <div class="lb">收货地址</div>
+            <div class="textarea-wrap"><textarea id="address"></textarea></div>
+        </div>
+
+        <div class="submit-btn">提交</div>
+
+        <div class="des">
+            注意事项： <br/>
+            1.仅限2017年9月13日20点前，在中国大陆已购买刘媛媛课程用户可领（不包含港澳台用户）； <br/>
+            2.领书信息每人可填写3次，以最后一次填写为准，若错填、漏填、多填以致于没有获赠书籍，概不负责； <br/>
+            3.领书截止时间：2017年9月15号0点。 <br/>
+        </div>
+    </div>
+    <!--SCRIPT_PLACEHOLDER-->
+    <script>
+        (function (win) {
+
+        
+            require(['./address'], function (address) {
+                address.init();
+            });
+        })(window);
+    </script><!--ignore-->
+    <script type="text/javascript">
+        var _uaq = window._uaq || [];
+        // 配置站点名,默认值为： ql-h5
+        _uaq.push(['set', 'site', 'activity']);
+
+        // 配置站点版本, 默认值为: 1.0.0
+        _uaq.push(['set', 'sitever', '1.0.0']);
+
+        // 配置日志采集服务地址，用于发送采集日志,默认地址为： //collect.qlchat.com
+        _uaq.push(['set', 'server', '[[collectApiPrefix]]']);
+
+        // 配置渠道参数
+        _uaq.push(['set', 'ch', 'query.ch']);
+
+    </script><!--ignore-->
+    <script type="text/javascript" src="[[collectjs]]"></script><!--ignore-->
+</body>
+
+</html>

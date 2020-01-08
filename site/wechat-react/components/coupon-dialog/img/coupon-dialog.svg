@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="680px" height="805px" viewBox="0 0 680 805" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>Oval 2 Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-10.8%" y="-7.6%" width="121.7%" height="117.9%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="20" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.996078431   0 0 0 0 0.305882353   0 0 0 0 0.270588235  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <path d="M26.6143703,47.1167618 C120.401872,15.7055873 212.530415,1.28322414e-14 303.000001,0 C393.267053,0 483.52336,15.6353457 573.768924,46.906037 L573.768924,46.9060371 C589.470454,52.3467223 600.000001,67.1390388 600.000001,83.7564728 L600.000001,686 C600.000001,707.539105 582.539106,725 561.000001,725 L39,725 C17.4608948,725 9.74320699e-15,707.539105 7.10542736e-15,686 L2.07028371e-06,84.0977849 C2.10122864e-06,67.3314673 10.7160217,52.4414137 26.6143703,47.1167618 Z" id="path-2"></path>
+        <circle id="path-4" cx="600" cy="600" r="600"></circle>
+        <path d="M872,1081.97768 L872,1247 C872,1253.62742 866.627417,1259 860,1259 L340,1259 C333.372583,1259 328,1253.62742 328,1247 L328,1081.97768 C328.331477,1081.99251 328.664864,1082 329,1082 C341.150264,1082 351,1072.15026 351,1060 C351,1047.84974 341.150264,1038 329,1038 C328.664864,1038 328.331477,1038.00749 328,1038.02232 L328,792 C328,785.372583 333.372583,780 340,780 L860,780 C866.627417,780 872,785.372583 872,792 L872,1038.02232 C860.313866,1038.54511 851,1048.18487 851,1060 C851,1071.81513 860.313866,1081.45489 872,1081.97768 Z" id="path-6"></path>
+        <filter x="-4.6%" y="-4.8%" width="109.2%" height="110.4%" filterUnits="objectBoundingBox" id="filter-7">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="8" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-4.5%" y="-29.7%" width="109.1%" height="159.3%" filterUnits="objectBoundingBox" id="filter-8">
+            <feGaussianBlur stdDeviation="9" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="新增" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Oval-2-Copy" filter="url(#filter-1)" transform="translate(40.000000, 30.000000)">
+            <mask id="mask-3" fill="white">
+                <use xlink:href="#path-2"></use>
+            </mask>
+            <use id="Mask" fill="#FC2C28" xlink:href="#path-2"></use>
+            <g id="Rectangle-3" mask="url(#mask-3)">
+                <g transform="translate(-299.000000, -709.000000)">
+                    <mask id="mask-5" fill="white">
+                        <use xlink:href="#path-4"></use>
+                    </mask>
+                    <use id="Mask-Copy" stroke="none" fill="#FE4E45" fill-rule="evenodd" xlink:href="#path-4"></use>
+                    <g id="Combined-Shape" stroke="none" fill="none" mask="url(#mask-5)">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-7)" xlink:href="#path-6"></use>
+                        <use fill="#FFFFFD" fill-rule="evenodd" xlink:href="#path-6"></use>
+                    </g>
+                    <path d="M363.5,1060.25 L833.5,1060.25" id="Line" stroke="#E6D7BA" stroke-width="2" fill="none" stroke-linecap="square" stroke-dasharray="15" mask="url(#mask-5)"></path>
+                    <path d="M301,1121 C399.552314,1162.97584 498.552314,1183.96377 598,1183.96377 C697.447686,1183.96377 797.114353,1162.97584 897,1121 L897,1212 L301,1212 L301,1121 Z" id="Rectangle-2" stroke="none" fill="#6D0C0A" fill-rule="evenodd" opacity="0.300000012" filter="url(#filter-8)" mask="url(#mask-5)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

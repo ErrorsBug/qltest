@@ -1,0 +1,5 @@
+<view class="tab-bar">
+    <view class="tab" wx:for="{{tabs}}" wx:key="key" data-key="{{item.key}}" bind:tap="onTabTap">
+        <view class="text {{active===item.key?'active':''}}">{{item.text}}</view>
+    </view>
+</view>

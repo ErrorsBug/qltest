@@ -1,0 +1,310 @@
+.coral-distribution-mine {
+    width: 100%;
+    height: 100%;
+    /* display: flex; */
+    position: absolute;
+    > div {
+        /* flex: 1; */
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+    }
+    .focus-bar-box {
+        margin-bottom: 20px;
+    }
+    .mine-info {
+        background: #fff;
+        padding: 20px 25px;
+        margin-bottom: 20px;
+        .top {
+            overflow: hidden;
+            padding-bottom: 20px;
+            span {
+                float: left;
+                &.real-name-n,
+                &.real-name-y {
+					cursor: pointer;
+                    display: block;
+                    width: 42px;
+					height: 60px;
+					margin-left: 15px;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: 100% auto;
+                }
+                &.real-name-n {
+                    background-image: url("./img/realname-icon-n.png");
+                }
+                &.real-name-y {
+                    background-image: url("./img/realname-icon-y.png");
+                }
+            }
+            .head {
+                display: inline-block;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .name {
+                line-height: 60px;
+                color: #333;
+                font-size: 24px; /*px*/
+                margin: 0 10px;
+            }
+            .title {
+                margin-top: 16px;
+                height: 26px;
+                width: 71px;
+                &.professor {
+                    background: #ffe691;
+                    color: #ba7d51;
+                    background: url(../../../assets/images/coral/professor.png)
+                        center center no-repeat;
+                    background-size: auto 100%;
+                }
+                &.doctor {
+                    background: #e8e8e8;
+                    color: #9e9d9d;
+                    background: url(../../../assets/images/coral/doctor.png)
+                        center center no-repeat;
+                    background-size: auto 100%;
+                }
+                &.bachelor {
+                    border-color: #d9b782;
+                    background: #eacfa5;
+                    color: #aa6a3b;
+                    background: url(../../../assets/images/coral/bachelor.png)
+                        center center no-repeat;
+                    background-size: auto 100%;
+                }
+            }
+
+            .btn-mine {
+                line-height: 60px;
+                color: #999;
+                font-size: 22px; /*px*/
+                float: right;
+            }
+        }
+        .card {
+            background: url(https://img.qlchat.com/qlLive/coral/red-card.jpg)
+                center center no-repeat;
+            background-size: 100% 100%;
+            background-color: #fa2f46;
+            color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(250, 52, 75, 0.5);
+            text-align: center;
+            .bottom {
+                padding: 30px;
+                overflow: hidden;
+                div {
+                    width: 50%;
+                    float: left;
+                }
+            }
+            ul {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.5); /*no*/
+                padding: 30px 20px 50px;
+                overflow: hidden;
+                position: relative;
+                li {
+                    width: 50%;
+                    float: left;
+                    span {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+                &:after {
+                    content: "";
+                    display: block;
+                    width: 1px; /*no*/
+                    height: 60px;
+                    background-color: rgba(255, 255, 255, 0.5);
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    margin-top: -30px;
+                }
+            }
+            .income-str1 {
+                font-size: 22px; /*px*/
+                padding-top: 30px;
+            }
+            .income-num1 {
+                font-size: 70px; /*px*/
+                line-height: 100px;
+                font-weight: 600;
+            }
+            .income-str2 {
+                color: rgba(255, 255, 255, 0.6);
+                font-size: 20px; /*px*/
+            }
+            .income-num2 {
+                color: rgba(255, 255, 255, 0.6);
+                font-size: 30px; /*px*/
+                line-height: 50px;
+            }
+            .income-str3 {
+                display: block;
+                font-size: 20px; /*px*/
+                line-height: 25px;
+            }
+            .income-num3 {
+                display: block;
+                font-size: 40px; /*px*/
+                line-height: 60px;
+            }
+            .btn-income-take {
+                padding: 10px 40px;
+                border-radius: 40px;
+                border: 1px solid #fff; /*no*/
+                font-size: 28px;
+                line-height: 85px;
+            }
+        }
+        .btn-invite {
+            height: 90px;
+            background-color: #ffeadb;
+            border-radius: 80px;
+            position: relative;
+            margin: 30px 0 10px;
+
+            &:after {
+                content: "";
+                display: block;
+                width: 437px;
+                height: 132px;
+                background: url(./img/gift-bg.png) center center no-repeat;
+                background-size: 150% auto;
+                position: absolute;
+                left: 50%;
+                bottom: -20px;
+                margin-left: -218px;
+            }
+        }
+    }
+
+    .mine-manage {
+        padding: 20px;
+        background: #fff;
+        .title {
+            color: #999;
+            font-size: 22px;
+            &:before {
+                content: "";
+                display: block;
+                width: 6px;
+                height: 22px;
+                background-color: #fa2f47;
+                float: left;
+                margin-right: 10px;
+            }
+        }
+        .btn-check-gift-order {
+            float: right;
+            color: #dfa988;
+            font-size: 22px; /*px*/
+        }
+        dl {
+            width: 100%;
+            border-bottom: 1px solid #e5e5e5; /*no*/
+            display: flex;
+            padding: 40px 0;
+            &:last-child {
+                border-bottom: none; /*no*/
+                margin-bottom: 100px;
+            }
+            dd {
+                flex: 1;
+                > div {
+                    width: 100%;
+                    text-align: center;
+                    color: #333;
+                    font-size: 24px; /*px*/
+                    &:before {
+                        content: "";
+                        display: block;
+                        width: 62%;
+                        padding-bottom: 70px;
+                        margin: 0 auto 20px;
+                    }
+                }
+                &.push-list {
+                    div {
+                        &:before {
+                            background: url(./img/coral-manage-1.png) center
+                                center no-repeat;
+                            background-size: 70px auto;
+                        }
+                    }
+                }
+                &.push-order {
+                    div {
+                        &:before {
+                            background: url(./img/coral-manage-2.png) center
+                                center no-repeat;
+                            background-size: 70px auto;
+                        }
+                    }
+                }
+                &.mine-income {
+                    div {
+                        &:before {
+                            background: url(./img/coral-manage-3.png) center
+                                center no-repeat;
+                            background-size: 70px auto;
+                        }
+                    }
+                }
+                &.grounp-manage {
+                    div {
+                        &:before {
+                            background: url(./img/coral-manage-4.png) center
+                                center no-repeat;
+                            background-size: 70px auto;
+                        }
+                    }
+                }
+                &.performance-manage {
+                    div {
+                        &:before {
+                            background: url(./img/coral-manage-5.png) center
+                                center no-repeat;
+                            background-size: 70px auto;
+                        }
+                    }
+                }
+                &.coral-course {
+                    div {
+                        &:before {
+                            background: url(./img/coral-manage-6.png) center
+                                center no-repeat;
+                            background-size: 70px auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .money-dialog {
+        z-index: 201;
+        .take-dialog-wrap {
+            line-height: 50px;
+            font-size: 32px; /*px*/
+            text-align: center;
+            padding-top: 40px;
+            var {
+                color: #e79137;
+                font-size: 32px; /*px*/
+            }
+        }
+    }
+}

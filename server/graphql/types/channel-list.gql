@@ -1,0 +1,97 @@
+# 系列课对象
+type ChannelItem {
+    # 系列课ID
+    id: String
+    # 开始的话题数
+    beginTopicNum: Int
+    # 最近开始的话题时间
+    latestStartTime: String
+    # 最近开始的话题名称
+    latestTopicName: String
+    # 系列课名称
+    name: String
+    # 创建时间
+    createBy: String
+    # 更新时间
+    updateTime: String
+    # 直播间id
+    liveId: String
+    # 付费类型
+    chargeType: String
+    # 系列课简介
+    description: String
+    # 系列课头图
+    headImage: String
+    # Y/N
+    status: String
+    # Y/N
+    topState: String
+    # 是否开启优惠码 Y/N
+    isCouponOpen: String
+    # 话题数量
+    topicCount: Int
+    # ?
+    weight: Float
+    # 开课计划
+    planCount: Int
+    # 转载 Y/N
+    isRelay: String
+    # 是否隐藏 Y/N
+    displayStatus: String
+    # 听课人数
+    learningNum: Int
+    # ?
+    sum: Int
+    # 付费信息
+    chargeConfigs: [ChargeConfig]
+}
+
+# 付费信息对象
+type ChargeConfig {
+    id: String
+    createBy: String
+    createTime: String
+    updateTime: String
+    channelId: String
+    chargeMonths: Int
+    amount: Float
+    status: String
+    discount: Float
+    discountStatus: String
+    groupNum: Int
+}
+
+# 系列课分类对象
+type ChannelTag {
+    # 分类ID
+    id: ID
+    # 直播间id
+    liveId: String
+    # 分类名称
+    name: String
+    # 排序序号
+    sortNum: Int
+    # 分类下系列课总数
+    channelNum: Int
+    # 状态
+    status: String
+    # 创建时间
+    createTime: String
+    # 创建者
+    createBy: String
+    # 更新时间
+    updateTime: String
+    # 更新人
+    updateBy: String
+    # 移动后系列课分类位置
+    targetNum: Int
+}
+
+extend type Query {
+    # 获取系列课分类
+    channelTags(liveId: String, type: String): [ChannelTag]
+    # 分类下的系列课
+    channelList(liveId: String, tagId: String, isCamp: String, page: Int, size: Int): [ChannelItem]
+    # 获取移动到系列课中的系列课列表
+    changeChannelList(liveId: String, page: Int, size: Int): [ChannelItem]
+}

@@ -1,0 +1,199 @@
+#container {
+    height: 100%;
+    overflow: hidden;
+
+    position: relative;
+    background: linear-gradient(#ffb3b1, #ffc3a0);
+
+    padding-top: 80px;
+}
+
+.card-container {
+    margin: 0 60px;
+    padding-bottom: 20px;
+    // width: 640px; /*px*/
+    // margin: auto;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 20px 10px #ffa583;
+    color: #333;
+    text-align: center;
+    line-height: 1.5;
+    position: relative;
+
+    .session-num {
+        position: absolute;
+        height: 108px;
+        width: 194px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+
+        top: -50px;
+        left: -50px;
+    }
+
+    .s1 {
+        background-image: url('./img/s1.png');
+    }
+    .s2 {
+        background-image: url('./img/s2.png');
+    }
+    .s3 {
+        background-image: url('./img/s3.png');
+    }
+    .s4 {
+        background-image: url('./img/s4.png');
+    }
+    .s5 {
+        background-image: url('./img/s5.png');
+    }
+    .s6 {
+        background-image: url('./img/s6.png');
+    }
+    .s7 {
+        background-image: url('./img/s7.png');
+    }
+    .s8 {
+        background-image: url('./img/s8.png');
+    }
+    .s9 {
+        background-image: url('./img/s9.png');
+    }
+    .s10 {
+        background-image: url('./img/s10.png');
+    }
+
+    // 未开放的
+    &.unopen {
+        padding-top: 80px; /*px*/
+    }
+    .unopen {
+        margin: 0 auto 20px auto; /*px*/
+        width: 166px;
+        height: 296px;
+        background: url('./img/unopen.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    .unopen-des {
+        font-size: 36px; /*px*/
+        margin-bottom: 80px; /*px*/
+        padding: 0 30px;
+    }
+    .btn-unopen {
+        cursor: pointer;
+        margin: 0 auto 40px auto;
+        width: 577px;
+        height: 84px;
+        background: url('./img/btn-unopen.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .banner {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+
+        img {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            display: block;
+            width: 100%;
+        }
+    }
+    h1 {
+        font-size: 36px; /*px*/
+        margin-top: 50px; /*px*/
+        padding: 0 30px;
+    }
+    .diff {
+        margin: 40px 0 40px 0;
+        font-size: 28px; /*px*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .star {
+        display: inline-block;
+        width: 38px; /*px*/
+        height: 37px; /*px*/
+        background: url('./img/diff-star.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    .btn-activity {
+        cursor: pointer;
+        margin: auto;
+        width: 577px;
+        height: 84px;
+        background: url('./img/btn-join-activity.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    .btn-check {
+        cursor: pointer;
+        margin: auto;
+        width: 577px;
+        height: 84px;
+        background: url('./img/btn-check-mission.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    .btn-join-now {
+        cursor: pointer;
+        margin: auto;
+        width: 577px;
+        height: 84px;
+        background: url('./img/join-now.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .join-num {
+        margin-top: 20px; /*px*/
+        color: #999;
+        var{
+            color: #ff964e;
+        }
+    }
+}
+
+.btn-to-menu {
+    cursor: pointer;
+    position: absolute;
+    left: 60px;
+    bottom: 30px;
+
+    width: 204px;
+    height: 84px;
+    background: url('./img/btn-menu.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.btn-before-next {
+    cursor: pointer;
+    position: absolute;
+    right: 60px;
+    bottom: 30px;
+
+    width: 304px;
+    height: 84px;
+    background: url('./img/befor-next.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .before {
+        cursor: pointer;
+        width: 49%;
+        height: 100%;
+    }
+    .next {
+        cursor: pointer;
+        width: 49%;
+        height: 100%;
+    }
+}

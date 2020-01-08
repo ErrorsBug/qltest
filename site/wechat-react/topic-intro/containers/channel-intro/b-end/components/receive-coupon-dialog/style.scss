@@ -1,0 +1,92 @@
+.receive-coupon-dialog {
+    .co-dialog-bg {
+        background-color: rgba(0, 0, 0, 0.8)
+    }
+    .co-dialog-content {
+        width: auto;
+        background-color: transparent !important;
+        overflow: visible;
+    }
+    .receive-coupon-container {
+        margin: 0 auto;
+        .receive-coupon-body {
+            position: relative;
+            width: 666px;
+            height: 625px;
+            background: url(./img/receive_coupon2.png) no-repeat center center;
+            background-size: 100% 100%;
+            text-align: center;
+            margin: 0 auto;
+            margin-bottom: 18px;
+            i {
+                font-style: normal;
+            }
+            .top-section {
+                position: absolute;
+                bottom: 47%;
+                width: 100%;
+            }
+            .coupon-amount {
+                color: #fc302e;
+                font-size: 140px;
+                font-weight: bold;
+                line-height: 1;
+                em {
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 17px;
+                    
+                    &::before {
+                        content: "￥";
+                        position: absolute;
+                        right: 100%;
+                        bottom: 4%;
+                        font-size: 70px;
+                    }
+                }
+            }
+            .coupon-type-tip {
+                color: #fc302e;
+                font-size: 20px;
+                line-height: 1.75;
+            }
+            .coupon-validity {
+                font-size: 30px;
+                line-height: 1;
+                color: #6c1827;
+            }
+            .bottom-section {
+                position: absolute;
+                top: 60%;
+                width: 100%;
+            }
+            .coupon-from {
+                color: #ffc63a;
+                font-size: 18px;
+                margin-top: 18px;
+            }
+            .receive-button {
+                color: #6c1827;
+                font-size: 42px;
+                line-height: 80px;
+                width: 400px;
+                height: 80px;
+                margin: 68px auto 0;
+                line-height: 80px;
+                border-radius: 40px;
+                cursor: pointer;
+                background: linear-gradient(to bottom, #ffee40, #ffc53a);
+                font-weight: bold;
+                box-shadow: 0 4px 8px rgba(#4d230a, .13);
+            }
+
+            .icon_close {
+                position: absolute;
+                right: 36px;
+                top: -44px;
+                font-size: 44px;
+                color: #fff;
+            }
+        }
+    }
+}

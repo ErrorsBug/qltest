@@ -1,0 +1,287 @@
+.uni-camp-box{ 
+    height: 100vh;
+    background: #fff; 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    .un-experience-scroll{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        overflow-y: scroll;
+        padding-bottom: 144px;
+        box-sizing: border-box;
+    }
+    .uec-top{
+        img{
+            width: 100%;
+        }
+    }
+    .uec-list{
+        .uec-item{
+            &.uec-first{
+                position: relative;
+                height: 376px;
+                border-bottom: 20px solid #F7F7F7;
+                overflow: hidden;
+                .uec-count{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    padding-top: 40px;
+                    h4{
+                        font-size: 44px; /*px*/
+                        color: #fff;
+                        font-weight: 500;
+                        margin-bottom: 16px;
+                        line-height: 1.4;
+                        background:linear-gradient(180deg, rgba(255,233,194,1) 0%, rgba(241,177,95,1) 100%);
+                        -webkit-background-clip:text;
+                        -webkit-text-fill-color:transparent;
+                    }
+                    p{
+                        font-size: 44px;  /*px*/
+                        font-weight: 500;
+                        color: #fff;
+                    }
+                }
+            }
+            img{
+                width: 100%;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+.uec-bottom{ 
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    height: auto !important;
+    img{
+        width: 100%;
+        vertical-align: middle;
+    }
+}
+.university-dialog-payment{
+    z-index: 200 !important;
+    .co-dialog-bottom{
+        background: #fff;
+    }
+} 
+.uni-pay-btn{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    &.max-hei{
+        height: 166px;
+    }
+    & > div{
+        display: flex;
+    }
+    .uni-pay-timer{
+        width: 100%;
+        height: 66px;
+        padding: 0 40px;
+        box-sizing: border-box;
+        align-items: center;
+        color: #fff;
+        font-size: 24px; /*px*/
+        font-weight: 500;
+        background: rgba(0,0,0,.7);
+    }
+    .uni-pay-com{
+        width: 50%;
+        height: 100px;
+        display: flex;
+        &.uni-pay-red{
+            background: #E0414F;
+            line-height: normal;
+            justify-content: center;
+            align-items: center;
+            font-size: 48px; /*px*/
+            color: #fff;
+            font-weight: 500;
+        }
+        &.uni-pay-info {
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 40px;
+            background: #fff;
+            p{
+                font-size: 20px; /*px*/
+                color: #666;
+                line-height: 1.4;
+                margin-bottom: 4px;
+                strong{
+                    font-size: 32px; /*px*/
+                    color: #E0414F;
+                    font-weight: 500;
+                }
+                em{
+                    text-decoration: line-through;
+                    padding-left: 10px;
+                }
+            }
+            span{
+                font-size: 22px; /*px*/
+                color: #999;
+            }
+        }
+        &.uni-pay-original{
+            font-size: 40px; /*px*/
+            color: #E0414F;
+            font-weight: 500;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+        }
+    }
+}
+
+.uni-pay-btn-put{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height:144px !important;
+    background:rgba(255,255,255,1);
+    z-index: 2; 
+    padding-left: 16px;
+    .uni-pay-timer{
+        width: 100%;
+        height: 66px;
+        padding: 0 40px;
+        box-sizing: border-box;
+        align-items: center;
+        color: #fff;
+        font-size: 24px; /*px*/
+        font-weight: 500;
+        background: rgba(0,0,0,.7);
+    }
+    .uni-pay-btn{
+        height: 100px;
+        display: flex;
+        line-height: normal;
+        justify-content: center;
+        align-items: center;
+        font-size:40px;
+        font-weight:bold;
+        height:112px;
+        border-radius:16px;
+        margin-right: 16px ;
+        &.uni-pay-red{ 
+            color:rgba(255,255,255,1);
+            background:rgba(247,54,87,1);
+        }
+        &.uni-pay-pink{ 
+            color:rgba(247,54,87,1);
+            background:rgba(255,240,240,1)
+        }
+        
+    }
+}
+.uni-camp-sure{
+    background: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 60px;
+    box-sizing: border-box;
+    .uni-camp-sure-cont{
+        background: #fff;
+        border-radius: 28px;
+        h4{
+            padding: 48px 0 16px;
+            font-size: 32px; /*px*/
+            color: #333;
+            font-weight: bold;
+            line-height: 1.4;
+            text-align: center;
+        }
+        p{
+            padding: 0 48px;
+            line-height: 1.5;
+            font-size: 28px; /*px*/
+            color: #666;
+            margin-bottom: 48px;
+        }
+        .uni-camp-sure-btns{
+            display: flex;
+            border-top: 2px solid #eee; /*no*/
+            & > div{
+                width: 50%;
+                height: 96px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                font-size: 32px; /*px*/
+                color: #333;
+                &.red{
+                    color: #F73657;
+                    &::before{
+                        position: absolute;
+                        top: 0;
+                        left: -1px; /*no*/
+                        width: 2px; /*no*/
+                        height: 100%;
+                        z-index: 2;
+                        background: #eee;
+                        content: '';
+                    }
+                }
+            }
+        }
+    }
+}
+.university-experience-camp-float{
+    background:linear-gradient(316deg,rgba(249,204,61,1) 0%,rgba(255,250,178,1) 100%);
+    border-radius:200px 0px 0px 200px;
+    color:rgba(235,81,0,1);
+    box-sizing: border-box;
+    padding:0;
+    width: 242px;
+    right: -166px;
+    transition: 0.5s right;
+    &.on{
+        right: 0;
+        transition: 0.5s right;
+    }
+    img{
+        width: 52px;
+        margin-right: 14px;
+    }
+}
+.uni-pay-btn-put-top{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    height:72px;
+    background:rgba(247,247,247,1);
+    font-size:28px; 
+    color:rgba(153,153,153,1);
+    span{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+        max-width: 450px;
+        line-height: 1.5;
+    }
+}

@@ -1,0 +1,120 @@
+@import "../base-definition";
+ 
+.guest-separate-channel-list-c{
+	position:absolute;
+	left:0;
+	top:0;
+	line-height:1.2;
+
+	.profit-list {
+		padding: 0 20px;
+	}
+	.list-wrap{
+		// margin-top:20px;
+		overflow: hidden;
+		.item{
+			position:relative;
+			margin-bottom:20px;
+			background:#fff;
+			&:last-child{
+				margin-bottom:0;
+			}
+			.info-wrap{
+				padding:30px 0 0 0;
+				display:flex;
+				position:relative;
+				.avatar{
+					@include round-avatar(80px);
+					flex-shrink: 0;
+				}
+				.details{
+					position:relative;
+					margin-left:20px;
+					padding:0 0 20px 0;
+					flex:1;
+					.title{
+						font-size:28px;/*px*/
+						margin-bottom:10px;
+					}
+					.proportion,
+					.deadline,
+					.settlement{
+						line-height:1.8;
+						color:$gray--tip;
+						.price{
+							color:$main-color;
+						}
+					}
+					.type{
+						position:absolute;
+						top:0px;
+						right:30px;
+						border:1px solid #e5e5e5;/*no*/
+						border-radius: 4px;
+						display: block;
+						padding:0px 10px;
+						font-size: 20px;/*px*/
+						color:#999;
+						height: 30px;
+						line-height: 30px;
+
+					}
+				}
+				
+			}
+			.operation{
+				border-top:1px solid #eee;/*no*/
+				border-bottom:1px solid #eee;/*no*/
+				display:flex;
+				align-items: center;
+				.sepo {
+					display: block;
+					border-right: 1px solid #eee; /*no*/
+					height: 40px;
+				}
+				.btn{
+					flex:1 0;
+					height:76px;
+					@include flex-center;
+					// &:last-child{
+					// 	border-left:1px solid #eee;/*no*/
+					// }
+				}
+			}
+		}
+	}
+	.scroll-box{
+		position:absolute;
+	}
+	.withdraw-detail-list {
+		padding: 0 40px;
+	}
+}
+
+.my-guest-profit {
+    height: 100%;
+    .container {
+        height: 100%;
+    }
+    .profit-scroll-box {
+        padding: 20px 40px 0;
+		box-sizing: border-box;
+		.common-empty {
+            top: 65%;
+        }
+    }
+}
+
+.rename-confirm {
+	.rename-confirm-content {
+		padding: 0 20px;
+	}
+	.rename-input {
+		height: 52px;
+		line-height: 52px;
+		width: 100%;
+		font-size: 28px; /*px*/
+		outline: none;
+		border: 2px solid #ccc;
+	}
+}

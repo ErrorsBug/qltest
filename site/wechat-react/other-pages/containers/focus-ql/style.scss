@@ -1,0 +1,72 @@
+.focus-ql-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 138px;
+
+    .focus-text {
+        position: relative;
+        width: 520px;
+        padding: 25px;
+        border-radius: 10px;
+        background-image: url('./images/bg.png');
+        background-repeat: repeat;
+
+        font-size: 30px;/* px */
+        line-height: 1.6;
+        color: rgba(187,110,58,0.93);
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 23px;
+            height: 17px;
+            bottom: -17px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-image: url('./images/arrow.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .qr-code-container {
+        position: relative;
+        width: 600px;
+        height: 600px;
+        background-image: url('./images/qr-code-bg.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        img {
+            position: absolute;
+            top: 123px;
+            left: 112px;
+            display: block;
+            width: 390px;
+            height: 390px;
+        }
+
+    }
+
+    .tip {
+        font-size: 28px;/* px */
+        color: #666666;
+    }
+
+    .button-row {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 90px;
+        border-top: 1px solid #e5e5e5;/* no */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 32px;/* px */
+        color: #ee3b59;
+        cursor: pointer;
+        background-color: #ffffff;
+    }
+}

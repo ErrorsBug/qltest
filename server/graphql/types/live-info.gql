@@ -1,0 +1,60 @@
+# 直播间信息
+type LiveEntity {
+    # 公众号二维码图片
+    qrCode: String
+    # 创建者
+    createBy: String
+    # 直播头部背景URL
+    headerBgUrl: String
+    # 直播间ID
+    id: String
+    # 直播简介
+    introduce: String
+    # 直播LOGO
+    logo: String
+    # 直播名称
+    name: String
+    # 状态publish=正常直播；stop=暂停直播；illegality=违规
+    status: String
+    # 公众号名称
+    subscriptionName: String
+    # banners
+    # symbolList
+}
+
+# 直播间扩展信息
+type LiveEntityExtend {
+    # 加T时间
+    liveTTime: String
+    # 加V时间
+    liveVTime: String
+    # 直播间是否加VY是，N否
+    isLiveV: String
+    # 直播间是否加TY是，N否
+    isLiveT: String
+    # 赞赏介绍
+    rewardIntroduce: String
+    # 赞赏图片URL
+    rewardPic: String
+    # 赞赏金额
+    rewardPrice: String
+}
+
+# 直播间信息
+type LiveInfo {
+    # 直播间信息
+    entity: LiveEntity
+    # 直播间扩展信息
+    entityExtend: LiveEntityExtend
+    # 直播间是否绑定第三方公众号true是, false否
+    isBindThird: Boolean
+    # 状态unwrite=未填写， auditing已填写审核中，audited=已审核，auditBack=审核驳回
+    status: String
+    # true=需要弹窗当status！=audited时，是否满足弹出认证条件
+    isPop: Boolean
+}
+
+extend type Query {
+    # 获取直播间信息
+    liveInfo(liveId: String): LiveInfo
+}

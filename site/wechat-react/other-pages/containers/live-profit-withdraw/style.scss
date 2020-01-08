@@ -1,0 +1,282 @@
+@import "../../../assets/styles/base-definition";
+
+$red: #f73657;
+$border: #f0f0f0;
+.live-profit-withdraw-page {
+    height: 100%;
+    background: #fff;
+    .live-profit-withdraw-wrap {
+        height: 100%;
+        position: relative;
+        overflow-y: auto;
+    }
+    .btn-invalid{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 12px 40px;
+        background: #fff;
+        > button {
+            height: 88px;
+            line-height: 88px;
+            color: #fff;
+            width: 100%;
+            border-radius: 100px;
+            border: none;
+            background-color: $red;
+            font-size: 32px; /*px*/
+            &.invalid {
+                background:rgba(238,238,238,1);
+                color: #999999;
+            }
+            cursor: pointer;
+        }
+    }
+}
+
+.live-profit-withdraw-container {
+    // background: #fff;
+    position: relative;
+    text-size-adjust: none;
+    position: relative;
+
+    .my-head-wrap {
+        padding: 30px 40px 32px;
+    }
+    .my-head{
+		padding: 50px 0 56px;
+        background: url('./img/gold.png');
+        background-size: 100% auto;
+        background-position: top center;
+        display: flex;
+        box-shadow:0px 4px 40px 0px rgba(0,0,0,0.14);
+        border-radius:12px;
+		.my-com{
+			width: 50%;
+			box-sizing: border-box;
+            padding: 0 41px;
+            text-align: center;
+            text-shadow: 0 0.026667rem 0.066667rem #be8e61;
+			&:first-child{
+				position: relative;
+				&::before{
+					width: 1px; /*no*/
+					height: 120px;
+					position: absolute;
+					top: 50%;
+					right: 0;
+					content: '';
+					background: #FFFFFF;
+					transform: translateY(-50%);
+				}
+			}
+			span{
+				font-size: 30px;/*px*/
+				display:block;
+                padding-bottom: 6px;
+                color:rgba(255,255,255,1);
+                line-height:42px;
+			}
+			p{
+				font-size: 40px; /*px*/
+                font-weight:600;
+                color:rgba(255,255,255,1);
+                line-height:56px;
+			}
+		}
+    }
+    .last-tip{
+        height: 90px;
+        margin: 0 40px;
+        background-color: #fff;
+        border-bottom: 1px solid $border; /*no*/
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span{
+            font-size: 30px; /*px*/
+        }
+        .btn-clear{
+            color: #F73657;
+            &.icon_enter{
+                position: relative;
+                padding-right: 30px;
+                &::before{
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    font-size: 24px;
+                    color: #666;
+                    transform: translateY(-34%);
+                }
+            }
+
+        }
+    }
+    // 协议弹框
+    .protocol-dialog {
+        .co-dialog-content {
+            width: 670px;
+            border-radius: 15px;
+        }
+        .main {
+            margin: 50px 0 30px;
+            padding: 20px 50px;
+            height: 800px;
+            overflow: auto;
+            overflow-x: hidden;
+        }
+    }
+
+    > .input-container {
+        padding: 0 40px;
+        background-color: #fff;
+        animation: right_in 0.6s ease-out;
+        > div {
+            height: 90px;
+            border-bottom: 1px solid $border; /*no*/
+            .main {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: space-between;
+                height: 100%;
+                > label {
+                    white-space: nowrap;
+                    display: inline-block;
+                    margin-right: 30px;
+                    font-size: 30px; /*px*/
+                    color: #666;
+                }
+                > input {
+                    flex: 1;
+                    border: none;
+                    height: 60px;
+                    font-size: 30px; /*px*/
+                    outline: none;
+                    text-align: right;
+                    &::placeholder{
+                        // font-size: 22px;/*px*/
+                    }
+                }
+            }
+            .tip {
+                color: #999;
+                line-height: 30px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    > .tips {
+        animation: right_in 0.6s ease-out;
+        // margin-top: 20px;
+        background-color: #fff;
+        padding: 20px 40px;
+        list-style: none;
+        > li {
+            color:rgba(153,153,153,1);
+            line-height:26px;
+            color: #999999;
+            font-size: 28px; /*px*/
+            line-height: 52px; /*px*/
+            span{
+                color: #666;
+                font-weight: bold;
+            }
+            a {
+                color: #708DB7;
+            }
+        }
+    }
+
+
+    .client-dialog{
+        text-align: center;
+        .main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding:40px 20px;
+            max-width: 440px;
+            margin: 0 auto;
+
+            .s1{
+                font-size: 24px;/* px */
+                line-height: 40px;/* px */
+                color: #333;
+                text-align: left;
+            }
+            .s2{
+                font-size: 24px;/* px */
+                line-height: 40px;/* px */
+                color: #333;
+            }
+            img{
+                width: 300px;
+                height: 300px;
+                overflow: hidden;
+                margin: 20px 0;
+                display: block; 
+            }
+        }
+    }
+   
+}
+
+.money-link {
+    cursor: pointer;
+    padding: 15px 40px;
+    color: #FF9F00;
+    font-size: 28px; /*px*/
+    text-decoration: none;
+    background-color: #fff;
+    margin-bottom: 200px;
+}
+// 购买协议勾选
+.agreement-checked {
+    padding: 30px 50px 0 60px;
+    font-size: 26px; /*px*/
+    .agree-label {
+        position: relative;
+    }
+
+    .fake-checkbox {
+        position: absolute;
+        top: 3px;
+        left: -40px;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        vertical-align: middle;
+        margin-right: 10px;
+        border-radius: 100%;
+        border: 2px solid #ddd;
+        box-sizing: border-box;
+        &.fake-checkbox-checked {
+            border: none;
+            background-image: url(./img/checked.png);
+            background-size: contain;
+        }
+    }
+    .label-text {
+        display: block;
+        color: #999999;
+        font-size: 26px; /*px*/
+        line-height: 36px;
+    }
+    .agreement-link {
+        color: #f73657;
+        text-decoration: underline;
+    }
+}
+
+@keyframes right_in {
+    0% {
+        transform: translateX(40px);
+    }
+}

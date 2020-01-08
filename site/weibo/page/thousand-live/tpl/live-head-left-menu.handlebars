@@ -1,0 +1,12 @@
+{{#if hasChannelId}}
+    <a class="lhbtn icon-home-2 {{#compare  topicPo.style "===" 'ppt'}}ppt-black{{/compare}} tabTopMenu" href="javascript:;"></a>
+{{else}}
+    <a class="lhbtn icon-home-2 {{#compare topicPo.style "===" 'ppt'}}ppt-black{{/compare}}" href="/wechat/page/live/{{topicPo.liveId}}"></a>
+{{/if}}
+{{#if canCreateLive}}
+    <a class="lhbtn create-live" href="/wechat/page/create-live">创建</a>
+{{/if}}
+<ul class="top-menu">
+    <li><a href="/wechat/page/live/{{topicPo.liveId}}">返回主页</a></li>
+    <li><a href="/live/channel/channelPage/{{topicPo.channelId}}.htm">返回系列课</a></li>
+</ul>

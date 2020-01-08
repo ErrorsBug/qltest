@@ -1,0 +1,70 @@
+.subscribe-cm-container {
+    
+    .scroll-box{
+        background: #fff;
+    }
+    .btn-cancel {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        height: 46px;
+        padding: 0 24px;
+        border: 1px solid #e5e5e5; /*no*/
+        border-radius: 23px;
+        font-size: 24px;
+        color: #999;
+        line-height: 46px; 
+    }
+    h2 {
+        padding: 72px 0 22px;
+        color: #333;
+        font-size: 40px;/*px*/
+        font-weight: 400;
+        text-align: center;
+    }
+    .deco {
+        padding-bottom: 20px;
+        text-align: center;
+        >div {
+            display: inline-block;
+            vertical-align: middle;
+            background: #f0f0f0;
+        }
+        .line {
+            height: 1px; /*no*/
+            width: 130px; /*no*/
+        }
+        .dot {
+            margin: 0 30px;
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+        }
+    }
+    .label-list {
+        padding: 0 30px 80px;
+    }
+    // .btn-change {
+    //     >span {
+    //         vertical-align: middle;
+    //     }
+    //     margin: 12px auto 58px;
+    //     padding: 12px;
+    //     width: 8em;
+    //     font-size: 30px;
+    //     text-align: center;
+    //     color: #ff4b69;
+    // }
+    .btn-subscribe {
+        height: 90px;
+        width:100%;
+        text-align: center;
+        line-height: 90px;
+        font-size: 30px;/*px*/
+        background: #ff4b69;
+        color: #fff;
+        position:absolute;
+        bottom:0;
+    }
+    
+}

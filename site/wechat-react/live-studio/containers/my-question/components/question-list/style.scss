@@ -1,0 +1,82 @@
+ul.co-question-list
+{
+	 > li
+	{
+		background-color: #fff;
+		border-bottom: 1px solid #f0f0f0;/* no */
+		padding: 30px;
+
+		& > header,
+		& > footer
+		{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		header
+		{
+			.user
+			{
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				 > img
+				{
+					border-radius: 100%;
+					height: 70px;
+					width: 70px;
+					margin-right: 20px;
+				}
+				.name
+				{
+					font-size: 25px;/* px */
+					color: rgb(102, 102, 102);
+				}
+			}
+
+			.charge
+			{
+				font-size: 25;/* px */
+				color: rgb(247, 54, 87);
+			}
+		}
+
+		footer
+		{
+			time
+			{
+				font-size: 20;/* px */
+				color: rgb(148, 159, 164);
+			}
+
+			 > span
+			{
+				font-size: 20px;/* px */
+				&.answered
+				{
+					color: rgb(179, 179, 179);
+				}
+
+				&.to-be-answered
+				{
+					color: rgb(250, 170, 30);
+				}
+
+				&.overtime
+				{
+					color: rgb(247, 54, 87);
+				}
+			}
+		}
+
+		main
+		{
+			font-size: 25;/* px */
+			color: rgb(63, 63, 63);
+			line-height: 1.406;
+			margin: 20px 0;
+		}
+	}
+}

@@ -1,0 +1,13 @@
+<#if liveTopicInviteViews?exists && liveTopicInviteViews?size gt 0>
+                    <#list liveTopicInviteViews?sort-by("sort") as view>
+                        <#if view-index lt 10>
+                        <dd attr-id="${view.id}" >
+                            <span class="guest-img"><img src="<#if view.userBackgroundImgUrl?index-of('wx.qlogo.cn/mmopen') gte 0>${view.userBackgroundImgUrl}<#else>${view.userBackgroundImgUrl?default('https://img.qlchat.com/qlLive/liveCommon/normalLogo.png')?replace('@132h-132w-1e-1c-2o', '')}@132h-132w-1e-1c-2o</#if>"></span>
+                                <span class="guest-title">
+                                    <var class="guest-title-1">${view.name}</var>
+                                    <var class="guest-title-2">${view.title}</var>
+                            </span>
+                        </dd>
+                        </#if>
+                    </#list>
+                </#if>

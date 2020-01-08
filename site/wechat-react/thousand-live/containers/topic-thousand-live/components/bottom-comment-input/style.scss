@@ -1,0 +1,86 @@
+.bottom-comment-input{
+    background: #fff;
+    display: flex;
+    align-items: center;
+    height: 98px;
+    padding: 0 0 0 15px;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    flex-shrink: 0;
+
+    .text-input-box{
+        display: flex;
+        flex: 1;
+        background: #ebebeb;
+        padding: 0 25px;
+        border-radius: 80px;
+        height: 68px;
+        box-sizing: border-box;
+        overflow: hidden;
+        width: 100%;
+        margin-right: 20px;
+
+        .text-input{
+            flex: 1;
+            // height: 44px;
+            line-height: 1.4;
+            color:#333;
+            border:none;
+            background: none;
+            font-size: 30px;/*px*/
+            box-sizing: border-box;
+            overflow: hidden;
+            width: 100%;
+        }
+    }
+
+    .text-input::-webkit-input-placeholder{
+        color:#999;
+    }
+
+    // 发送按钮
+    .btn-send-text{
+        display: block;
+        width: 100px;
+        height: 68px;
+        line-height: 68px;
+        background: #F73657;
+        border-radius: 80px;
+        text-align: center;
+        white-space: nowrap;
+        color: #ffffff;
+        font-size: 28px;/*px*/
+        margin-left: 20px;
+        margin-right: 15px;
+        flex-shrink: 0;
+        cursor: pointer;
+    }
+
+
+    .btn-menu{
+        display: inline-flex;
+        width: 50px;
+        height: 50px;
+        justify-content: center;
+        margin:0 20px 0 0px;
+        cursor: pointer;
+        background-image: url(./img/operation-icon.png);
+        flex-shrink: 0;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .btn-tipping{
+        display: inline-flex;
+        width: 50px;
+        height: 50px;
+        justify-content: center;
+        margin:0 20px 0 0px;
+        cursor: pointer;
+        background: url(./img/icon-tipping.png) center center no-repeat;
+        background-size: 100%;
+    }
+
+}

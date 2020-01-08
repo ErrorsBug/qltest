@@ -1,0 +1,17 @@
+
+
+{{#each course}}
+<li class="{{this.desc}} on-log" data-url="{{this.url}}" log-business_Type="{{businessType}}" log-region="course">
+    <img data-imgloaded="false" data-imgsrc="{{img-format this.headImage '@320w_200h_1e_1c_2o'}}" alt="">
+    <div class="content">
+        <div class="layer">
+            <p class="title">{{this.name}}</p>
+            <div class="dec">
+                <span class="price">￥{{discount}}</span>
+                <del class="sale">{{this.money}}</del>
+                <span class="purcase">立即购买</span>
+            </div>
+        </div>
+    </div>
+</li>
+{{/each}}

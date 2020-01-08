@@ -1,0 +1,114 @@
+.enter-logout{
+    height: 100%;
+    background: white;
+    .enter-logout-box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: white;
+        padding: 0 32px 0 32px;
+        box-sizing: border-box;
+        .title{
+            margin-top: 40px;
+            width: 100%;
+            p{
+                font-size:56px;/*px*/
+                font-weight:600;
+                color:rgba(51,51,51,1);
+                line-height:80px;
+            }
+        }
+        .enter-logout-content{
+            margin-top: 32px;
+            width: 100%;
+            p{
+                font-size:30px;/*px*/
+                font-weight:400;
+                color:rgba(51,51,51,1);
+                line-height:48px;
+            }
+        }
+        .buttom{
+            width: 670px;
+            box-sizing: border-box;
+            position: absolute;
+            bottom: 64px;
+            .enter-logout-bottom,.give-up{
+                width: 100%;
+                height: 76px;
+                border-radius:50px;
+                p{
+                    line-height: 76px;
+                    font-size:32px;/*px*/
+                    font-weight:400;
+                    text-align: center;
+                }
+            }
+            .enter-logout-bottom{
+                color:rgba(255,255,255,1);
+                background:rgba(247,54,87,1);   
+            }
+            .give-up{
+                margin-top: 48px;
+                border:2px solid rgba(221,221,221,1);
+                color: #333333;
+            }
+        }
+        .logout-pop-up{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            opacity: .7;
+            display: flex;
+            justify-content: center;
+            z-index: 2;
+            .pop-up{
+                position: absolute;
+                top: 522px;
+                width:628px;
+                height:292px;
+                background:rgba(255,255,255,1);
+                border-radius:28px;
+                overflow: hidden;
+                .pop-up-title{
+                    font-size: 32px;/*px*/
+                    text-align: center;
+                    font-weight:500;
+                    color:#333333;
+                    line-height:44px;
+                    margin-top: 48px;
+                }
+                .enter-title{
+                    font-size: 28px;/*px*/
+                    text-align: center;
+                    margin-top: 16px;
+                    font-weight:400;
+                    color:rgba(102,102,102,1);
+                    line-height:40px;
+                }
+                .cancel,.enter{
+                    width: 50%;
+                    height: 96px;
+                    position: absolute;
+                    bottom: 0;
+                    font-size: 32px;/*px*/
+                    line-height: 96px;
+                    background: white;
+                    border-top: 1px solid #EEEEEE;
+                    box-sizing: border-box;
+                }
+                .cancel{
+                    left: 0;
+                    border-right: 1px solid #EEEEEE;
+                    color:#333333
+                }
+                .enter{
+                    border-left: 0;
+                    color: #F73657;
+                    right: 0;
+                }
+            }
+        }
+    }
+}

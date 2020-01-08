@@ -1,0 +1,15 @@
+<tab-page
+    tabs = "{{tabs}}"
+    binditemclick = "onItemClick"
+>
+    <view slot="index">
+        <live-index liveId="{{liveId}}" bind:updateShareConfig="updateShareConfig" system="{{system}}"></live-index>
+    </view>
+    <!-- <view slot="joined">
+        <joined></joined>
+    </view> -->
+    <view slot="mine">
+        <mine></mine>
+    </view>
+</tab-page>
+<!-- <audio-box/> -->

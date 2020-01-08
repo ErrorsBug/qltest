@@ -1,0 +1,65 @@
+html,body{
+    background-color: #fff;
+    font-family: "微软雅黑";
+}
+
+.login-banner{
+    display: block;
+    height: 200px;
+    margin: 0px 30px;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: dashed 1px #cccccc; /*no*/
+}
+.login-banner img{
+  height: 100%;
+  display: inline-block;  
+}
+
+.wx-login{
+    display: block;
+    text-align: center;
+    padding: 50px 0 0;
+    width: 100%;
+}
+
+.ql-login-tips{
+    text-align: center;
+    font-size: 30px;
+    color: #333333;
+    padding: 50px 0;
+}
+
+.wb-login{
+    display: block;
+    text-align: center;
+    padding-top: 10px;
+}
+.btn-weibo{
+    display: inline-block;
+    width: 360px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    color: #fff;
+    background: #2f8fe6;
+    border-radius: 10px;
+    font-size: 30px;
+    
+}
+.btn-weibo::before{
+    content: "";
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    background: url(./img/ico-weibo.png) left top no-repeat;
+    background-size: 100%;
+    margin: 25px 20px 0 0;
+    vertical-align: top;
+}
+
+
+/*重置登录页样式*/
+.weui_icon_msg:before {
+  font-size: 208px !important; /*px*/
+}

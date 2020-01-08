@@ -1,0 +1,27 @@
+
+# 问题列表项
+type QuestionItem {
+    # 用户ID
+    userId: String
+    # 用户名
+    name: String
+    # 用户头像
+    headImgUrl: String
+    # 简介
+    introduce: String
+    # 是否开启私问
+    isWhisperOpen: String
+    # 回答的问题数量
+    answerNum: Int
+    # 旁听人数
+    listenNum: Int
+    # 最近课程id
+    topicId: String
+    # 最近课程名
+    topic: String
+}
+
+extend type Query {
+    # 获取问题列表
+    questionList(page: Int, size: Int, liveId: String): [QuestionItem]
+}

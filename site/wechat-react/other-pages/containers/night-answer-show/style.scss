@@ -1,0 +1,80 @@
+.night-answer-show-container {
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    .head{
+        background: {
+            image: url(./img/show.png);
+            repeat: no-repeat;
+            size: 100% 100%;
+        }
+        height: 100px;
+        width: 684px;
+        margin: 28px auto;
+    }
+    .container{
+        >.title{
+            display: flex;
+            align-items: center;
+            color: rgb(66,66,66);
+            font-size: 30px; /*px*/
+            padding: 10px 0 10px 32px;
+            margin-bottom: 24px;
+            >span{
+                color: rgb(247,54,87);
+                margin-left: 10px;
+            }
+        }
+        ul.show {
+            border-top: 1px solid #e9e9e9;
+            margin-bottom: 40px;
+            li{
+                border-bottom: 1px solid #e9e9e9;
+                min-height: 110px;
+                display: flex;
+                align-items: center;
+                padding: 0 30px;
+                box-sizing: border-box;
+                cursor: pointer;
+                .btn {
+                    height: 56px;
+                    width: 56px;
+                    background: {
+                        image: url(./img/icon.png);
+                        repeat: no-repeat;
+                        size: 100% 100%;
+                    }
+                }
+                >p{
+                    flex: 1;
+                    font-size: 30px; /*px*/
+                    line-height: 38px;/*px*/
+                    margin: 0 30px;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                    overflow: hidden;
+                }
+                .time {
+                    font-size: 24px; /*px*/
+                    color: rgb(153,144,144);
+                }
+            }
+        }
+        .footer {
+            color: rgb(184,176,176);
+            font-size: 28px; /*px*/
+            text-align: center;
+        }
+    }
+    .list-nomore{
+        color: #b8b0b0
+    }
+    .scroll-box{
+        padding-bottom:30px;
+    }
+}

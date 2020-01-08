@@ -1,0 +1,7 @@
+{
+    "component": true,
+    "usingComponents": {
+        "channel-item": "./components/channel-item/channel-item",
+        "no-more": "../../../../../../comp/no-more/no-more"
+    }
+}

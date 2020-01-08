@@ -1,0 +1,98 @@
+html {
+    height: 100%;
+}
+body {
+    background-color: #e5e5e5;
+    max-width: 1280px; /*px*/
+    min-width: 640px; /*px*/
+    height: 100%;
+    line-height: 1;
+    font-family: "微软雅黑";
+    font-size: 12px;
+    color: #5d5b5b;
+    margin: 0px auto;
+    display: block;
+    position: relative;
+}
+
+.container {
+    background: #fff;
+    min-height: 100%;
+    font-size: 0;
+}
+
+.input-wrap {
+    background: #4d4d4d;
+    color: #fff;
+    position: relative;
+}
+
+input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.btn {
+    display: inline-block;
+    margin: 30px 30px;
+    width: 170px;
+    height: 80px;
+    line-height: 80px;
+    border: 1px solid #e6e6e6; /*no*/
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 32px; /*px*/
+    cursor: pointer;
+}
+
+.play-btn {
+    color: #fff;
+    background: #04be02;
+}
+
+.pause-btn {
+    color: #fff;
+    background: #EF7522;
+}
+
+.audio-name {
+    margin: 15px 30px;
+    color: #666;
+    font-size: 26px; /*px*/
+    line-height: 1.5;
+}
+
+.audio-wrap {
+    padding-top: 30px;
+    overflow: hidden;
+}
+
+audio {
+    margin: 0 30px 10px 30px;
+    width: 80%;
+    height: 80px;
+    line-height: 80px;
+}
+
+.select-menu {
+    display: block;
+    margin: 30px 30px;
+    /*width: 170px;*/
+    height: 80px;
+    line-height: 80px;
+    border: 1px solid #e6e6e6; /*no*/
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 32px; /*px*/
+    cursor: pointer;
+    padding-left: 10px;
+}

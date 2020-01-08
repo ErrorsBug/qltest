@@ -1,0 +1,8 @@
+type DocItem {
+    name: String
+    price: Float
+}
+
+extend type Query {
+    getList(page: Int!, size: Int): [DocItem]
+}

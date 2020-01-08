@@ -1,0 +1,175 @@
+.un-course-test-box{  
+    .ct-start{ 
+        height: 100vh;
+        overflow-y: scroll; 
+        
+        .ct-content-bg{ 
+            width: 100%;  
+            .ql-editor-h5{
+                padding: 0;
+                img{ 
+                    vertical-align: middle;
+                }
+                p{
+                    margin-top: 0;
+                }
+                
+                h1 {
+                    font-size: 36px;
+                }
+                
+                h2 {
+                    font-size: 32px;
+                }
+                
+                h3 {
+                    font-size: 28px;
+                }
+                
+                h4,
+                h5,
+                h6 {
+                    font-size: 100%; /*no*/
+                }
+            }
+        }
+    }
+    .ct-playing{
+        min-height: 100vh;
+        background:linear-gradient(152deg,rgba(255,212,140,1) 0%,rgba(241,177,95,1) 100%);
+        background-size:100%;
+        background-repeat: no-repeat; 
+        &::before{
+            content: '';
+            display: table;
+        }
+        .ct-test-item{
+            margin: 188px 32px 0;
+            margin: 25.1% 32px 0;
+            background:rgba(255,255,255,1);
+            border-radius:0 0 8px 8px;
+            padding: 48px 32px;
+            position: relative;
+            .ct-test-process{
+                position: absolute;
+                left:0;
+                right:0;
+                top:0;
+                height:6px;
+                background:rgba(238,238,238,1);
+                span{
+                    display: block;
+                    width:0;
+                    height:6px;
+                    background:rgba(224,65,79,1);
+                    border-radius:0px 14px 14px 0px;
+                    transition: all 1s ease;
+                }
+            }
+            .ct-test-title{
+                font-size:36px; 
+                font-weight:bold;
+                color:rgba(51,51,51,1);
+                line-height:60px;
+                margin-bottom: 34px;
+                span{
+                    color: #E0414F;
+                }
+            }
+            .ct-lists{
+                margin-bottom: 66px;
+                .ct-lists-item{
+                    display: flex;
+                    align-items: center;
+                    padding:30px 0;
+                    .ct-select{
+                        width:36px;
+                        height:36px;
+                        border-radius: 50%;
+                        margin-right: 44px;
+                        box-sizing: border-box;
+                        border:2px solid #bbb;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        &.on{
+                            background: #E0414F url('https://img.qlchat.com/qlLive/business/QY8DSNTI-AS4R-51BE-1564660569136-RFHCY5S62LWU.png') no-repeat center center; 
+                            background-size: 20px 14px;
+                            border:none;
+                        }
+                        &.sort{
+                            background:rgba(224,65,79,1);
+                            color: #fff;
+                            border:none;
+                        }
+                    }
+                    .ct-wort{
+                        flex: 1;
+                        font-size:32px; 
+                        color:rgba(85,85,85,1);
+                        line-height:44px;
+                    }
+                }
+            }
+            .ct-test-btn{
+                display: flex;
+                justify-content: center;
+                .ct-btn{
+                    width:300px;
+                    height:84px;
+                    border-radius:50px;
+                    border:2px solid rgba(238,238,238,1);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size:32px;  
+                    box-sizing: border-box;
+                    &:first-child{
+                        margin-right: 16px;
+                    }
+                    &:last-child{
+                        margin-left: 16px;
+                    }
+                    &.on{
+                        background:rgba(224,65,79,1);
+                        color: #fff;
+                        border:none;
+                    }
+                }
+            }
+        }
+    }
+    .ct-finish{
+        background: url('https://img.qlchat.com/qlLive/business/DQ215TUF-BKO2-EWNO-1564366388755-KA53RNP9ISC4.png') no-repeat 0 0;
+        background-size: 100%; 
+        margin: 10% auto 0;
+        width: 650px;
+        height: 964px;
+        padding-top:370px;
+        box-sizing: border-box; 
+        text-align: center;
+        img{
+            width: 320px;
+            height: 320px;
+        }
+    }
+}
+
+.ct-btn-start{
+    position: absolute;
+    left: 0;
+    bottom:0;
+    right: 0;
+    margin: 40px auto;
+    width:476px;
+    height:100px !important;
+    background:rgba(224,65,79,1);
+    box-shadow:0px 8px 12px 0px rgba(0,0,0,0.2);
+    border-radius:50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:40px; 
+    font-weight:bold;
+    color:rgba(255,255,255,1); 
+}

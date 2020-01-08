@@ -1,0 +1,17 @@
+{{#each lives}}
+            <li class="live" data-id="{{id}}"  log-business_id="{{id}}" log-name="{{killEm name}}"  log-business_type="live">
+                <span>
+                    <img src="{{logo}}" alt="">
+                </span>
+                <section>
+                    <h2 class="elli">{{{name}}}</h2>
+                    {{#if isAuthor}}
+                    <p><span class='tag-authority'></span></p>
+                    {{else}}
+                    <p>
+                        {{followNum}}人关注
+                    </p>
+                    {{/if}}
+                </section>
+            </li>
+        {{/each}}

@@ -1,0 +1,95 @@
+.un-block-box{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: normal;
+    background: #FFE8E9;
+    height: 76px;
+    border-radius: 8px;
+    padding: 0 24px 0 16px;
+    position: relative;
+    &.no{
+        &::before{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 192px;
+            height: 100%;
+            z-index: 1;
+            background: url('./img/icon-bg.png') no-repeat left center;
+            background-size: 100% auto; /*px*/
+            border-radius: 0 8px 8px 0;
+            content: "";
+        }
+    }
+    p{
+        display: flex;
+        align-items: center;
+        line-height: normal;
+        font-size: 24px; /*px*/
+        color: #AA2939;
+        font-weight: 500;
+        padding-left: 64px; /*px*/
+        background: url('./img/icon-univ.png') no-repeat left center;
+        background-size: 48px; /*px*/
+        height: 48px; /*px*/
+
+    }
+    .un-block-join{
+        position: relative;
+        z-index: 2;
+        font-size: 24px; /*px*/
+        color: #fff;
+        padding-right: 16px; /*px*/
+        background: url('./img/icon-jian.png') no-repeat right center;
+        background-size: 8px auto; /*px*/
+        font-weight: 500;
+    }
+}
+
+.uni-block-dialog{
+    position: absolute;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    line-height: normal;
+    left: 0;
+    right: 0;
+    bottom: -69px;
+    height: 69px !important; /* px */
+    line-height: 69px; /* px */
+    display: none;
+    align-items: center;
+    background: #FFF;
+    padding: 0 32px;
+    z-index: 0;
+    &.show{
+        bottom: 98px; /* px */
+        z-index: 10;
+        display: flex;
+    }
+    p{
+        display: flex;
+        align-items: center;
+        line-height: normal;
+        font-size: 24px; /*px*/
+        color: #AA2939;
+        font-weight: 500;
+        padding-left: 64px; /*px*/
+        background: url('./img/icon-univ.png') no-repeat left center;
+        background-size: 48px; /*px*/
+        height: 48px; /*px*/
+
+    }
+    .un-block-join{
+        position: relative;
+        z-index: 2;
+        font-size: 24px; /*px*/
+        color: #AA2939;
+        padding-right: 16px; /*px*/
+        background: url('./img/icon-red.png') no-repeat right center;
+        background-size: 8px auto; /*px*/
+        font-weight: 500;
+    }
+}

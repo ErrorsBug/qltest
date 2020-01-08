@@ -1,0 +1,197 @@
+@import '../../../../../../assets/styles/base-definition.scss';
+
+.bottom-pay-dialog {
+
+    .pay-dialog-container {
+        display: flex;
+        height: 860px;
+        flex-direction: column;
+        background-color: #ffffff;
+
+        header.dialog-title {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90px;
+            font-size: 30px; /* px */
+            color: #333333;
+            border-bottom: 1px solid #f0f0f0; /* no */
+
+            > i {
+                position: absolute;
+                left: 30px;
+                cursor: pointer;
+                color: #c0c0c0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        main.pay-dialog-content {
+            flex: 1;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        footer.comfirm-box{
+            display: block;
+
+            .btn-confirm{
+                width: 100%;
+                height: 88px;
+                background: #f84c69;
+                text-align: center;
+                line-height: 88px;
+                color: #fff;
+                font-size: 32px;/*px*/
+                overflow: hidden;
+                cursor: pointer;
+            }
+
+        }
+    }
+
+    .flexible-charge-box {
+        display: block;
+        padding: 30px;
+
+        .title {
+            display: block;
+            height: 60px;
+            line-height: 60px;
+            font-size: 32px;/*px*/
+            color: #333333;
+        }
+
+        .charge-list {
+            display: block;
+            margin: 20px -15px 0;
+            li {
+                display: inline-block;
+                width: 50%;
+                min-width: 50%;
+                box-sizing: border-box;
+                padding:0 15px 30px;
+                cursor: pointer;
+
+                p{
+                    display: block;
+                    height: 70px;/*px*/
+                    line-height: 70px;/*px*/
+                    text-align: center;
+                    border: solid 1px #e5e5e5;/*no*/
+                    border-radius: 7px;
+                    color: #737373;
+                    font-size: 28px;/*px*/
+
+                }
+
+                &.on p{
+                    color: #ff5962;
+                    border-color: #ff5962;
+                }
+            }
+        }
+
+
+    }
+
+
+    .pay-info-bar {
+        position: relative;
+        display: flex;
+        height: 110px;
+        line-height: 110px;
+        margin:0 30px;
+        box-sizing: border-box;
+        border-bottom: solid 1px #f2f4f5;/*no*/
+        font-weight: 500;
+        padding-right: 30px;
+
+        .bold-text {
+            font-size: 30px !important; /* px */
+            color: #333333 !important;
+            font-weight: 500;
+        }
+
+        .left-title{
+            display: block;
+            color: #333;
+            font-size: 28px;/*px*/
+            flex-shrink: 0;
+        }
+
+        .color-red {
+            color: #f84c69;
+        }
+
+        .flex-content {
+            display: block;
+            width: 100%;
+            text-align: right;
+            flex: 1;
+            font-size: 28px;/*px*/
+        }
+
+        .icon-coupon{
+            display: inline-block;
+            width: 35px;
+            height: 27px;
+            background: url(./img/icon-coupon.png) left top no-repeat;
+            background-size: 100%;
+            margin: 0 10px;
+        }
+
+        .disable-coupon {
+            color: #999;
+            font-weight: normal;
+        }
+
+        .var-one {
+            display: inline-flex;
+            align-items: center;
+            font-size: 28px;/*px*/
+            color: #f84c69;
+            cursor: pointer;
+
+            &.none{
+                color: #ccc;
+            }
+
+            .icon_enter{
+                color: #999999;
+            }
+
+            >i.icon_enter {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0;
+                margin-left: 20px;
+            }
+
+            >i.icon_coupon {
+                font-weight: 700;
+                font-size: 26px;
+                margin-left: 10px;
+            }
+        }
+        .var-two {
+            color: #f73657;
+        }
+
+
+    }
+
+    .relay-tip{
+        background:$gray-background;
+        padding:0 20px;
+        border-radius: 100px;
+        line-height:2;
+        font-size:24px;/*px*/
+        margin-top:30px;
+        color:$gray-tip;
+    }
+
+}

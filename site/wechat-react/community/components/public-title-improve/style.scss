@@ -1,0 +1,45 @@
+@font-face {
+    font-family: "SourceHanSans";
+    font-weight: 900;
+    font-display: swap;
+    src: local('SourceHanSans'),
+         url('https://static.qianliaowang.com/rs/library/fonts/SourceHanSerifCN-Bold.woff2') format('woff2'),
+         url('https://static.qianliaowang.com/rs/library/fonts/SourceHanSerifCN-Bold.woff') format('woff'),
+         url('https://static.qianliaowang.com/rs/library/fonts/SourceHanSerifCN-Bold.ttf') format('ttf');
+}
+
+.public-title-improve{
+    margin-bottom: 20px;
+    padding: 0 32px;
+    .public-title-head{
+        display: flex;
+        justify-content: space-between;
+        h3{
+            font-family: 'SourceHanSans', 'Times New Roman', Times, serif !important;
+            font-size:36px; /*px*/
+            font-weight: bold;
+            line-height: 1.5;
+            img{
+                height: 100%;
+                width: auto;
+            }
+        }
+        .go-more-list{
+            font-size: 30px; /*px*/
+            align-items: center;
+            color: #E0414F;
+            display: flex;
+            align-items: center;
+            padding-right: 16px;
+            background: url('https://img.qlchat.com/qlLive/business/CDGM7QBH-J674-WWEA-1563160183164-Q64ZS6QENMSK.png') no-repeat right center;
+            background-size: 8px 16px;
+
+        }
+    }
+    .public-title-decs{
+        font-size: 26px; /*px*/
+        color: #999;
+        margin-top: 8px;
+        line-height: 1.5;
+    }
+}

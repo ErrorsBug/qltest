@@ -1,0 +1,296 @@
+@import "../../../../../../assets/styles/mixins.scss";
+
+.consult-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 5;
+    box-sizing: border-box;
+
+    .cc-bg{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        background: rgba($color: #000000, $alpha: 0.6);
+    }
+    .main-flex{
+        position: absolute;
+        top: 200px;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        .main-list{
+            flex: 1;
+            position: relative;
+        }
+    }
+
+    .consult-bottom-dialog-content-enter {
+        opacity: 0.01;
+        transform: translateY(100%)
+    }
+      
+    .consult-bottom-dialog-content-enter.consult-bottom-dialog-content-enter-active {
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 300ms ease-in;
+    }
+      
+    .consult-bottom-dialog-content-leave {
+        opacity: 1;
+        transform: translateY(0);
+        // transform: translateY(100%);
+    }
+      
+    .consult-bottom-dialog-content-leave.consult-bottom-dialog-content-leave-active {
+        opacity: 0.01;
+        transform: translateY(100%);
+        // top: 100%;
+        transition: all 300ms ease-in;
+    }
+
+    .consult-dialog-background-enter {
+        opacity: 0.01;
+    }
+      
+    .consult-dialog-background-enter.consult-dialog-background-enter-active {
+        opacity: 1;
+        transition: opacity 300ms ease-in;
+    }
+      
+    .consult-dialog-background-leave {
+        opacity: 1;
+    }
+      
+    .consult-dialog-background-leave.consult-dialog-background-leave-active {
+        opacity: 0.01;
+        transition: opacity 300ms ease-in;
+    }
+
+
+    &.hide {
+        display: none;
+    }
+
+    .icon-close {
+        position: absolute;
+        right: 30px;
+        top: 20px;
+        cursor: pointer;
+        font-size: 50px;/* px */
+        color: #b8b0b1;
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+        }
+    }
+
+    header.consult-header {
+        padding: 40px 30px 10px;
+        font-size: 32px;/* px */
+        font-weight: bolder;
+        color: #424242;
+
+        .consult-count {
+            margin-left: 15px;
+            color: #f73657;
+        }
+    }
+
+    > main {
+        padding-bottom: 130px;
+
+        &.focused {
+            padding-bottom: 330px;
+        }
+    }
+
+    footer.consult-footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        height: 100px;
+        width: 100%;
+        background-color: #ffffff;
+        border-top: 1px solid #ebebeb;/* no */
+        padding: 16px 30px;
+        box-sizing: border-box;
+
+        &.focused {
+            height: 300px;
+        }
+
+        .consult-input {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            border-radius: 100px;
+            border: none;
+            outline: none;
+            background-color: #f5f2f2;
+            color: #999090;
+            padding: 0 34px;
+            box-sizing: border-box;
+            font-size: 30px;/* px */
+            
+            &.textarea {
+                display: block;
+                border-radius: 4px;
+                resize: none;
+                padding: 15px;
+                font-size: 30px;/* px */
+            }
+        }
+
+        .confirm-consult {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            width: 136px;
+            padding: 20px 0;
+            font-size: 30px;/* px */
+            background-color: #ef5670;
+            color: #ffffff;
+            margin-top: 20px;
+            cursor: pointer;
+            
+            &.no-content{
+                background-color: rgba($color: #ef5670, $alpha: 0.3)
+            }
+        }
+    }
+}
+
+.consult-item-v2 {
+    position: relative;
+    display: flex;
+    padding: 30px 0;
+    margin:0 40px;
+    background: #ffffff;
+    @include afterBorderBottom1px;
+
+    &:last-child {
+        &::after {
+            content: none;
+        }
+    }
+
+    .left-portrait {
+        padding: 0 30px 0 0;
+
+        img {
+            display: inline-block;
+            width: 70px;
+            border-radius: 50%;
+        }
+    }
+
+    .right-content {
+        flex: 1;
+
+        .name-row {
+            display: flex;
+            .left{
+                flex: 1;
+            }
+            .right{
+                display: flex;
+                align-items: center;
+            }
+
+            .nick-name {
+                display: block;
+                font-size: 28px;/* px */
+                color: #999090;
+            }
+
+            .time-before {
+                display: block;
+                font-size: 22px;/* px */
+                margin-top: 9px;
+                color: #b8b0b0;
+            }
+
+            .btn-like{
+                font-size: 28px;/* px */
+                color: #999090;
+                height: 50px;
+                line-height: 50px;
+                display: inline-flex;
+                align-items: center;
+                cursor: pointer;
+                padding-right: 40px;
+                &::before{
+                    content: '';
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 10px;
+                    display: inline-block;
+                    background: url(./img/icon-like.png) center center no-repeat;
+                    background-size: 100% auto;
+                }
+
+                &.on{
+                    color: #f73657;
+
+                    &::before{
+                        background-image: url(./img/icon-like-on.png);
+                    }
+                }
+
+            }
+        }
+
+        .content {
+            padding: 26px 40px 0 0;
+            font-size: 30px;/* px */
+            line-height: 1.4;
+            color: #333333;
+        }
+
+        .replay-container {
+            position: relative;
+            padding-top: 26px;
+            margin-top: 30px;
+            @include beforeBorderTop1px;
+
+            .replay-info {
+
+                .replay-label {
+                    display: block;
+                    color: #ef5670;
+                    font-size: 28px;/* px */
+
+                }
+
+                .time-before {
+                    display: block;
+                    font-size: 22px;/* px */
+                    margin-top: 10px;
+                    color: #b8b0b0;
+                }
+            }
+
+            .replay-content {
+                padding: 30px 40px 10px 0;
+                font-size: 30px;/* px */
+                line-height: 1.4;
+                color: #333333;
+            }
+        }
+    }
+}

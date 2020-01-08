@@ -1,0 +1,165 @@
+<block wx:if="{{showMain}}">
+    <scroll-view 
+        class="main"  
+        scroll-y
+        scroll-top="{{scrollTop}}"
+        bind:scroll="onPageScroll"
+    >
+        <!--头部基本信息区-->
+        <view class="header-section">
+
+            <!--顶部图片区域-->
+            <view class="header-image">
+                <image class="header-image-image" mode="widthFix" src="{{bgUrl}}"></image>
+            </view>
+
+            <!-- 倒计时 -->
+            <count-down
+                wx:if="{{serverTime && topicView.topicPo.startTime && serverTime<topicView.topicPo.startTime}}"
+                courseStartTime="{{topicView.topicPo.startTime}}"
+                serverTime="{{serverTime}}"
+                bind:onCountDownEnd="onCountDownEnd"
+            />
+
+            <!--课程基本信息区域-->
+            <course-name-section
+                wx:if="{{topicView}}"
+                browseNum="{{browseNum}}"
+                topicPo="{{topicView.topicPo}}"
+                topicExtendPo="{{topicView.topicExtendPo}}"
+                vipInfo="{{vipInfo}}"
+                vipChargeInfo="{{vipChargeInfo}}"
+                systemIos="{{system==='ios'}}"
+            />
+                
+            <!-- 金色状态栏 -->
+            <gold-bar
+                showReplay="{{goldbar.showReplay}}"
+                showDiscount="{{goldbar.showDiscount}}"
+                showVip="{{goldbar.showVip}}"
+                showLive="{{goldbar.showLive}}"
+                liveStatus="{{goldbar.liveStatus}}"
+            />
+        </view>
+
+        <!-- 直播间栏 -->
+        <liveroom-bar
+            wx:if="{{live.entity}}"
+            liveInfo="{{live.entity}}"
+        />
+            
+        
+        <!--介绍信息区域-->
+        <introduce
+            topicPo="{{topicView.topicPo}}"
+            summary="{{summary}}"
+            notSummary="{{notSummary}}"
+            profile="{{profile.TopicProfileList}}"
+            id="introduce"
+            bind:calcScrollHeight="calcScrollHeight"
+        />
+        <!--系列课栏-->
+        <channel-bar wx:if="{{channel.channel}}" channelInfo="{{channel.channel}}"/>
+
+        <!-- 留言板 -->
+        <message-board 
+            wx:if="{{messageList.length}}"
+            list="{{messageList}}" 
+            serverTime="{{serverTime}}"
+            bind:onPraiseClick="onPraiseClick"
+            bind:showMessageModal="showMessageModal"
+            id="message"
+        />
+
+        
+
+        <!-- 推荐课程 -->
+        <recommend-course list="{{recommendCourse}}" serverTime="{{serverTime}}" systemIos="{{system==='ios'}}" id="recommend"/>
+        
+    </scroll-view>
+
+    <!-- 留言列表弹窗 -->
+    <view class="message-modal-mask" wx:if="{{showMessageModalMask}}"></view>
+    <message-modal 
+        wx:if="{{messageList.length}}"
+        list="{{messageList}}" 
+        serverTime="{{serverTime}}"
+        bind:onPraiseClick="onPraiseClick"
+        bind:hideMessageModal="hideMessageModal"
+        animationData="{{messageModalAnimation}}"
+    />
+
+    <tab-bar
+        tabs="{{tabs}}"
+        active="{{activeTab}}"
+        wx:if="{{showTab}}"
+        bind:onTabTap="onTabTap"
+    />
+
+    <!-- 底栏按钮区 -->
+    <view class="footer">
+        <footer
+            topicView="{{topicView}}"
+            power="{{power.powerEntity}}"
+            isAuth="{{isAuth.isAuth}}"
+            vipInfo="{{vipInfo}}"
+            isDistribution="{{isDistribution}}"
+            shareRatio="{{shareRatio}}"
+            topicPo="{{topicView.topicPo}}"
+            isSingleBuy="{{topicView.topicExtendPo.isSingleBuy}}"
+            channelId="{{topicView.topicPo.channelId}}"
+            switch="{{switch}}"
+            systemIos="{{system==='ios'}}"
+
+            bind:linkToTopic="linkToTopic"
+            bind:buyChannel="buyChannel"
+            bind:enterPublic="enterPublic"
+            bind:passwordInput="passwordInput"
+            bind:enterEncrypt="enterEncrypt"
+            bind:doOrder="doOrder"
+            bind:onShowShareModel="showShareModel"
+        />
+    </view>
+
+    <!-- 付款详情页返回提示 -->
+    <payment-details-helper
+        wx:if="{{PDH_isShowModal}}"
+        bindconfirm="PDH_continuePay"
+        bindcancel="PDH_hideModal"
+    />
+
+        <!-- 分享弹窗 -->
+    <share-model
+        wx:if="{{topicView.topicPo.channelId ? shareModel && topicView.topicExtendPo.isSingleBuy === 'Y' : shareModel}}"
+        isDistribution="{{isDistribution}}"
+        shareRatio="{{shareRatio}}"
+        topicPo="{{topicView.topicPo}}"
+        bind:onHideShareModel="hideShareModal" 
+        bind:onShowShareCard="onShowShareCard"
+        animationData="{{shareModalAnimation}}"
+    />
+
+    <!-- 小程序码 -->
+    <share-card 
+        wx:if="{{shareCard && !special}}"
+        mainImageUrl="{{channelInfo.headImage}}"
+        isDistribution="{{isDistribution}}"
+        userName="{{userName}}"
+        mainImageUrl="{{bgUrl}}"
+        topicId="{{topicView.topicPo.id}}"
+        title="{{topicView.topicPo.topic}}"
+        codeUrl="{{codeUrl}}"
+        bind:onHideShareCard="onHideShareCard"
+
+    />
+    <extremely-yellow-card
+        wx:if="{{shareCard && special}}"
+        headImage="{{headImage}}"
+        isDistribution="{{isDistribution}}"
+        topicId="{{topicView.topicPo.id}}"
+        codeUrl="{{codeUrl}}"
+        bind:onHideShareCard="onHideShareCard"
+    />
+    <!-- <button open-type="contact" session-from="COURSE_FLOAT_BUTTON" class="btn-help" bind:tap="onFeedbackClick"></button>  -->
+
+</block>

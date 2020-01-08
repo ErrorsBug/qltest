@@ -1,0 +1,16 @@
+<view class="list-tab">
+    <block wx:for="{{tabs}}" wx:key="key" wx:for-index="listId">
+        <view 
+            bindtap="onTabClick" 
+            data-tab="{{item.tab}}" 
+            class="list-tab-item {{item.tab==active? 'active':''}}"
+        >
+            <image 
+                wx:if="{{item.tabIcon}}" 
+                class="list-tab-item-icon" 
+                src="{{item.tab==active?  item.tabIconAction : item.tabIcon}}">
+            </image>
+            <text>{{item.tabName}}</text>
+        </view>
+    </block>
+</view>

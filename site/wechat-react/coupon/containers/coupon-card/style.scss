@@ -1,0 +1,40 @@
+.coupon-card-page{
+    .title{
+        color:#333;
+        font-size: 34px;/*px*/
+        line-height: 60px;
+        text-align: center;
+        padding-top:70px;
+    }
+    .tips{
+        color:#666;
+        font-size: 26px;/*px*/
+        line-height: 40px;
+        padding:30px;
+    }
+    .card{
+        text-align: center;
+        padding-bottom: 60px;
+        padding-top: 30px;
+        img{
+            width:80%;
+            height: auto;
+        }
+    }
+    .warning{
+        padding:8px 20px;
+        line-height: 30px;
+        font-size: 20px;/*px*/
+        color: #fff;
+        background-color: #F84C69;
+        &::before{
+            content: '';
+            display: inline-block;
+            width:30px;
+            height: 30px;
+            background:url(./img/detail-icon-notice.png) center center no-repeat;
+            background-size: 80% auto;
+            vertical-align: middle;
+        }
+    }
+}

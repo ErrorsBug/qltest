@@ -1,0 +1,11 @@
+{
+    "navigationBarTitleText": "",
+    "backgroundColor": "#f0f0f0",
+    "usingComponents": {
+        "tab-page": "../../comp/tab-page/tab-page",
+        "mine": "./components/mine/mine",
+        "joined": "./components/joined/joined",
+        "live-index": "./components/live-index/live-index",
+        "audio-box": "../../comp/audio-box/audio-box"
+    }
+}

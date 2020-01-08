@@ -1,0 +1,26 @@
+@import "../../../../assets/styles/mixins.scss";
+
+.recommend-view-more-container {
+    height: 100%;
+    position: relative;
+    background: #fff;
+
+    .common-container{
+        position: relative;
+        .img-wrap{
+            background: #eee !important;
+        }
+        .learn-num{
+            background: transparent !important;;
+        }
+        &.rank {
+            padding-top: 40px;
+            background: #f7f7f7;
+            .rank-item{
+                .hot-comment{
+                    background: #fff;
+                }
+            }
+        }
+    }
+}

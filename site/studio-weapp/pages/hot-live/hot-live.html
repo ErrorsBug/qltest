@@ -1,0 +1,33 @@
+
+<!--hot-live.wxml-->
+<view class="container">
+    <scroll-view scroll-y="true" lower-threshold="200" bindscrolltolower="handleScrollToLower" class="hot-lives" style="height: {{scrollHeight}};">
+        <block wx:for="{{lives}}" wx:key="{{id}}" wx:for-index="liveIndex" wx:for-item="live">
+            <view class="hot-live" data-id="{{live.id}}" bindtap="handleLiveTap">
+                <image class="hot-live-img" src="{{live.logo}}@122h_122w_1e_1c_2o" background-size="cover" />
+                <view class="live-detail">
+                    <text class="live-title">{{live.name}}</text>
+                    <text class="live-fans-num">{{live.fansNum}}人关注</text>
+                </view>
+                <view class="live-focus-wrap">
+                    <view wx:if="{{live.isFocus == 'Y'}}" class="live-focus-btn live-focused" data-id="{{live.id}}" data-status="{{live.isFocus}}" catchtap="handleFocusBtnTap">
+                        <text class="live-focus-text">已关注</text>
+                    </view>
+                    <view wx:else class="live-focus-btn"  data-id="{{live.id}}" data-status="{{live.isFocus}}" catchtap="handleFocusBtnTap">
+                        <image class="add-icon" src="./img/add-icon.png" mode="widthFix"></image>
+                        <text class="live-focus-text">关注</text>
+                    </view>
+                </view>
+            </view>
+        </block>
+
+        <block wx:if="{{isEmpty}}">
+            <image class="empty-intro" src="../../comp/img/empty-intro.png"></image>
+            <text class="empty-text">暂时还没有内容哦~</text>
+        </block>
+
+        <text wx:if="{{loading}}" class="loading-more">正在加载中...</text>
+        <text wx:if="{{nomore && page != 1}}" class="loading-more">没有更多了</text>
+    </scroll-view>
+</view>
+<!-- <audio-box/> -->

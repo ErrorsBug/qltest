@@ -1,0 +1,21 @@
+.un-learn-camp{
+    white-space: nowrap; 
+    overflow-y: scroll;
+    margin:0 -32px ;
+    margin-bottom: 32px; 
+    padding:0 32px;
+    z-index: 1; 
+    height: 138px; 
+
+        img{
+            vertical-align: middle;
+            width: 220px;
+            height: 138px; 
+            margin-right: 16px;
+            border-radius: 2px;
+            &:last-child{
+                margin-right: 0;
+            }
+        } 
+    
+}

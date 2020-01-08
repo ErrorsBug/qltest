@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>讲师达标活动</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="https://img.qlchat.com/qlLive/ico/favicon.ico" type="image/x-icon" />
+    <script src="../../components_modules/lib-flexible/1.0.0/lib-flexible.js"></script><!--ignore-->
+    <script type="text/javascript" src="../../components_modules/require/2.1.18/require.js"></script><!--ignore-->
+</head>
+
+<body>
+
+    <div class="containers">
+        <div class="container">
+            <div class="title">我的活动进度</div>
+            <div class="progress-bar-con">
+                <div class="progress-bar">
+                    <div class="process-item"></div>
+                        {{#if reachStandard}} {{else}}
+                        <div class="num">{{activeValue}}/100</div>
+                        {{/if}}
+                </div>
+            </div>
+            
+            {{#if reachStandard}}
+                <div class="dis">
+                    恭喜！您已完成讲师达标活动
+                </div>
+            {{else}}
+                <div class="dis">
+                    还差{{activeValueLeft}}分即可完成讲师达标活动，获得奖励
+                </div>
+            {{/if}}
+
+            <div class="button-con">
+                {{#if reachStandard}}
+                    <div class="shadow-btn show-reword">领取奖励</div>
+                {{else}}
+                    <div class="shadow-btn goto-promote">立刻提升活跃值</div>
+                {{/if}}
+            </div>
+
+            <div class="active-dsc-con">
+                <div class="title-with-back"><span>讲师达标活动介绍</span></div>
+                <div class="factor">获奖条件</div>
+                <div class="factor-dsc">
+                    直播间活跃值达到100即可获得奖励。 <br/>
+                    活动截止时间：9月11日 <br/>
+                    奖励发放时间：9月12日
+                </div>
+
+                
+                <div class="reward-item-con">
+                    <div class="reward-name">奖励</div>
+                    <div class="flex-con">
+                        <div class="reward-item">
+                            <div class="push-time-1"></div>
+                            <div class="reward-dsc">话题推送<br/>次数+1次</div>
+                        </div>
+                        <div class="reward-item">
+                            <div class="doctor-hat"></div>
+                            <div class="reward-dsc">直播间主页<br/>博士帽徽章</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="return-btn">返回活动中心</div>
+
+            </div>
+
+        </div>
+
+        <div class="dialog-back">
+            <div class="dialog">
+                <div class="logo"></div>
+                <div class="congratulation">恭喜您，完成讲师达标活动！</div>
+                <div class="reward-time">9月12日前往直播间主页查看博士帽徽章</div>
+
+                <div class="bottom-con dialog-conform">确定</div>
+            </div>
+        </div>
+    </div>
+
+    <!--SCRIPT_PLACEHOLDER-->
+    <script>
+        (function (win) {
+            require(['./standard'], function (standard) {
+                initData = {
+                    active_value : [[ACTIVE_VALUE]]
+                }
+
+                console.log(initData);
+                standard.init(initData);
+            });
+        })(window);
+    </script><!--ignore-->
+    <script type="text/javascript" src="/api/js-sdk/wx?actions=hide_all&__date"></script>
+    <script type="text/javascript">
+        var _uaq = window._uaq || [];
+        // 配置站点名,默认值为： ql-h5
+        _uaq.push(['set', 'site', 'activity']);
+
+        // 配置站点版本, 默认值为: 1.0.0
+        _uaq.push(['set', 'sitever', '1.0.0']);
+
+        // 配置日志采集服务地址，用于发送采集日志,默认地址为： //collect.qlchat.com
+        _uaq.push(['set', 'server', '[[collectApiPrefix]]']);
+
+        // 配置渠道参数
+        _uaq.push(['set', 'ch', 'query.ch']);
+
+    </script><!--ignore-->
+    <script type="text/javascript" src="[[collectjs]]"></script><!--ignore-->
+    <script>
+            // 百度统计
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "//hm.baidu.com/hm.js?9f8c5d323a26421cb966b5e405d629c3";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script><!--ignore-->
+</body>
+
+</html>

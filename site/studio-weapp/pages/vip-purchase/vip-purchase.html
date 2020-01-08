@@ -1,0 +1,73 @@
+<view class="card-section">
+    <view class="card" style="background-image:url({{uri_card}})">
+        <image mode="aspectFill" class="live-logo" src="https://img.qlchat.com/qlLive/userHeadImg/1JTUSA97-KUHX-9Z2Q-1516881175918-IN6HP8DN974C.jpg@200h_200w_1e_1c_2o"/>
+        <view class="live-name">JFJ圣所</view>
+        <view class="slogan">
+            <image class="icon-vip" src="{{uri_badge}}" mode="aspectFill"/>
+            <text>尊贵特权，会员专享</text>
+        </view>
+    </view>
+</view>
+
+<view class="price-section">
+    <view class="space-between-line" bind:tap="showChargeModal">
+        <text class="left">购买类型</text>
+        <view class="right">
+            <text class="charge-config" wx:if="{{selectedCharge}}">￥{{selectedCharge.amount}}/{{selectedCharge.chargeMonths}}月</text>
+        </view>
+        <image class="icon-arrow" src="{{uri_arrow}}" mode="aspectFill"/>
+    </view>
+
+    <view class="space-between-line" bind:tap="showChargeModal">
+        <text class="left">优惠券</text>
+        <view class="right coupon-text">
+            <text class="selected" wx:if="{{selectedCoupon}}">已使用优惠券抵扣{{selectedCoupon.amount}}</text>
+            <text class="not-select" wx:if="{{!selectedCoupon}}">未选择优惠券</text>
+            
+            <image src="./img/icon-coupon.png" wx:if="{{selectedCoupon}}" mode="aspectFill" class="icon-coupon"/>
+        </view>
+        <image class="icon-arrow" src="{{uri_arrow}}" mode="aspectFill" />
+    </view>
+    
+    <view class="space-between-line">
+        <text class="left">需要支付</text>
+        <view class="right charge-text">
+            <text class="doller">￥</text>
+            <text class="charge">{{selectedCharge.amount}}</text>
+        </view>
+    </view>
+</view>
+
+<view class="notice">
+    <view class="header">购买须知</view>
+    <view class="notice-list">
+        <view class="list-item">
+            <view class="list-decoration">1</view>
+            <view class="list-content">成功购买直播间VIP即可享受收听当前直播间所有加密和 付费的系列课及话题（转播课除外）</view>
+        </view>
+        <view class="list-item">
+            <view class="list-decoration">2</view>
+            <view class="list-content">直播间VIP尽显尊贵身份</view>
+        </view>
+        <view class="list-item">
+            <view class="list-decoration">3</view>
+            <view class="list-content">购买会员一个月按30天计算</view>
+        </view>
+    </view>
+</view>
+
+<view class="footer" bind:tap="onPurchaseTap">
+    确认支付￥{{selectedCharge.amount}}
+</view>
+
+<!-- 价格选择弹窗 -->
+<view class="modal-bg" bind:tap="hideChargeModal" hidden="{{!modalMaskVisible}}"></view>
+<view class="charge-select-modal" animation="{{chargeModalAnimation}}">
+    <view class="header">选择购买类型</view>
+    <view class="charge-list">
+        <view class="charge-item" wx:for="{{chargeConfigs}}" wx:key="id" bind:tap="onChargeItemTap" data-id="{{item.id}}">
+            <view class="charge">￥{{item.amount}}/{{item.chargeMonths}}月</view>
+            <view class="radio-btn {{selectedCharge.id === item.id?'on':''}}"></view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,224 @@
+@import "../../../../../assets/styles/base-definition";
+
+.theme-list-ul{
+    
+    li{
+        // border-bottom:1px solid #e5e5e5;/*no*/
+        cursor:pointer;
+        position: relative;
+        // &:last-child{
+        //     border-bottom:none;
+        // }
+        >i{
+            display: block;
+            width:32px;
+            height: 40px;
+            position: absolute;
+            left: 25px;
+            top: 25px;
+            color:#fff;
+            text-align: center;
+            line-height: 30px;
+            font-style: normal;
+        }
+        .rank-num1{
+            background: url(../../img/rank-icon1.png) top center no-repeat;
+            background-size: 90% auto;
+        }
+        .rank-num2{
+            background: url(../../img/rank-icon2.png) top center no-repeat;
+            background-size: 90% auto;
+        }
+        .info-box{
+            
+            display: flex;
+            
+            .business-pic{
+                // width:360px;
+                // height: auto;
+                // position: relative;
+                overflow: hidden;
+
+                &.boutique{
+                    &:before{
+                        content:'';
+                        display: block;
+                        width:56px;
+                        height: 58px;/*px*/
+                        background: url(../../img/best.png) center center no-repeat;
+                        background-size: 100% auto;
+                        position: absolute;
+                        top:0;
+                        left:0;
+                    }
+                }
+                
+                img{
+                    width:100%;
+                    height: auto;
+                    display: block;
+                }
+            }
+            .business-info{
+                flex: 1;
+                position: relative;
+                
+                .name{
+                    line-height: 40px;/*px*/
+                    color:#333;
+                    font-size: 30px;/*px*/
+                    font-weight: 600;
+                }
+                .live{
+                    color:#ccc;
+                }
+                span{
+                    margin-right: 10px;
+                }
+                .price{
+                    color:#F73657;
+                    font-size: 24px;/*px*/
+                    height: 30px;
+                    overflow: hidden;
+                    padding: 12px 0 6px;
+                }
+                .price-type{
+                    display: inline-flex;
+                    border:1px solid #F73657;/*no*/
+                    border-radius: 5px;
+                    font-size: 20px;/*px*/
+                    height: 25px;
+                    width: 25px;
+                    line-height: normal;
+                    overflow: hidden;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .push-income{
+                    line-height: 30px;
+                    color:#999;
+                    font-size: 22px;/*px*/
+                    margin-top: 5px;
+                    
+                    &.delete{
+                        text-decoration: line-through;
+                    }
+                }
+                
+                .btn-push{
+                    color:#fff;
+                    background-color:#F73657;
+                    font-size: 30px;/*px*/
+                    text-align: center;
+                    height: 50px;
+                    line-height: 50px;
+                    margin-top: 20px;
+                    border-radius: 25px;
+                    width:100%;
+                    
+                    .icon-gang{
+                        width: 2px;
+                        display: inline-block;
+                        height: 26px;
+                        background: #fff;
+                        margin: 12px 5px 0 12px;
+                        vertical-align: top;
+                    }
+                }
+                .btn-join{
+                    color:#fff;
+                    background-color:#feb358;
+                    font-size: 28px;/*px*/
+                    text-align: center;
+                    height: 50px;
+                    line-height: 50px;
+                    margin-top: 20px;
+                    border-radius: 25px;
+                    width:100%;
+                }
+            }
+            
+        }
+        
+    }
+}
+
+//横
+.style_1{
+    padding-top: 30px;
+    li{
+        
+        .info-box{
+            box-shadow: 1px 5px 20px rgba(0,0,0,0.1);
+            margin: 0px 30px 40px;
+            border-radius: 15px;
+            overflow: hidden;
+            padding:20px;
+            background-color:#fff;
+            .business-pic{
+                width:325px;
+                border-radius: 4px;
+            }
+            .business-info{                
+                width:100%;
+                margin-left:30px;
+                .name{
+                    max-height:80px;/*px*/
+                }
+            }
+            .btn-push{                
+                position: absolute;
+                bottom:0;
+            }
+
+            .btn-join{
+                position: absolute;
+                bottom:0;
+            }
+            
+        }
+        
+    }
+}
+
+//两竖
+.style_2{
+    overflow: hidden;
+    padding: 10px;
+    li{
+        width: 50%;
+        float: left;
+        // border-bottom: none;
+
+        .info-box{
+            padding:0;
+            // display: flex;
+            flex-direction: column;
+            box-shadow: 1px 5px 20px rgba(0,0,0,0.1);
+            margin: 20px;
+            border-radius: 15px;
+            overflow: hidden;
+            background-color:#fff;
+            
+            .business-pic{
+                // width:100%;
+                height: auto;
+                position: relative;
+                border-radius: 4px;
+                margin: 20px;
+            }
+            .business-info{
+                flex: 1;
+                padding:0 20px 20px;
+                margin:0;
+                position: relative;
+                .name{
+                    height:80px;/*px*/
+                }
+                
+            }
+            
+        }
+        
+    }
+}

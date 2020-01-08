@@ -1,0 +1,79 @@
+.date-bottom-dialog {
+    .co-dialog-bottom {
+        border-radius: 32px 32px 0 0;
+        overflow: hidden;
+    }
+    .wrap {
+        border-radius: 32px 32px 0px 0px;
+        background: #f7f7f7;
+    }
+
+    .content {
+        background: #fff;
+        padding: 40px 20px;
+        .title {
+            text-align: center;
+            font-size: 32px; /*px*/
+            font-weight: 600;
+            color: rgba(51, 51, 51, 1);
+            line-height: 32px;
+            margin-bottom: 40px;
+        }
+        .radio-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .radio {
+            padding: 0 30px;
+            height: 62px;
+            line-height: 62px;
+            border-radius: 31px;
+            border: 1px solid rgba(153, 153, 153, 1); /*no*/
+            font-size: 24px; /*px*/
+            color: rgba(51, 51, 51, 1);
+            margin: 0 30px 20px 0;
+            text-align: center;
+            &.selected {
+                background: #f73657;
+                color: #fff;
+                border: 1px solid #f73657; /*no*/
+            }
+        }
+        .item-list {
+            margin: 0 -10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            .item {
+                box-sizing: border-box;
+                flex: 1 0 163px;
+                background: #eeeeee;
+                // padding: 0 20px;
+                text-align: center;
+                height: 62px;
+                line-height: 62px;
+                border-radius: 31px;
+                font-size: 24px; /*px*/
+                color: rgba(51, 51, 51, 1);
+                margin: 0 9px 20px;
+                text-align: center;
+                flex: 0 0 163px;
+                &.selected {
+                    background: #f73657;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .btn-wrap {
+        margin-top: 20px;
+        background: #fff;
+        .btn {
+            height: 90px;
+            line-height: 90px;
+            font-size: 30px; /*px*/
+            color: rgba(51, 51, 51, 1);
+            text-align: center;
+        }
+    }
+}

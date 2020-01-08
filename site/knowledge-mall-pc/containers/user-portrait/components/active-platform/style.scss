@@ -1,0 +1,38 @@
+.active-platform-container {
+    padding: 10px 40px;
+    margin-bottom: 50px;
+    border-top: 1px solid #f2f2f2;
+}
+.head-tip {
+    color: #333333;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 0 0 0 10px;
+    margin: 20px 0;
+    border-left: 5px solid #bebebe;
+}
+.platform-list {
+    padding: 0;
+    list-style-type: none;
+    li {
+        margin: 10px 0;
+        font-size: 14px;
+    }
+}
+.platform-name {
+    color: #666666;
+}
+.platform-link {
+    color: #333333;
+    margin: 0 15px 0 30px;
+}
+.update-button {
+    cursor: pointer;
+    color: #c9a96e;
+}
+.add-platform-button {
+    border-color: #c9a96e;
+    color: #c9a96e;
+    border-radius: 15px;
+    margin-top: 10px;
+}

@@ -1,0 +1,63 @@
+ .un-flag-cash-dialog{
+     position: fixed !important;
+     
+    .co-dialog-content {
+        background: none;  
+        width: 100% !important;
+    }  
+     
+    .fhp-dialog{ 
+        text-align: center;
+        background: url('https://img.qlchat.com/qlLive/business/S91JNLAK-GDM5-TUNB-1560845705554-9W613CMO1IPQ.png') no-repeat 0 0;
+        background-size: 100%;
+        text-align: center;
+        min-height: 754px;
+        position: relative;
+        .fhp-num{
+            padding-top: 36%;
+            font-size:30px; 
+            color:#C66B14;
+            line-height:44px;
+            &.fhp-btm{
+                height: 88px; /*px*/
+                padding-top: 35%;
+            }
+        }
+        .fhp-money{
+            font-size:120px; /*px*/
+            font-weight: bold;
+            line-height: 1.5;
+            color:#E8541E;
+            margin-bottom: 50px;
+            // line-height:168px;
+            // background:linear-gradient(180deg, rgba(250,247,220,1) 0%, rgba(246,210,142,1) 100%);
+            // -webkit-background-clip:text;
+            // -webkit-text-fill-color:transparent; 
+            span{
+                font-size: 60px; /*px*/
+            }
+        }
+        .fhp-btn{ 
+            position: absolute;
+            left: 0;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            &:active{
+                transform: scale(0.9)
+            }
+            img{
+                width: 480px;
+            }
+            animation: scaleBtn 1s  linear infinite;
+        }
+        @keyframes scaleBtn
+        {
+            0%   {transform:scale(1);}         
+            33%   {transform:scale(1.15); }   
+            66%   {transform:scale(0.9); }   
+            100%   {transform:scale(1); }   
+        }
+    }
+}
+ 

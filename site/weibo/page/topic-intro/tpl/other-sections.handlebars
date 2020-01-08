@@ -1,0 +1,116 @@
+<!-- coupon and price info and join member -->
+{{#if conditions.show_subscription}}
+<div class="block-section subscript-section">
+    <span>本直播由公众号【{{live.entity.subscriptionName}}】举办，如有疑问，请联系举办方</span>
+</div>
+{{/if}}
+
+{{!--price section--}}
+<div class="price-section block-section">
+    {{#if conditions.show_price}}
+    <header>
+        <p>
+            票价<span class="show_price">￥{{conditions.topicCharge}}</span>
+        </p>
+    </header>
+    {{/if}}
+
+    <!-- class member list -->
+    {{#if conditions.show_joinMember}}
+    <footer class="right-arrow">
+        <p>
+            报名人数<span>{{topicView.topicPo.authNum}}</span></p>
+        <a href="{{conditions.joinMember_list_link}}">
+            <ul class="inline-right-list min">
+                {{#each processings.joinMember}}
+                <li>
+                    <img src="{{defaultVal headImgUrl 'https://img.qlchat.com/qlLive/liveCommon/normalLogo.png'}}" alt="">
+                </li>
+                {{/each}}
+            </ul>
+        </a>
+    </footer>
+    {{/if}}
+</div>
+
+{{#if conditions.isChannel}}
+<!-- channel info -->
+<div class="live-section block-section">
+    <header class="section-header">
+        <a href="/live/channel/channelPage/{{topicView.topicPo.channelId}}.htm">
+            <span class="name"><i>所属系列课</i>{{channel.channel.name}}</span>
+        </a>
+    </header>
+    <div class="flex-container">
+        <a class="flex-item num" href="/live/channel/channelPage/{{topicView.topicPo.channelId}}.htm">
+            <div>
+                <h2>{{defaultVal channelTopicNum '0'}}</h2>
+                <p>话题数</p>
+            </div>
+        </a>
+        <a class="flex-item num" href="/live/channel/channelPage/{{topicView.topicPo.channelId}}.htm">
+            <div>
+                <h2 id="join-count">{{defaultVal channelJoinNum '0'}}</h2>
+                <p>报名人数</p>
+            </div>
+        </a>
+        <!-- authentication -->
+        <a class="flex-item num" href="/live/channel/channelPage/{{topicView.topicPo.channelId}}.htm">
+            <div>
+                <h2>{{defaultVal conditions.channelCharge '0'}}</h2>
+                <p>系列课票价</p>
+            </div>
+        </a>
+    </div>
+</div>
+{{/if}}
+
+<!-- liveroom info -->
+<div class="live-section block-section">
+    <header class="section-header">
+        <a href="/wechat/page/live/{{topicView.topicPo.liveId}}">
+            <span class="name"><img src="{{img-format conditions.liveroom_img '@300w_300h_1e_1c_2o'}}" alt="">&nbsp;{{live.entity.name}}</span>
+        </a>
+        {{#if conditions.show_focus_btn}}
+        <span class="subscribe">
+            {{#if conditions.focused}}
+			<span class="fromlive_focus on" id="focus-live">
+                已关注
+            </span>
+            {{else}}
+            <span class="fromlive_focus" id="focus-live">
+                关注
+            </span>
+            {{/if}}
+        </span>
+        {{/if}}
+    </header>
+    <div class="flex-container">
+        <a class="flex-item num" href="/wechat/page/live/{{topicView.topicPo.liveId}}">
+            <div>
+                <h2>{{defaultVal topicNum '0'}}</h2>
+                <p>话题数</p>
+            </div>
+        </a>
+        <a class="flex-item num" href="/wechat/page/live/{{topicView.topicPo.liveId}}">
+            <div>
+                <h2 id="follow-count">{{defaultVal followNum '0'}}</h2>
+                <p>关注人数</p>
+            </div>
+        </a>
+        <!-- authentication -->
+        {{#if conditions.isLiveAuth}}
+        <div class="flex-item auth">
+            <p>
+                {{#if conditions.isLiveV}}
+                <i id="v-auth" class="icon-v-auth"></i>
+                {{/if}}
+                {{#if conditions.isLiveT}}
+                <i id="t-auth" class="icon-teacher-auth"></i> 
+                {{/if}}
+                官方认证
+            </p>
+        </div>
+        {{/if}}
+    </div>
+</div>

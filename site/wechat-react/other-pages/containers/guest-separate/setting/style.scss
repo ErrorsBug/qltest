@@ -1,0 +1,344 @@
+@import "../base-definition";
+
+
+.guest-separate-setting{
+	position:absolute;
+	left:0;
+	top:0;
+	line-height:1.2;
+	.add-guest{
+		background:#fff;
+		padding:0 30px;
+		display:flex;
+		align-items: center;
+		justify-content: space-between;
+		height:90px;
+		font-size:26px;/*px*/
+		.add-btn{
+			padding:0 20px;
+			height:50px;
+			border-radius: 50px;
+			@include flex-center();
+			background:$main-color--lighter;
+			color:#fff;
+			&:before{
+				width:32px;
+				height:32px;
+				background:url(./img/icon-plus.png) no-repeat center / 100%;
+				margin-right:8px;
+				content:'';
+			}
+		}
+	}
+	.co-scroll-to-load{
+		position:relative;
+		padding:0;
+		flex:1;
+		margin:20px 0;
+	}
+	.list-wrap{
+		overflow: hidden;
+		.item{
+			position:relative;
+			margin-top:20px;
+			background:#fff;
+			&:first-child{
+				margin-top:0;
+			}
+			.info-wrap{
+				padding:0 0 0 30px;
+				display:flex;
+				position:relative;
+				.avatar{
+					@include round-avatar(80px);
+					flex-shrink: 0;
+					margin-top:30px;
+				}
+				.details{
+					position:relative;
+					margin-left:20px;
+					padding:30px 30px 20px 0;
+					flex:1;
+					.name{
+						font-size:28px;/*px*/
+						margin-bottom:10px;
+					}
+					.proportion,
+					.deadline,
+					.settlement{
+						line-height:1.8;
+						color:$gray--tip;
+						.price{
+							color:$main-color;
+						}
+					}
+				}
+			}
+			.operation{
+				border-top:1px solid $gray--split-line;/*no*/
+				display:flex;
+				.btn{
+					flex:1 0;
+					height:76px;
+					@include flex-center;
+					&:last-child{
+						border-left:1px solid $gray--split-line;/*no*/
+					}
+				}
+			}
+			&.vacancy{
+				margin:0;
+				.info-wrap{
+					.avatar{
+						background:url(./img/default-avatar.png) #c2c2c2 no-repeat center bottom / 67px;
+						img{
+							display:none;
+						}
+					}
+					.details{
+						border-top:1px solid $gray--split-line;/*no*/
+						.delete-btn{
+							color:$gray--lighter-tip;
+							margin-left:20px;
+							font-size:24px;/*px*/
+						}
+					}
+					.invite-btn{
+						height:48px;
+						padding:0 30px;
+						border:1px solid $main-color;/*no*/
+						@include flex-center();
+						font-size:24px;/*px*/
+						border-radius: 50px;
+						position:absolute;
+						right:30px;
+						top:50%;
+						margin-top:-25px;
+						color:$main-color;
+					}
+				}
+				&:first-child{
+					.info-wrap .details{
+						border:0;
+					}
+				}
+			}
+		}
+	}
+	.no-data-tip{
+		flex:1;
+		padding-top:360px;
+		text-align: center;
+		color:$gray--content;
+		background:url(./img/no-data-tip.png) no-repeat center 108px / 235px 196px;
+	}
+	.separate-intro{
+		padding:30px;
+		color:$gray--tip;
+		line-height:1.5;
+		.title{
+			font-size:26px;/*px*/
+			color:$gray--content;
+			margin-bottom:10px;
+		}
+	}
+	.back-btn{
+		border-top:1px solid $gray--split-line;/*no*/
+		background:#fff;
+		color:$main-color;
+		@include flex-center();
+		font-size:32px;/*px*/
+		height:78px;
+	}
+
+	.add-guest-confirm{
+		padding:0 40px;
+		.sub-title{
+			font-size:30px;/*px*/
+			i{
+				font-style: normal;
+				color:$gray--tip;
+				font-size:24px;/*px*/;
+			}
+			&:nth-child(n+2){
+				margin-top:50px;
+			}
+		}
+		.input-wrap{
+			margin-top:10px;
+			padding-right:40px;
+			position:relative;
+			.input{
+				width:100%;
+				display:block;
+				height:80px;
+				line-height:80px;
+				background:#ebebeb;
+				padding:0 20px;
+				border:0;
+				font-size:28px;/*px*/
+				.placeholder{
+					color: #c2c2c2;
+				}
+			}
+			.date-input{
+				cursor:pointer
+			}
+			.unit{
+				position:absolute;
+				width:40px;
+				top:0;
+				right:0;
+				height:100%;
+				box-sizing:border-box;
+				padding-left:5px;
+				@include flex-center(vertical);
+				color:$gray--tip;
+			}
+			.delete-date-btn{
+				width:40px;
+				height:40px;
+				@include flex-center();
+				position:absolute;
+				top:50%;
+				margin-top:-20px;
+				right:60px;
+				color:$gray--tip;
+				font-size:30px;
+			}
+		}
+		.tip{
+			color:$gray--tip;
+			margin-top:10px;
+			font-size:24px;/*px*/
+			line-height:1.5;
+			@include flex-center(vertical);
+			strong{
+				font-weight: normal;
+				color:$main-color;
+			}
+			.icon-question{
+				font-size:34px;/*px*/
+				margin-left:10px;
+				cursor:pointer;
+			}
+			&.error{
+				color:$main-color;
+			}
+		}
+		.auto-pay{
+			border-top:1px solid $gray--split-line;/*no*/
+			padding-top:20px;
+			margin-top:30px;
+			.sub-title{
+				@include flex-center(vertical);
+				justify-content: space-between;
+				.switch-btn{
+					width:90px;
+					height:58px;
+					@include flex-center;
+					border:1px solid $gray--split-line;/*no*/
+					border-radius:58px;
+					background:$gray--background;
+					transition:background .2s, border-color .2s;
+					&:after{
+						width:50px;
+						height:50px;
+						border:1px solid $gray--split-line;/*no*/
+						border-radius:100%;
+						content:'';
+						display:block;
+						background:#fff;
+						//box-shadow: 0 0 4px 0 rgba(#000,.2);
+						transform:translate3d(-20px,0,0);
+						transition:transform .2s;
+					}
+					&.on{
+						border-color:$main-color--lighter;
+						background:$main-color--lighter;
+						&:after{
+							transform:translate3d(20px,0,0);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.guest-separate-intro{
+		color:$gray--tip;
+		padding:0 30px;
+		line-height:1.6;
+		strong{
+			font-weight: normal;
+			color:$main-color;
+		}
+	}
+
+	.auto-confirm-dialog{
+		.auto-pay-intro{
+			padding:30px 40px;
+			font-size: 28px;/*px*/
+			line-height:1.5;
+			color:$gray--tip;
+		}
+	}
+}
+
+.Modal-Portal{
+
+	.datepicker-modal{
+		width:100%;
+		max-width: 1280px; /*px*/
+		min-width: 640px; /*px*/
+		position: absolute;
+		top:0;
+		left:50%;
+		transform:translate(-50%,0);
+		height: 100%;
+		z-index: 999;
+	}
+
+	.datepicker.android{
+		font-size:28px!important;/*px*/
+		height:auto!important;
+		padding-bottom:0;
+		.datepicker-header{
+			color:$main-color;
+			border-color:$main-color;
+		}
+		.datepicker-viewport{
+			height:400px;
+		}
+		.datepicker-wheel{
+			border-color:$main-color;
+			li{
+				font-size: 26px;/*px*/
+			}
+		}
+		.datepicker-navbar{
+			.datepicker-navbar-btn{
+				&:first-child{
+					color:$main-color;
+					border-left:1px solid #d9d4d4;
+					transform:translate(100%,0)
+				}
+				&:last-child{
+					border:0;
+					transform:translate(-100%,0)
+				}
+			}
+		}
+		//.datepicker-wheel{
+		//	height:60px;
+		//	margin-top:-30px;
+		//}
+		//.datepicker-scroll{
+		//	transform: translateY(-300px)!important;
+		//}
+		//.datepicker-scroll li{
+		//	height:60px;
+		//	line-height:60px;
+		//}
+	}
+}

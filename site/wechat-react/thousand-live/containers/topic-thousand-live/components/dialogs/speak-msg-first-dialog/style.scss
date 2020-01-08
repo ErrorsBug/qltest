@@ -1,0 +1,39 @@
+.speak-msg-first-focus-qrcode{
+
+	.co-dialog-close{
+		top:10px;
+		width:40px;/*px*/
+		height: 40px;/*px*/
+		line-height: 38px;/*px*/
+		color:#979797;
+	}
+
+	.content{
+		overflow: hidden;
+		margin-top: 48px;
+		.img-container {
+			margin: 0 auto 48px;
+			text-align: center;
+		}
+		img {
+			width: 209px;
+			height: 209px;
+			margin: -300px;
+			padding: 300px;
+		}
+		.extrude {
+			color: #333;
+			font-size: 30px; /*px*/
+			font-weight: 600;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		.common {
+			color: #999090;
+			font-size: 26px; /*px*/
+			text-align: center;
+			margin-bottom: 40px;
+		}
+	}
+
+}

@@ -1,0 +1,12 @@
+<view class="co-white-pd"></view>
+<scroll-view class="co-scroll-view" scroll-y="false" scroll-x="{{true}}">
+    <view class="co-scroll-body">
+        <block wx:for="{{scrollMenuItems}}" wx:key="{{id}}" wx:for-index="scrollMenuItemIndex" wx:for-item="scrollMenuItem">
+            <view class="co-scroll-item {{scrollMenuItem.active ? 'co-scroll-item-active': ''}}" data-active="{{scrollMenuItem.active}}" data-type="{{scrollMenuItem.type}}" data-parenttagid="{{parentTagId}}" data-name="{{scrollMenuItem.name}}" data-id="{{scrollMenuItem.id}}" bindtap="handleScrollMenuItemTap">
+                <view class="co-scroll-content">
+                    <text class="co-scroll-item-text">{{scrollMenuItem.name}}</text>
+                </view>
+            </view>
+        </block>
+    </view>
+</scroll-view>

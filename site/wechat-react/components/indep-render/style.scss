@@ -1,0 +1,46 @@
+.dialog-modal {
+    // 首页底部tab z-index 200
+    z-index: 300;
+    .co-dialog-content {
+        line-height: 1.4;
+        .co-dialog-title {
+            font-size: 32px;/*px*/
+            color: #333;
+            font-weight: bold;
+            padding-top: 48px;
+            padding-bottom: 15px;
+        }
+        >main {
+            padding: 0;
+            font-size: 28px;/*px*/
+            .red {
+                color: #F73657;
+            }
+        }   
+        .co-dialog-btn-line {
+            border: 0;
+            height: auto;
+            min-height: auto;
+            padding: 48px 80px;
+            margin-top: 0;
+            cursor: auto;
+            >span {
+                height: 76px;
+                display: flex;
+                line-height: normal;
+                justify-content: center;
+                align-items: center;
+                border-radius: 76px;
+                background-color: #F73657;
+                color: #fff;
+                margin-right: 30px;
+                &:last-child {
+                    margin-right: 0;
+                }
+                &:nth-child(2)::before {
+                    content: none;
+                }
+            }
+        }
+    }
+}

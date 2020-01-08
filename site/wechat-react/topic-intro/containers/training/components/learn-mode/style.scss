@@ -1,0 +1,83 @@
+.learn-li {
+  padding: 45px 30px;
+  box-shadow: 0px 4px 40px 0px rgba(0,0,0,0.05);
+  border-radius:20px;
+  min-width: 635px;
+  margin: 40px 20px 60px 20px;
+  box-sizing: border-box;
+  font-size: 22px;/*px*/
+  &.lock {
+    background: rgba(0,0,0,.25) !important;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: url(../../img/icon_Locked.png) no-repeat;
+      background-size: cover;
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+.learn-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 55px;
+  .learn-title {
+    color: #333333;
+    font-size: 30px;/*px*/
+    font-weight: 600;
+    cursor: pointer;
+    width: 0;
+    flex: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 0;
+  }
+}
+.learn-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  color: #999;
+  font-size: 22px; /*px*/
+
+  .left {
+    flex: 1;
+  }
+
+  .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 98px;
+  }
+
+  .learn-learns {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .learn-btn {
+    color: #F63657;
+    background: #FFF;
+    border: 1px solid #F63657;
+    padding: 15px 0;
+    border-radius: 28px;
+    width: 146px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  .learn-arrow {
+    color: #F63657;
+    flex-shrink: 0;
+  }
+}

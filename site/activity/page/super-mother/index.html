@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>超级妈妈养成计划</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="https://img.qlchat.com/qlLive/ico/favicon.ico" type="image/x-icon" />
+    <script src="../../components_modules/lib-flexible/1.0.0/lib-flexible.js"></script><!--ignore-->
+    <script src="//res.wx.qq.com/open/js/jweixin-1.2.0.js"></script><!--ignore-->
+    <script type="text/javascript" src="../../components_modules/require/2.1.18/require.js"></script><!--ignore-->
+    <!-- <script type="text/javascript" src="https://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/vconsole/2.5.1/vconsole.min.js"/> -->
+</head>
+
+<body>
+    <div id="containers" class="containers">
+        <section class="main">
+
+            <div class="header-con">
+                <div class="mine-coupon">
+                    <span class="icon"></span> 
+                    我的优惠券
+                </div>
+                <div class="head-img"></div>
+                <div class="super-mother-img"></div>
+            </div>
+
+            <div class="intro-con">
+                <div class="intro-wrap">
+                    <div class="intro-img">
+            
+                    </div>
+
+                    <div class="video-container">
+                        <iframe frameborder="0" width="640" height="498" src="https://v.qq.com/iframe/player.html?vid=f0564fwe5va&tiny=0&auto=0" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="flow-img">
+                        <div id="get-code1" class="get-code on-log"                                     
+                            data-log-name="领取奖学金"
+                            data-log-region="get-coupon"
+                            data-log-pos="top"
+                        >
+                        </div>
+                        <div id="rule-btn" class="rule-btn on-log"
+                            data-log-name="rule-btn"
+                            data-log-region="rule-btn"
+                            data-log-pos="pic"
+                        ></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="cloud-sege-img">
+                <img src="./img/course-sega.png" alt="">
+            </div>
+
+            <div class="course-pass-con">
+                <div class="pass-road">
+                    <div class="self-grow on-log"
+                        data-log-name="self-grow"
+                        data-log-region="self-grow"
+                        data-log-pos="pic"
+                    >
+                        <div class="self-grow-tag on-log"
+                            data-log-name="self-grow"
+                            data-log-region="self-grow"
+                            data-log-pos="tag"
+                        >
+                        </div>
+                    </div>
+                    
+                    <div class="marriage on-log"
+                        data-log-name="marriage"
+                        data-log-region="marriage"
+                        data-log-pos="pic"
+                    >
+                        <div class="marriage-tag on-log"
+                            data-log-name="marriage"
+                            data-log-region="marriage"
+                            data-log-pos="tag">
+                        </div>
+                    </div>
+                    
+                    <div class="easy-edu on-log"
+                        data-log-name="easy-edu"
+                        data-log-region="easy-edu"
+                        data-log-pos="pic"
+                    >
+                        <div class="easy-edu-tag on-log"
+                            data-log-name="easy-edu"
+                            data-log-region="easy-edu"
+                            data-log-pos="tag"
+                        >
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="course-gift"></div>
+            </div>
+
+            <div class="bottom-con">
+
+                <div id="get-code2" class="get-code2 on-log"                                     
+                    data-log-name="领取奖学金"
+                    data-log-region="get-coupon"
+                    data-log-pos="bottom"
+                >
+                </div>
+
+
+
+                <div id="share-for-code-btn" class="bottom-con-btn share-for-code-btn on-log"
+                    data-log-name="朋友圈分享领券"
+                    data-log-region="share-for-code"
+                    data-log-pos="bottom"
+
+                    style="display: none"
+                >
+                </div>
+
+                <div id="get-course" class="bottom-con-btn go-to-course on-log"
+                    data-log-name="马上报名上课"
+                    data-log-region="go-course"
+                    data-log-pos="go-course-btn"
+                >
+                </div>
+            </div>
+
+        </section>
+
+        
+        <div class="pop-dialog" id="role-pop">
+            <div class="dialog-main">
+                <div class="icon_delete"></div>
+                <div class="rule-img"></div>
+                <section>
+                    1.成功报名课程后，即可收听星妈叶一茜分享的10堂干货直播课程，无限次反复收听。
+                    </br>
+                    2.每堂课叶一茜会布置一个超级任务，每模块完成即可领取叶一茜手写明信片和超级妈妈精美勋章，集齐3个勋章即有机会赢取迪士尼家庭套票（价值¥1996）。
+                </section>
+            </div>
+        </div>
+
+        <div class="pop-dialog" id="self-grow-pop">
+            <div class="dialog-main">
+                <div class="icon_delete"></div>
+                <div class="self-grow-img"></div>
+                <section>
+                    本阶段学会女人内外兼修的基本修炼法则，做到家庭事业两不误，规律生活并把家里的一切安排妥当舒适。
+                </section>
+            </div>
+        </div>
+
+        <div class="pop-dialog" id="marriage-pop">
+            <div class="dialog-main">
+                <div class="icon_delete"></div>
+                <div class="marriage-text"></div>
+                <section>
+                    本阶段练就婚姻里的高情商，学会夫妻间的沟通心法，巧用爱的5种语言，给你只爱不痒的感情升温剂，让你们的婚姻永久保鲜。
+                </section>
+            </div>
+        </div>
+
+        <div class="pop-dialog" id="easy-edu-pop">
+            <div class="dialog-main">
+                <div class="icon_delete"></div>
+                <div class="easy-edu-text"></div>
+                <section>
+                    本阶段激发孩子洞察和学习能力，从小培养孩子时间观念，不做小磨蹭，养成自信、大方、阳光的性格，让孩子学会与家人好好说话，好好相处。
+                </section>
+            </div>
+        </div>
+
+
+        <div class="pop-dialog" id="share-for-code">
+            <div class="dialog-main">
+                <div class="icon_delete"></div>
+                <div class="share-text"></div>
+                <section>
+                    点击分享按钮，分享活动至朋友圈，即可领取最高99.9元奖学金。机不可失，快快分享参与活动吧！
+                </section>
+                <div class="share-btn on-log"
+                    data-log-name="app分享"
+                    data-log-region="app-share"
+                ></div>
+            </div>
+        </div>
+
+        <div class="modal" id="share-modal">
+            <div class="bg darker"></div>
+            <main class="on-top">
+                <div class="share-tips"> 点击页面右上角
+                    <span class="option"></span> → <span class="timeline"></span> 分享到朋友圈， 即可抽取优惠券，100%中奖，最高可免99.9元
+                </div>
+            </main>
+        </div>
+
+        <footer class="page-footer">
+            <aside>
+                <div>
+                    <div class="regular-price">￥299</div>
+                    <div class="discount">特价优惠</div>
+                </div>
+                <div class="price">￥99.9</div>
+            </aside>
+            <div id="order-channel" class="order-con on-log"
+                data-log-name="购买系列课"
+                data-log-region="buy-course"
+                data-log-region="footer"
+            >
+                购买系列课
+            </div>
+        </footer>
+
+
+
+    </div>
+    <!--SCRIPT_PLACEHOLDER-->
+    <script>
+        (function (win) {
+            require(['./index'], function (superMother) {
+                superMother.init();
+            });
+            
+        })(window);
+
+        function disableScroll(event) {
+            if (!event.canScroll) {
+                event.preventDefault();
+            }
+        }
+
+        function overscroll(el) {
+            if (el) {
+                el.addEventListener('touchstart', function (){
+                    const top = el.scrollTop;
+                    const totalScroll = el.scrollHeight;
+                    const currentScroll = top + el.offsetHeight;
+                    if (top === 0) {
+                        el.scrollTop = 1;
+                    } else if (currentScroll === totalScroll) {
+                        el.scrollTop = top - 1;
+                    }
+                });
+
+                el.addEventListener('touchmove', function(event) {
+                    if (el.offsetHeight < el.scrollHeight) event.canScroll = true;
+                });
+            }
+        }
+
+        function fixScroll(selector) {
+            const elSelectot = selector || '';
+            overscroll(document.querySelector(selector));
+            document.body.addEventListener('touchmove', disableScroll);
+        }
+
+        fixScroll('.main');
+    </script><!--ignore-->
+    <script type="text/javascript">
+        var _uaq = window._uaq || [];
+        // 配置站点名,默认值为： ql-h5
+        _uaq.push(['set', 'site', 'activity']);
+
+        // 配置站点版本, 默认值为: 1.0.0
+        _uaq.push(['set', 'sitever', '1.0.0']);
+
+        // 配置日志采集服务地址，用于发送采集日志,默认地址为： //collect.qlchat.com
+        _uaq.push(['set', 'server', '[[collectApiPrefix]]']);
+
+        // 配置渠道参数
+        _uaq.push(['set', 'ch', 'query.ch']);
+
+    </script><!--ignore-->
+    <script type="text/javascript" src="[[collectjs]]"></script><!--ignore-->
+</body>
+
+</html>

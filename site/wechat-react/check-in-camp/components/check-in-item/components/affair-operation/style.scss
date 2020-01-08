@@ -1,0 +1,65 @@
+.affair-operation-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    margin: 20px 0 0 0;
+
+    .icon {
+        width: 34px;
+        height: 30px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            height: 60px;
+            width: 60px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+            content: '';
+        }
+    }
+
+    .left {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        .affair-count {
+            font-size: 24px;/*px*/
+            color: #b8b0b0;
+            margin-right: 40px;
+            
+        }
+
+        
+    }
+
+    .right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        .delete {
+            background-image: url("./img/icon-delete.png");
+            margin-right: 80px;
+        }
+        .comment {
+            background-image: url("./img/icon-comment.png");
+            margin-right: 80px;
+        }
+
+        .thumb {
+            background-image: url("./img/icon-thumb.png");
+        }
+
+        .thumb-up {
+            background-image: url("./img/icon-thumb-up.png");
+        }
+    }
+}

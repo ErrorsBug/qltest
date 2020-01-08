@@ -1,0 +1,137 @@
+.lantern-slide{
+	// height:422px;
+	background:#000;
+	position:relative;
+    padding-top: 45.45%;
+	.lantern-slide-swiper{
+		position:absolute !important;
+		top:0;
+		left:0;
+        width: 100%;
+        height: 100%;
+	}
+	.lantern-slide-item{
+		min-height: 200px;
+        cursor: pointer;
+
+        span {
+            display: block;
+            width: 100%;
+            padding-top: 45.45%;
+            background-position: top;
+    		background-repeat:no-repeat;
+    		background-size:contain;
+        }
+	}
+	.pagination{
+		position:absolute;
+		bottom:15px;
+		left:10px;
+		background:rgba(#000,.5);
+		color:#fff;
+		font-size:20px;/*px*/
+		padding:0 15px;
+		display:flex;
+		height:40px;
+		justify-content:center;
+		align-items: center;
+		border-radius:300px;
+		.wrap{
+			height:28px;/*px*/
+			display:flex;
+			justify-content:center;
+			align-items: flex-end;
+		}
+		.current{
+			font-size:28px;/*px*/
+		}
+	}
+	.controller{
+		width:100px;
+		height:30px;
+		position:absolute;
+		bottom:10px;
+		left:50%;
+		margin-left:-50px;
+		display: flex;
+		justify-content:space-between;
+		.prev-btn,
+		.next-btn{
+			width:30px;
+			height:30px;
+			background:rgba(#000,.5);
+			cursor:pointer;
+			color:#fff;
+			display:flex;
+			justify-content:center;
+			align-items: center;
+
+		}
+	}
+
+	.guide-for-manager{
+		width:100%;
+		height:100%;
+		position:absolute;
+		top:0;
+		left:0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		section{
+			width:650px;
+			height:60px;
+			display:flex;
+			align-items: center;
+			justify-content: flex-start;
+			color:#999;
+			font-size:28px;/*px*/
+			&:before{
+				width:40px;
+				height:40px;
+				background:#999;
+				border-radius: 100%;
+				margin-right:10px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color:#000;
+				flex-shrink: 0;
+			}
+			@for $i from 1 through 3{
+				&:nth-child(#{$i}):before{
+					content:'#{$i}'
+				}
+			}
+		}
+	}
+
+	.no-ppt{
+		width:100%;
+		height:100%;
+		position:absolute;
+		top:0;
+		left:0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		color:#999;
+		line-height:1.5;
+		font-size:30px;/*px*/
+		.icon_ppt{
+			font-size:60px;
+		}
+	}
+
+	.user-guide{
+		width:100%;
+		height:100%;
+		position:absolute;
+		top:0;
+		left:0;
+		background:url(//img.qlchat.com/qlLive/liveCommon/useguidePPT.png) no-repeat center;
+		background-size:cover;
+	}
+}

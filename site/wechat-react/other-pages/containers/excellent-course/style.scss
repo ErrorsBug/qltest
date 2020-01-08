@@ -1,0 +1,435 @@
+.excellent-course-container{
+    height: 100%;
+    position: relative;
+    .scroll-box {
+        top: 0;
+        padding-bottom: 88px;
+        &.hideSwitch {
+            padding-bottom: 0;
+            transition: padding-bottom ease .3s;
+        }
+    }
+    .course-container {
+        position: relative;
+        .list{
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(255,255,255);
+            &:not(:last-child){
+                margin-bottom: 20px;
+            }
+            >.spread-detail {
+                height: 88px;
+                width: 100%;
+                p{
+                    height: 88px;
+                    width: 100%;
+                    line-height: 88px;
+                    text-align: center;
+                    color: rgb(153,153,153);
+                    font-size: 28px;/*px*/
+                    cursor: pointer;
+                    >span {
+                        color: rgb(51,187,73);
+                    }
+                }
+            }
+            >.course-detail {
+                flex: 1;
+                align-items: center;
+                display: flex;
+                padding: 0 30px;
+                border-bottom: 1px solid rgb(229,229,229);/*px*/
+                cursor: pointer;
+                img{
+                    height: 148px;
+                    width: 240px;
+                }
+                .detail-content {
+                    margin-left: 20px;
+                    flex: 1;
+                    .course-title {
+                        color: rgb(51,51,51);
+                        font-size: 28px;/*px*/
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                        overflow: hidden;
+                        line-height: 40px;
+                    }
+                    .proportion {
+                        color: rgb(182,182,182);
+                        font-size: 24px;/*px*/
+                        margin-top: 10px;
+                    }
+                    .course-price {
+                        color: rgb(102,102,102);
+                        font-size: 24px;/*px*/
+                        margin-top: 10px;
+                        .icon {
+                            color: rgb(51,187,73);
+                            font-size: 24px;/*px*/
+                        }
+                        .price {
+                            color:rgb(51,187,73);
+                            font-size: 36px;/*px*/
+                        }
+                    }
+                }
+            }
+        }
+        .empty-container {
+            width: 630px;
+            margin: 98px auto 0;
+            .empty-tip {
+                width: 100%;
+                text-align: center;
+                .tip {
+                    color: rgb(153,153,153);
+                    font-size: 24px;/*px*/
+                    margin-top: 20px;
+                }
+            }
+            .help-content {
+                height: 500px;
+                border-radius: 10px;
+                background-color: rgb(255,255,255);
+                margin-top: 70px;
+                padding: 0 40px;
+                box-sizing: border-box;
+                overflow: hidden;
+                li{
+                    margin-top: 36px;
+                    >.title{
+                        color: rgb(254,161,61);
+                        font-size: 28px;/*px*/
+                        position: relative;
+                        height: 30px;
+                        line-height: 30px;
+                        margin-bottom: 20px;
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            height: 8px;
+                            width: 8px;
+                            border-radius: 8px;
+                            top: 11px;
+                            left: -18px;
+                            background-color: rgb(254,161,61);
+                        }
+                    }
+                    .answer {
+                        color: rgb(153,153,153);
+                        font-size: 24px;/*px*/
+                        line-height: 36px;
+                    }
+                    .answer-list {
+                        display: flex;
+                        >span {
+                            border: 1px solid rgb(153,153,153);/*px*/
+                            height: 24px;
+                            width: 24px;
+                            border-radius: 24px;
+                            color: rgb(153,153,153);
+                            font-size: 22px;/*px*/
+                            line-height: 24px;
+                            text-align: center;
+                            margin-top: 6px;
+                        }
+                        >p {
+                            margin-left: 16px;
+                            font-size: 24px;/*px*/
+                            line-height: 36px;
+                            color: rgb(153,153,153);
+                            flex: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .switch-container {
+        height: 88px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: rgb(255,255,255);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 30px;
+        box-shadow: 0 -1px 0 0 rgb(229,229,229);
+        box-sizing: border-box;
+        &.hide {
+            display: none;
+        }
+        >span {
+            color: rgb(51,51,51);
+            font-size: 30px;/*px*/
+        }
+        .switch-after {
+            width: 100px;/*px*/
+            height: 60px;/*px*/
+            background-color: rgb(51,187,73);
+            border-radius: 50px;/*px*/
+            position: relative;
+            border: 2px solid rgb(51,187,73);
+            box-sizing: border-box;
+            >span {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                height: 53px;/*px*/
+                width: 53px;/*px*/
+                border-radius: 53px;/*px*/
+                background-color: #fff;
+                left: 42px;/*px*/
+                box-sizing: border-box;
+            }
+        }
+        .switch-before {
+            width: 100px;/*px*/
+            height: 60px;/*px*/
+            border-radius: 50px;/*px*/
+            position: relative;
+            border: 2px solid #e5e5e5;/*px*/
+            box-sizing: border-box;
+            >span {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                height: 53px;/*px*/
+                width: 53px;/*px*/
+                border-radius: 53px;/*px*/
+                background-color: #fff;
+                left: 1px;/*px*/
+                box-sizing: border-box;
+                border: 1px solid #e5e5e5;/*px*/
+                box-shadow: 1px 2px 1px 1px #f0f0f0;
+            }
+        }
+    }
+    .right-tab {
+        position: absolute;
+        right: 0;
+        top: 150px;
+        background-color: rgb(254,161,61);
+        border-radius: 25px 0 0 25px;
+        height: 50px;
+        width: 104px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 1;
+        i{
+            font-size: 30px;/*px*/
+            color: #fff;
+        }
+        .label {
+            color: rgb(255,255,255);
+            font-size: 24px;/*px*/
+            margin-left: 8px;
+        }
+    }
+    .open-pop {
+        .co-dialog-content{
+            height: 450px;
+            width: 670px;   
+            .content {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                .detail {
+                    flex: 1;
+                    padding: 0 50px;
+                    overflow: hidden;
+                    .title {
+                        margin-top: 50px;
+                        font-weight: bold;
+                        font-size: 34px;/*px*/
+                        color: rgb(51,51,51);
+                        line-height: 50px;
+                    }
+                    .tip1 {
+                        color: rgb(153,153,153);
+                        font-size: 28px;/*px*/
+                        line-height: 28px;
+                        margin-top: 36px;
+                    }
+                    .tip2 {
+                        color: rgb(102,102,102);
+                        font-size: 28px;/*px*/
+                        margin-top: 10px;
+                        line-height: 28px;
+                        margin-top: 18px;
+                    }
+                    .tip3 {
+                        line-height: 28px;
+                        margin-top: 30px;
+                        font-size: 28px;/*px*/
+                        color: rgb(153,153,153);
+                        span {
+                            color: rgb(51,187,73);
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .confirm {
+                    height: 100px;
+                    cursor: pointer;
+                    font-size: 34px;/*px*/
+                    color: rgb(51,187,73);
+                    line-height: 100px;
+                    text-align: center;
+                    border-top: 1px solid rgb(229,229,229);/*px*/
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    .update-pop {
+        .co-dialog-content{
+            height: 370px;
+            width: 670px; 
+            .content {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                .detail {
+                    text-align: center;
+                    flex: 1;
+                    .title {
+                        margin: 50px auto 40px;
+                        font-weight: bold;
+                        font-size: 34px;/*px*/
+                        color: rgb(51,51,51);
+                        line-height: 50px;
+                    }
+                    .tip1 {
+                        color: rgb(51,187,73);
+                        font-size: 34px;/*px*/
+                    }
+                    .tip2 {
+                        color: rgb(153,153,153);
+                        font-size: 28px;/*px*/
+                        margin-top: 20px;
+                    }
+                }
+                .know {
+                    height: 100px;
+                    cursor: pointer;
+                    font-size: 34px;/*px*/
+                    color: rgb(102,102,102);
+                    line-height: 100px;
+                    text-align: center;
+                    border-top: 1px solid rgb(229,229,229);/*px*/
+                }
+            }
+        }
+    }
+    .tip-pop {
+        .co-dialog-content{
+            height: 895px;
+            width: 650px;
+            overflow: visible;
+            .content {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                .tip-pop-close {
+                    position: absolute;
+                    width: 60px;
+                    height: 60px;
+                    cursor: pointer;
+                    background: {
+                        image: url(./img/icon_close_modal.png);
+                        position: center center;
+                        size: 50px 50px;
+                        repeat: no-repeat;
+                    }
+                    top: -30px;
+                    right: -30px;
+                }
+                .tip-top {
+                    height: 175px;
+                    width: 100%;
+                    background: {
+                        image: url(./img/tip-top.png);
+                        position: center center;
+                        size: 100% 100%;
+                        repeat: no-repeat;
+                    }
+                }
+                .tip-content {
+                    flex: 1;
+                    padding: 40px 60px 0;
+                    li {
+                        .title {
+                            font-size: 28px;/*px*/
+                            color: rgb(51,51,51);
+                            position: relative;
+                            height: 30px;
+                            line-height: 30px;
+                            &::before {
+                                position: absolute;
+                                content: '';
+                                height: 8px;
+                                width: 8px;
+                                border-radius: 8px;
+                                background-color: rgb(254,161,61);
+                                top: 11px;
+                                left: -20px;
+                            }
+                        }
+                        .answer {
+                            color: rgb(153,153,153);
+                            font-size: 24px;/*px*/
+                            line-height: 36px;
+                            margin-top: 20px;
+                            margin-bottom: 20px;
+                            >span{
+                                color: rgb(254,161,61);
+                            }
+                        }
+                        .span-list {
+                            display: flex;
+                            flex-wrap: wrap;
+                            >span {
+                                background-color: rgb(255,245,235);
+                                border-radius: 20px;
+                                height: 40px;
+                                line-height: 40px;
+                                padding: 0 18px;
+                                font-size: 24px;/*px*/
+                                color: rgb(102,102,102);
+                                margin-right: 30px;
+                                margin-top: 25px;
+                            }
+                        }
+                    }
+                }
+                .know {
+                    margin-bottom: 30px;
+                    height: 80px;
+                    width: 360px;
+                    margin: 0 auto 30px;
+                    background-color: rgb(254,161,61);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: rgb(255,255,255);
+                    font-size: 32px;/*px*/
+                    cursor: pointer;
+                    border-radius: 40px;
+                }
+            }
+        }
+    }
+}

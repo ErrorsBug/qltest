@@ -1,0 +1,29 @@
+{{#each topics}}
+    <li class="topic on-log on-visible" data-id="{{id}}" data-url="{{url}}" log-business_id="{{id}}" log-name="{{topic}}" log-business_type="topic" log-region="topic">
+        <!--图片-->
+        <span>
+            <img src="{{img-format backgroundUrl '@240w_148h_1e_1c_2o'}}" alt="">
+        </span>
+        <!--介绍-->
+        <div class="detail">
+            <h1 class="multi-elli">{{topic}}</h1>
+            <div class="elli">{{liveName}}</div>
+            <div class="status">
+                <span class="member">{{browseNum}}次学习</span>
+                <div class="charge">
+                    {{#compare discount '>' 0}}
+                        <del class="money">￥{{calc money '/100'}}</del>
+                        <span class="discount">￥{{calc discount '/100'}}</span>
+                    {{else}}
+                        {{#compare money '==' 0}}
+                            <span class="discount">免费</span>
+                        {{/compare}}
+                        {{#compare money '>' 0}}
+                            <span class="discount">￥{{calc money '/100'}}</span>
+                        {{/compare}}
+                    {{/compare}}
+                </div>
+            </div>
+        </div>
+    </li>
+{{/each}}

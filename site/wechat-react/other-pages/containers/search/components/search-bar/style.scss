@@ -1,0 +1,99 @@
+header.search-input-section{
+    background-color: #fff;
+	height: 86px;/* px */
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    &.hide{
+        display: none
+    }
+    > form{
+        flex: 1;
+        height: 56px;/* px */
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-left: 40px;
+        background-color: #f7f7f7;
+        border-radius: 56px;
+        &::before{
+            display: block;
+            background-image: url(../../img/icon-search.png);
+            content: '';
+            width: 32px;/* px */
+            height: 32px;/* px */
+            background-size: contain;
+            position: absolute;
+            left: 24px;/* px */
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 12px;/* px */
+        }
+        >input{
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            padding-left: 72px;
+            padding-right: 72px;
+            line-height: 40px;/* px */
+            font-size: 28px;/*px*/
+            font-family: '微软雅黑';
+            outline: none;
+            font-weight: 400;
+            color: #333;
+            -webkit-appearance: none;
+            caret-color: #F73657;
+            &::-webkit-search-cancel-button{
+                display: none;
+            }
+            &::placeholder {
+                color: #999!important;
+            }
+        }
+    }
+    .clear
+    {
+        position: absolute;
+        width: 30px !important;/* px */
+        height: 30px;/* px */
+        top: 13px;/* px */
+        background-image: url(../../img/icon-clear.png);
+        right: 24px;/* px */
+        background-size: contain;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        &::before{
+            position: absolute;
+            content: '';
+            display: block;
+            width: 48px;/* px */
+            height: 48px;/* px */
+            background-color: transparent;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+    .search{
+        text-align: center;
+        font-size: 28px;/*px*/
+        cursor: pointer;
+        height: 60px;
+        line-height: 60px;
+        color: #F73657;
+        padding: 0 40px;
+        &.grey {
+            color: #bbb;
+        }
+    }
+ 
+    ::-webkit-input-placeholder
+	{
+		color: #807878 !important;
+	}
+}

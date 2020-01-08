@@ -1,0 +1,67 @@
+@import '../../comp/none-page/none-page';
+$main-color: #f73657;
+/* pages/mine/mine.wxss */
+page{
+    background-color:#fff;
+    padding-bottom: 16rpx;
+    height: 100%;
+}
+
+.login-page{
+    width:100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40rpx;
+    box-sizing: border-box;
+
+    .app-logo-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .topic-type-icon{
+            display: inline-block;
+            width:148rpx;
+            height:148rpx;
+            border-radius: 100%;
+            overflow: hidden;
+        }
+        .app-name{
+            display: inline-block;
+            color: #333333;
+            margin-top: 20rpx;
+        }
+    }
+
+    .guide-box{
+        .title{
+            display: block;
+            margin-top: 64rpx;
+            color: #333333;
+            font-size: 36rpx;
+            font-weight: bold;
+        }
+        .content{
+            display: block;
+            margin-top: 22rpx;
+            color: #666666;
+            font-size: 26rpx;
+        }
+    }
+    .btn-login{// 登录授权按钮 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width:100%;
+        height:94rpx;
+        border:none;
+        outline: none;
+        background: #1AAD19;
+        color: #fff;
+        font-size: 36rpx;
+        margin-top: 60rpx;
+    }
+}

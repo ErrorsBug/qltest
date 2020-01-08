@@ -1,0 +1,90 @@
+.tab-content-good-man {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+    header.good-man-title {
+        margin-top: 30px;
+
+        img {
+            display: block;
+            height: 93px;
+        }
+    }
+
+    main.good-man-content {
+        width: 83%;
+        margin-top: 35px;
+        border: 8px solid #d66f22;
+        border-radius: 30px;
+        background-color: #ffffff;
+        overflow: hidden;
+
+        .empty-text {
+            padding: 20px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: #999999;
+        }
+
+        ul {
+            overflow: auto;
+            max-height: 800px;
+            
+            li {
+                display: flex;
+                align-items: center;
+                padding: 0 25px;
+                height: 134px;
+
+                &:not(:last-child) {
+                    border-bottom: 2px dashed #ffbc8b; /* no */
+                }
+
+                &:nth-child(even) {
+                    background-color: #ffe6d4;
+                }
+
+                .portrail {
+                    flex-shrink: 0;
+                    width: 91px;
+                    height: 91px;
+                    border-radius: 50%;
+                    border: 10px solid #ffb376;
+
+                    >img {
+                        display: inline-block;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                    }
+                }
+
+                .user-info {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    padding-left: 20px;
+                    overflow: hidden;
+
+                    .user-name {
+                        font-weight: bold;
+                        color: #333333;
+                        font-size: 28px;/* px */
+                        line-height: 1.4;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+
+                    .score-info {
+                        color: #666666;
+                        font-size: 26px;/* px */
+                        line-height: 1.4;
+                    }
+                }
+            }
+        }
+    }
+}

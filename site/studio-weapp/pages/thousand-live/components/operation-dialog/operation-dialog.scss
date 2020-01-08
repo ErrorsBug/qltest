@@ -1,0 +1,69 @@
+.operation-view {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.operation-list {
+    z-index: 100;
+    background-color: #f5f5f5;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    // min-height: 320rpx;
+    // border-radius: 10rpx;
+    overflow: hidden;
+}
+
+.operation-list-body {
+    background: #fff;
+}
+
+.operation-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 30rpx;
+    height: 100rpx;
+    border-bottom: 1rpx solid #f0f0f0;
+    font-size: 30rpx;
+    color: #4c4c4c;
+    background-color: #fff;
+}
+
+.operation-intro-icon {
+    width: 24rpx;
+    height: 29rpx;
+    margin-right: 30rpx;
+}
+
+.operation-listen-icon {
+    width: 32rpx;
+    height: 32rpx;
+    margin-right: 30rpx;
+}
+
+.operation-cancel-btn {
+    margin-top: 20rpx;
+    height: 100rpx;
+    color: #333;
+    font-size: 32rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.operation-tips-modal-bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: rgba(0,0,0, .6)
+}

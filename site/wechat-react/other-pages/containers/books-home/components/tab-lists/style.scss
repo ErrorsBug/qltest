@@ -1,0 +1,40 @@
+.ls-tab-lists{
+    margin: 0 12px 64px 32px;
+    display: flex;
+    &.five{
+        .ls-tab-item{
+            width: calc(20% - 20px)
+        }
+       
+    }
+    &.fore{
+        .ls-tab-item{
+            width: calc(25% - 20px)
+        }
+    }
+    &.three{
+        .ls-tab-item{
+            width: calc(33.33% - 20px)
+        }
+    }
+    .ls-tab-item{
+        padding-right: 20px;
+        text-align: center;
+        .ls-tab-img{
+            width: 124px;
+            height: 112px;
+            img{
+                width: 124px;
+                height: 112px;
+            }
+        }
+        p{
+            font-size: 24px; /*px*/
+            color: #666;
+            line-height:1.4;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    } 
+}

@@ -1,0 +1,73 @@
+.member-center-page{
+	height:100%;
+	background:#fff;
+	position: relative;
+	display:flex;
+	flex-direction: column;
+	.member-center-wrapper{
+		flex:1;
+		overflow-y:auto;
+		padding-bottom:40px;
+	}
+	.member-center-container{
+		background:url(./img/bg-top.png) no-repeat center top / 100% auto;
+		padding-top:66px;
+		box-sizing: border-box;
+	}
+	.wechat-group{
+		position: absolute;
+		left:0;
+		bottom:40px;
+		padding:0 40px 0 20px;
+		background:#F4EAE3;
+		border:1px solid #EBDBCD;/*no*/
+		border-radius: 0 100px 100px 0;
+		height:90px;
+		display:flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		line-height: 1.5;
+		color:#A0836B;
+		font-size:20px;/*px*/
+		cursor: pointer;
+		.span-01{
+			font-size:28px;/*px*/
+			font-weight: bolder;
+			color:#6B523E;
+		}
+	}
+	.but-btn-placeholder{
+		height:40px;
+	}
+}
+
+.member-center__banner-list {
+	display: flex;
+	padding: 0 26px 40px 40px;
+
+	li {
+		max-width: 50%;
+		flex: 1;
+		border-right: 14px solid transparent;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		cursor: pointer;
+		&::before {
+			content: "";
+			display: block;
+			padding-top: 36.58%;
+		}
+	}
+	.banner-group {
+		background-image: url(./img/banner-group.png);
+	}
+	.banner-red-packet {
+		background-image: url(./img/banner-red-packet.png);
+	}
+}
+
+.co-dialog-container{
+	z-index: 99;
+}

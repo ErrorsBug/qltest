@@ -1,0 +1,143 @@
+@import "../../../../assets/styles/base-definition";
+
+.page-order-details {
+	.banner{
+		height:200px;
+		background:url(./img/banner-bg.png) no-repeat center / 100%;
+		@include flex-center;
+		font-size:34px;/*px*/
+		font-weight: 600;
+		color:#fff;
+		.start-btn{
+			font-weight: normal;
+			width:200px;
+			height:58px;
+			@include flex-center;
+			border:2px solid #fff;/*no*/
+			border-radius: 60px;
+			margin:30px auto 0;
+		}
+	}
+	.main-tips{
+		padding:25px 30px;
+		text-align: center;
+		color:$gray-tip;
+		line-height:1.5;
+		font-size: 24px;/*px*/
+		max-height:100%;
+		display:flex;
+		justify-content: center;
+		span{
+			color:#dfa988;
+			cursor:pointer;
+		}
+		.icon_enter{
+			display: inline-block;
+			padding-bottom:2px;
+			vertical-align: middle;
+		}
+	}
+	.consignee{
+		padding:10px 30px;
+		background:#fff;
+		color:$gray-content;
+		border-bottom:1px solid $gray-border;/*no*/
+		.row{
+			height:40px;
+			@include flex-center(vertical);
+			justify-content: space-between;
+		}
+	}
+	.product{
+		background:#fff;
+		margin-top:20px;
+		.info{
+			padding:20px 30px;
+			display:flex;
+			.pic{
+				width:240px;
+				display:block;
+				overflow: hidden;
+				img{
+					width:100%;
+					display:block;
+				}
+			}
+			.name{
+				flex:1;
+				margin-left: 20px;
+				.main{
+					font-size:26px;/*px*/
+					line-height: 45px;
+					max-height: 90px;
+				}
+				.gift{
+					color:$gray-tip;
+					font-size:24px;/*px*/
+					line-height:1.2;
+					margin-top:10px;
+				}
+			}
+			.num{
+				display:flex;
+				flex-direction: column;
+				justify-content: space-between;
+				text-align: right;
+				line-height: 45px;
+			}
+		}
+		.cost{
+			padding:15px 30px;
+			color:$gray-tip;
+			border-top:1px solid $gray-border;/*no*/
+			border-bottom:1px solid $gray-border;/*no*/
+			.row{
+				display:flex;
+				justify-content: space-between;
+				line-height:1.6;
+			}
+		}
+		.total{
+			height:60px;
+			padding:0 30px;
+			@include flex-center(vertical);
+			justify-content: flex-end;
+			color:$main-color;
+		}
+	}
+	.date{
+		padding:20px 30px;
+		line-height:2;
+		background:#fff;
+		margin-top:20px;
+		color:$gray-tip;
+		border-bottom:1px solid $gray-border;/*no*/
+	}
+	.kefu-wrap{
+		margin-top:30px;
+		display: flex;
+		justify-content: flex-end;
+		padding:0 22px;
+		.btn-kefu{
+			width:80px;
+			height: 80px;
+			border-radius: 50%;
+			box-shadow: 0 0 20px rgba(0,0,0,0.1);
+			background: url(./img/kefu.png) center 14px no-repeat;
+			background-size: 32px 34px;
+			background-color:#fff;
+			position:relative;
+			&:after{
+				content:'客服';
+				color:#999;
+				font-size: 20px;/*px*/
+				position: absolute;
+				bottom:14px;
+				display: block;
+				width: 100%;
+				text-align: center;
+
+			}
+		}
+	}
+}

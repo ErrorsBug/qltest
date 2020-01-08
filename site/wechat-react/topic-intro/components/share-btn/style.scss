@@ -1,0 +1,124 @@
+.cend-intro-share-btn{
+	//width:62px;
+	padding:0 15px 0 25px;
+	height:60px;
+	position: absolute;
+	right:0;
+	top:25px;
+	background:rgba(#000,.6);
+	border-radius: 100px 0 0 100px;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing:border-box;
+	transition:all 1s;
+	z-index: 2;
+	overflow: hidden;
+	&.move {
+		top: 135px;
+	}
+	.text{
+		color:#fff;
+		margin-left:15px;
+		font-size:30px;/*px*/
+		transition:opacity .8s, margin 1s, width 1s;
+		white-space: nowrap;
+	}
+	&:before{
+		width:29px;
+		height:29px;
+		background:url(./img/icon-normal.png) no-repeat center / 100%;
+		content:'';
+		display: block;
+		flex-shrink: 0;
+	}
+	&.coral:before{
+		width:38px;
+		height:38px;
+		background:url(./img/icon-coral.png) no-repeat center / 100%;
+	}
+	&.sr:before,
+	&.uncertain:before{
+		width:30px;
+		height:34px;
+		background:url(./img/icon-sr.png) no-repeat center / 100%;
+	}
+	&.shrink{
+		padding:0;
+		width:60px!important;
+		right:30px;
+		border-radius: 100px;
+		.text{
+			opacity: 0;
+			width:0!important;
+			margin:0;
+			//display: none;
+		}
+	}
+}
+
+.cend-intro-share-btn-new {
+	background-color: rgba(247,54,87,0.80);
+	box-shadow: 0 0 7px 0 rgba(251,64,96,0.52);
+	height: 52px;
+	padding:  0 20px 0 12px;
+	border-radius: 100px 0 0 100px;
+	position: absolute;
+	right: 0;
+	top: 30px;
+	display: flex;
+	align-items: center;
+	z-index: 9;
+	overflow: hidden;
+
+	>img {
+		width: 28px;
+		height: 28px;
+		margin-right: 8px;
+	}
+	>.text {
+		font-size: 24px;  /* px */
+		color: #FFFFFF;
+		display: flex;
+		align-items: center;
+		> .shrink {
+			overflow: hidden;
+			transition: width linear .1s;
+			white-space: nowrap;
+			width: 75px; /* px */
+		}
+	}
+	&.tabStick, &.ql-live {
+		top: 110px;
+	}
+	&.ql-live.tabStick {
+		top: 198px;
+	}
+	&.coral {
+		background-color: rgba(243,182,104,0.80);
+		box-shadow: 0 0 7px 0 rgba(210,118,0,0.52);
+		padding-left: 8px;
+
+		>img {
+			width: 38px;
+			height: 38px;
+		}
+	}
+	//&.pick {
+	//	padding-left: 8px;
+	//
+	//	>img {
+	//		width: 38px;
+	//		height: 38px;
+	//	}
+	//}
+	&.rolling {
+		opacity: .3;
+	}
+	&.simplify {
+		.shrink {
+			height: 0;
+			width: 0 !important;
+		}
+	}
+}

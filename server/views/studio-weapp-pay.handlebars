@@ -1,0 +1,140 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>支付</title>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Cache-Control" content="no-siteapp">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="format-detection" content="email=no">
+        <meta name="format-detection" content="address=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    </head>
+<body></body>
+<script type="text/javascript" src="/api/js-sdk/wx?actions=hide_all"></script>
+<script>
+
+    function doPay(params) {
+
+        var options = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json;charset=UTF-8',
+            },
+            body: JSON.stringify(params),
+            credentials: 'include'
+        }
+
+        fetch('/api/wechat/make-order', options)
+            .then(function(res) {
+                return res.json();
+            })
+            .then(function(res) {
+                console.log('res',res);
+                if (res.state.code == 0) {
+                    const order = res.data.orderResult;
+                    function onBridgeReady(data) {
+                        console.log('ready')
+                        WeixinJSBridge.invoke(
+                            'getBrandWCPayRequest', {
+                                'appId': data.appId,
+                                'timeStamp': data.timeStamp,
+                                'nonceStr': data.nonceStr,
+                                'package': data.packageValue,
+                                'signType': data.signType,
+                                'paySign': data.paySign,
+                            }, (result) => {
+                                console.log('调起支付支付回调 == ', JSON.stringify(result));
+
+                                if (result.err_msg == 'get_brand_wcpay_request:ok') {
+                                    console.log('success');
+                                    if (params.type === 'CHANNEL') {
+                                        if (params.selfTopicId) {
+                                            wx.miniProgram.redirectTo({
+                                                url: `/pages/intro-topic/intro-topic?topicId=${params.selfTopicId}`
+                                            });
+                                        } else {
+                                            wx.miniProgram.redirectTo({
+                                                url: `/pages/channel-index/channel-index?channelId=${params.selfChannelId}&topicId=${params.selfTopicId || ''}`
+                                            });
+                                        }
+
+                                    } else if (params.type === 'COURSE_FEE') {
+                                        wx.miniProgram.redirectTo({
+                                            url: '/pages/thousand-live/thousand-live?topicId=' + params.selfTopicId
+                                        })
+                                    } else if (params.type === 'LIVEVIP') {
+                                        wx.miniProgram.redirectTo({
+                                            url: '/pages/index/index'
+                                        })
+
+                                    } else if (params.type === 'REWARD') {
+                                        wx.miniProgram.redirectTo({
+                                            url: '/pages/thousand-live/thousand-live?topicId=' + params.selfTopicId
+                                        })
+
+                                    } else {
+                                        wx.miniProgram.navigateBack();
+                                    }
+                                } else if (result.err_msg == 'get_brand_wcpay_request:fail') {
+
+                                    console.log('fail')
+                                     wx.miniProgram.navigateBack();
+                                } else if (result.err_msg == 'get_brand_wcpay_request:cancel') {
+                                    console.log('cancel')
+                                     wx.miniProgram.navigateBack();
+                                }
+                            })
+                    }
+                        // 监听付款回调
+                    if (typeof window.WeixinJSBridge === 'undefined') {
+                        document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false)
+                    } else {
+                        onBridgeReady(order)
+                    }
+                } else if (res.state.code == 20012) {
+                    if (params.type === 'CHANNEL') {
+                        if (params.selfTopicId) {
+                            wx.miniProgram.redirectTo({
+                                url: `/pages/intro-topic/intro-topic?topicId=${params.selfTopicId}`
+                            });
+                        } else {
+                            wx.miniProgram.redirectTo({
+                                url: `/pages/channel-index/channel-index?channelId=${params.selfChannelId}&topicId=${params.selfTopicId || ''}`
+                            });
+                        }
+                    } else if (params.type === 'COURSE_FEE') {
+                        wx.miniProgram.redirectTo({
+                            url: '/pages/thousand-live/thousand-live?topicId=' + params.selfTopicId
+                        })
+                    } else if(params.type === 'LIVEVIP'){
+                        wx.miniProgram.redirectTo({
+                            url: '/pages/index/index'
+                        })
+                        
+                    } else if (params.type === 'REWARD') {
+                        wx.miniProgram.redirectTo({
+                            url: '/pages/thousand-live/thousand-live?topicId=' + params.selfTopicId
+                        })
+
+                    } else {
+                        wx.miniProgram.navigateBack();
+                    }
+            
+                }
+            })
+    }
+
+    wx.ready(function() {
+        const params = location.search.replace("?","").split("&").reduce(function(pre,cur){
+            let arr = cur.split("="); 
+            pre[arr[0]] = arr[1] || '';
+            return pre;
+        }, {})
+        console.log('p', params);
+        doPay(params)
+        document.addEventListener('WeixinJSBridgeReady', function(){console.log(WeixinJSBridge)}, false)
+    })
+</script>
+</html>

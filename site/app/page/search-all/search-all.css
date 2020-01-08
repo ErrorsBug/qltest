@@ -1,0 +1,359 @@
+html
+{
+	height: 100%;
+}
+body
+{
+	font-family: '微软雅黑';
+	min-width: 640px; /*px*/
+	max-width: 1280px; /*px*/
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #f2f2f2;
+	/*height: 100%;*/
+}
+
+/*  单行超出省略 */
+.elli
+{
+	display: block;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+
+/*  多行超出省略 */
+.multi-elli
+{
+	display: block;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+em
+{
+	color: #fa4d4d;
+	display: inline-block;
+}
+
+.list-section
+{
+	margin-bottom: 17px;
+	background-color: #fff;
+}
+
+.list-section h1
+{
+	height: 100px;
+	line-height: 100px;
+	width: 100%;
+	color: #333;
+	font-size: 32px;/*px*/
+	font-weight: normal;
+	border-bottom: 1px solid #e5e5e5;/*no*/
+	padding-left: 30px;
+	position: relative;
+}
+
+.list-section h1::before
+{
+	width: 27px;
+	height: 27px;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-right: 15px;
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.topic-section h1::before
+{
+	background-image: url(./img/icon-topic.png?__inline);
+}
+
+.channel-section h1::before
+{
+	background-image: url(./img/icon-channel.png?__inline);
+}
+
+.live-section h1::before
+{
+	background-image: url(./img/icon-live.png?__inline);
+}
+
+.more
+{
+	float: right;
+	color: #999;
+	font-size: 28px;/*px*/
+	position: absolute;
+	top: 0;
+	right: 30px;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.more::after
+{
+	display: inline-block;
+	vertical-align: middle;
+	width: 9px;
+	height: 14px;
+	background-image: url(./img/icon-more.png?__inline);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-left: 12px;
+	content: '';
+}
+
+.list-section > ul
+{
+	width: 100%;
+	padding-left: 30px;
+}
+
+.list-section li
+{
+	border-top: 1px solid #e5e5e5;
+}
+
+.list-section li:first-child
+{
+	border-top: none;
+}
+
+/* 话题列表*/
+.topic
+{
+	padding-right: 30px;
+	height: 176px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.topic > span
+{
+	display: block;
+	width: 120px;
+	height: 120px;
+	margin-right: 22px;
+	-webkit-flex-shrink: 0;
+	-ms-flex: 0 0 auto;
+	-ms-flex-negative: 0;
+	        flex-shrink: 0;
+}
+
+.topic > span > img
+{
+	width: 100%;
+	height: 100%;
+	border-radius: 4px;
+}
+
+.topic > section
+{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 120px;
+	/*flex-shrink: 1;*/
+}
+
+.topic > section > h2
+{
+	font-weight: normal;
+	font-size: 32px;
+	color: #333;
+	line-height: 1.375;
+}
+
+.topic > section > p
+{
+	font-size: 22px;
+	color: #b3b3b3;
+	line-height: 1;
+}
+
+.topic > section > p > span
+{
+	margin-right: 30px;
+}
+
+/* 直播间列表*/
+.live
+{
+	padding-right: 30px;
+	height: 156px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.live > span
+{
+	display: block;
+	width: 100px;
+	height: 100px;
+	margin-right: 22px;
+}
+
+.live > span > img
+{
+	width: 100%;
+	height: 100%;
+	border-radius: 100%;
+}
+
+.live > section
+{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100px;
+}
+
+.live > section > h2
+{
+	font-weight: normal;
+	font-size: 32px;/*px*/
+	height: 32px;/*px*/
+	color: #333;
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+.live > section > p
+{
+	font-size: 22px;
+	color: #b3b3b3;
+	line-height: 1;
+}
+
+.live > section > p > span
+{
+	margin-right: 30px;
+}
+
+
+
+/* 频道列表*/
+.channel
+{
+	padding-right: 30px;
+	height: 156px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.channel > span
+{
+	display: block;
+	width: 120px;
+	height: 120px;
+	margin-right: 22px;
+}
+
+.channel > span > img
+{
+	width: 100%;
+	height: 100%;
+	border-radius: 4px;
+}
+
+.channel > section
+{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100px;
+}
+
+.channel > section > h2
+{
+	font-weight: normal;
+	font-size: 32px;/*px*/
+	height: 32px;/*px*/
+	color: #333;
+	margin-bottom: 20px;
+	width: 100%;
+	line-height: 1;
+}
+
+.channel > section > p
+{
+	font-size: 22px;
+	color: #b3b3b3;
+	line-height: 1;
+}
+
+.channel > section > p > span
+{
+	margin-right: 30px;
+}
+
+
+.no-content
+{
+	background-color: #fff;
+	width: 100%;
+	padding: 400px 0;
+}
+
+.no-content > div
+{
+	background-image: url(./img/no-content.png);
+	display: block;
+	width: 296px;
+	height: 243px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin: 0 auto;
+}
+
+.no-content > p
+{
+	display: block;
+	margin-top: 40px;
+	font-size: 26px;/*px*/
+	text-align: center;
+	color: #999;
+}
+
+/* 滚动加载相关*/
+.loading-next,
+.no-more
+{
+	display: none;
+	bottom: 0;
+	text-align: center;
+	width: 100%;
+	color: #909499;
+	padding: 20px 0;
+	font-size: 26px; /*px*/
+}
+
+.live .tag-authority{
+	background-image: url(./img/icon-authority.png);
+	width: 74px;
+	height: 28px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	display: block;
+}

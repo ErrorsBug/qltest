@@ -1,0 +1,116 @@
+@import "../../../../../assets/styles/base-definition";
+@import "../../common/lib";
+
+.member-center__free-course{
+	@include module-box('../../common/img');
+	.course-list{
+		display:flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		.course-item{
+			width:48%;
+			margin-top:40px;
+			position: relative;
+			-webkit-perspective: 1500;
+			-moz-perspective: 1500;
+			.item-container{
+				position: relative;
+				width:100%;
+				border:1px solid #EBDBCD;/*no*/
+				border-radius: 10px;
+				overflow: hidden;
+				z-index: 2;
+				backface-visibility: hidden;
+				transition:transform .3s;
+				background:#FFFBF8;
+				&:nth-child(2){
+					transform: rotateY(180deg);
+					z-index: 1;
+					position: absolute;
+					left:0;
+					top:0;
+				}
+			}
+			.poster{
+				width:100%;
+				padding-top:60.76%;
+				position: relative;
+				overflow: hidden;
+				border-bottom:1px solid #EBDBCD;/*no*/
+				img{
+					position:absolute;
+					width:100%;
+					left:50%;
+					top:50%;
+					transform: translate(-50%, -50%);
+				}
+			}
+			.name{
+				color:#6B523E;
+				margin:16px;
+				font-size: 24px;/*px*/
+				font-weight: bolder;
+				line-height:1.4;
+				height:#{24*1.4*2}px;/*px*/
+				overflow: hidden;
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				text-overflow: ellipsis;
+				-webkit-line-clamp: 2;
+			}
+			.info{
+				padding:0 16px 16px;
+				color:#B59C88;
+				.tag{
+					color:#F73657;
+					font-weight: bolder;
+				}
+			}
+		}
+		.view-more-btn,
+		.replace-btn{
+			width:47.16%;
+			margin-top:20px;
+			padding-top:30px;
+			padding-left:10px;
+			box-sizing: border-box;
+			text-align: center;
+			display:flex;
+			align-items: center;
+			line-height:normal;
+			justify-content: center;
+		}
+		.view-more-btn{
+			@include flex-center;
+			font-size:24px;/*px*/
+			.icon_enter{
+				margin-left:2px;
+				font-size:20px;/*px*/
+			}
+		}
+		.replace-btn{
+			&:after{
+				width:20px;/*px*/
+				height:20px;/*px*/
+				content:'';
+				background: url(./img/replace-icon.png) no-repeat center / 100%;
+				margin-left:4px;
+			}
+			&.replacing:after{
+				animation: replacing .5s linear infinite;
+				@keyframes replacing {
+					0%{
+						transform:rotate(0)
+					}
+					100%{
+						transform:rotate(360deg)
+					}
+				}
+			}
+			&.replacing.paused:after{
+				animation-play-state:paused;
+			}
+		}
+
+	}
+}

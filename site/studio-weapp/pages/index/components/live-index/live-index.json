@@ -1,0 +1,11 @@
+{
+    "usingComponents": {
+        "topic-list": "./components/topic-list/topic-list",
+        "channel-list": "./components/channel-list/channel-list",
+        "channel-types": "./components/channel-types/channel-types",
+        "header": "./components/header/header",
+        "option-menus": "./components/option-menus/option-menus",
+        "timeline": "./components/timeline/timeline",
+        "tab-bar": "../../../../comp/tab-bar/tab-bar"
+    }
+}

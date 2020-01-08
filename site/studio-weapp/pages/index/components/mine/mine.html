@@ -1,0 +1,46 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="mine-head-box">
+    <view class="head-wrap">
+        <image class="mine-head" src="./img/mine-bg.png"></image>
+    </view>
+    <view class="userinfo" wx:if="{{isLogin}}">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <view class="mine-head-name">
+        <text class="userinfo-nickname"> {{userInfo.nickName}} </text>
+        <!--<image class="mine-pen" src="img/icon-pen.png"></image>-->
+      </view>
+    </view>
+    <view class="userinfo" wx:if="{{!isLogin}}">
+      <image class="userinfo-avatar" src="//img.qlchat.com/qlLive/liveCommon/normalLogo.png" background-size="cover"></image>
+      <view class="mine-head-name">
+        <text class="userinfo-nickname" bind:tap="goLogin" > 点击登录授权 </text>
+        <!--<image class="mine-pen" src="img/icon-pen.png"></image>-->
+      </view>
+    </view>
+  </view>
+  <view class="mine-box-ul">
+    <view class="mine-box-li" bindtap="mineBuyRecord">
+        <view class="flex-center">
+          <image class="mine-li-icon" src="./img/icon-package.png?__inline" mode="widthFix"></image>
+          <span wx:if="{{system !='ios'}}" >购买记录</span>
+          <span wx:if="{{system =='ios'}}">我的课程</span>
+      </view>
+      <image class="mine-enter-icon" src="./img/icon-enter.png?__inline"></image>
+    </view>
+    <!-- 暂时隐藏最近学习 -->
+    <view class="mine-box-li" bindtap="mineJoined">
+      <view  class="flex-center">
+          <image class="mine-li-icon" src="/comp/tab-menu/img/topic-icon.png?__inline" mode="widthFix"></image>
+          <span>最近学习</span>
+      </view>
+      <view>
+          <image class="mine-enter-icon" src="./img/icon-enter.png?__inline" ></image>
+      </view>
+    </view>
+  </view>
+
+  <tab-menu activeTabKey='mine'></tab-menu>
+</view>
+
+<!-- <audio-box/> -->

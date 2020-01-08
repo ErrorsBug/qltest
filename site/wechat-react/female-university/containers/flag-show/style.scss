@@ -1,0 +1,429 @@
+.un-flag-show-box{
+    background:rgba(133,46,54,1) url('https://img.qlchat.com/qlLive/business/P9UW89G2-TCOH-IYFM-1562641887988-BPSZVKN7DPMO.png') no-repeat 0 0;
+    min-height: 100vh;
+    position: relative;
+    background-size: 100% 100%; 
+
+    &.pointer-events-none{
+        pointer-events: none; 
+        // overflow: hidden;
+        // height: 100%;
+    }
+    
+    &::after{
+        display: table;
+        content:'';
+        clear: both;
+    }
+    .fs-top{
+        display: flex; 
+        padding:40px;
+        .fs-avator{
+            margin-right: 20px;
+            img{
+                width:88px;
+                height:88px;
+                border-radius: 50%;
+            }
+        }
+        .fs-right-path{
+            flex: 1;
+            .fs-name{
+                font-size:26px; 
+                color:rgba(255,255,255,1);
+                line-height:36px;
+                margin:8px 0 12px;
+            }
+            .fs-desc{
+                background:rgba(0,0,0,0.35);
+                box-shadow:0px 4px 80px 0px rgba(0,0,0,0.1);
+                font-size:26px; 
+                color:rgba(255,255,255,0.7);
+                line-height:36px;
+                padding:20px;
+                border-radius: 0 30px 30px;
+                margin-right: 60px;
+            }
+        }
+    }
+    .fs-flag{
+        margin: 8px 30px 100px;
+        padding:10px 50px 70px; 
+        box-sizing: border-box; 
+        background: url('https://img.qlchat.com/qlLive/womanUniversity/show-flag-bg.png') no-repeat 0 0;
+        background-size: 100% 100%;
+        .fs-title{
+            height: 140px;
+            width: 110%;
+            background: url('https://img.qlchat.com/qlLive/womanUniversity/show-flag-t.png') center center no-repeat;
+            background-size:  auto 70%;
+            margin-bottom: 20px;
+            transform: translateX(-4%);
+
+            &:before{
+                content:'';
+                display: block;
+                width: 40px;
+                height: 40px;
+                background: url('https://img.qlchat.com/qlLive/womanUniversity/show-flag-ding.png') left top no-repeat;
+                background-size: 100% 100%;
+            }
+
+            &.success{
+                position: relative;
+                &::after{
+                    content: '';
+                    display: block;
+                    width: 130px;
+                    height: 100px;
+                    background: url('https://img.qlchat.com/qlLive/womanUniversity/show-flag-success.png') left top no-repeat;
+                    background-size: 100% auto;
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    animation: scalesuccess 0.6s 0.5s ease-in-out both;
+                }
+                @keyframes scalesuccess {
+                    0% {
+                        opacity: 0;
+                        transform: scale(1.3, 1.3);
+                    }
+                    100%{
+                        opacity: 1;
+                        transform: scale(1, 1);
+                    }
+                }
+            }
+            
+            
+        }
+        .fs-content{
+            font-size:32px; 
+            color:rgba(83,94,127,0.8);
+            line-height:50px;
+            text-indent: 60px;
+            background: url('https://img.qlchat.com/qlLive/womenUniversity/show-intro-begin.png') no-repeat 0 13px;
+            background-size: 40px 26px;
+        }
+    }
+    .fs-flag-card{
+        margin: 52px 32px 80px;
+        padding:48px 42px; 
+        box-sizing: border-box; 
+        background:rgba(255,255,255,1);
+        border-radius:8px;
+        background-size: 100% 100%; 
+        position: relative;
+        .fs-time{
+            font-size:28px; 
+            font-weight: bold;
+            color:rgba(187,187,187,1);
+            line-height:40px; 
+            margin-bottom: 32px;
+            &::after{
+                content: '';
+                display: block;
+                width:48px;
+                height:4px;
+                background:rgba(238,238,238,1);
+                border-radius:2px;
+                margin-top:8px;
+            }
+        }
+        .fs-content{
+            padding:0 6px;  
+            text-indent: 60px;
+            background: url('https://img.qlchat.com/qlLive/business/MPN6S6OF-NXAN-TDVA-1562120592771-72A41Y2RDGT8.png') no-repeat 6px 8px;
+            background-size: 40px 26px;
+            font-size:28px; 
+            font-weight: bold;
+            color:rgba(51,51,51,1);
+            line-height:44px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 4;
+            overflow: hidden;
+        } 
+        
+        .fhl-d-img{
+            margin-top: 32px;
+            &::after{
+                content: '';
+                display: table;
+                clear: both;
+            }
+            img{
+                width:31%;  
+                border-radius:8px;
+                float: left;
+                margin-right: 3.5%;
+                margin-bottom: 3.5%;
+                &:nth-child(3n){
+                    margin-right: 0;
+                }
+            }
+        }
+        .fs-join-btn{
+            margin-top: 15px;
+            line-height:80px;
+            background:rgba(255,240,240,1);
+            border-radius:50px;
+            text-align: center;
+            font-size:34px; 
+            font-weight:bold;
+            color:rgba(224,65,79,1);
+        }
+        .fs-top-bg{
+            position: absolute;
+            left:138px;
+            top:0;
+            transform: translateY(-50%);
+            width:28px;
+            height:40px;
+            background:rgba(0,0,0,.1);
+            border-radius:4px;
+            &.right{
+                left: auto;
+                right: 138px;
+            }
+        }
+    }
+    .fs-people{
+        .fs-list{ 
+            padding:48px 41px 0;
+            background:rgba(0,0,0,0.2);
+            margin:18px 32px 100px;
+            border-radius:8px;
+            overflow: hidden;
+            // &::after{
+            //     content: '';
+            //     display: table;
+            //     clear: both;
+            // }
+            &.less{
+                text-align: center;
+            }
+            img{
+                width:72px;
+                height:72px;
+                border-radius: 50%;
+                margin:0 7px 32px;
+                float: left;
+            } 
+            .fs-list-text{
+                float: left;
+                width: 100%;
+            }
+            &.center{
+                text-align: center;
+                img{  
+                    float: none;
+                } 
+            }
+        }
+        .fs-scroll-tip{ 
+            margin-bottom: 48px;
+            padding: 0 7px;
+            .fs-item{ 
+                padding: 32px;
+                background:rgba(0,0,0,0.3);
+                border-radius:32px;
+                font-size:22px; 
+                color:rgba(255,255,255,1);
+                line-height:64px;
+                position: relative;
+                overflow: hidden;
+                span{
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    transform: translateY(100%);
+                    // top:100%;
+                    transition: 0s;
+                    opacity: 0;
+
+                    &.pre{
+                        // top:-100%;
+                        opacity: 0.7;
+                        transform: translateY(-100%);
+                        // transition-delay: 0.1s;
+                        transition: 0.9s;
+                    }
+                    
+                    &.current{
+                        // top:0;
+                        opacity: 0.7;
+                        transform: translateY(0);
+                        transition-delay: 0.2s;
+                        transition: 0.9s;
+                    }
+                    
+                }
+            }
+        }
+    }
+    .fs-intro{
+        padding: 0 32px;
+        margin:32px 0 100px;
+        img{
+            width: 100%;
+        }
+    }
+    .un-flag-swiper{
+        padding:32px 32px 0;
+        margin-bottom: 100px;
+        width: 80%;
+        .swiper-container{
+            overflow: initial !important;
+        }
+        .swiper-wrapper{
+            transition-timing-function: linear;
+        }
+        // white-space: nowrap;
+        // overflow: hidden;
+        // display: inline-block;
+        // &.start-animation{
+        //     animation: carousel 30s linear infinite;
+        // }
+        // &.paused{
+        //     animation-play-state: paused;
+        // } 
+    }
+
+    
+    @keyframes carousel {
+        0%{
+            transform:translate3d(0,0,0);
+        }
+        100%{
+            transform:translate3d(-50%,0,0);
+        }
+    }
+
+    .un-flag-item{
+        padding:32px;
+        box-shadow:0px 4px 80px 0px rgba(0,0,0,0.05);
+        border-radius:8px;
+        background: #fff;
+        width: 612px;
+        box-sizing: border-box;
+        margin-right: 32px;
+        overflow: hidden;
+        .un-flag-head{
+            padding-bottom: 22px;
+            display: flex;
+            align-items: center;
+            display: flex;
+            .un-flag-img{
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                overflow: hidden;
+                background: #e5e5e5;
+                margin-right: 20px;
+                border: 1px solid #eee;/*no*/
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .un-flag-info{
+                flex: 1;
+                width: 48%;
+                .name{
+                    font-size: 30px; /*px*/
+                    color: #333;
+                    line-height: 50px;
+                    margin-bottom: 4px;
+                }
+                .work{
+                    color: #999;
+                    font-size: 26px;/*px*/
+                    height: 40px;
+                }
+            }
+            .un-flag-city{
+                color: #999;
+                font-size: 22px; 
+                line-height: 50px;
+                height: 90px;
+                margin-left: 20px;
+            }
+        }
+        .un-flag-decs{
+            position: relative;
+            font-size: 32px; /*px*/
+            color: #333;
+            line-height: 50px;
+            height: 150px;
+            overflow : hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+    }   
+    .fs-bottom{
+        text-align: center;
+        margin-bottom: 200px;
+        img{
+            width: 334px;
+        }
+    }
+    .fs-btn{
+        position: fixed;
+        bottom:32px;
+        left:50%;
+        z-index: 2;
+        transform:translateX(-50%);  
+        text-align: center;
+        margin:48px auto 0; 
+        width:686px;
+        line-height:96px;
+        background:linear-gradient(136deg,rgba(255,233,194,1) 0%,rgba(241,177,95,1) 100%);
+        box-shadow:0px 8px 12px 0px rgba(0,0,0,0.1);
+        border-radius:48px;
+        font-size:46px; 
+        font-weight:bold;
+        color:rgba(75,61,51,1);
+    } 
+
+    
+}
+
+.flag-show-gift-dialog{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba($color: #000000, $alpha: 0.7);
+    width: 100%;
+    height: 100%;
+    z-index: 300;
+    max-width: 1280px; /*px*/
+    min-width: 640px; /*px*/
+    margin: 0 auto;
+    .pic-box{
+        position: absolute;
+        left: 50%;
+        top:50%;
+        transform: translate(-50%,-50%);
+        width: 90%;
+
+        .btn-close{
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 50px;
+            height: 50px;
+            background: url('./img/icon-close.png') center center no-repeat;
+            background-size: 100% auto;
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    
+}

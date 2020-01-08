@@ -1,0 +1,57 @@
+/**
+ * 数字格式化成万或千
+ * @param  {[type]} digit [description]
+ * @param  {[type]} block [description]
+ * @return {[type]}       [description]
+ */
+module.exports.digitFormat = function(digit, block) {
+
+	if ((digit === undefined) || (digit === '')) return 0;
+
+	var format = parseInt(block) || 10000;
+
+	digit = parseInt(digit);
+
+	if (digit >= 1000 && digit < 10000 && format <= 1000) {
+
+		digit = digit / 1000;
+
+		digit = digit.toFixed(1) + '千';
+
+
+	} else if (digit > 10000 && digit >= format) {
+
+		digit = digit / 10000;
+
+		digit = digit.toFixed(1) + '万';
+
+	}
+
+	return digit;
+};
+
+/**
+ * 格式化钱
+ * @param amount {Number/String}   要格式化的数字
+ * @param base   {Number}          格式化基数,默认为100
+ * @returns {number}
+ */
+module.exports.formatMoney = function(amount, base = 100) {
+	if (base === 1) {
+		return amount;
+	}
+
+	return parseFloat(amount / base).toFixed(2);
+};
+
+/**
+ * 字符串截取，同js substring方法
+ * @param str {String}   要格式化的字符串
+ * @param start {Number}   一个非负的整数，规定要提取的子串的第一个字符在 stringObject 中的位置。
+ * @param end {Number}   一个非负的整数，比要提取的子串的最后一个字符在 stringObject 中的位置多 1。如果省略该参数，那么返回的子串会一直到字符串的结尾。
+ * @returns {String}
+ */
+module.exports.substring = function(str, start, end) {
+	return str.substring(start, end);
+};
+

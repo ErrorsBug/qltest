@@ -1,0 +1,449 @@
+#container {
+    height: 100%;
+    overflow: hidden;
+}
+
+.main-container {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    // background-color: #ff6060;
+
+    // 解决防漏底情况下IOS滑动不顺畅的问题
+    -webkit-overflow-scrolling: touch;
+}
+
+.course-pass-con {	
+	background: linear-gradient(#ffb2b2, #ff7a65);
+
+	.title {
+		width: 100%;
+		padding-top: 29.38%;
+
+		background: url('./img/title-session-pass.png');
+		background-size: 100%;
+		background-repeat: no-repeat;
+	}
+	.road {
+		margin: auto;
+		width: 586px;
+		height: 1331px;
+		background: url('./img/road.png');
+		background-size: 100%;
+
+		position: relative;
+
+
+		.self-grow {
+			width: 203px;
+			height: 322px;
+			background: url('./img/self-grow.png');
+			background-size: 100%;
+
+			position: absolute;
+			top: -40px;
+			right: -40px;
+		}
+		.self-grow-tag {
+			width: 137px;
+			height: 137px;
+			background: url('./img/self-grow-tag.png');
+			background-size: 100%;
+
+			position: absolute;
+			bottom: -100px;
+			right: 20px;
+		}
+		.marriage {
+			width: 274px;
+			height: 323px;
+			background: url('./img/marriage.png');
+			background-size: 100%;
+
+			position: absolute;
+			top: 360px;
+			left: -50px;
+		}
+		.marriage-tag {
+			width: 139px;
+			height: 139px;
+			background: url('./img/marriage-tag.png');
+			background-size: 100%;
+
+			position: absolute;
+			bottom: -100px;
+			right: 50px;
+		}
+		.easy-edu {
+			width: 273px;
+			height: 286px;
+			background: url('./img/easy-edu.png');
+			background-size: 100%;
+
+			position: absolute;
+			top: 770px;
+			right: -20px;
+		}
+		.easy-edu-tag {
+			width: 143px;
+			height: 144px;
+			background: url('./img/easy-edu-tag.png');
+			background-size: 100%;
+
+			position: absolute;
+			bottom: -60px;
+			right: 20px;
+		}
+
+		.sr1 {
+			left: -38px;
+			top: 20px;
+		}
+		.sr2 {
+			left: 10px;
+			top: 205px;
+		}
+		.sr3 {
+			left: 220px;
+			top: 205px;
+		}
+
+		.sr4 {
+			right: -36px;
+			top: 420px;
+		}
+		.sr5 {
+			right: -36px;
+			top: 605px;
+		}
+		.sr6 {
+			right: 190px;
+			top: 640px;
+		}
+
+		.sr7 {
+			left: -38px;
+			bottom: 360px;
+		}
+		.sr8 {
+			left: -35px;
+			bottom: 180px;
+		}
+		.sr9 {
+			left: 220px;
+			bottom: 158px;
+		}
+		.sr10 {
+			right: -36px;
+			bottom: 60px;
+		}
+		.session {
+			cursor: pointer;
+			position: absolute;
+			text-align: center;
+			font-size: 26px; /*px*/
+			line-height: 1.5;
+			color: #fff;
+			padding-bottom: 55px;
+			
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+
+			&.new {
+				&::before{
+					content: "";
+					display: block;
+					width: 72px; 
+					height: 59px; 
+					position: absolute;
+					left: -20px;
+					top: -20px;
+
+					background: url('./img/new-text.png');
+					background-size: 100%;
+					background-repeat: no-repeat;
+				}
+			}
+
+			&.done {
+				color: #ff964e;
+				
+				background: url('./img/session-done.png');
+				background-size: 100%;
+				background-repeat: no-repeat;
+				&::before{
+					content: "";
+					display: block;
+					width: 56px !important;
+					height: 56px !important;
+					position: absolute;
+					left: -20px;
+					top: -20px;
+
+					background: url('./img/session-done-tag.png') !important;
+					background-size: 100% !important;
+					background-repeat: no-repeat !important;
+				}
+			}
+		}
+		.pink-bg {
+			width: 190px;
+			height: 153px;
+
+			background: url('./img/session-pink.png');
+			background-size: 100%;
+			background-repeat: no-repeat;
+		}
+		.red-bg {
+			width: 190px;
+			height: 153px;
+
+			background: url('./img/session-red.png');
+			background-size: 100%;
+			background-repeat: no-repeat;
+		}
+		.blue-bg {
+			width: 190px;
+			height: 153px;
+
+			background: url('./img/session-blue.png');
+			background-size: 100%;
+			background-repeat: no-repeat;
+		}
+	}
+
+	.course-gift {
+		margin: 50px auto 0 auto;
+		width: 659px;
+		height: 503px;
+		background: url('./img/course-reword.png');
+		background-size: 100%;
+	}
+
+	.process {
+		margin-top: 20px;
+
+		header {
+			width: 357px;
+			height: 86px;
+			background: url('./img/medal-text.png');
+			background-size: 100%;
+			margin: 0 auto 30px auto;
+		}
+
+		.medal {
+			cursor: pointer;
+			width: 136px;
+			height: 136px;
+
+			margin-right: 40px;
+			background: url('./img/medal-bg.png');
+			background-size: 100%;
+			background-repeat: no-repeat;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			&:last-child{
+				margin: 0;
+			}
+			&.md4.done {
+				background: url('./img/medal-bg-done.png');
+				background-size: 100%;
+				background-repeat: no-repeat;
+
+				.medal-text {
+					display: none;
+				}
+			}
+			&.md1.done {
+				height: 150px;
+				background: url('./img/medal-sg-sm.png');
+				background-size: 100%;
+				background-repeat: no-repeat;
+
+				.medal-text {
+					display: none;
+				}
+			}
+			&.md2.done {
+				height: 150px;
+				background: url('./img/medal-mr-sm.png');
+				background-size: 100%;
+				background-repeat: no-repeat;
+
+				.medal-text {
+					display: none;
+				}
+			}
+			&.md3.done {
+				height: 150px;
+				background: url('./img/medal-edu-sm.png');
+				background-size: 100%;
+				background-repeat: no-repeat;
+
+				.medal-text {
+					display: none;
+				}
+			}
+			img.medal-text {
+				width: 64px;
+				height: 71px;
+			}
+			img.medal-done-text {
+				width: 65px;
+				height: 74px;
+			}
+		}
+
+		.process-wrap {
+			height: 140px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			// background-color: red;
+
+		}
+
+
+	}
+	
+	.bottom {
+		width: 100%;
+		padding-top: 20.37%;
+
+		background: url('./img/bottom-bg.png');
+		background-size: 100%;
+		background-repeat: no-repeat;
+	}
+}
+
+.pop-dialog {
+	z-index: 5;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0, .7);
+	display: none;
+
+	.dialog-main {
+		background-color: #fff;
+		border-radius: 10px;
+
+		width: 80%;
+		position: absolute; left: 50%; top: 50%;
+		transform: translate(-50%, -50%);
+
+		padding: 30px 60px 70px 60px;
+		section {
+			font-size: 26px; /*px*/
+			line-height: 1.6;
+		}
+
+	}
+
+	.self-grow-img {
+		margin: auto;
+		width: 251px;
+		height: 89px;
+		background: url('./img/self-grow-text.png');
+		background-size: 100%;
+	}
+	.marriage-text {
+		margin: auto;
+		width: 252px;
+		height: 89px;
+		background: url('./img/marriage-text.png');
+		background-size: 100%;
+	}
+	.easy-edu-text {
+		margin: auto;
+		width: 249px;
+		height: 88px;
+		background: url('./img/easy-edu-text.png');
+		background-size: 100%;
+	}
+	.guide-text {
+		margin: auto;
+		width: 249px;
+		height: 88px;
+		background: url('./img/guide-text.png');
+		background-size: 100%;
+	}
+	.get-medal-text {
+		margin: auto;
+		width: 249px;
+		height: 89px;
+		background: url('./img/get-medal-text.png');
+		background-size: 100%;
+	}
+	.medal-sg-bg {
+		margin: auto;
+		width: 247px;
+		height: 273px;
+		background: url('./img/medal-sg-bg.png');
+		background-size: 100%;
+	}
+	.medal-mr-bg {
+		margin: auto;
+		width: 247px;
+		height: 273px;
+		background: url('./img/medal-mr-bg.png');
+		background-size: 100%;
+	}
+	.medal-edu-bg {
+		margin: auto;
+		width: 247px;
+		height: 273px;
+		background: url('./img/medal-edu-bg.png');
+		background-size: 100%;
+	}
+	.txrc {
+		text-align: center;
+	}
+	.guide-con {
+		text-align: center;
+	}
+	.guide-img {
+		margin-top: 40px;
+		width: 100%;
+		padding-top: 40.3%;
+		background: url('./img/guide.png');
+		background-size: 100%;
+		background-repeat: no-repeat;
+	}
+}
+
+.modal
+{
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	.bg{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-color: rgba(0, 0, 0, .6);
+	}
+	main{
+		position: absolute;
+        top: 50%;
+        left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}

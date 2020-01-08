@@ -1,0 +1,193 @@
+.un-tag-box{
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 12;
+    display: flex;
+    flex-direction: column;
+    .un-tag-blank{
+        min-height: 78px;
+    }
+    .un-tag-section{
+        box-sizing: border-box;
+        flex-grow: 1;
+        flex-basis: 0;
+        max-width: 100%;
+        min-height: 900px;
+        padding-bottom: 32px;
+        border-radius:16px 16px 0px 0px;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        .un-tag-header{
+            height: 88px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size:  32px; /*px*/
+            color: #333;
+            position: relative;
+            margin-bottom: 20px;
+            i{
+                width: 88px;
+                height: 88px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-size: 28px; /*px*/
+                color: #333;
+            }
+        }
+        .un-tag-cont{
+            .un-tag-lists{
+                display: flex;
+                flex-wrap: wrap;
+                padding-left: 32px;
+                border-bottom: 2px solid #F7F7F7; /*px*/
+                margin-bottom: 32px;
+                span {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0 44px 0 16px;
+                    height: 48px;
+                    margin-right: 32px;
+                    font-family: 'iconfont';
+                    position:relative;
+                    background:rgba(224,65,79,1);
+                    border-radius:30px;
+                    font-size: 28px; /*px*/
+                    color: #fff;
+                    margin-bottom: 32px;
+                    &::after{
+                        position: absolute;
+                        top: 10px;
+                        right: 16px;
+                        width: 20px;
+                        height: 20px;
+                        top: 50%;
+                        font-size: 18px; /*px*/
+                        color: #fff;
+                        content: "\e60d";
+                        transform: translateY(-50%);
+                    }
+                }
+                .un-tsg-plcae{
+                    flex: 1;
+                    min-width: 330px; /*px*/
+                    height: 48px;
+                    display: flex;
+                    align-items: center;
+                    font-size: 28px; /*px*/
+                    color: #666;
+                    margin-bottom: 16px;
+                }
+                .un-tag-input-wd{
+                    margin-bottom: 16px;
+                    margin-right: 50px;
+                    min-width: 80px;
+                    height: 48px;
+                    position: relative;
+                    padding: 0 16px;
+                    font-size: 28px; /*px*/
+                    display: flex;
+                    color: #fff;
+                    align-items: center;
+                    input{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 40px;
+                        width: 100%;
+                        height: 48px;
+                        border-radius: 48px;
+                        font-size: 28px; /*px*/
+                        border: 1px solid rgba(224,65,79,1); /*px*/
+                        outline: none;
+                        padding: 0 16px;
+                        caret-color: #e0414f;
+                    }
+                    button{
+                        position: absolute;
+                        top: 0;
+                        right: -50px;
+                        width: 40px;
+                        height: 100%;
+                        display: flex;
+                        background: #fff;
+                        border: none;
+                        outline: none;
+                        align-items: center;
+                        justify-content: center;
+                        color: #E0414F;
+                        font-size: 24px; /*px*/
+                    }
+                }
+                
+            }
+            .un-tsg-tip{
+                padding-left: 32px;
+                font-size: 22px; /*px*/
+                color: #bbb;
+                margin-bottom: 80px;
+            }
+            .un-tag-hot{
+                padding-left: 32px;
+                h4{
+                    font-size: 32px; /*px*/
+                    color: #333;
+                    line-height: 1.4;
+                    margin-bottom: 32px;
+                }
+                .un-hot-lists{
+                    display: flex;
+                    flex-wrap: wrap;
+                    p{
+                        padding: 0 16px;
+                        height: 48px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-family: 'iconfont';
+                        font-size: 28px; /*px*/
+                        color: #666;
+                        background: #F7F7F7;
+                        border-radius: 48px;
+                        margin-right: 32px;
+                        margin-bottom: 32px;
+                        em {
+                            padding-right: 6px;
+                            &::before {
+                                font-size: 23px; /*px*/
+                            }
+                        }
+                        &.action{
+                            color: #E0414F;
+                            background: #FFF0F0;
+                        }
+                    }
+                }
+            }
+        }
+        .un-tag-btn{
+            position: absolute;
+            left: 32px;
+            bottom: 32px;
+            right: 32px;
+            height: 76px;
+            border-radius: 76px;
+            background: #E0414F;
+            font-size: 32px; /*px*/
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

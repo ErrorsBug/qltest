@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "付款详情",
+    "enablePullDownRefresh": false,
+    "disableScroll": true,
+    "usingComponents": {
+        "vip-section": "./components/vip-section/vip-section"
+    }
+}

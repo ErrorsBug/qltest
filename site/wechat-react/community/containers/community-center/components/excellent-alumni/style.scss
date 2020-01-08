@@ -1,0 +1,117 @@
+.el-aliumni-box{
+    margin-bottom: 32px;
+    .el-aliumni-title{
+        margin-bottom: 32px;
+        .public-title-head h3{
+            font-family: inherit !important;
+        }
+    }
+    .swiper-container{
+        padding: 0 16px;
+        .swiper-slide{
+            width: auto;
+            margin-right:16px;
+            &:nth-last-of-type(1){
+                margin-right:0;
+            }
+        }
+    }
+    .el-aliumni-item{
+        padding: 30px 0;
+        background: #fff;
+        // width: 210px;
+        width:204px;
+        flex-direction: column;
+        box-sizing: border-box;
+        display: flex;
+        height: 344px;
+        border-radius: 8px;
+        .el-aliumni-pic{
+            position: relative;
+            .el-aliumni-pic-center{
+                width: 92px;
+                height: 92px;
+                text-align: center;
+                margin: 0 auto 16px;
+                position: relative;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                }
+                i{
+                    font-size: 30px;
+                    position: absolute;
+                    right: 0;
+                    bottom:0;
+                    color: #e0414f;
+                    background: #fff;
+                    border-radius: 50%;
+                }
+            }
+        }
+        .el-aliumni-mark{
+            height: 72px;
+        }
+        h4, p{
+            font-size: 28px;  
+            color: #333;
+            line-height: 1.4;
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        h4{
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        p{
+            font-size: 24px; 
+            color: #999;
+            line-height: 1.5;
+        }
+        .el-aliumni-btn{
+            padding: 0 16px;
+            border: 1px solid #E0414F;/*no*/
+            border-radius: 50px;
+            height: 48px;
+            display: flex;
+            margin: 12px auto 0;
+            justify-content: center;
+            align-items: center;
+            color: #E0414F;
+            font-size:28px; 
+            color:rgba(224,65,79,1);
+            i{
+                padding-right: 8px;
+                font-size: 22px; 
+            }
+            &.att{
+                border: 1px solid #F7F7F7; /*no*/
+                background: #F7F7F7;
+                color: #666;
+            }
+            &.el-aliumni-find{
+                border: 1px solid transparent; /*no*/
+            }
+        }
+    }
+
+    .el-more{
+        background:linear-gradient(360deg,rgba(247,59,88,1) 0%,rgba(249,126,105,1) 100%);
+        .el-aliumni-pic{
+            // margin-bottom: 32px;
+        }
+        .el-aliumni-content{
+            margin: 16px 0 32px;
+        }
+        p{
+            color: #fff; 
+        }
+        .el-aliumni-btn{
+            background: #fff;
+            color: #E0414F;
+        }
+    }
+}

@@ -1,0 +1,61 @@
+.co-create-vip-coupon-form
+{
+	padding: 0 40px;
+	label,
+	input
+	{
+		display: block;
+	}
+	label
+	{
+		font-size: 28px;/* px */
+		color: #3a3a3a;
+	}
+	.input-wrap{
+		position: relative;
+		input:focus + .clear{
+			position: absolute;
+			width: 32px;/* px */
+			height: 32px;/* px */
+			background-image: url(../../img/icon-clear.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+			top: 50%;
+			right: 35px;/* px */
+			transform: translateY(-50%);
+			&::before{
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				width: 50px;
+				height: 50px;
+			}
+		}
+	}
+	input,
+	.mock-input
+	{
+		box-sizing: border-box;
+		width: 100%;
+		height: 70px;/* px */
+		line-height: 70px;/* px */	
+		border: 1px solid #f0f0f0;
+		outline: none;
+		padding: 0 35px;/* px */
+		font-size: 26px;/* px */
+		border-radius: 70px;/* px */
+		background-color: #fbfbfb;
+		margin: 20px 0 30px;
+		border: 1px solid #e5e5e5;/* no */
+	}
+	.mock-input
+	{
+			
+		&.placeholder
+		{
+			color: #b2b2b2;
+		}
+	}
+}

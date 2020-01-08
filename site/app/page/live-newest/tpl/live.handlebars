@@ -1,0 +1,23 @@
+{{#each lives}}
+<li class="tap-on tap-bgc on-log" log-region="live_list" log-business_id="{{liveId}}" log-name="{{name}}" log-business_type="live" data-id="{{liveId}}" data-url="{{url}}">
+    <div class="detail">
+        <div class="pic">
+            {{#if logo}}
+                <img class="img-default" data-imgloaded="false" data-imgsrc="{{img-format logo '@150w_150h_1e_1c_2o_1l'}}" />
+            {{else}}
+                <img class="img-default" data-imgloaded="true" src="{{img-empty 'empty'}}" />
+            {{/if}}
+        </div>
+        <div class="desc">
+            <div class="title">{{name}}</div>
+            <div class="follow-num">{{fansNum}}人关注</div>
+            <div class="introduce">{{introduce}}</div>
+        </div>
+        <div class="status-btn" data-id="{{liveId}}">
+            <div class="status {{#if focus}} followed {{/if}}">
+                <span>{{#if focus}}已关注{{else}}关注{{/if}}</span>
+            </div>
+        </div>
+    </div>
+</li>
+{{/each}}

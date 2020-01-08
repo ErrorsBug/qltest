@@ -1,0 +1,73 @@
+import "@babel/polyfill";
+import 'isomorphic-fetch';
+
+import './styles.js';
+
+import React from 'react';
+import {render, hydrate} from 'react-dom';
+import {browserHistory, Router, useRouterHistory, match } from 'react-router';
+import {createHistory} from 'history';
+import thunkMiddleware from 'redux-thunk';
+
+import {createStore, applyMiddleware, combineReducers, compose} from 'redux';
+import { ApolloProvider, ApolloClient, createNetworkInterface, createBatchingNetworkInterface } from 'react-apollo';
+import {Provider} from 'react-redux';
+import {syncHistoryWithStore, routerReducer, routerMiddleware} from 'react-router-redux';
+
+
+import rootRoute from './routes/';
+import rootReducers from './reducers';
+
+let history = useRouterHistory(createHistory)();
+
+const router = routerMiddleware(history);
+
+const middlewares = [router, thunkMiddleware];
+
+// 非研发环境引入 logger
+const mode = 'dev';
+
+// if (mode === 'dev') {
+//     const vConsole = require('vconsole');
+//     const createLogger = require('redux-logger');
+//     const logger = createLogger();
+//     middlewares.push(logger);
+// }
+
+const client = new ApolloClient({
+    initialState: window.__INIT_STATE__ || {},
+    networkInterface: createBatchingNetworkInterface({
+        uri: '/api/wechat/graphql',
+        batchMax: 10,
+        opts: {
+            credentials: 'include',
+        }
+    }),
+    connectToDevTools: true,
+    queryDeduplication: true,
+});
+
+const store = compose(
+    applyMiddleware(...middlewares),
+    window.devToolsExtension ? window.devToolsExtension() : f => f
+)(createStore)(rootReducers(client), window.__INIT_STATE__ || {});
+
+history = syncHistoryWithStore(history, store);
+
+// render((
+//     <Provider store={store}>
+//         <Router history={history} routes={rootRoute}/>
+//     </Provider>
+// ), document.getElementById('app'));
+
+// match 解决router的异步组件请求还未成功时，导致react渲染空组件，从而与服务端渲染代码对不上的问题
+match({ history, routes: rootRoute }, (error, redirectLocation, renderProps) => {
+    const { location } = renderProps
+    hydrate((
+        <ApolloProvider store={store} key="provider" client={client}>
+          <Router history={history} routes={rootRoute} {...renderProps}>
+
+          </Router>
+        </ApolloProvider>
+    ), document.getElementById('app'));
+});

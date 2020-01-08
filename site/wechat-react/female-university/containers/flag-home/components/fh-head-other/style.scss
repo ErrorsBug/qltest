@@ -1,0 +1,44 @@
+
+.fh-head-other{
+    background:rgba(133,46,54,1) url('https://img.qlchat.com/qlLive/business/UKIOCK1U-OHND-NNZL-1558774013269-RIMPXU8A56U4.png') no-repeat 0 0;
+    background-size: 100%;
+    padding:48px 32px 160px;
+    position: relative;
+    max-height: 1500px; 
+    display: flex; 
+    align-items: center;
+    .fhli-avator{
+        margin-right:20px;  
+        border-radius: 50%;
+        img{
+            width:100px;
+            height:100px;
+            border-radius: 50%;
+        }
+    }
+    .fhli-right-path{
+        flex: 1;
+        .fhli-top{
+            display: flex; 
+            align-items: center;
+            margin-bottom: 8px;
+            .fhli-name{
+                flex: 1;
+                font-size:30px; 
+                color:rgba(255,255,255,1);
+                line-height:42px;
+            }
+            .fhli-money{
+                font-size:26px; 
+                color:rgba(224,65,79,1);
+                line-height:36px;
+            }
+        }
+        .fhli-intro{
+            font-size:28px; 
+            color:rgba(255,255,255,0.7);
+            line-height:40px;
+        }
+
+    } 
+}

@@ -1,0 +1,36 @@
+.little-graphic-page{
+    background: #fff;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    .topic-info{
+        display: block;
+        width: 100%;
+        padding-bottom: 20px;
+        
+        span{
+            display: inline-block;
+            font-size: 26px;/* px */
+            color: #b8b0b0;
+            line-height: 40px;/* px */
+            margin-right: 20px;
+            height: 40px;/* px */
+            min-width: 70px;
+        }
+
+        .name{
+            cursor: pointer;
+        }
+    }
+
+    .topic-intro-list{
+        padding: 0 30px 50px;
+        width: 100%;
+        box-sizing: border-box;
+        
+    }
+
+
+}

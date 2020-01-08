@@ -1,0 +1,92 @@
+
+.finance-course-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 13;
+
+    .layer {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .3);
+    }
+    
+    .details-container {
+        position: absolute;
+        top: 10%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #fff;
+        display: flex;
+        flex-flow: column nowrap;
+        border-radius: 32px 32px 0 0;
+        overflow: hidden;
+
+        .tab-bar {
+            flex: 0 0 auto;
+            height: 88px; /* px */
+            border-bottom: 1px solid #EEE; /*no*/
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 0 60px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            background: #FFF;
+            border-radius: 32px 32px 0 0;
+            z-index: 9;
+            
+            .tab-item {
+                width: 180px;
+                color: #424242;
+                text-align: center;
+                font-size: 32px; /*px*/
+                height: 100%;
+                position: relative;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &.active {
+                    // color: #f73657;
+                    font-weight: bold;
+                }
+                &.active::after{
+                    content: "";
+                    display: block;
+                    height: 6px;
+                    border-radius: 10px;
+                    background-color: #f73657;
+                    width: 36px;
+                    position: absolute;
+                    bottom: 2px;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                }
+            }
+            .close-btn {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 32px;
+                width: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .icon_delete {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    .master-course-details-container {
+        top: 88px; /* px */
+        padding-bottom: 0;
+    }
+}

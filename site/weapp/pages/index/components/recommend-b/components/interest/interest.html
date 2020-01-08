@@ -1,0 +1,18 @@
+<wxs src="../../../../../../comp/util.wxs" module="util" />
+<view class="interest">
+    <view class="block-header">
+        <text class="title">兴趣相投</text>
+        <text class="change-btn" catchtap="changeBtnTapHandle" data-log-region="interest-change-btn" data-log-name="interset">换一换</text>
+    </view>
+    <view class="list-wrap">
+        <view class="list-item" wx:for="{{info.courses}}" wx:for-item="c" wx:if="{{index === currentIndex}}" wx:key="{{index}}" data-course="{{c}}" catchtap="courseItemTapHandle" data-log-id="{{c.businessId}}" data-log-type="{{c.businessType}}" data-log-region="{{info.code}}">
+            <image class="poster" src="{{c.headImage}}"></image>
+            <view class="info">
+                <view class="name">{{c.name}}</view>
+                <view class="course-count">{{c.topicCount}}节课</view>
+                <view class="aud-count">{{util.digitFormat(c.learningNum)}}人在学</view>
+            </view>
+        </view>
+    </view>
+    <view class="tips">根据您的浏览《{{info.name}}》推荐</view>
+</view>

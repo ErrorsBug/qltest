@@ -1,0 +1,44 @@
+.fan-nav-box{
+    display: flex;
+    height: 74px;
+    .fan-nav-item{
+        flex-basis: 50%;
+        width: 50%;
+        box-sizing: border-box;
+        span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: normal;
+            font-size: 28px; /*px*/
+            color: #666;
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+        &:first-child{
+            padding-left: 94px;
+        }
+        &:last-child{
+            padding-right: 94px;
+        }
+        &.action {
+            font-weight: bold;
+            span {
+                font-size: 32px; /*px*/
+                color: #333;
+                &::before {
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    width: 36px;
+                    height: 6px; /*px*/
+                    border-radius: 6px;
+                    background: #E0414F;
+                    transform: translateX(-50%);
+                    content: '';
+                }
+            }
+        }
+    }
+}

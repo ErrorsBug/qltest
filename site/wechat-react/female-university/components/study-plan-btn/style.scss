@@ -1,0 +1,80 @@
+.study-plan-btn{ 
+    color: #E0414F;
+    font-size: 24px; /*px*/  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500; 
+    background:rgba(247,247,247,1);
+    border-radius:27px;
+    padding: 10px 18px;
+    &.block{
+        background:#fff;
+    }
+    &.must-join{
+        color: #999;
+        position: relative;
+        font-weight: normal;
+        padding-left: 0; /*px*/
+        line-height: normal;
+        padding: 0 26px 0 0; /*px*/
+        background: url('./img/next.png') no-repeat 104px center; /*px*/
+        background-size: 11px; /*px*/ 
+    }
+    &.must-animate{
+        &::after{
+            // animation: anmateShake1 1s linear 0.3s 4 alternate;
+        }
+    }
+    &.once{
+        position: relative;
+        font-weight: normal;
+        &::before{
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(35px,-66px);
+            width: 208px;
+            height: 62px;
+            background: url('./img/icon-popover.png') no-repeat left center;
+            background-size: 100%;
+            animation: anmateShow 3s linear;
+            opacity: 0;
+            content: '';
+            z-index: 2;
+        }
+    }
+}
+
+@keyframes anmateShake1 {
+	10% {
+		transform: rotate(15deg);
+	}
+	20% {
+		transform: rotate(-10deg);
+	}
+	30% {
+		transform: rotate(5deg);
+	}
+	40% {
+		transform: rotate(-5deg);
+	}
+	50%, 100% {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes anmateShow{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}

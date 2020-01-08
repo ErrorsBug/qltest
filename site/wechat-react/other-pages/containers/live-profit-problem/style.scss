@@ -1,0 +1,62 @@
+.profit-detail-problem-wrap {
+    background: #fff;
+    .detail-problem-main {
+        margin-bottom: 20px;
+        padding: 40px 30px 35px 30px;
+        border-bottom: 20px solid #F7F7F7;
+        .problem-header {
+            color: #F73657;
+            font-size: 36px; /*px*/
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .clipboard-box {
+            font-size: 30px; /*px*/
+            line-height: 42px;
+            li{
+                color: #333333;
+                &:before {
+                    content: '*';
+                    color: #F73657;
+                }
+            }
+        }
+        .clipboard-btn {
+            width: 100%;
+            padding: 24px;
+            box-sizing: border-box;
+            border: 2px solid #F73657;
+            border-radius: 47px;
+            color: #F73657;
+            font-size: 30px; /*px*/
+            text-align: center;
+        }
+    }
+    .detail-problem-step {
+        padding: 40px 30px 55px 30px;
+        .problem-step-header {
+            margin-bottom: 10px;
+            font-size: 30px; /*px*/
+            font-weight: 600;
+        }
+        .problem-step-image {
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .problem-tip {
+        color: #666666;
+        font-size: 26px; /*px*/
+        line-height: 37px;
+    }
+    .block-gap-mb30 {
+        margin-bottom: 30px;
+    }
+    .tip-primary-color {
+        color: #4A8DE3;
+    }
+    .hidden {
+        
+    }
+}

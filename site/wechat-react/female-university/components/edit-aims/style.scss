@@ -1,0 +1,125 @@
+.cf-edit-aims{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 11;
+    .cf-edit-head{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 32px;
+        border-bottom: 2px solid #eee;
+        height: 128px;
+        margin-bottom: 26px;
+        h4{
+            font-size: 40px; /*px*/
+            color: #333;
+            font-weight: bold;
+        }
+        i{
+            display: block;
+            font-size: 32px; /*px*/
+            width: 80px;
+            height: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    }
+    .cf-edit-txt{
+        padding: 0 32px 32px;
+        height: 396px;
+        position: relative;
+        border-bottom: 20px solid #F7F7F7;
+        textarea{
+            width: 100%;
+            outline: none;
+            border: none;
+            height: 360px;
+            line-height: 1.4;
+            font-size: 30px; /*px*/
+            color: #333;
+            &::placeholder{
+                font-size: 30px; /*px*/
+                color: #999;
+            }
+        }
+        span{
+            position: absolute;
+            right: 32px;
+            bottom: 32px;
+            font-size: 24px; /*px*/
+            color: #999;
+            line-height: 1.4;
+            i{
+                font-style: normal;
+                &.red{
+                    color: #E0414F;
+                }
+            }
+        }
+    }
+    .cf-aims-list{
+        padding: 32px 0 0 32px;
+        h4{
+            font-size: 36px; /*px*/
+            color: #333;
+            line-height: 1.4;
+            margin-bottom: 16px;
+        }
+        .swiper-container{
+            overflow: initial;
+            .swiper-slide{
+                padding-bottom: 5px;
+            }
+        }
+        .cf-aims-item{
+            padding: 32px; 
+            background: #F7F7F7;
+            border-radius: 8px;
+            border: 3px solid #F7F7F7; /*no*/
+            box-sizing: border-box;
+            p{
+                line-height: 1.5;
+                font-size: 26px; /*px*/
+                color: #666;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;
+                box-sizing: border-box;
+                height: 160px; /*px*/
+            }
+            &.action{
+                border: 3px solid #E0414F; /*no*/
+                background: #fff;
+                p{
+                    color: #E0414F;
+                }
+            }
+        }
+    }
+}
+
+.cf-release-btn{
+    left: 32px;
+    right: 32px;
+    bottom: 12px;
+    height: 76px;
+    z-index: 12;
+    background: #eee;
+    border-radius: 76px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px; /*px*/
+    color: #999;
+    background: #eee;
+    &.action{
+        background: #E0414F;
+        color: #fff;
+    }
+}

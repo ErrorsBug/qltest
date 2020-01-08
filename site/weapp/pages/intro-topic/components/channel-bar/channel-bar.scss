@@ -1,0 +1,35 @@
+.channel-section{
+    width: 100%;
+}
+
+.channel-section-container{
+    background-color: #fff;
+    cursor: pointer;
+    width: 100%;
+    margin-top:20rpx;
+    height: 110rpx;
+    line-height: 110rpx;
+    display: flex;
+    align-items: center;
+}
+
+.channel-title{
+    color: #5d5b5b;
+    font-size: 28rpx;
+    vertical-align: top;
+    margin-left: 30rpx;
+}
+
+.channel-name{
+    color: #5d5b5b;
+    font-size: 28rpx;
+    color: #424242;
+    display: inline-block;
+    margin-left: 20rpx;
+    vertical-align: top;
+    flex: 1;
+    white-space: nowrap;
+    word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

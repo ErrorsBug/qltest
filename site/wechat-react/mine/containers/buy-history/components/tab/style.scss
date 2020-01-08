@@ -1,0 +1,26 @@
+.buy-history-box {
+  .one-level-label-box {
+      overflow: auto;
+      .one-level-label-inner {
+          display: flex;
+          flex-wrap: nowrap;
+          flex-direction: row;
+          align-items: center;
+          // width: 1000%;
+          overflow: auto;
+      }
+      .label-item {
+          box-sizing: content-box;
+          display: flex;
+          align-items: center;
+          flex-shrink: 0;
+          // min-width: 100px;
+          cursor: pointer;
+          // overflow: hidden;
+      }
+      .label-item-link {
+          display: block;
+          color: inherit;
+      }
+  }
+}

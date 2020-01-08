@@ -1,0 +1,152 @@
+.coral-theme-list{
+    .theme-list{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    .theme-list-scroll{
+        padding-bottom:10px;
+        .theme-head-pic{
+            width:100%;
+            img{
+                width:100%;
+                display: block;
+            }
+        }
+    }
+    .module-title{
+        width: 100%;
+        cursor: pointer;
+        img{
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+    .btn-coral{
+        position: absolute;
+        right: 0px;
+        top: 30px;
+        height: 56px;
+        z-index: 2;
+    
+        .main{
+            display: inline-block;
+            width: auto;
+            position: relative;
+            min-width:70px ;
+        }
+    
+        .icon-coral{
+            position: absolute;
+            left: 8px;
+            top: 8px;
+            width: 40px;
+            height: 40px;
+            background: url(./img/coral-icon.png) left top no-repeat;
+            background-size: 100% 100%;
+            z-index: 2;
+        }
+    
+        .content{
+            display: inline-block;
+            background-color: rgba(255,113,27,.9);
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;/* px */
+            color: #fff;
+            height: 56px;
+            line-height: 56px;
+            white-space: nowrap;
+            padding: 0 10px 0 60px;
+            border-top-left-radius: 100px;
+            border-bottom-left-radius: 100px;
+            position: relative;
+    
+        }
+    
+    
+    }
+    .btn-share-card{
+        position: absolute;
+        right: 0px;
+        top: 30px;
+        height: 56px;
+        z-index: 2;
+    
+        .main{
+            display: inline-block;
+            width: auto;
+            position: relative;
+            min-width:70px ;
+        }
+    
+        .icon-share{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 56px;
+            height: 56px;
+            background: url(./img/finnal-tag.png) left top no-repeat;
+            background-size: 100% 100%;
+            z-index: 2;
+        }
+    
+        .content{
+            display: inline-block;
+            background-color: #f73657;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;/* px */
+            color: #fff;
+            height: 56px;
+            line-height: 56px;
+            white-space: nowrap;
+            padding: 0 10px 0 60px;
+            border-top-left-radius: 100px;
+            border-bottom-left-radius: 100px;
+            margin-right: -400px;
+            opacity: 0;
+            transition: 2s;
+            animation-duration: 20s;
+            animation-name: shareTag;
+            animation-iteration-count: infinite;
+            position: relative;
+    
+        }
+    
+        @keyframes shareTag {
+            2.5% {
+                margin-right: 0;
+                opacity: 1;
+            }
+        
+            23.5% {
+                margin-right: 0;
+                opacity: 1;
+            }
+            26% {
+                margin-right: -400px;
+                opacity: 0;
+            }
+        
+            100% {
+                margin-right: -400px;
+                opacity: 0;
+            }
+        }
+    
+    }
+    .bottom-pic{
+        margin: 30px;
+        border-radius: 15px;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+}

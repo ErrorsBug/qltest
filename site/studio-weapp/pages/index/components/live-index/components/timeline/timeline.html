@@ -1,0 +1,11 @@
+<view class="timeline">
+    <timeline-item 
+        item="{{item}}" 
+        serverTime="{{serverTime}}"
+        wx:for="{{viewList}}" 
+        wx:key="id"
+        
+        bind:onLikeTap="onLikeTap"
+    />
+</view>
+<no-more noMore="{{noMore}}" noneOne="{{noneOne || (!viewList.length && noMore)}}" />

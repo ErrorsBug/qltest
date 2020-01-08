@@ -1,0 +1,438 @@
+.live-data-statistics-container {
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    position: relative;
+    .scroll-box {
+        .list-nomore {
+            .co-empty {
+                top: 70%;
+            }
+        }
+    }
+
+    .live-data {
+        width: 670px;
+        margin: 40px auto;
+        .live-data-title {
+            height: 42px;
+            line-height: 42px;
+            font-weight: bold;
+            color: #000;
+            display: inline-block;
+            position: relative;
+            padding-right: 42px;
+            font-size: 30px;/*px*/
+            margin-bottom: 20px;
+            cursor: pointer;
+            background: {
+                image: url(./img/icon_data.png);
+                position: right center;
+                size: 34px 34px;
+                repeat: no-repeat;
+            }
+        }
+        .live-data-content {
+            width: 100%;
+            height: 292px;
+            background:rgba(255,255,255,1);
+            box-shadow:0px 11px 30px 0px rgba(0,0,0,0.1);
+            border-radius:10px;
+            padding-top: 40px;
+            box-sizing: border-box;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            .income-fare {
+                position: relative;
+                padding-top: 30px;
+                text-align: center;
+                color: #000;
+                font-size: 48px;/*px*/
+                line-height: 60px;
+                margin-bottom: 40px;
+                font-weight: bold;
+                em {
+                    font-size: 34px;/*px*/
+                }
+                &::before {
+                    position: absolute;
+                    content: '收入金额';
+                    left: 0;
+                    top: 0;
+                    height: 30px;
+                    width: 100%;
+                    line-height: 30px;
+                    font-size: 24px;/*px*/
+                    color: #999;
+                }
+            }
+            .income-part {
+                display: flex;
+                flex: 1;
+                .item {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    position: relative;
+                    .label {
+                        font-size: 24px;/*px*/
+                        color: #999;
+                        line-height: 34px;
+                        margin-bottom: 4px;
+                    }
+                    .count {
+                        color: #000;
+                        font-size: 36px;/*px*/
+                        line-height: 44px;
+                    }
+                    &:first-child::after {
+                        content: '';
+                        position: absolute;
+                        width: 1px;/*no*/
+                        height: 50px;
+                        right: 0;
+                        top: 16px;
+                        background:rgba(114,84,63,0.5);
+                    }
+                }
+            }
+        }
+    }
+
+    .tab-bar {
+        height: 88px;
+        display: flex;
+        border-top: 1px solid #f2f2f2;/*no*/
+        border-bottom: 1px solid #f2f2f2;/*no*/
+        &.fixed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            background-color: #fff;
+        }
+        .tab {
+            flex: 1;
+            height: 100%;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;/*px*/
+            color: #666;
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 36px;
+                height: 6px;
+                border-radius: 4px;
+                background-color: #fff;
+            }
+            &.active {
+                color: #F73657;
+                font-size: 32px;/*px*/
+                font-weight: bold;
+                &::after {
+                    background-color: rgba(247,54,87,1);
+                }
+            }
+        }
+    }
+
+    .course-container {
+        width: 670px;
+        margin: 40px auto 0;
+        .course-item {
+            margin-bottom: 40px;
+            background:rgba(255,255,255,1);
+            box-shadow:0px 11px 30px 0px rgba(0,0,0,0.1);
+            border-radius:8px;
+            overflow: hidden;
+            .course-info {
+                height: 253px;
+                padding-left: 42px;
+                padding-right: 22px;
+                display: flex;
+                align-items: center;
+                box-sizing: border-box;
+                .img-container {
+                    width:245px;
+                    height:153px; 
+                    position: relative;
+                    .course-level {
+                        width: 123px;
+                        height: 109px;
+                        position: absolute;
+                        top: 6px;
+                        left: -30px;
+                        background: {
+                            image: url(./img/label-bg.png);
+                            position: center center;
+                            size: 100% 100%;
+                            repeat: no-repeat;
+                        }
+                        padding-top: 40px;
+                        box-sizing: border-box;
+                        text-align: center;
+                        color: #DDC48E;
+                        font-size: 50px;/*px*/
+                        font-weight: bold;
+                        &.none {
+                            padding-top: 44px;
+                            font-size: 38px;/*px*/
+                        }
+                        &::before {
+                            content: '课程指数';
+                            position: absolute;
+                            top: 20px;
+                            font-size: 18px;/*px*/
+                            height: 20px;
+                            line-height: 20px;
+                            width: 100%;
+                            left: 0;
+                            font-weight: normal;
+                        }
+                    }
+                    >img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius:10px;
+                    }
+                }
+                .info {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    flex: 1;
+                    margin-left: 20px;
+                    height: 153px;
+                    .title {
+                        line-height: 40px;
+                        height: 80px;
+                        font-size: 30px;/*px*/
+                        font-weight: bold;
+                        color: #333;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                        overflow: hidden;
+                    }
+                    .tip {
+                        font-size: 24px;/*px*/
+                        color: #b2b2b2;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 1;
+                        overflow: hidden;
+                    }
+                }
+            }
+            .data-info {
+                padding-bottom: 40px;
+                display: flex;
+                .item {
+                    flex: 1;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: center;
+                    .type {
+                        font-size: 24px;/*px*/
+                        color: #b2b2b2;
+                        line-height: 24px;
+                        margin-bottom: 13px;
+                    }
+                    .count {
+                        font-size: 38px;/*px*/
+                        color: #333;
+                        line-height: 42px;
+                        display: flex;
+                        align-items: flex-end;
+                        font-weight: bold;
+                        em {
+                            font-size: 26px;/*px*/
+                            margin-right: 6px;
+                        }
+                    }
+                }
+            }
+            .optimization {
+                height: 88px;
+                border-top: 1px solid #eee;
+                display: flex;
+                >div {
+                    cursor: pointer;
+                    flex: 1;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 30px;/*px*/
+                    color: #999;
+                    &.done {
+                        color: #F73657;
+                        position: relative;
+                        &::before {
+                            content: '';
+                            width: 2px;
+                            height: 32px;
+                            background-color: #eee;
+                            position: absolute;
+                            left: -1px;
+                            top: 28px;
+                        }
+                        >span {
+                            position: relative;
+                            em {
+                                position: absolute;
+                                width:32px;
+                                height:32px;
+                                background:rgba(247,54,87,1);
+                                border-radius: 50%;
+                                font-size: 20px;/*px*/
+                                color: #fff;
+                                right: -26px;
+                                top: -14px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .optimization-dialog-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 11;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, .6);
+        .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+        }
+        .optimization-dialog {
+            width:600px;
+            height:303px;
+            background:rgba(255,255,255,1);
+            border-radius:26px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            .content {
+                text-align: center;
+                padding-top: 40px;
+                flex: 1;
+                .title {
+                    color: #333;
+                    font-size: 36px;/*px*/
+                    line-height: 50px;
+                    margin-bottom: 30px;
+                    font-weight: bold;
+                }
+                .tip {
+                    line-height: 42px;
+                    color: #666;
+                    font-size: 30px;/*px*/
+                }
+            }
+            .btn {
+                height: 100px;
+                border-top: 2px solid rgba(238,238,238,1);
+                cursor: pointer;
+                display: flex;
+                >span {
+                    flex: 1;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 30px;/*px*/
+                    color: #666;
+                    &.cancel {
+                        color: #F73657;
+                        border-left: 2px solid rgba(238,238,238,1);
+                    }
+                }
+            }
+        }
+    }
+    .tip-dialog-container{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 11;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, .6);
+        .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+        }
+        .tip-dialog {
+            width:628px;
+            height:534px;
+            background:rgba(255,255,255,1);
+            border-radius:26px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            .content {
+                flex: 1;
+                padding: 48px 60px 0;
+                .title {
+                    font-size: 32px;/*px*/
+                    color: #333;
+                    line-height: 46px;
+                    text-align: center;
+                    margin-bottom: 16px;
+                    font-weight: bold;
+                }
+                .tip {
+                    font-size: 28px;/*px*/
+                    color: #666;
+                    line-height: 40px;
+                    margin-bottom: 15px;
+                    em {
+                        color: #F73657;
+                    }
+                }
+            }
+            .btn {
+                width:468px;
+                height:76px;
+                background:rgba(247,54,87,1);
+                border-radius:50px;
+                font-size: 32px;/*px*/
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                margin: 0 auto 55px;
+            }
+        }
+    }
+}

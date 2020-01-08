@@ -1,0 +1,74 @@
+.channel-item-card {
+    width: 100%;
+    // height: 350px;
+    background-color: #ffffff;
+    position: relative;
+
+    .base-info {
+        width: 100%;
+        height: 210px;
+        padding: 28px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    
+        .left-head {
+            // align-self: center;
+            margin: 0 20px 0 0;
+            width: 240px;
+            height: 148px;
+            // border: 1px solid #999;
+            border-radius: 6px;
+            img {
+                width: 100%;
+            }
+            overflow: hidden;
+        }
+
+        .middle-info {
+            flex: 1;
+            height: 148px;
+            margin-right: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            .name {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+                font-size: 28px;/*px*/
+                font-weight: bold;
+                line-height: 1.2;
+            }
+
+            .live {
+                font-size: 22px;/*px*/
+                color: #999;
+            }
+
+            .price {
+                font-size: 22px;/*px*/
+                color: #999999;
+                .money-tip {
+                    color: #999999;
+                }
+            }
+
+            .profit-item {
+                font-weight: 500;
+                color: #ff4b69;
+                margin-right: 40px;
+            }
+
+            .money-tip {
+                font-weight: normal;
+                color: #666666;
+                margin-right: 10px;
+            }
+        }
+    }
+}

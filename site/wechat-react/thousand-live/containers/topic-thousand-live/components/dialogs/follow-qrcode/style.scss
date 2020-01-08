@@ -1,0 +1,86 @@
+.follow-dialog-confirm {
+    .co-dialog-content {
+        background: {
+            image: url(./img/popQrBg.png);
+            position: center center;
+            size: 100% 100%;
+            repeat: no-repeat;
+            color: transparent;
+        }
+        height: 710px;
+        width: 650px;
+    }
+    .follow-dialog-container {
+        display: block;
+        width: 100%;
+        padding: 50px;
+        overflow: hidden;
+        box-sizing: border-box;
+        position: relative;
+        .top-info {
+            display: flex;
+    
+            .live-logo{
+                display: block;
+                width: 100px;
+                height: 100px;
+                margin-right: 20px;
+                
+            }
+    
+            .live-info{
+                display: block;
+                flex: 1;
+                color: #333333;
+    
+                b{
+                    font-size: 30px;/*px*/
+                    line-height: 50px;
+                    font-weight: normal;
+                }
+    
+                pre{
+                    font-size: 26px;
+                    line-height: 40px;
+                    display: block;
+                    word-break: word-wrap;
+                    white-space: pre-wrap;
+                    font-weight: normal;
+                }
+            }
+    
+        }
+    
+        .center-qrcode{
+            display: block;
+            text-align: center;
+            padding-top: 250px;
+    
+            img{
+                display: inline-block;
+                width: 260px;
+                height: 260px;
+            }
+        }
+    
+        .bottom-tips{
+            display: block;
+            text-align: center;
+            font-size: 28px;/*px*/
+            color: rgb(67,65,64);
+            margin-top: 30px;
+        }
+    
+        .btn-close{
+            width: 46px;
+            height: 46px;
+            font-size: 30px;
+            text-align: center;
+            line-height: 40px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+        }
+    }
+}

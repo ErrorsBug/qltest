@@ -1,0 +1,200 @@
+.guest-page-container {
+
+    position: relative;
+    height: 100%;
+    overflow: auto;
+
+    .guest-list-container {
+
+        .list-header {
+            width: 100%;
+            height:80px;
+            line-height: 80px;
+            background:rgba(247,247,247,1);
+            font-size:30px;
+            font-family:PingFangSC-Regular;
+            color:rgba(153,153,153,1);
+            padding: 0 30px;
+            box-sizing: border-box;
+            border-bottom: 1px solid rgba(238,238,238,1); /*no*/
+        }
+    
+        .list-item {
+            display: flex;
+            height:120px;
+            line-height: 120px;
+            background:rgba(255,255,255,1);
+            border-bottom:1px solid rgba(238,238,238,1); /*no*/
+            justify-content: space-between;
+            padding: 0 30px;
+            box-sizing: border-box;
+
+            .info {
+                display: flex;
+                align-items: center;
+                flex: 1;
+                .avatar {
+                    display: inline-block;
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50%;
+                    margin-right: 19px;
+                    vertical-align: middle;
+                }
+    
+                .username {
+                    display: inline-block;
+                    height:42px;
+                    font-size:30px;
+                    font-family:PingFangSC-Semibold;
+                    color:rgba(51,51,51,1);
+                    line-height:normal;
+                    vertical-align: middle;
+                    margin-right: 10px;
+                    max-width: 175px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+    
+                .user-identity {
+                    display: flex;
+                    min-width: 66px;
+                    height: 28px;
+                    justify-content: center;
+                    line-height: normal;
+                    align-items: center;
+                    border-radius: 3px;
+                    font-size: 18px;
+                    font-family:PingFangSC-Regular;
+                    text-align: center;
+                    border-radius: 6px;
+                }
+    
+                .guest {
+                    background:rgba(251,240,240,1);
+                    color:rgba(247,54,87,1);
+                }
+    
+                .admin {
+                    background:rgba(255,159,0,1);
+                    color:rgba(255,255,255,1);
+                }
+    
+                .topicCreater {
+                    background:rgba(247,54,87,1);
+                    color:rgba(255,255,255,1);
+                }
+
+                .compere {
+                    background:rgba(247,54,87,1);
+                    color:rgba(255,255,255,1);
+                }
+            }
+            
+            .button {
+                display: flex;
+                align-items: center;
+
+                .btn {
+                    display: flex;
+                    width:112px;
+                    height:48px;
+                    line-height: normal;
+                    text-align: center;
+                    border-radius:48px;
+                    border:1px solid rgba(247,54,87,1); /*no*/
+                    color: #F73657;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+
+        .invite-guest {
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 90px;
+            width: 240px;
+        }
+    }
+
+    .sticky {
+        max-width: 1280px; /*px*/
+        margin: auto;
+        position: fixed;
+        left: 0;
+        right: 0;
+    }
+
+    .top {
+        top: 0;
+    }
+
+    .bottom {
+        bottom: 0;
+    }
+}
+
+.confirm-dialog_EIORUQIER {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    .mask {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        max-width: 1280px; /*px*/ 
+        background: rgba(0,0,0,0.6);
+
+        .body {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            width: 600px;
+            height: 231px;
+            background: #fff;
+            overflow: hidden;
+            border-radius: 26px;
+            text-align: center;
+
+            .sect {
+                font-size:36px;
+                font-weight: 700;
+                color: rgba(51,51,51,1);
+                height: 130px;
+                line-height: 130px;
+                border-bottom: 2px solid rgba(238,238,238,1);
+            }
+
+            .bottom {
+                display: flex;
+                .btn {
+                    flex: 1;
+                    width:62px;
+                    height: 100px;
+                    font-size:30px;
+                    color:rgba(102,102,102,1);
+                    line-height: 100px;
+                    box-sizing: border-box;
+                }
+
+                .confirm {
+                    border-right: 1px solid rgba(238,238,238,1);
+                }
+
+                .cancel {
+
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,63 @@
+.tutor-item-box{
+    padding-top: 32px;
+    overflow: hidden;
+    .tr-item-pic{
+        float: left;
+        position: relative;
+        padding-bottom: 32px;
+        >div{
+            background: #e5e5e5;
+            width: 120px;
+            height: 120px;
+            overflow: hidden;
+            border-radius:120px;
+            display: block;
+            border: 1px solid #eee;/*no*/
+        }
+    }
+    .tr-item-info{
+        margin-left: 144px;
+        position: relative;
+        border-bottom: solid 1px #EEEEEE;
+        display: flex;
+        align-items: center;
+        padding-bottom: 40px;
+        min-height: 120px;
+        .name{
+            display: flex;
+            font-size: 32px;/* px */
+            align-items: center;
+            line-height: normal;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 16px;
+            position: relative;
+            &.nameRight{
+                padding-right: 78px;
+            }
+            var{
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                background: #E0414F;
+                color: #fff;
+                font-size: 18px;/* px */
+                border-radius: 18px;
+                padding: 0 10px;
+                height:34px;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                line-height: normal;
+                width: 50px;
+            }
+        }
+        .info{
+            display: block;
+            font-size: 24px;/* px */
+            color: #999;
+            line-height: 36px;/* px */
+        }
+    }
+}

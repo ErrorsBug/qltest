@@ -1,0 +1,90 @@
+.slide-in-from-bottom {
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .sifb-bg {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .6);
+    }
+    .sifb-entity {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        max-height: 100%;
+        background-color: #fff;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        border-top-left-radius: 28px;
+        border-top-right-radius: 28px;
+    }
+    .sifb-header {
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: normal;
+        height: 88px;
+        padding: 0 65px;
+        h2 {
+            font-size: 32px;
+            color: #333;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        i {
+            position: absolute;
+            right: 0;
+            border: 30px solid transparent;
+            border-right-width: 40px;
+            font-size: 32px;
+            color: #999;
+            cursor: pointer;
+        }
+    }
+    // 动画部分
+    &.slide-in-from-bottom-enter {
+        .sifb-bg {
+            opacity: 0;
+            transition-property: opacity;
+        }
+        .sifb-entity {
+            transform: translate3d(0, 100%, 0);
+            transition-property: transform;
+        }
+    }
+    &.slide-in-from-bottom-enter-active {
+        .sifb-bg {
+            opacity: 1;
+        }
+        .sifb-entity {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+    &.slide-in-from-bottom-exit {
+        .sifb-bg {
+            opacity: 1;
+            transition-property: opacity;
+        }
+        .sifb-entity {
+            transform: translate3d(0, 0, 0);
+            transition-property: transform;
+        }
+    }
+    &.slide-in-from-bottom-exit-active {
+        .sifb-bg {
+            opacity: 0;
+        }
+        .sifb-entity {
+            transform: translate3d(0, 100%, 0);
+        }
+    }
+}

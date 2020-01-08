@@ -1,0 +1,289 @@
+@import "../base-definition";
+
+.homework-manage {
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background: #EDEDED;
+	.test-font-size {
+		margin-top:20px;
+		display: flex;
+		background:#fbfbfb;
+		font-size:24px;/*px*/
+	}
+	.test-font-size2{
+		margin-top:20px;
+		font-size:20px;/*px*/
+	}
+	.test-font-size3{
+		font-size:20px;/*px*/
+		position:relative;
+	}
+    .no-data-tip {
+        position: absolute;
+        top: 0;
+        bottom: 98px;
+        left: 0;
+        right: 0;
+        @include flex-center;
+		text-align: center;
+        line-height: 1.5;
+        color: $gray--tip;
+		font-size: 28px; /*px*/
+		flex-direction: column;
+		
+		.no-pic {
+			width: 280px;
+			height: 280px;
+			background: url('../../../../live-studio/containers/live/img/empty.png') no-repeat center / contain;
+			margin-bottom: 28px;
+		}
+
+    }
+    .co-scroll-to-load {
+		position:relative;
+        padding: 0 20px;
+		width:auto;
+		height:100%;
+		main {
+			padding-bottom:120px;
+		}
+    }
+    .btn-make-homework {
+        position: absolute;
+        display: flex;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 98px;
+        background: #FFF;
+		cursor:pointer;
+		padding: 12px 40px;
+		box-sizing: border-box;
+		font-size: 32px; /*px*/
+
+		& > span {
+			flex: 1;
+			@include flex-center;
+			background: #F73657;
+			color: #FFF;
+			border-radius: 50px;
+			font-weight: 400;
+		}
+    }
+    .barrier {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background: rgba(0,0,0,0.5);
+
+        .item-setting-box {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #f5f5f5;
+            .setting-list {
+                padding: 0 28px;
+                margin-bottom: 18px;
+                background: #fff;
+                .setting-item {
+                    height: 98px;
+                    font-size: 30px; /*px*/
+                    line-height: 98px;
+                    color: #2d2d2d;
+                    cursor: pointer;
+                    &:first-child {
+                        border-bottom: 1px solid #ededed;
+                    }
+                }
+            }
+            .btn-cancel {
+                color: #2d2d2d;
+                font-size: 32px; /*px*/
+                background: #fff;
+                line-height: 106px;
+                text-align: center;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .homework-manage-items {
+		position: relative;
+		padding-top: 24px;
+        margin-top: 22px;
+        min-height: 118px;
+        background: #fff;
+		border-radius: 6px;
+		overflow: hidden;
+		max-height:100%;
+		list-style-type: none;
+		
+        .title {
+            color: #333;
+            font-weight: bold;
+            font-size: 30px; /*px*/
+            line-height: 1.2;
+            cursor: pointer;
+			padding: 0 30px 20px;
+		}
+		.homework-info {
+			font-size: 24px;/*px*/
+			color: #999;
+			font-weight: 400;
+			line-height: 40px; /* px */
+			padding: 0 30px;
+
+			s {
+				color: #666;
+				text-decoration: none;
+			}
+
+			a {
+				color: #666;
+				text-decoration: none;
+			}
+		}
+        .operation-box {
+			margin-top:20px;
+            display: flex;
+			height:80px;
+            align-items: center;
+			font-size:28px;/*px*/
+			border-top: 1px solid #EEE;/*no*/
+            .operation-btn{
+				cursor:pointer;
+				flex-grow: 1;
+				flex-shrink: 0;
+				@include flex-center;
+				height:40px;
+				color: #333;
+
+				&:not(:last-of-type) {
+					background: linear-gradient(to bottom, #EEE, #EEE) no-repeat right center / 2px 20px;
+				}
+
+				&.push {
+					color: #F73657;
+				}
+				&.del {
+					color: #666;
+				}
+			}
+        }
+    }
+	.guide{
+		width:100%;
+		height:100%;
+		position:fixed;
+		left:0;
+		top:0;
+		background:rgba(#000,.5);
+		@include flex-center;
+		.container{
+			padding-top:418px;
+			padding-bottom:56px;
+			width:630px;
+			border-radius: 6px;
+			overflow: hidden;
+			background:url(./img/hw-guide.png) #fff no-repeat top / 630px auto;
+			.content{
+				padding:0 60px;
+				font-size:30px;/*px*/
+				line-height:1.5;
+			}
+			.remove-btn{
+				width:300px;
+				height:70px;
+				@include flex-center;
+				border-radius:35px;
+				background:$main-color--lighter;
+				font-size:30px;/*px*/
+				color:#fff;
+				margin:90px auto 0;
+				box-shadow: 0 2px 6px 0 #aaa;
+				cursor:pointer;
+			}
+		}
+	}
+
+	.push-confirm-content{
+		font-size:34px;/*px*/
+		padding:40px 50px 0;
+		line-height:1.3;
+		.push-intro{
+			margin-top:30px;
+			font-size:28px;/*px*/
+		}
+		.left-count{
+			font-weight: 500;
+			text-align:center;
+			.num{
+				font-style: normal;
+				color:$main-color;
+			}
+		}
+		.push-to-timeline{
+			height: 60px;
+			margin: 30px 0;
+			width: calc(100% - 40px);
+			background-color: #f8f4ed;
+  			border-width: 1px;/* no */
+  			border-color: rgb(195, 174, 158);
+  			border-style: solid;
+			border-radius: 4px;
+			padding: 0 20px;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			padding-right: 50px;
+			position: relative;
+			.goto{
+				padding: 10px 20px;
+    			background-image: url(./img/goto-tuto.png);
+    			background-position: center;
+    			background-size: 10px 18px;
+    			width: 10px;
+    			height:  18px;
+    			display: block;
+    			box-sizing: content-box;
+    			position: absolute;
+    			right: 0;
+    			top: 11px;
+    			background-repeat: no-repeat;
+			}
+			&::before{
+				content:'';
+  				border-width: 2px;
+  				border-color: rgb(195, 174, 158);
+  				border-style: solid;
+  				border-radius: 4px;
+  				background-color: rgb(255, 255, 255);
+  				width: 22px;
+				height: 22px;
+				margin-right: 18px;
+			}
+			&.checked::before{
+				background-image: url(./img/live-push-timeline-checked.png);
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+			&.new{
+				&::after{
+					content: 'new';
+  					font-size: 20px;/* px */
+					color: rgb(255, 255, 255);
+					background-color: rgb(246, 47, 77);
+					border-radius: 4px;
+					margin-left: 8px;
+					padding: 2px 4px;
+				}
+			}
+		}
+	}
+}

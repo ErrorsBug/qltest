@@ -1,0 +1,14 @@
+<ul id="banner-list">
+    {{#each banners}}
+    <li class="item" data-id="{{id}}" data-link-url="{{url}}" data-type="{{type}}" data-mainId="{{mainId}}" data-url="{{url}}">
+        <img src="{{img-format backgroundUrl '@348h_640w_1e_1c_2o'}}"/>
+    </li>
+    {{/each}}
+</ul>
+<ul id="page-tip" class="page-tip">
+    {{#if shpwNum}}
+        {{#each banners}}
+        <li class="num">1</li>
+        {{/each}}
+    {{/if}}
+</ul> 

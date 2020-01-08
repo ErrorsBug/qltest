@@ -1,0 +1,207 @@
+@import	'../../basis-definition';
+
+.material-bank{
+	width:100%;
+	height:100%;
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top:0px;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+
+	.header-panel{
+		display: flex;
+		height: 60px;
+		justify-content: flex-end;
+		padding: 0 20px;
+		.sort-btn{
+			width:120px;
+			height:45px;
+			border:1px solid #4d4d4d;/*no*/
+			display:flex;
+			align-items: center;
+			justify-content: center;
+			border-radius:5px;
+			color:#4d4d4d;
+			font-size:30px;/*px*/
+			cursor:pointer;
+
+			img{
+				display: inline-block;
+				width: 40px;
+				height: 40px;
+			}
+		}
+
+		.sort-mode-box{
+			width:250px;
+			display:flex;
+			justify-content:space-between;
+
+			.confirm-btn,
+			.cancel-btn{
+				width:98px;
+				height:48px;
+				border:1px solid $main-color;/*no*/
+				display:flex;
+				align-items: center;
+				justify-content: center;
+				border-radius:5px;
+				color:$main-color;
+				font-size:28px;/*px*/
+				cursor:pointer;
+			}
+			.cancel-btn{
+				border-color:$gray--tip;
+				color:$gray--tip;
+			}
+		}
+
+	}
+
+	.operation-tip{
+		font-size:24px;/*px*/
+		color:$gray--tip;
+		line-height:1.5;
+		padding:25px 30px 25px;
+		a{
+			color:$green;
+			margin-left:20px;
+		}
+	}
+
+
+	.material-list{
+		flex: 1;
+		padding:0 30px;
+		margin-top:10px;
+		overflow: auto;
+		overflow-x: hidden;
+		display: block;
+		width: 100%;
+		height: 100%;
+		
+		&::before{
+			display: block;
+			content: '';
+			width: 100%;
+			height: 20px;
+		}
+
+		&::after{
+			display: block;
+			content: '';
+			width: 100%;
+			height: 50px;
+		}
+
+		.item{
+			display:flex;
+			align-items: center;
+			margin-bottom:36px;
+			&:last-child{margin-bottom:0;}
+
+			.img-wrap{
+				position: relative;
+				width:382px;
+				height:187px;
+				background-position:center;
+				background-repeat:no-repeat;
+				background-size:contain;
+				background-color: #000;
+				.sended-tip,
+				.send-btn{
+					padding:0 15px;
+					height:30px;
+					background:rgba($color: #787c7f, $alpha: 0.7);
+					color:#fff;
+					display:flex;
+					justify-content: center;
+					align-items: center;
+					font-size:20px;/*px*/
+					position:absolute;
+					bottom:0;
+					right:0;
+				}
+				.send-btn{
+					background:rgba($green,.5);
+					cursor:pointer;
+				}
+			}
+
+			.sort-controller{
+				flex-grow: 1;
+				padding-left:92px;
+				height:142px;
+				display:flex;
+				flex-direction:column;
+				justify-content: space-between;
+				.up-btn,
+				.down-btn{
+					width:48px;
+					height:48px;
+					border-radius: 100%;
+					background:url(../../img/up-arrow.png) #ccc no-repeat center;
+					background-size:21px 12px;
+					cursor:pointer;
+					&.disable{
+						background-color:#e5e5e5;
+						cursor: default;
+					}
+				}
+				.down-btn{
+					transform:rotate(180deg);
+				}
+			}
+
+			.remove-btn{
+				width:50px;
+				height:50px;
+				background:url(./img/icon-trash-can.png) no-repeat;
+				background-size:100%;
+				cursor:pointer;
+			}
+
+		}
+	}
+
+	.footer-panel{
+		height:98px;
+		border-top:1px solid $gray--split-line;/*no*/
+		display:flex;
+		align-items: center;
+		justify-content: space-between;
+		background: #faeeee;
+		padding: 0 20px;
+		flex-shrink: 0;
+
+		.upload-img-btn{
+			height:80px;
+            margin: 0 auto;
+			display:flex;
+			width: 100%;
+			align-items: center;
+			justify-content: center;
+			background:$main-color--lighter;
+			color:#fff;
+			font-size:28px;/*px*/
+			cursor:pointer;
+			position:relative;
+			border-radius: 5px;
+			input{
+				width:100%;
+				height:100%;
+				position:absolute;
+				top:0;
+				left:0;
+				opacity: 0;
+				cursor:pointer;
+			}
+
+		}
+	}
+
+}

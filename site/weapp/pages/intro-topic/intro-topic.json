@@ -1,0 +1,20 @@
+{
+    "navigationBarTitleText":"课程介绍",
+    "usingComponents": {
+        "count-down":"./components/count-down/count-down",
+        "course-name-section":"./components/course-name-section/course-name-section",
+        "channel-bar":"./components/channel-bar/channel-bar",
+        "introduce":"./components/introduce/introduce",
+        "message-board":"./components/message-board/message-board",
+        "message-modal":"./components/message-modal/message-modal",
+        "recommend-course":"./components/recommend-course/recommend-course",
+        "footer":"./components/footer/footer",
+        "tab-bar":"./components/tab-bar/tab-bar",
+        "liveroom-bar":"../../comp/liveroom-bar/liveroom-bar",
+        "gold-bar":"../../comp/gold-bar/gold-bar",
+        "payment-details-helper": "../payment-details/components/payment-details-helper/payment-details-helper",
+        "share-model": "./components/share-model/share-model",
+        "share-card": "./components/share-card/share-card",
+        "extremely-yellow-card": "./components/extremely-yellow-card/extremely-yellow-card"
+    }
+}

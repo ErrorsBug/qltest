@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText":"红包奖励",
+    "enablePullDownRefresh": false,
+    "backgroundColor":"#e51c2d",
+    "usingComponents": {
+        "timer": "../../comp/timer/timer",
+        "rule-intro": "./components/rule-intro/rule-intro"
+    }
+}

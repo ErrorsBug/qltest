@@ -1,0 +1,17 @@
+.operation-list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    li {
+        display: block;
+        width: 86px;
+        height: 86px;
+        text-align: center;
+        line-height: 86px;
+        font-size: 25px;/*px*/
+        cursor: pointer;
+        margin-bottom: 1px;
+        background: rgba(31, 31, 31, 0.5);
+        color: #fff;
+    }
+}

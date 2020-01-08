@@ -1,0 +1,22 @@
+.try-listen-btn_FETGS {
+    display: inline-block;
+    font-size: 16px;
+    height: 100%;
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 36px;
+        height: 36px;
+    }
+
+    span {
+        font-size: 26px; /*px*/
+        font-family: PingFangSC-Regular;
+        font-weight: 500;
+        color: #8F3434;
+    }
+}

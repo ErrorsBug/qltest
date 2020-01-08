@@ -1,0 +1,113 @@
+.live-focus-ads {
+    .live-focus-ads-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        background-image: url(./assets/qlchat-focus-header.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 80px; /*px*/
+        padding: 0 30px;
+
+        .background {
+            display: block;
+            width: 100%;
+        }
+
+        .content {
+            font-size: 28px; /*px*/
+            color: #fff;
+            text-align: center;
+            flex: 1;
+        }
+
+        .btn {
+            border-radius: 25px; /*px*/
+            background: #ffad38;
+            height: 50px; /*px*/
+            line-height: 50px; /*px*/
+            font-size: 24px; /*px*/
+            color: #fff;
+            letter-spacing: 0;
+            padding: 0 20px; /*px*/
+            margin: 0 20px; 
+        }
+
+        .btn-close {
+            width: 38px;
+            height: 38px;   
+            background-image: url('./assets/btn-close.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .mask {
+        background-color: rgba($color: #000000, $alpha: 0.6);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        z-index: 1000;
+
+        .middle-dialog {
+            display: block;
+            margin: auto;
+            background-color: transparent;
+            background-image: url(./assets/middle-dialog.png);
+            background-size: cover;
+            position: relative;
+            width: 539px;
+            height: 582px;
+
+            .dialog-close-btn {
+                content: ' ';
+                position: absolute;
+                right: 0;
+                width: 50px;
+                height: 50px;
+                top: -50px;
+                background-image: url('./assets/btn-close.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+
+            .official-accounts-qrcode {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 178px;
+                height: 178px;
+                padding-top: 28px;
+                padding-left: 180px;
+                padding-right: 180px;
+                padding-bottom: 380px;
+            }
+        }
+    }
+
+    &.download-app {
+        .live-focus-ads-header {
+            background-image: url(./assets/download-app-header.png);
+            .content {
+                color: #f96464;
+                text-align: right;
+            }
+            .btn {
+                background: #fe6555 linear-gradient(to right, #fe6555, #faaca4);
+            }
+        }
+        .live-focus-ads-header .btn-close {
+            background-image: url('./assets/btn-close-2.png');
+        }
+    }
+}

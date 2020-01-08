@@ -1,0 +1,73 @@
+.__fold-view {
+    position: relative;
+    z-index: 0;
+    $controllerH: 80px;
+    padding-bottom: 2px; /*no*/
+    .__fold-view-container {
+        position: relative;
+        padding-bottom: $controllerH;
+    }
+    .__fold-view-controller {
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: $controllerH;
+        text-align: center;
+        font-size: 28px;
+        color: #999;
+        overflow: hidden;
+        cursor: pointer;
+        p {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: $controllerH;
+            line-height: $controllerH;
+        }
+        i {
+            display: inline-block;
+            margin-left: .5em;
+            transition: transform .3s;
+            transform-origin: 50% 50%;
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: 3;
+        width: 100%;
+        height: 3px; /*no*/
+        left: 0;
+        bottom: 0;
+        background-color: white;
+    }
+
+    &.__fold-view-folded {
+        .__fold-view-container {
+            max-height: 600px;/*no*/
+            overflow: hidden;
+        }
+        .__fold-view-controller {
+            height: 130px;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, .99) 40%, #fff);
+            i {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    &.__fold-view-disabled {
+        padding-bottom: 0;
+        .__fold-view-container {
+            padding-bottom: 0;
+        }
+        .__fold-view-controller {
+            display: none;
+        }
+        &::after {
+            content: none;
+        }
+    }
+}

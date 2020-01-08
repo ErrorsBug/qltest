@@ -1,0 +1,49 @@
+.limit-price-wrap {
+    background: url('./img/price.png') right center no-repeat;
+    background-size: cover;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    padding: 0 28px;
+    .sale {
+        flex-shrink: 0;
+        color: #F63657;
+        font-size: 62px;/* px */
+        margin-right: 16px;
+        font-weight: bold;
+    }
+    .price-box{
+        flex-shrink: 0;
+        color: #F63657;
+        var{
+            font-style: normal;
+        }
+        .price{
+            font-size: 22px;/* px */
+            text-decoration: line-through;
+            line-height: 30px;/* px */
+        }
+        .title{
+            font-size: 20px;/* px */ 
+            height: 32px;/* px */ 
+            font-weight: 500;
+            border: solid 1px #F63657;
+            display: inline-flex;
+            align-items: center;
+            border-radius: 6px;
+            padding: 0 10px;
+            margin-bottom: 2px;
+        }
+    }
+    .right{
+        flex: 1;
+        text-align: right;
+        &.special-price{
+            background: url('./img/limit.png') no-repeat right center;
+            background-size: 164px 40px;
+            height: 60px;
+            display: block;
+            margin-right: 35px;
+        }
+    }
+}

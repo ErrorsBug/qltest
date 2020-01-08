@@ -1,0 +1,16 @@
+<block wx:if="{{banners.items.length}}">
+    <swiper indicator-dots="{{banners.indicatorDots}}" class="co-swiper-banners"
+            indicator-active-color="#fff"
+            indicator-color="rgba(255,255,255,.3)"
+            autoplay="{{banners.autoplay}}"
+            interval="{{banners.interval}}"
+            duration="{{banners.duration}}"
+            circular="{{banners.circular}}"
+    >
+        <block wx:for="{{banners.items}}" wx:key="{{id}}" wx:for-index="bannerIndex" wx:for-item="banner">
+            <swiper-item data-url="{{banner.url}}" data-type="{{banner.type}}" data-id="{{banner.id}}" bindtap="handleSwiperBannerTap">
+                <image src="{{banner.backgroundUrl}}" mode="aspectFill"/>
+            </swiper-item>
+        </block>
+    </swiper>
+</block>

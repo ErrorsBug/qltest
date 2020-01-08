@@ -1,0 +1,113 @@
+.diploma-dialog {
+    .diploma-card-container {
+        height: 1070px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background-color: #fff;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        .down {
+            height: 80px;
+            background: {
+                image: url(./img/down.png);
+                position: center center;
+                size: 44px 24px;
+                repeat: no-repeat;
+            }
+            cursor: pointer;
+        }
+        .share-content {
+            position: relative;
+            width: 500px;
+            height: 889px;
+            margin: 0 auto;
+            .card {
+                width: 100%;
+                height: 100%;
+            }
+            .block {
+                position: absolute;
+                height: 100px;
+                width: 100px;
+                right: 42px;
+                bottom: 93px;
+                background-color: #fff;
+            }
+            .savePicture {
+                position: absolute;
+                height: 28px;
+                width: 152px;
+                border-radius: 50px;
+                display: flex;
+                bottom: 112px;
+                left: 44px;
+                color: #E95F64;
+                align-items: center;
+                justify-content: center;
+                font-size: 16px;/*px*/
+                border: 1px solid #E95F64;
+                background-color: #fff;
+            }
+        }
+        .share {
+            flex: 1;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            >img {
+                width: 35px;
+                height: 35px;
+            }
+            p {
+                color: #333;
+                font-size: 24px;/*px*/
+            }
+        }
+    }
+    .black {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,.6);
+        z-index: 5;
+    }
+    .black-enter {
+        opacity: 0.01;
+    }
+    .black-enter.black-enter-active {
+        opacity: 1;
+        transition: all 300ms ease-in;
+    }
+    .black-leave {
+        opacity: 1;
+    }
+    .black-leave.black-leave-active {
+        opacity: 0.01;
+        transition: all 300ms ease-in;
+    }
+    .diploma-dialog-container-enter {
+        opacity: 0.01;
+        transform: translateY(100%);
+    }
+    .diploma-dialog-container-enter.diploma-dialog-container-enter-active {
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 300ms ease-in;
+    }
+    .diploma-dialog-container-leave {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .diploma-dialog-container-leave.diploma-dialog-container-leave-active {
+        opacity: 0.01;
+        transform: translateY(100%);
+        transition: all 300ms ease-in;
+    }
+}

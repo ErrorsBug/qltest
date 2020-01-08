@@ -1,0 +1,33 @@
+.cp-learn-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 4px;
+    height: 44px;
+    .library-number{
+        display: flex;
+        align-items: center;
+        span{
+            display: inline-block;
+            padding-left: 40px; /*px*/
+            font-size: 24px; /*px*/
+            color: #999;
+            padding-right: 23px;
+            line-height: 1.5;
+            &.icon-numb{
+                background: url('./img/collegehome_icon_playtimes.png') no-repeat left center;
+                background-size: 32px; /*px*/
+            }
+            &.icon-time{
+                background: url('./img/collegehome_icon_long.png') no-repeat left center;
+                background-size: 32px; /*px*/
+            }
+            &.icon-course{
+                background: url('./img/collegehome_icon_courses.png') no-repeat left center;
+                background-size: 32px; /*px*/
+            }
+        }
+    }
+}
+
+ 

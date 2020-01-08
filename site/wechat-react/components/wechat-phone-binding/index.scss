@@ -1,0 +1,53 @@
+.wechat-phone-binding-container {
+    .user-info {
+        .icon {
+            width: 40px;
+            height: 40px;
+        }
+
+        .wechat-input-container {
+            display: flex;
+            align-items: center;
+            padding: 25px 20px;
+            margin-bottom: 30px;
+            background-color: #eee;
+            border-radius: 5px;
+
+            > * {
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+
+        .wechat-input {
+            margin-left: 25px;
+            background-color: #eee;
+            border: 0;
+            font-size: 28px;
+            flex: 1;
+            outline: none;
+
+            // &::placeholder
+            line-height: 40px;
+        }
+    }
+
+    .actions {
+        margin-top: 50px;
+
+        .btn-submit {
+            width: fit-content;
+            padding: 28px 140px;
+            margin: 0 auto;
+            border-radius: 50px;
+            background-color: #f73657;
+            color: #fff;
+            font-size: 32px;
+
+            &.disabled {
+                background-color: #eee;
+                color: #999;
+            }
+        }
+    }
+}

@@ -1,0 +1,145 @@
+.curr-task {
+    background: #FFF;
+    border-radius: 28px;
+    padding: 32px;
+    margin: 0 32px;
+
+    .title {
+        font-size:32px; /* px */
+        font-weight:600;
+    }
+
+    .emphasize {
+        color: #F73657;
+    }
+    
+
+    &.end {
+        text-align: center;
+        font-size: 24px; /* px */
+        color: #999;
+
+        .title {
+            color: rgba(51,51,51,1);
+            padding-bottom: 16px;
+        }
+        .certificate{
+            margin-top: 30px;
+            line-height: 50px;
+            text-align: center;
+            .btn-get-certificate{
+                display: inline;
+                padding: 10px 30px;
+                color: #FFF;
+                font-size: 24px;/*px*/
+                background: #F73657;
+                border-radius: 40px;
+            }
+            .complete{
+                .tips{
+                    color: #666;
+                    font-size: 24px;/*px*/
+                }
+                .btn-go-on{
+                    color: #F73657;
+                    font-size: 32px;/*px*/
+                    
+                }
+            }
+        }
+        
+    }
+
+    &.before {
+        text-align: center;
+        font-size: 30px; /* px */
+        line-height: 1.4;
+        .title {
+            color: #333;
+            padding-bottom: 32px;
+            line-height: 1;
+        }
+        .Qr-box {
+            margin-top: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            & > div {
+                width: 156px;
+                height: 156px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &.guide {
+                    width: 140px;
+                    height: 140px;
+                    margin-left: 16px;
+                    background: url('./img/finger.png') no-repeat center;
+                    background-size: contain;
+                }
+            }
+        }
+    }
+
+    &.curr {
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .remind {
+                font-size: 24px; /* px */
+                display: flex;
+                align-items: center;
+
+                &::before {
+                    content: '';
+                    width: 32px;
+                    height: 32px;
+                    margin-right: 8px;
+                    background: url('./img/remind.png') no-repeat center;
+                    background-size: contain;
+                }
+            }
+        }
+        .content {
+            margin-top: 32px;
+            .course-name {
+                color: #333;
+                font-size: 30px; /* px */
+                line-height: 1.4;
+            }
+            .course-info {
+                margin-top: 16px;
+                color: #999;
+                font-size: 22px; /* px */
+                display: flex;
+
+                .learn-num {
+                    margin-left: 32px;
+                }
+            }
+        }
+        .footer {
+            margin-top: 16px;
+            font-size: 24px; /* px */
+            display: flex;
+            justify-content: space-between;
+
+            .check-btn {
+                color: #666;
+                
+                &.not-finish {
+                    padding: 8px 24px;
+                    border-radius: 25px;
+                    background: #FFF0F0;
+                    color: #F73657;
+                    text-align: center;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+}

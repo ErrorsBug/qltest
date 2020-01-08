@@ -1,0 +1,27 @@
+$prefix: experience-activity-animation ;
+// 弹幕列表项添加 / 删除动画
+.#{$prefix}-barrageListItem-enter {
+    margin-top: -200px;
+    opacity: 0.01;
+    transform: translate3d(0,200%,0);
+}
+
+.#{$prefix}-barrageListItem-enter-active {
+    opacity: 1;
+    margin-top: 0;
+    transform: translate3d(0,0,0);
+    transition: all 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.#{$prefix}-barrageListItem-leave {
+    opacity: 1;
+    transform: translate3d(0,0);
+    
+}
+
+.#{$prefix}-barrageListItem-leave-active {
+    transform: translateY(-100%);
+    opacity: 0.01;
+    transition: all 400ms cubic-bezier(0.42,0,1,1);
+    will-change: all;
+}

@@ -1,0 +1,73 @@
+
+@import "../../../../assets/styles/mixins.scss";
+
+.p-discovery-top-tab-bar {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    .tab-item {
+        position: relative;
+        flex: 1;
+        height: 88px;/*px*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        color: #666;
+        font-size: 28px;/*px*/
+        line-height: 88px;/*px*/
+        cursor: pointer;
+        p {
+            position: relative;
+            height: 100%;
+            span {
+                position: absolute;
+                font-size: 22px;/*px*/
+                line-height: 32px;/*px*/
+                min-width: 32px;/*px*/
+                color: #fff;
+                background-color: #F73657;
+                border-radius: 32px;/*px*/
+                margin-left: 16px;/*px*/
+                top: 50%;
+                left: 100%;
+                transform: translateY(-50%);
+                white-space: nowrap;
+                padding: 0 .4em;
+                box-sizing: border-box;
+                text-align: center;
+            }
+        }
+        &.active {
+            color: #333;
+            font-weight: bolder;
+            font-size: 32px;/*px*/
+            p {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 36px;/*px*/
+                    height: 6px;/*px*/
+                    background-color: #F73657;
+                    border-radius: 6px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: 1px;/*px*/
+                }
+            }
+        }
+        &.new {
+            p::before {
+                content: '';
+                position: absolute;
+                height: 16px;
+                width: 16px;
+                border-radius: 50%;
+                background-color: #F73657;
+                top: 20px;
+                right: -20px;
+            }
+        }
+        @include afterBorderBottom1px;
+    }
+}

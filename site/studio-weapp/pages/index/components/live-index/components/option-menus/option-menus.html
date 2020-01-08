@@ -1,0 +1,14 @@
+<view class="option-menus" wx:if="{{showMenus}}">
+    <view class="option" bind:tap="onCourseTap" wx:if="{{showCourse}}">
+        <image mode="aspectFill" class="icon-course" src="./img/course.png"/>
+        <view class="text">课表</view>
+    </view>
+    <view class="option" bind:tap="onVIPTap" wx:if="{{showVip&&system!='ios'}}">
+        <image mode="aspectFill" class="icon-vip" src="./img/vip.png" /> 
+        <view class="text">会员</view>
+    </view>
+    <view class="option" bind:tap="onIntroTap" wx:if="{{showIntro}}">
+        <image mode="aspectFill" class="icon-intro" src="./img/intro.png" /> 
+        <view class="text">简介</view> 
+    </view>
+</view>

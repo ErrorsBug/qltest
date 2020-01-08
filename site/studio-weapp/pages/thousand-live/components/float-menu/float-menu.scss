@@ -1,0 +1,52 @@
+
+.float-menu {
+  position: absolute;
+  right: 20rpx;
+  top: 20rpx;
+  border-top-left-radius:10rpx;
+  border-bottom-left-radius:10rpx;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.float-menu-listen-mode {
+     position: absolute;
+     right: 20rpx;
+     top:  220rpx;
+     width: 66rpx;
+     height: 72rpx;
+     z-index: 2;
+}
+
+.float-menu-listen-mode-icon {
+    width: 66rpx;
+    height: 72rpx;
+}
+
+
+.float-menu-li {
+  width: 50rpx;
+  height: 50rpx;
+  margin: 1rpx 0;
+  background: #fff;
+  padding: 5px;
+  background-color: rgba(31, 31, 31, 0.502);
+  border-radius: 100%;
+}
+
+.float-menu-li-icon{
+  width:56%;
+}
+
+.btn-goto-top{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-goto-bottom{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20rpx;
+}

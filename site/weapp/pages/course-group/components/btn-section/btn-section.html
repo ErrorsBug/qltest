@@ -1,0 +1,7 @@
+<form class="btn-group" bindsubmit="onFormSubmit" report-submit>
+    <button wx:if="{{showShare}}" class="btn" open-type="share" formType="submit">分享给好友来拼课</button>
+    <button wx:if="{{showEnter}}" class="btn" bindtap="onEnterTap">进入听课</button>
+    <button wx:if="{{showJoin}}" class="btn" bindtap="onJoinTap" formType="submit">一键拼课</button>
+    <button wx:if="{{showStart}}" class="btn" bindtap="onStartTap" formType="submit">立即开团</button>
+    <button wx:if="{{showReStart}}" class="btn" bindtap="onStartTap" formType="submit">再次开团</button>
+</form>

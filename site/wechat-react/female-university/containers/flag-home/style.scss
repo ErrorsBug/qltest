@@ -1,0 +1,39 @@
+.flag-home-page{
+    .fh-scroll-box{
+        padding: 0; 
+        box-sizing: border-box;
+        &.pointer-events-none{
+            pointer-events: none; 
+        }
+    }
+    .fh-main{
+        padding: 0 16px;
+        position: relative;
+        margin-top: -112px;
+        z-index: 1;
+    } 
+    &.flag-other{
+        .fh-flag{
+            margin:0;
+            .fhf-change{
+                display: none;
+            }
+        }
+        .fh-list{
+            .fhl-details{
+                .fhl-d-item{
+                    .fhl-share-ico{
+                        display: none;
+                    }
+                } 
+            } 
+        }
+    }
+}
+
+.fh-share-text{
+    p{
+        color:#fff;
+        margin-bottom: 0;
+    }
+}

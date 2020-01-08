@@ -1,0 +1,94 @@
+.choose-timeline-type {
+    .nav {
+        position: sticky;
+        box-sizing: border-box;
+        height: 80px;
+        background-color: #fff;
+        display: flex;
+        justify-content: space-around;
+        border-bottom: 1px solid #e6e6e6; /*no*/
+        .nav-item {
+            font-size: 28px; /*px*/
+            color: #2d2d2d;
+            display: flex;
+            align-items: center;
+            height: 80px;
+            box-sizing: border-box;
+            .text {
+                text-align: center;
+            }
+        }
+
+        .active {
+            color: #f73657;
+            position: relative;
+            &:after{
+                content: "";
+                left: -20px;
+                right: -20px;
+                border-bottom: 4px solid #f73657;
+                position: absolute;
+                bottom: 0;
+            }
+        }
+    }
+
+    .list-con {
+        position: absolute;
+        overflow-y: auto;
+        top: 80px;
+        bottom: 100px;
+        width: 100%;
+        
+
+        .list-item {
+            
+            box-sizing: border-box;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #e6e6e6; /*no*/
+            width: 100%;
+            background-color: #fff;
+            .text {
+                cursor: pointer;
+                display: inline-block;
+                font-size: 32px; /*px*/
+                color: #2d2d2d;
+                width: 80%;
+                text-overflow:ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                line-height: 1.3;
+            }
+        }
+        .list-item.chosen {
+            &:after {
+                content: "";
+                height: 24px; 
+                width: 35px;
+                position: absolute;
+                background-image: url('./img/selected.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                right: 30px;
+            }
+        }
+    }
+
+    .conform {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        height: 100px;
+        display: flex;
+        background-color: #f73657;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        .text {
+            color: #fff;
+            font-size: 32px; /*px*/
+        }
+    }
+}

@@ -1,0 +1,83 @@
+.clock-rank-container{
+    background-color: #fff;
+    border-radius: 32px 32px 0 0;
+    position: relative;
+    z-index: 3;
+    ul{
+        li{
+            width: 100%;
+            height: 138px;
+            line-height: 138px;
+            font-size: 32px;/*px*/
+            display: flex;
+            padding: 0 44px 0 24px;
+            overflow: hidden;
+            color:#333333;
+            position: relative;
+            .number{
+                width: 80px;
+                text-align: center;
+                &.num-0{
+                    background: url('https://img.qlchat.com/qlLive/business/LAJA8XGO-DRCW-ZBOM-1576227471169-8FY84VLO8V9E.png') no-repeat center center;
+                    background-size: 40px;
+                }
+                &.num-1{
+                    background: url('https://img.qlchat.com/qlLive/business/LAX5NHER-1HE9-VTJL-1576227606075-EWER2XECYZ1F.png') no-repeat center center;
+                    background-size: 40px;
+                }
+                &.num-2{
+                    background: url('https://img.qlchat.com/qlLive/business/DXPF4AWL-HMNZ-3XPF-1576227614466-FTRD5QPNZ5D2.png') no-repeat center center;
+                    background-size: 40px;
+                }
+            }
+            .head-img{
+                width: 104px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                span{
+                    display: block;
+                    width: 80px;
+                    height: 80px;
+                    background-color: #ccc;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    img{
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+            .name{
+                flex:1;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-weight: bold;
+            }
+            .score{
+                text-align: right;
+                width: 70px;
+                color:#F73657;
+                font-weight: bold;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: calc(100% - 24px - 80px - 104px);
+                border-bottom: 2px solid #F7F7F7; /*no*/
+            }
+        }
+    }
+    .common-empty{
+        position: relative !important;
+        transform: translate(0,0);
+        margin: 32px auto 0;
+        left: 0;
+        top: 32px;
+        background: #fff;
+    }
+}

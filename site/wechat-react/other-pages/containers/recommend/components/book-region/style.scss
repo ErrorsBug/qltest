@@ -1,0 +1,112 @@
+.home-books-box{
+  padding-top: 32px;
+  margin-bottom: -5px; 
+  overflow: hidden;
+  .book-head{
+    margin-bottom: 32px;
+    padding:0 40px;
+    p{
+      color: #666;
+      font-size: 30px; /*px*/
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      line-height: normal;
+      span{
+        display: inline-block;
+        padding: 1px 10px;
+        background: #F73657;
+        border-radius: 30px;
+        color: #fff;
+        font-size: 22px;/*px*/
+        margin-tOP: -5px;
+        margin-right: 8px;
+        line-height: normal;
+        vertical-align: middle;
+      }
+    }
+  }
+  .book-title{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    h3{
+      font-size: 36px; /*px*/
+      color: #333;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding-right: 30px;
+      line-height: normal;
+    }
+    span{
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      a{
+        font-size: 24px; /*px*/
+        color: #F73657;
+        background-size: 10px 16px;
+        display: block;
+      }
+    }
+  }
+  .book-list-wraps{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    .book-list-more-btn{
+      position: absolute;
+      z-index: 100;
+      zoom: 1;
+      _zoom: 1;
+      top: 50%;
+      transform: translate(70%, -50%);
+      right: 0;
+      height: 356px;
+      width: 200px;
+      background: #fff;
+      writing-mode: vertical-lr;
+      display: flex;
+      justify-content: center;
+      padding-left: 20px;
+      box-sizing: border-box;
+      border-radius: 100% 0 0 100%/100%;
+      font-size: 24px;/*px*/
+      color: #999;
+      line-height: 1.5;
+    }
+    .book-list-cont{
+      overflow: hidden;
+      margin-bottom: -15px;
+    }
+    .book-list-scroller{
+      position: relative;
+      z-index: 5;
+      padding: 0 32px 48px;
+      display: flex; 
+      flex-flow: row nowrap; 
+      overflow: hidden;
+      overflow-x: auto; 
+      list-style: none;
+      .ls-book-item{
+        width: 180px !important;
+        .cover{
+          width: 180px !important;
+          height: 228px !important;
+        }
+      }
+    }
+  }
+  .ls-new-books{
+    margin: 0 32px 32px;
+    padding-top: 30px;
+    border-top: 2px solid #eee; /*no*/
+    & > h4{
+      font-size: 30px; /*px*/
+      color: #666;
+      line-height: 1.4;
+      margin-bottom: 16px;
+    }
+  }
+}

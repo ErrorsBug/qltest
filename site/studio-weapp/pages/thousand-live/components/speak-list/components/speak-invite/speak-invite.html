@@ -1,0 +1,9 @@
+
+<view class="sp-type-tips " id="{{speak.id}}"  data-id="{{speak.id}}" data-createby="{{speak.createBy}}" >
+    <view class="sp-type-tips-main">
+          <block wx:if="{{speak.role == 'topicCreater'}}">主持人</block>
+          <block wx:if="{{speak.role == 'compere'}}">特邀主持人</block>
+          <block wx:else>嘉宾</block>
+          <text class="lm-txex-name">{{speak.userName}}</text> 加入直播间
+    </view>
+</view>

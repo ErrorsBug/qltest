@@ -1,0 +1,155 @@
+.share-rank-card {
+    background: #FFFFFF;
+    box-shadow: 0 4px 14px 0 rgba(0,0,0,0.10);
+    border-radius: 5px;
+    width: 710px;
+    margin: 20px auto 50px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    &.rank {
+        height: 300px;
+    }
+
+    &.no-rank {
+        height: 220px;
+        >.tip {
+            margin-top: 20px;
+        }
+    }
+
+    .head {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70px;
+        color: #666;
+        width: 670px;
+        margin: 0 auto;
+        border-bottom: 1px solid #eee;/*no*/
+
+        .icon-rank {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            background: {
+                image: url(./img/icon_rank.png);
+                position: center center;
+                size: 100% 100%;
+                repeat: no-repeat;
+            }
+        }
+        .title {
+            font-weight: bold;
+            font-size: 32px; /*px*/
+            color: #383838;
+        }
+    }
+    .link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        height: 100px;
+        .share-item {
+            height: 60px;
+            width: 60px;
+            border-radius: 60px;
+            margin-left: 15px;
+            position: relative;
+            img{
+                height: 100%;
+                width: 100%;
+                border-radius: 60px;
+                border: 1px solid #999;/*no*/
+            }
+            &:nth-child(1)::before {
+                position: absolute;
+                content: '';
+                width: 24px;
+                height: 24px;
+                background: {
+                    image: url(./img/champion.png);
+                    position: center center;
+                    size: 100% 100%;
+                    repeat: no-repeat;
+                }
+                top: -16px;
+                left: 0;
+                transform: rotate(-16deg);
+            }
+            &:nth-child(2)::before {
+                position: absolute;
+                content: '';
+                width: 24px;
+                height: 24px;
+                background: {
+                    image: url(./img/runner-up.png);
+                    position: center center;
+                    size: 100% 100%;
+                    repeat: no-repeat;
+                }
+                top: -16px;
+                left: 0;
+                transform: rotate(-16deg);
+            }
+            &:nth-child(3)::before {
+                position: absolute;
+                content: '';
+                width: 24px;
+                height: 24px;
+                background: {
+                    image: url(./img/second-runner-up.png);
+                    position: center center;
+                    size: 100% 100%;
+                    repeat: no-repeat;
+                }
+                top: -16px;
+                left: 0;
+                transform: rotate(-16deg);
+            }
+        }
+        .ellipsis {
+            height: 60px;
+            width: 60px;
+            margin-left: 12px;
+            border: 1px solid #999;/*no*/
+            border-radius: 60px;
+            background: {
+                image: url(./img/icon_ellipsis.png);
+                position: center center;
+                size: 40px 10px;
+                repeat: no-repeat;
+            }
+        }
+    }
+    .tip {
+        font-size: 26px;/*px*/
+        color: #333;
+        text-align: center;
+        line-height: 38px;
+    }
+    .share {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        flex: 1;
+        padding-top: 12px;
+        box-sizing: border-box;
+        span{
+            padding: 0 30px;
+            height: 56px;
+            background: #FFFFFF;
+            border: 1px solid #F73657;/*no*/
+            border-radius: 78px;
+            display: inline-block;
+            text-align: center;
+            line-height: 56px;
+            margin: 0 auto;
+            color: #F73657;
+            font-size: 28px;/*px*/
+        }
+    }
+}

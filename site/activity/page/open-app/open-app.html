@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>打开APP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="https://img.qlchat.com/qlLive/ico/favicon.ico" type="image/x-icon" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            word-break: break-all;
+        }
+        html {
+            height: 100%;
+        }
+        body {
+            position: relative;
+            background-color: #fff;
+            max-width: 768px;/*no*/
+            height: 100%;
+            margin: 0 auto;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+        }
+        .bg {
+            display: block;
+            width: 100%;
+            -webkit-flex-shrink: 0;
+            -ms-flex-negative: 0;
+                flex-shrink: 0;
+        }
+        .tips {
+            display: none;
+            position: absolute;
+            top: 0;
+            right: 4px;/*no*/
+            width: 47%;
+        }
+        .footer {
+            position: relative;
+            min-height: 140px;/*no*/
+            -webkit-box-flex: 1;
+            -webkit-flex-grow: 1;
+                -ms-flex-positive: 1;
+                    flex-grow: 1;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+        }
+        .footer-container {
+            padding: 30px 0;/*no*/
+        }
+        .btn-open {
+            display: block;
+            margin: 0 auto;
+            cursor: pointer;
+            width: 180px;/*no*/
+            height: 48px;/*no*/
+            background: rgba(247,54,87,1);
+            border-radius: 24px;/*no*/
+            color: #fff;
+            font-size: 22px;/*no*/
+            text-align: center;
+            border: 0;
+            box-shadow: 0 1px 10px 0 rgba(247,54,87,.7);/*no*/
+        }
+        .desc {
+            font-size: 12px;/*no*/
+            color: #666;
+            text-align: center;
+            margin-top: 16px;/*no*/
+        }
+        #desc2 {
+            display: none;
+            position: absolute;
+            bottom: 0;
+            width: 200%;
+            color: #999;
+            text-align: center;
+            padding-bottom: 20px;/*no*/
+            font-size: 20px;/*no*/
+            -webkit-transform: scale(0.5);
+                -ms-transform: scale(0.5);
+                    transform: scale(0.5);
+            -webkit-transform-origin: 0 100%;
+                -ms-transform-origin: 0 100%;
+                    transform-origin: 0 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <img class="bg" src="./img/bg.png" alt="">
+    <img id="iosTips" class="tips" src="./img/tips.png" alt="">
+    <div class="footer">
+        <div class="footer-container">
+            <button id="btnOpen" class="btn-open" onclick="onClickOpen()">打开APP</button>
+            <div class="desc">2亿用户的共同选择</div>
+        </div>
+        <div id="desc2">若点击无反应，请关闭浏览器后重试</div>
+    </div>
+
+    <script type="text/javascript">
+        var _uaq = window._uaq || [];
+        // 配置站点名,默认值为： ql-h5
+        _uaq.push(['set', 'site', 'activity']);
+        // 配置站点版本, 默认值为: 1.0.0
+        _uaq.push(['set', 'sitever', '1.0.0']);
+        // 配置日志采集服务地址，用于发送采集日志,默认地址为： //collect.qlchat.com
+        _uaq.push(['set', 'server', '[[collectApiPrefix]]']);
+        // 配置渠道参数
+        _uaq.push(['set', 'ch', 'query.ch']);
+    </script><!--ignore-->
+    <script type="text/javascript" src="[[collectjs]]"></script><!--ignore-->
+    <script>
+        // 百度统计
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?9f8c5d323a26421cb966b5e405d629c3";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script><!--ignore-->
+
+    <!-- <script src="./callapp-lib@2.0.1.umd.js"></script> -->
+    <script src="./callapp-lib@2.1.8.umd.js"></script>
+    <script>
+        var ua = navigator.userAgent;
+        var isIos = /iphone|ipad|ipod/i.test(ua);
+        var isAndroid = /android/i.test(ua);
+        var isWechat = /MicroMessenger/i.test(ua);
+        var isChrome = /\)\sChrome/i.test(ua);
+        var isUc = /UCBrowser/i.test(ua);
+        var isMiuiBrowser = /MiuiBrowser/i.test(ua);
+        var isHuawei = /Huawei/i.test(ua);
+        var isQQBroswer = /MQQBrowser/i.test(ua);
+        var isUniversalLink = /ios\.qlchat/i.test(location.hostname);
+
+        var scheme = 'qlchat';
+        var yingyongbao = 'https://a.app.qq.com/o/simple.jsp?pkgname=com.thinkwu.live';
+        var appstore = 'https://itunes.apple.com/app/apple-store/id1115107127?pt=118207172&mt=8';
+        
+        var query = {};
+        location.search.slice(1).split('&').forEach(function (item) {
+            var sp = item.split('=');
+            query[sp[0]] = sp[1];
+        })
+        // appStore渠道参数
+        query.ct && (appstore += '&ct=' + query.ct);
+        // 应用宝渠道参数
+        query.ckey && (yingyongbao += '&ckey=' + query.ckey);
+
+        // 带上scheme的应用宝链接
+        var yingyongbaoFull = yingyongbao;
+        if (isIos) yingyongbaoFull += '&ios_scheme=' + encodeURIComponent('qlchat://?h5=' + query.h5);
+        if (isAndroid) yingyongbaoFull += '&android_schema=' + encodeURIComponent('qlchat://?h5=' + query.h5);
+
+        var callLib = new CallApp({
+            scheme: {
+                protocol: scheme,
+            },
+            intent: {
+                package: 'com.thinkwu.live',
+                scheme: scheme,
+            },
+            universal: {
+                host: 'ios.qlchat.com/wechat/page/open-app',
+                callback:onClickOpen
+            },
+            yingyongbao: yingyongbaoFull,
+            appstore: appstore,
+            fallback: yingyongbaoFull,
+        });
+
+        ;(function () {
+            // 打开页面自动运行唤醒app逻辑
+            if (
+                isIos && (
+                    isWechat
+                )
+                ||
+                isAndroid && (
+                    isUc
+                    || isChrome
+                    || isMiuiBrowser
+                )
+            ) {
+                // 什么都不做
+            } else if (isIos && isQQBroswer) {
+                location.href = yingyongbaoFull;
+            } else {
+                openApp();
+            }
+
+            if (isIos) {
+                // 在safari浏览器打开提示
+                if (isWechat) {
+                    var iosTips = document.getElementById('iosTips');
+                    iosTips && (iosTips.style.display = 'block');
+                }
+
+                if (isUniversalLink) {
+                    var btnOpen = document.getElementById('btnOpen');
+                    btnOpen && (btnOpen.innerHTML = '立即下载');
+                }
+            }
+
+            if (isMiuiBrowser) {
+                var desc2 = document.getElementById('desc2');
+                desc2 && (desc2.style.display = 'block');
+            }
+        })();
+
+
+        function onClickOpen() {
+            if (isUniversalLink) {
+                location.href = appstore;
+            } else {
+                openApp();
+            }
+        }
+
+        function openApp() {
+            callLib.open({
+                path: '',
+                param: {
+                    h5: query.h5,
+                },
+            });
+        }
+
+    </script>
+</body>
+
+</html>

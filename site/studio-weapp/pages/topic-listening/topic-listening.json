@@ -1,0 +1,10 @@
+{
+    "backgroundColor":"#f5f5f5",
+   "usingComponents": {
+       "comment-list":"./components/comment-list/comment-list",
+       "introduce":"./components/introduce/introduce",
+       "footer-bar":"./components/footer-bar/footer-bar",
+       "header-block":"./components/header-block/header-block",
+       "guide":"./components/guide/guide"
+    }
+}

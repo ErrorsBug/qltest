@@ -1,0 +1,24 @@
+<view class="cover">
+    <image src="{{coverImageSrc}}" mode="aspectFill" class="cover-image"/>
+    <image class="mask" src="{{mask_src}}" mode="aspectFill"/>
+    <view class="auth-member">
+        <view class="list">
+            <image 
+                class="avatar" 
+                mode="aspectFill" 
+                wx:for="{{list}}"
+                wx:key="id"
+                src="{{item.headImgUrl}}"
+            />
+        </view>
+        <image class="icon-user" src="./img/icon-user.png?__inline" mode="aspectFill"></image>
+        <view class="count">{{userCountFormat}}次学习</view>
+    </view>
+    <image 
+        class="icon-play" 
+        mode="aspectFill" 
+        src="{{icon_play_src}}"
+        
+        bind:tap="onPlayBtnTap"
+    />
+</view>

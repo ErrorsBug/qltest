@@ -1,0 +1,68 @@
+.recommend-interest{
+    margin-top:20px;
+    background:#fff;
+    .change-btn{
+        color:#999090;
+        font-size:26px;/*px*/
+        display:flex;
+        align-items: center;
+        &:after{
+            width:20px;
+            height:20px;
+            content:'';
+            display:block;
+            background: url(./img/icon-change.png) no-repeat center / 100%;
+            margin-left:10px;
+        }
+    }
+    .list-wrap{
+        .list-item{
+            padding:0 40px 0 40px;
+            display:flex;
+            align-items: center;
+            .poster{
+                width:240px;
+                height:148px;
+                display:block;
+                flex-shrink: 0;
+                border-radius: 6px;
+            }
+            .info{
+                margin-left:33px;
+                flex:1;
+                width:10px;
+                line-height:1.2;
+                .name{
+                    font-size:30px;/*px*/
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    text-overflow: ellipsis;
+                    -webkit-line-clamp: 2;
+                }
+                .course-count{
+                    font-size:22px;/*px*/
+                    color:#46cfa0;
+                    height:26px;
+                    line-height:26px;
+                    padding:0 5px;
+                    border:1px solid #46cfa0;/*no*/
+                    white-space: nowrap;
+                    display:inline-block;
+                    margin-top:10px;
+                }
+                .aud-count{
+                    margin-top:8px;
+                    color:#bdb5b5;
+                    font-size:22px;/*px*/
+                }
+
+            }
+        }
+    }
+    .tips{
+        color:#736c6c;
+        font-size:22px;/*px*/
+        padding:30px 30px 25px 35px;
+    }
+}

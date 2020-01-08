@@ -1,0 +1,32 @@
+.page-main-content {
+    width: 100%;
+    background-image: url('../../images/tab-content-bg.png');
+    background-size: cover;
+    background-position: center top;
+
+
+    .tab-bar {
+        width: 100%;
+
+        ul {
+            display: flex;
+            background-color: #f18433;
+            color: #ffffff;
+            height: 70px;
+
+            li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex: 1;
+                font-size: 30px;/* px */
+                font-weight: bold;
+                white-space: nowrap;
+
+                &.active {
+                    background-color: #d66f22;
+                }
+            }
+        }
+    }
+}

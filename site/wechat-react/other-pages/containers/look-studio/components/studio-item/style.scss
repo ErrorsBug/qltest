@@ -1,0 +1,49 @@
+.sudio-item{
+    padding-top: 56px;
+    display: flex;
+    align-items: center;
+    .sudio-item-pic{
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        overflow: hidden;
+        background: #e5e5e5;
+        margin-right: 24px;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    .sudio-item-g{
+        box-sizing: border-box;
+        flex-grow: 1;
+        flex-basis: 0;
+        max-width: 100%;
+        position: relative;
+        height: 96px;
+        & > div{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index:1;
+        }
+        h4{
+            font-size: 30px; /*px*/
+            color: #333;
+            line-height: 1.4;
+            margin-bottom: 8px;
+            font-weight: 500;
+            overflow : hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        p{
+            font-size: 24px; /*px*/
+            color: #999;
+            line-height: 1.4;
+            overflow : hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+}

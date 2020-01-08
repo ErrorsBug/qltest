@@ -1,0 +1,9 @@
+<dd attr-id="{{data.id}}" attr-time="{{data.createTime}}">
+    <i><img src="{{createByImgUrl}}"></i>
+    <p>
+        {{#compare data.isQuestion "==" "Y"}}
+        <em class="ask-label">问</em>
+        {{/compare}}
+        {{data.content}}
+    </p>
+</dd>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>双11知识狂欢季</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="https://img.qlchat.com/qlLive/ico/favicon.ico" type="image/x-icon" />
+    <script src="../../components_modules/lib-flexible/1.0.0/lib-flexible.js"></script><!--ignore-->
+    <script type="text/javascript" src="../../components_modules/require/2.1.18/require.js"></script><!--ignore-->
+</head>
+
+<body>
+    <div class="container">
+        <div class="top"></div>
+        <div class="banner">
+            <div class="poster-container">
+                <ul class="poster-list">
+                    <li class="poster-item p4" data-show="0" data-codeMoney="30"> <img class="get" src="./img/coupon-get.png" alt="">  <img src="./img/coupon-30.png" alt="live-studio"></li>
+                    <li class="poster-item p5" data-show="0" data-codeMoney="50"> <img class="get" src="./img/coupon-get.png" alt="">  <img src="./img/coupon-50.png" alt="live-studio"></li>
+                    <li class="poster-item p1" data-show="0" data-codeMoney="10"> <img class="get" src="./img/coupon-get.png" alt="">  <img src="./img/coupon-10.png" alt="live-studio"></li>
+                    <li class="poster-item p2" data-show="0" data-codeMoney="15"> <img class="get" src="./img/coupon-get.png" alt="">  <img src="./img/coupon-15.png" alt="live-studio"></li>
+                    <li class="poster-item p3" data-show="0" data-codeMoney="20"> <img class="get" src="./img/coupon-get.png" alt="">  <img src="./img/coupon-20.png" alt="live-studio"></li>
+                </ul>
+
+                <ul class="swiper-wrap">
+                    <li class="swiper-item s1"></li>
+                    <li class="swiper-item s2"></li>
+                    <li class="swiper-item s3"></li>
+                    <li class="swiper-item s4"></li>
+                    <li class="swiper-item s5"></li>
+                </ul>
+            </div>
+
+            <div class="btn-all-coupon">一 键 领 取</div>
+        </div>
+        {{#each gift}}
+            {{#if ../permission}}
+                <div class="buy-issue have">
+                    <img src="{{img-format this.headImage '@710w_276h_1e_1c_2o'}}" alt="">
+                    <div class="issue-content">
+                        <div class="left">
+                            <div class="l-title">{{this.name}}</div>
+                            <div class="address">点击领书</div>
+                        </div>
+                        <div class="right"></div>
+                    </div>
+                </div>
+            {{else}}
+            <div class="buy-issue no" data-url="{{this.url}}">
+                <img src="{{img-format this.headImage '@710w_276h_1e_1c_2o'}}" alt="">
+                <div class="issue-content">
+                    <div class="left">
+                        <div class="l-title">{{this.name}}</div>
+                        <span class="price">￥{{this.discount}}</span>
+                        <div class="purcase">立即购买</div>
+                    </div>
+                    <div class="right"></div>
+                </div>
+            </div>
+            {{/if}}
+        {{/each}}
+        <div class="panic-line"></div>
+        <div class="panicbuy-area">
+            <ul class="tab">
+                <li data-time="8">
+                    <div class="date">11月8日</div>
+                    <div class="time">12:00</div>
+                </li>
+                <li data-time="9">
+                    <div class="date">11月9日</div>
+                    <div class="time">12:00</div>
+                </li>
+                <li data-time="10">
+                    <div class="date">11月10日</div>
+                    <div class="time">12:00</div>
+                </li>
+                <li data-time="11">
+                    <div class="date">11月11日</div>
+                    <div class="time">12:00</div>
+                </li>
+            </ul>
+            <div id="panicbuy-container"><!--通过增加类名coming或expired来切换遮罩层状态-->
+                {{#each panicBuy}}
+                    <div class="panicbuy-list" data-time="{{calc @index '+8'}}">
+                        <div class="detail-container" data-url="{{this.url}}">
+                            <img src="{{img-format this.headImage '@666w_256h_1e_1c_2o'}}" alt="">
+                            <div class="panicbuy-content">
+                                <div class="first-title">{{this.name}}</div>
+                                <div class="purcase-content">
+                                    <span class="discount">￥{{this.discount}}</span>
+                                    <del class="money">￥{{this.money}}</del>
+                                    <span class="purcase">立即购买</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layer">
+                            <div class="countdown">
+                                <p>距离开始还剩</p>
+                                <div>
+                                    <span class="h"></span>:<span class="m"></span>:<span class="s"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+        <div class="brands"></div>
+        <div class="course-area">
+            {{#each group}}
+                <div class="item" data-code="{{this.code}}">
+                    <div class="header">{{this.name}}</div>
+                    <div class="header-dec">{{this.remark}}</div>
+                    <ul class="course-list">
+                    </ul>
+                    <div class="line"></div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+
+    <div class="animation-con">
+        <div class="a-main"></div>
+        <div class="white"></div>
+    </div>
+
+    <div class="gift-pop">
+        <div class="close"></div>
+        <div class="gift-banner"></div>
+
+            <div class="git-top"></div>
+            <div class="course-con">
+                <ul>
+                    {{#each giftCourseList}}
+                        <a href="{{url}}">
+                            <li class="gift-course flexc">
+                                <div class="flex0 course-img-con">
+                                    <div class="courseImg">
+                                        <img src="{{img-format headImage '@228w_142h_1e_1c_2o'}}" alt="">
+                                    </div>
+                                </div>
+                                <div class="flex1">
+                                    <div class="title">{{name}}</div>
+                                    <div class="flexc1">
+                                        <div class="flex1 ">
+                                            <div class="liveName">{{liveName}}</div>
+                                            <div class="value">价值￥{{money}}</div>
+                                        </div>
+                                        <div class="go-course">查看 </br> 课程</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </a>
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="git-bottom">
+                活动首次下单后自动领取，听课请到已购 - 话题下查看
+            </div>
+        </div>
+    </div>
+
+    <div class="strategy-pop">
+            <div class="close"></div>
+        <div class="strategy-banner"></div>
+        <div class="strategy-con">
+                
+            <ul>
+                <li> 优惠券领取后，可直接在【品牌专区】购买课程时抵扣。</li>
+                <li>【买课赠书】下单完成后，再次返回活动页赠书区，即可点击领书。</li>
+                <li>【限时抢购】，名额有限，每日12点准时开抢，抢完即止。</li>
+                <li> 首次下单后，即可自动领取官方赠送的6节大V课。听课请在【已购-话题】下查看。</li>
+                <li>【个人中心-我的优惠券-平台活动券】下，支持查看已领优惠券。</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <aside
+        class="gift on-log"
+        data-log-name="gift"
+        data-log-region="aside"
+        data-log-pos="top-right"
+    ></aside>
+
+    <div class="bottom">
+        <ul class="bottom-container">
+            {{#each menu}}
+                <li class="tab-list" id="">
+                    <img src="{{this.icon}}" alt="">
+                    <span>{{this.name}}</span>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+    <!--SCRIPT_PLACEHOLDER-->
+    <script>
+        (function (win) {
+            var initData = [[codeList]];
+            require(['./double-eleven'], function (doubleEleven) {
+                doubleEleven.init(initData);
+            });
+        })(window);
+    </script><!--ignore-->
+    <script type="text/javascript">
+        var _uaq = window._uaq || [];
+        // 配置站点名,默认值为： ql-h5
+        _uaq.push(['set', 'site', 'activity']);
+
+        // 配置站点版本, 默认值为: 1.0.0
+        _uaq.push(['set', 'sitever', '1.0.0']);
+
+        // 配置日志采集服务地址，用于发送采集日志,默认地址为： //collect.qlchat.com
+        _uaq.push(['set', 'server', '[[collectApiPrefix]]']);
+
+        // 其它自定义日志参数配置
+        // 配置采集当前url参数key2作为日志参数log_key
+        _uaq.push(['set', 'ch', 'query.ch']);
+
+        // 设置滚动区域的dom 元素class
+        _uaq.push(['set', 'scrollBoxClass', 'container']);
+    </script><!--ignore-->
+    <script type="text/javascript" src="/api/js-sdk/wx?actions=hide_all&__date"></script>
+    <script type="text/javascript" src="[[collectjs]]"></script><!--ignore-->
+    <script>
+        // 百度统计
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?9f8c5d323a26421cb966b5e405d629c3";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script><!--ignore-->
+</body>
+
+</html>

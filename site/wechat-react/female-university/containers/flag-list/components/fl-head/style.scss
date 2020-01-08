@@ -1,0 +1,110 @@
+
+.fl-head{
+    background:linear-gradient(287deg,rgba(255,231,232,1) 0%,rgba(252,210,213,1) 100%);
+    min-height: 350px;
+    // padding-bottom:88px;
+    .fl-poster{ 
+        img{
+            width: 100%;
+        }
+        span{
+            position: absolute;
+            right:0;
+            top:36px;
+            width:84px;
+            line-height:48px;
+            background:linear-gradient(180deg,rgba(248,155,142,1) 0%,rgba(238,98,85,1) 100%);
+            border-radius:200px 0px 0px 200px;
+            font-size:26px;
+            font-weight: bold;
+            color:rgba(255,255,255,1);
+            text-align: center;
+        }
+    }
+    .fl-my-flag{
+        padding-bottom: 88px;
+        .fl-title{
+            font-size:40px; 
+            font-weight:bold;
+            color:rgba(145,77,77,1);
+            line-height:56px;
+            padding:32px 0;
+            text-align: center;
+        }
+        .fl-item{
+            // padding:0 32px; 
+        }
+        .fl-tip{
+            font-size:28px; 
+            color:rgba(145,77,77,1);
+            line-height:40px;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .fl-btn{
+            width:516px;
+            height:80px;
+            background:rgba(224,65,79,1);
+            box-shadow:0px 16px 50px 0px rgba(0,0,0,0.08);
+            border-radius:40px;
+            text-align: center;
+            line-height: 80px;
+            font-size:32px; 
+            font-weight:bold;
+            color:rgba(255,255,255,1); 
+            margin:0 auto;
+            animation: scaleBtn 1s  linear infinite;
+            &.fl-mar{
+                margin-top: 48px;
+            } 
+            &:active{
+                transform: scale(0.9)
+            } 
+        } 
+        
+        .fl-content{
+            &::after{
+                content: '';
+                position: absolute;
+                bottom:48px;
+                right:45px;
+                background: url('https://img.qlchat.com/qlLive/business/LKA2IDC3-NGY8-QDHN-1560420951035-3RQQ6HCTD83Y.png') no-repeat 0 0;
+                background-size: 100%;
+                width: 16px;
+                height: 12px;
+            }
+            .fi-content{
+                font-weight: bold; 
+            }
+        }
+
+        @keyframes scaleBtn
+        {
+            0%   {transform:scale(1);}         
+            33%   {transform:scale(1.1); }   
+            66%   {transform:scale(0.9); }   
+            100%   {transform:scale(1); }   
+        }
+    }
+}
+
+.fl-set-btn{
+    position: absolute;
+    bottom:0;
+    left:0; 
+    right: 0;
+    z-index: 100;
+    height: auto !important;
+    div{ 
+        width:256px;
+        line-height:72px;
+        background:rgba(224,65,79,1);
+        box-shadow:0px 4px 16px 0px rgba(194,59,71,0.3);
+        border-radius:50px;
+        font-size:32px; 
+        font-weight:600;
+        color:rgba(255,255,255,1); 
+        text-align: center;
+        margin: 40px auto;
+    }
+}

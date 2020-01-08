@@ -1,0 +1,36 @@
+{{#each messages}}
+<dd class="consultDd" attr-id="{{id}}">
+    <div class="message-head">
+        {{#if headImgUrl}}
+            <img src="{{img-format headImgUrl '@64w_64h_1e_1c_2o'}}">
+        {{else}}
+            <img src="https://img.qlchat.com/qlLive/liveCommon/channelNormal.png">
+        {{/if}}
+    </div>
+    <div><span class="message-author">{{name}}</span></div>
+    <div><span class="message-content">{{content}}</span><span  class="message-day">{{dateFormat consultTime 'MM-dd hh:mm'}} </span></div>
+    <div class="replyContentBox">
+        {{#compare isReply "==" "Y"}}
+        <span class="message-reply-title">直播间回复</span>
+        <div class="message-reply">
+            <span class="message-content" attr-id="{{replyId}}">{{replyContent}}</span>
+            <span class="message-day">{{dateFormat replyTime 'MM-dd hh:mm'}}</span>
+            
+        </div>
+        {{/compare}}
+    </div>
+    
+    <div class="message-btn">
+        {{#compare isReply "!=" "Y"}}
+            <a href="javascript:;" class="message-btn-reply on-consult-reply">回复</a>
+        {{/compare}}
+        {{#if isbest}}
+            <a href="javascript:;" class="message-btn-out replyBestOut">移出精选</a>
+        {{else}}
+            <a href="javascript:;" class="message-btn-into replyBestInto">移入精选</a>
+        {{/if}}
+        
+    </div>
+    
+</dd>
+{{/each}}

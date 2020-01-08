@@ -1,0 +1,15 @@
+{
+    "component": true,
+    "usingComponents": {
+        "course-item": "./components/course-item/course-item",
+        "audio-box": "./components/audio-box/audio-box",
+        "hot-lives": "./components/hot-lives/hot-lives",
+        "category-bar": "./components/category-bar/category-bar",
+        "night-answer": "./components/night-answer/night-answer",
+        "exclusive": "./components/exclusive/exclusive",
+        "master": "./components/master/master",
+        "beautify": "./components/beautify/beautify",
+        "interest": "./components/interest/interest",
+        "boutique": "./components/boutique/boutique"
+    }
+}

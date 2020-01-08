@@ -1,0 +1,54 @@
+<!-- 
+    数一数按钮状态，总结一下按钮显示的条件：
+
+    [一键听课]: 团长拼课成功，或团员已经拼课, 已购买系列课且无拼团
+    [免费报名]: 免费课程且未报名
+    [立即购买]: 未购买，系列课未开启拼团
+    [原价]: 未购买，系列课开启拼团
+    [查看拼课]: 拼课状态为进行中
+    [一键开团]: 未购买，系列课开启拼团
+    [一键参团]: 从拼团页面过来，带上了groupId
+    [无]: 有管理员就不显示任何按钮
+-->
+
+<view class="bottom-container">
+    <!-- <view class="icon" wx:if="{{switch === 'Y'}}" bind:tap="onShowShareModel" data-log_region="share" data-log_name="{{isDistribution ? 'shareAndEarn' : 'onlyShare'}}">
+        <image src="../../img/share.gif" class="share-img"></image>
+        <text wx:if="{{isDistribution}}">
+            <text>分享赚</text>
+            <text wx:if="{{discountStatus === 'N' ? money : discount}}" class="red">{{discountStatus === 'N' ? money : discount}}</text>
+            <text wx:else>钱</text>
+        </text>
+        <text wx:else>分享</text>
+    </view> -->
+    <form bindsubmit="onFormSubmit" report-submit>
+            <view class="buttons" wx:if="{{!power.allowMGLive }}">
+
+                <button class="btn" wx:if="{{status.showEnterCourse}}" bind:tap="onCoursePlay" formType="submit">进入课程</button>
+
+                <button class="btn" wx:if="{{status.showCheckInFree}}" bind:tap="onCheckInFree" formType="submit">免费报名</button>
+                
+                <button class="btn" wx:if="{{status.showCoursePlay}}" bind:tap="onCoursePlay" formType="submit">一键听课</button>
+            
+                <block wx:if="{{(status.showPurchase||status.showBeginGroup||status.showJoinGroup)&&systemIos}}">
+                    <button class="btn grey" >
+                        由于相关规范，iOS功能暂不可用
+                    </button>
+                </block>
+                <block wx:else>
+                        <button class="btn {{purchaseClass}}" wx:if="{{status.showPurchase}}" bind:tap="onPurchase" formType="submit">
+                            {{isRebate ? '购买返现' : purchaseText}}
+                        </button>
+                
+                        <!-- <button class="btn" wx:if="{{status.showBeginGroup}}" bind:tap="onBeginGroup" formType="submit">
+                            {{beginGroupText}}
+                        </button> -->
+                
+                        <!-- <button class="btn" wx:if="{{status.showJoinGroup}}" bind:tap="onJoinGroup" formType="submit">一键参团</button> -->
+                
+                </block>
+
+                <!-- <button class="btn" wx:if="{{status.showViewGroup}}" bind:tap="onViewGroup" formType="submit">查看拼课</button> -->
+        </view>
+    </form>
+</view>

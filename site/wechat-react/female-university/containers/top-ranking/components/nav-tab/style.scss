@@ -1,0 +1,96 @@
+.tr-nav-cont{
+    padding: 0 40px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .tr-switch-box{
+        display: flex;
+        width: 298px; /*px*/
+        height: 68px;
+        border-radius: 68px;
+        border: 2px solid rgba(255,255,255, 0.1); /*px*/
+        span{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: normal;
+            width: 50%;
+            color: #fff;
+            font-size: 32px; /*px*/
+            height: 68px;
+            border-radius: 68px;
+            &.action{
+                background:rgba(1,1,1,0.25);
+                font-weight: 500;
+            }
+        }
+    }
+    .tr-course-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: normal;
+        font-size: 24px; /*px*/
+        color: #fff;
+        height: 50px; 
+        padding: 0 24px;
+        background:rgba(247,247,247,.11);
+        border-radius: 50px;
+        &.all-join{
+            position: relative;
+            &::before{
+                position: absolute;
+                top: 0;
+                right: 0;
+                transform: translate(10px,-66px);
+                width: 208px;
+                height: 62px;
+                background: url('../../img/icon-popover.png') no-repeat left center;
+                background-size: 100%;
+                animation: animateShow 3s linear;
+                opacity: 0;
+                content: '';
+                z-index: 2;
+            }
+        }
+    }
+}
+.scroll{
+    .tr-course-btn{
+        &.all-join{
+            position: relative;
+            &::before{
+                position: absolute;
+                top: auto;
+                bottom: 0;
+                right: 0;
+                transform: translate(10px, 66px);
+                width: 208px;
+                height: 62px;
+                background: url('../../img/bubble_icon_adddone.png') no-repeat left center;
+                background-size: 100%;
+                animation: animateShow 3s linear;
+                opacity: 0;
+                content: '';
+                z-index: 2;
+            }
+        }
+    }
+}
+
+@keyframes animateShow{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}

@@ -1,0 +1,25 @@
+$prefix: live-studio-animation;
+
+/* 优惠码页面弹窗动画 */
+.#{$prefix}-modalContent-appear
+{
+    transform: scale(.92);
+}
+
+.#{$prefix}-modalContent-appear-active
+{
+    transform: scale(1);
+	transition: all .3s cubic-bezier(.215, .61, .355, 1);
+}
+
+/* 购买成功页面动画 */
+.#{$prefix}-couponOrderSuccess-appear
+{
+	transform: translateX(100%);
+}
+
+.#{$prefix}-couponOrderSuccess-appear-active
+{
+	transform: translateX(0);
+	transition: transform .3s cubic-bezier(.215, .61, .355, 1);
+}

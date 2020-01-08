@@ -1,0 +1,10 @@
+{   
+    "wchat": {
+                    "appid": "wx485213694a978438", 
+                    "scope": "snsapi_login", 
+                    "redirect_uri": "http://m.qlchat.com/qrLogin.htm",
+                    "state": "230000271360529",
+                    "style": "black",
+                    "href": ""
+               }
+}

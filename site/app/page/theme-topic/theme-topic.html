@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{theme.themeName}}</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE"/>
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="https://img.qlchat.com/qlLive/ico/favicon.ico" type="image/x-icon" />
+    <script src="../../components_modules/lib-flexible/1.0.0/lib-flexible.js"></script><!--ignore-->
+    <script type="text/javascript" src="../../components_modules/require/2.1.18/require.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div class="banner">
+            <div class="img-wrap">
+                <img class="img-default" data-imgloaded="false" data-imgsrc="{{img-format theme.themeLogo '@750w_330h_1e_1c_2o_1l'}}" />
+            </div>
+        </div>
+        {{#if theme.themeInstro}}
+        <div class="head-tip">
+            <p>{{theme.themeInstro}}</p>
+        </div>
+        {{/if}}
+        <ul class="topic-list">
+                {{#each theme.themeLibs}}
+                <li class="tap-on tap-bgc on-log" log-region="topic_list" log-name="{{topic}}" log-business_id="{{topicId}}" log-business_type="{{type}}" data-id="{{topicId}}" data-type="{{type}}" data-url="{{url}}">
+                    <div class="pic">
+                        <img class="img-default" data-imgloaded="false" data-imgsrc="{{img-format topicLogo '@270w_180h_1e_1c_2o_1l'}}" />
+                        {{#compare money '>' 0}}
+                        <span class="tag tag-money">￥{{money-format ../money}}</span>
+                        <div class="shade"></div>
+                        {{/compare}}
+                        {{#compare money '===' 0}}
+                            <span class="tag tag-free">免费</span>
+                            <div class="shade"></div>
+                        {{/compare}}
+                    </div>
+                    <div class="desc">
+                        <div class="title">{{topic}}</div>
+                        <div class="other">
+                            <div class="live-title">{{liveName}}</div>
+                            {{#compare topicStatus '===' 'ended'}}
+                                {{#compare topicSpeakNum '>=' 0}}
+                                <span class="record-num">{{../topicSpeakNum}}条发言</span>
+                                {{/compare}}<span class="follow-num">{{digitFormat ../topicSessionNum}}人次</span>
+                            {{/compare}}
+                            {{#compare topicStatus '===' 'beginning'}}
+                                {{#is-beginning ../topicStartTime}}
+                                <div class="status">
+                                    <div class="status-icon">
+                                        <img class="img-default" data-imgloaded="false" data-imgsrc="{{img-format ../liveLogo '@38w_38h_1e_1c_2o_1l'}}" />
+                                    </div>
+                                    <span class="status-show">{{status-show ../topicStartTime}}</span>
+                                </div>
+                                <span class="follow-num">{{digitFormat ../topicSessionNum}}人次</span>
+                                {{else}}
+                                    <span class="date-show">{{status-show ../topicStartTime}}</span><!-- <span class="date">{{dateFormat ../topicStartTime 'MM-dd hh:mm'}}</span> --><span class="follow-num">{{digitFormat ../topicSessionNum}}人次</span>
+                                {{/is-beginning}}
+                            {{/compare}}
+                        </div>
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+    </div>
+
+    <!--SCRIPT_PLACEHOLDER-->
+    <script>
+        (function(win) {
+            var initData = {};
+
+            initData.THEMEDATA = [[THEMEDATA]];
+            win.NOWTIME = [[NOWTIME]];
+
+            require(['./theme-topic'], function (themeTopic) {
+                themeTopic.init(initData);
+            });
+        })(window);
+    </script><!--ignore-->
+    <script type="text/javascript">
+        var _uaq = window._uaq || [];
+        // 配置站点名,默认值为： ql-h5
+        _uaq.push(['set', 'site', 'app']);
+
+        // 配置站点版本, 默认值为: 1.0.0
+        _uaq.push(['set', 'sitever', '2.2.0']);
+
+        // 配置日志采集服务地址，用于发送采集日志,默认地址为： //collect.qlchat.com
+        _uaq.push(['set', 'server', '[[collectApiPrefix]]']);
+
+        // 其它自定义日志参数配置
+        // 配置采集当前url参数key2作为日志参数log_key
+        _uaq.push(['set', 'ch', 'query.ch']);
+
+    </script><!--ignore-->
+    <script type="text/javascript" src="[[collectjs]]"></script><!--ignore-->
+    <script>
+        // 百度统计
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?9f8c5d323a26421cb966b5e405d629c3";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script><!--ignore-->
+</body>
+</html>

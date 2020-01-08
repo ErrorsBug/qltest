@@ -1,0 +1,70 @@
+.a-ppt-what-has-sound {
+    height: 100%;
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+    .ppt-content {
+        flex: 1;
+        padding: 40px 20px;
+        display: flex;
+    }
+    .ppt-operation {
+        background:rgba(245,245,245,1);
+    }
+    .delete-dialog {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.6);
+        z-index: 10;
+        .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .delete-dialog-container {
+            width:628px;
+            height:236px;
+            background:rgba(255,255,255,1);
+            border-radius:32px;   
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            .content {
+                flex-grow: 1;
+                font-size: 32px;/*px*/
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+            }    
+            .btn-group {
+                height: 94px;
+                display: flex;
+                border-top: 1px solid rgba(238,238,238,1);
+                .btn {
+                    flex-grow: 1;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;    
+                    font-size: 32px;/*px*/
+                    height: 100%;
+                    cursor: pointer;
+                    &.cancel {
+                        border-left: 1px solid rgba(238,238,238,1);
+                        color: #F73657;
+                    }
+                }
+            }      
+        }
+    }
+}

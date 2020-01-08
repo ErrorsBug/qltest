@@ -1,0 +1,126 @@
+.address-form-page {
+    position: relative;
+
+    .mini-title {
+        display: block;
+        font-size: 22px;/* px */
+        color: #999999;
+        padding: 20px 30px;
+    }
+
+    ul.form-content {
+
+        li {
+            display: flex;
+            align-items: center;
+            height: 100px;
+            padding: 0 30px;
+            background-color: #ffffff;
+            
+            &:not(:last-child) {
+                border-bottom: 1px solid #f0f0f0;/* no */
+            }
+
+            .label {
+                display: inline-block;
+                width: 170px;/* px */
+                font-size: 26px;/* px */
+                color: #333333;
+
+            }
+
+            .content {
+                flex: 1;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                font-size: 26px;/* px */
+                color: #4d4d4d;
+            }
+        }
+    }
+
+    textarea.street-area {
+        display: block;
+        height: 200px;
+        border: none;
+        border-top: 1px solid #f0f0f0; /* no */
+        background-color: #ffffff;
+        color: #4d4d4d;
+        font-size: 22px;/* px */
+        width: 100%;
+        outline: none;
+        padding-top: 39px;
+        padding-left: 26px;
+    }
+
+    .submit-btn {
+        display: flex;
+        width: 90%;
+        height: 80px;
+        justify-content: center;
+        align-items: center;
+        font-size: 32px;/* px */
+        color: #ffffff;
+        border-radius: 80px;
+        background-color: #f84c69;
+        margin: 30px auto;
+    }
+
+    .icon-enter {
+        display: block;
+        width: 14px;
+        float: right;
+    }
+
+    .bottom-dialog {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        &.hide {
+            display: none;
+        }
+
+        .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        >main {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: #ffffff;
+        }
+
+        .btn-group {
+            display: flex;
+            align-items: center;
+            height: 80px;
+            border-bottom: 1px solid #e5e5e5;/* no */
+
+            span {
+                flex: 1;
+                text-align: center;
+                font-size: 26px;/* px */
+                font-weight: bold;
+                color: #4d4d4d;
+
+                &:first-child {
+                    border-right: 1px solid #e5e5e5;/* no */
+                }
+
+                &:nth-child(2) {
+                    color: #f84c69;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.community-suspension {
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 40px;
+    bottom: 240px;
+    border-radius: 50%;
+    box-shadow: 0 2px 14px 0 rgba(0,0,0,0.20);
+    background: #fff url('./img/icon_sq.png') center / 40px no-repeat;
+    
+    // 出现会员栏的时候往上顶
+    &.member-up {
+        bottom: 280px;
+    }
+
+    .tooltip {
+        opacity: 0;
+        // width: 300px;
+        white-space: nowrap;
+        padding: 18px 20px;
+        background-color: #666666;
+        color: #fff;
+        font-size: 24px; /*px*/ 
+        line-height: 1.5;
+        border-radius: 10px;
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        text-align: center;
+        box-sizing: border-box;
+        transition: opacity linear 0.8s;
+        transform: translate(-108%, -50%);
+
+        &.visible-tooltip {
+            opacity: 1;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-radius: 0 6px 0 0;
+            background-color: #666;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(50%, -50%) rotate(45deg);
+        }
+    }
+}

@@ -1,0 +1,259 @@
+.graduation-poster-container {
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    .gp-content{
+        width: 100%;
+        background: rgba(0,0,0,0.7);
+        box-sizing: border-box;
+        background-image: url('./img/bg.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        position: relative;
+        z-index: 0;
+        min-height: 100vh;
+        .graduation-poster-center{
+            height: 100vh;
+            overflow: hidden;
+        }
+    }
+    .gp-ercode{
+        padding: 68px 0;
+        display: flex;
+        justify-content: center;
+        background: #EBF2F6;
+        & > div{
+            text-align: center;
+            img{
+                width: 172px;
+                height: 172px;
+                border-radius: 8px;
+            }
+            p{
+                margin-top: 24px;
+                font-size: 24px; /*px*/
+                color: #47595F;
+            }
+        }
+    }    
+}
+
+.graduation-poster-center {
+    overflow: hidden;
+    height: 100%;
+    >h3{
+        text-align: center;
+        padding: 140px 140px 0 140px;
+        margin-bottom: 92px;
+        img{
+            height: 52px;
+            width: auto;
+        }
+    }
+    .envelope{
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 680px;
+        background-image: url('./img/letter.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        .content{
+            width: 418px;
+            margin: 0 auto;
+            margin-top: 146px;
+            h4{
+                line-height: 52px;
+                color:#47595F;
+                font-size: 32px;
+                padding-bottom: 14px;
+                border-bottom: 2px solid #EEF0F2;
+                position: relative;
+                font-family: 'SourceHanSans', 'Times New Roman', Times, serif !important;
+                i{
+                    position: absolute;
+                    width: 368px;
+                    height: 96px;
+                    display: block;
+                    background: url('./img/icon-02.png') no-repeat center; 
+                    background-size: 100%;
+                    right: -100px;
+                    bottom: 0;
+                }
+            }
+            p{
+                line-height: 68px;
+                height: 272px;
+                overflow: hidden;
+                color:#47595F;
+                font-size: 32px; /*px*/
+                position: relative;
+                font-family: 'SourceHanSans', 'Times New Roman', Times, serif !important;
+                span{
+                    color:#e66570;
+                }
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 68px;
+                    left:0;
+                    top:68px;
+                    border-top: 2px solid #EEF0F2;
+                    border-bottom: 2px solid #EEF0F2;
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 68px;
+                    left:0;
+                    bottom:0px;
+                    border-top: 2px solid #EEF0F2;
+                    border-bottom: 2px solid #EEF0F2;
+                }
+            }
+        }
+        .sign-name{
+            position: absolute;
+            bottom: 85px;
+            right: 120px;
+            display: flex;
+            align-items: center;
+            background: url('./img/icon-04.png') no-repeat right center;
+            background-size: 74px; /*px*/
+            text-align: right;
+            padding: 15px 30px 15px 0;
+            span{
+                font-size: 22px; /*px*/
+                color: #47595F;
+                line-height: 1.5;
+                font-family: 'SourceHanSans', 'Times New Roman', Times, serif !important;
+            }
+        }
+    }
+    &.animate{
+        h3{
+            img{
+                opacity: 0.1;
+                animation: showText 1.5s linear 0.5s forwards;
+            }
+        }
+        .envelope{
+            opacity: 0;
+            animation: scaleEnvelope 1s cubic-bezier(0, 0, 0.42, 0.99) 2s forwards;
+        }
+        h4{
+            i{
+                transform: scale(0);
+                opacity: 0.1;
+                animation: showBorder .5s cubic-bezier(0, 0, 0.42, 0.99) 4s forwards;
+            }
+        }
+    }
+}
+
+.gp-content-animate{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 12;
+    .gp-content-cont{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-image: url('./img/bg.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+    }
+    .share-long-image{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 3;
+        font-size: 0;
+        opacity: 0;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.gp-content-btn{
+    left: 185px;
+    bottom: 40px;
+    right: 185px;
+    height: 100px;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #E0414F;
+    border-radius: 100px;
+    span{
+        display: inline-block;
+        padding: 15px 0;
+        font-size: 40px; /*px*/
+        color: #fff;
+        padding-right: 70px;
+        background: url('./img/icon-03.png') no-repeat right center;
+        background-size: 60px;
+        font-weight: bold;
+    }
+}
+
+.gp-content-close{
+    top: 46px;
+    right: 0;
+    width: 136px;
+    height: 136px;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i{
+        width: 44px;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        border: 2px solid #fff; /*no*/
+        background: rgba(0,0,0,0.5);
+        color: #fff;
+        font-size: 24px; /*px*/
+    }
+}
+
+@keyframes showText {
+    to { 
+        opacity: 1;
+    }
+}
+@keyframes showBorder {
+    to { 
+        transform: scale(1);
+        opacity: 1;
+    }
+    
+}
+@keyframes scaleEnvelope {
+    0% { 
+        transform: scale(0); opacity: 1;
+    }
+    100% { 
+        transform: scale(1); opacity: 1;
+    }
+}

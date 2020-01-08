@@ -1,0 +1,9 @@
+.tips-ul{
+    color:#999;
+    line-height: 50px;
+    padding:30px;
+}
+.tips-ul li{
+    margin-bottom:20px;
+    font-size: 32px;
+}

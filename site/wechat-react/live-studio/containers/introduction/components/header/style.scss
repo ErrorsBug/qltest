@@ -1,0 +1,132 @@
+.live-studio-intro-page-header{
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    .live-icon{
+        width: 80px;
+        height: 80px;
+        border-radius: 80px;
+        overflow: hidden;
+        margin-right: 30px;
+        flex-shrink: 0;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .mid-flex{
+        flex: 1;
+        overflow: hidden;
+        .name{
+            display: block;
+            height: 40px;
+            color: #323333;
+            font-size: 26px;/* px */
+            line-height: 1.2;
+            align-items: center;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .exp-date{
+            font-size: 22px;/* px */
+            color: #999999;
+            line-height: 30px;
+            float: left;
+        }
+
+        .tag{
+            float: left;
+            margin-right: 10px;
+            img{
+                height: 30px;
+            }
+        }
+    }
+
+
+    .btn-switch-live{
+        display: inline-flex;
+        width: 160px;
+        height: 45px;
+        border-radius: 45px;
+        background: #cfcfcf;
+        color: #333333;
+        font-size: 22px;/* px */
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+}
+
+.introduction-mgr-live-list{
+    max-height: 450px;
+    overflow: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    ul{
+        padding: 20px;
+        
+        li{
+            position: relative;
+            display: inline-flex;
+            flex-direction: column;
+            width: 33.3%;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 10px;
+            height: 200px;
+            cursor: pointer;
+
+            .logo{
+                position: relative;
+                display: inline-block;
+                height: 80px;
+                width: 80px;
+                
+                img{
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                    border-radius: 80px;
+                }
+
+                .selected{
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    width: 24px;
+                    height: 24px;
+                    background: url(./imgs/icon-select.png) center center no-repeat;
+                    background-size: 100%;
+                }
+            }
+            .tag{
+                
+                margin-top: 10px;
+                img{
+                    height: 20px;
+                }
+            }
+            .name{
+                max-width: 100%;
+                display:inline-block;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color: #323333;
+                font-size: 24px;/* px */
+                line-height: 35px;/* px */
+            }
+
+            
+
+        }
+    }
+
+}

@@ -1,0 +1,184 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>系统升级</title>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <style>
+        * {
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+        html {
+            font-size: 62.5%;
+            height: 100%;
+            background: #eee
+        }
+
+        body {
+            height: 100%;
+            line-height: 1;
+            font-family: "微软雅黑";
+            background-color: #fff;
+            font-size: 12px;
+            color: #5d5b5b;
+            min-width: 320px;
+            max-width: 640px;
+            margin: 0 auto;
+            display: block;
+            position: relative
+        }
+
+        .main_box_4 {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .box_404 {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        .box_404 img {
+            width: 142px;
+        }
+
+        .icon-404 {
+            text-align: center;
+            margin-bottom: 14px;
+        }
+
+        .prompt-open {
+            margin-bottom: 35px;
+            text-align: center;
+            font-size: 12px;
+            font-family: PingFangSC-Regular;
+            font-weight: 400;
+            color: rgba(153, 153, 153, 1);
+            line-height: normal;
+        }
+
+        .btn-open-ql-wrap {
+            text-align: center;
+        }
+
+        .btn-open-ql {
+            display: inline-block;
+            padding: 9px 32px;
+            background: rgba(247, 54, 87, 1);
+            box-shadow: 0px 3px 4px 0px rgba(247, 54, 87, 0.26);
+            border-radius: 40px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            line-height: normal;
+        }
+    </style>
+</head>
+
+<body class="gra_1">
+    <div class="main_box_4">
+        <div class="box_404">
+            {{!-- <img src="https://img.qlchat.com/qlLive/liveCommon/updating-icon.png">	
+            <span class="tips_2">为了听课的流畅度，<br />技术GG正在优化系统，请稍后再试...</span> --}}
+            <div class="icon-404">
+                <img
+                    src="https://img.qlchat.com/qlLive/liveComment/TGZB4S4Q-8XQN-2W2Y-1555496263792-7G3RD1WIIV8U.png?x-oss-process=image/resize,h_400,w_400" />
+            </div>
+            <div class='prompt-open'>
+                当前打开不够快？试试用app打开
+            </div>
+            <div class="btn-open-ql-wrap">
+                <div id="btn-open-ql" class="btn-open-ql">打开千聊app</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var yingyongbao = 'https://a.app.qq.com/o/simple.jsp?pkgname=com.thinkwu.live';
+
+        var btn = document.querySelector('#btn-open-ql');
+        btn.addEventListener('click', function () {
+            gotoApp({
+                h5: location.href
+            })
+        })
+
+        /**
+         * android微信跳到应用宝，其他情况跳中转页
+         */
+        function gotoApp(options) {
+            options || (options = {});
+            var ct = options.ct; // appStore渠道参数
+            var ckey = options.ckey;  // 应用宝渠道参数
+            ckey && (yingyongbao += '&ckey=' + ckey);
+
+            // 更换主域名
+            var h5 = options.h5 || '';
+            // var match = h5.match(/(https?:)?(\/\/([^:\/?#]*))?(:(\d*))?([^?#]*)?(\?[^#]*)?(#.*)?/);
+            // h5 = location.protocol + location.host + (match[6] || '') + (match[7] || '') + (match[8] || '');
+
+            var ua = navigator.userAgent;
+            var isAndroid = /android/i.test(ua);
+            var isWechat = /MicroMessenger/i.test(ua);
+
+
+            // 带上scheme的应用宝链接
+            var yingyongbaoFull = yingyongbao;
+            if (isAndroid) yingyongbaoFull += '&android_schema=' + encodeURIComponent('qlchat://?h5=' + encodeURIComponent(h5));
+
+
+            // 拼装open-app.html的页面参数
+            var openAppUrl = 'https://m.qlchat.com/wechat/page/open-app';
+            var queryStr = '';
+            var query = { h5, ct, ckey };
+            for (var i in query) {
+                queryStr += (queryStr && '&') + i + '=' + encodeURIComponent(query[i]);
+            }
+            openAppUrl += (queryStr && '?') + queryStr;
+
+            if (isWechat && isAndroid) {
+                location.href = yingyongbaoFull;
+            } else {
+                location.href = openAppUrl;
+            }
+        }
+    </script>
+
+
+    {{!-- <script>
+        if (/(m.qlchat)/.test(window.location.href) && !/(test.m.qlchat)/.test(window.location.href)) {
+            var timerObj = document.getElementById('timer');
+            var afterTime = 4;
+
+            setInterval(function () {
+                afterTime--;
+                if (afterTime > 0) {
+                    timerObj.textContent = afterTime;
+
+                } else {
+                    window.location.href = '//m.qlchat.com/wechat/page/backstage';
+                }
+
+            }, 1000);
+        }
+    </script> --}}
+</body>
+
+</html>

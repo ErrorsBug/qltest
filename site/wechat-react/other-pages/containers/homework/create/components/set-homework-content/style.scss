@@ -1,0 +1,107 @@
+//set homework content
+
+.set-homework-content {
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	overflow:hidden;
+	.input-content-box {
+		position: relative;
+		height: 390px;
+		padding: 26px 20px 60px;
+		background: #fff;
+		.input-content {
+			width: 100%;
+			height: 100%;
+			border: 0 none;
+			font-size: 32px;/*px*/
+			color: #333;
+			line-height: 1.2;
+			resize: none;
+			outline: none;
+		}
+		.input-count {
+			position: absolute;
+			right: 26px;
+			bottom: 24px;
+			color: #b2b2b2;
+			font-size: 24px; /*px*/
+			> span {
+				color: #737373;
+			}
+		}
+	}
+	.audio-wrapper{
+		padding:20px 210px 20px 20px;
+		background:#fff;
+		display:none;
+		align-items: center;
+		.delete-btn{
+			margin-left:20px;
+			font-size:24px;/*px*/
+			cursor:pointer;
+		}
+		&.show{
+			display: flex;
+		}
+	}
+	.append-record {
+		display: flex;
+		align-items: center;
+		height: 86px;
+		padding: 0 32px;
+		border-top: 1px solid #e6e6e6; /*no*/
+		border-bottom: 1px solid #e6e6e6;/*no*/
+		color: #333;
+		font-size: 30px; /*px*/
+		cursor: pointer;
+		background: #fff;
+		.icon-record {
+			width: 25px;
+			height: 36px;
+			margin-right: 20px;
+			background: url(./img/icon_record.png) no-repeat center center / 25px 36px;
+		}
+	}
+	.btn-ensure {
+		margin: 46px 28px 0;
+		height: 84px;
+		border-radius: 42px;
+		line-height: 84px;
+		background: #f84c69;
+		color: #fff;
+		font-size: 32px; /*px*/
+		text-align: center;
+		cursor:pointer;
+	}
+
+	.recording-wrapper{
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		background:rgba(#000,.5);
+		opacity:0;
+		pointer-events: none;
+		transition:opacity .3s;
+		.recording-box{
+			position: absolute;
+			bottom:0;
+			left:0;
+			width:100%;
+			transform:translate3d(0,100%,0);
+			transition:transform .3s;
+		}
+		&.show{
+			opacity:1;
+			pointer-events:auto;
+			.recording-box {
+				transform:translate3d(0,0,0);
+			}
+		}
+	}
+
+}

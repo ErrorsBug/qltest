@@ -1,0 +1,129 @@
+<!--index.wxml-->
+<form bindsubmit="onFormSubmit" report-submit>
+
+<view class="container">
+    <category-bar
+        cateList="{{cateList}}"
+        activeTag="{{activeTag}}"
+        panelChildTagId="{{panels[curPanelIndex].activeChildTag}}"
+        binditemselected="onCateItemSelectd"
+        bindchilditemselected="onCateChildItemSelected"
+        bind:updateCategoryBarHeight="updateCategoryBarHeight"
+    />
+
+    <view class="content-wrapper">
+            <swiper 
+                current="{{curPanelIndex}}" 
+                duration="{{400}}"
+                bindchange="onListSwiperChange"
+                style="height: {{scrollHeight}};"
+            >
+
+                <swiper-item wx:for="{{panels}}" wx:for-item="panel" wx:key="id">
+                    <scroll-view scroll-y style="height: 100%" bindscrolltolower="onScrollToLoad" scroll-into-view="{{toView}}" scroll-with-animation="{{true}}" bindscroll="onScroll">
+                    
+                    <!-- 第一页才有的内容 -->
+                    <block wx:if="{{panel.id === '0'}}">
+                        <button id="banner-wrap" class="button-wrap" formType="submit">
+                            <include src="../../../../comp/swiper-banners/swiper-banners.wxml" />
+                        </button>
+
+                        <view class="head-menu" wx:if="{{isAudit == 'Y'}}" wx:if="{{icons.length}}">
+                            <swiper
+                                class="head-menu-swiper"
+                                circular="true"
+                                bindchange="headMenuSwiperChange"
+                            >
+                                <swiper-item wx:for="{{icons}}" wx:for-index="index" wx:for-item="iconGroup" class="swiper-item" wx:key="swiper-item">
+                                    <view class="menu-item" wx:for="{{iconGroup}}" data-url="{{item.url}}" wx:key="menu-item" bind:tap="handleMenuItemClick">
+                                        <image class="menu-icon" src="{{item.icon}}"></image>
+                                        <view class="menu-title">{{item.title}}</view>
+                                    </view>
+                                </swiper-item>
+                            </swiper>
+                            <!-- 自定义swiper-dot -->
+                            <view class="swiper-dot" wx:if="{{icons.length > 1}}">
+                                <view wx:for="{{icons}}" class="dot {{index == menuActive ? 'on' : ''}}" wx:key="swiper-dot"></view>
+                            </view>
+                        </view>
+
+                        <block wx:for="{{regions}}" wx:for-item="region" wx:key="region">
+                            <block wx:if="{{region.type == 'nightchat'}}">
+                                <!--夜答-->
+                                <night-answer
+                                    info="{{region}}"
+                                ></night-answer>
+                            </block>
+                            <block wx:if="{{region.type == 'boutique' && region.courses.length > 0}}">
+                                <boutique
+                                    infos="{{region}}"
+                                    bind:getMoreBtnTapHandle="getMoreBtnTapHandle"
+                                ></boutique>
+                            </block>
+                            <block wx:if="{{region.type == 'exclusive' && region.courses.length > 0}}">
+                                <exclusive
+                                    infos="{{region}}"
+                                    bind:getMoreBtnTapHandle="getMoreBtnTapHandle"
+                                ></exclusive>
+                            </block>
+                            <block wx:if="{{region.type == 'master' && region.courses.length > 0}}">
+                                <master
+                                    infos="{{region}}"
+                                    system ="{{system}}"
+                                    bind:getMoreBtnTapHandle="getMoreBtnTapHandle"
+                                ></master>
+                            </block>
+                            <block wx:if="{{region.type == 'classify' && region.courses.length > 0}}">
+                                <beautify
+                                    infos="{{region}}"
+                                    system ="{{system}}"
+                                    bind:getMoreBtnTapHandle="getMoreBtnTapHandle"
+                                ></beautify>
+                            </block>
+                            <block wx:if="{{region.type == 'recommend' && region.courses.length > 0}}">
+                                <image class="recommend-ad-space" wx:for="{{region.courses}}" wx:for-item="c" wx:key="{{index}}" src="{{c.indexLogo}}" data-course="{{c}}" catchtap="courseItemTapHandle" data-log-id="{{c.businessId}}" data-log-type="{{c.businessType}}" data-log-region="{{item.code}}"></image>
+                            </block>
+                            <block wx:if="{{region.type == 'interest' && interestData.courses.length > 0}}">
+                                <interest
+                                    info="{{interestData}}"
+                                ></interest>
+                            </block>
+                        </block>
+
+                        <text id="daily-collection" class="list-title daily">每日精选</text>
+                    </block>
+                    
+                    <view class="course-list">
+                        <block wx:for="{{panel.courseList}}" wx:key="{{id}}" wx:for-index="courseIndex" wx:for-item="course" wx:if="{{(isAudit == 'N' && course.type == 'channel') || isAudit == 'Y'}}">
+                            <block wx:if="{{courseIndex == hotLiveIndex && panel.hotLives.length > 0}}">
+                                <hot-lives hotLives="{{panel.hotLives}}"></hot-lives>
+                            </block>
+                            <block wx:else>
+                                <button class="button-wrap" formType="submit">
+                                    <course-item course="{{course}}"  system ="{{system}}"></course-item>
+                                </button>
+                            </block>
+                        </block>
+                    
+                        <view wx:if="{{!panel.init || panel.loading}}" wx:for="{{[0,1,2,3,4,5,6,7,8,9]}}" wx:key="{{index}}" class="course-item-placeholder">
+                            <image src="{{item_placeholder}}" class="item_placeholder"></image>
+                        </view>
+                    </view>
+                    
+                    <text class="bottom-tip">
+                        {{panel.loading ? '加载中' : ''}}
+                        {{panel.noMore ? '没有更多了' : ''}}
+                    </text>
+                    </scroll-view>
+                    
+                </swiper-item>
+            </swiper>
+
+           <!-- <button open-type="contact" session-from="COURSE_FLOAT_BUTTON" class="btn-help" bind:tap="onFeedbackClick"></button> -->
+
+            <view class="to-daily-btn {{isReverseToDailyBtn ? 'reverse' : ''}}" catchtap="toDailyBtnTapHandle" wx:if="{{activeTag === '0'}}"></view>
+    </view>
+    <!-- <tab-menu activeTabKey='index'></tab-menu> -->
+</view>
+</form>
+<audio-box hideAudioBox="{{hideAudioBox}}"/>

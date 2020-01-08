@@ -1,0 +1,83 @@
+.co-share-success-modal
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+    width: 100%;
+    z-index: 1;
+
+	.bg
+	{
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background-color: rgba($color: #000, $alpha: .5);
+	}
+
+	 > main
+	{
+        width: 600px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 12px;
+        padding: 49px 0 90px;
+        overflow: hidden;
+
+        .icon{
+            background-image: url(./img/icon-success.png);
+            width: 64px;
+            height: 64px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .title{
+            font-size: 30px;/* px */
+            color: #333;
+            margin-top: 26px;
+        }
+
+        .img-container {
+            margin-top: 40px;
+            margin-bottom: 50px;
+            width: 300px;
+            height: 300px;
+            img{
+                width: 300px;
+                height: 300px;
+                margin: -500px;
+                padding: 500px;
+            }
+        }
+
+        .tips{
+            font-size: 26px;/* px */
+            color: #333;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .close{
+            background-image: url(./img/icon-close.png);
+            width: 64px;
+            height: 64px;
+            background-size: 22px;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 7px;
+            right: 0px;
+            cursor: pointer;
+        }
+	}
+}

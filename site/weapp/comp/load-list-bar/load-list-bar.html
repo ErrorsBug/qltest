@@ -1,0 +1,10 @@
+<!--<template name="load-list-bar">-->
+    <view  class="list-tab">
+        <block wx:for="{{listTabs}}" wx:key="key" wx:for-index="listId" wx:for-item="listItem">
+            <view  bindtap="bindListTab" data-type="{{listItem.tab}}" class="list-tab-item {{listItem.tab==listKey? 'active':''}}">
+                <image wx:if="{{listItem.tabIcon}}" class="list-tab-item-icon" src="{{listItem.tab==listKey?  listItem.tabIconAction : listItem.tabIcon}}"></image>
+                <text>{{listItem.tabName}}</text>
+            </view>
+        </block>
+    </view>
+<!--</template>-->

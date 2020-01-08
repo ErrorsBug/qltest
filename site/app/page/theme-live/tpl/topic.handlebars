@@ -1,0 +1,22 @@
+{{#each topics}}
+<li class="tap-on tap-bgc on-log" log-region="topic_list" log-name="{{topic}}" log-business_id="{{id}}" log-business_type="topic" data-id="{{id}}" data-url="{{url}}">
+    <div class="detail {{#if @index}} no-border {{/if}}">
+        <div class="pic">
+            <img class="img-default" data-imgloaded="false" data-imgsrc="{{img-format backgroundUrl '@120w_120h_1e_1c_2o_1l'}}" />
+            {{#compare topicType '===' 'charge'}}
+                {{#if money}}
+                <span class="tag tag-money">￥{{money-format ../money}}</span>
+                {{else}}
+                <span class="tag tag-free">免费</span>
+                {{/if}}
+            {{/compare}}
+        </div>
+        <div class="desc">
+            <p class="title">{{topic}}</p>
+            <div class="tip">
+                <span class="time">{{dateFormat startTimeStamp 'MM-dd hh:mm'}}（{{status-show startTimeStamp}}）</span>
+            </div>
+        </div>
+    </div>
+</li>
+{{/each}}

@@ -1,0 +1,53 @@
+@import "./base-definition";
+
+.my-homework{
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	overflow: auto;
+	background:$gray--background;
+	.homework-item{
+		margin:20px 20px 0;
+		background:#fff;
+		border-radius: 6px;
+		box-shadow: 0 0 5px 0 #eee;
+		padding:20px 25px;
+		line-height:1.5;
+		position:relative;
+		cursor: pointer;
+		.title{
+			font-size:30px;/*px*/
+			color:$gray--title;
+			font-weight:bolder;
+		}
+		.related{
+			color:$gray--tip;
+			font-size:24px;/*px*/
+			margin-top:10px;
+			.course-name{
+				color:#c0aa98;
+				cursor: pointer;
+			}
+		}
+		.commented{
+			margin-top:60px;
+			padding-left:30px;
+			background:url(./img/commented.png) no-repeat left center;
+			background-size:24px 22px;
+		}
+	}
+	.empty-box{
+		position:absolute;
+		left:0;
+		top:0;
+		width:100%;
+		height:100%;
+		background:url(./img/empty.png) $gray--background no-repeat center 85px / 319px 274px;
+		padding-top:388px;
+		color:$gray--lighter-tip;
+		font-size:28px;/*px*/
+		text-align:center;
+	}
+}

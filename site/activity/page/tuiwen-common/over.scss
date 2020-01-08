@@ -1,0 +1,24 @@
+#tuiwen-container {
+    height: 100%;
+}
+
+.main-container {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 100px;
+
+    background-color: #fff;
+    // 解决防漏底情况下IOS滑动不顺畅的问题
+	-webkit-overflow-scrolling: touch;
+}
+
+.end {
+    padding: 200px 0;
+    text-align: center;
+
+    font-size: 44px; /*px*/
+}

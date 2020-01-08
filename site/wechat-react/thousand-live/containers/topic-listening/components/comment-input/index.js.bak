@@ -1,0 +1,66 @@
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import CommonTextarea from 'components/common-textarea';
+
+class CommentInput extends Component {
+  
+    render() {
+        let { showInput, value } = this.props;
+        return (
+            <div className='listening-page-comment clearfix'>
+                {
+                    !showInput?
+                        <div className="input-display on-log"
+                             onClick={this.props.onClick}
+                             data-log-name="发表评论"
+                             data-log-region="comment-input"
+                             data-log-pos="input-display"
+                        >{ value || "发表评论"}</div>
+                        :
+                        <div className="comment-contaier">
+                            <CommonTextarea
+                                className='comment-textarea'
+                                placeholder="发表评论"
+                                value={value}
+                                onChange={(e)=> {
+                                    this.props.handleInput(e.currentTarget.value)
+                                }}
+                                autoFocus={true}
+                            />
+                            {
+                                value ?
+                                <div className="btn-send on-log"
+                                     onClick={() => {this.props.addComment(this.props.value)}}
+                                     data-log-name="发送"
+                                     data-log-region="comment-input"
+                                     data-log-pos="btn-send"
+                                >发送</div>
+                                :
+                                <div className="btn-send-no-content">发送</div>
+                            }
+                        </div>
+                }
+                {
+	                !showInput && this.props.showBackstage &&
+                    <span className="btn-listen-backstage" onClick={this.props.showWeAppDialog}>
+                        <img src={ require('./img/icon-listen-backstage.png') } />
+                        后台收听
+                            {
+                                // localStorage.getItem('hideBackendListenToolTip') ?
+                                //     null :
+                                //     <div className="tooltip">
+                                //         点此后台播放边聊边听
+                                //     </div>
+                            }
+                    </span>
+                }
+            </div>
+        );
+    }
+}
+
+CommentInput.propTypes = {
+
+};
+
+export default CommentInput;

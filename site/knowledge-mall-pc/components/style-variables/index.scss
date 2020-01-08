@@ -1,0 +1,31 @@
+$fontC1: #333;
+$fontC2: #666;
+$fontC3: #999;
+$fontC4: #ccc;
+
+$border: #ebebeb;
+
+$green: #33bb49;
+$orange: #f48a18;
+$red: #f42d2d;
+
+
+@mixin afterClearBoth {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+    height: 0;
+  }
+}
+
+
+@mixin webkitLineClamp($n: 2) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $n;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

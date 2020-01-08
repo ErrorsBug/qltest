@@ -1,0 +1,150 @@
+.cl-tab-box{
+    height: 88px;
+    .cl-tab-lists{
+        display: flex;
+        align-items: center;
+        height: 88px;
+        &.scroll{
+            position: fixed;
+            max-width: 1280px; /*px*/
+            min-width: 640px; /*px*/
+            width: 100%;
+            left: 50%;
+            top: 0;
+            padding: 0 40px;
+            box-sizing: border-box;
+            transform: translateX(-50%);
+            z-index: 11;
+            background: #fff;
+        }
+        .cl-tab-item{
+            padding-right: 60px;
+            height: 100%;
+            &:last-child{
+                padding-right: 0;
+            }
+            span{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 30px; /*px*/
+                height: 100%;
+                line-height: normal;
+                color: #666;
+            }
+            &.active{
+                span{
+                    position: relative;
+                    font-size: 40px; /*px*/
+                    color: #333;
+                    font-weight: bold;
+                    &::before{
+                        position: absolute;
+                        left: 50%;
+                        bottom: 0;
+                        transform: translateX(-50%);
+                        width: 36px; /*px*/
+                        height: 6px; /*px*/
+                        background: #E0414F;
+                        border-radius: 6px;
+                        content: '';
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cl-ranking-box{
+    padding-top: 20px;
+    height: 106px;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+    .cl-ranking-cont{
+        padding: 20px 0;
+        display: flex;
+        height: 106px;
+        align-items: center;
+        justify-content: space-between;
+        box-sizing: border-box;
+        &.scroll{
+            will-change: top;
+            position: fixed;
+            transition: top 0.3s;
+            max-width: 1280px; /*px*/
+            min-width: 640px; /*px*/
+            width: 100%;
+            left: 50%;
+            top: 0;
+            padding: 0 40px;
+            box-sizing: border-box;
+            transform: translateX(-50%);
+            z-index: 10;
+            background: #fff;
+        }
+        &.show{
+            transition: top 0.3s;
+            top: 88px;
+        }
+        &.hide{
+            transition: top 0.15s;
+            top: 0;
+        }
+        .cl-ranking-left{
+            height: 68px;
+            width: 298px;
+            display: flex;
+            border-radius:80px;
+            overflow: hidden;
+            position: relative;
+            &::before, .cl-ranking-bg{
+                position: absolute;
+                height: 100%;
+                content: '';
+                top: 0;
+                z-index: 1;
+                border-radius:80px;
+            }
+            &::before{
+                width: 100%;
+                background: #eee;
+                z-index: 0;
+            }
+            .cl-ranking-bg{
+                width: 50%;
+                background: #E0414F;
+                will-change: transform;
+                left: 0;
+                transform: translateX(0);
+                &.action-0{
+                    transform: translateX(0);
+                }
+                &.action-1{
+                    transform: translateX(100%);
+                }
+            }
+            span{
+                position: relative;
+                z-index: 2;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                line-height: normal;
+                width: 50%;
+                height: 100%;
+                border-radius:40px;
+                font-size: 32px; /*px*/
+                &.action{
+                    color: #fff;
+                    font-weight: 500;
+                }
+            }
+        }
+        .cl-ranking-rule{
+            width: 48px;
+            height: 48px; 
+            background: url('../../img/icon-rule.png') no-repeat center;
+            background-size: 100%;
+        }
+    }
+}

@@ -1,0 +1,174 @@
+.publish-box{
+     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    // display: flex;
+    background: #fff;
+    overflow: hidden;
+    overflow-y: auto;
+    // flex-direction: column;
+    height: 100%;
+    .publish-warp{
+        padding: 0 80px 130px;
+        box-sizing: border-box;
+        .title{
+            color: #333;
+            font-size: 40px;/*px*/
+            font-weight: 700;
+            padding-top: 48px;
+            .btn-close-back{
+                display: block;
+                width: 60px;
+                height: 60px;
+                background-image: url('./img/icon-back.png');
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: 50% auto;
+                position: absolute;
+                top: 34px;
+                right: 60px;
+            }
+        }
+        .tips{
+            color: #999;
+            font-size: 28px;/*px*/
+            margin-top: 30px;
+        }
+        .text-box{
+            margin: 32px 0;
+            padding: 32px 0;
+            border-top: 1px solid #eee;/*no*/
+            textarea{
+                border: none;
+                outline: none;
+                line-height: 46px;
+                height: auto;
+                max-height: 307px;
+                width: 100%;
+                font-size: 30px;/*px*/
+            }
+            .text-num{
+                text-align: right;
+                color: #999;
+                font-size: 24px;/*px*/
+                margin-top: 32px;
+                &.red{
+                    color: #E0414F;
+                }
+            }
+        }
+        
+        .pic-box{
+            width: 100%;
+            margin-top: 20px;
+            overflow: hidden;
+            >div{
+                float: left;
+                width: 30%;
+                margin: 2.5%;
+                border-radius: 10px;
+                overflow: hidden;
+                background: #F7F7F7;
+                padding-top: 30%;
+                position: relative;
+                img{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 100%;
+                    height: auto;
+                    transform: translate(-50%,-50%);
+                }
+                
+                .btn-close{
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                    border-bottom-left-radius: 10px;
+                    background: rgba(0, 0, 0, 0.5);
+                    background-image: url('./img/icon-close.png');
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: 60% auto;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    &::after{
+                        content: '';
+                        display: block;
+                        height: 40px;
+                        width: 40px;
+                        position: absolute;
+                        left: -5px;
+                        top: -5px;
+                    }
+                }
+                &:nth-child(3n){
+                    margin-right:0;
+                }
+                &:nth-child(3n+1){
+                    margin-left:0;
+                }
+            }
+            .img-upload-btn{
+                position: relative;
+                padding: 0;
+            }
+    
+            .media-file-uploader{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                .file-input-container{
+                    width: inherit;
+                    height: inherit;
+                }
+                .media-file-input{
+                    height: inherit;
+                }
+            }
+            
+            .btn-add-pic{
+                padding-top: 100%;
+                &.icon_plus{
+                    color: #ccc;
+                    font-size: 60px;
+                    justify-content: center;
+                    align-items: center;
+                    display: flex;
+                    position: relative;
+                    &::before{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                    }
+                }
+            }
+        }
+    }
+}
+.confirm-bottom{
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 80px;
+    &.static{
+        position: static;
+    }
+    .btn-confirm{
+        background: #E0414F;
+        border-radius: 50px;
+        color: #fff;
+        font-size: 32px;/*px*/
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 90px;
+    }
+}

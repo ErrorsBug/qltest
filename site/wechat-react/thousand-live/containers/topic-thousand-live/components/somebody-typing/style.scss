@@ -1,0 +1,29 @@
+.typing-box {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    background-color: rgba(0,0,0,.5);
+    color: #fff;
+    text-align: center;
+    z-index: 3;
+    white-space: nowrap;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    font-size: 28px;/*px*/
+    border-radius: 60px;
+    pointer-events: none;
+
+    &.hide {
+        display: none;
+    }
+
+    p {
+        display: inline-block;
+        max-width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

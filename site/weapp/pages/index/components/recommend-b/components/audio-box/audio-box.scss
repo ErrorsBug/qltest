@@ -1,0 +1,103 @@
+.co-audio-box{
+    left: 20rpx;
+    right: 20rpx;
+    height: 100rpx;
+	background-color: rgba(102,102,102,.96);
+    position: fixed;
+    bottom: 120rpx;
+    display: flex;
+    align-items: center;
+    border-radius: 8rpx;
+    opacity: 1;
+    .directToPage{
+        height: 100%;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        .progressbar {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;  
+            box-sizing: border-box;
+            margin-left: 20rpx;
+            display: flex;
+            .bg {
+                position: absolute;
+                height: 36px;
+                width: 36px;
+                border-radius: 50%;
+                top: 2px;
+                left: 2px;
+                z-index: 3;
+            }
+            .left {
+                flex:1;
+                height: 100%;
+                overflow: hidden;
+                position: relative;
+                z-index: 1;
+                .left-c {
+                    position: absolute;
+                    top:0;
+                    width: 36px;
+                    height: 36px;
+                    border:2px solid transparent;   
+                    border-radius: 50%;
+                    z-index: 2;
+                    left: 0;
+                    border-top: 2px solid rgb(250,57,54);
+                    border-left: 2px solid rgb(250,57,54);
+                }
+            }
+            .right {
+                flex:1;
+                position: relative;
+                height: 100%;
+                overflow: hidden;
+                z-index: 1;
+                .right-c {
+                    position: absolute;
+                    top:0;
+                    width: 36px;
+                    height: 36px;
+                    border:2px solid transparent;   
+                    border-radius: 50%;
+                    z-index: 2;
+                    border-right: 2px solid rgb(250,57,54);
+                    border-bottom: 2px solid rgb(250,57,54);
+                    right: 0;
+                }
+            }
+        }
+        .desc {
+            flex: 1;
+            margin: 0 20rpx;
+            .title {
+                font-size: 26rpx;
+                color: #fff;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+                overflow: hidden;
+                font-weight: bold;
+            }
+            .time {
+                font-size: 20rpx;
+                color: #e5e5e5;
+            }
+        }
+    }
+    .icon {
+        height: 92rpx;
+        width: 92rpx;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10rpx;
+        image{
+            height: 54rpx;
+            width: 54rpx;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+<view class="barrage-li" animation="{{animationData}}">
+    <view class="content">
+        <view wx:if="{{item.isQuestion === 'Y'}}" class="question">
+            <text>问</text>
+        </view>
+        <text>{{item.content}}</text>
+    </view>
+    <view class="avatar">
+        <image class="head-img" src="{{(item.createByHeadImgUrl || 'http://img.qlchat.com/qlLive/liveCommon/normalLogo.png') + '?x-oss-process=image/resize,h_60,w_60,m_fill'}}"
+        />
+    </view>
+</view>

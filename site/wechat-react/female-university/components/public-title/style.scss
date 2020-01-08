@@ -1,0 +1,40 @@
+@font-face {
+    font-family: "SourceHanSans";
+    font-weight: 900;
+    font-display: swap;
+    src: local('SourceHanSans'),
+         url('https://static.qianliaowang.com/rs/library/fonts/SourceHanSerifCN-Bold.woff2') format('woff2'),
+         url('https://static.qianliaowang.com/rs/library/fonts/SourceHanSerifCN-Bold.woff') format('woff'),
+         url('https://static.qianliaowang.com/rs/library/fonts/SourceHanSerifCN-Bold.ttf') format('ttf');
+}
+
+.public-title{
+    margin-bottom: 32px;
+    .public-title-head{
+        display: flex;
+        justify-content: space-between;
+        h3{
+            font-family: 'SourceHanSans', 'Times New Roman', Times, serif !important;
+            font-size: 42px; /*px*/
+            font-weight: 900;
+            line-height: 1.5;
+            img{
+                height: 100%;
+                width: auto;
+            }
+        }
+        .go-more-list{
+            font-size: 30px; /*px*/
+            align-items: center;
+            color: #E0414F;
+            display: flex;
+            align-items: center;
+        }
+    }
+    .public-title-decs{
+        font-size: 28px; /*px*/
+        color: #999;
+        margin-top: 26px;
+        line-height: 1.5;
+    }
+}

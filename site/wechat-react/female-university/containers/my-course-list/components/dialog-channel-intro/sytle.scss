@@ -1,0 +1,361 @@
+.courcse-list-page-intro-followDialog{
+    .co-dialog-bottom{
+        height: 80%;
+        min-height: 600px !important;
+        background: #fff;
+        display: flex;
+		flex-direction: column;
+		border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        .editor-intro-empty{
+            width: 200px;
+        }
+    }
+
+    .intro
+	{
+		margin: 0 0 20px;
+
+		&.fold {
+			max-height: 1900px;
+			overflow: hidden;
+
+			position: relative;
+
+			.intro-unfold {
+				content: "";
+				width: 100%;
+				height: 160px;
+				position: absolute;
+				bottom: -3px;
+				left: 0;
+				display: flex;
+				flex-direction: column;
+				.jianbian {
+					width: 100%;
+					height: 60px;
+					background: linear-gradient(rgba(255,255,255, 0), rgba(255,255,255, 1));
+				}
+				.white-block {
+					flex: 1;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					font-size: 28px; /*px*/
+					background-color: #fff;
+					position: relative;
+					top: -1px;
+					color: #999090;
+					span{
+						font-size: 26px;/*px*/
+						margin-left: 4px;
+					}
+				}
+			}
+		}
+
+
+		
+		.fold-text {
+			position: absolute;
+			width: 100%;
+			bottom: 30px;
+			text-align: center;
+			font-size: 28px; /*px*/
+			color: #999090;
+		}
+
+		.intro-fold {
+			height: 100px;
+			background-color: #fff;
+			position: relative;
+		}
+
+		.collapse-block
+		{
+			// margin-top: 20px;
+			height: 70px;
+			background: #fff;
+			position: relative;
+			overflow: hidden;
+			margin-top: -2px; /*no*/
+
+			.collapse-btn
+			{
+				position: absolute;
+				bottom: 5px;
+				right: 30px;
+				cursor: pointer;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: #807878;
+				font-size: 28px; /*px*/
+				height: 30px;
+				padding: 15px;
+
+				.collapse-icon
+				{
+					background: url(./img/collapse.png) no-repeat center center;
+					background-size: 16px 10px;
+					width: 16px;
+					height: 10px;
+					margin-left: 16px;
+				}
+			}
+		}
+
+		.content
+		{
+			overflow: hidden;
+			text-align: center;
+			font-size: 0;
+
+			p
+			{
+				max-height: 1000000px;
+				font-size: 28px; /*px*/
+				// color: #807878;
+				line-height: 1.786;
+				text-align: left;
+				white-space: normal;
+				word-wrap: break-word;
+				word-break: normal;
+			}
+
+			img
+			{
+				display: block;
+				max-width: 100%;
+				height: auto;
+				// margin-bottom: 26px;
+			}
+
+			ul
+			{
+				color: #666;
+				font-size: 28px; /*px*/
+				font-weight: normal;
+				text-align: left;
+
+				li
+				{
+					position: relative;
+					line-height: 1.6;
+					padding-left: 45px;
+					margin-bottom: 16px;
+
+					&:last-child
+					{
+						margin-bottom: 0;
+					}
+
+					&:before
+					{
+						content: '';
+						position: absolute;
+						top: 25%;
+						left: 0;
+						transform: translateY(-50%);
+						background: url(./img/note-item.png) no-repeat center center;
+						background-size: 13px 18px;
+						width: 13px;
+						height: 18px;
+					}
+				}
+			}
+		}
+	}
+
+	.intro-block
+	{
+		background: #fff;
+		padding: 0 30px 14px 30px;
+		border-bottom: 1px solid #e5e5e5; /*no*/
+		overflow: hidden;
+
+		&:last-child
+		{
+			border: none;
+		}
+	}
+
+	.desc.intro-block {
+		margin-top: 20px;
+		&.top-no-video{
+			margin-top: 0;
+		}
+	}
+	.intro-section{
+		padding-bottom: 40px;
+	}
+
+	.note.intro-block {
+		border-bottom: 0;
+		p
+		{
+			max-height: 1000000px;
+			font-size: 28px; /*px*/
+			color: #807878;
+			line-height: 1.786;
+			margin-bottom: 26px;
+			text-align: left;
+			white-space: normal;
+			word-wrap: break-word;
+			word-break: normal;
+		}
+		.note-icon
+		{
+			display: inline-block;
+			background-image: url(./img/note-item.png);
+			background-size: 13px 18px;
+			width: 13px;
+			height: 18px;
+		}
+	}
+
+	.video-wrap
+	{
+		height: 0;
+		padding-bottom: 56.231%;
+		position: relative;
+		margin-bottom: 14px;
+		overflow: visible !important;
+	}
+
+	.iframe-wrap
+	{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		// overflow: hidden;
+
+		.bd-tp {
+			position: absolute;
+			top: -4px; /*px*/
+			left: 0;
+			width: 100%;
+			height: 8px; /*px*/
+			background: #fff;
+			z-index: 1;
+		}
+
+		.bd-rt {
+			position: absolute;
+			top: 0;
+			right: -4px; /*px*/
+			width: 8px; /*px*/
+			background: #fff;
+			height: 100%;
+			z-index: 1;
+		}
+
+		.bd-bt {
+			position: absolute;
+			bottom: -4px; /*px*/
+			left: 0;
+			width: 100%;
+			height: 8px; /*px*/
+			background: #fff;
+			z-index: 1;
+		}
+
+		.bd-lt {
+			position: absolute;
+			top: 0;
+			left: -4px; /*px*/
+			width: 8px; /*px*/
+			background: #fff;
+			height: 100%;
+			z-index: 1;
+		}
+	}
+
+	.video-tip {
+		text-align: center;
+		padding: 20px;
+		font-size: 24px; /*px*/
+		color: #999;
+	}
+
+    .iframe-tip {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+        background: #000;
+        z-index: 1;
+
+        &:before {
+            content: '';
+            width: 190px;
+            height: 190px;
+            background: url('./img/video-loading.gif') no-repeat center;
+            background-size: 190px 190px;
+            z-index: 2;
+        }
+    }
+
+
+	.head
+	{
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		font-size: 32px; /*px*/
+		color: #424242;
+		font-weight: bold;
+		margin-top: 40px;
+		margin-bottom: 40px;
+
+		.icon
+		{
+			width: 30px;
+			height: 30px;
+			background-repeat: no-repeat;
+			background-size: 30px 30px;
+			background-position: center;
+			overflow: hidden;
+			margin-right: 16px;
+		}
+
+		.video-icon
+		{
+			background-image: url(./img/video.png);
+		}
+
+		.desc-icon
+		{
+			background-image: url(./img/desc.png);
+		}
+
+		.lectuer-icon
+		{
+			background-image: url(./img/lectuer.png);
+		}
+
+		.fit-icon
+		{
+			background-image: url(./img/fit.png);
+		}
+
+		.will-get-icon
+		{
+			background-image: url(./img/will-get.png);
+		}
+
+		.note-icon
+		{
+			background-image: url(./img/note.png);
+			background-size: 5px 32px;
+			width: 5px;
+			height: 32px;
+		}
+	}
+}

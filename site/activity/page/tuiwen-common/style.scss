@@ -1,0 +1,271 @@
+#tuiwen-container {
+    height: 100%;
+}
+
+.main-container {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 100px;
+
+    background-color: #fff;
+    // 解决防漏底情况下IOS滑动不顺畅的问题
+	-webkit-overflow-scrolling: touch;
+	
+
+	.headImg{
+		display: block;
+		width: 100%;
+    }
+    .head-img-con {
+        position: relative;
+
+        .join-num {
+            position: absolute;
+            left: 60px;
+            bottom: 40px;
+            font-size: 34px; /*px*/
+            color: #666;
+        }
+    }
+    
+    .giftImg {
+        display: block;
+		width: 100%;
+    }
+
+    .video-container {
+        height: 500px;
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        iframe
+        {
+            margin: 64px 54px 90px;
+            width: 640px;
+            height: 360px;
+        }
+    }
+
+    .handlebar-container {
+        text-align: center;
+        // margin: 0 30px;
+        font-size: 0;
+    
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.asaid {
+    cursor: pointer;
+    position: absolute;
+    bottom: 140px;
+    right: 30px;
+
+    width: 100px;
+    height: 100px;
+    background: url('./img/qa.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.gotoChannel {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100px;
+    background-color: #fff;
+    display: flex;
+
+    .origin-price-con {
+        height: 100px;
+        width: 150px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .origin-price {
+            text-decoration: line-through;
+            font-size: 26px; /*px*/
+            color: #acacac;
+        }
+        .tag {
+            color: #f84c69;
+            border: 1px solid #f84c69; /*no*/
+            padding: 0px 4px;
+            line-height: normal;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            margin-top: 4px;
+        }
+    }
+
+    .discount-price {
+        height: 100px;
+        width: 130px;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        font-size: 40px; /*px*/
+        color: #f84c69;
+    }
+    
+    .buyCourse {
+        height: 100px;
+        background-color: #f84c69;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 36px; /*px*/
+    }
+
+}
+
+/* ---------------------- modal ----------------------- */
+.modal
+{
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	.bg
+	{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-color: rgba(0, 0, 0, .6);
+		&.darker{
+			background-color: rgba(0,0,0,.8)
+		}
+	}
+
+	main
+	{
+		position: absolute;
+		// margin: 0 95px;
+		left: 95px;
+		top: 50%;
+		transform: translateY(-50%);
+		&.on-top{
+			top: 156px;
+			transform: none;
+            background: url(./img/border.png) no-repeat center center;
+            background-size: 100%;
+            width: 559px;
+            height: 247px;
+            position: relative;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: -144px;
+                right: -65px;
+                background: url(./img/pointer.png) no-repeat center center;
+                background-size: 100%;
+                width: 187px;
+                height: 144px;
+            }
+		}
+	}
+
+	.content
+	{
+		background-color: #fff;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 24px 20px 34px;
+	}
+
+	.content img
+	{
+		border: 7px solid #f6d067;/* no */
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+	.content button
+	{
+		width: calc(100% - 200px);
+		height: 80px;
+		line-height: 80px;
+		margin-top: 30px;
+		color: #fff;
+		font-size: 36px;/* px */
+		background-image: linear-gradient( 45deg, rgb(253, 160, 133) 0%, rgb(246, 211, 101) 100%);
+		border-radius: 100px;
+		border: none;
+	}
+
+	.close
+	{
+		width: 72px;
+		height: 72px;
+		background-image: url(./img/close.png);
+		margin: 50px auto;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+}
+
+.modal .share-tips
+{
+	color: #fff;
+	border-width: 5px;
+	padding: 30px;
+	font-size: 28px;/* px */
+	line-height: 2;
+	position: relative;
+	 > span
+	{
+		width: 34px;/* px */
+		height: 34px;/* px */
+		margin: 0 3px;
+		background-size: contain;
+		display: inline-block;
+		vertical-align: sub;
+	}
+	 > strong
+	{
+		color: #b09860;
+		font-weight: normal;
+	}
+	.option
+	{
+		background-image: url(./img/option.png);
+	}
+	.timeline
+	{
+		background-image: url(./img/timeline.png);
+	}
+}
+
+[data-dpr="3"] .share-tips {
+    font-size: 45px !important; /*no*/
+    line-height: 2.4;
+}

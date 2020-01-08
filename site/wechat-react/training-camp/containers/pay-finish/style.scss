@@ -1,0 +1,116 @@
+.camp-finish-pay-page {
+    height: 100%;
+    background-color: #fff;
+    padding-top: .1px;
+
+    overflow-y: hidden;
+    .pay-header {
+        margin: 70px auto 70px;
+        text-align: center;
+
+        .icon_choosethis {
+            text-align: center;
+            font-size: 100px; /*px*/
+            color: #f73657;
+
+            margin-bottom: 30px;
+        }
+        .success {
+            font-size: 36px; /*px*/
+            color: #424242;
+            margin-bottom: 18px;
+        }
+        .des {
+            font-size: 26px; /*px*/
+            color: #999090;
+        }
+    }
+
+    .des-con {
+        margin: 0 70px;
+
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+
+        height: 80px;
+        line-height: 80px;
+
+        border-top: 1px solid #e6e6e6; /*no*/
+        border-bottom: 1px solid #e6e6e6; /*no*/
+
+        font-size: 28px; /*px*/
+
+        .type {
+            color: #666;
+        }
+        .course {
+            color: #000;
+        }
+    }
+
+    .enter-camp-btn {
+
+        margin: 100px auto 40px;
+        cursor: pointer;
+        width: 280px;
+        height: 90px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: normal;
+
+        font-size: 32px; /*px*/
+        border-radius: 100px;
+
+        background-color: #ed3b59;
+        border: 1px solid #ed3b59; /*no*/
+        color: #fff;        
+    }
+
+    .qrcode-con {
+        text-align: center;
+        margin-top: 90px;
+        img {
+            width: 240px;
+            height: 240px;
+
+            margin: auto;
+            border: 1px solid #e6e6e6; /*no*/
+        }
+        .red-des {
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+            color: #fd4b68;
+            font-size: 26px; /*px*/
+            font-weight: bold;
+            text-align: center;
+
+            
+        }
+        .des {
+            text-align: center;
+            font-size: 24px; /*px*/
+            color: #333;
+        }
+        .des1 {
+            margin: 30px auto 0;
+            width: 400px;
+            
+            text-align: center;
+            font-size: 24px; /*px*/
+            color: #333;
+            line-height: 1.6;
+            var {
+                font-weight: bold;
+                color: #f73657;
+            }
+            .line-wrap {
+                // padding-left: 30px;
+            }
+        }
+    }
+
+}

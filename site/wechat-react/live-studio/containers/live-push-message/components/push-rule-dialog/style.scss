@@ -1,0 +1,86 @@
+.push-rule-dialog {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.6);
+    z-index: 5;
+
+    .bg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .push-rule-container {
+        height: 760px;
+        width: 620px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        border-radius: 20px;
+        padding-top: 40px;
+        box-sizing: border-box;
+
+        .top {
+            text-align: center;
+            font-size: 34px;/*px*/
+            line-height: 48px;
+            margin-bottom: 24px;
+        }
+
+        .content {
+            padding: 0 50px;
+
+            p {
+                font-size: 24px;/*px*/
+                color: #666;
+                line-height: 40px;
+                padding-left: 22px;
+                position: relative;
+                margin-bottom: 14px;
+
+                &::before {
+                    position: absolute;
+                    left: 0;
+                    content: '';
+                    height: 12px;
+                    width: 12px;
+                    border-radius: 12px;
+                    top: 14px;
+                    background-color: #999;
+
+                }
+            }
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            margin-top: 80px;
+
+            .btn {
+                height: 76px;
+                width: 260px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid #F73657;/*no*/
+                border-radius: 100px;
+                color: #F73657;
+                font-size: 32px;/*px*/
+                cursor: pointer;
+
+                &.i-know {
+                    color: #fff;
+                    background-color: #F73657;
+                }
+            }
+        }
+    }
+}

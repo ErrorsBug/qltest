@@ -1,0 +1,9 @@
+/**
+ * 隐藏所有非基础菜单项
+ */
+ wx.ready(function () {
+    // 最新PC微信电脑端 showAllNonBaseMenuItem 失效， 临时兼容，避免主要页面无法分享
+    if(typeof(window) !== 'undefined' && !navigator.userAgent.match(/WindowsWechat/i)){
+        wx.hideAllNonBaseMenuItem();
+    }
+});

@@ -1,0 +1,182 @@
+/* 热门话题列表*/
+.topics
+{
+	padding-top: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-bottom: 16px;
+	background-color: #fff;
+}
+
+.topic
+{
+	/*margin-bottom: 40px;*/
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	cursor: pointer;
+	padding: 30px 0;
+	border-top: 1px solid #f0f0f0;/*no*/
+}
+
+.topic:first-child{
+	border-top: none;
+}
+
+.topic > span
+{
+	display: block;
+	position: relative;
+	width: 240px;
+	height: 148px;
+	flex: none;
+}
+
+.topic > span > img
+{
+	width: 100%;
+	height: 100%;
+	border-radius: 4px;
+}
+.detail
+{
+	flex: 1;
+	display: block;
+	vertical-align: top;
+	margin-left: 26px;
+	position: relative;
+	
+}
+
+.detail h1
+{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+	
+
+	font-size: 28px; /*px*/
+	line-height: 1.3;
+	font-weight: bold;
+
+	margin-bottom: 8px;
+}
+
+.detail .elli        
+{
+	font-size: 24px; /*px*/
+	color: #b8b0b0;
+	line-height: 1.4;
+
+	max-width: 300px;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+
+	margin-bottom: 12px;     
+}
+
+.detail p
+{
+	font-size: 22px;/*px*/
+	color: #b8b0b0;
+	position: relative;
+}
+
+.status .member
+{
+	color: #b8b0b0;
+	font-size: 22px;/*px*/
+	margin-right: 20px;
+}
+
+.status .free
+{
+	color: #f73657;
+	font-size: 22px;/*px*/
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.status .charge
+{
+	color: #f73657;
+	font-size: 22px;/*px*/
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+
+
+
+.status .plan
+{
+	color: #ff5962;
+}
+
+.status .beginning
+{
+	color: #2984e2;
+}
+
+.status > span::before
+{
+	margin-right: 5px;
+	display: inline-block;
+	vertical-align: top;
+	content: '';
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.status .beginning::before
+{
+	display: none;
+}
+
+.status .beginning > i
+{
+	display: inline-block;
+	vertical-align: middle;
+	height: 36px;
+	width: 36px;
+	background-size: contain;
+	border-radius: 60px;
+	margin-left: 1px;
+	margin-bottom: 1px;
+	margin-right: 5px;
+	-webkit-transform: translateY(-2px);
+	        transform: translateY(-2px);
+	border: 2px solid #fff;
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, .1);
+}
+
+.status .ended::before 
+{
+	background-image: url(./img/audio.png?__inline);
+	width: 24px;/*px*/
+	height: 20px;/*px*/
+	vertical-align: middle;
+}
+
+.status .plan::before
+{
+	background-image: url(./img/time.png?__inline);
+	width: 20px;/*px*/
+	height: 20px;/*px*/
+}
+
+

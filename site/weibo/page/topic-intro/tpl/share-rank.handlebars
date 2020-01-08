@@ -1,0 +1,16 @@
+{{#if conditions.show_sharerank}}
+<footer class="share-section right-arrow">
+    <span><i class="icon-share"></i>分享达人榜</span>
+    <ul class="inline-right-list">
+        {{#if conditions.hasShareList}}
+        {{#each processings.shareMember}}
+        <li>
+            <img src="{{img-format userHeadUrl '@100h_100w_1e_1c_2o'}}" alt="">
+        </li>
+        {{/each}}
+        {{else}}
+        <span>快来第一个分享吧</span> 
+        {{/if}}
+    </ul>
+</footer>
+{{/if}}

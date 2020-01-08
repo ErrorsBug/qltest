@@ -1,0 +1,132 @@
+.act-coupon-dialog-container{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	z-index: 10;
+	overflow: hidden;
+	>.c-d-bg{
+		background-color: rgba(0,0,0,0.8);
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		z-index: 2;
+	}
+
+	>.c-d-content{
+		position: absolute;
+		z-index: 3;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		top: 50%;
+		.c-d-detail{
+			height: 660px;
+			width: 100%;
+			background: {
+				image: url(./img/coupon-dialog.png);
+				repeat: no-repeat;
+				size: 100% 100%;
+			}
+			overflow: hidden;
+			text-align: center;
+
+			.f {
+				height: 290px;
+				overflow: hidden;
+
+				.price {
+					margin-top: 100px;
+					line-height: 70px;
+					.l{
+						color: rgb(237,77,78);
+						font-size: 40px; /*px*/
+						font-weight: bold;
+					}
+					.p{
+						color: rgb(237,77,78);
+						font-size: 70px; /*px*/
+						font-weight: bold;
+					}
+				}
+				.tip{
+					font-size: 24px; /*px*/
+					color: rgb(153,153,153);
+					margin-top: 14px;
+					line-height: 24px;/*px*/
+				}
+			}
+			.s{
+				height: 370px;
+				overflow: hidden;
+				position: relative;
+				.time{
+					color: rgb(153,153,153);
+					font-size: 24px; /*px*/
+					line-height: 24px;/*px*/
+				}
+				.title-content {
+					position: absolute;
+					left: 50%;
+					transform: translateX(-50%);
+					top: 120px;
+					>span{
+						color: rgb(255,255,255);
+						font-size: 24px; /*px*/
+						line-height: 24px;/*px*/
+					}
+					.title-desc{
+						margin: 15px auto 0;
+						width: 500px;
+						display: flex;
+						font-size: 32px; /*px*/
+						line-height: 40px; /*px*/
+						color: rgb(255,255,255);
+						>.left {
+							text-align: right;
+							flex:1;
+						}
+						>.right {
+							text-align: left;
+							flex: 1;
+						}
+						.title {
+							display: -webkit-box;
+							-webkit-box-orient: vertical;
+							-webkit-line-clamp: 1;
+							overflow: hidden;
+						}
+					}
+				}
+				.confirm {
+					background-color: rgb(244,181,30);
+					cursor: pointer;
+					width: 380px;
+					height: 88px;
+					color: rgb(255,255,255);
+					font-size: 34px; /*px*/
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					border-radius: 44px;
+					position: absolute;
+					left: 50%;
+					transform: translateX(-50%);
+					bottom: 30px;
+					font-weight: bold;
+				}
+			}
+		}
+		.c-d-close{
+			cursor: pointer;
+			margin: 16px auto 0;
+			height:70px;
+			width:70px;
+			background: {
+				image: url(./img/coupon-dialog-close.png);
+				repeat: no-repeat;
+				size: 45px 45px;
+				position: center center;
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+.search-index-container
+{
+	background: #f5f2f2;
+	overflow: hidden;
+	 > main
+	{
+		position: absolute;
+		top: 86px;/* px */
+		bottom: 0;
+		// overflow-y: scroll;
+		overflow-x: hidden;
+		transition: all .5s linear;
+		width: 100%;
+		-webkit-overflow-scrolling: touch;
+		background-color: #fff;
+	}
+}

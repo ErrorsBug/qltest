@@ -1,0 +1,18 @@
+.line-box {
+
+    display: flex;
+    height: 90px;
+    padding: 0 30px;
+    justify-content: center;
+    align-items: center;
+
+    .line-box-left {
+        flex: 1;
+        font-size: 30px;
+        color: #333333;
+    } 
+
+    .line-box-right {
+        
+    }
+}

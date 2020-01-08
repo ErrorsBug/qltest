@@ -1,0 +1,117 @@
+.progress-container {
+    position: relative;
+    height: 40px;
+    width: 90%;
+    border: 8px solid #ffffff;
+    background-color: #b99d85;
+    border-radius: 40px;
+    box-sizing: border-box;
+
+    .progress-bowl {
+        position: absolute;
+        left: 12%;
+        width: 100px;
+        transform: translate(-50%, -100%);
+        transition: all 1s ease;
+        z-index: 6;
+
+        img {
+            display: inline-block;
+            width: 100%;
+        }
+
+        .progress-text {
+            position: absolute;
+            color: #ffffff;
+            font-size: 20px;
+            white-space: nowrap;
+            text-align: center;
+            left: 0;
+            bottom: 35px;
+            width: 100%;
+            font-weight: bolder;
+        }
+    }
+
+    .cur-progress-wrap {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 40px;
+
+        .cur-progress {
+            display: inline-block;
+            width: 10%;
+            height: 24px;
+            background-color: #000000;
+            border-radius: 40px;
+            background-image: url('./images/progress-bg.png');
+            background-size: 15px 100%;
+            background-position-x: 0;
+            transition: width 1s ease;
+            animation: progress .5s linear infinite;
+        }
+    }
+
+    @keyframes progress {
+        0% {
+            background-position-x: 0;
+        }
+
+        100% {
+            background-position-x: 15px;
+        }
+    }
+
+    .full-percent {
+        position: absolute;
+        left: 100%;
+        top: 0;
+        transform: translate(-90%, -80%);
+
+        .full-text {
+            position: absolute;
+            display: inline-block;
+            width: 100px;
+            text-align: center;
+            white-space: nowrap;
+            right: 30px;
+            bottom: 50px;
+            font-size: 28px;/* px */
+            color: #944d1a;
+            transform: rotateZ(-10deg);
+            font-weight: 700;
+            // text-shadow: 0 0 5px #ffffff;
+            // -webkit-text-stroke: 2px;
+            // -webkit-text-stroke-color: #ffffff;
+
+            // &::before {
+            //     content: attr(data-text);
+            //     position: absolute;
+            //     -webkit-text-stroke: 2px ffffff;
+            //     z-index: -1;
+            // }
+        }
+
+        .bowl-100percent {
+            display: inline-block;
+            width: 182px;
+        }
+    }
+
+}
+
+.progress-text {
+    display: block;
+    color: #ffffff;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+
+    >span {
+        color: #944d1a;
+        display: inline-block;
+        margin: 0 5px;
+    }
+}

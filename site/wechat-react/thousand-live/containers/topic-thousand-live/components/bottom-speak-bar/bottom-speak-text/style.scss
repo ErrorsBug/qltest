@@ -1,0 +1,44 @@
+.text-input-container {
+    display: flex;
+    padding: 15px 20px;
+
+    &.hide{
+        display: none;
+    }
+    .text-input{
+        flex: 1;
+        height: 70px;
+        line-height:40px;
+        padding: 15px 25px;
+        color:#333;
+        background: #ebebeb;
+        border:none;
+        border-radius: 80px;
+        font-size: 30px;/*px*/
+        display: block;
+        width: 100%;
+
+        &::-webkit-input-placeholder{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    .bnt-send-text{
+        display: block;
+        width: 100px;
+        height: 70px;
+        line-height: 70px;
+        background: #0fc853;
+        border-radius: 80px;
+        text-align: center;
+        white-space: nowrap;
+        color: #ffffff;
+        font-size: 28px;/*px*/
+        margin-left: 20px;
+        cursor: pointer;
+    }
+
+
+}

@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "topic-item": "./components/topic-item/topic-item",
+        "tab-bar": "../../comp/tab-bar/tab-bar",
+        "pay-by-contact-modal": "../../comp/pay-by-contact-modal/pay-by-contact-modal"
+    }
+}

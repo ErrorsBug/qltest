@@ -1,0 +1,15 @@
+.cp-books-box{
+    height: 100%;
+    background: #fff;
+    .cp-scroll-box{
+        padding-bottom: 0 !important;
+    }
+    .cp-books-cont{
+        padding: 40px 40px 0;
+        margin-top: -28px;
+        border-radius: 28px 28px 0 0;
+        position: relative;
+        z-index: 1;
+        background: #fff;
+    }
+}

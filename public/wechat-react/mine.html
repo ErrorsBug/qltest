@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <link rel="dns-prefetch" href="//cache1.qlchat.com" />
+    <link rel="dns-prefetch" href="//media.qlchat.com" />
+    <link rel="dns-prefetch" href="//media.qianliaowang.com" />
+    <link rel="shortcut icon" href="https://img.qlchat.com/qlLive/ico/favicon.ico" type="image/x-icon" />
+    {{#if isVconsole}}
+    <script type="text/javascript" src="https://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/vconsole/2.5.1/vconsole.min.js"></script>
+    {{/if}}
+    <script src="//static.qianliaowang.com/frontend/rs/weibo/components_modules/lib-flexible/1.0.0/lib-flexible.js" charset="utf-8"></script>
+    {{#if isPc}}
+    <script>
+        window.document.documentElement.style.fontSize = '44px';
+        </script>
+    {{/if}}
+    {{#if isProd}}
+    <!-- 捕获页面报错上报 -->
+    <script>
+        (function() {
+            window.sameErrorMsgTime = 0;
+            // 日志上报
+            var pushLog = function(msg, file, row, column, errorObj){
+                // 过滤重复且不停刷的日志
+                if(window.errorMsg && msg && window.errorMsg === msg){
+                    window.sameErrorMsgTime++;
+                }else{
+                    window.sameErrorMsgTime = 0;
+                }
+                window.errorMsg = msg;
+                // 重复次数超过10就不发送
+                if(window.sameErrorMsgTime > 10){
+                    return
+                }
+                
+
+                window.logger.push('site','frontend');
+                window.logger.push('msg',msg);
+                window.logger.push('url',window.location.href);
+                window.logger.push('ua',navigator.userAgent);
+                file && window.logger.push('file',file);
+                row && window.logger.push('row',row);
+                column && window.logger.push('column',column);
+                errorObj&& window.logger.push('errorObj',errorObj);
+                window.logger.logger();
+        
+            }
+            
+            // 过滤不上报的类型
+            var testErr = function(msg) {
+                var errArr = [
+                    'WeixinJSBridge',
+                    'Script error',
+                    '(Invalid or unexpected token)'
+                ];
+
+                var noPass = false;
+                var testReg;
+                
+                for (idx = 0; idx < errArr.length; idx++){
+                    var test = errArr[idx];
+                    testReg = new RegExp(test);
+                    if (testReg.test(msg)) {
+                        noPass = true;
+                        break;
+                    }
+                }
+                return noPass;
+            }
+            
+            var loggerscript = document.createElement('script');
+            loggerscript.src = '//static.qianliaowang.com/frontend/rs/lib/loghub-tracking.js';
+            var so = document.getElementsByTagName("script")[0];
+            loggerscript.onload = function(e){
+                window.logger = new window.Tracker('cn-hangzhou.log.aliyuncs.com','qlchat','qlchat-front-error-log-store');
+                window.onerror = function(msg, file, row, column, errorObj) {
+                    if(testErr(msg)){
+                        return;
+                    }
+                    pushLog(msg, file, row, column, errorObj)
+                }
+            }
+
+            so.parentNode.insertBefore(loggerscript, so);
+            // window.addEventListener('unhandledrejection', (event) => { 
+            //     pushLog(event.reason);
+            // });
+        })()
+    </script>
+    {{else}}
+    <!-- <script type="text/javascript" src="https://static.qianliaowang.com/frontend/rs/lib/change-env.js"></script> -->
+    {{/if}}
+    {{#if css}}
+    <style type="text/css" id="ss-inserted-style"> {{css}} </style>
+    {{/if}}
+
+    
+    <link href="/wechat-react/mine_bundle.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="app-wrap"><div id="app">{{#if html}}{{{html}}}{{else}}
+            <section class="co-page-loading">
+                <img src="//img.qlchat.com/qlLive/liveCommon/page-loading.png" alt="">
+                <p><i>加</i><i>载</i><i>中</i><i>.</i><i>.</i><i>.</i></p>
+            </section>
+            <script>
+                (function () {
+                    var run = function () {
+                        var el = document.getElementsByClassName('co-page-loading')[0];
+                        el && el.classList.add('co-page-loading-anim');
+                    }
+                    // ios文字波浪动画不连贯
+                    if (typeof navigator !== 'undefined' && navigator.userAgent && (/iPhone|iPad|iPod/).test(navigator.userAgent || '')) {
+                        window.addEventListener('DOMContentLoaded', function () {
+                            setTimeout(run, 500);
+                        })
+                    } else {
+                        run();
+                    }
+                })();
+            </script>
+        {{/if}}</div></div>
+    <script>
+        window.__WSURL__ = '[[__WSURL__]]';
+        window.__INIT_STATE__ = [[__INIT_STATE__]];
+        window.isProd = '{{isProd}}';
+
+        // 修正ie11 origin为空
+        if (!window.location.origin) {
+            window.location.origin = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port: '');
+        }
+    </script>
+    <!-- __lib_scripts_start__ --><!-- __lib_scripts_end__ -->
+    <!--  最新PC微信电脑端 showAllNonBaseMenuItem 失效， 临时兼容，避免主要页面无法分享 -->
+    <script type="text/javascript" src="/api/js-sdk/wx?actions=react_hide_all&__date"></script>
+    {{#if aliVideoPlayerjs}}
+        <!-- <link rel="stylesheet" href="//g.alicdn.com/de/prismplayer/1.7.1/skins/default/index.css"> -->
+        <script type="text/javascript" src="//g.alicdn.com/de/prismplayer/1.9.4/prism-h5-min.js"></script>
+    {{/if}}
+    {{#if withStats}}
+    <script type="text/javascript" src="https://static.qianliaowang.com/lib/stats.js"></script>
+    <script type="text/javascript">
+	     var stats = new Stats();
+	     stats.showPanel( [[statsType]] ); // 0: fps, 1: ms, 2: mb, 3+: custom
+	     stats.dom.style.top = 'auto';
+	     stats.dom.style.bottom = '200px';
+	     document.body.appendChild(stats.dom);
+	     requestAnimationFrame(function loop(){
+	     	stats.update();
+	     	requestAnimationFrame(loop)
+	     });
+    </script>
+    {{/if}}
+    
+    
+    <script type="text/javascript" src="/wechat-react/runtime.js" crossorigin></script>
+    
+    <script type="text/javascript" src="/wechat-react/vendors.chunk.js" crossorigin></script>
+    
+    <script type="text/javascript" src="/wechat-react/mine_bundle.chunk.js" crossorigin></script>
+    
+    <script type="text/javascript">
+        var _uaq = window._uaq || [];
+        // 配置站点名,默认值为： ql-h5
+        _uaq.push(['set', 'site', 'wechat']);
+        // 配置站点版本, 默认值为: 1.0.0
+        _uaq.push(['set', 'sitever', '2.2.0']);
+
+        // 注入用户标签
+        {{#if USER_TAG}}
+        _uaq.push(['set', 'userTag', '{{USER_TAG}}']);
+        {{/if}}
+
+        // 配置日志采集服务地址，用于发送采集日志,默认地址为： //collect.qlchat.com
+        _uaq.push(['set', 'server', '[[collectApiPrefix]]']);
+
+        // 其它自定义日志参数配置
+        // 配置采集当前url参数作为日志参数
+        _uaq.push(['set', 'ch', 'query.ch']);
+        _uaq.push(['set', 'wcl', 'query.wcl']);
+
+        // 设置滚动区域的dom 元素class
+        _uaq.push(['set', 'scrollBoxClass', 'co-scroll-to-load']);
+
+    </script><!--ignore-->
+    <script type="text/javascript" src="[[spaCollectjs]]"></script><!--ignore-->
+    <script>
+        // 百度统计
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?9f8c5d323a26421cb966b5e405d629c3";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script><!--ignore-->
+</body>
+</html>

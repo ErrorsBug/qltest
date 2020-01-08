@@ -1,0 +1,63 @@
+.add-platform-container {
+    width: 520px;
+    border-radius: 8px;
+}
+.modal-header {
+    height: 60px;
+    line-height: 60px;
+    background-color: #c9a96e;
+    text-align: center;
+    color: #ffffff;
+    font-size: 16px;
+    position: relative;
+    em::after {
+        content: '\d7';
+        position: absolute;
+        right: 15px;
+        font-size: 36px;
+        line-height: 1;
+        color: #ffffff;
+        cursor: pointer;
+        font-style: normal;
+    }
+}
+.modal-main {
+    margin: 30px;
+    height: 160px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+.row {
+    span {
+        margin-right: 20px;
+        font-size: 14px;
+        color: #333333;
+    }
+    input {
+        width: 375px;
+    }
+    textarea {
+        width: 375px;
+        height: 100px;
+        resize: none;
+    }
+}
+.platform-link {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    span {
+        flex-shrink: 0;
+    }
+}
+.modal-footer {
+    margin-bottom: 40px;
+    text-align: center;
+    button {
+        height: 40px;
+        line-height: 40px;
+        padding-left: 55px;
+        padding-right: 55px;
+    }
+}

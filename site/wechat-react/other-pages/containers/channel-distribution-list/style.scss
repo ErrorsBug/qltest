@@ -1,0 +1,146 @@
+.channel-distri-list-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    .hide {
+        display: none;
+    }
+    .tabs {
+        display: flex;
+        height: 82px;
+        align-items: center;
+        // a {
+        //     display: block;
+        //     color: #999;
+        // }
+        // a:visited {
+        //     color: #999;
+        // }
+        .tab {
+            flex: 1 1;
+            height: 80px;
+            font-size: 28px;/*px*/
+            line-height: 82px;
+            color: #999;
+            text-align: center;
+            &.active {
+                color: #09bb07;
+                border-bottom: 4px solid #09bb07;/*no*/
+                // >a {
+                //     color: #09bb07;
+                // }
+            }
+            
+        }
+        .line {
+            flex: 0 0 3px;
+            width: 2px;
+            height: 35px;
+            background: #e5e5e5;
+        }
+    }
+    .content {
+        position: relative;
+        //top: 82px;
+        width: 100%;
+        height: calc(100% - 98px - 82px - 20px);
+        border-top: 20px solid #f2f2f2;
+    }
+    .footer {
+        box-shadow: 0px -1px 4px 2px rgba(0,0,0,0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 98px;
+        line-height: 98px;
+        padding: 0 15px;
+        .btn {
+            flex: 1;
+            height: 70px;
+            font-size: 26px;
+            line-height: 70px;
+            border-radius: 10px;
+            text-align: center;
+            &.btn-add {
+                flex-basis: 295px;
+                width: 295px;
+                margin: 0 15px;
+                color: #09bb07;
+                .icon_plus {
+                    display: inline-block;
+                    width: 34px;
+                    height: 34px;
+                    line-height: 34px;
+                    margin-right: 10px;
+                    margin-top: 18px;
+                    border-radius: 34px;
+                    font-weight: bold;
+                    font-size: 20px;
+                    color: #fff;
+                    text-align: center;
+                    background: #09bb07;
+                    vertical-align: top;
+
+                }
+            }
+            &.btn-mass {
+                flex-basis: 380px;
+                width: 380px;
+                margin:0 15px;
+                border: 1px solid #09bb07;/*no*/
+                color: #09bb07;
+                // background: #09bb07;
+                a {
+                    color: #09bb07;
+                    .status{
+                        color:#ccc;
+                        margin-left:10px;
+                    }
+                }
+            }
+            
+        }
+        &.none{
+            display: none;
+        }
+    }
+    .bottom-box{
+        box-shadow: 0px -1px 4px 2px rgba(0,0,0,0.1);
+        position: absolute;
+        bottom:0;
+        left: 0;
+        width:100%;
+        height: 126px;
+        .btn{
+            height: 93px;
+            font-size: 26px;/*px*/
+            line-height: 93px;
+            border-radius: 10px;
+            text-align: center;
+            &.btn-auto{
+                display: block;
+                border: 1px solid #09bb07;/*no*/
+                color: #fff;
+                background: #09bb07;
+                margin:15px 20px;
+            }
+            a{
+                display: block;
+                width: 100%;
+                height:100%;
+                color: #09bb07;
+            }
+        }
+        
+
+        &.none{
+            display: none;
+        }
+    }
+}
+@media (max-width: 321px) {
+    .channel-distri-list-container .footer .btn {
+        font-size: 26px;
+    }
+}

@@ -1,0 +1,211 @@
+<block wx:if="{{showMain}}">
+    <view class="container">
+        <!--头部基本信息区-->
+        <view class="header-section">
+            <!--顶部图片区域-->
+            <view class="header-image">
+                <image class="header-image-image" mode="widthFix" src="{{info.topicView.topicPo.backgroundUrl}}"></image>
+                <!--语音介绍区域-->
+                <!-- <view wx:if="{{conditions.hasAudio}}" class="header-audio">
+                    <view class="state-wrap" bindtap="onAudioTap" hidden="{{audioStatus === 'playing'}}">
+                        <image bindtap="onAudioTap" class="audio-state" src="./img/audio-pause.png?__inline"></image>
+                    </view>
+                    <view class="state-wrap" bindtap="onAudioTap" hidden="{{audioStatus !== 'playing'}}">
+                        <image class=" audio-state" src="./img/audio-playing.gif?__inline"></image>
+                    </view>
+                    <text>语音介绍</text>
+                </view> -->
+            </view>
+            <!--话题基本信息区域-->
+            <view class="header-info">
+                <text class="header-info-name"> {{info.topicView.topicPo.topic}}</text>
+                <view class="header-info-time">
+                    时间
+                    <block wx:if="{{timeAfter}}"> ({{timeAfter}}) </block>
+                </view>
+                <view class="header-info-dateview">
+                    <view class="header-info-date">
+                        {{info.topicView.topicPo.startTimeStr}}
+                        <view class="header-info-view">
+                            <image class="join-num-icon" src="./img/join-num.png"></image>
+                            {{browseNum}}人
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <!--分享榜-->
+            <view wx:if="{{conditions.show_joinMember}}" class="header-share">
+                <view class="join-num">
+                    <view class="join-num-text"> {{authNum}}人 </view>
+                    正在参加
+                </view>
+                <!--<view class="header-share-comeon" wx:if="{{info.topicView.topicPo.authNum==0}}">快来第一个分享吧！</view>-->
+                <view class="header-share-list">
+                    <image 
+                        class="header-share-list-image" 
+                        wx:for="{{processings.joinMember}}" 
+                        wx:key="index"
+                        src="{{item.headImgUrl}}"></image>
+                    
+                    <image class="arrow" src="../../comp/img/arrow_1.png"></image>
+                </view>
+            </view>
+        </view>
+
+        <!--介绍信息区域-->
+        <view wx:if="{{conditions.showIntro || !notSummary }}" class="detail-section">
+            <view class="detail-intro">课程简介</view>
+            <view class="detail-main {{isShowDetail ? 'show-detail' : 'hide-detail'}}">
+                <view wx:if="{{info.topicView.topicPo.speaker}}" class="detail-title detail-first-para">主讲人：{{info.topicView.topicPo.speaker}}</view>
+                <text wx:if="{{info.topicView.topicPo.guestIntr}}" class="detail-text"> {{info.topicView.topicPo.guestIntr}}</text>
+                <view class="detail-title">课程概要</view>
+                <text wx:if="{{info.topicView.topicPo.remark}}" class="detail-text"> {{info.topicView.topicPo.remark}}</text>
+                <!-- 非富文本的介绍 -->
+                <block wx:if="{{conditions.hasImage && notSummary}}" wx:for="{{processings.image}}" wx:key="resourceId">
+                    <image mode="widthFix" src="{{item.url}}" class="detail-profile-image"></image>
+                    <text wx:if='{{item.msg}}' class="detail-profile-text"> {{item.msg}}</text>
+                </block>
+                <!-- 富文本的介绍 -->
+                <view wx:if="{{!notSummary}}"class="rich-text-box">
+                    <rich-text nodes="{{summary}}" bindtap="tap"></rich-text>
+                </view>
+            </view>
+
+            <view class="hide-detail-btn" wx:if="{{isShowDetail}}" bindtap="toggleDetailShow">
+                收起
+            </view>
+            <view class="show-detail-btn" wx:if="{{!isShowDetail}}" bindtap="toggleDetailShow">
+                查看全部
+            </view>
+        </view>
+
+        <!--公众号信息区域-->
+        <view wx:if="{{conditions.show_subscription}}" class="subscript-section">
+            本直播由公众号【{{info.live.entity.subscriptionName}}】举办，如有疑问，请联系举办方
+        </view>
+
+        <!--频道信息区域-->
+        <view class="channel-section" wx:if="{{conditions.isChannel}}" bindtap="linkToChannel">
+            <view class="channel-section-container">
+                <view class="channel-title">
+                    所属系列课
+                </view>
+                <view class="channel-name">
+                    {{info.channel.channel.name}}
+                </view>
+            </view>
+        </view>
+
+        <!--直播间信息区域-->
+        <view class="liveroom-section">
+            <view class="liveroom-header">
+                <image mode="aspectFill" class="liveroom-header-logo" src="{{info.live.entity.logo}}"></image>
+                <view class="liveroom-header-name" bindtap="linkToLive"> {{info.live.entity.name}} </view>
+                <!-- <block wx:if="{{conditions.show_focus_btn}}"> -->
+                    <view wx:if="{{!conditions.focused}}" class="liveroom-header-focus" bindtap="doFocus"> <view class="plus">+</view> 关注</view>
+                    <view wx:if="{{conditions.focused}}" class="liveroom-header-focused" bindtap="doFocus">已关注</view>
+                <!-- </block> -->
+            </view>
+            <view class="liveroom-info">
+                <view class="liveroom-main-num" bindtap="linkToLive">
+                    <view class="liveroom-main-count"> {{info.topicNum.topicNum}} </view>
+                    <view class="liveroom-main-text">话题数</view>
+                </view>
+                <view class="liveroom-main-num" bindtap="linkToLive">
+                    <view class="liveroom-main-count"> {{info.followNum.follwerNum}} </view>
+                    <view class="liveroom-main-text">关注人数</view>
+                </view>
+                <view class="liveroom-main-auth" wx:if="{{conditions.isLiveAuth}}" bindtap="showAuthModal">
+                    <block wx:if="{{conditions.isLiveV}}">
+                        <image class="live-main-auth-icon" src="./img/v-auth.png?__inline"></image>
+                    </block>
+                    <view class="live-main-auth-text">官方认证</view>
+                </view>
+            </view>
+        </view>
+
+        
+    </view>
+
+    <block>
+        <view class="footer-wp"></view>
+        <!--B端-->
+        <view wx:if="{{!conditions.isC || conditions.c_public_auth || conditions.c_charge_auth || conditions.channel_charge_auth}}"
+            class="footer-section">
+            <view class="footer-tab" bindtap="linkToTopic">
+                    进入直播
+            </view>
+        </view>
+
+        <!--c端公开话题允许进入-->
+        <view wx:if="{{conditions.c_public_notAuth}}" class="footer-section">
+            <view class="footer-tab" bindtap="enterPublic">
+                报名进入
+            </view>
+        </view>
+
+        <!--C端加密话题-->
+        <view wx:if="{{conditions.c_encrypt_notAuth}}" class="footer-section footer-encrypt">
+            <input type="text" bindinput="passwordInput" class="footer-password-input" placeholder="输入密码进入直播" placeholder-class="footer-password-input-placeholder"
+            />
+            <view class="footer-password-confirm" bindtap="enterEncrypt">进入直播</view>
+        </view>
+
+        <!--c端加密话题允许进入-->
+        <view wx:if="{{conditions.c_encrypt_auth}}" class="footer-section">
+            <view class="footer-tab" bindtap="linkToTopic">
+                已经通过验证，点击进入直播
+            </view>
+        </view>
+
+        <!--C端收费话题不可进入-->
+        <view wx:if="{{conditions.c_charge_notAuth&&system!='ios'}}" class="footer-section">
+
+
+            <view class="footer-tab" bind:tap="doOrder">
+                 付费进入：￥{{conditions.topicCharge}}
+            </view>
+
+        </view>
+
+        <!--c端频道话题不可进入-->
+        <view wx:if="{{conditions.channel_charge_notAuth && system!='ios'}}" class="footer-section">
+
+            
+            <!-- 没错，支付方案又改了 -->
+            <view  wx:if="{{!info.isFreeChannel}}" bind:tap="buyChannel" class="footer-tab {{conditions.isSingleBuy ? 'white-item' : 'red-item'}}">
+                <view class="footer-tab-text">购买系列课</view>
+            </view>
+            <view bind:tap="doOrder" wx:if="{{!info.isFreeChannel && conditions.isSingleBuy}}" class="footer-tab">
+                <view class="footer-tab-text">购买单节：￥{{conditions.topicCharge}}
+                </view>
+            </view>
+            <view wx:if="{{info.isFreeChannel}}"  class="footer-tab" bindtap="onCheckInFree">
+                报名进入
+            </view>
+
+        </view>
+
+        <!-- iOS 免费系列课报名  -->
+        <view wx:if="{{conditions.channel_charge_notAuth && system =='ios' && info.isFreeChannel}}" class="footer-section">
+            <view  class="footer-tab" bindtap="onCheckInFree">
+                报名进入
+            </view>
+        </view>
+
+    </block>
+
+    <pay-by-contact-modal   wx:if="{{system !='ios'}}"
+        visible="{{contactModalVisible}}" 
+        sessionFrom="pay_topic_{{info.topicView.topicPo.id}}_{{info.topicView.topicPo.topic}}"
+        payTipsContent="{{payTipsContent}}"
+        bind:hidePayContactModal="hidePayContactModal"
+    />
+
+
+    <!--音频播放器-->
+    <audio src="{{audioSrc}}" id="audio-player" controls="{{false}}" binderror="audioError" bindplay="audioPlay" bindpause="audioPause"
+        bindtimeupdate="audioTimeupdate" bindended="audioEnded" />
+
+</block>
+<!-- <audio-box/> -->

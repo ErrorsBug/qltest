@@ -1,0 +1,25 @@
+body{
+    font-family: "黑体";
+}
+.complite-card-wrap{
+    padding-top:100px;
+    width:100%;
+    height: 100%;
+    background-color: #e8e8e8;
+}
+.tips-bar{
+    height: 80px;
+    line-height: 80px;
+    width: 100%;
+    color:#333;
+    font-size: 28px;/*px*/  
+    text-align: center; 
+}
+.student-card{
+    margin:0px 100px;
+    height: auto;
+    
+}
+.student-card img {
+    width:100%;
+}

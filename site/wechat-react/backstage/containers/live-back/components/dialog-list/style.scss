@@ -1,0 +1,153 @@
+.dialog-queue-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba($color: #000000, $alpha: 0.6);
+    z-index: 10;
+    .dialog-queue {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .new-rule {
+        padding: 24px 30px;
+        width: 600px;
+        background: #fff;
+        border-radius: 20px;
+
+        .icon-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+        }
+
+        .new-rule-header {
+            padding: 22px 0 30px;
+            font-size: 32px;/*px*/
+            font-weight: bold;
+            text-align: center;
+
+        }
+
+        .new-rule-body {
+            height: 440px;
+            overflow: auto;
+
+            .rule {
+                .rule-title {
+                    margin-bottom: 10px;
+                    font-size: 22px;
+                    color: #555;
+                    line-height: normal;
+                }
+                .rule-content {
+                    font-size: 22px;
+                    color: #666666;
+                    line-height: normal;
+                    margin-bottom: 26px;
+                }
+            }
+        }
+
+        .protocol {
+            font-size: 22px;
+            line-height: normal;
+            .green-font {
+                color: #2db240;
+            }
+        }
+
+        .new-rule-footer {
+            text-align: center;
+            padding: 67px 0 20px;
+            .btn-know {
+                display: inline-flex;
+                width: 70%;
+                background:#F73657;
+                height: 60px;
+                line-height: 58px;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                font-size: 32px;/*px*/
+                border-radius: 30px;
+            }
+        }
+    }
+
+    .ql-recommend {
+        position: relative;
+
+        .icon-close {
+            position: absolute;
+            top: 80px;
+            right: 0;
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+        }
+
+        .share-open {
+            width: 650px;
+        }
+
+        .btn-panel {
+            position: absolute;
+            bottom: 55px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .btn {
+                display: inline-flex;
+                width: 200px;
+                height: 52px;
+                border-radius: 50px;
+                justify-content: center;
+                align-items: center;
+                color: #FF7164;
+                border: 2px solid #FF7164; /*px*/
+                background: #fff;
+                font-size: 20px;
+                cursor: pointer;
+
+                &:first-child {
+                    margin-right: 20px;
+                }
+            }
+
+            .primary {
+                color: #fff;
+                background: #FF7164;
+            }
+        }
+    }
+
+    .float-box {
+        position: relative;
+        .icon-close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: #fff;
+            font-size: 30px;
+            background: url('../../img/icon-close.png') center center no-repeat;
+            background-size: 100% auto;
+            display: block;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+        img {
+            width: 550px;
+        }
+    }
+}

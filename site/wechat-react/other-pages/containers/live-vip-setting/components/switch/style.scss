@@ -1,0 +1,26 @@
+.switch_RIERI {
+    display: flex;
+    width: 92px; /*px*/
+    height: 56px; /*px*/
+    border-radius: 32.47px; /*px*/
+    background: #ccc;
+    align-items: center;
+
+    .radius_RIERI {
+        display: inline-block;
+        width: 50px; /*px*/
+        height: 50px; /*px*/
+        border-radius: 50%;
+        background: #fff;
+        border: 1px solid rgba(229,229,229,1); /*no*/
+        margin-left: 2px; /*px*/
+        transition: all 0.3s ease;
+    }
+}
+
+.switch-on_RIERI {
+    background: #F73657;
+    .radius_RIERI {
+        transform: translate(35px); /*px*/
+    }
+}

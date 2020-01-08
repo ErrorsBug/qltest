@@ -1,0 +1,86 @@
+.live-change-page{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .page-main{
+        flex: 1;
+        padding: 30px;
+        .title{
+            color: #666666;
+            font-size: 26px;/*px*/
+        }
+        .list{
+            background: #fff;
+            padding: 0 30px;
+            border-radius: 12px;
+            box-shadow: 1px 1px 20px rgba($color: #000000, $alpha: 0.1);
+            margin:20px 0 40px;
+            .live-info{
+                display: flex;
+                padding: 20px 0 0;
+                position: relative;
+                .pic{
+                    width: 70px;
+                    height: 70px;
+                    overflow: hidden;
+                    margin-bottom: 20px;
+                    border-radius: 50%;
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+                .name{
+                    color: #333;
+                    font-size: 30px;/*px*/
+                    line-height: 70px;
+                    margin-left: 20px;
+                    flex: 1;
+                    border-bottom: 1px solid #eeeeee;/*px*/
+                    font-weight: 700;
+                    
+                    span{
+                        display: inline-block;
+                        max-width: 60%;
+                    }
+                }
+                &.active{
+                    .name{color: #F73657;}
+                    .choose-icon{
+                        display: inline-block;
+                        width: 30px;
+                        height: 30px;
+                        background: url(./img/btn-choose.png) center center no-repeat;
+                        background-size: 100% auto;
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+    
+                &:last-child{
+                    .name{
+                        border:none;
+                    }
+                }
+            }
+        }
+    }
+    .page-bottom{
+        height: 100px;
+        background: #fff;
+        >div{
+            background: #F73657;
+            color: #fff;
+            padding: 0 30px;
+            text-align: center;
+            font-size: 32px;/*px*/
+            line-height: 76px;
+            height: 76px;
+            border-radius: 40px;
+            margin: 20px 30px;
+        }
+    }
+    
+}

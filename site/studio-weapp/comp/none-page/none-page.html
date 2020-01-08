@@ -1,0 +1,12 @@
+<view class="none-page" wx:if="{{nonePage}}">
+    <image class="none-pay-page" src="{{nonePage.pic}}"></image>
+    <text class="none-pay-text"> {{nonePage.text? nonePage.text :'暂无数据'}}</text>
+</view>
+<view class="none-page" wx:else>
+    <image class="none-pay-page" src="/comp/none-page/img/emptyPage.png?__inline"></image>
+    <text class="none-pay-text"> 暂无数据</text>
+</view>
+<!--<view class="none-page">
+    <image class="none-pay-page" src="/comp/none-page/img/emptyPage.png?__inline"></image>
+    <text class="none-pay-text"> 暂无数据</text>
+</view>-->

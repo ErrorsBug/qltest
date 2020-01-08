@@ -1,0 +1,51 @@
+<view class="course-group-container" wx:if="{{showContent}}">
+    <!-- 顶部提示语 -->
+    <top-notice
+        groupInfo="{{groupInfo}}"
+        isHaruhi="{{isHaruhi}}"
+        isMember="{{isMember}}"
+    />
+
+    <!-- 系列课概览区域 -->
+    <channel-preview 
+        wx:if="{{channelInfo.channel}}"
+        channelInfo="{{channelInfo.channel}}"
+        groupInfo="{{groupInfo}}"
+        bindlinkToChannel="linkToChannel"
+    />
+
+    <view class="main">
+        <!-- 拼课功能区 -->
+        <group-section
+            serverTime="{{serverTime}}"
+            groupInfo="{{groupInfo}}"
+            isHaruhi="{{isHaruhi}}"
+            isMember="{{isMember}}"
+            joinList="{{joinList}}"
+            
+            bindonCountDownEnd="onCountDownEnd"
+        />
+            
+            <!-- 按钮功能区 -->
+        <btn-section
+            groupInfo="{{groupInfo}}"
+            joinList="{{joinList}}"
+            isHaruhi="{{isHaruhi}}"
+            isMember="{{isMember}}"
+
+            bind:onEnterTap="onBtnEnterTap"
+            bind:onJoinTap="onBtnJoinTap"
+            bind:onStartTap="onBtnStartTap"
+            bind:updateFormId="updateFormId"
+        />
+    </view>
+        
+    <!-- 参与列表 -->
+    <join-list
+        joinList="{{joinList}}"
+        groupInfo="{{groupInfo}}"
+    />
+
+    <!-- 拼课须知 -->
+    <tips/>
+</view>

@@ -1,0 +1,36 @@
+<view class="channel-name-section">
+    <text class="name multi-lines"> {{channelInfo.name}}</text>
+    <view class="other-info">
+        已开课{{channelInfo.topicCount}}节
+        <view class="separator">|</view>
+        预计开课{{channelInfo.planCount}}节
+    </view>
+    <view class="charge-info" wx:if="{{system!=='ios'}}">
+        <image class="tag vip-tag" src="./img/vip-tag.png" mode="widthFix" wx:if="{{vipInfo.isOpenVip==='Y'}}"></image>
+
+        <text class="tag tag-discount" wx:if="{{discountStatus==='Y'}}">特价优惠</text>
+        <!-- <text class="tag tag-discount" wx:if="{{discountStatus==='P' || discountStatus==='GP'}}">拼课价</text> -->
+        <text class="tag tag-rebate" wx:if="{{isRebate}}">购买返现</text>
+
+        <text class="tag price" wx:if="{{isRebate}}">￥{{channelInfo.rebateChannelAmount}}</text>
+        <text class="tag price" wx:else>￥{{discountStatus === 'Y' ? discount : money}}</text>
+
+        
+        <!-- <text class="tag tag-group" wx:if="{{discountGroup}}">{{groupNum}}人成团</text> -->
+        <text class="tag ori-price" wx:if="{{discountStatus == 'Y'}}">原价:￥{{money}}</text>
+        <text class="tag rebate-price" wx:if="{{isRebate}}">返现￥{{channelInfo.totalRebate}}</text>
+    </view>
+
+    <view class="share-earning" wx:if="{{switch === 'Y'}}" bind:tap="navToShareCard">
+        <view class="earning-text" wx:if="{{isDistribution && system!=='ios'}}">
+            <image class="earning-icon" src="./img/share-earning-icon.png" mode="aspectFit"></image>
+            <view class="earning-text">分享赚￥{{discountStatus === 'N' ? (money * shareRatio / 100) : (discount * shareRatio / 100)}}</view>
+            <!-- <view wx:else  class="earning-text">钱</view> -->
+        </view>
+        <view wx:else>
+            <image class="earning-icon" src="./img/share-icon.png" mode="aspectFit"></image>
+            
+            <view class="earning-text">分享</view>
+        </view>
+    </view>
+</view>

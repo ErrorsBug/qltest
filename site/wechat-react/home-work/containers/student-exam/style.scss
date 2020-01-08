@@ -1,0 +1,86 @@
+.student-exam {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    
+
+    &.finish {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .last-time-tips {
+        font-size: 28px; /* px */
+        color: #999;
+        margin-bottom: 40px;
+        line-height: 1.4;
+
+        p:first-of-type {
+            color: #333;
+            margin-bottom: 10px;
+        }
+    }
+
+    .timer-box {
+        background: #FFEAC8;
+        color: #FF9F00;
+        padding: 24px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 28px; /* px */
+        font-weight: bold;
+
+        .submit-btn {
+            padding: 10px 25px;
+            color: #FFF;
+            font-size: 26px; /* px */
+            background: #FF9F00;
+            border-radius: 30px;
+            font-weight: normal;
+        }
+    }
+
+    .container {
+        flex: 1;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 40px;
+        box-sizing: border-box;
+    }
+
+    .footer {
+        flex-shrink: 0;
+        height: 100px;
+        padding: 12px 40px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        background: #FFF;
+
+        .btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            border-radius: 40px;
+            font-size: 32px; /* px */
+            box-sizing: border-box;
+            border: 1px solid #F73657; /* px */
+            color: #F73657;
+
+            &.mr20 {
+                margin-right: 20px;
+            }
+
+            &.exam {
+                background: #F73657;
+                color: #FFF;
+            }
+        }
+    }
+}

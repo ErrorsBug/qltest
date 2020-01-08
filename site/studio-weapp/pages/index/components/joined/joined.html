@@ -1,0 +1,26 @@
+<scroll-view class="joined-scroll-view" scroll-y="true" lower-threshold="200" bindscrolltolower="loadPage">
+    <view class="container">
+        <!-- 列表数据 -->
+        <view class="course-list">
+            <view class="list-item" wx:for="{{viewList}}" wx:key="id" bindtap="linkTotopic" data-topicid="{{item.id}}">
+                <image class="course-header" src="{{item.backgroundUrl}}"></image>
+                <view class="info">
+                    <view class="name"> {{item.topic}}</view>
+                    <view class="addition">
+                        <text class="last-time">上次学习: {{item.lastLearnTime}}</text>
+                        <!-- <text class="progress-ratio">已学{{item.endRate}}%</text> -->
+                    </view>
+                </view>
+            </view>
+        </view>
+
+        <!-- 列表状态 -->
+        <view style="min-height:180rpx; padding-top: 30rpx;" wx:if="{{noneOne || noMore}}">
+            <view wx:if="{{noneOne}}">
+                <include src="../../../../comp/none-page/none-page.wxml" />
+            </view>
+            <view class="none-pay-text" wx:if="{{noMore && !noneOne}}">没有更多数据了</view>
+        </view>
+    </view>
+</scroll-view>
+<!-- <audio-box/> -->

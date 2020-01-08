@@ -1,0 +1,94 @@
+.p-my-feedback {
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    line-height: 1.4;
+    overflow-y: auto;
+    .co-scroll-view>div {
+        &::before, &::after {
+            content: "";
+            display: block;
+            overflow: hidden;
+        }
+    }
+
+    .feedback {
+        position: relative;
+        margin: 52px 40px;
+        padding: 32px;
+        background: #FFF;
+        box-shadow: 0 2px 40px 0 rgba(0,0,0,0.05);
+        border-radius: 4px;
+        cursor: pointer;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        .type {
+            font-size: 24px;
+            font-weight: bold;
+            color: #F73657;
+            display: flex;
+            align-items: center;
+            line-height: normal;
+            &::before {
+                content: "";
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                background-color: #F73657;
+                margin-right: 16px;
+            }
+        }
+        .content {
+            margin-top: 16px;
+            font-size: 30px;
+            color: #333;
+            display: -webkit-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+        .time {
+            margin-top: 16px;
+            font-size: 22px;
+            color: #999;
+        }
+        .mark {
+            position: absolute;
+            top: -16px;
+            right: 24px;
+            width: 140px;
+            height: 94px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            background-image: url(./imgs/mark-processing.png);
+        }
+        &.status-handle {
+            .type {
+                color: #FF9400;
+                &::before {
+                    background-color: #FF9400;
+                }
+            }
+            .mark {
+                background-image: url(./imgs/mark-processed.png);
+            }
+        }
+        &.status-success {
+            .type {
+                color: #999;
+                &::before {
+                    background-color: #999;
+                }
+            }
+            .content {
+                color: #999;
+            }
+            .mark {
+                background-image: url(./imgs/mark-done.png);
+            }
+        }
+    }
+}

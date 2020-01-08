@@ -1,0 +1,22 @@
+<section class="channel-section list-section">
+    <h1>
+        系列课
+    </h1>
+    <ul class="channels" id="channels">
+        {{#each channels}}
+        <li class="channel" data-id="{{id}}" log-business_id="{{id}}" log-name="{{killEm name}}"  log-business_type="channel" data-url="{{url}}">
+            <span>
+                <img src="{{headImage}}" alt="">
+            </span>
+            <section>
+                <h2 class="elli">{{{name}}}</h2>
+                <p>
+                    {{subscribeNum}}次学习
+                </p>
+            </section>
+        </li>
+        {{/each}}
+    </ul>
+    <div class="loading-next">加载数据中...</div>
+    <div class="no-more">已全部加载完毕</div>
+</section>

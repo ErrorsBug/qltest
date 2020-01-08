@@ -1,0 +1,245 @@
+@import '../definition.scss';
+.page-studio-coupon-order
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	.order-container
+	{
+		.payment-infomation
+		{
+			background-color: #fff;
+			text-align: center;
+			padding: 46px 0 37px;
+
+			.icon
+			{
+				background-image: url(./img/diamond.png);
+				background-size: cover;
+				background-repeat: no-repeat;
+				width: 51px;
+				height: 47px;
+				margin: 0 auto;
+			}
+
+			.charge
+			{
+				margin-top: 20px;
+				color: #333;
+				font-size: 22px;/* px */
+				strong
+				{
+					font-size: 50px;/* px */
+				}
+			}
+
+			.tips
+			{
+				margin-top: 30px;
+				font-size: 22px;/* px */
+				color: #999;
+			}
+		}
+
+		.details
+		{
+			 > h1
+			{
+				color: #333;
+				font-size: 24px;/* px */
+				text-align: center;
+				position: relative;
+				height: 90px;
+				line-height: normal;
+				font-weight: normal;
+				 > span
+				{
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%,-50%);
+					padding: 0 20px;
+					background-color: #f5f5f5;
+				}
+				&::before
+				{
+					content: '';
+					display: block;
+					position: absolute;
+					height: 1px;/* no */
+					width: 300px;
+					top: 50%;
+					left: 50%;
+					transform: translateX(-50%);
+					background-color: #e5e5e5;
+				}
+			}
+
+			 .description
+			{
+				li{
+					display: flex;
+					flex-wrap: wrap;
+					align-items: flex-start;
+					justify-content: center;
+				}
+
+				.title,
+				.desc,
+				{
+					width: 50%;
+					min-width: 50%;
+					max-width: 50%;
+					box-sizing: border-box;
+					flex-basis: 50%;
+					margin-bottom: 20px;
+					flex: 1;
+					line-height: 40px;/* px */
+				}
+				.title
+				{
+					color: #999;
+					font-size: 28px;/* px */
+					text-align: right;
+					padding-right: 70px;
+				}
+				.desc
+				{
+					color: #333;
+					font-size: 28px;/* px */
+					padding-left: 0px;
+					padding-right: 150px;
+				}
+			}
+		}
+
+		footer.order
+		{
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 98px;
+			width: 100%;
+			background-color: $main-color;
+			color: #fff;
+            font-size: 28px;/* px */
+            cursor: pointer;
+		}
+	}
+
+	.success-container
+	{
+		.result
+		{
+			background-color: #fff;
+			padding: 0 30px;
+			.mention
+			{
+				padding: 40px 0 30px;
+				 > h1
+				{
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					font-size: 34px;/* px */
+                    color: #333;
+                    line-height: normal;
+					.icon-success
+					{
+						width: 50px;/* px */
+						height: 50px;/* px */
+						background-image: url(./img/success.png);
+						background-repeat: no-repeat;
+						background-size: cover;
+						margin-right: 16px;
+					}
+				}
+				 > p
+				{
+					margin-top: 38px;
+					text-align: center;
+				}
+			}
+			.info
+			{
+				padding: 30px 0;
+				border-top: 1px solid #f0f0f0;
+				li
+				{
+					margin-top: 20px;
+					&:first-child
+					{
+						margin-top: 0;
+					}
+					.label
+					{
+						font-size: 24px;/* px */
+						color: #999;
+						margin-right: 30px;
+					}
+					.content
+					{
+						font-size: 24px;/* px */
+						color: #333;
+					}
+				}
+			}
+		}
+	}
+
+	.guide
+	{
+		margin-top: 20px;
+		background-color: #fff;
+		padding: 60px 0 40px;
+		
+        .shop{
+			position: relative;
+            background-image: url(./img/shop-01.png);
+            background-size: 448px 243px;
+            background-position: center 50px;
+            background-repeat: no-repeat;
+            height: 300px;
+			
+            .forgive-hat{
+				width: 278px;
+                height: 73px;
+                background-image: url(./img/roof-01.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                position: absolute;
+                top: -8px;
+                left: 218px;
+            }
+			
+            .qrcode{
+				width: 220px;
+                height: 220px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-color: #fff;
+                position: absolute;
+                bottom: 26px;
+				left: 248px;
+				box-sizing: content-box;
+				padding: 200px;
+				background-color: transparent;
+				transform: translate(-200px,200px);
+            }
+        }
+
+		.tips
+		{
+			margin-top: 25px;
+			color: #333;
+            font-size: 24px;/* px */
+            text-align: center;
+		}
+	}
+}
+

@@ -1,0 +1,55 @@
+{{#each topics}}
+<li class="topic-item" data-topic-id="{{id}}">
+    <div class="topic-content">
+      <div class="topic-img">
+            <img class="img-default" data-imgloaded="false" data-imgsrc="{{backgroundUrl}}@340h_640w_1e_1c_2o">
+
+            {{#compare type "==" "charge"}}
+            <span class="pay-icon">
+                {{!--<i class="icon-charge"></i>--}}
+                ￥
+            </span>
+            {{/compare}}
+
+            {{#compare type "==" "encrypt"}}
+            <span class="pay-icon">
+                <i class="icon-lock-close"></i>
+            </span>
+            {{/compare}}
+
+            {{#compare status "==" "beginning"}}
+            <span class="topic-status">
+                正在直播
+            </span>
+            {{/compare}}
+
+            {{#compare status "==" "ended"}}
+            <span class="topic-status">
+                已结束
+            </span>
+            {{/compare}}
+        </div>
+        <div class="topic-info">
+            <p class="topic-name {{#if channelId}}active{{/if}} {{#compare isRelay "==" "Y"}}relay-style{{/compare}}">{{topic}}</p>
+            <span class="topic-create-time">时间：{{beginTime}}</span>
+            {{#compare isRelay "==" "Y"}}
+                <i class="relay">转播</i>
+            {{/compare}}
+        </div>
+    </div>
+    <div class="topic-aside">
+        <span class="join-num">
+            <i class="icon-couple"></i>
+            <var>{{format browseNum 'number'}}</var>
+            人正在参加
+        </span>
+
+        <span class="intro-btn">
+            <i class="icon-page"></i>
+            介绍页
+        </span>
+
+
+    </div>
+</li>
+{{/each}}

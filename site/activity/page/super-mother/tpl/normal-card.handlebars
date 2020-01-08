@@ -1,0 +1,22 @@
+<div class="card-container">
+
+    <div class="session-num {{sessionNum}}"></div>
+
+    <div class="banner">
+        <img src={{imgUrl}} alt="">
+    </div>
+    <h1>{{topic}}</h1>
+
+    <p class="diff">
+        任务难度： 
+        {{#each stars}}
+            <span class="star"></span>
+        {{/each}}
+    </p>
+
+        <div class="{{isBuy}}"></div>
+
+    <p class="join-num">
+        <var>{{partIn}}</var>人正在参与
+    </p>
+</div>

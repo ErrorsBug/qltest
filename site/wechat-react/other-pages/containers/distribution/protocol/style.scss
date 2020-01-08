@@ -1,0 +1,76 @@
+.distribution-protocol-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(245, 245, 245);
+    p {
+        max-height: 99999px;
+    }
+    .protocol-content {
+        padding: 30px;
+        flex: 1;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+        .title {
+            font-weight: bold;
+            font-size: 36px;/*px*/
+            text-align: center;
+        }
+        .part1 {
+            font-size: 22px;/*px*/
+            line-height: 40px;
+            color: rgb(102,102,102);
+            p{
+                margin-top: 30px;
+            }
+        }
+        .part2 {
+            font-size: 24px;/*px*/
+            line-height: 44px;
+            p{
+                margin-top: 30px;
+                span{
+                    text-decoration: underline;
+                }
+            }
+        }
+        .part3{
+            section {
+                margin-top: 30px;
+                h3 {
+                    font-weight: bold;
+                    font-size: 24px;/*px*/
+                    text-indent: 34px;
+                    margin-bottom: 10px;
+                }
+                p {
+                    line-height: 44px;
+                    text-indent: 34px;
+                    font-size: 24px;/*px*/
+                    em {
+                        color: rgb(247,59,59);
+                    }
+                    &.tip {
+                        margin-top: 20px;
+                    }
+                    &.time {
+                        margin-top: 50px;
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+    .return {
+        background-color: #fff;
+        height: 98px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(51,187,73);
+        font-size: 32px;/*px*/
+    }
+}

@@ -1,0 +1,56 @@
+.coral-push-order{
+    .order-list{
+        
+        ul{
+            background:#fff;
+            li{
+                padding:20px;
+                display: flex;
+                border-bottom:1px solid #e5e5e5;/*no*/
+                &:last-child{
+                    border-bottom:none;
+                }
+                .business-detail{
+                    width:200px;
+                    span{
+                        display: block;
+                        text-align: right;
+                    }
+                    
+                    .money{
+                        color:#333;
+                        font-size: 22px;/*px*/
+                        line-height: 40px;
+                    }
+                    .people{
+                        color:#999;
+                        font-size: 22px;/*px*/
+                        var{
+                            display: inline-block;
+                            max-width: 100px;
+                        }
+                    }
+                    
+                }
+                .business-info{
+                    flex: 1;
+                    // width: 100%;
+                    max-width:70%;
+                    position: relative;
+                    
+                    .name{
+                        line-height: 40px;
+                        color:#333;
+                        font-size: 26px;/*px*/
+                        
+                    }
+                    .time{
+                        color:#999;
+                        font-size: 22px;/*px*/
+                    }
+                }
+            }
+        }
+    }
+}
+    

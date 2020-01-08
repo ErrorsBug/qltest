@@ -1,0 +1,68 @@
+{{#each topics}}
+<li class="topic-item" data-topic-id="{{id}}">
+    {{#compare isAuditionOpen "==" "Y"}}
+        <div class="free-listen-badge">免费试听</div>
+    {{/compare}}
+
+    <div class="topic-content">
+        <div class="topic-img">
+            <img class="img-default" data-imgloaded="false" data-imgsrc="{{backgroundUrl}}@166h_116w_1e_1c_2o">
+
+            {{#compare type "==" "charge"}}
+            <span class="pay-icon">
+                ￥
+            </span>
+            {{/compare}}
+
+            {{#compare type "==" "encrypt"}}
+            <span class="pay-icon">
+                <i class="icon-lock-close"></i>
+            </span>
+            {{/compare}}
+
+            {{#compare status "==" "beginning"}}
+            <span class="topic-status">
+                正在直播
+            </span>
+            {{/compare}}
+            {{#compare status "==" "ended"}}
+            <span class="topic-status">
+                已结束
+            </span>
+            {{/compare}}
+        </div>
+
+        <div class="topic-info">
+            <p class="topic-name {{#compare channelId "!=" null}}active{{/compare}}">{{topic}}</p>
+            <span class="topic-create-time">时间：{{beginTime}}</span>
+            {{#compare isRelay "==" "Y"}}
+                <i class="relay">转播</i>
+            {{/compare}}
+        </div>
+    </div>
+    <div class="topic-aside has-status">
+        <span class="intro-btn">
+            <i class="icon-page"></i>
+            介绍页
+        </span>
+
+        <div class="payment-status">
+            {{#unless isAuthTopic}}
+                {{#compare isSingleBuy "==" "Y"}}
+                    <span class="payment-btn" data-topic-id="{{id}}" data-money="{{money}}">
+                        单节购买￥{{format money 'money'}}
+                    </span>
+                {{/compare}}
+            {{/unless}}
+
+            {{#if isAuthTopic}}
+                {{#compare isSingleBuy "==" "Y"}}
+                    <span class="paid-btn">
+                        您已购买此节课
+                    </span>
+                {{/compare}}
+            {{/if}}
+        </div>
+    </div>
+</li>
+{{/each}}

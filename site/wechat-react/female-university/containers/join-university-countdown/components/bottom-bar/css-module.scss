@@ -1,0 +1,40 @@
+.jion-page-bottom-bar{
+    padding: 0;
+    display: flex;
+    margin: 0;
+    height: 110px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px 0 20px;
+    position: relative;
+    box-shadow:0px 0 80px rgba(0,0,0,0.08);
+
+    .on-sale-countdown{
+        display: flex;
+        justify-content: center;
+        flex: 1;
+        font-size: 32px;/* px */
+        white-space: nowrap;
+        .title{
+            color: #666666;
+        }
+        .time{
+            color: #E0414F;
+            margin-left: 20px;
+        }
+    }
+
+    .btn-jion{
+        width:292px;
+        height:76px;
+        background:#E0414F;
+        border-radius:50px;
+        color: #fff;
+        font-size: 32px;/* px */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+}

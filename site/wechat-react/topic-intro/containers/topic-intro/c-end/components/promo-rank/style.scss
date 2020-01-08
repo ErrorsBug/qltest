@@ -1,0 +1,33 @@
+@import '../../../../../../assets/styles/base-definition.scss';
+
+.co-promo-rank{
+	height:90px;
+	padding:0 85px 0 28px;
+	border-bottom: 1px solid $gray-border;/*no*/
+	background:#fff;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position:relative;
+	font-size:26px;/*px*/
+	cursor:pointer;
+	&.icon_enter:before{
+		position:absolute;
+		top:50%;
+		right:30px;
+		margin-top:-15px;/*px*/
+		font-size:30px;/*px*/
+		color:$gray-tip;
+	}
+	.rank-list{
+		display: flex;
+		flex-direction:row-reverse;
+		.avatar{
+			@include round-avatar(50px);
+			border:1px solid #fff;/*px*/
+			margin-right:-20px;
+			background:#000;
+
+		}
+	}
+}

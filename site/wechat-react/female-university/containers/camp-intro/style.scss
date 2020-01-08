@@ -1,0 +1,370 @@
+.camp-intro-box{
+    background: #fff;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .scroll-content-container{
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        overflow-y: scroll;
+        padding-bottom: 80px;
+    }
+    .camp-intro-pic{
+        height: 466px;
+        position: relative;
+        z-index: 1;
+        background: #e5e5e5;
+    }
+    .camp-intro-detail{
+        h4{
+            font-size: 32px; /*px*/
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .camp-intro-line{
+            border-bottom: 2px solid #eee; /*no*/
+            margin-bottom:40px;
+            // padding-bottom: 20px;
+        }
+        .camp-intro-relation{
+            padding: 16px;
+            margin-bottom: 20px;
+            background: #F7F7F7;
+            border-radius:8px;
+            display: flex;
+            position: relative;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            .camp-intro-img{
+                width: 120px;
+                height: 150px;
+                overflow: hidden;
+                margin-right: 24px;
+                border-radius: 6px;
+                img{
+                    width: 100%;
+                }
+            }
+            .camp-intro-g{
+                position: relative;
+                box-sizing: border-box;
+                flex-grow: 1;
+                flex-basis: 0;
+                max-width: 100%;
+                & > div {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    h5{
+                        font-size:26px; /*px*/
+                        font-weight: bold;
+                        color:#333;
+                        line-height: 1.5;
+                        margin: 12px 0;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+                    p, span{
+                        font-size: 22px; /*px*/
+                        color: #666;
+                        line-height: 1.5;
+                        margin-bottom: 12px;
+                    }
+                    p{
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+                    span{
+                        color: #999;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            .camp-join-btn{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    }
+    .camp-intro-empty{
+        margin-top: 56px;
+        text-align: center;
+        img{
+            width: 228px;
+        }
+        .camp-intro-empty-title{
+            font-size:36px;
+            font-weight:bold;
+            color:rgba(224,65,79,1);
+            line-height:50px;
+            margin:30px 0 8px;
+        }
+        .camp-intro-empty-tip{
+            font-size:28px; 
+            color:rgba(102,102,102,1);
+            line-height:40px;
+        }
+    }
+}
+
+.camp-intro-btn{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 12px;
+    padding: 0 40px;
+    box-sizing: border-box; 
+    height: auto !important;
+    z-index: 10;
+    .camp-intro-join{
+        width: 100%;
+        height:76px;
+        background: #E0414F;
+        border-radius:50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: normal;
+        font-size: 32px;  
+        color: #fff;
+        font-weight: bold;
+    }
+    
+    .camp-intro-tip{
+        width: 416px;
+        position: absolute;
+        top:0;
+        left:50%;
+        transform: translate(-50%,-115%);
+        img{
+            width: 100%;
+        }
+    }
+    &.stop{
+        .camp-intro-join{ 
+            i{
+                font-size: 18px;  
+                margin-left: 8px;
+            }
+
+        }
+    }
+    &.full{
+        box-shadow:0px 2px 0px 0px rgba(247,247,247,1);
+        bottom:0;
+        padding: 12px 40px;
+        .camp-intro-join{ 
+            background: none; 
+        }
+    }
+    &.begin{
+        background:rgba(51,51,51,1); 
+        .camp-intro-join{
+            color:rgba(255,255,255,1); 
+        }
+    }
+    &.next{
+        background:rgba(247,247,247,1);
+        .camp-intro-join{
+            color:rgba(224,65,79,1); 
+        }
+    }
+    &.other{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background:rgba(238,238,238,1);
+        font-size:26px;
+        font-weight: normal;
+        .other-tip{
+            line-height:76px;
+            text-align: center;
+            flex: 1;
+        }
+        .camp-intro-join{
+            width:312px;
+            font-size:32px;
+            background: #E0414F;
+            position: relative;
+            .camp-intro-btn{
+                display: flex;
+                justify-content:center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+            }
+        } 
+    }
+    &.willbe{
+        background:rgba(255,240,240,1);
+        .camp-intro-join{
+            color:rgba(224,65,79,1); 
+        }
+    }
+} 
+.camp-set-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 13;
+    padding: 0 60px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & > div {
+        width: 100%;
+        background: #fff;
+        border-radius: 28px;
+        .camp-set-info{
+            padding: 48px 74px;
+            h4{
+                font-size: 36px; /*px*/
+                color: #333;
+                line-height: 1.4;
+                margin-bottom: 16px;
+                text-align: center;
+            }
+            p{
+                font-size: 26px; /*px*/
+                color: #666;
+                line-height: 1.4;
+                text-align: center;
+                span{
+                    color: #F73657;
+                }
+            }
+        }
+        .camp-set-btn{
+            width: 100%;
+            height: 92px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px; /*px*/
+            color: #333;
+            border-top: 2px solid #eee;
+        }
+    }
+}
+
+
+.camp-intro-info{
+    position: relative;
+    z-index: 3;
+    margin-top: -28px;
+    border-radius: 28px 28px 0 0;
+    background: #fff;
+    margin-bottom: 32px;
+    &.no-btm{
+        margin-bottom: 0;
+    }
+    .camp-intro-head{
+        .ln-course-bottom{
+            margin-bottom: 32px;
+            padding: 32px 32px 0;
+            p{
+                font-size: 28px; /*px*/
+                color: #999;
+                line-height: 1.4;
+                overflow : hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                i{
+                    font-size: 26px;/*px*/
+                    color: #ddd;
+                    padding-right: 8px;
+                }
+            }
+        }
+    } 
+}
+
+.cf-out-tag{
+    height: 88px;
+    .cf-inner-tag{
+        padding-left: 32px;
+        border-bottom: 2px solid #eee; /*no*/
+        height: 88px;
+        background: #fff;
+        position: relative;
+        .eb-tip-box{
+            position: absolute;
+            left: 0;
+            height: 88px;
+            width: 100%;
+            background: #F7F7F7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #666;
+            font-size: 26px; /*px*/
+            margin-bottom: 32px;
+        }
+        .cf-tag-list{
+            display: flex;
+            p{
+                padding-right: 54px;
+                position: relative;
+                span{
+                    height: 88px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 28px; /*px*/
+                    color: #666;
+                    position: relative;
+                    i{
+                        position: absolute;
+                        top: 28px;
+                        right: -62px; /*px*/
+                        font-size: 20px; /*px*/
+                        color: #666;
+                        font-style: normal;
+                        vertical-align: top;
+                        width: 60px; /*px*/
+                    }
+                    &.action{
+                        font-size: 32px; /*px*/
+                        color: #333;
+                        font-weight: bold;
+                        i{
+                            font-weight: bold;
+                            color: #333;
+                        }
+                        &::before{
+                            position: absolute;
+                            left: 50%;
+                            bottom: 0;
+                            width: 36px;
+                            height: 6px;
+                            border-radius: 6px;
+                            transform: translateX(-50%);
+                            background: #E0414F;
+                            
+                            content: "";
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+.back-tuition-label {
+    padding-top: 52px;
+    padding-bottom: 80px;
+    text-align: center;
+    line-height: 1.4;
+    background-color: #fff;
+    .title {
+        font-size: 32px;/*px*/
+        font-weight: bold;
+    }
+    .tip {
+        font-size: 26px;/*px*/
+        color: #666;
+        margin-top: 6px;
+        em {
+            color: #F73657;
+        }
+    }
+    .process-container {
+        margin: 44px auto 0;
+        width: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        >span {
+            position: relative;
+            background: {
+                position: center center;
+                size: 100% 100%;
+                repeat: no-repeat;
+            }
+        }
+        .icon::after {
+            position: absolute;
+            height: 30px;
+            width: 140px;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            line-height: 30px;
+            font-size: 22px;/*px*/
+        }
+        .sign {
+            background-image: url(./img/icon-sign.png);
+            width: 97px;
+            height: 77px;
+            &::after {
+                content: '报名课程';
+            }
+        }
+        .friends {
+            background-image: url(./img/icon-friends.png);
+            width: 115px;
+            height: 74px;
+            &::after {
+                content: '邀请好友';
+            }
+        }
+        .money {
+            background-image: url(./img/icon-money.png);
+            width: 93px;
+            height: 79px;
+            &::after {
+                content: '学费返现';
+            }
+        }
+        .step {
+            width: 35px;
+            height: 35px;
+            background-image: url(./img/icon-enter.png);
+        }
+    }
+}

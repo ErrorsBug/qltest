@@ -1,0 +1,14 @@
+<view class="view-more-container">
+    <grand-master 
+        wx:if="{{showGrandMaster}}"
+        list="{{list}}"
+        systemIos="{{system ==='ios'}}"
+        bind:loadPage="loadPage"
+    ></grand-master>
+    <common
+        wx:else
+        list="{{list}}"
+        systemIos="{{system ==='ios'}}"
+        bind:loadPage="loadPage"
+    ></common>
+</view>

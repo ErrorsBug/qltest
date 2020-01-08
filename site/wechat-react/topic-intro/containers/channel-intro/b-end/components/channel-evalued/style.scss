@@ -1,0 +1,54 @@
+.channel-evaluate-bar{
+    background: #fff;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    height: 90px;
+    padding: 0 60px 0 30px;
+    position: relative;
+    border-bottom: 1px solid #e6e6e6; /*no*/
+
+    &::before{
+        position: absolute;
+        right: 30px;
+        color: #ccc8c8;
+        font-size: 24px;
+        top:50%;
+        transform: translateY(-50%);
+        margin-top: 2px;
+    }
+
+    .main{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        font-size: 26px;/* px */
+    }
+
+    .star{
+        position: relative;
+        display: inline-block;
+        width: 133px;
+        height: 22px;
+        background: url(./img/icon-star-bg.png) left top no-repeat;
+        background-size:auto  100%;
+        margin-right: 10px;
+        color: #424242;
+        font-size: 26px;/* px */
+
+        i{
+            position: absolute;
+            width: 0;
+            height: 100%;
+            background: url(./img/icon-star.png) left top no-repeat;
+            background-size:auto  100%;
+        
+        }
+    }
+
+    .evaluate-num{
+        font-size: 26px;/* px */
+        color: #999090;
+    }
+
+}

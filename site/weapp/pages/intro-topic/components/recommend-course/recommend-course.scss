@@ -1,0 +1,109 @@
+@import '../../common.scss';
+
+.container{
+    background-color: #fff;
+    padding: 32rpx 0 0 30rpx;
+    margin-top: 18rpx;
+    .header{
+        color: #424242;
+        font-size: 32rpx;
+        line-height: 40rpx;
+        font-weight: bold;
+    } 
+}
+
+.course{
+    padding: 30rpx 30rpx 30rpx 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1rpx solid #f0f0f0;
+
+    .course-image{
+        width: 240rpx;
+        height: 150rpx;
+        margin-right: 25rpx;
+        border-radius: 4rpx;
+    }
+
+    .info{
+        flex: 1;
+        .icon-audio{
+            width: 74rpx;
+            height: 28rpx;
+            margin-right: 4rpx;
+            vertical-align: middle;
+        }
+        .icon-video{
+            width: 72rpx;
+            height: 28rpx;
+            margin-right: 4rpx;
+            vertical-align: middle;
+        }
+        .name{
+            color: #424040;
+            font-size: 28rpx;
+            line-height: 34rpx;
+            font-weight: bold;
+        }
+        .nums{
+            color: #b8b0b0;
+            font-size: 22rpx;
+            margin-top: 15rpx;
+            .learn-num{
+                margin-right: 12rpx;
+            }
+        }
+    }    
+}
+
+.status{
+    margin-top: 12rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .icon-clock{
+        width: 24rpx;
+        height: 22rpx;
+        margin-right: 12rpx;
+    }
+    
+    .status-plan{
+        font-size: 22rpx;
+        color: #ef5670;
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-right: 12rpx;
+    }
+    .status-ongoing{
+        width: 92rpx;
+        height: 32rpx;
+        line-height: 32rpx;
+        text-align: center;
+	    background-color: #0fc853;
+        border-radius: 16rpx;
+        color: #fff;
+        font-size: 20rpx;
+        display: inline-block;
+        margin-right: 12rpx;
+    }
+
+    .time{
+        color: #b8b0b0;
+        font-size: 22rpx;
+    }
+
+    .money{
+        color: #f73657;
+        font-size: 22rpx;
+        display: inline-block;
+    }
+}

@@ -1,0 +1,96 @@
+@import '../../../../../assets/styles/icon.scss';
+
+.course-item {
+    position: relative;
+    margin-bottom: 20px;
+    // display: flex;
+    // padding: 0 28px;
+    // height: 88px;
+    // background-color: #fbfaf7;
+
+    & > .operation-area {
+        display: flex;
+        padding: 0 28px;
+        height: 88px; /*px*/
+        background-color: #fff;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 26px;/*px*/
+        border-bottom: 1px solid #ebebeb;
+
+        .listen-btn {
+            display: flex;
+            align-items: center;
+            color: #666;
+            font-size: 26px;/*px*/
+            user-select: none;
+
+            .play-icon {
+                @include icon-play(30px, #666); /*no*/
+                margin-right: 7px; /*px*/
+            }
+
+            .pause-icon {
+                @include icon-pause(30px, #666); /*no*/
+                margin-right: 7px; /*px*/
+            }
+
+            .listen {
+                margin-right: 15px; /*px*/
+            }
+
+            .percent {
+                color: #c9a96e;
+            }
+        }
+
+
+        .show-tweet {
+            color: #666;
+            display: flex;
+            align-items: center;
+        }
+
+        .pre-income {
+            color: #cca24f;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            .income-num {
+                font-size: 36px;/*px*/
+                margin-left: 8px;
+                font-weight: 700;
+            }
+        }
+
+        .operate-btn {
+            width: 160px; /*px*/
+            height: 58px; /*px*/
+            border-radius: 29px;
+            font-size: 28px;/*px*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .reprint-btn {
+            width: 160px; /*px*/
+            height: 58px; /*px*/
+            border-radius: 29px;
+            background-color: #c9a96e;
+            font-size: 28px;/*px*/
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .disabled {
+            background-color: #fff;
+            border: solid 1px #c9a96e;
+            color: #c9a96e;
+        }
+    }
+
+}

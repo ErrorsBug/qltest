@@ -1,0 +1,95 @@
+.night-answer-comment{
+    margin-top: 14px;
+    background-color: #fff;
+    padding: 26px;
+    .title {
+        padding: 0 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .num {
+            color: rgb(66,66,66);
+            font-size: 30px;/*px*/
+            line-height: 40px;
+            span{
+                color: rgb(247,54,87);
+                font-size: 30px;/*px*/
+                font-weight: bold;
+                margin-left: 10px;
+            }
+        }
+    }
+    .comment-list {
+        border-bottom: 1px solid rgb(240,240,240);
+        padding: 20px 14px;
+        display: flex;
+        margin-top: 20px;
+        &:last-child{
+            border-bottom: 0;
+        }
+        >img{
+            height: 70px;
+            width: 70px;
+            border-radius:70px;
+        }
+        .comment-content {
+            flex: 1;
+            margin-left: 26px;
+            .name {
+                color: rgb(153,144,144);
+                font-size: 30px;/*px*/
+                line-height: 30px;/*px*/
+            }
+            .content{
+                color: rgb(51,51,51);
+                font-size: 32px;/*px*/
+                line-height: 40px;/*px*/
+                margin-top: 12px;
+                margin-bottom: 24px;
+            }
+            .line {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 12px;
+
+                >span{
+                    font-size: 24px;/*px*/
+                    color: rgb(153,144,144);
+                }
+                .agree {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 50px;
+                    width: 80px;
+                    cursor: pointer;
+                    >span.pic {
+                        background: {
+                            image: url(../../img/no-like.png);
+                            repeat: no-repeat;
+                            size: 100% 100%;
+                        }
+                        width: 28px;
+                        height: 28px;
+                        display: inline-block;
+                        margin-right: 10px;
+                    }
+                    >span.num {
+                        color: rgb(153,144,144);
+                        font-size: 24px;/*px*/
+                    }
+                    &.like{
+                        >span.pic {
+                            background-image: url(../../img/like.png);
+                        }
+                        
+                    >.num{
+                        color: rgb(238,87,85)
+                    }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+<template name="speak-tpl-text">
+  <view class="sp-content-box">
+    <view class="sp-type-text">
+        <block wx:if="{{speak.isReplay == 'Y' && speak.commentContent !=''}}">
+          {{speak.commentCreateByName}}:
+          <text class="sp-cmt-ask" wx:if="{{speak.isReplyQuestion == 'Y'}}">问</text> <text class="sp-reply-text-1">{{speak.commentContent}}</text>
+          <view class="sp-type-reply-cmet"  wx:if="{{speak.content != ''}}">
+          回复：<text class="sp-reply-text-1">{{speak.content}}</text>
+          </view>
+        </block>
+        <block wx:else><text>{{speak.content}}</text></block>
+    </view>
+  </view>
+</template>

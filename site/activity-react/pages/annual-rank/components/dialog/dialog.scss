@@ -1,0 +1,162 @@
+.dialog-mask {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+
+    .dialog {
+        display: block;
+        margin: auto;
+        background: white;
+        width: 630px;
+        border-radius: 12px; /*no*/
+        overflow: hidden;
+        
+        .title {
+            position: relative;
+            height: 102px; /*px*/
+            line-height: 102px; /*px*/
+            font-size: 36px; /*px*/
+            letter-spacing: 3px; /*px*/
+            color: #ffffff;
+            font-family: PingFang-SC-Medium;
+            text-align: center;
+            background: #f5cc56;
+
+            .close {
+                content: ' ';
+                position: absolute;
+                top: 19px;
+                right: 23px;
+                height: 30px; /*px*/
+                width: 30px; /*px*/
+                background-image: url(../../assets/close.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                cursor: pointer;
+            }
+
+            .yes {
+                display: inline-block;
+                height: 40px; /*px*/
+                vertical-align: middle;
+                margin-right: 5px;
+                margin-top: -5px; /*px*/
+            }
+
+        }
+
+        .coupon {
+            width: 501px;
+            height: 161px;
+            display: flex;
+            margin: 28px auto 23px;
+            background: url(../../assets/coupon.png) no-repeat;
+            background-size: cover;
+
+            .coupon-money {
+                line-height: 161px;
+                font-size: 50px; /*px*/
+                text-align: center;
+                width: 158px;
+                color: #f84c69;
+
+                .unit {
+                    font-size: 32px; /*px*/
+                }
+            }
+
+            .coupon-info {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 16px 16px 16px 10px;
+
+                .coupon-img {
+                    display: block;
+                    width: 60px;
+                    height: 60px;
+                    margin: 16px;
+                    border-radius: 50%;
+                }
+
+                .coupon-info-right {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    width: 0;
+                    padding-right: 10px;
+
+                    .name {
+                        height: 30px; /*px*/
+                        line-height: 30px; /*px*/
+                        color: #333333;
+                        font-size: 26px; /*px*/
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        max-width: 220px;
+                    }
+
+                    .intro, .time {
+                        line-height: 30px; /*px*/
+                        height: 30px; /*px*/
+                        font-size: 20px; /*px*/
+                        color: #999999;
+                    }
+                }
+            }
+        }
+
+        .avatar {
+            display: block;
+            margin: 30px auto 21px;
+            width: 106px;
+            height: 106px;
+            border-radius: 50%;
+        }
+
+        .nickname {
+            font-size: 26px; /*px*/
+            color: #424242;
+            font-family: PingFang-SC-Bold;
+            text-align: center;
+        }
+
+        .btn-wrap {
+            margin: 21px auto 38px;
+            
+            .btn {
+                width: 168px;
+                height: 50px; /*px*/
+                line-height: 50px; /*px*/
+                border: solid 2px #dcae56;
+                color: #dcae56;
+                font-size: 24px; /*px*/
+                margin: auto;
+                text-align: center;
+                cursor: pointer;
+                user-select: none;
+            }
+
+            .has-focus {
+                border: 1px solid #a0988a;
+                color: #a0988a;
+            }
+    
+        }
+
+        .footer {
+            margin-bottom: 40px;
+            text-align: center;
+            font-size: 26px; /*px*/
+            color: #999;
+            font-family: PingFang-SC-Medium;
+        }
+    }
+}

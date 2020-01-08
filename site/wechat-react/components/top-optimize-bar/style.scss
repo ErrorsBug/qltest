@@ -1,0 +1,30 @@
+.top-optimized-bar_FDSGA {
+    display: flex;
+    color: #F63657;
+    font-size: 26px;
+    height: 88px;
+    background: #fff;
+    align-items: center;
+    padding: 0 40px;
+    .flex-1 {
+        display: flex;
+        flex: 1;
+        align-items: center;
+
+        img {
+            height: 1.5em;
+            margin-right: 14px;
+        }
+    }
+
+    .look-up {
+        margin-right: 40px;
+        cursor: pointer;
+    }
+
+    .close {
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+    }
+}

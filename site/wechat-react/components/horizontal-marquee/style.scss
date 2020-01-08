@@ -1,0 +1,16 @@
+.co-horizontal-marquee {
+    overflow-y: hidden;
+    .horizontal-marquee-container {
+        display: flex;
+        flex-flow: row nowrap;
+        overflow: hidden;
+        .content {
+            flex-shrink: 0;
+            display: flex;
+            flex-flow: row nowrap;
+            > div {
+                flex-shrink: 0;
+            }
+        }
+    }
+}

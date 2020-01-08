@@ -1,0 +1,33 @@
+<view class="detail-section">
+    <view class="detail-intro">课程介绍</view>
+    <block wx:if="{{!noContent || !notSummary}}">
+        <view class="detail-main {{expand ? 'show-detail' : 'hide-detail'}}">
+            <audio-bar 
+                wx:if="{{audios.length}}"
+                courseName="{{topicPo.topic}}"
+                audios="{{audios}}"
+            />
+
+            <view wx:if="{{topicPo.speaker}}" class="detail-title">主讲人：{{topicPo.speaker}}</view>
+            <text wx:if="{{topicPo.guestIntr}}" class="detail-title">嘉宾：{{topicPo.guestIntr}}</text>
+            <view class="detail-title">课程概要</view>
+            <text wx:if="{{topicPo.remark}}" class="detail-text"> {{topicPo.remark}}</text>
+            <!-- 非富文本的介绍 -->
+            <block wx:if="{{images.length && notSummary}}" wx:for="{{images}}" wx:key="resourceId">
+                <image mode="widthFix" src="{{item.url}}" class="detail-profile-image"></image>
+                <text wx:if='{{item.msg}}' class="detail-profile-text"> {{item.msg}}</text>
+            </block>
+            <!-- 富文本的介绍 -->
+            <view wx:if="{{!notSummary}}"class="rich-text-box">
+                <rich-text nodes="{{summary}}" bindtap="tap"></rich-text>
+            </view>
+        </view>
+        
+        <view class="expand-btn" bindtap="toggleExpand">
+            {{expand ? '收起' : '查看全部'}}
+        </view>
+    </block>
+    <view wx:if="{{noContent && notSummary}}" class="no-content">
+        老师暂未填写
+    </view>
+</view>

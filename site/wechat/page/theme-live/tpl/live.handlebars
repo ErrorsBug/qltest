@@ -1,0 +1,37 @@
+{{#each lives}}
+<li class="live on-log" log-name="{{liveName}}" log-region="live_list" log-business_id="{{liveId}}" log-business_type="{{type}}" data-id="{{liveId}}" data-type={{type}}>
+    <div class="head-wrap tap-on tap-bgc" data-id="{{liveId}}">
+        <div class="head">
+            <div class="pic">
+                <img class="img-default" data-imgloaded="false" data-imgsrc="{{img-format liveLogo '@108w_108h_1e_1c_2o_1l'}}" />
+            </div>
+            <div class="desc">
+                <div class="title">{{liveName}}</div>
+                <div class="tip">
+                    <span class="follow-num">{{fansNum}}人关注</span>
+                </div>
+            </div>
+            <div class="status-btn on-log" log-pos="live-focus" log-liveId="{{liveId}}" data-id="{{liveId}}">
+                <div class="status {{#if focus}} followed {{/if}}">
+                    <span>{{#if focus}}已关注{{else}}关注{{/if}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        {{#if qlPoint}}
+        <div class="item point">
+            <p class="value">{{qlPoint}}</p>
+        </div>
+        {{/if}}
+        {{#if comment}}
+        <div class="item comment">
+            <p class="value">{{comment}}</p>
+        </div>
+        {{/if}}
+        <ul class="topics hidden" data-liveId="{{liveId}}">
+            
+        </ul>
+    </div>
+</li>
+{{/each}}

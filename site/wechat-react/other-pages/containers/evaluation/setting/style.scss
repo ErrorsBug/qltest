@@ -1,0 +1,52 @@
+.evaluation-set-ctn {
+    width: 100%;
+    .list-box {
+        padding-top: 30px;
+        .list-item {
+            display: flex;
+            align-items: center;
+            padding: 0 26px;
+            height: 90px;
+            background: #fff;
+            .setting-name {
+                flex: 1 1;
+                font-size: 26px; /*px*/
+                color: #333;
+            }
+            .setting-op {
+                flex: 0 0 100px;
+                height: 50px;
+                border: 1px solid #ccc;
+                border-radius: 27px;
+                overflow: hidden;
+                cursor: pointer;
+                .inner-bar {
+                    position: relative;
+                    left: -1px; /*no*/
+                    top: -1px; /*no*/
+                    width: 50px;
+                    height: 50px;
+                    border: 1px solid #ccc; /*no*/
+                    border-radius: 26px;
+                    background: #fff;
+                }
+                &.active {
+                    background: #f73657;
+                    border-color: #f73657;
+                    .inner-bar {
+                        left: 48px;
+                        border-color: #f73657;
+                    }
+                }
+            }
+        }
+    }
+    
+    .dialog-txt {
+        padding: 0 78px;
+        text-align: left;
+        font-size: 28px; /*px*/
+        line-height: 1.5;
+        color: #737373;
+    }
+}

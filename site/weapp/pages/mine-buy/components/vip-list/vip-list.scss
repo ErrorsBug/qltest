@@ -1,0 +1,86 @@
+.elli
+{
+	display: block;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.multi-elli
+{
+	display: block;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.vip-purchase-list-wrap{
+    background-color:#f5f2f2; 
+}
+
+.vip-purchase-list{
+    width:100%;
+    padding-left: 30rpx;
+    background-color: #f5f2f2;
+    padding: 30rpx;
+    box-sizing: border-box;
+
+    .list-item{
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          height: 180rpx;
+          padding-right: 30rpx;
+          margin-bottom: 30rpx;
+          background-color: #fff;
+          box-shadow: 0 0 20rpx 0 rgba(0, 0, 0, 0.06);
+          border-radius: 5rpx;
+          background-image: url(./img/tag-vip.png?__inline);
+          background-repeat: no-repeat;
+          background-position: right top;
+          background-size: 165rpx 140rpx;
+          position: relative;
+          &.overtime::after{
+              background-color: #ccc;
+          }
+          &::after{
+              content:'';
+              position: absolute;
+              width: 100%;
+              height: 10rpx;
+              bottom: 0;
+              left: 0;
+              background-color: #dcdc88;
+              border-bottom-left-radius: 5rpx;
+              border-bottom-right-radius: 5rpx;
+          }
+          .image{
+              width: 110rpx;
+              height: 110rpx;
+              flex-shrink: 0;
+              margin-left: 30rpx;
+              border-radius: 100%;
+          }
+          .info{
+              margin-left: 25rpx;
+              view{
+                  width: 100%;
+                  line-height: normal;
+              }
+              .title{
+                  font-size: 30rpx;
+                  color: #424242;
+                  font-weight: 700;
+              }
+              .time{
+                  font-size: 22rpx;
+                  color: #bdb5b5;
+                  margin-top: 12rpx;
+              }
+          }
+    }
+}

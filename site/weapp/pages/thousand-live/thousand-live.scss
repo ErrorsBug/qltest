@@ -1,0 +1,401 @@
+@import '../../comp/swiper-banners/swiper-banners';
+
+/*变量区*/
+$blue-1:#2984e2;
+
+/*闭合一切浮动*/
+.clearfix{
+  zoom:1;
+}
+.clearfix::after {
+  content:" ";
+  visibility:hidden;
+  display:block;
+  font-size:0;
+  clear:both;
+  height:0;
+}
+
+.icon{
+  width: 100%;
+  height: 100%;
+}
+
+
+/******主框架******/
+page{
+  height: 100%;
+  overflow: hidden;
+}
+.page-view{
+  position: absolute;
+  display: flex;
+  -webkit-flex-direction:column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.thousand-live-view{
+  position: relative;
+  height: 100%;
+  width:100%;
+  box-flex:1;
+  -webkit-box-flex:1.0;
+  overflow: hidden;
+  background-color: #fff;
+}
+.topic-view{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.topic-view-flex{
+  position: relative;
+  -webkit-flex-direction:column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display:flex;
+}
+.speak-main-view{
+  position: relative;
+  width: 100%;
+  display: block;
+  flex:1;
+  overflow: hidden;
+}
+
+.speak-list-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20rpx;
+}
+
+.speak-loading-icon {
+    width: 44rpx;
+    height: 44rpx;
+}
+
+
+/*****通用组件*****/
+.dialog-box{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 100;
+}
+.dialog-main{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  min-width: 300rpx;
+  max-width: 90%;
+  min-height: 100rpx;
+  padding-bottom: 140rpx;
+  background: #fff;
+  border-radius: 15rpx;
+  overflow: hidden;
+}
+.dialog-title{
+  display: flex;
+  height: 80rpx;
+  line-height: 40rpx;
+  font-size: 30rpx;
+  color: $blue-1;
+  align-items: center;
+  padding:20rpx 40rpx;
+  justify-content: center;
+}
+.dialog-content{
+  padding:0 40rpx 20rpx;
+  box-sizing: border-box;
+}
+
+.dialog-bottom-type-one{
+  position: absolute;
+  box-sizing: border-box;
+  bottom: 0;
+  left:0;
+  padding: 40rpx 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.dialog-btn-cancel,
+.dialog-btn-submit{
+  display: block;
+  flex: 1;
+  margin: 0 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 5rpx;
+  font-size: 30rpx;
+}
+.dialog-btn-cancel{
+  border:solid 1rpx #ccc;
+  color: #ccc;
+}
+.dialog-btn-submit{
+  background: $blue-1;
+  color: #fff;
+}
+
+/*****ppt*****/
+.ppt-swiper{
+  display: block;
+  width: 750rpx;
+  height: 420rpx;
+  background: #000;
+  position:relative;
+  z-index:1;
+
+}
+.ppt-swiper swiper-item{
+  text-align: center;
+}
+.slide-image{
+  width: 100%;
+}
+
+
+/*回到直播间菜单*/
+.back-live-bar{
+  position: absolute;
+  left: 20rpx;
+  top: 20rpx;
+  max-width: 280rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 26rpx;
+  color:#568cc3;
+  padding:7rpx 18rpx 7rpx 7rpx;
+  background: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 100rpx;
+  box-shadow: 0 0 10rpx #ccc;
+  opacity: 0.9;
+  z-index: 1;
+}
+.back-live-bar image{
+  display: inline-block;
+  vertical-align: top;
+  height: 60rpx;
+  width: 60rpx;
+  margin-right: 10rpx;
+  border-radius: 100rpx;
+}
+
+/*top-menu*/
+.top-tab-menu{
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-left: solid 2rpx #fff;
+  border-bottom: solid 2rpx #fff;
+  border-bottom-left-radius: 15rpx;
+  overflow: hidden;
+  z-index: 1;
+}
+.top-tab-menu-li{
+  display: block;
+  width: 70rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.4;
+  text-align: center;
+  color: #fff;
+  font-size: 28rpx;
+  white-space: nowrap;
+}
+
+
+/*弹幕*/
+.barrage-view{
+  // position: absolute;
+  // padding-top: 70rpx;
+  // right: 20rpx;
+  // top:20rpx;
+
+  position: absolute;
+  bottom: 10rpx;
+  right: 15rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 1;
+  pointer-events: none;
+  transform: translateZ(0);
+}
+
+.barrage-list {
+    display: flex;
+    flex-direction:column-reverse;
+    align-items:flex-end;
+}
+
+/*头部计时器*/
+
+.btn-goto-intro{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: none;
+  border: none;
+  color: #505559;
+  font-size: 32rpx;
+  margin-top: 30rpx;
+}
+
+.btn-goto-intro image {
+    width: 32rpx;
+    height: 30rpx;
+    margin-right: 16rpx;
+}
+
+/*听课指南*/
+
+
+
+/*****speak-list*****/
+.speak-list{
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+
+}
+
+/*底部操作框*/
+.btn-audio {
+    font-size: 40rpx;
+    color: #808080;
+    margin-right: 10rpx;
+}
+
+
+.left-right-tips{
+  position: absolute;
+  left: 0;
+  bottom: 20rpx;
+}
+
+.btn-goto-backplay{
+  overflow: hidden;
+  margin-bottom: 20rpx;
+  font-size: 22rpx;
+  color: #7d8a96;
+  border-bottom-left-radius: 10rpx;
+  height: auto;
+  font-weight: bold;
+  text-align: center;
+}
+
+.btn-goto-playing{
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width:260rpx ;
+  height: 80rpx;
+  align-items: center;
+  background: #fff;
+  color: $blue-1;
+  font-size: 26rpx;
+  white-space: nowrap;
+  padding: 0 0 0 20rpx;
+  border-top-right-radius: 80rpx;
+  border-bottom-right-radius: 80rpx;
+
+}
+.icon-gt-play{
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 15rpx;
+}
+
+.who-is-typing{
+  display: inline-block;
+  height: 70rpx;
+  line-height: 70rpx;
+  padding: 0 20rpx;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  font-size: 26rpx;
+  border-radius: 70rpx;
+  margin:20rpx 0 0 10rpx;
+
+}
+.typing-name{
+  display: inline-block;
+  max-width: 300rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+
+
+.tips-moda-close{
+  z-index: 100;
+  width: 90rpx;
+  height: 90rpx;
+  position: absolute;
+  bottom: -120rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  cursor:pointer;
+}
+
+.info{
+    position: relative;
+    display: inline-block;
+    height: 60rpx;
+    line-height: 60rpx;
+    padding: 0 20rpx;
+    color: #fff;
+    text-align: center;
+    background: #20cd59;
+    border-radius: 60rpx;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.info::before {
+    position: absolute;
+    content: "";
+    left: 30%;
+    top: -12rpx;
+    width: 0;
+    height: 0;
+    border-width: 0 14rpx 14rpx 14rpx;
+    border-color: transparent transparent #20cd59 transparent;
+    border-style: solid;
+}
+
+.btn-close{
+    position: absolute;
+    display: inline-block;
+    width: 60rpx;
+    height: 60rpx;
+    text-align: center;
+    line-height: 60rpx;
+    color: rgba(255,255,255,.8);
+    font-size: 28rpx;
+    border-radius: 80rpx;
+    background: #20cd59;
+    right: 0;
+    transform: translateX(120%);
+}

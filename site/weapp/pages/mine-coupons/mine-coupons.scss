@@ -1,0 +1,95 @@
+@import "../../comp/style-variables.scss";
+@import "./coupon-item.scss";
+
+page {
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cate-wrap {
+  flex-shrink: 0;
+  background-color: #fff;
+  text-align: center;
+
+  .cate-pri {
+    display: flex;
+    justify-content: space-around;
+    height: 88rpx;
+    line-height: 88rpx;
+    font-size: 28rpx;
+    color: $fontC1;
+    border-bottom: 1rpx solid #f0f0f0;
+    box-sizing: border-box;
+
+    .cate-pri-item {
+      flex-shrink: 0;
+      height: 87rpx;
+      box-sizing: border-box;
+
+      &.active {
+        color: red;
+        border-bottom: 2rpx solid $red;
+      }
+    }
+  }
+
+  .cate-sec {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 24rpx;
+    color: $fontC3;
+    line-height: 50rpx;
+    padding-top: 20rpx;
+    padding-left: 20rpx;
+    
+    .cate-sec-item {
+      border: 2rpx solid #f0f0f0;
+      box-sizing: border-box;
+      border-radius: 50rpx;
+      padding: 0 1em;
+      margin-right: 20rpx;
+      margin-bottom: 20rpx;
+      white-space: nowrap;
+      &.active {
+        color: $red;
+      }
+    }
+  }
+}
+
+.list-wrap {
+  flex-grow: 1;
+  overflow: auto;
+  @include couponItemClass;
+}
+
+.footer-wrap {
+  flex-shrink: 0;
+  height: 98rpx;
+  line-height: 100rpx;
+  color: $red;
+  font-size: 32rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  
+  image {
+    width: 48rpx;
+    height: 48rpx;
+    margin-right: 10rpx;
+  }
+}
+
+.list-loading-status {
+  font-size: 30rpx;
+  color: $fontC3;
+  line-height: 80rpx;
+  text-align: center;
+  margin-top: 10rpx;
+}

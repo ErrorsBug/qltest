@@ -1,0 +1,103 @@
+.user-method-dialog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    // background-color: rgba(0,0,0,.6);
+
+    .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,.6);
+    }
+    .user-method-container {
+        position: absolute;
+        width: 640px;
+        background-color: #fff;
+        border-radius: 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 50px 50px 0;
+        height: 1000px;
+        overflow: hidden;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        .title {
+            text-align: center;
+            font-size: 32px;/*px*/
+            color: #333;
+            line-height: 2;
+            margin-bottom: 20px;
+            font-weight: 500;
+            flex-shrink: 0;
+        }
+        .method-container {
+            flex: 1;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            .question {
+                position: relative;
+                color: #333;
+                font-size: 28px;/*px*/
+                line-height: 2;
+                font-weight: 500;
+            }
+            .img {
+                // height: 650px;
+                width: 100%;
+                margin-bottom: 30px;
+                border-radius:8px;
+            }
+            .answer {
+                padding-left: 20px;
+                color: #666;
+                font-size: 28px;/*px*/
+                line-height: 1.5;
+                margin-bottom: 30px;
+            }
+
+            var {
+                color: #F73657;
+            }
+
+            .img-box {
+                display: flex;
+                & > div {
+                    width: 280px;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        flex-shrink: 0;
+        padding: 40px 0 30px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+
+        .i-konw {
+            width: 468px;
+            height: 76px;
+            background:rgba(247,54,87,1);
+            border-radius:50px;
+            cursor: pointer;
+            font-size: 32px;/*px*/
+            color: #fff;
+            text-align: center;
+            line-height: 76px;
+        }
+    }
+}

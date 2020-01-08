@@ -1,0 +1,78 @@
+@import "../../../assets/styles/base-definition";
+.member-free-courses-page{
+	height:100%;
+	background:#fff;
+	position: relative;
+	display:flex;
+	flex-direction: column;
+	.co-scroll-to-load{
+		position:relative;
+		flex:1;
+		padding-bottom:40px;
+	}
+	.courses-list{
+		padding:40px;
+		.course-item{
+			display:flex;
+			margin-bottom:66px;
+			&:last-child{
+				margin-bottom:0;
+			}
+			.sub-info{
+				width:240px;
+				flex-shrink: 0;
+				border-radius: 4px;
+				overflow: hidden;
+				.poster{
+					width:240px;
+					height:148px;
+					@include filled-img;
+				}
+				.study-count{
+					height:36px;
+					@include flex-center;
+					color:#666;
+					font-size:22px;/*px*/
+					background:#f7f7f7;
+				}
+			}
+			.main-info{
+				margin-left:20px;
+				width:10px;
+				flex:1;
+				line-height:1.4;
+				display:flex;
+				flex-direction:column;
+				justify-content: space-between;
+				.name{
+					font-size:30px;/*px*/
+					font-weight: bolder;
+					overflow: hidden;
+					display: -webkit-box;
+					-webkit-box-orient: vertical;
+					text-overflow: ellipsis;
+					-webkit-line-clamp: 2;
+				}
+				.teacher{
+					color:#666;
+					margin-top:6px;
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+				}
+				.tip{
+					height:36px;
+					@include flex-center;
+					justify-content: space-between;
+					color:#b2b2b2;
+					font-size:22px;/*px*/
+					.price .now{
+						color:$main-color;
+						margin-left:10px;
+						font-weight: bolder	;
+					}
+				}
+			}
+		}
+	}
+}

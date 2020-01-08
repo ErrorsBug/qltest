@@ -1,0 +1,19 @@
+.topic-no-data {
+	margin-top : 70px;
+	.img {
+		// background-image: '../img/noEvaluation.png';
+		background:url(./img/no-data.png) no-repeat center;
+		background-size:100% auto;
+		// display: block;
+		width: 375px;
+		height: 310px;
+		margin: auto;
+		border-width: 0;
+		opacity:.5;
+	}
+	.tip {
+		text-align: center;
+		color: #bfbfbf;
+		font-size: 28px; /*px*/
+	}
+}

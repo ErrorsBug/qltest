@@ -1,0 +1,245 @@
+@import "../../comp/style-variables.scss";
+
+page {
+  height: 100%;
+}
+
+.container {
+  padding-bottom: 118rpx;
+  height: 100%;
+  background: #f2f4f5;
+  overflow: auto;
+}
+
+.section {
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+
+
+.business-intro {
+  .main {
+    display: flex;
+    font-size: 30rpx;
+    line-height: 44rpx;
+    padding: 30rpx;
+
+    image {
+      flex-shrink: 0;
+      width: 240rpx;
+      height: 150rpx;
+      border-radius: 6rpx;
+    }
+    
+    .right {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .name {
+      @include webkitLineClamp(2);
+      padding-left: 20rpx;
+    }
+
+    .price {
+      font-size: 28rpx;
+      color: $fontC2;
+      padding-top: 10rpx;
+      padding-left: 20rpx;
+    }
+  }
+
+  .desc {
+    background-color: #fafafa;
+    color: $fontC3;
+    font-size: 24rpx;
+    line-height: 1.7;
+    padding: 20rpx 30rpx;
+  }
+}
+
+
+.purchase-notes {
+  padding: 30rpx;
+
+  .title {
+    font-size: 32rpx;
+    color: $fontC1;
+    line-height: 1;
+  }
+
+  .list {
+    font-size: 26rpx;
+    line-height: 36rpx;
+    color: $fontC3;
+    margin-top: 25rpx;
+
+    .item {
+      padding-left: 1.4em;
+      margin-bottom: .3em;
+    }
+
+    .order {
+      float: left;
+      margin-left: -1.4em;
+    }
+  }
+}
+
+.cells {
+  .cell {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 88rpx;
+    line-height: 1;
+    font-size: 32rpx;
+    padding: 0 30rpx;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1rpx;
+      background-color: #ebebeb;
+    }
+    &:last-child::after {
+      content: none;
+    }
+
+    .content {
+      flex-grow: 1;
+      flex-shrink: 0;
+      white-space: nowrap;
+      color: $fontC1;
+    }
+
+    .desc {
+      flex-shrink: 0;
+      font-size: 28rpx;
+      color: $fontC3;
+      display: flex;
+      align-items: center;
+    }
+
+    .arrow {
+      flex-shrink: 0;
+      width: 24rpx;
+      height: 24rpx;
+      padding-left: .3em;
+    }
+
+    .red {
+      color: $red;
+    }
+  }
+
+  .icon-discount {
+    display: inline-block;
+    width: 32rpx;
+    height: 32rpx;
+    background: url(../../comp/img/icon-discount-32x24.png?__inline) no-repeat center;
+    background-size: contain;
+    margin-left: .6em;
+  }
+}
+
+.need-to-pay {
+  color: $red;
+  font-size: 30rpx;
+  padding-right: 1.2em;
+  .price {
+    display: inline-block;
+    font-size: 50rpx;
+  }
+}
+
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 98rpx;
+
+  .pay-btn {
+    height: 100%;
+    background-color: $red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32rpx;
+    color: #fff;
+  }
+}
+
+
+
+.win-select-charge {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+  color: $fontC1;
+  .panel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 600rpx;
+    max-height: 90%;
+    background-color: #fff;
+    border-radius: 20rpx;
+    padding-bottom: 50rpx;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+  .title {
+    flex-shrink: 0;
+    font-size: 36rpx;
+    line-height: 130rpx;
+    text-align: center;
+  }
+
+  .list {
+    flex-grow: 1;
+    font-size: 34rpx;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+    overflow: auto;
+
+    .item {
+      padding: 0 30rpx;
+      height: 108rpx;
+      box-sizing: border-box;
+      border-bottom: 1px solid $border;
+      display: flex;
+      align-items: center;
+
+      .content {
+        flex-grow: 1;
+      }
+
+      .tick {
+        flex-shrink: 0;
+        width: 46rpx;
+        height: 46rpx;
+        border: 3rpx solid $border;
+        box-sizing: border-box;
+        border-radius: 50%;
+
+        &.active {
+          border: none;
+          background: url(../../comp/img/icon-tick-green-46x46.png?__inline) no-repeat center;
+          background-size: contain;
+        }
+      }
+    }
+  }
+}

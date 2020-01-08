@@ -1,0 +1,43 @@
+{{#each topics}}
+<li class="tap-on tap-bgc on-log" log-region="topic_list" log-name="{{topic}}" log-business_id="{{topicId}}" log-business_type="{{type}}" data-id="{{topicId}}" data-type="{{type}}" data-url="{{url}}">
+    <div class="pic">
+        <img class="img-default" data-imgloaded="false" data-imgsrc="{{img-format topicLogo '@270w_180h_1e_1c_2o_1l'}}" />
+        {{#compare money '>' 0}}
+        <span class="tag tag-money">￥{{money-format ../money}}</span>
+        <div class="shade"></div>
+        {{/compare}}
+        {{#compare money '===' 0}}
+            <span class="tag tag-free">免费</span>
+            <div class="shade"></div>
+        {{/compare}}
+    </div>
+    <div class="desc">
+        <div class="title">{{topic}}</div>
+        <div class="other">
+            <div class="live-title">{{liveName}}</div>
+            {{#compare topicStatus '===' 'ended'}}
+                {{#compare topicSpeakNum '>=' 0}}
+                    <span class="record-num">{{../topicSpeakNum}}条发言</span>
+                {{/compare}}<span class="follow-num">{{digitFormat ../topicSessionNum}}人次</span>
+            {{/compare}}
+            {{#compare topicStatus '===' 'beginning'}}
+                {{#is-beginning ../topicStartTime}}
+                <div class="status">
+                    <div class="status-icon">
+                        {{#if ../liveLogo}}
+                            <img class="img-default" data-imgloaded="false" data-imgsrc="{{img-format ../liveLogo '@38w_38h_1e_1c_2o_1l'}}" />
+                        {{else}}
+                            <img class="img-default" data-imgloaded="true" src="{{img-empty 'empty'}}" />
+                        {{/if}}
+                    </div>
+                    <span class="status-show">{{status-show ../topicStartTime}}</span>
+                </div>
+                <span class="follow-num">{{digitFormat ../topicSessionNum}}人次</span>
+                {{else}}
+                    <span class="date-show">{{status-show ../topicStartTime}}</span><span class="follow-num">{{digitFormat ../topicSessionNum}}人次</span>
+                {{/is-beginning}}
+            {{/compare}}
+        </div>
+    </div>
+</li>
+{{/each}}

@@ -1,0 +1,25 @@
+.cl-teacher-dialog{ 
+    bottom:20px;right:10px;
+    z-index: 10;
+    .cl-td-icon{
+        width: 176px;
+        height: 188px;
+    }
+}
+.cl-teacher-dialog-img{
+    .co-dialog-content{
+        background: none;
+        overflow:visible;
+        border-radius: 0;
+        span{
+            position: absolute;
+            top: -33px;
+            right: -20px;
+            width: 66px;
+            height: 66px;
+            background: url("https://img.qlchat.com/qlLive/business/8P8VB25E-DRWK-VFDB-1565252842399-3J7QZVBW6KJF.png") no-repeat center;
+            background-size: 100%;   
+            z-index: 10;
+        }
+    }
+}

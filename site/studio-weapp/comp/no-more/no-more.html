@@ -1,0 +1,6 @@
+<view style="min-height:120rpx;">
+    <view wx:if="{{noneOne}}">
+        <include src="../none-page/none-page.wxml" />
+    </view>
+    <view class="nomore" wx:if="{{noMore && !noneOne}}">没有更多</view>
+</view>

@@ -1,0 +1,103 @@
+<block
+    wx:for="{{speakList}}"
+    wx:for-item="speak"
+    wx:key="index"
+    >
+    <!-- <template is="speak-tpl" data="{{item,isPlaying,topicView}}"/> -->
+
+    <block wx:if="{{speak.type == 'text'}}">
+        <speak-text
+            id="id{{speak.id}}"
+
+            speak="{{speak}}"
+            topicView="{{topicView}}"
+            bindopenReward="openReward"
+            system="{{system}}"
+            
+        ></speak-text>
+    </block>
+
+    <block wx:elif="{{speak.type == 'image'}}">
+        <speak-image
+            id="id{{speak.id}}"
+
+            speak="{{speak}}"
+            topicView="{{topicView}}"
+            bindopenReward="openReward"
+            bindonImgClick="onImgClick"
+            system="{{system}}"
+        ></speak-image>
+    </block>
+
+    <block wx:elif="{{speak.type == 'audio'}}">
+        <speak-audio
+            id="id{{speak.id}}"
+
+            speak="{{speak}}"
+            playingSpeakId="{{playingSpeakId}}"
+            playingSpeakPercent="{{playingSpeakPercent}}"
+            playingSpeakDuration="{{playingSpeakDuration}}"
+            playingSpeakStatus="{{playingSpeakStatus}}"
+
+
+            topicView="{{topicView}}"
+            bindopenReward="openReward"
+            system="{{system}}"
+            bindonPlayAudioBtnClick="onPlayAudioBtnClick"
+
+            bindonTouchAudioSliderStart="onTouchAudioSliderStart"
+            bindonTouchAudioSliderEnd="onTouchAudioSliderEnd"
+            bindonTouchAudioSliderCancel="onTouchAudioSliderCancel"
+
+        ></speak-audio>
+
+    </block>
+
+    <block wx:elif="{{speak.type == 'redpacket'}}">
+        <speak-redpacket
+            id="id{{speak.id}}"
+
+            speak="{{speak}}"
+            topicView="{{topicView}}"
+            bindopenReward="openReward"
+            system="{{system}}"
+
+        ></speak-redpacket>
+    </block>
+
+    <block wx:elif="{{speak.type == 'invite'}}">
+        <speak-invite
+            id="id{{speak.id}}"
+
+            speak="{{speak}}"
+            topicView="{{topicView}}"
+            bindopenReward="openReward"
+            system="{{system}}"
+
+        ></speak-invite>
+    </block>
+
+    <block wx:elif="{{speak.type == 'tips'}}">
+        <speak-tips
+            id="id{{speak.id}}"
+
+            speak="{{speak}}"
+            topicView="{{topicView}}"
+            bindopenReward="openReward"
+            system="{{system}}"
+
+        ></speak-tips>
+    </block>
+
+    <block wx:elif="{{speak.type != 'start' && speak.type != 'start-default'}}">
+        <speak-other
+            id="id{{speak.id}}"
+
+            speak="{{speak}}"
+            topicView="{{topicView}}"
+            bindopenReward="openReward"
+            system="{{system}}"
+
+        ></speak-other>
+    </block>
+</block>

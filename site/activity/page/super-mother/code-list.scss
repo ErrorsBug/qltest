@@ -1,0 +1,105 @@
+
+.containers {
+    background: #ff5e5e !important;
+    max-width: 1280px; /*px*/
+    min-width: 640px; /*px*/
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+
+    padding: 50px 30px;
+}
+
+.code-wrap {
+    background-color: #fff;
+    border-radius: 10px;
+
+    text-align: center;
+    color: #333;
+
+    .des {
+        color: #666;
+        font-size: 24px; /*px*/
+        padding-top: 80px;
+    }
+
+    h1 {
+        padding-top: 40px;
+        font-size: 50px; /*px*/
+    }
+
+    .use-btn {
+        margin-top: 40px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 370px;
+        height: 80px;
+        background-color: #f83657;
+        font-size: 32px; /*px*/
+        color: #fff;
+        border-radius: 100px;
+    }
+
+    ul {
+        margin-top: 40px;
+        padding: 0 20px;
+        border-top: 1px dashed #e6e6e6; /*no*/
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            border-radius: 100px;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: -10px;
+            top: -10px;
+            background-color: #ff5e5e;
+        }
+        
+        &::after {
+            content: "";
+            display: block;
+            border-radius: 100px;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            right: -10px;
+            top: -10px;
+            background-color: #ff5e5e;
+        }
+
+        li {
+            padding: 26px 0; 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            border-bottom: 1px solid #e6e6e6; /*no*/
+
+            .left {
+                font-size: 32px; /*px*/
+            }
+            .right {
+                line-height: 1.4;
+                max-width: 400px;
+                font-size: 30px; /*px*/
+                color: #999;
+                text-align: right;
+
+            }
+
+            .txl {
+                
+            }
+            .red {
+                color: #f83657;
+                font-weight: bold;
+            }
+        }
+    }
+
+}

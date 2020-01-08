@@ -1,0 +1,36 @@
+/* 系列课tab bar*/
+.channel-tab-bar
+{
+	height: 84rpx;
+	display: flex;
+	box-sizing: border-box;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0 30rpx;
+	padding-top: 17rpx;
+	background-color: #fefefe;
+	white-space: nowrap;
+	border-bottom: 1px solid #f2f2f2;
+}
+
+.channel-tab-item
+{
+	height: 50rpx;
+	line-height: 50rpx;
+	display: inline-block;
+	font-size: 26rpx;
+	padding: 0 27rpx;
+	color: #424242;
+	background-color: #f5f2f2;
+	// border: solid 1rpx #ebebeb;
+	border-radius: 50rpx;
+	margin-right: 25rpx;
+}
+
+.channel-tab-item-on
+{
+	border: 1rpx solid #f73657;
+	color: #f73657;
+	background-color: #ffffff;
+}

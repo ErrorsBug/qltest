@@ -1,0 +1,117 @@
+.set-income-type__REWRQE {
+  .co-dialog-bottom {
+    border-top-left-radius: 26px;
+    border-top-right-radius: 26px;
+    background: #fff;
+
+    .header {
+      padding: 30px 0;
+      text-align: center;
+      font-family: PingFangSC;
+      font-weight: 600;
+      font-size: 36px;
+      color: #666666;
+      letter-spacing: 0;
+      border-bottom: 2px solid #f7f7f7;
+    }
+
+    .body {
+      padding: 0 0 30px 0;
+
+      .add-income-type {
+        padding: 40px 0;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        justify-content: center;
+        cursor: pointer;
+        color: #f73657;
+
+        .icon-add {
+          display: inline-block;
+          width: 34px;
+          height: 34px;
+          vertical-align: middle;
+          margin-right: 16px;
+        }
+      }
+
+      .body-info {
+        /* 修改价格后，用户无需重新付费，最多创建1: */
+        font-family: PingFangSC;
+        font-size: 26px;
+        color: #b2b2b2;
+        letter-spacing: 0;
+        line-height: 26px;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+
+    .footer {
+      color: #f73657;
+      padding: 30px 0;
+      text-align: center;
+      font-size: 30px;
+      border-top: 1px solid #eee; /*no*/
+    }
+
+    .income-list {
+      max-height: 400px;
+      overflow-y: auto;
+    }
+
+    .income-item {
+      padding: 30px;
+      border-bottom: 1px solid #f7f7f7; /*no*/
+
+      .income-item-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 30px;
+        color: #999999;
+
+        .intersect {
+          display: inline-block;
+          height: 40px;
+          width: 2px; /*no*/
+          background: #eeeeee;
+        }
+
+        .month,
+        .money {
+          display: inline-block;
+          border-radius: 12px;
+          padding: 20px 30px;
+          background: #f7f7f7;
+          width: 180px;
+          font-size: 30px;
+          outline: none;
+          border: none;
+          background: #f7f7f7;
+          color: #333;
+          font-weight: 600;
+          height: 86px;
+          vertical-align: middle;
+          box-sizing: border-box;
+          line-height: normal;
+
+          &::placeholder {
+            font-weight: normal;
+            font-size: 30px;
+          }
+        }
+
+        .icon-close {
+          display: inline-block;
+          vertical-align: middle;
+          width: 34px;
+          height: 34px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

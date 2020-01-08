@@ -1,0 +1,292 @@
+// 分类tab
+.filter-panel-category {
+    width: 100%;
+    min-width: 1280px;
+    background-color: #f5f5f5;
+    overflow-x: auto;
+    .category-list {
+        width: 1280px;
+        margin: 0 auto;
+        font-size: 12px;
+        font-weight: bold;
+        color: #333333;
+        padding: 0 40px 8px; // margin: 0 40px;
+        overflow: hidden;
+        list-style-type: none;
+        li {
+            float: left;
+            cursor: pointer;
+            margin-top: 8px;
+            margin-right: 20px;
+            line-height: 30px;
+            padding: 0 15px;
+            border-radius: 15px;
+            flex-shrink: 0;
+            &:hover {
+                background-color: #eaeaea;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        .category-selected,
+        .category-selected:hover {
+            color: #ffffff;
+            background-color: #c9a96e;
+        }
+    }
+}
+
+.fixed-category-bar {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    box-sizing: border-box;
+    $gold: #c9a96e;
+    background: #fff;
+    .header-container-wrap {
+        border-bottom: 1px solid #e5e5e5;
+
+        .header-container {
+            width: 100%;
+            min-width: 1000px;
+            max-width: 1280px;
+            margin: 0 auto;
+            height: 90px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+
+            .left {
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex:1;
+                .logo {
+                    width: 40px;
+                    height: 40px;
+                    background-image: url("./img/ql-logo.png");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    margin-right: 10px;
+                }
+                .title {
+                    // height: 40px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    .text {
+                        font-size: 20px;
+                        color: #333;
+                    }
+                    .sologan {
+                        font-size: 12px;
+                        color: #bbb;
+                    }
+                }
+    
+                .search-box {
+                    width: 335px;
+                    height: 40px;
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-radius: 20px;
+                    padding: 0 20px;
+                    background-color: #f5f5f5;
+                    border: 1px solid #f1f1f1;
+                    margin-left: 40px;
+                    .search-text {
+                        border: none;
+                        outline: none;
+                        width: 260px;
+                        background-color: transparent;
+                    }
+                    .search-icon {
+                        display: block;
+                        width: 20px;
+                        height: 20px;
+                        cursor: pointer;
+                        background-image: url(./img/icon_search.png);
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        background-size: 20px 20px;
+                    }
+                }
+            }
+    
+            .right {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+            }
+            .final {
+                .back-stage-btn {
+                    padding: 10px 18px;
+                    background-color: #c9a96e;
+                    border-radius: 25px;
+                    border: solid 1px #c9a96e; /*no*/
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .menu-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 40px;
+        font-size: 14px;
+        color: #666; // border-bottom: 1px solid #f0f0f0;
+    }
+    .menu-logout {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 40px;
+        font-size: 14px;
+        color: #d1b686;
+    }
+}
+
+.title {
+    font-size: 36px;
+    color: #000;
+    text-align: center;
+    font-weight: normal;
+    
+    .sologan {
+        white-space: nowrap;
+    }
+}
+
+// 排序和搜索
+.filter-panel-sort-search {
+    width: 1280px;
+    display: flex;
+    flex-flow: row nowrap; // height: 100px;
+    margin: 20px auto 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    .sort {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        font-size: 12px;
+        font-weight: bold;
+        color: #333333;
+        >i {
+            font-style: normal;
+            height: 20px;
+            line-height: 20px;
+        }
+        >span {
+            height: 20px;
+            padding: 0 20px;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            border-right: 1px solid #e4e4e4;
+            .sort-btn {
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+                margin-left: 10px;
+            }
+        }
+        span:last-child {
+            border-right: none;
+        }
+        .only-relay-check-label {
+            cursor: pointer;
+        }
+        .only-relay-check-label-checked {
+            color: #c9a96e;
+        }
+        .sort-button {
+            cursor: pointer;
+        }
+    }
+    .top-ten-btn {
+        font-size: 12px;
+        font-weight: bold;
+        color: #ff3333;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 19px;
+        background: url("./img/icon_fire.png") no-repeat 10px center;
+        background-size: 11px 17px;
+        padding: 0 15px 0 30px;
+        margin-left: 40px;
+        cursor: pointer;
+    }
+    .active-top-ten-btn {
+        background-color: #ffcbcb;
+    }
+}
+
+// 筛选按钮 - 三角按钮
+.triangle {
+    width: 0;
+    height: 0;
+    cursor: pointer;
+    border: 4px solid transparent;
+}
+
+.triangle-top {
+    composes: triangle;
+    border-bottom-color: #999999;
+    margin-bottom: 2px;
+}
+
+.triangle-bottom {
+    composes: triangle;
+    border-top-color: #999999;
+    margin-top: 2px;
+}
+
+.active-sort-by {
+    color: #caab71;
+}
+
+.active-sort-btn.triangle-top {
+    border-bottom-color: #c9a96e;
+}
+
+.active-sort-btn.triangle-bottom {
+    border-top-color: #c9a96e;
+}
+
+// 复选框: 是否只查看转载系列课
+.check-box {
+    margin-right: 10px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 16px 16px;
+}
+
+.only-relay-check-box {
+    composes: check-box;
+    background-image: url(./img/not_checked.png);
+}
+
+.only-relay-check-box-checked {
+    composes: check-box;
+    background-image: url(./img/checked.png);
+}

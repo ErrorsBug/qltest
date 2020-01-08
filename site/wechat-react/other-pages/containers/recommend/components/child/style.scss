@@ -1,0 +1,65 @@
+@import "../../../../../assets/styles/mixins.scss";
+
+
+.recommend-child{ 
+    position: relative;
+    @include afterBorderBottom1px;
+    &::after {
+        left: 40px;
+        right: 40px;
+    }
+    .list-wrap{
+        display:flex;
+        justify-content: space-between;
+        padding:0 32px 32px;
+        .list-item{
+            width:204px;
+            .cover{
+                width:204px;
+                height:204px;
+                position: relative;
+                border-radius: 8px;
+                overflow: hidden;
+                .flag{
+                    padding:0 18px;
+                    height:36px;
+                    border-radius:12px 0 12px 0;
+                    display:flex;
+                    align-items: center;
+                    justify-content: center;
+                    line-height:normal;
+                    color:#fff;
+                    background:#F73657;
+                    position:absolute;
+                    left:0;
+                    top:0;
+                }
+                .play-btn{
+                    width:64px;
+                    height:64px;
+                    background:url(../../../../../assets/images/play-btn.png) no-repeat center / 100%;
+                    position: absolute;
+                    right:16px;
+                    bottom:16px;
+                }
+            }
+            .name{
+                margin-top:16px;
+                font-size:28px;/*px*/
+                line-height:40px;/*px*/
+                font-weight:600;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 2;
+            }
+            .tip{
+                margin-top:12px;
+                font-size:22px;/*px*/
+                color:rgba(153,153,153,1);
+                line-height:32px;/*px*/
+            }
+        }
+    }
+}

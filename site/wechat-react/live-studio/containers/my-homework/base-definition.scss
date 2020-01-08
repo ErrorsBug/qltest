@@ -1,0 +1,39 @@
+//主导色
+$main-color:#f73657;//字体与线框
+$main-color--lighter:#f84c69;//大面积使用
+
+//灰色
+$gray--title:#333;//标题、输入框内文字
+$gray--content:#666;//正文，段落
+$gray--tag:#737373;//名字、标签
+$gray--tip:#999;//辅助性文字
+$gray--lighter-tip:#b2b2b2;//次要辅助性文字
+$gray--split-line:#f0f0f0;//普通分割线
+$gray--stronger-split-line:#e2e2e2;//加强分割线
+$gray--background:#f5f5f5;//背景
+
+//绿色
+$green:#3bda46;//任务层级最高时使用
+$green--lighter:#b0e75a;//任务层级最高大面积使用
+
+@mixin flex-center{
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin filled-img{
+	img{
+		width:100%;
+		height:100%;
+		display:block;
+	}
+}
+
+@mixin round-avatar($size){
+	width:$size;
+	height:$size;
+	border-radius:100%;
+	overflow: hidden;
+	@include filled-img;
+}

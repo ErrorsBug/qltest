@@ -1,0 +1,70 @@
+.cover{
+    width: 750rpx;
+    height: 469rpx;
+    position: relative;
+    overflow: hidden;
+
+    .cover-image{
+        height: 100%;
+        width: 100%;
+    }
+
+    .mask{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 162rpx;
+        width: 100%;
+    }
+
+    .auth-member{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 100rpx;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 30rpx;
+    }
+
+    .icon-play{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 130rpx;
+        height: 130rpx;
+    }
+}
+
+.auth-member{
+    .list{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 20rpx;
+        padding-right: 24rpx;
+        .avatar{
+            width: 50rpx;
+            height: 50rpx;
+            border: 5rpx solid #fff;
+            background-color: #fff;
+            border-radius: 100%;
+            margin-left: -20rpx;
+        }
+    }
+
+    .icon-user{
+        width: 26rpx;
+        height: 24rpx;
+        margin-right: 14rpx;
+    }
+
+    .count{
+        color: #fff;
+        font-size: 24rpx;
+        font-weight: bold;
+    }
+}

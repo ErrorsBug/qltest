@@ -1,0 +1,38 @@
+.check-in-reward-container {
+    position: relative;
+    width: 694px;
+    height: 154px;
+    background-image: url("../../img/bg-checkin-reward.png");
+    margin: 30px auto 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 35px 0 175px;
+    box-sizing: border-box;
+
+    .bonus {
+        font-size: 40px;/*px*/
+        color: #c09f61;
+        margin-bottom: 15px;
+    }
+
+    .complete {
+        font-size: 30px;/*px*/
+        color: #c09f61;
+        margin-bottom: 15px;
+
+        span {
+            color: #fe5670;
+        }
+    }
+
+    .tips {
+        font-size: 26px;/*px*/
+        color: #b8b0b0;
+        span {
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+    }
+}

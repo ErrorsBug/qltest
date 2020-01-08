@@ -1,0 +1,42 @@
+.nt-class-box{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    height: 100%;
+    .nt-box{
+        width: 90%;
+        margin: auto;
+        span{
+            // box-shadow: -40px 0 40px rgba(0,0,0,0.4);
+            position: relative;
+            display: block;
+            z-index: 1;
+            &::before{
+                position: absolute;
+                top: 0;
+                left: -43px;
+                width: 44px;
+                height: 100%;
+                z-index: 1;
+                background: url('./img/shadow.png') no-repeat center;
+                background-size: 100% 100%;
+                content: ''
+            }
+            img{
+                position: relative;
+                z-index: 3;
+                width: 100%;
+            }
+        }
+        p{
+            font-size: 36px; /*px*/
+            color: #333;
+            line-height: 1.5;
+            padding-top: 30px;
+            text-align: center;
+            font-weight: bold;
+            padding-bottom: 100px;
+        }
+    }
+}

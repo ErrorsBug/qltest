@@ -1,0 +1,64 @@
+.fl-dialog-link-container{ 
+    position: fixed;
+    top:0;
+    right:0;
+    left:0; 
+    max-width: 1280px;/*px*/
+    min-width: 640px;/*px*/
+    margin: 0 auto;
+    z-index: 1000;
+    height: auto !important;
+}
+.fl-dialog-link{
+    position: absolute;
+    top:18px;
+    right:12px;
+    height:auto !important;
+    background:rgba(255,159,0,1);
+    border-radius:8px;
+    z-index: 1000;
+    font-size:30px;
+    font-weight: bold;
+    color:rgba(255,255,255,1);
+    line-height:42px;
+    padding:26px 28px;
+    span{
+        width:12px;
+        height:12px;
+        background:rgba(255,255,255,1);
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 10px;
+        vertical-align: middle;
+        &:first-child{
+            margin-left: 20px;
+        }
+    }
+    &::after{
+        width:57px;
+        height:57px;
+        content:'';
+        position: absolute;
+        right:20px;
+        top:0;
+        background:rgba(255,159,0,1);
+        transform: rotate(45deg);
+        z-index: -1;
+    }
+    &.fl-dialog-poster{
+        display: flex;
+        &::after{
+            display: none;
+        }
+        .fl-icon{
+            margin-right: 12px;
+            img{
+                width:62px;
+                vertical-align: top;
+            }
+        }
+        .fl-right-path{
+            flex:1;
+        }
+    }
+}

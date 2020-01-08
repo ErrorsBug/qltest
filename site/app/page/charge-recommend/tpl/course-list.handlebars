@@ -1,0 +1,26 @@
+{{#each courses}}
+<div class="course-item on-log on-visible" log-region="list" log-business_id="{{businessId}}" log-name="{{businessName}}" log-business_type="{{type}}" data-id="{{businessId}}" data-type="{{type}}"  data-url="{{url}}">
+    <img class="img-default img" data-imgloaded="false" data-imgsrc="{{img-format logo '@690w_320h_1e_1c_2o'}}" />
+    <div class="detail">
+        {{#compare type '==' 'channel'}}
+            <div class="channel-tag">系列课</div>
+        {{/compare}}
+        {{#compare hot '==' 'Y'}}
+            <div class="sign-up"><span class="sign-up-icon"></span><span>火热报名中</span></div>
+        {{/compare}}
+        <div class="desc">
+            <div class="title">{{businessName}}</div>
+            <span class="line"></span>
+            <div class="other-info">
+                <div>
+                    <span class="live-name">{{liveName}}</span>
+                    {{#compare type '==' 'channel'}}
+                        <span class="topic-num">&nbsp;|&nbsp;共{{../topicNum}}节</span>
+                    {{/compare}}
+                </div>
+                <span class="view-num">{{digitFormat authNum}}人{{#compare type '==' 'channel'}}订阅{{else}}次{{/compare}}</span>
+            </div>
+        </div>
+    </div>
+</div>
+{{/each}}

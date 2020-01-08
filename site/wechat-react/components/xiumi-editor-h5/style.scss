@@ -1,0 +1,41 @@
+.ql-editor-h5-wrap {
+    position: relative;
+    .ql-editor-h5 {
+        display: block;
+        cursor: text;
+        font-family: sans-serif;
+        font-size: 32px; /*px*/
+        overflow: hidden;
+        padding: 20px 0;
+
+        * {
+            max-width: 100%;
+        }
+    
+        p {
+            line-height: normal;
+            display: block;
+            margin: 5px 0;  /*px*/
+        }
+
+        i, cite, em, var, address, dfn {
+            font-style: italic;
+        }
+
+        img, iframe {
+            width: 100%;
+            display: inline-block;
+            max-width: 100%;
+            vertical-align: middle;
+        }
+        .list-paddingleft-2{
+            padding-left: 60px;
+		}
+		.list-paddingleft-1{
+			padding-left: 0;
+		}
+		.list-paddingleft-3{
+            padding-left: 120px;
+		}
+    }
+}

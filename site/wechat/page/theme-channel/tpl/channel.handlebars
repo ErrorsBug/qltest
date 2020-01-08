@@ -1,0 +1,21 @@
+{{#each channels}}
+<li class="on-log tap-on tap-bgc" log-region="channel_list" log-name="{{channelName}}" log-business_id="{{channelId}}" log-business_type="{{type}}"  data-id="{{channelId}}" data-type="{{type}}">
+    <div class="img-wrap">
+        <div class="img">
+            <img class="img-default" data-imgloaded="false" data-imgsrc="{{img-format channelLogo '@330w_330h_1e_1c_2o_1l'}}" />
+            {{#compare topicType '===' 'charge'}}
+                {{#if money}}
+                <span class="tag tag-money">￥{{money-format ../money}}</span>
+                {{else}}
+                <span class="tag tag-free">免费</span>
+                {{/if}}
+                <div class="shade"></div>
+            {{/compare}}
+        </div>
+    </div>
+    <div class="desc">
+        <div class="title">{{channelName}}</div>
+        <div class="sub-num">{{channelAuthNum}}人订阅</div>
+    </div>
+</li>
+{{/each}}

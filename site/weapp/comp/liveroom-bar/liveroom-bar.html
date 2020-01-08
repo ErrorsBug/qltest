@@ -1,0 +1,15 @@
+<view class="liveroom-bar" bind:tap="linkToLive">
+    <image src="{{logo}}" mode="aspectFill" class="logo"/>
+    <view class="name">{{liveInfo.name}}</view>
+
+    <form bindsubmit="onFormSubmit" report-submit="{{true}}" wx:if="{{showFocusBtn}}">
+        <button 
+            class="focus-btn {{isFollow?'focused':''}}" 
+            data-status="{{isFollow}}" 
+            formType="submit"
+            catch:tap="onFocusTap" 
+        >
+            <image class="btn-image" src="{{isFollow ? focused_btn_src : focus_btn_src}}" mode="aspectFix"></image>
+        </button>
+    </form>
+</view>

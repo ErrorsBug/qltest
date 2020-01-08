@@ -1,0 +1,41 @@
+<view class="group-section">
+    <view>
+        <view class="group-img-box first-box">
+            <i class="first">团长</i>
+            <image 
+                class="group-user-img" 
+                src="{{group.leaderHead|| '//img.qlchat.com/qlLive/topicHeaderPic/thp-3.jpg'}}@180h_180w_1e_1c_2o"></image>
+        </view>
+        <view 
+            wx:for="{{group.members}}"
+            wx:for-item="groupuser"
+            wx:key="key"
+            wx:if="{{index < 3}}"
+            class="group-img-box">
+            <image 
+                class="group-user-img" 
+                src="{{groupuser.userHead|| '//img.qlchat.com/qlLive/topicHeaderPic/thp-3.jpg'}}@180h_180w_1e_1c_2o"></image>
+        </view>
+        <view 
+            wx:if="{{group.groupNum!=group.joinNum&&group.joinNum<3}}"
+            class="group-img-last">
+            <image class="group-img-no-icon" src="./img/icon-ask.png"></image>
+            <view class="group-img-last-num">{{group.groupNum - group.joinNum}}人</view>
+        </view>
+    </view>
+    <view>        
+        <view wx:if="{{group.groupStatus == 'PASS'&&isJoinedGroup}}" class="group-status"><text class="num-var">{{group.groupNum}}</text>人拼课成功</view>
+        <view wx:if="{{group.groupStatus == 'ING'}}" class="group-status">仅剩<text class="num-var">{{group.groupNum - group.joinNum}}</text>个优惠名额</view>
+        <view wx:if="{{group.groupStatus == 'PASS'&&!isJoinedGroup}}" class="group-status status-fail">
+            <view class="icon icon-warning"></view>拼课已满
+        </view>
+        <view wx:if="{{group.groupStatus == 'OVER'}}" class="group-status status-fail">
+            <view class="icon icon-warning"></view>拼课失败
+        </view>
+    </view>
+    <view wx:if="{{group.groupStatus == 'ING'}}" class="group-time">
+        仅剩时间
+        <timer duration="{{group.endTime - currentServerTime}}" stylestr="timer-style1"/>
+        结束
+    </view>
+</view>

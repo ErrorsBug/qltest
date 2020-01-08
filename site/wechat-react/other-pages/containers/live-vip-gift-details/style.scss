@@ -1,0 +1,174 @@
+.vip-gift-details-page {
+
+    .vip-poster {
+        width: 738px;
+        height: 448px;
+        padding: 30px 0 0;
+        margin: 0 auto;
+        position: relative;
+        background: url('https://img.qlchat.com/qlLive/business/W1TOSW7O-DMGW-SLAP-1543371971026-G9I2KYK32DQ2.png') center / 100% no-repeat;
+
+        .vip-intro {
+            position: absolute;
+            left: 50%;
+            bottom: 72px;
+            transform: translateX(-50%);
+            width: 630px;
+            color: #fff;
+            font-size: 26px; /*px*/
+            line-height: 1.6;
+
+            i {
+                font-style: normal;
+                font-size: 18px; /*px*/
+            }
+
+            .view-more-button {
+                padding-right: 30px;
+                background: url('./img/icon_arrow_right.png') right center / 24px 24px no-repeat;
+            }
+        }
+
+        &.custom-vip-gift {
+            background-image: url('./img/custom.png');
+
+            .vip-intro {
+                color: #E0C087;
+            }
+
+            .view-more-button {
+                background-image: url('./img/icon_arrow_right_y.png');
+            }
+        }
+    }
+
+    .gift-situation {
+        text-align: center;
+
+        .gift-remaining-amount {
+            color: #BF9F65;
+            font-size: 30px; /*px*/
+
+            strong {
+                font-size: 106px; /*px*/
+                margin: 0 15px;
+            }
+        }
+
+        .gift-receive-tip {
+            color: #BF9F65;
+            font-size: 28px; /*px*/
+            line-height: 1.5;
+            margin: 15px 0 50px;
+            letter-spacing: 2px;
+        }
+
+        .gift-operate-button {
+            width: 690px;
+            height: 90px;
+            background-color: #323232;
+            color: #C8AA73;
+            font-size: 30px; /*px*/
+            line-height: 90px;
+            border-radius: 45px;
+            margin: 0 auto;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .gift-receive-status {
+            color: #BF9F65;
+            font-size: 54px; /*px*/
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .grey-text {
+            color: #B2B2B2;
+        }
+
+        .icon-checked,
+        .icon-warning {
+            width: 52px;
+            height: 52px;
+            margin-right: 20px;
+        }
+
+        .icon-checked {
+            background: url('./img/icon_checked.png') center / 100% no-repeat;
+        }
+
+        .icon-warning {
+            background: url('./img/icon_warn.png') center / 100% no-repeat;
+        }
+
+        &.custom-vip-gift {
+
+            .gift-operate-button {
+                color: #333;
+                background-color: #C9A96E;
+            }
+        }
+    }
+
+    .gift-receive-details {
+        margin: 50px 0 0 0;
+        padding: 0 30px;
+        color: #999;
+
+        .section-title {
+
+            .text {
+                font-size: 30px; /*px*/
+                margin: 0 30px;
+            }
+
+            .horizontal-line {
+                flex-grow: 1;
+                height: 2px; /*px*/
+                background-color: #EEEEEE;
+            }
+        }
+
+        .gift-receive-item {
+            font-size: 24px; /*px*/
+            height: 100px;
+            border-bottom: 2px solid #F7F7F7; /*px*/
+
+            .avatar {
+                display: block;
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+            }
+
+            .receiver span {
+                margin: 0 20px;
+            }
+        }
+    }
+
+    .handsel-guide {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+
+        .guide-bg {
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #000000, $alpha: 0.65);
+        }
+
+        .guide-content {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            >img {
+                width: 582px;
+                height: 209px;
+            }
+        }
+    }
+}

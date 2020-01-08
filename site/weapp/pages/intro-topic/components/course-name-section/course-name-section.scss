@@ -1,0 +1,33 @@
+@import '../../common.scss';
+
+.course-name-section{
+    padding: 34rpx 30rpx 24rpx;
+    .name{
+        font-size: 32rpx;
+        color: #424242;
+        font-weight: bold;
+    }
+    .other-info{
+        color: #b8b0b0;
+        font-size: 24rpx;
+        margin-top: 20rpx;
+        .time{
+            margin-right: 24rpx;
+            display: inline;
+        }
+    }
+    .charge-info{
+        color: #f73657;
+        font-size: 30rpx;
+        margin-top: 30rpx;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+
+        .vip-tag{
+            width: 71rpx;
+            display: inline-block;
+            margin-right: 18rpx;
+        }
+    }
+}

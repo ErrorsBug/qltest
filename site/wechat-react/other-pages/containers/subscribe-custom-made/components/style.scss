@@ -1,0 +1,174 @@
+/*
+ * 选择标签后给.check添加.active即可添加钩钩样式
+ */
+@-webkit-keyframes smlabelmove1{
+    0% {
+        transform: translateX(740px); /*no*/
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes smlabelmove1{
+    0% {
+        transform: translateX(740px); /*no*/
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.subscribe-cm-container .label-container {
+    &:last-child {
+        border-bottom: 0;
+    }
+    border-bottom: 1px solid #f0f0f0;/*no*/
+    padding: 30px 0;
+
+    .big-label-box {
+        display: flex;
+        align-items: center;
+        .avatar {
+            flex: 0 0 122px;
+            width: 122px;
+            height: 122px;
+            border-radius: 61px;
+            background: #f0f0f0;
+            overflow:hidden;
+            img{
+                width:100%;
+                height:100%;
+            }
+        }
+        .info {
+            flex: 1 1;
+            padding: 0 16px 0 20px;
+            .title {
+                font-size: 32px;/*px*/
+                color: #333;
+            }
+        }
+        .check {
+            margin-right: 10px;
+            width: 50px;
+            height: 50px;
+            border: 2px solid #e5e5e5; /*px*/
+            border-radius: 28px;
+            position: relative;
+            
+
+            &.active {
+                background: #ff4b69 url(../../../../assets/images/subscribe/check.png) no-repeat center center;
+                background-size: 29px 22px;
+                border-color: #ff4b69;
+            }
+            &:after{
+                content: '';
+                position: absolute;
+                top:-25px;
+                left:-10px;
+                display: block;
+                width:90px;
+                height: 90px;
+                z-index: 2;
+            }
+        }
+    }
+    .sm-label-box {
+        box-sizing: content-box;
+        position: relative;
+        max-height: 0;
+        padding-left: 128px;
+        overflow: hidden;
+        &::after {
+            display: table;
+            content: ' ';
+            clear: both;
+        }
+        &.show {
+            margin-top: -38px;
+            overflow: visible;
+            max-height: 3000px;
+
+        }
+        .sm-label {
+            box-sizing: content-box;
+            position: relative;
+            display: inline-block;
+            margin: 28px 13px 0;
+            border-radius: 30px;
+            font-size: 28px; /*px*/
+            color: #666;
+            overflow: hidden;
+            animation-fill-mode: forwards;
+            >.inner-l {
+                display: flex;
+                align-items: center;
+                position: relative;
+                padding: 0 24px;
+                height: 58px;
+                overflow: hidden;
+                border: 2px solid #ddd; 
+                border-radius: 30px;
+                &::after {
+                    display: none;
+                    position: absolute;
+                    content: ' ';
+                    width: 20px;
+                    height: 20px;
+                    right: 6px;
+                    top: -7px;
+                    border-radius: 10px;
+                    background: #ff4b69;
+                }
+            }
+            &.show {   
+                animation: smlabelmove1 800ms both;
+                &:first-child {
+                    animation-delay: 0s;
+                }
+                &:nth-child(2) {
+                    animation-delay: 0.25s * 1;
+                }
+                &:nth-child(3) {
+                    animation-delay: 0.25s * 2;
+                }
+                &:nth-child(4) {
+                    animation-delay: 0.25s * 3;
+                }
+                &:nth-child(5) {
+                    animation-delay: 0.25s * 4;
+                }
+                &:nth-child(6) {
+                    animation-delay: 0.25s * 5;
+                }
+                &:nth-child(7) {
+                    animation-delay: 0.25s * 6;
+                }
+                &:nth-child(8) {
+                    animation-delay: 0.25s * 7;
+                }
+                &:nth-child(9) {
+                    animation-delay: 0.25s * 8;
+                }
+                &:nth-child(10) {
+                    animation-delay: 0.25s * 9;
+                }
+                
+            }
+            &.active {
+                
+                
+                overflow: hidden;
+                >.inner-l{
+                    border-color: #ff4b69;
+                    color: #ff4b69;
+                    &::after {
+                        display: block;
+                    }
+                }
+            }   
+            
+        }
+    }
+}

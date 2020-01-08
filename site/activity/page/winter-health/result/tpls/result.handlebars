@@ -1,0 +1,30 @@
+<div class="result">
+    <div class="title">养生指数分析</div>
+    <div class="result-label">{{resultTitle}}</div>
+</div>
+<div class="coupon">
+    <div class="coupon-label" data-url="https://m.qlchat.com/wechat/page/mine/coupon-list"></div>
+    <span>已放入【个人中心-我的优惠券-平台活动券】</span>
+</div>
+<div class="recommend">
+    <div class="title">万里挑一！这是你的专属养生课程哦！</div>
+    {{#with course}}
+    <div class="course on-log" data-url="{{url}}" log-region="course" log-business_Id="{{id}}">
+        <img src="{{headImage}}" alt="">
+        <div class="content">
+            <div class="title">{{title}}</div>
+            <ul class="list">
+                <li>{{tip}}</li>
+            </ul>
+            <div class="price-content">
+                <div class="money">
+                    <del>原价：{{money}}元</del>
+                    <div class="price">活动价：{{discount}}元</div>
+                </div>
+                <div class="purcase"></div>
+            </div>
+        </div>
+    </div>
+    {{/with}}
+    <div class="return">返回活动</div>
+</div>

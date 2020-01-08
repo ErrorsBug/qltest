@@ -1,0 +1,236 @@
+.gift-package-pop {
+    z-index: 201;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    >.black-pop{
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0,0,0,0.7);
+    }
+    >.gift-package-pop-container {
+        height: 856px;
+        width: 600px;
+        background: {
+            image: url(../../img/gift-package.png);
+            repeat: no-repeat;
+            size: 100% 100%;
+        }
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding-top: 86px;
+        box-sizing: border-box;
+
+        >.close {
+            height: 60px;
+            width: 60px;
+            background: {
+                image: url(../../img/gift-package-close.png);
+                repeat: no-repeat;
+                size: 100% 100%;
+
+            }
+            position: absolute;
+            right: -20px;
+            top: -120px;
+            cursor: pointer;
+
+            &::after{
+                content: '';
+                position: absolute;
+                width: 1px;/*no*/
+                background-color: rgb(247,242,230);
+                height: 64px;
+                bottom: -64px;
+                left: 30px;
+            }
+        }
+        >.course-container {
+            width: 536px;
+            margin: 0 auto;
+            >.title {
+                font-size: 36px; /*px*/
+                font-weight: bold;
+                text-align: center;
+                color: rgb(66,66,66);
+                span{
+                    color: rgb(247,54,87);
+                }
+            }
+            >.replace-container {
+                width: 350px;
+                height: 60px;
+                box-sizing: border-box;
+                margin: 40px auto 20px;
+                border-top: 1px solid rgba(224,211,180,0.6);/*no*/
+                border-bottom: 1px solid rgba(224,211,180,0.6);/*no*/
+                display: flex;
+                align-items: center;
+                >div {
+                    border-top: 1px solid rgba(224,211,180,0.6);/*no*/
+                    border-bottom: 1px solid rgba(224,211,180,0.6);/*no*/
+                    box-sizing: border-box;
+                    height: 50px;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 10px;
+                    justify-content: space-between;
+
+                    >span{
+                        font-size: 24px; /*px*/
+                        color: rgb(176,158,116);
+                    }
+                    .replace {
+                        display: flex;
+                        align-items: center;
+                        height: 100%;
+                        cursor: pointer;
+                        padding: 0 10px;
+                        .label {
+                            font-size: 22px; /*px*/
+                            color: rgb(239,84,80);
+                        }
+                        .icon {
+                            height: 19px;
+                            width: 19px;
+                            background: {
+                                image: url(../../img/replace.png);
+                                repeat: no-repeat;
+                                size: 100% 100%;
+                            }
+                            margin-left: 15px;
+                        }
+                    }
+                }
+            }
+            >.course-content {
+                width: 440px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                .course {
+                    width: 206px;
+                    .img-container{
+                        width: 100%;
+                        height: 132px;
+                        box-sizing: border-box;
+                        padding: 5px;
+                        border: 1px solid rgb(224,211,180);
+                        img {
+                            width: 196px;
+                            height: 122px;
+                        }
+                    }
+                    .course-title {
+                        color: rgb(66,66,66);
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                        overflow: hidden;
+                        font-size: 23px; /*px*/
+                        width: 100%;
+                        line-height: 30px;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+        >.coupon-container{
+            width: 536px;
+            margin: 0 auto;
+            height: 330px;
+            position: absolute;
+            bottom: 6px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            .coupon-tip {
+                width: 280px;
+                height: 60px;
+                margin: 0 auto;
+                box-sizing: border-box;
+                border-top: 1px solid rgba(224,211,180,0.6);/*no*/
+                border-bottom: 1px solid rgba(224,211,180,0.6);/*no*/
+                display: flex;
+                align-items: center;
+                >div{
+                    height: 52px;
+                    width: 100%;
+                    box-sizing: border-box;
+                    border-top: 1px solid rgba(224,211,180,0.6);/*no*/
+                    border-bottom: 1px solid rgba(224,211,180,0.6);/*no*/
+                    font-size: 24px; /*px*/
+                    color: rgb(176,158,116);
+                    text-align: center;
+                    line-height: 52px;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1;
+                    overflow: hidden;
+                }
+            }
+            .coupon-content {
+                width: 495px;
+                height: 135px;
+                background: {
+                    image: url(../../img/gift-coupon.png);
+                    repeat: no-repeat;
+                    size: 100% 100%;
+                }
+                margin: 20px auto 16px;
+                box-sizing: border-box;
+                padding-bottom: 16px;
+                display: flex;
+                align-items: center;
+                .fare {
+                    width: 160px;
+                    text-align: center;
+                    .icon {
+                        color: rgb(247,54,87);
+                        font-size: 24px; /*px*/
+                        font-weight: bold;
+                    }
+                    .money {
+                        color: rgb(247,54,87);
+                        font-size: 50px; /*px*/
+                        font-weight: bold;
+                    }
+                }
+                .tip {
+                    flex: 1;
+                    margin-left: 30px;
+                    .line1 {
+                        color: rgb(51,51,51);
+                        font-size: 28px; /*px*/
+                        margin-bottom: 10px;
+                        line-height: 28px;
+                    }
+                    .line2 {
+                        color: rgb(207,194,164);
+                        font-size: 22px; /*px*/
+                        line-height: 22px;
+                    }
+                }
+            }
+            .receive {
+                width: 450px;
+                height: 76px;
+                border-radius: 38px;
+                background-color: rgb(239,84,80);
+                margin: 0 auto;
+                line-height: 76px;
+                font-size: 30px; /*px*/
+                color: rgb(255,255,255);
+                text-align: center;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        }
+    }
+}

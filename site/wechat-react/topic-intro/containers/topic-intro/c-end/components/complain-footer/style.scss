@@ -1,0 +1,35 @@
+.topic-intro-page .complain-footer{
+    text-align: center;
+    width: 100%;
+    font-size:24px;/*px*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+
+
+    .qlchat {
+        background: {
+            image: url(./img/qlchat.png);
+            repeat: no-repeat;
+            size: 100% 100%;
+        }
+        height: 34px;
+        width: 34px;
+        display: inline-block;
+        vertical-align: top;
+        margin-top: -9px;
+    }
+    i{
+        display:inline-block;
+        font-style:normal;
+        color:rgb(153,144,144);
+        margin-right: 20px;
+        margin-left: 12px;
+    }
+    .qianliao-complain{
+
+
+        span{display:inline-block;color:#41679f;}
+    }
+}

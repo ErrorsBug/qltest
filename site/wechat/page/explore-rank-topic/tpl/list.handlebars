@@ -1,0 +1,44 @@
+{{#each topics}}
+    <li class="common-course-item on-log on-visible" data-id="{{businessId}}" data-type="{{businessType}}" data-url="{{url}}" log-business_id="{{businessId}}" log-name="{{businessName}}" log-business_type="{{businessType}}" log-region="topic" data-log-period="{{../period}}" data-log-tab="{{../tab}}">
+        <!--图片-->
+        <div class="img-wrap">
+            {{#if ../reset}}
+                <div class="poster ribbon" data-index="{{calc @index '+1'}}" style="background-image: url({{img-format headImage '@240w_148h_1e_1c_2o'}})"></div>
+            {{else}}
+                <div class="poster" style="background-image: url({{img-format headImage '@240w_148h_1e_1c_2o'}})"></div>
+            {{/if}}
+            <div class="learn-num">
+                {{digitFormat learningNum}}次学习
+            </div>
+        </div>
+        <!--介绍-->
+        <div class="info">
+            <div class="c-flex-grow1">
+                <div class="name">{{businessName}}</div>
+                <div class="remark">{{liveName}}</div>
+            </div>
+            <div class="other-info">
+                {{#compare businessType '==' 'channel'}}
+                    <span>{{topicCount}}课</span>
+                {{else}}
+                    <span>单课</span>
+                {{/compare}}
+
+                <div class="price">
+                    {{#compare discount '>' 0}}
+                        {{#compare money '>' 0}}
+                            <span class="origin">￥{{calc money '/100'}}</span>
+                        {{/compare}}
+                        <span class="current">￥{{calc discount '/100'}}</span>
+                    {{else}}
+                        {{#compare money '>' 0}}
+                            <span class="current">￥{{calc money '/100'}}</span>
+                        {{else}}
+                            <span class="free">免费</span>
+                        {{/compare}}
+                    {{/compare}}
+                </div>
+            </div>
+        </div>
+    </li>
+{{/each}}

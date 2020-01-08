@@ -1,0 +1,85 @@
+.poster-card-box{
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0px;
+    background: #fff url('../../img/welcome_bg.png') no-repeat center top;
+    background-size: cover;
+    z-index: 12; 
+    overflow-y: scroll;
+    animation: animatBg 1s linear forwards;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    line-height:normal;
+    justify-content: center;
+    & > div{
+        width: 100%;
+        padding:0 70px 15%;
+        box-sizing: border-box;
+    }
+    &.btm{
+        bottom: 97px; /*px*/
+    }
+    .poster-card-badge{
+        margin: 0 auto;
+        height: 264px;
+        overflow: hidden;
+        margin-bottom: 12%;
+        animation: animatImg 1.2s ease-in-out 1s forwards;
+        transform: scale(0);
+        opacity: 0;
+        text-align: center;
+        img{
+            width: auto;
+            height: 100%;
+        }
+    }
+    
+    .poster-card-img{
+        margin: 58px 0 96px;
+        animation: animatBtn 1.3s ease-in-out 2.8s forwards;
+        opacity: 0;
+        text-align: center;
+        img{
+            width: 100%;
+        }
+    }
+    .poster-card-btn{
+        width: 324px;
+        height: 80px;
+        line-height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: normal;
+        color: #fff;
+        font-size: 32px; /*px*/
+        border-radius: 80px;
+        background: #E0414F;
+        margin: 0 auto;
+        animation: animatBtn 1.3s ease-in-out 2.8s forwards;
+        opacity: 0;
+        font-weight: bold;
+    }
+}
+
+@keyframes animatBg {
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes animatImg {
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes animatBtn{
+    to{
+        opacity: 1;
+        // transform: scale(1);
+    }
+}

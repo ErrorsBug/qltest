@@ -1,0 +1,110 @@
+@import '../../../assets/styles/mixins.scss';
+
+.p-intro-topic-list {
+    .item {
+        position: relative;
+        line-height: 1.375;
+        padding: 32px 40px 32px;
+        background: #fff;
+        cursor: pointer;
+        display: flex;
+        @include afterBorderBottom1px;
+        &::after {
+            left: 40px;
+            right: 40px;
+        }
+        // &:last-child::after {
+        //     content: none;
+        // }
+        .index {
+            min-width: 58px;/*px*/
+            flex-shrink: 0;
+            font-size: 30px;/*px*/
+            color: #999;
+            line-height: 1.5;
+        }
+        .title {
+            color: #333;
+            font-size: 32px;/*px*/
+            @include webkitLineClamp();
+        }
+        .desc {
+            font-size: 22px;/*px*/
+            line-height: 1.45;
+            color: #b2b2b2;
+            white-space: nowrap;
+            margin-top: 18px;
+        }
+
+        .learn-num {
+            margin-left: 1em;
+        }
+
+        .label {
+            position: relative;
+            font-size: 22px;/*px*/
+            color: #F73657;
+            width: 3.7em;
+            text-align: center;
+            height: 32px;/*px*/
+            line-height: 32px;/*px*/
+            @include beforeBorder1pxRadius(#F73657, .2em);
+            margin-left: .8em;
+
+            &.label-gray {
+                color: #999;
+                @include beforeBorder1pxRadius(#999, .2em);
+            }
+
+            &.label-red-o {
+                color: #fff;
+                background-color: #F73657;
+                border-radius: .2em;
+            }
+        }
+
+        .already-unlock {
+            color: #B2B2B2;
+
+            &::before {
+                border-color: #B2B2B2;
+            }
+        }
+
+        .price {
+            font-size: 22px;/*px*/
+            color: #F73657;
+            margin-left: .5em;
+        }
+
+        .status {
+            font-size: 24px;/*px*/
+            padding: 0 .3em;/*px*/
+            height: 32px;/*px*/
+            line-height: 32px;/*px*/
+            background-color: #ededed;
+            color: #999;
+            margin-left: .5em;
+        }
+
+        &.is-future, &.is-lock {
+            .title {
+                color: #999;
+            }
+            .index {
+                color: #b2b2b2;
+            }
+        }
+
+        .single-buy {
+            color: #f74e5e;
+            font-weight: 500;
+        }
+
+        img.icon-lock {
+            display: inline-block;
+            width: 28px; /*px*/
+            height: 28px; /*px*/
+        }
+    }
+}

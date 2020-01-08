@@ -1,0 +1,167 @@
+.represent-container {
+    background: #fff;
+    font-size: 28px;/*px*/
+    position: absolute;
+    width:100%;
+    >.header {
+        padding-top: 26px;
+        text-align: center;
+        border-bottom: 22px solid #f2f2f2;
+        .portrait {
+            margin: auto;
+            width: 94px;
+            height: 94px;
+            border-radius: 47px;
+            box-shadow: 0 0 1px 1px #e4e4e4;
+            overflow: hidden;
+            img{
+                width:100%;
+                height: 100%;
+            }
+        }
+        .welcome1 {
+            color: #333;
+            line-height: 62px;
+        }
+        .welcome2 {
+            padding-bottom: 30px;
+            border-bottom: 1px solid #f0f0f0;/*no*/
+            color: #c9cccf;
+        }
+        .represent-kidname{
+            max-width:250px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            word-break: break-all;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .topic-box {
+            padding: 0 24px;
+            line-height: 92px;
+            text-align: left;
+            height: 92px;
+            a{
+                display: block;
+                width:100%;
+                height: 100%;
+            }
+            .from {
+                padding-right: 16px;
+                color: #999;
+                float:left;
+            }
+            .topic-title {
+                color: #333;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                word-break: break-all;
+                display: inline-block;
+                width: 400px;
+                height: 100%;
+            }
+            .icon_enter {
+                float: right;
+                line-height: 92px;
+                color: #b4b4b4;
+            }
+        }
+    }
+    .represent-rights {
+        .title {
+            padding: 0 24px;
+            border-bottom: 1px solid #f0f0f0;/*no*/
+            color: #999;
+            line-height: 84px;
+        }
+        .content {
+            padding: 34px 24px;
+            border-bottom: 22px solid #f2f2f2;
+            line-height: 52px;
+        }
+    }
+    .distribute-idea {
+        .title {
+            padding: 0 24px;
+            border-bottom: 1px solid #f0f0f0;/*no*/
+            color: #999;
+            line-height: 84px;
+        }
+        .idea {
+            display: flex;
+            padding: 22px 24px;
+            border-bottom: 22px solid #f2f2f2;
+            &:last-child {
+                display: block;
+                border-bottom: 0;
+                .box {
+                    display: flex;
+                    align-items: center;
+                }
+                .btn-create-card {
+                    display: block;
+                    margin: 36px 0;
+                    height: 103px;
+                    border-radius: 10px;
+                    line-height: 103px;
+                    font-size: 33px;/*px*/
+                    text-align: center;
+                    color: #fff;
+                    background: #2984e2;
+                }
+                .valid-tip {
+                    color: #ccc;
+                    font-size: 28px;/*px*/
+                    &::after {
+                        content: ' ';
+                        display: table;
+                        clear: both;
+                    }
+                    .valid-text {
+                        float: left;
+                        line-height: 44px;
+                    }
+                   
+                }
+            }
+            .orders {
+                flex: 0 0 60px;
+                //display: inline-block;
+                text-align: center;
+                .num {
+                    margin: 0 auto 6px;;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 20px;
+                    line-height: 40px;
+                    color: #fff;
+                    background: #2984e2;
+                }
+                >p {
+                    color: #2984e2;
+                    white-space: nowrap;
+                }
+            }
+            .idea-declare {
+                //display: inline-block;
+                flex: 1;
+                padding-left: 46px;
+                .declare1 {
+                    color: #333;
+                }
+                .declare2 {
+                    color: #949fa4;
+                }
+                .declare-top {
+                    padding-bottom: 14px;
+                }
+                .declare-bottom {
+                    line-height: 50px;
+                }
+            }
+        }
+    }
+
+}

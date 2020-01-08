@@ -1,0 +1,68 @@
+@import "../../common";
+
+.interest{
+    margin-top:20rpx;
+    background:#fff;
+    .change-btn{
+        color:#999090;
+        font-size:26rpx;
+        display:flex;
+        align-items: center;
+        &:after{
+            width:20rpx;
+            height:20rpx;
+            content:'';
+            display:block;
+            background: url(../../img/icon-change.png?__inline) no-repeat center / 100%;
+            margin-left:10rpx;
+        }
+    }
+    .list-wrap{
+        .list-item{
+            padding:0 30rpx 0 35rpx;
+            display:flex;
+            align-items: center;
+            .poster{
+                width:240rpx;
+                height:148rpx;
+                display:block;
+                flex-shrink: 0;
+                border-radius: 6rpx;
+            }
+            .info{
+                margin-left:33rpx;
+                flex:1;
+                width:10rpx;
+                .name{
+                    font-size:30rpx;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    text-overflow: ellipsis;
+                    -webkit-line-clamp: 2;
+                }                    
+                .course-count{
+                    font-size:22rpx;
+                    color:#46cfa0;
+                    height:26rpx;
+                    line-height:26rpx;
+                    padding:0 5rpx;
+                    border:1rpx solid #46cfa0;
+                    white-space: nowrap;
+                    display:inline-block;
+                }
+                .aud-count{
+                    margin-top:8rpx;
+                    color:#bdb5b5;
+                    font-size:22rpx;
+                }
+
+            }
+        }
+    }
+    .tips{
+        color:#736c6c;
+        font-size:22rpx;
+        padding:30rpx 30rpx 25rpx 35rpx;
+    }
+}

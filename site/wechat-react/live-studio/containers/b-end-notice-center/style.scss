@@ -1,0 +1,94 @@
+.b-end-notice-center-page {
+    height: 100%;
+    background: #FAF9F9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    .layer-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 88px;
+        width: 100%;
+        background: linear-gradient(to bottom, #EDEDED, #FAF9F9);
+        z-index: 1;
+    }
+    
+    .notice-tab {
+        position: relative;
+        z-index: 2;
+    }
+    
+    .message-list-container {
+        width: 100%;
+        flex: 1;
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        .ad-container {
+            padding: 0 0 40px;
+            height: 110px;
+            .ad {
+                width: 100%;
+                position: relative;
+            }
+            .ad-img-box {
+                height: 110px;
+                overflow: hidden;
+                border-radius: 6px;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .close-btn {
+                width: 30px;
+                height: 30px;
+                padding: 15px;
+                position: absolute;
+                top: 0;
+                right: -15px;
+                transform: translateY(-50%);
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        .message-list {
+            padding: 40px 20px;
+        }
+    }
+
+    /** 评分组件 **/
+    .ranking {
+        color: #ff9f00;
+        margin-bottom: 10px;
+        .label {
+            font-size: 24px; /*px*/
+            font-weight: 500;
+            color: rgba(255, 159, 0, 1);
+            line-height: 33px;
+        }
+        .stars-list {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .star {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            background: url(./img/rank.png);
+            background-size: 100%;
+            &.active {
+                background: url(./img/rank_n.png);
+                background-size: 100%;
+            }
+        }
+    }
+    /** 评分组件 **/
+}

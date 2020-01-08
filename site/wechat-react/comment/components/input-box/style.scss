@@ -1,0 +1,55 @@
+$red: #F73657;
+
+.comment-input-box {
+    position: absolute;
+    z-index: 4;
+    bottom: 0;
+    max-width: 1280px;/*px*/
+    width: 100%;
+    height: 100%;
+    .input-wrap {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        background-color: #fff;
+        align-items: center;
+        .input-bg {
+            margin-left: 40px;
+            flex: 1;
+            height: 68px;
+            border-radius: 68px;
+            background-color: #f7f7f7;
+            display: flex;
+            align-items: center;
+        }
+        input {
+            width: 100%;
+            padding: 0 40px;
+            color: #333;
+            font-size: 30px;
+            line-height: 42px;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            caret-color: $red;
+            &::placeholder {
+                color: #bbb;
+            }
+        }
+        .btn-send {
+            height: 108px;
+            flex-shrink: 0;
+            cursor: pointer;
+            color: #bbb;
+            font-size: 30px;
+            line-height: 42px;
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            &.active {
+                color: $red;
+            }
+        }
+    }
+}

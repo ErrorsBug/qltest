@@ -1,0 +1,28 @@
+.progress-container {
+    height: 26px;
+    background: rgba(245, 245, 245, 1);
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    .progress {
+        margin: 0 10px;
+        height: 6px;
+        background:rgba(216,216,216,1);
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+    }
+    .red {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: -100%;
+        background:rgba(247,54,87,1);
+        transition: left ease .3s;
+    }
+    .second {
+        color: #333;
+        font-size: 16px;/*px*/
+    }
+}

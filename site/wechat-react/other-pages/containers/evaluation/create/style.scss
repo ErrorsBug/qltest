@@ -1,0 +1,241 @@
+.evalu-create {
+    background-color: #fff;
+    text-align: center;
+    font-size: 24px;/*px*/
+    overflow: auto;
+    position: absolute;
+    width:100%;
+    height: 100%;
+    left:0;
+    top:0;
+    padding: 40px;
+    box-sizing: border-box;
+
+    header {
+        font-size: 48px; /* px */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .commit-btn {
+            font-size: 28px; /* px */
+            width: 128px;
+            height: 52px;
+            display: block;
+            text-align: center;
+            line-height: 52px;
+            border-radius: 100px;
+            background: #F73657;
+            color: #FFF;
+
+            &.disable {
+                background: #EEE;
+                color: #999;
+            }
+        }
+    }
+
+    .mood {
+        margin-top: 16px;
+        font-size: 32px; /*px*/
+        color: #999;
+        text-align: left;
+		&.satisfy{
+			color:#FF9400
+		}
+    }
+
+    .evalu-textarea-container{
+        position: relative;
+        margin-top: 40px;
+        padding: 0 40px 100px;
+        background-color: #F7F7F7;
+        .evalu-textarea {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            resize: none;
+            display: block;
+            margin: auto;
+            width: 100%;
+            height: 4.5em;
+            padding-top: 40px;
+            box-sizing: content-box;
+            font-size: 30px; /*px*/
+            color: #333;
+            line-height:1.4;
+            &:disabled {
+                background: #fff;
+            }
+        }
+        .word-count {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            font-size: 24px; /* px */
+            color: #999;
+            text-align: right;
+        }
+    }
+
+    .all-evlau {
+        color: #f84c69;
+        padding-bottom: 100px;
+        cursor:pointer;
+        &.disable{
+            color:#999;
+        }
+    }
+    
+    .source {
+        padding: 40px 0;
+        font-size: 30px; /* px */
+        color: #666;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        border-top: 1px solid #eee;/*no*/
+        margin-top: 40px;
+        .title {
+            flex: 1 1 auto;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+            text-align: left;
+            margin-right: 40px;
+        }
+        
+        .redirect {
+            flex: 0 0 auto;
+            background: {
+                image: url(../../recommend/img/icon-right.png);
+                repeat: no-repeat;
+                size: 100% 100%;
+            }
+            width: 10px;
+            height: 16px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    .sub-score {
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        &+.sub-score {
+            margin-top: 40px;
+        }
+        .name {
+            flex-shrink: 0;
+            font-size: 32px;/*px*/
+            color: #666;
+        }
+        .score-pic {
+            flex-grow: 1;
+            display: flex;
+            justify-content: flex-start;
+            padding: 0 40px;
+            font-size: 48px;/*px*/
+        }
+        .text {
+            flex-shrink: 0;
+            font-size: 24px;/*px*/
+            color: #999;
+        }
+
+            
+        /**
+        分数表情仅对分数星星做样式覆盖
+
+        default
+        https://img.qlchat.com/qlLive/liveComment/MVALTAJG-UCCI-H7B2-1539687314874-4885V6AO74JG.png
+        1
+        https://img.qlchat.com/qlLive/liveComment/IDC6OYT5-P7W6-EKMI-1539687399196-BB71ZTNXZ68T.png
+        2
+        https://img.qlchat.com/qlLive/liveComment/VG87OQ9C-KRM1-YVQU-1539743255048-IDU32FOQ9PV3.png
+        3
+        https://img.qlchat.com/qlLive/liveComment/ORS5K6E8-RS91-MM7R-1539743603826-2FGNE82NCQRA.png
+        4
+        https://img.qlchat.com/qlLive/liveComment/8IXGMHBY-9WQK-W9JQ-1539743608891-IN6B4WQOPC5L.png
+        5
+        https://img.qlchat.com/qlLive/liveComment/JZ2M6O14-CTPM-VUHA-1539743613377-Z4QEQ5SCMRHQ.png
+        */
+        .score-expr {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            white-space: nowrap;
+            height: 1em;
+            overflow-y: hidden;
+            i {
+                display: inline-block;
+                width: 1em;
+                height: 1em;
+                background-repeat: no-repeat;
+                background-position: left top;
+                background-size: 1em auto;
+                vertical-align: top;
+                border-left: 4px solid transparent;
+                border-right: 4px solid transparent;
+                &:first-child {
+                    border-left: none;
+                }
+                &:last-child {
+                    border-right: none;
+                }
+            }
+            .star-bg {
+                i {
+                    background-image: url(https://img.qlchat.com/qlLive/liveComment/MVALTAJG-UCCI-H7B2-1539687314874-4885V6AO74JG.png);
+                }
+            }
+            .star-real {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            &.editing {
+                i {
+                    cursor: pointer;
+                }
+            }
+            &.s-1 .star-real {
+                i {
+                    background-image: url(https://img.qlchat.com/qlLive/liveComment/IDC6OYT5-P7W6-EKMI-1539687399196-BB71ZTNXZ68T.png);
+                }
+            }
+            &.s-2 .star-real {
+                i {
+                    background-image: url(https://img.qlchat.com/qlLive/liveComment/VG87OQ9C-KRM1-YVQU-1539743255048-IDU32FOQ9PV3.png);
+                }
+            }
+            &.s-3 .star-real {
+                i {
+                    background-image: url(https://img.qlchat.com/qlLive/liveComment/ORS5K6E8-RS91-MM7R-1539743603826-2FGNE82NCQRA.png);
+                }
+            }
+            &.s-4 .star-real {
+                i {
+                    background-image: url(https://img.qlchat.com/qlLive/liveComment/8IXGMHBY-9WQK-W9JQ-1539743608891-IN6B4WQOPC5L.png);
+                }
+            }
+            &.s-5 .star-real {
+                i {
+                    background-image: url(https://img.qlchat.com/qlLive/liveComment/JZ2M6O14-CTPM-VUHA-1539743613377-Z4QEQ5SCMRHQ.png);
+                }
+            }
+        }
+    }
+}
+
+.star-style {
+    justify-content: center;
+    .stars-container {
+        height: 50px;/*px*/
+        width: 450px;/*px*/
+    }
+
+}
+

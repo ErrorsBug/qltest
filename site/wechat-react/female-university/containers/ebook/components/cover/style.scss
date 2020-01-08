@@ -1,0 +1,160 @@
+.eb-cover-box{
+    top: 0;
+    left: 0;
+    z-index: 20;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 126px;
+    box-sizing: border-box;
+    background: #FDE6E6;
+    &::before{
+        position: absolute;
+        z-index: 6;
+        top: 0;
+        right: 0;
+        width: 352px;
+        height: 430px;
+        background: url('../../img/grass.png') no-repeat center;
+        background-size: 100%;
+        content: '';
+    }
+    .eb-cover-cont{
+        .eb-cover-bg{
+            margin-bottom: 44px;
+            position: relative;
+            font-size: 0;
+            &::before, &::after, i{
+                position: absolute;
+                z-index: 3;
+                left: 2px;
+                top: 6px;
+                bottom: 6px;
+                right: -6px;
+                border-radius: 16px 32px 32px;
+                box-shadow: 10px 4px 8px -10px rgba(0,0,0,0.15);
+            }
+            &::after, &::before{
+                background: #fff;
+                content: '';
+            }
+            &::after,i{
+                top: 12px;
+                z-index: 2;
+                bottom: 12px;
+                right: -12px;
+            }
+            i{
+                bottom: 0;
+                display: block;
+                z-index: 1;
+                border-radius: 16px 32px 64px;
+                box-shadow: -26px 36px 42px -18px #f2cfcf, 4px 2px 25px 2px rgba(#f00000, 0.1);
+            }
+            p{
+                position: absolute;
+                top: 80px;
+                left: 60px;
+                z-index: 12;
+                span{
+                    text-align: left;
+                    display: block;
+                    font-family: 'SourceHanSans', 'Times New Roman', Times, serif !important;
+                    font-size: 52px; /*px*/
+                    color: #A47474;
+                    font-weight: bold;
+                    line-height: 1.5;
+                }
+            }
+            .eb-cover-hua{
+                position: absolute;
+                z-index: 10;
+                height: 76px;
+                width: 100%;
+                background: linear-gradient(90deg,rgba(125,92,92,1) 0%,rgba(125,92,92,0.81) 47%,rgba(125,92,92,0) 100%);
+                left: 0;
+                bottom: 120px;
+                border-radius: 5px 0 0 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                span{
+                    font-size: 32px; /*px*/
+                    color: #fff;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    line-height: 1.4;
+                    // animation: spwAni 1s cubic-bezier(0.4, 0, 1, 1) infinite alternate-reverse both;
+                    transform: translateX(-10px);
+                    &::before{
+                        font-size: 16px; /*px*/
+                        padding-right: 8px;
+                    }
+                    @keyframes spwAni {
+                        to{
+                            transform: translateX(10px);
+                        }
+                    }
+                }
+            }
+            img{
+                position: relative;
+                z-index: 5;
+                width: 100%;
+                height: auto; 
+                min-width: 450px;
+                min-height: 600px;
+                box-shadow: 10px 4px 8px -10px rgba(0,0,0,0.15);
+                border-radius: 0 32px 32px 0;
+                overflow: hidden;
+            }
+        }
+        p{
+            text-align: center;
+            font-size: 30px; /*px*/
+            color: #A47474;
+            line-height: 1.4;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+        .eb-cover-btn{
+            width: 308px;
+            height: 76px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px; /*px*/
+            color: #fff;
+            font-weight: bold;
+            border-radius: 8px;
+            background: #E0414F;
+            margin: 0 auto;
+        }
+    }
+}
+
+.eb-cover-share{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 21;
+    padding-left: 44px;
+    padding-top: 90px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.8) url('../../img/share-bg.png') no-repeat right top;
+    background-size: 324px 280px;
+    & > div{
+        p{
+            line-height: 1.5;
+            font-size: 40px; /*px*/
+            font-weight: bold;
+            font-family: 'SourceHanSans', 'Times New Roman', Times, serif !important;
+            color: #fff;
+        }
+    }
+}

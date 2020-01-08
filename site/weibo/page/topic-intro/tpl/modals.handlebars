@@ -1,0 +1,103 @@
+{{!--关注二维码弹窗--}}
+<div class="modals" hidden="true">
+    <section>
+        <header class="success">
+            <span class="icon-checked"></span>
+            设置开播提醒
+        </header>
+        <main>
+            <img src="//open.weixin.qq.com/qr/code?username=qianliaoEdu" class="center" alt="">
+        </main>
+        <footer>
+            <p class="normal">长按图片识别二维码</p>
+            <p class="normal">关注服务号即可收到开播通知</p>
+        </footer>
+    </section>
+</div>
+
+{{#if conditions.isLiveV}}
+{{!--加v认证弹窗--}}
+<div class="modals" id="v-auth-modal" hidden="true">
+    <section>
+        <header class="info">
+            <p>直播间认证资料</p>
+        </header>
+        <main class="container">
+            <p class="grey">1.直播间简介：{{live.entity.introduce}}</p>
+            <p class="grey">2.认证日期：{{live.entityExtend.liveVTime}}完成千聊直播间认证</p>
+            <p class="grey">3.认证说明：千聊直播间认证是千聊官方对于直播间创建者身份和资质的真实性和合法性进行甄别和核实的过程。千聊为创建者提供在线分享的工具和平台。</p>
+            <p class="info">敬请留意：直播间的所有行为并不因认证成功而具备真实性和合法性</p>
+        </main>
+        <footer>
+            <span data-close="true" class="close vertical-btn">关闭</span>
+        </footer>
+    </section>
+</div>
+{{/if}}
+
+{{#if conditions.isLiveT}}
+{{!--加t认证弹窗--}}
+<div class="modals" id="t-auth-modal" hidden="true">
+    <section>
+        <header class="info">
+            <p>千聊教师节纪念奖杯</p>
+        </header>
+        <main class="container">
+            <p class="grey">感谢同行，一路有你。</p>
+            <p class="grey">教师节纪念奖杯特表彰以下用户：</p>
+            <p class="grey">l 资历深，与千聊共同成长<br>l 课程内容优质、授课形式丰富<br>l 认真、严谨、专业的教师精神<br>l 为知识的传播与分享作出贡献</p>
+            <p class="info">奖杯颁发说明：<br>本奖杯颁发于2016年教师节，是千聊对于在2016.9.9.—2016.9.15期间，新创建的直播间和参与教师节纪念活动的讲师授予的第一个教师节纪念奖杯。</p>
+        </main>
+        <footer>
+            <span data-close="true" class="close vertical-btn">关闭</span>
+        </footer>
+    </section>
+</div>
+{{/if}}
+
+{{!--送礼--}}
+<div class="modals" hidden="true" id="gift-modal">
+    <div class="mask"></div>
+    <section class="gift-box" style="color:#999;">
+        <h1 class="info center">{{topicView.topicPo.id}}</h1>
+        <p class="center" style="line-height:1.5;">
+			赠礼将于90天后过期<br>
+			过期未领取的课程将不退回
+		</p>
+        <article>
+            赠送数量
+            <ul class="right counter">
+                <li id="gift-decrease">-</li>
+                <li id="gift-count">3</li>
+                {{!--todo: if more than 5000, disable--}}
+                <li id="gift-increase">+</li>
+            </ul>
+        </article>
+        <article>
+            合计
+            <p class="right">￥<var id="gift-charge" data-charge="{{topicView.topicPo.money}}"></var></p>
+        </article>
+        <footer>
+            <span id="do-gift" class="confirm vertical-btn one-btn">打包<var>3</var>份赠礼</span>
+        </footer>
+    </section>
+</div>
+
+
+<div class="modals" hidden="true" id="gift-view-modal">
+    <div class="mask"></div>
+    <section class="gift-wrap">
+        <header>
+            <h1 class="info center">您的赠礼已包装好</h1>
+        </header>
+        <main>
+            <p class="center normal">
+			    了解赠礼的后续领取情况
+			</p>
+            <p class="center normal">请在 <span class="tips">「我的购买记录」</span> 中查看</p>
+        </main>
+        <footer>
+            <span class="confirm vertical-btn one-btn" data-gift-id="">查看赠礼</span>
+        </footer>
+    </section>
+</div>

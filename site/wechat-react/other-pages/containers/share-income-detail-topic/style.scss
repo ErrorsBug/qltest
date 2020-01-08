@@ -1,0 +1,113 @@
+@import "../../../assets/styles/base-definition";
+
+.share-income-detail-topic{
+
+    .from{
+        display: block;
+        background:#fff;
+        padding:20px 40px 20px 20px;
+        margin-bottom:20px;
+        position: relative;
+        .from_i{
+            color:$main-color;
+            font-size: 24px;/*px*/
+        }
+        .from_title{
+            display: block;
+            font-size:28px;/*px*/
+            color:#333;
+            max-height:80px;
+            line-height: 40px;
+        }
+    }
+    .icon_enter:before{
+        position: absolute;
+        top:50%;
+        right:20px;
+        display: block;
+        height:20px;
+        margin-top:-10px;
+        font-size:28px;/*px*/
+        color:#b4b4b4;
+    }
+    .profit{
+        padding:30px;
+        color:#fff;
+        background:$main-color--lighter;
+        font-size:24px;/*px*/
+        span{
+            display: block;
+            text-align:center;
+        }
+        var{
+            display:inline-block;
+            font-size:40px;/*px*/
+            padding-top:20px;
+            padding-right:20px;
+        }
+    }
+    .tips{
+        padding:20px;
+        color:#c1cfd5;
+        font-size:24px;/*px*/
+        background:#fff;
+        line-height: 40px;
+    }
+    .multi-elli{
+        display: block;
+        display: -webkit-box;
+        -webkit-line-clamp:2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .detail-list{
+        background: #fff;
+        padding-left:30px;
+        margin-top:25px;
+        dd{
+            border-bottom:1px solid #f0f0f0;
+            overflow: hidden;
+            padding:24px 0;
+            font-size:24px;/*px*/
+            @include flex-center(vertical);
+        }
+        span{
+            line-height: 40px;
+        }
+        .dd-left{
+            width:10%;
+            text-align: left;
+            color:#949fa4;
+            span{
+                display: block;
+                line-height:30px;
+            }
+        }
+        .dd-right{
+            width:90%;
+            color:#333;
+        }
+        .beinvited-name{
+            display:inline-block;
+            max-width: 260px;
+            word-break: break-all;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            vertical-align: top;
+        }
+        .money{
+            color:$main-color;
+        }
+        .whow{
+            display: block;
+        }
+        .percent{
+            display: inline-block;
+            padding-left:10px;
+            color:#949fa4;
+        }
+    }
+
+}

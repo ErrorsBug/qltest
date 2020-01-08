@@ -1,0 +1,7 @@
+{
+    "backgroundColor": "#fff",
+    "usingComponents": {
+       "grand-master": "./components/grand-master/grand-master",
+       "common": "./components/common/common"
+    }
+}

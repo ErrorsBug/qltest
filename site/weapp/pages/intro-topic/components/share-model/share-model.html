@@ -1,0 +1,27 @@
+<view class="share-model">
+    <view class="black" bindtap="onHideShareModel"></view>
+    <view class="share-model-container">
+        <view class="detail">
+            <view class="earn">
+                <text class="label">{{isDistribution ? '推荐赚钱' : '推荐组队学习'}}</text>
+                <text class="money" wx:if="{{isDistribution}}">¥{{topicCharge}}</text>               
+            </view>
+            <view class="tip">
+                <text class="label">{{isDistribution ? '推荐朋友购买后，赚奖学金' : '邀请朋友一起参与,好的知识就该多多分享'}}</text>
+                <text class="money" wx:if="{{isDistribution}}">¥{{topicCharge}}</text>
+                <text class="withdraw" wx:if="{{isDistribution}}">（千聊公众号提现）</text>
+            </view>
+            <view class="share-direction">
+                <button open-type="share" data-log_name="share-to-friend" data-log_region="share" bind:tap="onShare">
+                    <image class="wechat" src="../../img/wechat.png"></image>
+                    <text>分享好友</text>
+                </button>
+                <button bind:tap="onShowShareCard" data-log_name="{{isDistribution ? 'shareAndEarn' : 'onlyShare'}}" data-log_region="shareCode">
+                    <image class="invitation" src="../../img/invitation.png"></image>
+                    <text>分享邀请卡</text>
+                </button>
+            </view>
+        </view>
+        <view class="cancel" bindtap="onHideShareModel">取消分享</view>
+    </view>
+</view>

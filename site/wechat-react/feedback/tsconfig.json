@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "jsx": "preserve",
+        "moduleResolution": "node",
+        "target": "es2017",
+        "module": "es2015",
+        "allowJs": false,
+        "baseUrl": ".",
+        "paths": {
+            "components/*": ["../components/*"]
+        }
+    },
+    "include": [
+        "components/**/*",
+        "containers/**/*"
+    ]
+}

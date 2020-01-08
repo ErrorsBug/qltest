@@ -1,0 +1,190 @@
+$prefix: thousand-live-animation ;
+
+// 弹幕动画
+.#{$prefix}-barrageList-enter {
+    opacity: 0.01;
+    transform: translateY(30px);
+}
+
+.#{$prefix}-barrageList-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 300ms cubic-bezier(0.42,0,1,1);
+}
+
+.#{$prefix}-barrageList-leave {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.#{$prefix}-barrageList-leave-active {
+    opacity: 0.01;
+    transform: translateY(30px);
+    transition: all 300ms cubic-bezier(0.42,0,1,1);
+}
+
+// 素材库动画
+.#{$prefix}-materialBank-enter {
+    opacity: 0.01;
+    transform: translateX(100%);
+}
+
+.#{$prefix}-materialBank-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 300ms cubic-bezier(0.42,0,1,1);
+}
+
+.#{$prefix}-materialBank-leave {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.#{$prefix}-materialBank-leave-active {
+    opacity: 0.01;
+    transform: translateX(100%);
+    transition: all 300ms cubic-bezier(0.42,0,1,1);
+}
+
+// 操作列表动画
+.#{$prefix}-oprationList-enter {
+    opacity: 0.01;
+    transform: translateY(100%);
+}
+
+.#{$prefix}-oprationList-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 300ms cubic-bezier(0.42,0,1,1);
+}
+
+.#{$prefix}-oprationList-leave {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.#{$prefix}-oprationList-leave-active {
+    opacity: 0.01;
+    transform: translateY(100%);
+    transition: all 300ms cubic-bezier(0.42,0,1,1);
+}
+
+// 评论列表 / 问题列表 进入动画
+.#{$prefix}-common-enter {
+    opacity: 0.01;
+}
+
+.#{$prefix}-common-enter-active {
+    opacity: 1;
+    transition: all 300ms cubic-bezier(0.42,0,1,1);
+}
+
+.#{$prefix}-common-leave {
+    opacity: 1;
+}
+
+.#{$prefix}-common-leave-active {
+    opacity: 0.01;
+    transition: all 300ms cubic-bezier(0.42,0,1,1);
+}
+
+// 弹幕列表项添加 / 删除动画
+.#{$prefix}-barrageListItem-enter {
+    margin-top: -95px;
+    opacity: 0.01;
+    transform: translate3d(0,200%,0);
+}
+
+.#{$prefix}-barrageListItem-enter-active {
+    opacity: 1;
+    margin-top: 0;
+    transform: translate3d(0,0,0);
+    transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.#{$prefix}-barrageListItem-leave {
+    opacity: 1;
+    // transform: translate3d(0,0);
+    
+}
+
+.#{$prefix}-barrageListItem-leave-active {
+    // transform: translateY(-100%);
+    opacity: 0.01;
+    transition: all 300ms cubic-bezier(0.42,0,1,1);
+}
+
+/* 底部二维码弹出动画*/
+.#{$prefix}-bottomQrcode-enter {
+    margin-top: -95px;
+    opacity: 0.01;
+    transform: translate3d(0,200%,0);
+}
+
+.#{$prefix}-bottomQrcode-enter-active {
+    opacity: 1;
+    margin-top: 0;
+    transform: translate3d(0,0,0);
+    transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.#{$prefix}-bottomQrcode-leave {
+    opacity: 1;
+    transform: translate3d(0,0);
+}
+
+.#{$prefix}-bottomQrcode-leave-active {
+    transform: translateY(100%);
+    opacity: 0.01;
+    transition: all 300ms cubic-bezier(0.42,0,1,1);
+}
+
+// 评论列表项添加 / 删除动画
+.#{$prefix}-commentListItem-enter {
+    margin-bottom: -220px;
+    opacity: 0.01;
+    transform: translateY(-100%);
+}
+
+.#{$prefix}-commentListItem-enter-active {
+    opacity: 1;
+    margin-bottom: 0;
+    transform: translateY(0);
+    transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.#{$prefix}-commentListItem-leave {
+    opacity: 1;
+    margin-bottom: 0;
+
+    
+}
+
+.#{$prefix}-commentListItem-leave-active {
+    margin-bottom: -220px;
+    opacity: 0.01;
+    transition: all 300ms cubic-bezier(0.42,0,1,1);
+}
+
+// bottomspeakbar 切换动画
+.#{$prefix}-bottomSpeakBar-enter {
+    opacity: 0.01;
+    transform: translateX(100%);
+}
+
+.#{$prefix}-bottomSpeakBar-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.#{$prefix}-bottomSpeakBar-leave {
+    opacity: 1; 
+    transform: translateX(0);
+}
+
+.#{$prefix}-bottomSpeakBar-leave-active {
+    opacity: 0.01;
+    transform: translateX(-100%);
+    transition: all 300ms cubic-bezier(0.42,0,1,1);
+}

@@ -1,0 +1,456 @@
+@import "../../../../../assets/styles/base-definition";
+.audio-grapic{
+
+    .topic-banner-container{
+        position: relative;
+        width: 100%;
+        padding-bottom: 62.5%;
+        overflow: hidden;
+
+        .banner{
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .free-audio-tips{
+            position: absolute;
+            bottom: 50px;
+            left: 0;
+            width: 100%;
+            font-size: 20px;/* px */
+            line-height: 30px;
+            color: #fff;
+            padding: 10px;
+            box-sizing: border-box;
+            z-index: 2;
+
+        }
+
+        .push-btn{
+            position:absolute;
+            left:20px;
+            top:20px;
+            padding:10px 20px;
+            background:rgba(0,0,0,0.6);
+            color:#fff;
+            font-size: 24px;/*px*/
+            line-height: 30px;/* px */
+            border-radius: 50px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .share-tag {
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+            top: 30px;
+            overflow: hidden;
+
+            height: 56px;
+            width: 220px;
+
+            .share-word {
+                position: absolute;
+                z-index: 1;
+                width: 160px;
+                height: 56px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #f73657;
+                border-top-left-radius: 100px;
+                border-bottom-left-radius: 100px;
+                padding-left: 56px;
+                right: -114px;
+                opacity: 0;
+                color: #fff;
+
+                animation-duration: 20s;
+                animation-name: shareTag;
+                animation-iteration-count: infinite;
+            }
+
+            .final-tag {
+                position: absolute;
+                width: 56px;
+                height: 56px;
+                background: url('./img/finnal-tag.png');
+                background-size: 100%;
+                left: 144px;
+                z-index: 2;
+                animation-duration: 20s;
+                animation-name: finalTagMove;
+                animation-iteration-count: infinite;
+            }
+            &.coral-share{
+                background:url(./img/coral-icon.png) rgba(255,113,27,.9) no-repeat 7px center / 40px;
+                border-top-left-radius: 100px;
+                border-bottom-left-radius: 100px;
+                width:auto;
+                color:#fff;
+                padding:0 15px 0 55px;
+                display:flex;
+                align-items: center;
+                font-size:26px;/*px*/
+            }
+            &.my-invitation-card:after {
+                content: "我的邀请卡";
+                position: absolute;
+                z-index: 1;
+                width: 160px;
+                height: 56px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #f73657;
+                border-top-left-radius: 100px;
+                border-bottom-left-radius: 100px;
+                padding-left: 56px;
+                right: -114px;
+                opacity: 0;
+                color: #fff;
+
+                animation-duration: 20s;
+                animation-name: shareTag;
+                animation-iteration-count: infinite;
+            }
+            &.share-to-earn:after {
+                content: "分享赚学费";
+                position: absolute;
+                z-index: 1;
+                width: 160px;
+                height: 56px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #f73657;
+                border-top-left-radius: 100px;
+                border-bottom-left-radius: 100px;
+                padding-left: 56px;
+                right: -114px;
+                opacity: 0;
+                color: #fff;
+
+                animation-duration: 20s;
+                animation-name: shareTag;
+                animation-iteration-count: infinite;
+            }
+            &.uncertain{
+                background:url(./img/icon-uncertain-share.png) rgba(255,113,27,.9) no-repeat 23px center / 24px 28px;
+                border-top-left-radius: 100px;
+                border-bottom-left-radius: 100px;
+                width:auto;
+                color:#fff;
+                padding:0 15px 0 55px;
+                @include flex-center(vertical);
+                font-size:26px;/*px*/
+                z-index:2;
+            }
+        }
+        @keyframes finalTagMove {
+            2.5% {
+                left: 20px;
+            }
+
+            60.5% {
+                left: 20px;
+            }
+
+            65% {
+                left: 144px;
+            }
+
+            100% {
+                left: 144px;
+            }
+        }
+
+        @keyframes shareTag {
+            2.5% {
+                right: 0;
+                opacity: 1;
+            }
+
+            60.5% {
+                right: 0px;
+                opacity: 1;
+            }
+            63% {
+                right: -114px;
+                opacity: 0;
+            }
+
+            100% {
+                right: -114px;
+                opacity: 0;
+            }
+        }
+    }
+
+    .media-box {
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%; // 750 * 420
+        position: relative;
+
+        .cover-wrap {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,.4);
+                z-index: 1;
+            }
+            
+            .bg-img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .btn-play{
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                border: solid 3px #fff;/* px */
+                border-radius: 100px;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                z-index: 2;
+                cursor: pointer;
+    
+                &::before{
+                    position: absolute;
+                    font-size: 40px;
+                    color: #fff;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%,-50%);
+                }
+            }
+        }
+
+        .share-tag {
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+            top: 30px;
+            overflow: hidden;
+            z-index: 999;
+            height: 56px;
+            width: 220px;
+
+            .final-tag {
+                position: absolute;
+                width: 56px;
+                height: 56px;
+                background: url('./img/finnal-tag.png');
+                background-size: 100%;
+                left: 144px;
+                z-index: 2;
+                animation-duration: 20s;
+                animation-name: finalTagMove;
+                animation-iteration-count: infinite;
+            }
+            &.coral-share{
+                background:url(./img/coral-icon.png) rgba(255,113,27,.9) no-repeat 7px center / 40px;
+                border-top-left-radius: 100px;
+                border-bottom-left-radius: 100px;
+                width:auto;
+                color:#fff;
+                padding:0 15px 0 55px;
+                display:flex;
+                align-items: center;
+                font-size:26px;/*px*/
+            }
+            &.my-invitation-card:after {
+                content: "我的邀请卡";
+                position: absolute;
+                z-index: 1;
+                width: 160px;
+                height: 56px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #f73657;
+                border-top-left-radius: 100px;
+                border-bottom-left-radius: 100px;
+                padding-left: 56px;
+                right: -114px;
+                opacity: 0;
+                color: #fff;
+
+                animation-duration: 20s;
+                animation-name: shareTag;
+                animation-iteration-count: infinite;
+            }
+            .share-word {
+                position: absolute;
+                z-index: 1;
+                width: 160px;
+                height: 56px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #f73657;
+                border-top-left-radius: 100px;
+                border-bottom-left-radius: 100px;
+                padding-left: 56px;
+                right: -114px;
+                opacity: 0;
+                color: #fff;
+
+                animation-duration: 20s;
+                animation-name: shareTag;
+                animation-iteration-count: infinite;
+            }
+            &.uncertain{
+                background:url(./img/icon-uncertain-share.png) rgba(255,113,27,.9) no-repeat 23px center / 24px 28px;
+                border-top-left-radius: 100px;
+                border-bottom-left-radius: 100px;
+                width:auto;
+                color:#fff;
+                padding:0 15px 0 55px;
+                @include flex-center(vertical);
+                font-size:26px;/*px*/
+                z-index:2;
+            }
+        }
+        @keyframes finalTagMove {
+            2.5% {
+                left: 20px;
+            }
+
+            60.5% {
+                left: 20px;
+            }
+
+            65% {
+                left: 144px;
+            }
+
+            100% {
+                left: 144px;
+            }
+        }
+
+        @keyframes shareTag {
+            2.5% {
+                right: 0;
+                opacity: 1;
+            }
+
+            60.5% {
+                right: 0px;
+                opacity: 1;
+            }
+            63% {
+                right: -114px;
+                opacity: 0;
+            }
+
+            100% {
+                right: -114px;
+                opacity: 0;
+            }
+        }
+    }
+
+    .video-tips-bar{
+        display: flex;
+        height: 100px;
+        background: #fff;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 0 20px;
+
+        .topic-info-tips{
+            font-size: 24px;/* px */
+            color: #333333;
+            flex: 1;
+            width: 100%;
+            margin-right: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            line-height: 40px;
+        }
+
+        .btn {
+            display: block;
+            text-align: center;
+            cursor: pointer;
+            margin-left: 20px;
+            
+            &.btn-share-card{
+                color: #f83e62;
+            }
+            
+            .icon{
+                display: inline-block;
+                font-size: 40px;/* px */
+                margin-bottom: 5px;
+
+            }
+
+            b{
+                display: block;
+                text-align: center;
+                font-size: 22px;/* px */
+                font-weight: normal;
+            }
+        }
+    }
+
+    .course-data-entrance {
+        padding: 15px 15px 15px 60px;
+        width: fit-content;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        color: #666;
+        z-index: 9999;
+
+        &::before {
+            display: block;
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            width: 10px;
+            height: 10px;
+            background-color: #f73657;
+            border-radius: 50%;
+        }
+
+        &::after{
+            display: block;
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 15px;
+            width: 40px;
+            height: 40px;
+            background: url(./img/icon-live-data.png) no-repeat;
+            background-size: 40px 40px;
+        }
+    }
+}

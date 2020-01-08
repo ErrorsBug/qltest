@@ -1,0 +1,51 @@
+.co-join-list-manage
+{
+	li
+	{
+		height: 90px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		align-items: center;
+		color: #333;
+		font-size: 28px;/* px */
+		padding: 0 20px;
+		background-color: #fff;
+		border-bottom: 1px solid #e5e5e5;/* no */
+		cursor: pointer;
+		&.cancel
+		{
+			color: #999;
+			background-color: #f9f9f9;
+			justify-content: center;
+			font-size: 30px;/* px */
+		}
+		> .head-img
+		{
+			width: 60px;
+			height: 60px;
+			border-radius: 60px;
+			margin-right: 20px;
+		}
+		&[class^='option-']::before
+		{
+			content: '';
+			background-size: contain;
+			background-repeat: no-repeat;
+			margin-right: 20px;
+		}
+		&.option-kick::before
+		{
+            background-image: url(../../img/icon-join-list-kick.png);
+			width: 30px;
+			height: 31px;
+		}
+		&.option-black::before
+		{
+            background-image: url(../../img/icon-join-list-black.png);
+			width: 31px;
+			height: 32px;
+		}
+	}
+}

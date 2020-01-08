@@ -1,0 +1,28 @@
+@import "../../common/lib";
+
+.member-center__member-rights{
+	@include module-box('../../common/img');
+	padding-top:56px;
+	.rights-list{
+		overflow: hidden;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		.rights-item{
+			width:33%;
+			margin-top:40px;
+			img{
+				width:88px;
+				height:88px;
+				display: block;
+				margin:0 auto;
+			}
+			.tip{
+				color:#A0836B;
+				font-size:24px;/*px*/
+				text-align: center;
+				line-height:1.5;
+			}
+		}
+	}
+}

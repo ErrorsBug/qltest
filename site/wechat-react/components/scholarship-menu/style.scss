@@ -1,0 +1,96 @@
+.scholarship-menu {
+    /*活动摇摆动画*/
+    @keyframes swing {
+        10% {
+            transform: rotate(15deg);
+        }
+        20% {
+            transform: rotate(-10deg);
+        }
+        30% {
+            transform: rotate(5deg);
+        }
+        40% {
+            transform: rotate(-5deg);
+        }
+        50%,
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+    .scholarship-menu-btn {
+        position: absolute;
+        width: 100px;
+        height: 86px;
+        background: {
+            image: url(./img/scholarship.png);
+            position: center center;
+            size: 100% 100%;
+            repeat: no-repeat;
+        }
+        cursor: pointer;
+        right: 30px;
+        bottom: 260px;
+        transform-origin: bottom center;
+        animation: swing 2s 0.15s linear infinite;
+    }
+}
+
+.scholarship-dialog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.6);
+    .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .guide {
+        width: 212px;
+        height: 266px;
+        position: absolute;
+        background: {
+            image: url(./img/guide.png);
+            position: center center;
+            size: 100% 100%;
+            repeat: no-repeat;
+        }
+        top: 15px;
+        right: 28px;
+    }
+    .scholarship-content {
+        position: absolute;
+        width: 660px;
+        height: 631px;
+        background: {
+            image: url(./img/scholarship-dialog-content.png);
+            position: center center;
+            size: 100% 100%;
+            repeat: no-repeat;
+        }
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+
+        .content {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 320px;
+            text-align: center;
+            color: #333;
+            font-size: 32px;
+
+            span {
+                color: #f73657;
+            }
+        }
+    }
+}

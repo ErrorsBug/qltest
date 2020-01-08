@@ -1,0 +1,100 @@
+.choose-user-tag {
+    box-sizing: border-box;
+    padding-top: 0;
+    margin-top: 0;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+    line-height: 1.4;
+
+    .page-container {
+        flex: 1 1 auto;
+        position: relative;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .page-header {
+        text-align: center;
+        padding-top: 40px;
+        .title {
+            font-size: 36px; /* px */
+            color: #1B1B1B;
+            font-weight: bolder;
+        }
+        .desc {
+            margin-top: 4px;
+            font-size: 24px; /* px */
+            color: #666666;
+        }
+    }
+
+    .tag-category {
+        display: flex;
+        padding: 40px;
+
+        .tag-name {
+            flex: 0 0 auto;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            padding: 0 20px;
+            font-size: 32px; /* px */
+            font-weight: bold;
+            text-align: center;
+
+            & > img {
+                width: 100px;
+                height: auto;
+                margin-bottom: 10px;
+            }
+        }
+        .tag-list {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            .tag-item {
+                display: inline-block;
+                width: 152px;
+                height: 60px;
+                line-height: 60px;
+                font-size: 26px; /* px */
+                border-radius: 30px;
+                margin-left: 20px;
+                margin-bottom: 20px;
+                text-align: center;
+
+                &.select {
+                    color: #FFF !important;
+                }
+                &.no-select {
+                    background: #FFF !important;
+                }
+            }
+        }
+    }
+
+    .page-footer {
+        flex: 0 0 auto;
+        height: 100px;
+        padding: 0 40px;
+        background: #FFF;
+        .save-btn {
+            height: 76px;
+            background: #F73567;
+            border-radius: 40px;
+            box-sizing: border-box;
+            text-align: center;
+            line-height: 80px;
+            color: #FFF;
+            font-size: 32px; /* px */
+
+            &.disable {
+                color: #999;
+                background: #DDD;
+            }
+        }
+    }
+}

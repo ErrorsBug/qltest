@@ -1,0 +1,132 @@
+// 变量
+$primary_color_green: #F73657;
+$primary_color_gray: #333333;
+
+.new-checkin-camp-container {
+    min-height: 100%;
+
+    // 图片上传组件
+    .checkincamp-post-uploader-container {
+        height: 100%;
+        display: flex;
+        flex: row nowrap;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+    }
+
+    // 训练营的详细信息编辑
+    .checkincamp-detail-editor-container {
+        .with-arrow-sign {
+            &:after {
+                content: "";
+                display: inline-block;
+                width: 25px;
+                height: 25px;
+                margin-left: 5px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-image: url(./img/icon_goto.png);
+                background-size: 25px 25px;
+            }
+        }
+        .with-percent-sign {
+            &:after {
+                content: "%";
+                margin-left: 5px;
+            }
+        }
+        .placeholder {
+            font-style: normal;
+            color: #b5b5b5;
+        }
+        .checkincamp-detail-editor-section {
+            margin-top: 20px;
+            background-color: #ffffff;
+        }
+        .checkincamp-detail-item {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: stretch;
+            padding: 0 30px;
+            height: 120px;
+            line-height: 120px;
+            color: $primary_color_gray;
+            border-bottom: 1px solid #f5f5f5;
+            border-width: 2px; /*px*/
+        }
+        .checkincamp-detail-item-label {
+            font-size: 30px; /*px*/
+            white-space: nowrap;
+        }
+        .checkincamp-detail-input-box {
+            font-size: 28px; /*px*/
+            display: flex;
+            align-items: center;
+            input {
+                display: block;
+                height: 100%;
+                //width: 100%;
+                width: 490px;
+                text-align: right;
+                border: none;
+                outline: none;
+                font-size: 28px; /*px*/
+                line-height: 1.5;
+                //background-color: #000;
+            }
+        }
+        .camp-intro {
+            display: block;
+            width: 400px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            text-align: right;
+        }
+        .view-rule-link {
+            color: $primary_color_green;
+            font-size: 24px; /*px*/
+            margin-left: 20px;
+        }
+        .bonus-rule {
+            padding: 15px 0 15px 30px;
+            width: 610px;
+            box-sizing: border-box;
+            font-size: 26px; /*px*/
+            color: #999999;
+            line-height: 1.5;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        .bonus-switcher {
+          margin-top: 26px;
+        }
+        .bonus-switcher.active {
+            border-color: $primary_color_green;
+            background-color: $primary_color_green;
+            &:after {
+                border-color: $primary_color_green;
+            }
+        }
+        .submit-button {
+            width: 690px;
+            height: 90px;
+            line-height: 90px;
+            font-size: 32px; /*px*/
+            text-align: center;
+            margin: 40px auto;
+            color: #ffffff;
+            border-radius: 45px;
+            cursor: pointer;
+            background-color: $primary_color_green;
+        }
+    }
+}
+
+// 时间选择控件
+.ql-s-header-left,
+.ql-s-header-right {
+    color: $primary_color_green !important;
+    cursor: pointer;
+}

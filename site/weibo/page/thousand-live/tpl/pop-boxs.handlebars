@@ -1,0 +1,286 @@
+
+{{!--电脑预览图片--}}
+<div id="imgViewWin" class="img-view-window">
+    <b class="ivwBg"></b>
+    <a class="icon-cross btn-closed" href="javascript:;"></a>
+</div>
+
+{{!-- 关注二维码 --}}
+<div class="qlMsgTips focusQr2Box">
+    <div class="qlMTBg"></div>
+    <div class="main">
+        <div class="qlMT-content">
+            <img alt="" src="" class="focusPic">
+        </div>
+        <span class="focusQr-span-1 longqr">长按二维码，识别图中二维码</span>
+        <span class="focusQr-span-2 longqr">长按二维码关注，下一次开课会通知你</span>
+    </div>
+</div>
+
+{{!-- 剪切板图片预览 --}}
+<div class="qlMsgTips imagePreview">
+    <b class="qlMTBg"></b>
+    <div class="main">
+        <div class="qlMT-top">发送图片</div>
+        <div class="image-preview-wrapper">
+            <img class="image-preview" src="" />
+        </div>
+        
+        <div class="qlMTBottom">
+            <span class="boxFlex"><a href="javascript:;" class="tlbtn-cancel">取消</a></span>
+            <span class="boxFlex"><a href="javascript:;" class="tlbtn-confirm">确定</a></span>
+        </div>
+    </div>
+</div>
+
+{{!-- 视频播放  --}}
+<div class="qlMsgTips videoPreview">
+    <a class="icon-cross btn-closed" href="javascript:;"></a>
+    <div class="main">
+        <iframe id="videoIframe" allowfullscreen="" frameborder="0"></iframe>
+    </div>
+</div>
+
+{{!-- 合成语音弹框 --}}
+<div class="geneBox makeAudioBox">
+    <div class="main">
+        <div class="make-audio-top icon-cloud"></div>
+        <div class="gene-content">
+            <ul class='audio-make-ul'> 
+                <li>1.请打开微信电脑客户端</li>
+                <li>2.进入此直播的页面</li>
+                <li>3.点击此按钮，即可下载音频</li>
+            </ul>
+        </div>
+        <div class="gene-bottom"><a href="javascript:;" class="gene-btn gene-cancel">知道了</a></div>
+    </div>
+</div>
+
+
+{{!--禁言提示框--}}
+<div class="geneBox shutupBox">
+    <div class="main">
+        <div class="gene-top">禁言</div>
+        <div class="gene-content">
+            <span class="s-1">讨论区禁言模式</span>
+            <span class="s-2">开启后，讨论区将不能发言</span>
+            <span id="allShutup" class="btn-switch <#if topicView.isBanned=='Y'>swon</#if>" ></span>
+        </div>
+        <div class="gene-bottom"><a href="javascript:;" class="gene-btn gene-cancel">关闭</a></div>
+    </div>
+</div>
+
+{{!--送给好友--}}
+<div class="geneBox giftBox">
+    <div class="main">
+        <div class="gene-top">送给好友</div>
+        <div class="gene-content">
+            <span class="s-1">开启送给好友</span>
+            <span class="s-2">开启后，用户可购买本话题赠送给好友免费听</span>
+            <span id="giftSwitch" class="btn-switch <#if topicExtend?? && topicExtend!=null && topicExtend.isGiftOpen=='Y'>swon</#if>" ></span>
+        </div>
+        <div class="gene-bottom"><a href="javascript:;" class="gene-btn gene-cancel">关闭</a></div>
+    </div>
+</div>
+
+{{!--结束直播--}}
+<div class="geneBox finishBox">
+    <div class="main">
+        <div class="gene-top">结束直播</div>
+        <div class="gene-content">
+            <span>结束本次直播，用户将从头开始<br>回顾本次直播，是否结束？</span>
+        </div>
+        <div class="gene-bottom both">
+            <span><a href="javascript:;" class="gene-btn gene-cancel">取消</a></span>
+            <span><a href="javascript:;" class="gene-btn gene-confirm">确定</a></span>
+        </div>
+    </div>
+</div>
+
+{{!--私问详情框--}}
+<div class="qlMsgTips whisperShowBox">
+	<div class="main">
+		<a class="qlMT-close"></a>
+		<div class="qlMT-top"><var></var>的提问</div>
+		<div class="wl-msg-item">
+			<div class="wl-top-wkBox">
+				<span class="wl-top-boxFl">
+					<i class="uesr-head uesr-quetionName"><img src="https://img.qlchat.com/qlLive/liveCommon/normalLogo.png@132h-132w-1e-1c-2o"/></i>
+					<b></b>
+				</span>
+				<span class="wl-price">¥<var></var></span>
+			</div>
+			<div class="whisper-question"></div>
+			<div class="whisper-answer-ulBox"></div>
+			<div class="whisper-info-bar">
+				<var class="answer-score"></var>
+				<ul class="start-bar sc-1"><li class="score"></li></ul>
+				
+				<b class="q-date"><var></var></b>
+				<b class="listened-total"><var></var>人旁听</b>
+			</div>
+		</div>
+	</div>
+</div>
+
+<#-- 支付二维码 --}}
+<div class="qlMsgTips payQrBox" style="display:none;">
+<span class="qlMTBg"></span>
+	<div class="main">
+		<div class="qlMT-top">使用微信扫码支付</div>
+		<span class="payQr-span-1 kuaSpan">遇到不允许跨号支付？</span>
+		<div class="qlMT-content">
+			<span class="qlMT-qr"><img src="" class="payQrPic"></span>
+		</div>
+		<span class="payQr-span-2 longqr">长按二维码，识别图中二维码</span>
+	</div>
+</div>
+
+<#-- 推送弹框 --}}
+<div class="qlMsgTips pushBox" style="display:none;">
+	<div class="main">
+		<div class="push-top"><span>给开启通知的粉丝推送新话题开播通知，每天可发送2次，每次时间间隔必须大于4小时，请谨慎使用。</span></div>
+		<span class="push-span-2">还剩<var>${2-pushNum?default(2)}</var>次推送机会</span>
+		<a href="javascript:;" class="tlbtn-confirm">确定通知</a><a href="javascript:;" class="tlbtn-cancel">取消</a>
+		<span class="push-span-1"><a href="https://mp.weixin.qq.com/s?--biz=MzA4MTk0OTY1MQ==&mid=100001309&idx=1&sn=6e28a4f9cd0aa8b231b64fc8730cde17" class="">用自己服务号推送通知>></a></span>
+	</div>
+</div>
+{{!--设置头衔弹框--}}
+<div class="bottom-box setTagBox" style="display:none;">
+	<div class="bottom-shade"></div>
+	
+	<dl class="bottom-box-main setTag">
+		<dt>设置头衔</dt>
+		
+		<dd attr-title="嘉宾" attr-role="guest" class="<#if currentUser.title == '嘉宾'>active</#if>">嘉宾 <span class="check-box f-right"><i class="icon-checked"></i></span></dd>
+		<dd attr-title="主讲人" attr-role="guest" class="<#if currentUser.title == '主讲人'>active</#if>">主讲人 <span class="check-box f-right"><i class="icon-checked"></i></span></dd>
+		<dd attr-title="主持人" attr-role="guest" class="<#if currentUser.title == '主持人'>active</#if>">主持人 <span class="check-box f-right"><i class="icon-checked"></i></span></dd>
+		<dd attr-title="特邀主持人" attr-role="compere" class="<#if currentUser.title == '特邀主持人'>active</#if>">特邀主持人 <span class="check-box f-right"><i class="icon-checked"></i></span></dd>
+	</dl>
+</div>
+{{!--编辑我的资料弹框--}}
+<div class="qlMsgTips editBox" style="display:none; z-index:50;">
+	<div class="qlMTBg"></div>
+	<div class="main">
+		<div class="editUser">
+			<i class="icon-cross close"></i>
+			<div class="portrait">				
+				<img src="<#if wtUserPo.headImgUrl?index-of('wx.qlogo.cn/mmopen') gte 0>${wtUserPo.headImgUrl}<#else>${wtUserPo.headImgUrl?default('https://img.qlchat.com/qlLive/liveCommon/normalLogo.png')?replace('@132h-132w-1e-1c-2o', '')}@132h-132w-1e-1c-2o</#if>" alt="">
+			</div>
+			<span class="username">${wtUserPo.name?html}</span>
+			<span class="userrole">${currentUser.title}</span>
+		</div>
+
+		<div class="editBtn">
+			<span class="edit-btn spite-line" id="editMyInfo">
+				<i class="icon-write"></i>
+				编辑资料
+			</span>
+			<span class="edit-btn" id="editMyTitle">
+				<i class="icon-user-star"></i>
+				修改头衔
+			</span>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="qlMsgTips uploadAudioBox audioProgress">
+	<div class="main">
+		<div class="ap-title">上传录音</div>
+		<div class="ap-content"><var>0</var>%</div>
+		<div class="qlMTBottom">
+			<span class="boxFlex"><a href="javascript:;" class="tlbtn-confirm">取消上传</a></span>
+		</div>
+	</div>
+</div>
+<div class="qlMsgTips uploadAudioBox uploadAudioTips">
+	<div class="main">
+		<div class="ap-title">上传录音</div>
+		<div class="ap-content">仅支持 MP3 文件上传，大小不超过 30M</div>
+		<div class="qlMTBottom">
+			<span class="boxFlex"><a href="javascript:;" class="tlbtn-confirm">记住了</a></span>
+		</div>
+	</div>
+</div>
+
+<div class="qlMsgTips insertVideo">
+	<div class="main">
+		<div class="text-box">
+			<textarea class="insertVideoText" placeholder="发送优酷腾讯iframe通用代码可播放视频" ></textarea>
+		</div>
+		<div class="qlMTBottom">
+			<span class="boxFlex"><a href="javascript:;" class="tlbtn-cancel">取消</a></span>
+			<span class="boxFlex"><a href="javascript:;" class="tlbtn-confirm">发送</a></span>
+		</div>
+	</div>
+</div>
+
+
+<div class="qlMsgTips saidNoSound">
+	<div class="qlMTBg"></div>
+	<div class="main">
+		<div class="qlMT-top">无法正常收听语音？</div>
+		<div class="sns-content">
+			<p style="text-indent:2em">1.本次直播为语音+图文直播，语音收听方式跟在微信群一样，一条一条播放；</p>
+			<p style="text-indent:2em">2.听不到的同学请往下翻，确认直播已经开始并有语音发出来，如果没有看到语音条，说明暂时没有发送语音，请耐心等待；</p>
+			<p style="text-indent:2em">3.点击语音条后，如果一直在转圈，说明网速太慢，请切换其他网络；</p>
+			<p style="text-indent:2em">4.如果看到语音条滑块在移动，请确认手机处于非静音模式，拔掉耳机或者关闭WIFI再试；</p>
+			<p style="text-indent:2em">5.如果还是无法播放，请点击左侧按钮下载“千聊”APP，登录后点击“我的”>“近期看过的直播间”>进入找到报名的话题>收听；</p>
+		</div>
+
+		<div class="qlMTBottom">
+			<span class="boxFlex"><a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.thinkwu.live" class="tlbtn-down" style="padding: 0 5px;">下载千聊APP</a></span>
+			<span class="boxFlex"><a href="javascript:;" class="tlbtn-cancel">知道了</a></span>
+		</div>
+	</div>
+</div>
+{{!--上传文件弹窗--}}
+<div class="qlchat-modal" id="upload-file-box" hidden="true">
+	<div class="qlchat-modal-bg"></div>
+	<section>
+		<header>上传文件</header>
+		<main>
+			{{!--金额输入框--}}
+			<div class="input-box">
+				<input name="file-charge" placeholder="请输入收费金额" id="file-charge" type="text">
+				<label for="file-charge">（元）</label>
+			</div>
+			<p>
+				设置为0则无需付费即可查看此文件
+			</p>
+			{{!--是否开启下载--}}
+			{{!--<div class="switch-box">
+				<span>支持文件下载</span>
+				<a href="javascript:;" id="file-allow-download" class="btn-switch swon"></a>
+			</div>--}}
+			{{!--<p>注意：</p>--}}
+			<br>
+			<p>
+				可支持上传word、excel、pdf三种类型的文件，最大不能超过20M
+			</p>
+			{{!--<p>	
+				2.打开的文件若字体不支持则会显示乱码，建议调整为『宋体』再重新上传；
+			</p>--}}
+		</main>
+		<footer>
+			<span class="confirm">现在去上传</span>
+		</footer>
+	</section>
+</div>
+
+{{!--文件上传进程弹窗--}}
+<div class="qlMsgTips file-progress" id="file-progress">
+	<div class="main">
+		{{!--<div class="ap-title">上传文件</div>--}}
+		{{!--<div class="ap-content"><var>0</var>%</div>--}}
+		<div class="ap-content">文件正在上传中...</div>
+		{{!--<div class="qlMTBottom">--}}
+			{{!--<span class="boxFlex"><a href="javascript:;" id="upload-file-cancel" class="tlbtn-confirm">取消上传</a></span>--}}
+		{{!--</div>--}}
+		<span id="upload-file-cancel">取消上传</span>
+	</div>
+</div>
+
+<div id="upload-file-input" hidden></div>

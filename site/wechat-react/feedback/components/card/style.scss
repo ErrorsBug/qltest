@@ -1,0 +1,76 @@
+.course-consult-card {
+
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 30px;
+
+    .course-consult-card-inner {
+        position: relative;
+        display: flex;
+
+        .indicator-wrap {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+
+            .no-new-consult {
+                font-family: PingFangSC-Regular;
+                font-size: 24px;
+                color: #B2B2B2;
+                text-align: left;
+            }
+        }
+
+        .left-area {
+            .img {
+                width: 232px;
+                height: 193px;
+                /* Mask: */
+                background: #D8D8D8;
+                border-radius: 8px;
+                /* Bitmap: */
+                background-repeat: no-repeat;
+                background-position: top right;
+                background-size: cover;
+            }
+            margin-right: 30px;
+        }
+
+        .right-area {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .title {
+                /* 风靡亚洲的家居收纳课：教你一次整理，永不: */
+                font-family: PingFangSC;
+                font-size: 30px;
+                color: #333333;
+                text-align: left;
+                font-weight: 500;
+                line-height: 1.5;
+                height: 4.5em;
+                overflow: hidden;
+                position: relative;
+
+                .overflow-dot {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    width: 2em;
+                    background: #fff;
+                }
+            }
+
+            .date {
+                /* 2018-09-29 12:59: */
+                font-family: PingFangSC-Regular;
+                font-size: 24px;
+                color: #B2B2B2;
+                text-align: left;
+                line-height: 24px;
+            }
+        }
+    }
+}

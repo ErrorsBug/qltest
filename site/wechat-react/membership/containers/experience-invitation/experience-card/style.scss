@@ -1,0 +1,109 @@
+
+.experience-card-page {
+    width: 100%;
+    height: 100%;
+    background: url('../img/invitecard-bg-bg.png') no-repeat center;
+    background-size: cover;
+
+    .experience-card {
+        width: 100%;
+        height: 100%;
+        background: url('../img/invitecard-bg-card.png') no-repeat center;
+        background-size: cover;
+        position: relative;
+    }
+
+    .experience-container {
+        position: absolute;
+        left: 17.6%;
+        right: 17.6%;
+        top: 12.7%;
+        bottom: 12%;
+        text-align: center;
+        line-height: 1.4;
+        font-weight: bold;
+
+        .user-poster {
+            margin: 0 auto;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            & img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .user-name {
+            margin-top: 16px;
+            font-size: 28px; /* px */
+            color: #3C332B;
+        }
+        .desc {
+            margin-top: 8px;
+            font-size: 40px; /* px */
+            color: #F73657;
+        }
+        .experience-info {
+            margin-top: 70px;
+            position: relative;
+            & > .title {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                font-size: 28px; /* px */
+                color: #FFF;
+                font-weight: bolder;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 40px;
+
+                & > span {
+                    flex-shrink: 0;
+                    padding: 0 30px;
+                }
+
+                &::before, &::after {
+                    content: '';
+                    flex: 1;
+                    height: 1px; /* no */
+                    background: #FFF;
+                }
+            }
+            & img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .receive-btn {
+            margin-top: 80px;
+            height: 90px;
+            color: #FFF;
+            background: url('../img/vip-button-buy.png') no-repeat center;
+            background-size: cover;
+            line-height: 70px;
+            padding-top: 2px;
+            box-sizing: border-box;
+            text-align: center;
+            font-size: 34px; /* px */
+        }
+        .copy-right {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin-top: 120px;
+            font-size: 16px; /* px */
+            color: #3C332B;
+        }
+        .icon-ql-logo {
+            display: inline-block;
+            width: 80px;
+            height: 26px;
+            background: url('../img/ql-log.png') no-repeat center;
+            background-size: cover;
+        }
+    }
+}

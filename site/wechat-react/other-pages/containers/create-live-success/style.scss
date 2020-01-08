@@ -1,0 +1,94 @@
+.create-live-success-page{
+    overflow: hidden;
+    .success-gift-tips{
+        display: block;
+        margin: 330px auto 40px;
+        border:solid 1px #F73657 ;/* no */
+        border-radius: 10px;
+        background: #fff;
+        padding: 60px 30px;
+        width: 570px;
+        box-sizing: border-box;
+        position: relative;
+
+        
+        &::before{
+            content: '';
+            width: 439px;
+            height: 298px;
+            position: absolute;
+            background: url(./img/bg-success.png) center center no-repeat;
+            background-size: 100% 100%; 
+            transform: translate(-50%,-260px);
+            top:0;
+            left:50%;
+            display: block;
+        }
+
+        .title{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            white-space: nowrap;
+            color: #F73657;
+            font-size: 36px;/* px */
+            height: 50px; 
+            font-weight: bold;
+        }
+        .content{
+            margin-top: 18px;
+            
+            li{
+                font-size: 30px;/* px */
+                color: #666;
+                line-height: 50px;/* px */
+            }
+        }
+    }
+
+
+    .btn-jion-chat{
+        display: block;
+        width: 570px;
+        height: 76px;
+        line-height: 76px;
+        margin: 0 auto;
+        text-align: center;
+        border-radius: 40px;
+        background: #F73657;
+        color: #fff;
+        font-size: 32px;/* px */
+    }
+
+    .btn-next-time{
+        display: block;
+        margin: 20px auto;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        font-size: 30px;/* px */
+        color: #999999;
+        white-space: nowrap;
+        cursor: pointer;
+    }
+
+
+    .qrcode-box{
+        display: block;
+        text-align: center;
+        img{
+            display: block;
+            margin: 30px auto;
+            width: 270px;
+            height: 280px;
+
+        }
+        .title{
+            font-size: 32px;/* px */
+            color: #666;
+            margin-bottom: 30px;
+        }
+    }
+
+}

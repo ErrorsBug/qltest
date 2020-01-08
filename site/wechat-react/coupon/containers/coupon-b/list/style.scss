@@ -1,0 +1,169 @@
+@import '../definition.scss';
+
+.coupon-b-list-container
+{
+	padding-top: 20px;
+	.list-container
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 99px;
+	}
+
+	.empty-list
+	{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding-top: 200px;
+		.none-item
+		{
+			width: 282px;
+			height: 161px;
+			background-image: url(./img/none-item.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		 > p
+		{
+			margin-top: 40px;/* px */
+			font-size: 30px;
+			color: #999;
+		}
+	}
+
+
+	 > footer
+	{
+		// height: 110px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%; 
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		 padding: 12px 30px; 
+		 background: #fff;
+		box-sizing: border-box;
+		button 
+		{
+			height: 76px;
+			font-size: 32px;
+			outline: none;
+			box-sizing: border-box;
+			border: none;
+			background-color: #fff;
+		}
+		 > .add-coupon-btn
+		{
+			width: 690px; 
+			background:rgba(247,54,87,1);
+			border-radius:50px;
+			color: #fff;
+			flex: 1;
+			border-top: none;
+		}
+		 > .edit-btn 
+		{
+			width: 230px;
+			color:rgba(247,54,87,1);
+			border-radius:50px;
+			border:1px solid rgba(247,54,87,1);
+			margin-right:30px; 
+		}
+		 > div 
+		 {
+			 width: 100%;
+			 display: inline-flex;
+			 > button 
+			 {
+				flex: 1;
+				height: auto;
+				line-height:76px;
+				border-radius:50px;
+				text-align: center;
+				color:rgba(153,153,153,1);
+			 }
+			 > span{
+				 margin:0 15px;
+			 }
+			 > .cancel-btn 
+			 {
+				border:1px solid rgba(238,238,238,1);
+			 }
+			 > .delete-btn
+			 {
+				 background:rgba(238,238,238,1);
+			 }
+			 &.delete-nouse
+			 {
+				> .cancel-btn 
+				{
+					border:1px solid rgba(224,32,32,1);
+					color:rgba(247,54,87,1);
+				}
+				> .delete-btn
+				{
+					background:rgba(247,54,87,1);
+					color:rgba(255,255,255,1);
+				}
+			 }
+		 }
+	}
+	
+}
+
+.create-live-coupon-modal
+{
+	.co-dialog-content
+	{
+		width: 90%;
+	}
+
+	.co-dialog-btn-line-confirm
+	{
+		color: #33bb49;
+	}
+	.create-coupon-tip-once {
+		font-size: 26px; /*px*/
+		color: #ef5670;
+		padding-bottom: 20px;
+		text-align: center;
+	}
+}
+
+
+.helper {
+	.co-dialog-content {
+		border-radius:32px;
+		.co-dialog-title{
+			padding: 36px 0 0;
+		}
+
+		.co-dialog-confirm {
+			padding: 20px 0 0;
+			font-size: 28px; /*px*/
+			color: #666;
+			font-weight:400;	
+			text-align: left;
+
+			div {
+				margin: 0 70px 0;
+				line-height: 1.4;
+				p{
+					text-align: justify;
+				}
+			}
+		}
+		.co-dialog-btn-line{
+			margin-top: 40px;
+		}
+		.co-dialog-btn-line-confirm {
+			color: #F73657
+	;	}
+	}
+}

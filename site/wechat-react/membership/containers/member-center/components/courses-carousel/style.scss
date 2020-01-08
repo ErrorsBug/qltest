@@ -1,0 +1,39 @@
+@import "../../common/lib";
+
+.member-center__courses-carousel{
+	@include module-box('../../common/img');
+	.carousel-box{
+		margin:40px -40px 0;
+		overflow: hidden;
+		font-size:0;
+		.carousel-container{
+			display:inline-block;
+			white-space: nowrap;
+			overflow: hidden;
+			font-size:0;
+			&.start-animation{
+				animation: carousel 40s linear infinite;
+			}
+			&.paused{
+				animation-play-state: paused;
+			}
+		}
+		@keyframes carousel {
+			0%{
+				transform:translate3d(0,0,0);
+			}
+			100%{
+				transform:translate3d(-50%,0,0);
+			}
+		}
+		picture{
+			display:inline-block;
+		}
+		img{
+			flex-shrink: 0;
+			width:auto;
+			height:442px;
+			display:block;
+		}
+	}
+}

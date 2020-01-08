@@ -1,0 +1,38 @@
+.spokesperson-dialog{
+	text-align: center;
+	
+    b{
+		color: #575757;
+		display:block;
+		margin-top: 60px;
+		margin-bottom: 30px;
+		font-size:34px;/*px*/
+	}
+	.co-dialog-close{
+		top:10px;
+		width:40px;/*px*/
+		height: 40px;/*px*/
+		line-height: 38px;/*px*/
+		border-radius: 20px;
+		background-color: rgba(0,0,0,0.2);
+		color:#fff;
+	}
+	.content{
+		&:before{
+			content:'';
+			display:block;
+			background:url(../../../assets/images/symbol-icon/dai-box.png) center center no-repeat;
+			background-size:100% auto;
+			padding-bottom:72%;
+			width:100%;
+		}
+		span{
+			display:block;
+			margin-bottom:60px;
+			line-height:40px;
+			font-size:30px;/*px*/
+			color: #9b9ea3;
+		}
+	}
+
+}

@@ -1,0 +1,22 @@
+.live-v-dialog{
+    text-align: center;
+	.content{
+		&:before{
+			content:'';
+			display:block;
+			background:url(../../../assets/images/symbol-icon/jiav-box.png) center center no-repeat;
+			background-size:40% auto;
+			margin:60px auto 30px;
+			padding-bottom:40%;
+			width:70%;
+		}
+		span{
+            display:block;
+			margin-bottom:60px;
+			line-height:40px;
+			font-size:30px;/*px*/
+			color:#ff5d5d;
+		}
+	}
+
+}

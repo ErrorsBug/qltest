@@ -1,0 +1,36 @@
+
+    .un-right-bottom-icon{ 
+        position: absolute;
+        bottom: 5px;/*px*/
+        right: 2px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: right 0.3s; 
+        &.scrolling{
+            animation: movescrollJoin 0.3s ease-out 0s both;
+        }
+        &.scrolling-stop{
+            animation: movescrollJoin2 0.3s ease-out 0s both;
+        } 
+        @keyframes movescrollJoin{
+            0%{
+                transform: translateX(0);
+                
+            }
+            100%{
+                transform: translateX(60%);
+                opacity: 0.5;
+            }
+        }
+        @keyframes movescrollJoin2{
+            0%{
+                transform: translateX(60%);
+                opacity: 0.5;
+            }
+            100%{
+                transform: translateX(0);
+                
+            }
+        }
+    }

@@ -1,0 +1,20 @@
+body{
+    font-family: "黑体";
+}
+.tips-bar{
+    height: 80px;
+    line-height: 80px;
+    width: 100%;
+    color:#fff;
+    font-size: 26px;/*px*/
+    background-color: #35593f;  
+    text-align: center; 
+}
+.teacher-card{
+    width:100%;
+    height: auto;
+    
+}
+.teacher-card img {
+    width:100%;
+}

@@ -1,0 +1,134 @@
+@import "../../../assets/styles/base-definition";
+@import "../../../assets/styles/mixins.scss";
+
+.coupon-center-page-v2{
+    position:relative;
+    height:100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    .coupon-center-nav{
+        height:88px;
+        flex-shrink: 0;
+        display:flex;
+        background:#fff;
+        position:relative;
+        border-bottom: 1px solid #eee;
+        // @include afterBorderBottom1px;
+        .nav-item{
+            height:100%;
+            width:50%;
+            @include flex-center;
+            color:#666;
+            font-size:28px;/*px*/
+            transition:font-size .2s;
+            position:relative;
+            cursor: pointer;
+            &:after{
+                width:36px;
+                height:6px;/*px*/
+                background:$main-color;
+                content:'';
+                position: absolute;
+                bottom:1px;/*px*/
+                left:50%;
+                margin-left:-18px;
+                opacity: 0;
+                transition:opacify .2s;
+                border-radius: 3px;
+            }
+            &.current{
+                color:#333;
+                font-size: 32px;/*px*/
+                font-weight: bold;
+                &:after{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .list-container{
+        width:200%;
+        flex:1;
+        flex-shrink: 0;
+        display:flex;
+        transition:transform .2s;
+        overflow: hidden;
+        &.pos-2{
+            transform: translate(-50%, 0) translateZ(0);
+        }
+        .list-container-col{
+            flex:1 0;
+            height:100%;
+            position:relative;
+            display: flex;
+            flex-direction: column;
+            background:#fff;
+        }
+    }
+
+    .co-scroll-to-load{
+        position:relative;
+        flex:1;
+        box-sizing: border-box;
+        padding-bottom: 100px;
+        
+        .list-nomore {
+            margin-top: 20px;
+            font-size: 24px; /* px */ 
+        }
+    }
+    .coupon-list-wrap{
+        overflow: hidden;
+        padding:20px;
+    }
+    .coupon-list-empty {
+        background: #FFF;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        & > img {
+            width: 284px;
+            height: auto;
+        }
+        .desc {
+            margin-top: 32px;
+            font-size: 24px; /* px */
+            color: #B2B2B2;
+            text-align: center;
+        }
+    }
+    
+    .to-coupon-center {
+        cursor: pointer;
+        width: 100%;
+        background: #fff;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 100px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .img {
+            width: 40px;
+            height: 40px;
+            background: url('./img/mine-coupon.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-right: 10px;
+        }
+
+
+        font-size: 32px; /*px*/
+        color: #F73657;
+    }
+
+}

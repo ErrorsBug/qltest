@@ -1,0 +1,12 @@
+<view class="message-board" animation="{{animationData}}">
+    <view class="header">
+        精选留言
+        <text class="message-num">{{list.length}}</text>
+    </view>
+    <view class="list-wrap">
+        <message-list serverTime="{{serverTime}}" list="{{list}}" bind:onPraiseClick="onPraiseClick" />
+    </view>
+    <view class="close-btn" bind:tap="hideModal">
+        <image src="{{icon_close_src}}" mode="aspectFill" class="icon-close"/>
+    </view>
+</view>

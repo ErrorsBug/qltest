@@ -1,0 +1,55 @@
+.phone-code-container {
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .phone-input-container,
+    .code-input-container {
+        display: flex;
+        align-items: center;
+        padding: 25px 20px;
+        background-color: #eee;
+        border-radius: 5px;
+    }
+
+    .phone-input-container {
+        margin-bottom: 30px;
+    }
+
+    .phone-input,
+    .code-input {
+        margin-left: 25px;
+        background-color: #eee;
+        border: 0;
+        font-size: 28px;
+        flex: 1;
+        outline: none;
+        line-height: 40px;
+    }
+
+    .code-input {
+        width: 200px;
+    }
+
+    .code-action {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .action-button {
+            width: 230px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #FF9F00;
+            border-radius: 5px;
+            color: #fff;
+        }
+    }
+}

@@ -1,0 +1,99 @@
+.ls-win-select-tag {
+    padding-top: 80px;
+    box-sizing: border-box;
+    .c-mask-view-body {
+        background-color: #fff;
+        border-top-left-radius: 32px;
+        border-top-right-radius: 32px;
+        max-height: calc(100% - 80px);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .w-header {
+        position: relative;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        padding: 0 10px 0 40px;
+        height: 98px;
+        &::after {
+            content: "";
+            height: 1px;/*no*/
+            background-color: #eee;
+            position: absolute;
+            bottom: 0;
+            left: 40px;
+            right: 40px;
+        }
+
+        .title {
+            flex: 1;
+            font-size: 32px;/*px*/
+            color: #333;
+            font-weight: bolder;
+        }
+
+        .btn {
+            cursor: pointer;
+            padding: 0 30px;
+            color: #f73657;
+            font-size: 28px;/*px*/
+            line-height: normal;
+        }
+    }
+
+    .w-list {
+        flex: 1;
+        overflow-y: auto;
+    }
+
+    .tag-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        padding: 0 40px;
+        font-size: 28px;/*px*/
+        i {
+            display: none;
+        }
+
+        &.current {
+            background-color: #f7f7f7;
+
+            i {
+                display: block;
+                color: #f73657;
+            }
+        }
+
+        .name {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+
+    .w-footer {
+        flex-shrink: 0;
+        background-color: #fff;
+        height: 100px;
+        padding: 0 40px;
+        display: flex;
+        align-items: center;
+
+        >[class|=btn] {
+            flex: 1;
+            background-color: #f73657;
+            color: #fff;
+            font-size: 32px;/*px*/
+            line-height: normal;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 76px;
+            border-radius: 76px;
+        }
+    }
+}

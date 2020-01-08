@@ -1,0 +1,153 @@
+.quick-enter-bar{
+    margin: 20px 0;
+    &.brief {
+        height: 150px;
+        overflow: hidden;
+    }
+
+    .quick-enter-bar-list {
+        color: #666;
+        font-size: 26px;/*px*/
+        display: flex;
+        // margin: 50px 30px 30px;
+        border-radius: 4px;
+        flex-flow: row wrap;
+    
+        &.pc {
+            border-radius: 6px;
+            background: #FAF9F9;
+            border: 1px solid #E5E5E5; /* no */
+            position: relative;
+    
+            .tips-text {
+                color: #666;
+                font-size: 24px; /* px */
+                text-align: center;
+                width: 100%;
+                padding: 20px 0;
+            }
+            .quick-enter {
+                color: #999;
+            }
+        }
+    }
+
+    .show-all-btn {
+        font-size: 24px; /* px */
+        color: #666;
+        padding: 10px 0 30px;
+
+        &.down::after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            background: url('../../img/icon-down.png') no-repeat center / contain;
+        }
+        &.up::after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            background: url('../../img/icon-up.png') no-repeat center / contain;
+        }
+    }
+
+    .quick-enter{
+        width: 25%;
+        padding: 0 25px 20px;
+        box-sizing: border-box;
+        text-align: center;
+        position: relative;
+        .function-red{
+            position: absolute;
+            .redpoint{
+                right: 40px;
+                top: 26px;
+            }
+            .font-red-point{
+                width: auto;
+                height: auto;
+                font-size: 16px;/*px*/
+                padding: 2px 10px;
+                border-radius: 20px;
+                right: 10px;
+                top: 8px;
+            }
+        }
+        
+        &::before{
+            content: '';
+            display: block;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+        }
+        
+    }
+    .btn-create-topic{
+        &::before{
+            background: url('./img/icon-topic.png') center center no-repeat;
+            background-size: 100% auto;
+        }
+    }
+    .btn-create-channel{
+        &::before{
+            background: url('./img/icon-channel.png') center center no-repeat;
+            background-size: 100% auto;
+        }
+    }
+    .btn-create-camp{
+        &::before{
+            background: url('./img/icon-camp.png') center center no-repeat;
+            background-size: 100% auto;
+        }
+    }
+    .btn-create-knowledge {
+        &::before{
+            background: url('./img/icon-short-knowledge.png') center center no-repeat;
+            background-size: 100% auto;
+        }
+    }
+    .btn-knowledge-shop{
+        &::before{
+            background: url('./img/icon-knowledge.png') center center no-repeat;
+            background-size: 100% auto;
+        }
+    }
+    .btn-reprint{
+        &::before{
+            background: url('./img/icon-reprint.png') center center no-repeat;
+            background-size: 100% auto;
+        }
+    }
+    .btn-homework{
+        &::before{
+            background: url('./img/icon-homework.png') center center no-repeat;
+            background-size: 100% auto;
+        }
+    }
+    .btn-exam{
+        &::before{
+            background: url('./img/icon-exam.png') center center no-repeat;
+            background-size: 100% auto;
+        }
+    }
+    .btn-form{
+        &::before{
+            background: url('./img/icon-form.png') center center no-repeat;
+            background-size: 100% auto;
+        }
+    }
+    .btn-community{
+        &::before{
+            background: url('./img/icon-community.png') center center no-repeat;
+            background-size: 100% auto;
+        }
+    }
+    .btn-training{
+        &::before{
+            background: url('./img/icon-training.png') center center no-repeat;
+            background-size: 100% auto;
+        }
+    }
+}

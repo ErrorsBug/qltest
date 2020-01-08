@@ -1,0 +1,51 @@
+.course-consult-container {
+    .tab-container {
+        display: flex;
+        background: #ffffff;
+        border: 1px solid #eeeeee;
+        height: 108px;
+        align-items: center;
+
+        .tab-unit {
+            flex: 1;
+            text-align: center;
+            cursor: pointer;
+
+            .tab-unit-inner {
+                font-family: PingFangSC-Regular;
+                font-size: 32px;
+                color: #333333;
+                letter-spacing: 0;
+                text-align: center;
+
+                span.text {
+                    position: relative;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+
+                .text-active {
+                    color: #F73657;
+                    font-weight: 700;
+                }
+
+                .active {
+                    position: absolute;
+                    bottom: -10px;
+                    background: #F73657;
+                    width: 36px;
+                    height: 4px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    border-radius: 4px;
+                }
+
+                .indicator-wrap {
+                    display: inline-block;
+                    margin-left: 10px;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}

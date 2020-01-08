@@ -1,0 +1,22 @@
+<view class="message" wx:if="{{viewList.length}}" wx:for="{{viewList}}" wx:key="id">
+    <image class="user-head" src="{{item.headImgUrl}}" mode="aspectFill"></image>
+
+    <view class="main">
+        <view class="consult">
+            <view class="name">{{item.name}}</view>
+            <view class="time">{{item.consultTime}}</view>
+            <view class="content">{{item.content}}</view>
+        </view>
+
+        <view class="consult reply">
+            <view class="name liveroom">直播间回复</view>
+            <view class="time">{{item.replyTime}}</view>
+            <view class="content">{{item.replyContent}}</view>
+        </view>
+    </view>
+
+    <view class="like" bind:tap="onPraiseClick" data-id="{{item.id}}">
+        <image class="icon-like" src="{{item.isLike === 'Y' ? icon_liked_src : icon_like_src}}" mode="aspectFill"></image>
+        {{item.praise}}
+    </view>
+</view>

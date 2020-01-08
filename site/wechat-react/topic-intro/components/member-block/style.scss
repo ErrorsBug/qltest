@@ -1,0 +1,98 @@
+
+.member-block {
+	.icon-meber-vip {
+		width: 48px;
+		height: 44px;
+		background: url('./img/me-icon-vipbig.png') no-repeat center;
+		background-size: cover;
+		margin-right: 16px;
+	}
+	.member-tips {
+		font-size: 24px !important; /* px */
+		font-weight: bold;
+		color: #91715A !important;
+		.member-price {
+			font-size: 32px !important; /* px */
+			color: #5A483A;
+		}
+	}
+
+	.open-member-btn {
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		width: 25%;
+		font-size: 28px; /* px */
+		color: #FFF;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: bold;
+		.icon_enter {
+			font-size: 24px; /* px */
+			position: relative;
+			transform: translateX(-2px);
+		}
+	}
+
+	&.normal, &.member-special {
+		margin-top: 34px;
+		height: 76px;
+		background: url('./img/course-bg-vip.png') no-repeat center;
+		background-size: cover;
+		display: flex;
+		align-items: center;
+		padding: 0 30% 0 16px;
+		position: relative;
+		border-radius: 8px;
+		overflow: hidden;
+	}
+
+	// 底部悬浮
+	&.fix-bottom {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 69px !important; /* px */
+		line-height: 69px; /* px */
+		display: flex;
+		align-items: center;
+		background: #FFF;
+		padding: 0 32px;
+		// transition: bottom linear 0.5s;
+		.icon-meber-vip {
+			width: 40px;
+			height: 36px;	
+		}
+		.open-member-btn {
+			color: #91715A;
+			font-size: 24px; /* px */
+		}
+		&.show {
+			bottom: 98px; /* px */
+		}
+	}
+
+	// 样式弱化
+	&.member-special {
+		background: #FFFBF8 !important;
+		border: 1px solid #EFE2D7; /*px*/
+		font-weight: normal !important;
+		.member-tips,{
+			color: #A77959 !important;
+			font-weight: normal !important;
+		}
+		.member-price{
+			font-size: 24px !important; /*px*/
+			font-weight: normal !important;
+		}
+		.open-member-btn{
+			color: #A77959 !important;
+			font-size: 24px; /*px*/
+			font-weight: normal !important;
+		}
+	}
+}

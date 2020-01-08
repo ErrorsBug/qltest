@@ -1,0 +1,106 @@
+.eb-dir-box{
+    width: 100%;
+    height: 100% !important;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    h4, h5{
+        font-size: 52px; /*px*/
+        font-weight: bold;
+        font-family: 'SourceHanSans', 'Times New Roman', Times, serif !important;
+        line-height: 1.5;
+        color: #A47474;
+        margin-bottom: 64px;
+    }
+    h5{
+        font-size: 40px;
+        margin-bottom: 16px;
+    }
+    .eb-dir-cont{
+        overflow: hidden;
+        overflow-y: auto;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        flex: 1 0 auto;
+    }
+    .eb-dir-item{
+        margin-bottom: 16px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        .eb-dir-title{
+            p{
+                position: relative;
+                display: flex;
+                padding: 16px 0 16px 40px;
+                background: url('../../img/icon-jian.png') no-repeat right center;
+                background-size: 36px 24px; /*px*/
+                i{
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    top: 0;
+                    left: 0;
+                    width: 40px;
+                    height: 100%;
+                    font-size: 28px; /*px*/
+                    color: #666;
+                    transform-origin: center;
+                    transform: rotate(90deg);
+                    z-index: 6;
+                    &::before{
+                        padding: 0 30px;
+                    }
+                }
+                &::before{
+                    position: absolute;
+                    top: 50%;
+                    left: 100px;
+                    right: 68px;
+                    height: 0;
+                    border-top: 2px dashed #999; /*no*/
+                    transform: translateY(50%);
+                    content: '';
+                    z-index: 0;
+                }
+                span{
+                    position: relative;
+                    z-index: 1;
+                    display: inline-block;
+                    height: 100%;
+                    padding-right: 32px;
+                    font-size: 36px; /*px*/
+                    font-weight: bold;
+                    color: #605858;
+                    background: #FFFEFC;
+                    line-height: 1.4;
+                    font-weight: bold;
+                    max-width: 75%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                &.action{
+                    i{
+                        transform: rotate(-90deg);
+                    }
+                }
+            }
+            .eb-dir-child{
+                height: 0;
+                overflow: hidden;
+                overflow-y: auto;
+                scroll-behavior: smooth;
+                -webkit-overflow-scrolling: touch;
+                span{
+                    font-size: 28px; /*px*/
+                    font-weight: normal;
+                    &.unstart{
+                        color: rgba(#605858, 0.3);
+                    }
+                }
+            }
+        }
+    }
+}

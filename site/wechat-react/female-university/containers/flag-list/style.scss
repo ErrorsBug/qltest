@@ -1,0 +1,47 @@
+.flag-list-page{
+    background: #fff;
+    min-height: 100vh;
+    .fl-scroll-box{
+        box-sizing: border-box;
+        padding: 0 0 40px;
+        
+        &.pointer-events-none{
+            pointer-events: none;
+        }
+        .fl-lists{
+            background:rgba(255,255,255,1);
+            border-radius:28px 28px 0px 0px;
+            padding:32px 0 120px;  
+            position: relative;
+            margin-top:-40px;
+            z-index: 10;
+            &.fl-footer{
+                padding-bottom:20px;
+                 
+            }
+            .fl-title{
+                font-size:26px; 
+                color:rgba(123,66,70,1);
+                line-height:42px;
+                text-align: center;
+                margin-bottom: 32px;
+            }
+        }
+        .sort-info-bar{
+            color: #bbb;
+            font-size: 24px;/* px */
+            line-height: 34px;
+            display: block;
+            margin:38px 0 ;
+        }
+
+    }
+
+    .co-dialog-content{
+        overflow: visible;
+    }
+    .un-footer-box {
+        background-color:none !important; 
+    }
+    
+}

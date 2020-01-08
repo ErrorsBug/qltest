@@ -1,0 +1,71 @@
+.co-scroll-view {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    text-size-adjust: none;
+}
+
+
+.co-load-status {
+    line-height: 120px;
+    font-size: 22px; /*px*/
+    color: #B2B2B2;
+    text-align: center;
+    white-space: nowrap;
+    div {
+        // font-size: 28px; /*px*/
+        color: #666;
+    }
+}
+
+.co-loading-ellipsis {
+    position: relative;
+    &::before {
+        content: "...";
+        color: transparent;
+    }
+    @keyframes coLoadingEllipsis {
+        33% {
+            width: 100%;
+        }
+        34% {
+            width: 33%;
+        }
+        66% {
+            width: 33%;
+        }
+        67% {
+            width: 66%;
+        }
+        99% {
+            width: 66%;
+        }
+        100% {
+            width: 100%;
+        }
+    }
+    &::after {
+        content: "...";
+        position: absolute;
+        left: 0;
+        overflow: hidden;
+        width: 100%;
+        animation: coLoadingEllipsis 1s infinite;
+    }
+}
+
+
+
+.co-scroll-view-empty {
+    position: static;
+    transform: none;
+
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    box-sizing: border-box;
+}

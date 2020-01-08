@@ -1,0 +1,137 @@
+.winter-health-comment-container
+{
+	background-color: #f5f5f5;
+	height: 100%;
+	-webkit-overflow-scrolling: touch;
+    > .comment-list
+	{
+		width: 100%;
+		position: absolute;
+		top: 0;
+		bottom: 100px;
+		left: 0;
+		right: 0;
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+        >ul{
+            padding-bottom: 100px;
+        }
+	}
+	 > .input-area
+	{
+		max-width: 1280px; /*px*/
+    	min-width: 640px; /*px*/
+		flex-shrink: 0;
+		height: 100px;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+        background-color: #fff;
+        padding-left: 27px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        >input{
+            background-color: #eee;
+            border: none;
+            height: 70px;
+            flex: 1;
+            padding: 0 17px;
+        }
+        >button{
+            padding: 0 21px;
+            height: 70px;
+            border: none;
+            margin-left: 3px;
+            background: transparent;
+            color: #f84c69;
+            font-size: 32px;/* px */
+            font-weight: 400;
+        }
+	}
+}
+
+li{
+	width: 660px;
+	margin: 0 auto;
+	padding: 46px 0;
+	&:not(:last-child){
+		border-bottom: 1px solid rgb(204,204,204);
+	}
+	.header{
+		display: flex;
+		align-items: center;
+		height: 60px;
+
+		.head-image{
+			height: 60px;
+			width: 60px;
+			border-radius: 60px;
+			border: 1px solid rgb(163,163,163);
+		}
+		.detail {
+			margin-left: 10px;
+			flex: 1;
+			.id{
+				color: rgb(58,58,58);
+				font-size: 26px;/*px*/
+				line-height: 26px;
+			}
+			.time {
+				font-size: 20px;/*px*/
+				line-height: 20px;
+				color: rgb(163, 163, 163);
+				margin-top: 12px;
+			}
+		}
+		.agree {
+			cursor: pointer;
+			height: 40px;
+			line-height: 40px;
+			.count {
+				font-size: 22px;/*px*/
+				color: rgb(163,163,163);
+				display: inline-block;
+				margin-right: 6px;
+			}
+			.img{
+				height: 28px;
+				width: 28px;
+				display: inline-block;
+				background: {
+					image: url(../img/no-like.png);
+					size: 100% 100%;
+					repeat: no-repeat;
+				}
+			}
+			&.like {
+				.img{
+					background: {
+						image: url(../img/like.png);
+					}
+				}
+			}
+		}
+	}
+	p{
+		padding-left: 70px;
+		margin-top: 20px;
+		color: rgb(58,58,58);
+		font-size: 26px;/*px*/
+		line-height: 36px;
+		width: 100%;
+	}
+}
+
+.loading-next,
+.no-more
+{
+	display: none;
+	bottom: 0;
+	text-align: center;
+	width: 100%;
+	color: #909499;
+	padding: 20px 0;
+	font-size: 26px; /*px*/
+	background-color: #f2f2f2;
+}

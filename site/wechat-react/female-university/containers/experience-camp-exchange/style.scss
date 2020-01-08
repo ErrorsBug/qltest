@@ -1,0 +1,116 @@
+.experience-camp-exchange{
+    background:rgba(255,255,255,1);
+    min-height: 100vh;
+    .experience-camp-exchange-container{
+        padding: 140px 40px 0;
+        .experience-camp-exchange-title{
+            font-size:60px;
+            font-weight:bold;
+            color:rgba(51,51,51,1);
+            line-height:84px;
+            text-align: center;
+        }
+        .experience-camp-exchange-input{
+            margin-top: 50px;
+            border-bottom: 2px solid #EEEEEE;
+            position: relative;
+            input{
+                background: none;
+                border:none;
+                font-size:36px; 
+                color:rgba(102,102,102,1);
+                line-height:50px;
+                width: 100%;
+                text-align: center;
+                outline: none;
+                padding:30px 60px ; 
+            }
+            i{
+                position: absolute;
+                right: 0;
+                top: 50%;
+                width: 50px;
+                height: 50px;
+                transform: translateY(-50%);
+                font-size: 36px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #979797;
+            }
+        }
+        .experience-camp-exchange-btn{
+            margin-top: 54px;
+            height:100px;
+            border-radius:50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size:48px;
+            color:rgba(187,187,187,1);
+            background:rgba(238,238,238,1);
+            &.on{
+                color:rgba(255,255,255,1);
+                background:rgba(224,65,79,1);
+            }
+        }
+    }
+    .experience-camp-exchange-dialog{
+        padding:48px 32px;
+        .dialog-title{
+            font-size:36px; 
+            font-weight:bold;
+            color:rgba(51,51,51,1);
+            line-height:50px;
+            text-align: center; 
+        }
+        .dialog-content{
+            margin-top: 48px;
+            background:rgba(247,247,247,1);
+            border-radius:0px 0px 8px 8px;
+            .dialog-content-img{
+                img{
+                    width: 100%;
+                }
+            }
+            .dialog-content-bottom{
+                padding:32px;
+                .dialog-content-title{
+                    font-size:30px;
+                    font-family:PingFangSC-Semibold,PingFang SC;
+                    font-weight:600;
+                    color:rgba(51,51,51,1);
+                    line-height:42px;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1;
+                    overflow: hidden;
+                }
+                .dialog-content-time{
+                    margin-top: 16px;
+                    font-size:26px; 
+                    color:rgba(102,102,102,1);
+                    line-height:36px;
+                }
+            }
+        }
+        .dialog-btn{
+            width:446px;
+            height:76px;
+            background:rgba(224,65,79,1);
+            border-radius:50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin:32px auto 16px;
+            font-size:32px; 
+            color:rgba(255,255,255,1);
+        }
+        .dialog-tip{
+            font-size:22px; 
+            color:rgba(153,153,153,1);
+            line-height:32px;
+            text-align: center;
+        }
+    }
+} 

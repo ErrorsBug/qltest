@@ -1,0 +1,33 @@
+<div class="main">
+    <a href="javascript:;" class="qlbmi-redbag-cancel icon-cancel"></a>
+    <div class="live-headpic"><img src=""></div>
+    <div class="live-towhy"></div>
+    <div class="thank-money"><var>30</var>元</div>
+    <dl class="thank-p1 rgdetail" style="display:none;"><dd class="rglist qlbga">赏金明细</dd></dl>
+    <div class="redbag-reply">
+        <div class="thank-box managerThankBox" style="display:none;" ><!--管理员 -->
+        
+            <dl class="redbag-rule">
+                <dd>微信官方手续费0.6%</dd>
+                <dd>被赞赏人得{{businessOpProfit}}%</dd>
+                <dd>直播间得{{topicPo.businessOpProfit}}%</dd>
+                <dd>微信规定：单人每天只能到账100个红包，超过的红包第二天会到账。</dd>
+            </dl>
+            {{#if powerEntity.entity.allowMGLive}}<span class="redbag-rule-2">请在直播间设置页面查看收益明细</span>{{/if}}
+            <span class="redbag-rule-3" style="display:none;">请关注【千聊】公众号查看赞赏金额总计</span>
+        </div>
+        <span class="replyresult" >
+            <var class="r1">sdfds</var>给了<var class="r2">sdfs</var>一个<var class="r3"></var>
+        </span>
+    
+        <div class="thank-box thankBox" style="display:none;"><!--被赞赏人 -->
+            <div  style="padding-left:2rem;color:#999;">回复Ta</div>
+            <dl class="thank-choose">
+                <dd class="rglist" attr-action="baobao">拥抱</dd>
+                <dd class="rglist" attr-action="loveyou">握手</dd>
+                <dd class="rglist" attr-action="meme">么么哒</dd>
+            </dl>
+        </div>
+        <div class="thank-box replyresultNone" style="display:none;"></div><!--没有回复 -->
+    </div>
+</div>

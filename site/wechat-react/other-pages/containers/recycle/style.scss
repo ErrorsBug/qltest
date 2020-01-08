@@ -1,0 +1,149 @@
+.check-in-recycle-container {
+	background-color: #fff;
+	min-height: 100%;
+
+	.top-menu {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 88px;
+		border-bottom: 1px solid #EEEEEE; /*no*/
+		//overflow-y: visible;
+		//overflow-x: auto;
+		display: flex;
+		flex-wrap: nowrap;
+		box-sizing: content-box;
+
+		.item {
+			width: 25%;
+			height: 100%;
+			position: relative;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 28px;
+			font-weight: 400;
+			color: #666666;
+			cursor: pointer;
+			overflow: visible;
+
+			&.cur {
+				color: #333333;
+				font-weight: 600;
+			}
+
+			&.cur:after {
+				content: "";
+				position: absolute;
+				bottom: -1px; /*no*/
+				left: 50%;
+				width: 36px;
+				height: 6px;
+				background: #F73657;
+				border-radius: 3px;
+				transform: translateX(-50%);
+			}
+		}
+	}
+
+	.recycle-list-container {
+		margin-top: 90px;
+		margin-bottom: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+
+		.course-item {
+			min-height: 126px;
+			display: flex;
+			margin: 40px 40px 0;
+			padding-bottom: 40px;
+			border-bottom: 1px solid #EEEEEE; /*no*/
+
+			&.train {
+				.studyNum {
+					border-bottom-left-radius: 8px; /*px*/
+					border-bottom-right-radius: 8px; /*px*/
+					overflow: hidden;
+				}
+			}
+			.banner {
+				.image {
+					display: block;
+					height: 126px;
+					width: 226px;
+					border-top-left-radius: 8px; /*px*/
+					border-top-right-radius: 8px; /*px*/
+					overflow: hidden;
+				}
+
+				.studyNum {
+					height: 34px;
+					background: #F7F7F7;
+					border-radius: 0px 0px 4px 4px;
+					font-size: 22px;
+					color: #999999;
+					text-align: center;
+					line-height: 34px;
+				}
+			}
+
+			.main {
+				margin-left: 30px;
+				//width: 420px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: stretch;
+				flex-grow: 1;
+
+
+				.title {
+					display: block;
+					font-size: 28px;
+					font-weight: 600;
+					color: #333333;
+					line-height: 40px;
+					overflow: hidden;
+				}
+
+				.bottom {
+					display: flex;
+					justify-content: space-between;
+
+					.smallTip {
+						font-size: 24px;
+						font-weight: 400;
+						color: #999999;
+						line-height: 33px;
+
+					}
+
+					.money {
+						font-size: 24px;
+						font-weight: 400;
+						color: #00C353;
+						line-height: 33px;
+						margin-left: 40px;
+					}
+
+					.control {
+						position: relative;
+						font-size: 28px;
+						cursor: pointer;
+						width: 40px;
+						height: 40px;
+						background: url(./img/more.png) no-repeat;
+						background-size: cover;
+
+					}
+				}
+			}
+		}
+	}
+	.recycle-bottom-dialog {
+		li {
+			justify-content: center;
+		}
+	}
+}

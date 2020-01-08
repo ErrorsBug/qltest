@@ -1,0 +1,65 @@
+/* 直播间列表*/
+.live
+{
+	padding-right: 30px;
+	height: 172px;
+	display: flex;
+	align-items: center;
+    justify-content: flex-start;
+    border-top: 1px solid rgb(235, 235, 235);/* no */
+	&:first-child{
+		border-top: none;
+	}
+	cursor: pointer;
+	 > span
+	{
+		display: block;
+		width: 110px;
+		height: 110px;
+        margin-right: 27px;
+        flex-shrink: 0;
+		 > img
+		{
+			width: 100%;
+			height: 100%;
+			border-radius: 100%;
+		}
+	}
+	 > section
+	{
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+        width: calc(100% - 110px - 27px);
+
+		 > h2
+		{
+			font-weight: normal;
+			font-size: 30px;/*px*/
+			color: #424242;
+			margin-bottom: 20px;
+			width: 100%;
+			line-height: normal;
+		}
+		 > p
+		{
+			font-size: 24px;/* px */
+			color: #bdb5b5;
+			line-height: 1;
+			 > span
+			{
+				margin-right: 30px;
+			}
+		}
+	}
+	.tag-authority
+	{
+		background-image: url(../../img/icon-authority.png);
+		width: 74px;
+		height: 28px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		display: block;
+	}
+}

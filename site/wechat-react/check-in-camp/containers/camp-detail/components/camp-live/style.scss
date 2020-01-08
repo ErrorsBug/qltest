@@ -1,0 +1,153 @@
+.check-in-camp-live {
+    .live-info {
+		.live-info-wrap {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background: #fff;
+			padding: 20px 30px;
+
+			position: relative;
+			&::before{
+				position: absolute;
+				right: 30px;
+				color: #ccc8c8;
+				font-size: 24px;
+				top:50%;
+				transform: translateY(-50%);
+				margin-top: 2px;
+			}
+
+			// margin-top: 20px;
+			// overflow: hidden;
+
+
+
+			.live-desc
+			{
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				color: #4c4c4c;
+				font-size: 28px; /*px*/
+				margin-right: 40px;
+				overflow: hidden;
+
+				.live-icon
+				{
+					width: 62px;
+					height: 62px;
+					background-repeat: no-repeat;
+					background-size: cover;
+					background-position: center;
+					border-radius: 50%;
+					overflow: hidden;
+					margin-right: 16px;
+					flex-shrink: 0;
+				}
+
+				.title
+				{
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					flex: 1;
+					line-height: 1.5;
+				}
+			}
+			// .symbol-list{
+			// 	i{
+			// 		display: none;
+			// 		width:50px;/*px*/
+			// 		height:60px;/*px*/
+			// 		margin-left:6px;
+			// 		vertical-align: middle;
+			// 		cursor: pointer;
+			// 		&:nth-child(1){
+			// 			display: inline-block;
+			// 		}
+			// 		&:nth-child(2){
+			// 			display: inline-block;
+			// 		}
+			// 	}
+			// 	.real-name-y{
+			// 		background:url(../../../assets/images/symbol-icon/realname-icon-y.png) center center no-repeat;
+			// 		background-size: 80% auto;
+			// 	}
+			// 	.pyramid{
+			// 		background:url(../../../assets/images/symbol-icon/pyramid-icon.png) center center no-repeat;
+			// 		background-size: 80% auto;
+			// 	}
+			// 	.real-name-n{
+			// 		background:url(../../../assets/images/symbol-icon/realname-icon-n.png) center center no-repeat;
+			// 		background-size: 80% auto;
+
+			// 	}
+			// 	.livev{
+			// 		background:url(../../../assets/images/symbol-icon/jiav-icon.png) center center no-repeat;
+			// 		background-size: 80% auto;
+			// 	}
+			// 	.doctor{
+			// 		background:url(../../../assets/images/symbol-icon/doctor.png) center center no-repeat;
+			// 		background-size: 60% auto;
+			// 	}
+			// 	.livet{
+			// 		background:url(../../../assets/images/symbol-icon/jiat-icon.png) center center no-repeat;
+			// 		background-size: 80% auto;
+			// 	}
+			// 	.dai{
+			// 		background:url(../../../assets/images/symbol-icon/dai-icon.png) center center no-repeat;
+			// 		background-size: 80% auto;
+			// 	}
+			// 	.hot{
+			// 		background:url(../../../assets/images/symbol-icon/hot-icon.png) center center no-repeat;
+			// 		background-size: 80% auto;
+			// 	}
+			// }
+
+
+			.follow-btn
+			{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				overflow: hidden;
+				padding: 8px 8px;
+				width: 114px;
+				cursor: pointer;
+				flex-shrink: 0;
+				border-radius: 100px;
+				border: 1px solid #f73657; /*no*/
+				color: #f73657;
+                font-size: 26px; /*px*/
+                
+				.add-icon
+				{
+					background: url(./img/add.png) no-repeat center center;
+					background-size: 20px 20px;
+					width: 20px;
+					height: 20px;
+					margin-right: 6px;
+				}
+			}
+
+			.link-icon
+			{
+				position: absolute;
+				right: 30px;
+				color: #b3b3b3;
+				font-size: 28px;
+				top:50%;
+				transform: translateY(-50%);
+				margin-top: 2px;
+			}
+
+			.follow-btn.followed
+			{
+				border: 1px solid #ccc; /*no*/
+				color: #b2b2b2;
+			}
+		}
+
+	}
+}

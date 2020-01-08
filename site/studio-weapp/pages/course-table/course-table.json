@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "课表",
+    "usingComponents": {
+        "course-item" : "./components/course-item/course-item"
+    }
+}

@@ -1,0 +1,79 @@
+.speak-bubble{
+  box-sizing: border-box;
+  padding: 20rpx;
+}
+
+.sp-content-box{
+  display: inline-block;
+  background: #b0e75a;
+  border-radius: 6rpx;
+  margin-top: 10rpx;
+  // overflow: hidden;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  position: relative;
+}
+
+.sp-flex-box{
+  display: flex;
+}
+
+.sp-flex{
+  flex: 1;
+  width: 100rpx;
+}
+
+.left-bubble{
+  padding-right: 80rpx;
+}
+
+.sp-type-text{
+  display: block;
+  font-size: 30rpx;
+  color: #2e3033;
+  padding: 20rpx;
+  line-height: 40rpx;
+  word-wrap: break-word;
+}
+
+
+.sp-cmt-ask {
+    display: inline-block;
+    margin-right: 8rpx;
+    width: 30rpx;
+    height: 30rpx;
+    text-align: center;
+}
+
+.sp-type-tips{
+  text-align: center;
+}
+.sp-type-tips-main{
+  display: inline-block;
+  align-items: center;
+  height: 50rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  padding:5rpx 10rpx;
+  z-index: 1;
+  color: #fff;
+  border-radius: 6rpx;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width:85%;
+  background-color: rgba(0,0,0,0.2);
+  margin: 20rpx auto;
+  box-sizing: border-box;
+}
+
+
+.lm-txex-name{
+  display: inline-block;
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: top;
+}

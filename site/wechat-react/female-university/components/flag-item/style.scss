@@ -1,0 +1,138 @@
+.flag-item-box{
+    background:rgba(255,255,255,1);
+    box-shadow:0px 4px 80px 0px rgba(0,0,0,0.05);
+    border-radius:8px;
+    margin: 0 32px 32px;
+    padding:32px;
+    max-height: 1200px;
+    position: relative; 
+    &:last-child{
+        // margin-bottom: 0;
+    }
+    .fi-status{
+        position: absolute;
+        right: 32px;
+        top:0;
+        &.success{
+            top:22px;
+            right: 38px;
+            width:156px;
+            height:122px;
+            background: url('./img/fl-success.png') no-repeat 0 0;
+            background-size: 100%;
+
+        }
+        &.process{
+            width:122px;
+            height:56px;
+            background: url('https://img.qlchat.com/qlLive/business/IFXA635Z-9H48-HLYV-1559651386001-IBX9FCDAXGTL.png') no-repeat 0 0;
+            background-size: 100%;
+        }
+        &.begin{
+            width:122px;
+            height:56px;
+            background: url('https://img.qlchat.com/qlLive/business/BCTSIMUD-97DP-DBH7-1559651425137-WIRT1E2GUZIK.png') no-repeat 0 0;
+            background-size: 100%;
+        }
+        &.finish{
+            width:122px;
+            height:56px;
+            background: url('https://img.qlchat.com/qlLive/business/99ON5O8T-PC26-4FYA-1559651404580-91VZRR3SNIO1.png') no-repeat 0 0;
+            background-size: 100%;
+        }
+    }
+    .fi-head{
+        display: flex;
+        .fi-avator{
+            width:100px;
+            height:100px;
+            margin-right: 20px;
+            border: 1px solid #eee;/*px*/
+            border-radius: 50%;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+        }
+        .fi-right-path{
+            .fi-name{
+                font-size:30px; 
+                color:#666;
+                line-height:42px;
+                margin-top:8px;
+            }
+            .fi-money{
+                margin-top: 4px;
+                font-size:28px; 
+                color:rgba(224,65,79,1);
+                line-height:40px;
+            }
+        }
+    }
+    .fi-content{
+        margin-top: 32px;
+        font-size:32px; 
+        color:rgba(51,51,51,1);
+        line-height:50px;
+        text-indent: 60px;
+        background: url('./img/fi-maohao.png') no-repeat 0 12px;
+        background-size: 40px 26px; 
+        
+    }
+    .fi-bottom{
+        margin-top: 32px;
+        color:rgba(153,153,153,1);
+        line-height:44px;
+        i{
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: inline-block;
+            margin-left: -14px;
+            vertical-align: middle; 
+            position: relative;
+            top:-2px;
+            &.icon0{
+                margin-left: 0;
+            }
+            &.apply-user-more{
+                position: relative;
+                z-index: 1;
+                background: url('./img/camp_icon_more.png') no-repeat left center;
+                background-size: 34px; 
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                border-radius: 50%;
+                border:2px solid #f7f7f7;
+            }
+        }
+        span{
+            margin-left: 20px;
+            &:first-child{
+                margin-left: 0;
+            }
+        }
+        
+    }
+    
+    &.fl-mark{ 
+        .fi-status{ 
+            &.success{ 
+                animation: markList 1s  linear;
+            } 
+            
+            @keyframes markList
+            {
+                0%   {transform:scale(3);opacity: 0;}   
+                50%   {transform:scale(3);opacity: 0;}   
+                100%   {transform:scale(1);opacity: 1;}   
+            }
+        }
+    }
+}

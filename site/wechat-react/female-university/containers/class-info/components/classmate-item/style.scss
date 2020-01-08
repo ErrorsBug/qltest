@@ -1,0 +1,67 @@
+.classmate-item{
+    // margin-bottom: 40px;
+    position: relative;
+    .classmate-pic{
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 120px;
+        height: 120px;
+        overflow: hidden;
+        background: #e5e5e5;
+        border-radius: 50%;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .classmate-g-1{
+        margin-left: 144px;
+        background: url('../../img/class_icon_next.png') no-repeat right center;
+        background-size: 16px 24px; /*px*/
+        padding-right: 60px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #EEEEEE; /*no*/
+        min-height: 200px;
+        display: flex;
+        align-items: center;
+        padding: 40px 60px 40px 0;
+        .classmate-info {
+            font-size: 32px; /*px*/
+            font-weight: normal;
+            color:#333;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            span{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                line-height: normal;
+                border-radius:30px;
+                border:1px solid #E0414F; /*no*/
+                height: 34px; /*px*/
+                color: #E0414F;
+                font-size: 18px; /*px*/
+                margin-left: 16px;
+                padding: 0 12px;
+                vertical-align: middle;
+                &.squad{
+                    background: #E0414F;
+                    color: #fff;
+                }
+            }
+        }
+        p{
+            font-size:24px; /*px*/
+            color:#999;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow : hidden;
+            text-overflow: ellipsis;
+            // padding-bottom: 40px;
+        }
+    }
+}

@@ -1,0 +1,209 @@
+
+.experience-invitation-page {
+    height: 100%;
+    position: relative;
+    
+    .line-2 {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+    }
+
+    .sing-line {
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+    }
+
+    .experience-header {
+        position: relative;
+        padding-bottom: 40px;
+
+        .bg {
+            background: url('./img/invite-bg-top.png') no-repeat center;
+            background-size: cover;
+            padding: 21.9%;
+        }
+
+        .rule {
+            position: absolute;
+            left: 40px;
+            right: 40px;
+            bottom: 0;
+            padding: 32px;
+            background: url('./img/invite-bg-rule.png') no-repeat center;
+            background-size: cover;
+            color: #6B523E;
+            font-size: 24px; /* px */
+            line-height: 1.6;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, .07);
+
+            .title {
+                font-size: 30px; /* px */
+                text-align: center;
+                margin-bottom: 16px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .invitation-card {
+        margin-top: 80px;
+        padding: 0 40px;
+
+        .title {
+            font-size: 44px; /* px */
+            font-weight: bolder;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #3C332B;
+            &:before,
+            &:after{
+                width:36px;
+                height:16px;
+                content:'';
+            }
+            &:before{
+                margin-right: 16px;
+                background:url('../member-center/common/img/title-decoration-left.png') no-repeat center / 100%;
+            }
+            &:after{
+                margin-left: 16px;
+                background:url('../member-center/common/img/title-decoration-right.png') no-repeat center / 100%;
+            }
+        }
+
+        .container {
+
+            .experience-invitation {
+                margin-top: 40px;
+                padding-right: 30%;
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 112px;
+                background: url('./img/invite-bg-ticket.png') no-repeat center;
+                background-size: cover;
+                font-size: 32px; /* px */
+
+                .icon-experience {
+                    width: 80px;
+                    height: 80px;
+                    background: url('./img/vip-icon-card.png') no-repeat center;
+                    background-size: cover;
+                    margin-left: 16px;
+                }
+
+                .tile-experience {
+                    flex: 1;
+                    margin-left: 16px;
+                    color: #6B523E;
+                    font-weight: bold;
+                }
+
+                .count-experience {
+                    padding-right: 20px;
+                    color: #91715A;
+                    font-weight: bold;
+                }
+
+                .invitation-btn {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    height: 100%;
+                    width: 30%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    & > span {
+                        width: 120px;
+                        height: 52px;
+                        font-size: 24px; /* px */
+                        text-align: center;
+                        line-height: 52px;
+                        color: #FFFFFF;
+                        background-image: linear-gradient(-135deg, #32312C 0%, #3D332B 100%);
+                        border-radius: 100px;
+                    }
+
+                    &.disable > span {
+                        opacity: .2;
+                    }
+                }
+            }
+
+            .friends-list {
+                padding: 0 32px 32px;
+                background: #FFFBF8;
+                border-radius: 0 0 8px 8px;
+
+                .friends-item {
+                    padding-top: 40px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .f-poster {
+                        width: 64px;
+                        height: 64px;
+                        border-radius: 50%;
+                        overflow: hidden;
+
+                        & img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .f-name {
+                        flex: 1;
+                        margin: 0 32px 0 16px;
+                        font-size: 24px; /* px */
+                        color: #6B523E;
+                        font-weight: bold;
+                    }
+                    .f-status {
+                        flex: 0 0 auto;
+                        font-size: 22px; /* px */
+                        color: #91715A;
+                    }
+                }
+            }
+            .not-friends-list {
+                height: 120px;
+                text-align: center;
+                line-height: 120px;
+                font-size: 22px; /* px */
+                color: #b0b0b0;
+            }
+        }
+    }
+
+    .layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, .6);
+        padding: 40px 60px 0;
+
+        .layer-container {
+            background: url('./img/layer-guide.png') no-repeat center;
+            background-size: contain;
+            box-sizing: border-box;
+            color: #FFF;
+            font-weight: 34px; /* px */
+            font-size: 34px; /* px */
+            padding: 32% 6% 8% 4%;
+            line-height: 1.4; 
+        }
+    }
+}

@@ -1,0 +1,97 @@
+{{!-- C端公开话题 --}}
+{{#if conditions.c_public_auth }}
+<footer class="bottom-public" id="intro-bottom">
+    <a class="bottom-btn enter" href="/topic/details?topicId={{topicView.topicPo.id}}">点击进入</a>
+</footer>
+{{/if}}
+
+{{!--c端公开话题允许进入--}}
+{{#if conditions.c_public_notAuth }}
+<footer class="bottom-public" id="intro-bottom">
+    <a class="bottom-btn enter" id="enter-public" data-href="/topic/details?topicId={{topicView.topicPo.id}}">报名进入</a>
+</footer>
+{{/if}}
+
+{{!-- C端加密话题 --}}
+{{#if conditions.c_encrypt_notAuth}}
+<footer class="bottom-encrypt" id="intro-bottom">
+    <input class="bottom-btn" id="password-input" placeholder="输入密码进入直播">
+    <a href="javascript:;" id="password-enter" class="enter-encrypt" attr-href="/topic/details?topicId={{topicView.topicPo.id}}">进入直播</a>
+</footer>
+{{/if}}
+
+{{!--c端加密话题允许进入--}}
+{{#if conditions.c_encrypt_auth}}
+<footer class="bottom-public" id="intro-bottom">
+    <a class="bottom-btn enter" href="/topic/details?topicId={{topicView.topicPo.id}}">已经通过验证，点击进入直播</a>
+</footer>
+{{/if}}
+
+
+{{!-- C端收费话题可进入 --}}
+{{#if conditions.c_charge_auth}}
+<footer class="bottom-public" id="intro-bottom">
+
+    <a class="bottom-btn enter" href="/topic/details?topicId={{topicView.topicPo.id}}">
+        进入直播
+    </a>
+</footer>
+{{/if}}
+
+{{#if conditions.c_charge_notAuth}}
+<footer class="bottom-charge" id="intro-bottom">
+    <a class="bottom-btn {{conditions.pay_class}} {{conditions.text_class}}"
+        id="pay-for-topic"
+        href="{{conditions.charge_href}}"
+        {{!--todo: complete when userid access--}}
+        attr-id="{{userId}}" 
+        attr-href="/topic/details?topicId={{topicView.topicPo.id}}" 
+        {{#if conditions.hasCoupon}}
+        attr-coupon="{{coupon.diffNum}}"
+        {{/if}}
+        attr-money="{{defaultVal topicView.topicPo.money '0'}}">
+				付费入场(￥<span id="topic-charge">{{conditions.topicRealCharge}}</span>)
+    
+    </a>
+</footer>
+{{/if}}
+
+{{!--系列课不可进入--}}
+{{#if conditions.channel_charge_notAuth}}
+<footer class="bottom-charge" id="intro-bottom">
+    <a class="bottom-btn {{conditions.pay_class}}  {{conditions.text_class}} pay-channel"
+        id="pay-for-channel"
+        href="{{conditions.charge_href}}"
+        {{!--todo: complete when userid access--}}
+        attr-id="{{userId}}" 
+        attr-href="/topic/details?topicId={{topicView.topicPo.id}}" 
+        {{#if conditions.hasChannelCoupon}}
+        attr-coupon="{{conditions.channelCoupon}}"
+        {{/if}}
+        attr-money="{{defaultVal topicView.topicPo.money '0'}}">
+				购买系列课
+                (<span id="channel-charge">{{defaultVal conditions.channelRealCharge '0'}}</span>)
+    </a>
+
+    {{#if conditions.isSingleBuy}}
+    <a class="bottom-btn {{conditions.pay_class}} {{conditions.text_class}}"
+        id="pay-for-topic"
+        href="{{conditions.charge_href}}"
+        {{!--todo: complete when userid access--}}
+        attr-id="{{userId}}" 
+        attr-href="/topic/details?topicId={{topicView.topicPo.id}}" 
+        {{#if conditions.hasCoupon}}
+        attr-coupon="{{coupon.diffNum}}"
+        {{/if}}
+        attr-money="{{defaultVal topicView.topicPo.money '0'}}">
+				付费入场(￥<span id="topic-charge">{{conditions.topicRealCharge}}</span>)
+    </a>
+    {{/if}}
+</footer>
+{{/if}}
+
+{{#if conditions.channel_charge_auth}}
+<footer class="bottom-public" id="intro-bottom">
+    <a class="bottom-btn enter" href="/topic/details?topicId={{topicView.topicPo.id}}">点击进入</a>
+</footer>
+{{/if}}

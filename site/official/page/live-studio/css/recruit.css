@@ -1,0 +1,245 @@
+@import url('common.css?__inline');
+
+/* header poster section */
+.poster-section {
+    height: 660px;
+    background: url(../img/recruit_poster.png) no-repeat center center #2b2723;
+}
+.logo {
+    margin-top: 25px;
+}
+
+/* business advantage section */
+.business-section {
+    padding-bottom: 230px;
+    background: url(../img/business_bg.png) no-repeat center top #fff;
+}
+.icon-min-highend {
+    /* height: 130px; */
+    height: 100px;
+    padding-top: 30px;
+    background: url(../img/icon_min_highend.png) no-repeat center center content-box;
+}
+.dl-wrap dt {
+    height: 50px;
+    line-height: 50px;
+    color: #503a13;
+    font-size: 40px;
+    text-align: center;
+}
+.dt-text {
+    margin: 0 30px;
+}
+.dl-wrap dd {
+    color: #715018;
+}
+.business-dl dd {
+    width: 1070px;
+    margin: 70px auto 0 auto;
+    margin-top: 70px;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+}
+
+/* production advantage section */
+.production-section {
+    background: url(../img/product_advantage_bg.png) repeat-x left bottom #f4f4f4;
+}
+.production-dl {
+    padding-bottom: 110px;
+}
+.production-dl dd {
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 50px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.production-dl dd .con {
+    width: 220px;
+    margin-right: 40px;
+}
+.feature-icon {
+    display: block;
+    width: 95px;
+    height: 95px;
+    margin: 15px auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.icon-valued {
+    background-image: url(../img/icon_valued.png);
+}
+.icon-selfbrand {
+    background-image: url(../img/icon_selfbrand.png);
+}
+.icon-guarantee {
+    background-image: url(../img/icon_guarantee.png);
+}
+.icon-tags {
+    background-image: url(../img/icon_tags.png);
+}
+.icon-fans {
+    background-image: url(../img/icon_fans.png);
+}
+.icon-highend {
+    background-image: url(../img/icon_highend.png);
+}
+.icon-profit {
+    background-image: url(../img/icon_profit.png);
+}
+
+/* agents advantage section */
+.agents-section {
+    background-color: #fff;
+    background: url(../img/agents_bg.png) no-repeat center center #fff;
+}
+.agents-dl dd {
+    padding: 0 0 100px 100px;
+}
+.agents-advantage-title {
+    font-size: 24px;
+    color: #d5b46e;
+    margin: 50px 0 25px 0;
+}
+.agents-advantage-list {
+    list-style: none;
+    font-size: 20px;
+    line-height: 50px;
+}
+.agents-advantage-list li {
+    padding-left: 30px;
+    background: url(../img/icon_min_valued.png) no-repeat left center;
+}
+
+/* circuit of applying for agents section */
+.circuit-section {
+    background: url(../img/agents_advantage_bg.png) no-repeat left bottom #f4f4f4;
+}
+.circuit-dl dd {
+    padding: 80px 0 360px 0;
+}
+.circuit {
+    width: 890px;
+    height: 70px;
+    margin: 0 auto;
+    border: 1px solid #d5b46e;
+    border-bottom: none;
+    position: relative;
+}
+.circle-dot {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #d5b46e;
+    position: absolute;
+    top: -5px;
+}
+.dot-one {
+    left: -5px;
+}
+.dot-two {
+    left: 217.5px;
+}
+.dot-three {
+    left: 440px;
+}
+.dot-four {
+    left: 662.5px;
+}
+.dot-five {
+    left: 885px;
+}
+.circuit-step {
+    width: 194px;
+    position: absolute;
+    top: 99%;
+}
+.step-one {
+    left: -95px;
+}
+.step-two {
+    left: 127.5px;
+}
+.step-three {
+    left: 350px;
+}
+.step-four {
+    left: 572.5px;
+}
+.step-five {
+    left: 795px;
+}
+.circuit-step p {
+    font-size: 16px;
+    line-height: 25px;
+}
+.placeholder-box {
+    width: 221.5px;
+    height: 100%;
+    border-right: 1px solid #d5b46e;
+}
+.polygon {
+    display: block;
+    width: 100px;
+    height: 85px;
+    line-height: 85px;
+    text-align: center;
+    font-size: 30px;
+    color: #715018;
+    font-weight: bold;
+    margin: 0 auto 15px auto;
+    background: url(../img/icon_polygon.png) no-repeat center center;
+}
+
+/* joinus section */
+.joinus-section {
+    height: 530px;
+    background: url(../img/joinus_bg.png) no-repeat center top #1b1a19;
+}
+.joinus-text {
+    font-size: 60px;
+    font-weight: bold;
+    color: #d5b46e;
+    text-align: center;
+    line-height: 490px;
+}
+
+/* fixed sidebar */
+.wexin-consult {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    width: 190px;
+    transform: translateY(-50%);
+    background-color: #fff;
+    box-shadow: -3px 3px 3px rgba(0, 0, 0, .1);
+}
+.consult-title {
+    font-size: 14px;
+    color: #503a13;
+    line-height: 25px;
+    text-align: center;
+    background-color: #d5b46e;
+}
+.contact-person {
+    color: #715018;
+    line-height: 23px;
+    font-size: 14px;
+    padding: 15px 0 15px 25px;
+}
+.wexin-negotiate {
+    text-align: center;
+    font-size: 14px;
+    color: #715018;
+    line-height: 23px;
+}
+.wexin-negotiate img {
+    border: 2px solid #d5b46e;
+}
+.wexin-negotiate p {
+    margin-bottom: 15px;
+}

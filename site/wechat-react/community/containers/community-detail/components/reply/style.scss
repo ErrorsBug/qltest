@@ -1,0 +1,53 @@
+.reply-btn{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #E8E8E8; /*no*/
+    padding: 24px 30px;
+    box-sizing: border-box;
+    background: #fff;
+    z-index: 10;
+    height: auto !important;
+    display: flex;  
+    .reply{ 
+        height: 68px; 
+        border-radius: 35px;
+        line-height: 30px; /*px*/
+        font-size: 28px; /*px*/
+        color: #B2B2B2;
+        padding-left: 32px;
+        background-color:#F8F8F8; 
+        background-repeat: no-repeat;
+        background-position: 40px center;
+        background-size: 27px;
+        flex: 1;
+    }
+    i{
+        font-size: 48px;
+        display: flex;
+        align-items: center;
+        margin-left: 32px;
+        margin-right: 0;
+    }
+    .iic-item{
+        display: flex;
+        margin:0; 
+        width: auto;
+    }
+    .cic-icon{
+        width: 48px;
+        height: 48px;
+        background-size: 48px !important;
+        margin-left: 32px;
+        margin-right: 0;
+        .cic-animation{
+            position: absolute;
+            bottom:-51px;
+            right:-42px;
+            width: 470px; 
+            height: 470px;  
+            z-index: 1;
+        }
+    }
+}

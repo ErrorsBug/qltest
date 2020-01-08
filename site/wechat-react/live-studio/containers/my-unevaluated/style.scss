@@ -1,0 +1,25 @@
+.unevaluated-page{
+	position:absolute;
+	height:100%;
+	width:100%;
+	top:0;
+	left:0;
+	.unevaluated-container{
+		height:100%;
+		position: relative;
+		overflow: auto;
+		.topic-list{
+			margin-top:20px;
+			background: #fff;
+			width:auto;
+			padding:0;
+		}
+		.loading,
+		.no-more-data{
+			padding:40px 0 138px;
+			text-align:center;
+			font-size:28px;/*px*/
+			color:#b2b2b2;
+		}
+	}
+}

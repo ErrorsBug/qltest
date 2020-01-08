@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{theme.themeName}}</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE"/>
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="https://img.qlchat.com/qlLive/ico/favicon.ico" type="image/x-icon" />
+    <script src="../../components_modules/lib-flexible/1.0.0/lib-flexible.js"></script><!--ignore-->
+    <script type="text/javascript" src="../../components_modules/require/2.1.18/require.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div class="banner">
+            <div class="img-wrap">
+                <img class="img-default" data-imgloaded="false" data-imgsrc="{{img-format theme.themeLogo '@750w_330h_1e_1c_2o_1l'}}" />
+            </div>
+        </div>
+        {{#if theme.themeInstro}}
+        <div class="head-tip">
+            <p>{{theme.themeInstro}}</p>
+        </div>
+        {{/if}}
+        <ul class="lives">
+            {{#each theme.themeLibs}}
+            <li class="live on-log" log-region="live_list" log-name="{{liveName}}" log-business_id="{{liveId}}" log-business_type="{{type}}" data-id="{{liveId}}" data-type="{{type}}" data-url="{{url}}">
+                <div class="head-wrap tap-on tap-bgc" data-id="{{liveId}}">
+                    <div class="head">
+                        <div class="pic">
+                            <img class="img-default" data-imgloaded="false" data-imgsrc="{{img-format liveLogo '@108w_108h_1e_1c_2o_1l'}}" />
+                        </div>
+                        <div class="desc">
+                            <div class="title">{{liveName}}</div>
+                            <div class="tip">
+                                <span class="follow-num">{{fansNum}}人关注</span>
+                            </div>
+                        </div>
+                        <div class="status-btn on-log" log-pos="live-focus" log-liveId="{{liveId}}"  data-id="{{liveId}}">
+                            <div class="status {{#if focus}} followed {{/if}}">
+                                <span>{{#if focus}}已关注{{else}}关注{{/if}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    {{#if qlPoint}}
+                    <div class="item point">
+                        <p class="value">{{qlPoint}}</p>
+                    </div>
+                    {{/if}}
+                    {{#if comment}}
+                    <div class="item comment">
+                        <p class="value">{{comment}}</p>
+                    </div>
+                    {{/if}}
+                    <ul class="topics hidden" data-liveId="{{liveId}}">
+                    </ul>
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+
+    <!--SCRIPT_PLACEHOLDER-->
+    <script>
+        (function(win) {
+            var initData = {};
+
+            initData.THEMEDATA = [[THEMEDATA]];
+            win.NOWTIME = [[NOWTIME]];
+
+            require(['./theme-live'], function (themeLive) {
+                themeLive.init(initData);
+            });
+        })(window);
+    </script><!--ignore-->
+    <script type="text/javascript">
+        var _uaq = window._uaq || [];
+        // 配置站点名,默认值为： ql-h5
+        _uaq.push(['set', 'site', 'app']);
+
+        // 配置站点版本, 默认值为: 1.0.0
+        _uaq.push(['set', 'sitever', '2.2.0']);
+
+        // 配置日志采集服务地址，用于发送采集日志,默认地址为： //collect.qlchat.com
+        _uaq.push(['set', 'server', '[[collectApiPrefix]]']);
+
+        // 其它自定义日志参数配置
+        // 配置采集当前url参数key2作为日志参数log_key
+        _uaq.push(['set', 'ch', 'query.ch']);
+
+    </script><!--ignore-->
+    <script type="text/javascript" src="[[collectjs]]"></script><!--ignore-->
+    <script>
+        // 百度统计
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?9f8c5d323a26421cb966b5e405d629c3";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script><!--ignore-->
+</body>
+</html>

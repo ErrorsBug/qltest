@@ -1,0 +1,9 @@
+@import "./icomoon/style.css";
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+a:hover, a:focus {
+  box-shadow: inherit;
+}

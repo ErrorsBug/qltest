@@ -1,0 +1,21 @@
+.common-pay-page{
+	height:100%;
+	overflow: hidden;
+	background:url(./img/bg.png) #f43f4d no-repeat center top / 100% auto;
+	.container{
+		height:100%;
+		overflow: hidden;
+		.icon{
+			margin:390/1206*100% auto 0;
+			width:80px;
+			height:80px;
+			background: url(./img/icon-check.png) no-repeat center / 100%;
+		}
+		.tip{
+			color:#fff;
+			margin-top:20px;
+			text-align: center;
+			font-size:26px;/*px*/
+		}
+	}
+}

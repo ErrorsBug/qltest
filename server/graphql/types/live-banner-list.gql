@@ -1,0 +1,28 @@
+
+type BannerItem {
+    # 记录id
+    id: ID!
+    # 直播间id
+    liveId: String!
+    # 标题
+    title: String!
+    # 类型,topic=课程,channel=系列课,vip=vip,link=外部链接,none=不跳转
+    type: String!
+    # 图片链接
+    imgUrl: String!
+    # 跳转链接
+    link: String
+    # 排序
+    sortNum: Int!
+}
+
+type BannerList {
+    page: Int
+    size: Int
+    list: [BannerItem]
+}
+
+extend type Query {
+    # 直播间的轮播图列表
+    liveBannerList(page: Int, size: Int, liveId: String!): BannerList
+}

@@ -1,0 +1,16 @@
+{{#each lives}}
+<li class="live" data-id="{{id}}" data-url="{{url}}">
+    <span><img src="{{img-format logo '@120w_120h_1e_1c_2o'}}" alt=""></span>
+    <article class="live-detail">
+        <h2 class="elli">{{name}}</h2>
+        <span>{{fansNum}}人关注</span>
+        
+        {{#compare isFocus '===' 'N'}}
+        <i class="live-focus">关注</i>
+        {{/compare}}
+        {{#compare isFocus '===' 'Y'}}
+        <i class="live-focus on">已关注</i>
+        {{/compare}}
+    </article>
+</li>
+{{/each}}

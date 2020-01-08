@@ -1,0 +1,86 @@
+$dateWidth:90rpx;
+
+.item{
+    padding: 30rpx;
+    position: relative;
+    border-bottom: 1rpx solid #f0f0f0;
+    .date{
+        position: absolute;
+        width: $dateWidth;
+        left: 0;
+        top: 30rpx;
+        padding-right: 30rpx;
+        text-align: right;
+    }
+    .main{
+        margin-left: $dateWidth;
+    }
+}
+    
+.date{
+    color: #333;
+    .today{
+        font-size: 32rpx;
+        font-weight: bold;
+    }
+    .month{
+        font-size: 26rpx;
+    }
+    .day{
+        font-size: 40rpx;
+        font-weight: bold;
+    }
+}
+
+.preview{
+    background-color: #f2f2f2;
+    padding: 10rpx;
+    .title{
+        color: #3a3a3a;
+        font-size: 30rpx;
+        .expand{
+            color: #cab7a8;
+        }
+    }
+    .content{
+        margin-top: 18rpx;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+
+        .timeline-img{
+            width: 90rpx;
+            height: 90rpx;
+            margin-right: 12rpx;
+        }
+
+        .text{
+            flex: 1;
+            color: #666;
+            font-size: 26rpx;
+        }
+    }
+}
+
+.addon{
+    margin-top: 20rpx;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .like-num{
+        font-size: 22rpx;
+        color: #a3a3a3;
+        margin-right: 16rpx;
+    }
+    .icon-like{
+        background-image: url(./img/like.png?__inline);
+        width: 28rpx;
+        height: 28rpx;
+        background-repeat: no-repeat;
+        background-size: cover;
+        &.liked{
+            background-image: url(./img/like-red.png?__inline);
+        }
+    }
+}

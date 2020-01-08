@@ -1,0 +1,39 @@
+.ls-public-title{
+    margin-bottom: 32px;
+    .public-title-head{
+        display: flex;
+        justify-content: space-between;
+        h3{
+            font-size: 36px; /*px*/
+            font-weight: bold;
+            line-height: 1.4;
+            overflow: hidden;
+            max-width: 400px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            img{
+                height: 100%;
+                width: auto;
+            }
+        }
+        .go-more-list{
+            font-size: 28px; /*px*/
+            align-items: center;
+            color: #F73657;
+            display: flex;
+            align-items: center;
+            i{
+                font-size: 24px; /*px*/
+            }
+        }
+    }
+    .public-title-decs{
+        font-size: 30px; /*px*/
+        color: #666;
+        margin-top: 16px;
+        line-height: 1.4;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}

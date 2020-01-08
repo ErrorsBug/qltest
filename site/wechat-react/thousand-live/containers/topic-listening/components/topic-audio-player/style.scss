@@ -1,0 +1,282 @@
+.listening-page-audio-player{
+
+    .audio-speed-wrap{
+        display:flex;
+        justify-content: center;
+        padding-top:80px;
+        .audio-speed-btn{
+            height:44px;
+            padding:0 26px;
+            border:1px solid #d9d9d9;/*no*/
+            border-radius: 100px;
+            display:flex;
+            align-items: center;
+            line-height:normal;
+            font-size:26px;/*px*/
+            color:#808080;
+            &.act{
+                animation: audio-speed-btn-act .3s;
+            }
+        }
+        @keyframes audio-speed-btn-act {
+            0%{ transform: scale(1, 1) }
+            50%{ transform: scale(1.5, 1.5) }
+            100%{ transform: scale(1, 1) }
+        }
+    }
+
+    // 进度条与时间
+    .duration-time-container{
+        height: 36px;
+        align-items: center;
+        margin: 0 40px 0;
+        padding-top: 15px;
+
+        .time{
+            color: #999091;
+            font-size: 22px;/* px */
+            flex-shrink: 0;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            margin: -12px 10px 0;
+        }
+
+        .control-bar{
+            position: relative;
+            flex: 1;
+            height: 4px; /* no */
+            background: #ebebeb;
+            border-radius: 10px;
+            margin: 0 85px;
+
+
+            .playing-bar{
+                position: absolute;
+                width: 0%;
+                height: 100%;
+                border-radius: 20px;
+                background: #ef5670;
+            }
+
+            .slider{
+                position: absolute;
+                display: block;
+                width: 22px;
+                height: 22px;
+                left: 0;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                border-radius: 30px;
+                background: #fff;
+                border:1px solid #e6e6e6;/*no*/
+                box-shadow: 0 3px 5px 0 rgba(#e6e6e6,.8);
+                cursor: pointer;
+    
+                &::after{
+                    content: '';
+                    display: block;
+                    width: 120px;
+                    height: 60px;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%,-50%);
+                    opacity: 0;
+                    cursor: pointer;
+                    
+                }
+            }
+    
+        }
+
+    }
+
+
+    // 按钮们
+    .button-container{
+        display: flex;
+        padding: 40px 40px 20px;
+        align-items: center;
+        justify-content: center;
+
+        .tooltip {
+            position: absolute;
+            bottom: 120%;
+            padding: 18px 22px;
+            margin-bottom: 14px;
+            left: 25%;
+            z-index: 1;
+            font-size: 24px; /*px*/
+            width: 216px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            box-sizing: border-box;
+            line-height: normal;
+            border-radius: 10px; /*px*/
+        }
+        
+        .tooltip:after {
+            content: ' ';
+            position: absolute;
+            bottom: -14px;
+            left: 14px;
+            height: 0;
+            border: 14px solid transparent;
+            border-top: 14px solid rgba(0,0,0,0.7);
+            transform: rotate(135deg);
+        }
+
+        .btn-course-list,
+        .btn-goto-class{
+            position: relative;
+            flex-shrink: 0;
+            color: #929292;
+            font-size: 20px;/* px */
+            cursor: pointer;
+            padding-top: 26px;
+            text-align: center;
+            min-width: 4em;
+            width: 98px;
+
+            .icon-audio-speed {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto 10px;
+                width: 48px;
+                height: 48px;
+                background-image: url("./img/icon-audio-speed.png");
+                background-size: contain;
+                font-size: 20px;/* px */
+                white-space: nowrap;
+                background-position: center;
+                background-repeat: no-repeat;
+
+                span {
+                    transform: scale(0.8, 1);
+                    font-weight: bold;
+                    color: #666;
+                }
+            }
+
+            img {
+                display: block;
+                margin: 0 auto 10px;
+                width: 36px;
+                height: 36px;
+            }
+
+            &.disable{
+                opacity: .5;
+            }
+        }
+        .btn-course-list {
+            padding-left: 15px;
+            img{
+                width:48px;
+                height:48px;
+            }
+            &.btn-course-list-disabled {
+                color: #bbb;
+                cursor: default;
+            }
+        }
+        .btn-goto-class {
+            padding-right: 15px;
+        }
+        .btn-goto-class-empty {
+            display: inline-block;
+            width: 70px;
+            height: 10px;
+        }
+
+        .main{
+            flex: 1;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+
+
+            .btn-play{
+                background: url(./img/status-paused.png) center center;
+            }
+            .btn-pause{
+                background: url(./img/status-playing.png) center center;
+            }
+            .btn-play,.btn-pause{
+                position: relative;
+                display: inline-block;
+                width: 124px;
+                height: 124px;
+                cursor: pointer;
+                text-align: center;
+                background-size: 100%; 
+            }
+
+
+            .btn-loading{
+                position: relative;
+                display: inline-block;
+                width: 110px;
+                height: 110px;
+                border-radius: 110px;
+                background: #ef5670;
+                cursor: pointer;
+                text-align: center;
+                
+    
+                .main{
+                    position: absolute;
+                    width: 40px;
+                    height: 40px;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%,-50%);
+    
+                    svg{
+                        width: 100%;
+                        height: 100%;
+                    }
+                    
+                        
+                    svg path,
+                    svg rect{
+                        fill: #FFFFFF;
+                    }
+                }
+    
+            }
+
+            .btn-previous,.btn-next{
+                position: relative;
+                display: inline-block;
+                margin-right:50px;
+                width: 36px;
+                height: 36px;
+                background: url('./img/btn-prev.png') no-repeat center / 100%;
+                &.disable{
+                    background: url('./img/btn-previous-disable.png') no-repeat center / 100%;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 124px;
+                    height: 124px;
+                    left: -49px;
+                    top: -49px;
+                }
+            }
+            .btn-next{
+                transform: rotate(180deg);
+                margin: 0 0 0 50px;
+            }
+            
+        }
+    }
+
+
+
+}

@@ -1,0 +1,64 @@
+.confirm-dialog-vintro-wrap {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 1000;
+
+    .confirm-dialog-vintro {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: #ffffff;
+        border-radius: 26px; /*px*/
+        overflow: hidden;
+        margin: auto;
+        width: 600px; /*px*/
+        height: 387px; /*px*/
+
+        .header {
+            font-size: 36px; /*px*/
+            font-weight: 600;
+            color: #333;
+            text-align: center;
+            padding: 40px 0 30px 0; /*px*/
+            line-height: 50px; /*px*/
+        }
+
+        .body {
+            padding: 0 50px 40px 50px; /*px*/
+            color: #666;
+            font-size: 30px; /*px*/
+            line-height: 42px; /*px*/
+        }
+
+        .bottom-panel {
+            border-top: 2px solid rgba(238,238,238,1); /*px*/
+            height: 99px; /*px*/
+            line-height: 99px; /*px*/
+
+            .btn {
+                height: 100%;
+                display: inline-block;
+                width: 50%;
+                box-sizing: border-box;
+                font-size: 30px; /*px*/
+                color: #666;
+                text-align: center;
+            }
+
+            .confirm {
+                border-right: 1px solid rgba(238,238,238,1); /*px*/
+            }
+
+            .cancel {
+                border-left: 1px solid rgba(238,238,238,1);  /*px*/
+            }
+        }
+    }
+
+}

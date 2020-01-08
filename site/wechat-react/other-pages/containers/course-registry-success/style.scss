@@ -1,0 +1,232 @@
+.course-registry-success {
+    position: relative;
+    background: #fff;
+    min-height: 100%;
+    line-height: normal;
+
+    .background-image {
+
+        display: block;
+        margin: 0 14px;
+    }
+
+    .background {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        display: block;
+        margin: 0 14px;
+
+        .placeholder {
+            height: 0;
+            padding-bottom: 53%;
+        }
+
+        .content-container {
+            padding: 52% 30px 0 30px;
+        }
+
+        .course-container {
+            overflow: hidden;
+            font-family: PingFangSC-Regular;
+            font-size: 26px;
+            color: #666666;
+            letter-spacing: 0;
+            margin-bottom: 74px;
+            padding: 0 30px;
+            line-height: normal;
+
+            .label {
+                text-align: center;
+                height:42px;
+                font-size:30px;
+                font-family:PingFangSC-Regular;
+                font-weight:400;
+                color:rgba(51,51,51,1);
+                margin-bottom: 4px;
+            }
+
+            .course-name {
+                width: 475px;
+                min-height: 2em;
+                font-size:26px;
+                font-family:PingFangSC-Regular;
+                font-weight:400;
+                color:#999999;
+                line-height:normal;
+                overflow: hidden;
+                text-align: center;
+                margin: 0 auto;
+                max-height: 3em;
+                overflow: hidden;
+            }
+        }
+
+        .congur {
+            font-family: PingFangSC-Regular;
+            font-size: 30px;
+            color: #333333;
+            letter-spacing: 0;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .free-to-community {
+            margin-bottom: 30px;
+            padding: 0 61px;
+            box-sizing: border-box;
+            text-align: center;
+
+            .group-avatar {
+                display: block;
+                width:104px;
+                height:104px;
+                background:rgba(227,227,227,1);
+                border-radius:5px;
+                overflow: hidden;
+                margin: 0 auto 20px auto;
+            }
+
+            .group-name {
+                width: 200px;
+                margin: 0 auto 5px auto;
+                text-align: center;
+                font-size:26px;
+                font-family:PingFangSC-Regular;
+                font-weight:400;
+                color:rgba(51,51,51,1);
+                line-height:normal;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .go-into-group {
+                font-size:26px;
+                font-family:PingFangSC-Regular;
+                font-weight:400;
+                color:#999999;
+                line-height: normal;
+                text-align: center;
+                margin-bottom: 25px;
+            }
+
+            .intersector {
+                width:477px;
+                background: #F6F6F6;
+                height:2px; /*no*/
+                margin: 0 auto;
+            }
+
+            .goto-learn {
+                font-size:30px;
+                font-family:PingFangSC-Medium;
+                font-weight:500;
+                color:rgba(51,51,51,1);
+                line-height: normal;
+                text-align: center;
+                margin: 25px auto 30px auto;
+            }
+
+            .btn-free-in {
+                display: flex;
+                width:368px;
+                height:100px;
+                background:rgba(255,159,0,1);
+                box-shadow:0px 7px 10px 0px rgba(255,159,0,0.3);
+                border-radius:10px;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto;
+
+                font-size:30px;
+                font-family:PingFangSC-Medium;
+                font-weight:500;
+                color:rgba(255,255,255,1);
+                line-height: normal;
+            }
+        }
+
+        .prompt {
+            font-family: PingFangSC-Regular;
+            font-size: 28px;
+            color: #999999;
+            letter-spacing: 0.05px;
+            text-align: center;
+        }
+
+        .account-code {
+            text-align: center;
+            margin-bottom: 40px;
+
+            .qr-code-wrap {
+                display: inline-block;
+                position: relative;
+                .left-top {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 44px;
+                    height: 44px;
+                    border-top: 2px solid #F83657;
+                    border-left: 2px solid #F83657;
+                }
+
+                .right-top {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 44px;
+                    height: 44px;
+                    border-top: 2px solid #F83657;
+                    border-right: 2px solid #F83657;
+                }
+                .bottom-right {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    width: 44px;
+                    height: 44px;
+                    border-bottom: 2px solid #F83657;
+                    border-right: 2px solid #F83657;
+                }
+                .bottom-left {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 44px;
+                    height: 44px;
+                    border-bottom: 2px solid #F83657;
+                    border-left: 2px solid #F83657;
+                }
+            }
+            .qr-code {
+                display: inline-block;
+                width: 400px;
+                height: 400px;
+            }
+        }
+
+        .info {
+            font-family: PingFangSC-Regular;
+            font-size: 32px;
+            color: #333333;
+            letter-spacing: 0.05px;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .info-strong {
+            font-family: PingFangSC-Medium;
+            font-size: 28px;
+            color: #f83657;
+            letter-spacing: 0.05px;
+            text-align: center;
+        }
+    }
+
+    .is-subscribe {
+        background-image: url(./assets/background2.svg);
+    }
+}

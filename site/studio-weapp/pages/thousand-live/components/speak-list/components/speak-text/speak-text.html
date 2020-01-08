@@ -1,0 +1,16 @@
+<import src="../../tpl/speak-time.wxml"/>
+<!-- <import src="../../tpl/speak-head.wxml"/> -->
+<import src="../../tpl/speak-user-name.wxml"/>
+<import src="../../tpl/speak-text.wxml"/>
+
+<view class="speak-bubble " id="{{speak.id}}">
+  <template is="speak-tpl-time" data="{{speak}}"/>
+  <view class="sp-flex-box left-bubble">
+    <!-- <template is="speak-tpl-head" data="{{speak, topicView, openReward}}"/> -->
+    <include src="../../tpl/speak-head.wxml"/>
+    <view class="sp-flex">
+      <template is="speak-tpl-user-name" data="{{speak}}"/>
+      <template is="speak-tpl-text" data="{{speak}}"/>
+    </view>
+  </view>
+</view>

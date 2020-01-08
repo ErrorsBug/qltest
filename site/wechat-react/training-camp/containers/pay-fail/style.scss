@@ -1,0 +1,146 @@
+.camp-pay-fail-page {
+    height: 100%;
+    background-color: #fff;
+
+    overflow: hidden;
+    position: relative;
+
+    .container {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        left: 0;
+        bottom: 90px;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .pay-header {
+        margin: 0 auto 70px;
+        text-align: center;
+        box-sizing: border-box;
+        padding-top: 70px;
+
+        .error-logo {
+            height: 130px;
+            background: {
+                image: url(./img/error.png);
+                repeat: no-repeat;
+                size: 130px 130px;
+                position: center center;
+            }
+
+            margin-bottom: 30px;
+        }
+        .success {
+            font-size: 36px; /*px*/
+            color: #424242;
+            margin-bottom: 18px;
+        }
+        .des {
+            font-size: 26px; /*px*/
+            color: #999090;
+        }
+    }
+
+    .reason-list {
+        .reason-item:first-child{
+            border-top: 1px solid #e6e6e6; /*no*/
+        }
+    }
+    .reason-item {
+        margin: 0 45px 0 45px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+
+        border-bottom: 1px solid #e6e6e6; /*no*/
+
+        // &::before{
+        //     content: "";
+        //     width: 34px;
+        //     height: 34px;
+        //     border: 2px solid #999; /*no*/
+        //     border-radius: 100px;
+        //     margin-right: 24px;
+        // }
+        // &.active::before{
+        //     border: 2px solid red; /*no*/
+        // }
+        >.radio {
+            width: 34px;
+            height: 34px;
+            margin-right: 24px;
+            border: 2px solid #999; /*no*/
+            border-radius: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            >span{
+                height: 16px;
+                width: 16px;
+                border-radius: 16px;
+            }
+        }
+
+
+        .content {
+            font-size: 32px; /*px*/
+            color: #424242;
+        }
+        &.active{
+            >.radio{
+                border: 2px solid #f73657; /*no*/
+                >span{
+                    background-color: #f73657;
+                }
+            }
+            .content{
+                color: #f73657
+            }
+        }
+    }
+
+    .textarea-con {
+        margin: 45px;
+        height: 340px;
+        textarea {
+            outline: none;
+            border: none;
+            resize: none;
+            width: 100%;
+            height: 100%;
+
+            border-radius: 8px;
+            background: #f5f5f5;
+
+            color: #999;
+            font-size: 32px; /*px*/
+
+            padding: 30px;
+        }
+    }
+
+
+    .commit-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: #ef5670;
+        color: #fff;
+        font-size: 34px; /*px*/
+
+        height: 90px;
+        width: 100%;
+
+        position: absolute;
+
+        left: 0;
+        bottom: 0;
+    }
+
+
+
+}

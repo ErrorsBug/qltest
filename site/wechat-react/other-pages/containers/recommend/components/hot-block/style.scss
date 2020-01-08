@@ -1,0 +1,168 @@
+.recommend-hot-block
+{
+	border-top: 1px solid #f0f0f0;/* no */
+	width: 100%;
+	background-color: #fff;
+	margin-bottom: 15px;
+	>h1
+	{
+		padding: 40px 30px 2px;
+		font-size: 32px;/* px */
+		font-weight: bold;
+        line-height: 1;
+        position: relative;
+        color: #424242;
+		.more
+		{
+			color: #999090;
+			font-size: 26px;/* px */
+			font-weight: 400;
+            position: absolute;
+            bottom: 2px;
+            right: 30px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            &::after{
+                margin-left: 13px;
+                content: '';
+                width: 10px;/* px */
+                height: 18px;/* px */
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-image: url(../../img/icon-right.png);
+            }
+		}
+    }
+    
+    >.hot-list{
+        display: flex;
+        padding: 20px 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+	.hot-list-item
+	{
+        flex: 1;
+        max-width: 50% ;
+        min-width: 50% ;
+        width: 50% ;
+        flex-basis: 50%;
+        padding: 0 10px;
+        cursor: pointer;
+        margin: 20px 0;
+		.cover
+		{
+            width: 100%;
+            padding-bottom: 62.5%;
+            height: 0;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 4px;
+            overflow: hidden;
+            background-color: #f1f1f1;
+            &.boutique::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 56px;
+                height: 58px;
+                background-image: url(../../img/boutique.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .shadow{
+                height: 62px;
+                width: 100%;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background-image: url(../../img/shadow.png);
+                background-repeat: repeat-x;
+                background-size: 100% 100%;
+            }
+            .member{
+                position: absolute;
+                left: 15px;
+                bottom: 10px;
+                font-size: 22px;/* px */
+                color: #fff;
+                &::before{
+                    content: '';
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: 10px;   
+                    background-image: url(../../img/icon-people.png);
+                    width: 21px;/* px */
+                    height: 20px;/* px */
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+        >h1{
+            font-weight: 400;
+            margin-top: 18px;
+            font-size: 28px;/* px */
+            color: #424242;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: normal;
+        }
+
+        .more-info{
+            margin-top: 14px;
+            .money{
+                font-size: 24px;/* px */
+                color: #f73657;
+                margin-right: 7px;
+                &.free{
+                    color: #3eba3d;
+                }
+            }
+            del{
+                font-size: 22px;/* px */
+                color: #999091;
+            }
+            .class-num{
+                font-size: 22px;/* px */
+                color: #b8b0b1;
+                float: right;
+            }
+        }
+    }
+    
+    .so-i-changed{
+        height: 88px;
+        width: 100%;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 1px solid #f0f0f0;/* px */
+        cursor: pointer;
+
+        &::after{
+            content: '';
+            width: 22px;/* px */
+            height: 22px;/* px */
+            background-image: url(../../img/icon-change.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-left: 15px;/* px */
+        }
+
+        span{
+            font-size: 26px;/* px */
+            color: #b3abab;
+        }
+    }
+}

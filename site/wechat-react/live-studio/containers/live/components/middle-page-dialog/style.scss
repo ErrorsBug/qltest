@@ -1,0 +1,69 @@
+.focus-qrcode-dialog {
+    background-color: rgba(0,0,0,0.60);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .main-fold {
+        width: 610px;
+        height: 786px;
+        background: url('./img/fold.png') center no-repeat;
+        background-size: cover;
+
+        .head-img {
+            width:  120px;
+            height: 120px;
+            border: 4px solid #E6CEA0;
+            margin: 64px auto 6px;
+            border-radius: 100%;
+            display: block;
+        }
+        .name {
+            font-size: 34px;
+            color: #EACE9A;
+            text-align: center;
+            line-height: 40px;
+        }
+        .open-btn {
+            width: 184px;
+            height: 184px;
+            display: block;
+            margin: 196px auto 0;
+        }
+    }
+
+    .main-unfold {
+        width: 610px;
+        height: 788px;
+        background: url('./img/unfold.png') center no-repeat;
+        background-size: cover;
+
+        .head-img {
+            width:  100px;
+            height: 100px;
+            border: 1px solid #999999;
+            margin: 106px auto 2px;
+            border-radius: 100%;
+            display: block;
+        }
+        .name {
+            font-size: 30px;
+            color: #666666;
+            text-align: center;
+            line-height: 42px;
+        }
+        .qrcode {
+            width: 210px;
+            margin: 0 auto;
+            height: 210px;
+            display: block;
+            padding: 144px 200px 170px;
+        }
+    }
+}

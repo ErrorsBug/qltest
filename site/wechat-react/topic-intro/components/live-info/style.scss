@@ -1,0 +1,124 @@
+.topic-intro-cend-page .live-info-container{
+    background: #fff;
+    margin-top: 20px;
+    padding: 30px 0;
+    
+    .top{
+        display: flex;
+        align-items: center;
+        padding: 0 40px;
+
+        .logo{
+            display: block;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            cursor: pointer;
+        }
+
+        .live-name{
+            flex: 1;
+            display: block;
+            font-size: 32px;
+            color: #4b4b4b;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 0 20px;
+            height: 40px;
+            line-height: 40px;
+            cursor: pointer;
+        }
+
+
+        .btn-container{
+            display: block;
+            flex-shrink: 0;
+            min-width: 100px;
+
+            .btn-follow-live{
+                display: inline-flex;
+                height: 50px;
+                align-items: center;
+                justify-content: center;
+                color:#f73657;
+                font-size: 24px;/* px */
+                border:solid 1px #f73657;/* no */
+                border-radius: 50px;
+                padding: 0 20px;
+
+                &::before{
+                    margin: 0 3px 0 -8px;
+                    font-weight: bold;
+                }
+
+                &.is-follow{
+                    color: #999;
+                    border-color: #999;
+                }
+            }
+        }
+    }
+
+    .center{
+        display: flex;
+        margin-top: 20px;
+        padding: 0 40px;
+        .item{
+            flex: 1;
+            display: inline-flex;
+            align-items: center;
+            line-height: 1.5;
+
+            .count{
+                display: block;
+                text-align: center;
+                font-size: 24px;/* px */
+                color: #4b4b4b;
+                margin-left: .6em;
+            }
+
+            .name{
+                display: block;
+                text-align: center;
+                font-size: 24px;/* px */
+                color: #b2b2b2;
+            }
+
+            .symbol-item{
+                display: inline-flex;
+                font-size: 24px;/* px */
+                color: #999090;
+                cursor: pointer;
+                height: 30px;
+                align-items: center;
+                margin: 5px 0;
+                i{
+                    display: inline-block;
+                    width:30px;/*px*/
+                    height:30px;/*px*/
+                    margin-right:10px;
+                    vertical-align: middle;
+
+                    &.real-name{
+                        background:url(../../../assets/images/symbol-icon/realname-icon-y.png) center center no-repeat;
+                        background-size: 100% auto;
+                    }
+                    &.livev{
+                        background:url(../../../assets/images/symbol-icon/jiav-icon.png) center center no-repeat;
+                        background-size: 100% auto;
+                    }
+                    &.real-name-n{
+                        background:url(../../../assets/images/symbol-icon/realname-icon-n.png) center center no-repeat;
+                        background-size: 100% auto;
+                        
+                    }
+                }
+            }
+
+        }
+    }
+
+}
+    

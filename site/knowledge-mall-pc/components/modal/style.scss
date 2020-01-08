@@ -1,0 +1,151 @@
+.component-middle-dialog-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 390px;
+    // min-height: 290px;
+    z-index: 20;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    background-color: #fff;
+    overflow: hidden;
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+
+        .modal-tips {
+            font-size: 14px;
+            color: #fff;
+        }
+
+        .close-btn {
+            z-index: 9;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%); 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+            span {
+                color: #fff;
+                font-weight: 400;
+                display: block;
+            }
+        }
+    }
+
+    .header-small {
+        height: 60px;
+        background-color: #c9a96e;
+
+        .modal-title {
+            font-size: 16px;
+            color: #fff;
+        }
+    }
+
+    .header-big {
+        height: 124px;
+
+        .modal-title {
+            font-size: 20px;
+            color: #fff;
+        }
+    }
+
+    .btn-area {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .btn {
+            height: 40px;
+            width: 140px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            margin: 40px;
+        }
+
+        .confirm-btn {
+            background-color: #c9a96e;
+            color: #fff;
+        }
+
+        .cancel-btn {
+            color: #c9a96e;
+            background-color: #fff;
+            border: 1px solid #c9a96e;
+            margin-right: 30px;
+        }
+    }
+
+    .content {
+        min-height: 100px;
+        max-height: 720px;
+        overflow: auto;
+        width: 100%;
+        position: relative;
+    }
+
+}
+
+:global(.component-middle-dialog-content-enter) {
+    opacity: 0.01;
+}
+  
+:global(.component-middle-dialog-content-enter.component-middle-dialog-content-enter-active) {
+    opacity: 1;
+    transition: all 300ms ease-in;
+}
+  
+:global(.component-middle-dialog-content-leave) {
+    opacity: 1;
+}
+  
+:global(.component-middle-dialog-content-leave.component-middle-dialog-content-leave-active) {
+    opacity: 0.01;
+    transition: all 300ms ease-in;
+}
+
+
+.component-dialog-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.5);
+    z-index: 20;
+}
+
+
+:global(.component-dialog-background-enter) {
+    opacity: 0.01;
+}
+  
+:global(.component-dialog-background-enter.component-dialog-background-enter-active) {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+}
+  
+:global(.component-dialog-background-leave) {
+    opacity: 1;
+}
+  
+:global(.component-dialog-background-leave.component-dialog-background-leave-active) {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+}

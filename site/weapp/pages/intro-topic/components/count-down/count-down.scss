@@ -1,0 +1,30 @@
+.count-down-wrap{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    height: 80rpx;
+    color: #424242;
+    font-size: 26rpx;
+    padding: 0 30rpx;
+    border-bottom: 1rpx solid #f0f0f0;
+    .count-down{
+        color: #ef5670;
+        font-size: 24rpx;
+        .cube{
+            display: inline-flex;
+            // width: 52rpx;
+	        height: 34rpx;
+	        background-color: #ffe8ec;
+            border-radius: 3rpx;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            .unit{
+                font-size: 16rpx;
+                display: inline;
+                font-weight: normal;
+            }
+        }
+    }
+}

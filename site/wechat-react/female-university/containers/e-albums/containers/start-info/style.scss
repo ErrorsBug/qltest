@@ -1,0 +1,78 @@
+.loading{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .loading-title{
+        display: flex;
+        justify-content: center;
+        margin-top: 260px;
+        p{
+            width: 450px;
+            line-height: 74px;
+            font-size: 48px;  /*px*/
+            color: white;
+            text-align: center;
+            &:nth-of-type(2){
+                margin-top: 74px;
+            }
+        }
+    }
+    .Img-all{
+        margin-top: 150px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .Img{
+            position: relative;
+            width:216px;
+            height:216px;
+            img{
+                position: absolute;
+                width: 100%;
+            }
+            .fg{
+                width: 100%;
+                margin-top: -70px;
+                margin-left: 2px;
+                animation-name: light;
+                animation-duration: 3s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+            @keyframes light{
+                from{
+                    opacity: 1;
+                }
+                to{
+                    opacity: 0.2;
+                }
+            }
+        }
+    }
+    .opening{
+        width: 100%;
+        p{
+            text-align: center;
+            font-size: 32px;/*px*/
+            color: white;
+        }
+        .shadow_dot {
+            box-shadow: 50%;
+            display: inline-block; 
+            min-width: 4px; 
+            min-height: 4px;
+            box-shadow:  4px 0 currentColor, 16px 0 currentColor, 28px 0 currentColor;
+            -webkit-animation: shadow_dot 4s infinite step-start both;
+            animation: shadow_dot 4s infinite step-start both;
+        }
+        .shadow_dot:before { content: '...'; }
+        .shadow_dot::before { content: ''; }
+        :root .shadow_dot { margin-right: 8px; }
+        @keyframes shadow_dot {
+            25% { box-shadow: none; }
+            50% { box-shadow: 4px 0 currentColor; }
+            75% { box-shadow: 4px 0 currentColor, 16px 0 currentColor; }
+        }
+    }
+}

@@ -1,0 +1,80 @@
+@import "../../../../../female-university/components/community-topic-item/style.scss";
+.home-community-box{
+  padding-top: 32px;
+  margin-top: 64px;
+  margin-bottom: 32px; 
+  overflow: hidden;
+  background:rgba(248,242,236,1) url('https://img.qlchat.com/qlLive/business/VWPOMI5N-HVI3-GPPA-1569722933126-1LOI7RP442QA.png') no-repeat right 0;
+  background-size: 128px 136px;
+  .hc-topic-head{
+    margin-bottom: 32px;
+    padding:0 32px;
+    p{
+      color: #666;
+      font-size: 30px; /*px*/
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      margin-top: -2px;
+      // vertical-align: 
+      span{
+        display: inline-block;
+        padding: 1px 10px;
+        background: #F73657;
+        border-radius: 30px;
+        color: #fff;
+        font-size: 22px;/*px*/
+        margin-right: 8px;
+        line-height: normal;
+        vertical-align: text-bottom;
+      }
+    }
+  }
+  .hc-topic-title{
+    margin-bottom: 30px;
+    div{
+      display: flex;
+      justify-content: space-between;
+    }
+    h3{
+      font-size: 36px; /*px*/
+      color: #333;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding-right: 30px;
+      line-height: normal;
+    }
+    p{
+      font-size:26px; /*px*/
+      color:rgba(160,137,119,1);
+      line-height:36px;
+      margin-top: 8px;
+    }
+    span{
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      a{
+        font-size: 24px; /*px*/
+        color: #F73657;
+        background-size: 10px 16px;
+        display: block;
+      }
+    }
+  }
+  .hc-topic-list-wrap{
+    padding: 0 32px; 
+    .un-topic-info{
+      margin-right: 0;
+      h4{
+          color:rgba(88,69,56,1);
+      }
+      p{
+          span{
+              color:rgba(186,169,156,1);
+          }
+      } 
+    }
+  } 
+}

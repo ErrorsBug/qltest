@@ -1,0 +1,113 @@
+@import '../../../../common.scss';
+
+.channel-name-section{
+    position: relative;
+    padding: 34rpx 30rpx 24rpx;
+
+    .name{
+        font-size: 32rpx;
+        color: #424242;
+        font-weight: bold;
+    }
+    .other-info{
+        color: #b8b0b0;
+        font-size: 24rpx;
+        margin-top: 20rpx;
+        .separator{
+            display: inline-block;
+            margin: 0 16rpx;
+        }
+    }
+    .charge-info{
+        margin-top: 30rpx;
+        display: flex;
+        align-items: center;
+
+        .tag{
+            margin-right: 14rpx;
+        }
+
+        .vip-tag{
+            width: 71rpx;
+            display: inline-block;
+        }
+
+        .tag-discount{
+            height: 28rpx;
+            line-height: 28rpx;
+            text-align: center;
+            padding: 0 6rpx;
+            display: inline-block;
+            background-color: rgba(#f73657, 0.90);
+            border-radius: 4rpx;
+            color: #fff;
+            font-size: 18rpx;
+        }
+
+        .price{
+            color: #f73657;
+            font-size: 30rpx;
+            font-weight: bold;
+        }
+
+        .tag-group{
+            border-radius: 4px;
+            border: solid 1px #f73657;
+            height: 28rpx;
+            line-height: 28rpx;
+            text-align: center;
+            padding: 0 8rpx;
+            color: #f73657;
+            font-size: 18rpx;
+        }
+
+        .tag-rebate {
+            height: 28rpx;
+            line-height: 28rpx;
+            text-align: center;
+            padding: 0 6rpx;
+            display: inline-block;
+            background-color: rgba(#f73657, 0.90);
+            border-radius: 4rpx;
+            color: #fff;
+            font-size: 18rpx;
+        }
+
+        .ori-price{
+            text-decoration: line-through;
+            color: #999091;
+            font-size: 24rpx;
+            font-weight: normal;
+        }
+
+        .rebate-price {
+            color: #999091;
+            font-size: 24rpx;
+            font-weight: normal;
+        }
+    }
+
+    .share-earning {
+        position: absolute;
+        right: 30rpx;
+        bottom: 30rpx;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .earning-icon {
+            display: block;
+            width: 39rpx;
+            height: 42rpx;
+            margin: 0 auto;
+        }
+
+        .earning-text {
+            font-size: 22rpx;
+            color: #f74262;
+            margin-top: 5rpx;
+            font-weight: bold;
+        }
+    }
+}

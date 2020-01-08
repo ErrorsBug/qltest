@@ -1,0 +1,527 @@
+@import "../base-definition";
+.homework-details{
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background:#fff;
+	line-height:1.5;
+	font-size:24px;/*px*/
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	.homework-details-container{
+		position:relative;
+	}
+	.homework-content{
+		overflow: hidden;
+		background:#fff;
+		padding:40px 60px 35px;
+		.avatar-wrap{
+			width:130px;
+			height:130px;
+			position:relative;
+			margin:0 auto;
+			cursor:pointer;
+			.avatar{
+				@include round-avatar(130px);
+			}
+			&:after{
+				width:30px;
+				height:30px;
+				content:'';
+				position:absolute;
+				right:8px;
+				bottom:2px;
+				background:url(./img/icon-home.png) no-repeat;
+				background-size:100%;
+			}
+			&.camp-course:after{
+				display: none;
+			}
+		}
+		.homework-title{
+			margin-top:40px;
+			font-size:32px;/*px*/
+			padding:0 45px;
+			text-align: center;
+			color:$gray--title;
+			font-weight: bolder;
+		}
+		.description{
+			font-size:30px;/*px*/
+			color:$gray--content;
+			margin-top:25px;
+			pre{
+				white-space: pre-line !important;
+			}
+		}
+		.audio-box{
+			margin-top:25px;
+		}
+		.host{
+			margin-top:30px;
+			color:$gray--tip;
+			text-align: center;
+			.name{
+				color:$main-color;
+			}
+		}
+
+	}
+	.student-panel{
+		min-height:124px;
+		border-top:1px solid $gray--split-line;/*no*/
+		@include flex-center;
+		background:#fff;
+		.hand-in-btn{
+			padding:0 30px;
+			min-width:165px;
+			height:64px;
+			@include flex-center;
+			color:#fff;
+			background:$main-color--lighter;
+			border-radius:50px;
+			cursor:pointer;
+		}
+	}
+	.submitted-count{
+		height:64px;
+		@include flex-center;
+		background:$gray--background;
+		.container{
+			padding:0 46px;
+			position:relative;
+			&:before{
+				width:100%;
+				height:1px;/*no*/
+				font-size:0;
+				content:'';
+				background:#b3b3b3;
+				position:absolute;
+				top:50%;
+				left:0;
+			}
+			.content{
+				position:relative;
+				z-index: 2;
+				padding:0 22px;
+				background:$gray--background;
+				color:$gray--tip;
+				font-style: italic;
+			}
+		}
+	}
+	.homework-list{
+		background:#fff;
+	}
+	.homework-item{
+		background:#fff;
+		padding:30px 30px 40px;
+		border-bottom:1px solid $gray--split-line;/*no*/
+		&:last-child{border:0;}
+		display: flex;
+		flex-grow: 1;
+		.avatar{
+			@include round-avatar(70px);
+			flex-shrink: 0;
+		}
+		.main-body{
+			flex-grow:1;
+			margin-left:14px;
+			position:relative;
+
+			.name{
+				color:$gray--tag;
+				font-size:26px;/*px*/
+				padding-top:5px;
+                display: flex;
+                align-items: center;
+
+                .item-hot {
+                    height: 26px;
+					margin-right: 10px;
+					margin-bottom: 3px;
+                    padding: 0 8px;
+                    display: flex;
+                    align-items: center;
+                    color: #F73657;
+                    border: 1px solid #F73657;
+                    font-size: 18px; /* px */
+                    line-height: normal;
+                    border-radius:4px;
+                }
+			}
+			.date{
+				color:$gray--lighter-tip;
+				font-size:20px;/*px*/
+			}
+			.speak-content{
+				margin-top:15px;
+				color:$gray--title;
+				font-size:30px;/*px*/
+			}
+			.audio-wrap{
+				margin-top:20px;
+			}
+			.img-list{
+				width:550px;
+				margin-top:20px;
+				display:flex;
+				flex-wrap:wrap;
+				&.sp{
+					width:400px;
+				}
+				.img-item{
+					width:170px;
+					height:170px;
+					background-repeat: no-repeat;
+					background-position:center;
+					background-size:cover;
+					margin:0 10px 10px 0;
+					overflow: hidden;
+					position:relative;
+					cursor:pointer;
+					&.sp{
+						width: auto;
+						height: auto;
+						max-width:425px;
+						max-height:425px;
+						margin:0;
+						overflow: inherit;
+					}
+					img{
+						display:block;
+					}
+				}
+			}
+			.img-sigle{
+				margin-top: 20px;
+			}
+			.video-list {
+				margin-top:20px;
+				.video-wrapper {
+					
+				}
+			}
+			.teacher-panel{
+				margin-top:35px;
+				display:flex;
+				align-items: center;
+				font-size:22px;/*px*/
+				.comment-btn{
+					height:26px;
+					padding-left:40px;
+					color:$gray--tip;
+					background:url(./img/icon-comment.png) no-repeat left;
+					background-size:auto 100%;
+					cursor:pointer;
+				}
+				.essence-btn {
+					height:26px;
+					padding-left:30px;
+					margin-left:40px;
+					color:$gray--tip;
+					background:url(./img/btn_essence_n.png) no-repeat left top;
+					background-size:auto 100%;
+					&.ed{
+						background-image:url(./img/btn_essence_h.png);
+						color: #F73657;
+					}
+				}
+				.teacher-like-btn{
+					padding-left:40px;
+					height:32px;
+					font-size:22px;/*px*/
+					@include flex-center;
+					background:url(./img/icon-like.png) no-repeat left top;
+					background-size:auto 28px;
+					color:$gray--tip;
+					margin-left:40px;
+					cursor:pointer;
+					&.ed{
+						background-image:url(./img/icon-liked.png);
+					}
+				}
+			}
+			.teacher-comment-wrap{
+				margin-top:20px;
+				border-radius: 6px;
+				font-size:26px;/*px*/
+				background:$gray--background;
+			}
+			.teacher-comment{
+				display: flex;
+				padding:18px 20px;
+				margin: 16px 0;
+				color:$gray--tip;
+				user-select:none;
+				border-bottom:1px solid #e5e5e5;/*no*/
+				&:last-child{
+					border:0;
+				}
+				.teacher-name{
+					color:$gray--tag;
+				}
+				.teacher-content {
+					flex: 1;
+				}
+				.comment-audio-wrap{
+					flex: 1;
+					display:flex;
+					align-items: center;
+					&.with-margin{
+						margin-top:20px;
+					}
+				}
+				.reply-controller-wrap {
+					position: relative;
+					width: 80px;
+					box-sizing: border-box;
+					cursor: pointer;
+					.reply-controller {
+						position: absolute;
+						right: 20px;
+						top: 50%;
+						transform: translateY(-50%);
+						display: inline-block;
+						background-image: url('./img/icon-ellipsis3.png');
+						width: 30px;
+						height: 30px;
+						background-size: contain;
+						background-repeat: no-repeat;
+						background-position: center center;
+					}
+				}
+			}
+			.edit-btn{
+				padding:0 25px;
+				height: 40px;
+				@include flex-center;
+				position:absolute;
+				top:0;
+				right:0;
+				background:url(./img/icon-write.png) no-repeat right;
+				background-size: cover;
+				color:$gray--tip;
+				cursor:pointer;
+			}
+			.camp-share-btn {
+				position: absolute;
+				top: 0;
+				right: 60px;
+				.share-tip {
+					width: 200px;
+					text-align: center;
+					position: absolute;
+					top: -80px;
+					right: -50%;
+					transform: translateX(36%);
+					color: #fff;
+					background: #F73657;
+					padding: 8px 12px;
+					border-radius: 30px;
+					font-size: 24px; /*px*/
+					&:after {
+						content: '';
+						position: absolute;
+						bottom: -10px;
+						left: 46%;
+						width: 0;
+						height: 0;
+						border-left: 15px solid transparent;
+						border-right: 15px solid transparent;
+						border-top: 20px solid #F73657;
+					}
+				}
+				.share-btn {
+					padding:0 25px;
+					height: 40px;
+					@include flex-center;
+					position:absolute;
+					top:0;
+					right:0;
+					background:url(./img/icon-share.png) no-repeat right;
+					color:$gray--tip;
+					cursor:pointer;
+					background-size: cover;
+				}
+			}
+			.like-btn{
+				padding-right:35px;
+				padding-top:6px;
+				height:22px;
+				font-size:22px;/*px*/
+				@include flex-center;
+				background:url(./img/icon-like.png) no-repeat right;
+				background-size:auto 100%;
+				color:$gray--tip;
+				position:absolute;
+				right:0;
+				top:0;
+				cursor:pointer;
+				&.ed{
+					background-image:url(./img/icon-liked.png);
+				}
+			}
+
+			.teacher-controller{
+				width:39px;
+				height:39px;
+				background:url(./img/icon-ellipsis.png) no-repeat center;
+				background-size:100% auto;
+				position:absolute;
+				right:0;
+				top:0;
+				cursor:pointer;
+			}
+		}
+		&.my-answer .main-body .like-btn{
+			top:6px;
+			right:120px;
+			cursor:default;
+		}
+	}
+	.comment-wrapper{
+		position:absolute;
+		left:0;
+		top:0;
+		width:100%;
+		height:100%;
+		display:none;
+		z-index: 5;
+		.comment-container{
+			position:absolute;
+			left:0;
+			bottom:0;
+			width:100%;
+		}
+		&.text{
+			display:block;
+		}
+		&.audio{
+			display:block;
+			.recorder-wrapper{
+				display:block;
+			}
+		}
+	}
+	.comment-box{
+		height:98px;
+		background:$gray--background;
+		padding:0 30px;
+		align-items: center;
+		justify-content: space-between;
+		display:flex;
+		border-top:1px solid $gray--stronger-split-line;
+		.speak-btn{
+			width:32px;
+			height:46px;
+			background:url(./img/icon-mic.png) no-repeat center / 100%;
+			cursor:pointer;
+			margin-right:30px;
+		}
+		.input-wrap{
+			flex-grow:1;
+			background:#e8e8e8;
+			height:68px;
+			padding:0 28px;
+			@include flex-center;
+			border-radius: 35px;
+			input{
+				height:40px;
+				line-height:40px;
+				background:none;
+				border:0;
+				outline: none;
+				padding:0;
+				flex-grow:1;
+				font-size:30px;/*px*/
+			}
+		}
+		.send-btn{
+			padding:0 25px;
+			background:$green;
+			@include flex-center;
+			color:#fff;
+			font-size:30px;/*px*/
+			margin-left:30px;
+			height:68px;
+			border-radius: 35px;
+			white-space: nowrap;
+			cursor:pointer;
+		}
+	}
+	.recorder-wrapper{
+		display:none;
+	}
+	.unfollow-qrcode{
+		position:absolute;
+		top:0;
+		left:0;
+		background:rgba(#000,.5);
+		width:100%;
+		height:100%;
+		@include flex-center;
+		z-index: 10;
+		.container{
+			width:540px;
+			border-radius: 6px;
+			overflow: hidden;
+			.code{
+				height:490px;
+				@include flex-center;
+				background:#fff;
+				position: relative;
+				.close-button{
+					display: block;
+					width:30px;
+					height:30px;
+					background:url(./img/icon-qrcode-close.png) no-repeat;
+					background-size:100%;
+					position: absolute;
+					top:28px;
+					right:26px;
+				}
+				img {
+					width: 310px;
+					height: 310px;
+					margin: auto;
+					display: block; 
+
+				}
+			}
+			.tip{
+				height:140px;
+				@include flex-center;
+				background: url(./img/qrcode-bg.png) no-repeat;
+				background-size:100%;
+				color:#fff;
+				font-size:26px;/*px*/
+				text-align: center;
+			}
+		}
+	}
+	>.co-scroll-to-load {
+    position: static;
+    flex-grow: 1;
+  }
+	>.footer {
+    flex-shrink: 0;
+    display: flex;
+    [class|=btn] {
+      flex: 1;
+      margin: 12px 40px;
+      background-color: #f73657;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 76px;
+      border-radius: 76px;
+      line-height: normal;
+      font-size: 32px;/*px*/
+      color: #fff;
+    }
+  }
+}

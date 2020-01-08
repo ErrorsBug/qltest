@@ -1,0 +1,19 @@
+.camp-detail-box{
+  padding: 40px 40px 28px 40px;
+  background: #fff;
+  border-bottom: 1px solid #eee; /*no*/
+  h3{
+    font-size: 32px; /*px*/
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 35px;
+  }
+  p{
+    line-height: 1.5;
+    font-size: 26px; /*px*/
+    padding-bottom: 12px;
+    span{
+      color: #F73657;
+    }
+  }
+}

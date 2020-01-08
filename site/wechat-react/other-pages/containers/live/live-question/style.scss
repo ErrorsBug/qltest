@@ -1,0 +1,103 @@
+.question-container {
+
+    .question-list {
+        .question-item {
+            padding-left: 30px;
+            margin-bottom: 20px;
+            background-color: #ffffff;
+
+            .user-info-row {
+                display: flex;
+                align-items: center;
+                padding: 20px 0 20px 0;
+                border-bottom: 1px solid #f0f0f0; /*no*/
+
+                img {
+                    display: inline-block;
+                    width: 90px;
+                    height: 90px;
+                    border-radius: 50%;
+                }
+
+                .user-base-info-row {
+                    padding-left: 25px;
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    .user-name {
+                        font-size: 30px; /*px*/
+                        line-height: 40px; /*px*/
+                        color: #424242;
+                    }
+
+                    .auth-info {
+                        font-size: 22px; /*px*/
+                        color: #b8b0b0;
+                        margin-top: 11px;
+                    }
+                }
+
+                .do-question {
+                    display: inline-block;
+                    position: relative;
+                    margin: 0 25px 0 30px;
+                    padding: 15px 25px; /*px*/
+                    border: 1px solid #f73657; /*no*/
+                    color: #f73657;
+                    border-radius: 100px;
+                    font-size: 24px; /*px*/
+                    flex-shrink: 0;
+                    height: fit-content;
+                    cursor: pointer;
+                }
+                .no-open-whisper {
+                    display: inline-block;
+                    position: relative;
+                    margin: 0 25px 0 30px;
+                    padding: 15px 0;
+                    color: #b8b0b0;
+                    border-radius: 100px;
+                    font-size: 24px; /*px*/
+                    flex-shrink: 0;
+                    height: fit-content;
+                }
+            }
+
+            .question-info {
+                padding-left: 124px;
+
+                .question-stat {
+                    padding: 29px 30px 28px 0;
+                    border-bottom: 1px solid #f0f0f0; /*no*/
+                    font-size: 24px; /*px*/
+                    color: #424242;
+                }
+
+                .neweast-course {
+                    display: flex;
+                    padding: 27px 30px 30px 0;
+                    font-size: 24px; /*px*/
+                    color: #424242;
+                    cursor: pointer;
+
+                    .course-name-left {
+                        display: inline-block;
+                        white-space: nowrap;
+                    }
+                    .course-name {
+                        display: inline-block;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    .course-name-right {
+                        flex: 1;
+                        min-width: 48px;
+                    }
+                }
+            }
+        }
+    }
+}

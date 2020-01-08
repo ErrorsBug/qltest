@@ -1,0 +1,185 @@
+<!--index.wxml-->
+<view class="page-view" wx:if="{{showMain}}">
+
+    <view class="thousand-live-view">
+        <view class="topic-view">
+            <view class="topic-view-flex">
+                <!--ppt-->
+                <swiper class="ppt-swiper" hidden="{{!isShowPPT ? true : false}}"  current="{{pptIndex}}">
+                    <block wx:for="{{pptList}}" wx:key="index" wx:for-item="item">
+                        <swiper-item>
+                            <image src="{{item.url + '@450h_800w_4e_2o_1l_0-0-0bgc'}}" class="slide-image" mode="widthFix"/>
+                        </swiper-item>
+                    </block>
+                </swiper>
+
+                <!-- 顶部工具栏 -->
+                <top-live-bar
+                    liveId="{{liveId}}"
+                    liveLogo="{{liveLogo}}"
+                    liveName="{{liveName}}"
+                    onlineNum="{{onlineNum}}"
+                    liveStatus="{{liveStatus}}"
+                    startTime="{{startTime}}"
+                    currentTimeMillis="{{currentTimeMillis}}"
+                    isPPTMode="{{isPPTMode}}"
+                    isShowPPT="{{isShowPPT}}"
+                    bindonOpenPPTBtnClick="togglePPTBox"
+                    >
+                </top-live-bar>
+
+                <!--列表区域-->
+                <view class="speak-main-view">
+
+                    <!-- 列表中的悬浮菜单 -->
+                    <float-menu
+                        topicId="{{topicId}}"
+                        bindonToBottomBtnClick="gotoLastMsg"
+                        bindonToTopBtnClick="gotoFirstMsg"
+                        >
+                    </float-menu>
+
+                    <!-- 发言列表 -->
+                    <scroll-view
+                        class="speak-list"
+                        scroll-y="true"
+                        scroll-x="false"
+                        lower-threshold="300"
+                        upper-threshold="300"
+                        bindscrolltolower="onSpeakListScrollTolower"
+                        bindscrolltoupper="onSpeakListScrollToUpper"
+                        scroll-into-view="{{speakListToViewId}}"
+                        scroll-top="{{speakListScrollTop}}"
+                        >
+
+                        <view wx:if="{{isLoadingUpper}}" class="speak-list-loading loading-top">
+                            <image class="speak-loading-icon" src="./img/loading.gif" mode="widthFix" />
+                        </view>
+
+                        <!-- 话题信息（倒计时） -->
+                        <topic-intro
+                            wx:if="{{isLoadFirstSpeak}}"
+                            topicName="{{topicName}}"
+                            startTime="{{startTime}}"
+                            currentTimeMillis="{{currentTimeMillis}}"
+                            topicStartTimeView="{{topicStartTimeView}}"
+                            >
+                        </topic-intro>
+
+                        <!-- 听课指南 -->
+                        <tips-card
+                            wx:if="{{isLoadFirstSpeak}}"
+                        ></tips-card>
+
+                        <!-- 发言列表 -->
+                        <speak-list
+                            style="{{speakList.length < 15 ? 'height: 110%; display: block;': ''}}"
+
+                            speakList="{{speakList}}"
+                            playingSpeakId="{{playingSpeakId}}"
+                            playingSpeakPercent="{{playingSpeakPercent}}"
+                            playingSpeakDuration="{{playingSpeakDuration}}"
+                            playingSpeakStatus="{{playingSpeakStatus}}"
+
+
+                            topicView="{{topicView}}"
+
+                            bindopenReward="openReward"
+                            bindonImgClick="onImgClick"
+                            bindonPlayAudioBtnClick="onPlayAudioBtnClick"
+                            bindonTouchAudioSliderStart="onTouchAudioSliderStart"
+                            bindonTouchAudioSliderEnd="onTouchAudioSliderEnd"
+                            bindonTouchAudioSliderCancel="onTouchAudioSliderCancel"
+
+                            topSpeakId="{{topSpeakId}}"
+                            bindonTopSpeakIdChange="onTopSpeakIdChange"
+                            system="{{system}}"
+
+                        ></speak-list>
+                        <view wx:if="{{isLoadingLower}}" class="speak-list-loading loading-bottom">
+                            <image class="speak-loading-icon" src="./img/loading.gif" mode="widthFix" />
+                        </view>
+                    </scroll-view>
+
+                    <!--弹幕区域-->
+                    <view class="barrage-view">
+                        <view class="barrage-list"  wx:if="{{isShowBarrage}}" catchtap="toggleCommentDialog">
+                                <barrage
+                                    wx:for="{{commentList}}"
+                                    wx:for-item="comment"
+                                    wx:key="id"
+                                    wx:if="{{index < 3}}"
+                                    item="{{comment}}"
+                                    index="{{comment.id}}"
+                                />
+                        </view>
+                    </view>
+
+                    <!-- <view class="left-right-tips">
+                        <view class="btn-goto-playing" catchtap="gotoPlaying" hidden>
+                            回到播放的位置
+                            <image class="icon-gt-play" src="./img/icon-gt-play.png" mode="widthFix"></image>
+                        </view>
+                        <view class="who-is-typing" hidden="{{!isShowTyping}}"><text class="typing-name"> {{typingName}}</text>正在输入</view>
+                    </view> -->
+
+                </view>
+            </view>
+        </view>
+
+        <!-- 评论列表弹窗 -->
+        <comment-dialog
+            isShow="{{isShowCommentDialog}}"
+            commentNum="{{commentNum}}"
+            commentList="{{commentList}}"
+            isLoadingMore="{{isCommentLoading}}"
+            isNoMore="{{isNomoreComment}}"
+            userPo="{{userPo}}"
+            bindonHideCommentViewClick="toggleCommentDialog"
+            bindonScrollToLower="onLoadComment"
+            bindonDeleteComment="onDeleteCommont"
+            >
+        </comment-dialog>
+
+    </view>
+
+    <!-- 底部操作菜单 -->
+    <bottom-bar
+        liveId="{{liveId}}"
+        topicId="{{topicId}}"
+        isCommentBanned="{{isCommentBanned}}"
+        topicEnded="{{this.props.topicEnded}}"
+        isShowComment="{{isShowCommentDialog}}"
+        isShowBarrage="{{isShowBarrage}}"
+        bindonBarrageBtnClick="toggleBarrage"
+        bindonCommentBoxBtnClick="toggleCommentDialog"
+        bindonOperationBtnClick="showOperationDialog"
+        >
+    </bottom-bar>
+
+    <!-- 赞赏弹窗 -->
+    <reward-dialog
+        liveId="{{liveId}}"
+        topicId="{{topicId}}"
+        isShow="{{isShowRewardDialog&&system!='ios'}}"
+        createBy="{{activeSpeakItem.createBy}}"
+        speakCreateByName="{{activeSpeakItem.speakCreateByName}}"
+        speakCreateByHeadImgUrl="{{activeSpeakItem.speakCreateByHeadImgUrl}}"
+        pic="{{rewardPic}}"
+        introduce="{{rewardIntroduce}}"
+        prices="{{rewardPrice}}"
+
+        bindonHide="hideRewardDialog"
+        bindonMoneyclick="onLuckyClick"
+        >
+    </reward-dialog>
+
+    <!-- 操作菜单 -->
+    <operation-dialog
+        topicId="{{topicId}}"
+        isShow="{{isShowOperationDialog}}"
+        bindonhide="hideOperationDialog"
+        >
+    </operation-dialog>
+
+</view>

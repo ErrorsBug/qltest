@@ -1,0 +1,38 @@
+.gold-bar{
+    background-color: #fffcf5;
+    height: 90rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 32rpx;
+
+    .item{
+        color: #bca182;
+        font-size: 24rpx;
+        margin-right: 36rpx;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        line-height: normal;
+
+        .icon{
+            margin-right: 8rpx;
+        }
+        .icon-replay{
+            width: 28rpx;
+        }
+        .icon-discount{
+            width: 26rpx;
+        }
+        .icon-rebate{
+            width: 30rpx;
+        }
+        .icon-vip{
+            width: 29rpx;
+        }
+        .icon-live{
+            width: 38rpx;
+            
+        }
+    }
+}

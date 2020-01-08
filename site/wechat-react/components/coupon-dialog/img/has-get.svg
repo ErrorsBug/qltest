@@ -1,0 +1,19 @@
+
+<svg width="197px" height="197px" viewBox="0 0 197 197" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="整理" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-72.000000, -72.000000)">
+            <g id="Group-7" transform="translate(79.000000, 79.000000)">
+                <g>
+                    <circle id="Oval-6" stroke="#FC2C28" stroke-width="14" opacity="0.100000001" cx="91.5" cy="91.5" r="91.5"></circle>
+                    <path d="M91.7321429,166.464286 C133.005566,166.464286 166.464286,133.005566 166.464286,91.7321429 C166.464286,50.45872 133.005566,17 91.7321429,17 C50.45872,17 17,50.45872 17,91.7321429 C17,133.005566 50.45872,166.464286 91.7321429,166.464286 Z" id="Oval-6-Copy" stroke="#FC2C28" stroke-width="2" opacity="0.100000001" stroke-dasharray="14.25"></path>
+                    <text id="已领取" opacity="0.349999994" transform="translate(92.000000, 92.000000) rotate(-30.000000) translate(-92.000000, -92.000000) " font-family="PingFangSC-Medium, PingFang SC" font-size="40" font-weight="400" fill="#FC2C28">
+                        <tspan x="32" y="106">已领取</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

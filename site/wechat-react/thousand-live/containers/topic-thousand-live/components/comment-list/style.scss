@@ -1,0 +1,97 @@
+.comment-list {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 99;
+
+    .blank-area {
+        width: 100%;
+        height: 150px;
+        background-color: rgba(0,0,0,.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    .list-box {
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+        background-color: #fff;
+        flex: 1;
+        font-size: 24px;/*px*/
+        display: flex;
+        flex-direction: column;
+
+        .header {
+            height:130px;
+            padding-left: 40px;
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            line-height:normal;
+            font-size:36px;/*px*/
+            background-color: #FFF;
+            z-index: 99;
+            color:rgba(51,51,51,1);
+            .discuss {
+                color:#f40;
+                margin-left:10px;
+                flex:1;
+            }
+            .close-btn{
+                font-size:25px;
+                padding: 40px;
+            }
+        }
+
+        .new-comment {
+            width: 210px;
+            height: 60px;
+            border-radius: 30px;
+            border: 1px solid #e5e5e5;
+            color: #0fc853;
+            font-size: 24px;/*px*/
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 110px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 2px 4px 0px rgba(198, 198, 198, 0.3);
+            z-index: 99;
+            background-color: rgba(255,255,255,.9);
+        }
+
+        .new-comment::before {
+            margin-right: 10px;
+        }
+    }
+
+    .comment-scroll-box {
+        position: relative;
+        flex: 1;    
+    }
+    .comment-scroll-box.with-siwtch {
+        padding-top: 266px;
+    }
+    .share-config-switch-box {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+}
+
+.comment-list-hide {
+    display: none;
+}
+
+

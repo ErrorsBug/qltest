@@ -1,0 +1,162 @@
+.charge-standard-container {
+    .charge-standard {
+        height: 550px;
+        border-top-left-radius: 26px;
+        border-top-right-radius: 26px;
+        background-color: #fff;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        .header {
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: #666;
+            font-size: 36px;/*px*/
+            border-bottom: 1px solid rgba(238,238,238,1); /*no*/
+            font-weight: bold;
+            .complete {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0;
+                padding: 20px 30px;
+                font-size: 30px;/*px*/
+                color: #999;
+                font-weight: normal;
+            }
+        }
+        .create-charge-container {
+            height: 420px;
+            overflow-y: auto;
+            border-bottom: 2px solid rgba(247,247,247,1);
+            .list {
+                height: 140px;
+                display: flex;
+                align-items: center;
+                padding-left: 30px;
+                &:not(:last-child){
+                    border-bottom: 2px solid rgba(247,247,247,1);
+                }
+                >input {
+                    width: 180px;
+                    height: 80px;
+                    background:rgba(247,247,247,1);
+                    border-radius:12px;
+                    font-size: 30px;/*px*/
+                    color: #b2b2b2;
+                    border: none;
+                    outline: none;
+                    padding: 0 20px;
+                    box-sizing: border-box;
+                    font-weight: bold;
+                }
+                >span {
+                    color: #999;
+                    font-size: 30px;/*px*/
+                    margin: 0 25px;
+                }
+                .close {
+                    height: 100px;
+                    width: 100px;
+                    cursor: pointer;
+                    position: relative;
+                    background: {
+                        image: url(../../img/icon_close.png);
+                        position: center center;
+                        size: 38px 38px;
+                        repeat: no-repeat;
+                    }
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width:2px;
+                        height:40px;
+                        background:rgba(238,238,238,1);
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+            } 
+        }
+        .create-charge-tip {
+            padding: 20px 40px;
+            p{
+                color: #B2B2B2;
+                font-size: 26px;/*px*/
+                line-height: 46px;
+            }
+        }
+        .add {
+            width:690px;
+            height:90px;
+            border-radius:45px;
+            border:2px solid rgba(247,54,87,1);
+            cursor: pointer;
+            margin: 10px auto;
+            font-size: 30px;/*px*/
+            color:#f73657;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+    }
+    .black {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,.6);
+        z-index: 5;
+    }
+    .black-enter {
+        opacity: 0.01;
+    }
+    .black-enter.black-enter-active {
+        opacity: 1;
+        transition: all 300ms ease-in;
+    }
+    .black-leave {
+        opacity: 1;
+    }
+    .black-leave.black-leave-active {
+        opacity: 0.01;
+        transition: all 300ms ease-in;
+    }
+    .charge-standard-tst-enter {
+        opacity: 0.01;
+        transform: translateY(100%);
+    }
+    .charge-standard-tst-enter.charge-standard-tst-enter-active {
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 300ms ease-in;
+    }
+    .charge-standard-tst-leave {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .charge-standard-tst-leave.charge-standard-tst-leave-active {
+        opacity: 0.01;
+        transform: translateY(100%);
+        transition: all 300ms ease-in;
+    }
+}
+.delete-channel-stardard.co-dialog-container {
+    .co-dialog-content {
+        border-radius: 26px;
+    }
+}

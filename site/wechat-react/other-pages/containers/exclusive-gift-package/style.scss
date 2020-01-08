@@ -1,0 +1,373 @@
+.exclusive-gift-package{
+    background-color: rgb(247,240,222);
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+    position: relative;
+    >.top-bg {
+        height: 325px;
+        width: 100%;
+        background: {
+            image: url(./img/bg.png);
+            repeat: no-repeat;
+            size: 100% 100%;
+        }
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    >.gift-package-container {
+        margin-top: 170px;
+        z-index: 1;
+        >.course-container {
+            width: 690px;
+            margin: 0 auto;
+            background-color: rgb(255,255,255);
+            border-radius: 12px;
+            box-shadow: 0 4px 8px 0 rgba(162,145,105,0.2);
+            position: relative;
+            padding: 40px 0;
+            box-sizing: border-box;
+
+            &::before {
+                content: '';
+                height: 350px;
+                width: 25px;
+                position: absolute;
+                left: -25px;
+                bottom: 0;
+                background: {
+                    image: url(./img/left.png);
+                    repeat: no-repeat;
+                    size: 100% 100%;
+                }
+            }
+            &::after {
+                content: '';
+                height: 350px;
+                width: 25px;
+                position: absolute;
+                right: -25px;
+                bottom: 0;
+                background: {
+                    image: url(./img/right.png);
+                    repeat: no-repeat;
+                    size: 100% 100%;
+                }
+            }
+            .title-container {
+                .title {
+                    position: relative;
+                    color: rgb(51,51,51);
+                    font-size: 36px; /*px*/
+                    line-height: 42px;
+                    height: 42px;
+                    width: 270px;
+                    text-align: center;
+                    margin: 0 auto;
+                    &::before {
+                        content: '';
+                        width: 42px;
+                        height: 28px;
+                        position: absolute;
+                        background: {
+                            image: url(./img/l-star.png);
+                            repeat: no-repeat;
+                            size: 100% 100%;
+                        }
+                        top: 7px;
+                        left: 5px;
+                    }
+                    &::after {
+                        content: '';
+                        width: 42px;
+                        height: 28px;
+                        position: absolute;
+                        background: {
+                            image: url(./img/r-star.png);
+                            repeat: no-repeat;
+                            size: 100% 100%;
+                        }
+                        top: 7px;
+                        right: 5px;
+                    }
+                }
+                .tip {
+                    text-align: center;
+                    font-size: 24px; /*px*/
+                    color: rgb(184,176,177);
+                    margin-top: 14px;
+                }
+            }
+            >.course{
+                width: 630px;
+                overflow: hidden;
+                margin: 20px auto 0;
+                >.list {
+                    height: 343px;
+                    width: 310px;
+                    border-radius: 4px;
+                    position: relative;
+                    background-color: rgb(255,247,234);
+                    float: left;
+                    margin-top: 20px;
+                    cursor: pointer;
+                    &:nth-child(odd){
+                        margin-right: 10px;
+                    }
+                    .course-tag {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        border-top-left-radius: 4px;
+                        width: 90px;
+                        height: 34px;
+                        background-color: rgb(247,54,87);
+                        color: rgb(255,255,255);
+                        font-size: 17px; /*px*/
+                        line-height: 34px;
+                        text-align: center;
+                    }
+                    >img {
+                        width: 100%;
+                        height: 190px;
+                        border-top-left-radius: 4px;
+                        border-top-right-radius: 4px;
+                    }
+                    >.course-title {
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                        overflow: hidden;
+                        font-size: 26px; /*px*/
+                        line-height: 32px;
+                        margin: 10px 20px 0;
+                    }
+                    .desc {
+                        display: flex;
+                        position: absolute;
+                        bottom: 20px;
+                        width: 100%;
+                        align-items: center;
+                        height: 30px;
+                        line-height: 30px;
+                        .desc-live {
+                            font-size: 22px; /*px*/
+                            color: rgb(115,115,115);
+                            flex: 1;
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 1;
+                            overflow: hidden;
+                            margin-left: 20px;
+                            height: 30px;
+                            line-height: 30px;
+                            
+                        }
+                        .learn-time {
+                            font-size: 22px; /*px*/
+                            line-height: 30px;
+                            color: rgb(184,176,177);
+                            margin-right: 20px;
+                        }
+                    }
+                }
+            }
+            >.location {
+                height: 70px;
+                width: 370px;
+                cursor: pointer;
+                background-color: rgb(162,145,105);
+                border-radius: 35px;
+                line-height: 70px;
+                text-align: center;
+                font-size: 30px; /*px*/
+                color: rgb(255,255,255);
+                margin: 38px auto 0;
+            }
+        }
+        >.coupon-container {
+            width: 690px;
+            margin: 0 auto;
+            .coupon-location {
+                margin: 50px auto 30px;
+                width: 370px;
+                height: 70px;
+                border-radius: 35px;
+                background-color: rgb(162,145,105);
+                font-size: 28px; /*px*/
+                color: rgb(255,255,255);
+                line-height: 70px;
+                text-align: center;
+            }
+            .title-container {
+                position: relative;
+                width: 100%;
+                padding-top: 58px;
+                box-sizing: border-box;
+                >.title {
+                    width: 270px;
+                    margin: 0 auto;
+                    position: relative;
+                    font-size: 36px; /*px*/
+                    color: rgb(51,51,51);
+                    height: 40px;
+                    line-height: 40px;
+                    text-align: center;
+                    &::before {
+                        height: 34px;
+                        width: 34px;
+                        position: absolute;
+                        content: '';
+                        left: 0;
+                        top: 3px;
+                        background: {
+                            image: url(./img/l-tag.png);
+                            repeat: no-repeat;
+                            size: 100% 100%;
+                        }
+                    }
+                    &::after {
+                        height: 34px;
+                        width: 34px;
+                        position: absolute;
+                        content: '';
+                        right: 0;
+                        top: 3px;
+                        background: {
+                            image: url(./img/r-tag.png);
+                            repeat: no-repeat;
+                            size: 100% 100%;
+                        }
+                    }
+                }
+                >.tip {
+                    color: rgb(192,184,165);
+                    font-size: 24px; /*px*/
+                    margin-top: 20px;
+                    text-align: center;
+                }
+                >span {
+                    position: absolute;
+                    background: {
+                        image: url(./img/circle.png);
+                        repeat: no-repeat;
+                        size: 100% 100%;
+                    }
+                }
+                .s {
+                    width: 52px;
+                    height: 52px;
+                    top: 58px;
+                    right: 100px;
+                }
+                .m {
+                    width: 60px;
+                    height: 60px;
+                    top: 40px;
+                    left: 10px;
+                }
+                .l {
+                    height: 84px;
+                    width: 84px;
+                    right: -14px;
+                    top: 18px;
+                }
+            }
+            >.coupon-content{
+                height: 166px;
+                width: 696px;
+                margin: 36px auto 0;
+                background: {
+                    image: url(./img/coupon-bg.png);
+                    repeat: no-repeat;
+                    size: 100% 100%;
+                }
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                .price-container {
+                    width: 190px;
+                    height: 114px;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    text-align: center;
+                    border-right: 2px dashed rgb(225,212,181);
+                    .m-c{
+                        .icon {
+                            font-size: 30px; /*px*/
+                            color: rgb(247,54,87);
+                        }
+                        .money {
+                            font-size: 56px; /*px*/
+                            color: rgb(247,54,87);
+                        }
+                    }
+                    >.tip {
+                        height: 28px;
+                        width: 88px;
+                        border-radius: 4px;
+                        border: 1px solid rgb(247,54,87);/*no*/
+                        font-size: 18px; /*px*/
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: rgb(247,54,87);
+                        margin: 10px auto 0;
+                    }
+                }
+                >.desc-container {
+                    margin-left: 30px;
+                    width: 240px;
+                    .c-desc {
+                        font-size: 30px; /*px*/
+                        color: rgb(51,51,51);
+                        line-height: 36px;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                        overflow: hidden;
+                        width: 100%;
+                    }
+                    .c-live {
+                        font-size: 24px; /*px*/
+                        color: rgb(179,179,179);
+                        margin-top: 10px;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 1;
+                        overflow: hidden;
+                        width: 100%;
+                    }
+                }
+                >.use-container {
+                    margin-left: 40px;
+                    width: 150px;
+                    >span {
+                        font-size: 22px; /*px*/
+                        color: rgb(200,189,164);
+                        display: inline-block;
+                        width: 100%;
+                        text-align: center;
+                        line-height: 30px;
+                    }
+                    >.use {
+                        background-color: rgb(239,84,80);
+                        border-radius: 20px;
+                        width: 108px;
+                        height: 44px;
+                        line-height: 44px;
+                        text-align: center;
+                        margin: 10px auto 0;
+                        font-size: 24px; /*px*/
+                        color: rgb(255,255,255);
+                    }
+                }
+            }
+        }
+    }
+}

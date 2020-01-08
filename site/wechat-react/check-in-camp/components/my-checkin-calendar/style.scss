@@ -1,0 +1,73 @@
+.my-checkin-calendar-container {
+    padding: 0 30px;
+    background-color: #ffffff;
+    .year-month {
+        text-align: center;
+        font-size: 30px; /*px*/
+        color: #bfb9b9;
+        line-height: 1.6;
+        padding: 20px 0;
+    }
+    .date-week-container {
+        overflow: hidden;
+        .date-week {
+            padding: 0 0 40px 0;
+            overflow: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            position: relative;
+            bottom: -16px; /*px*/
+            .date-week-wrapper {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-around;
+                .date-week-item {
+                    display: inline-block;
+                    position: relative;
+                    .week-text {
+                        display: block;
+                        font-size: 24px;
+                        color: #999999;
+                        width: 50px; 
+                        height: 50px; 
+                        line-height: 50px; 
+                        text-align: center;
+                    }
+                    .today-week-text {
+                        color: #ef5670;
+                    }
+                    .date-number {
+                        display: block;
+                        width: 50px; 
+                        height: 50px; 
+                        line-height: 50px; 
+                        border-radius: 50%;
+                        text-align: center;
+                        background-color: #ede9e9;
+                        color: #706464;
+                        font-size: 30px;
+                    }
+                    .modifier {
+                        display: block;
+                        width: 50px; 
+                        text-align: center;
+                        font-size: 18px;
+                        line-height: 30px;
+                        color: #999999;
+                    }
+                    .checkined-sign {
+                        height: 30px;
+                        background: url(./img/icon_checkined.png) no-repeat center center;
+                        background-size: 22px 22px;
+                    }
+                }
+                .date-item-checkined {
+                    .date-number {
+                        background-color: #ef5670;
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+}

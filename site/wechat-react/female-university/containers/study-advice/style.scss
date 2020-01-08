@@ -1,0 +1,332 @@
+.un-study-advice-box{ 
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    .sa-main{
+        flex: 1;
+        overflow-y: auto;
+        .sa-top-img{
+            height: 320px;
+            img{
+                width: 100%;
+            }
+        }
+    } 
+    .sa-title-container{ 
+        text-align: center; 
+        .sa-title{
+            font-size:60px; 
+            font-weight:bold;
+            color:rgba(51,51,51,1);
+            line-height:84px;
+            padding-bottom: 14px;
+            border-bottom: 5px solid #333; /*no*/
+            display: inline-block; 
+        }
+        
+        .sat-tip{
+            font-size:26px; 
+            color:rgba(153,153,153,1);
+            line-height:44px;
+            text-align: center;
+            margin-top: 16px;
+            margin-bottom: 32px;
+        }
+    }
+    .sa-text{
+        background:rgba(255,255,255,1);
+        box-shadow:0px 4px 80px 0px rgba(0,0,0,0.05);
+        border-radius:12px;
+        padding: 60px 48px 0;
+        position: relative;
+        margin-top: -12px;
+        text-size-adjust: none;
+        
+        .sa-status{
+            position: absolute;
+            right: 32px;
+            top:0;
+            &.success{
+                top:22px;
+                right: 38px;
+                width:156px;
+                height:122px;
+                background: url('https://img.qlchat.com/qlLive/business/8UVRSM6L-CKBD-5G9M-1564985426281-1M2GGU248JEJ.png') no-repeat 0 0;
+                background-size: 100%;
+                animation: markList 1s  linear;
+            } 
+            
+            @keyframes markList
+            {
+                0%   {transform:scale(3);opacity: 0;}   
+                50%   {transform:scale(3);opacity: 0;}   
+                100%   {transform:scale(1);opacity: 1;}   
+            }
+        }
+        .sat-more{
+            span{
+               display: block;
+               text-align: center;
+               font-size:28px; 
+                color:rgba(112,142,183,1);
+                line-height:48px; 
+                padding: 12px 0;
+            }
+        }
+    }
+    .sa-add-course{
+        background:rgba(255,255,255,1) url('https://img.qlchat.com/qlLive/business/LAFEYYTD-T77D-LH82-1564396724800-9M9YS1OJH4FM.png') 0 0;
+        background-size: 38px;
+        box-shadow:0px 4px 80px 0px rgba(0,0,0,0.05);
+        border-radius:16px;
+        margin-top: 32px;
+        padding: 58px 32px 80px;
+        position: relative;
+        &::before{
+            content: '';
+            background: url('https://img.qlchat.com/qlLive/business/23BBS719-HH54-S7HF-1564388003968-DDS7UHKSJMXF.png') no-repeat 0 0;
+            background-size: 100%;
+            position: absolute;
+            top:20px;
+            left:22px;
+            width: 38px;
+            height: 38px;
+        }
+        &::after{
+            content: '';
+            background: url('https://img.qlchat.com/qlLive/business/23BBS719-HH54-S7HF-1564388003968-DDS7UHKSJMXF.png') no-repeat 0 0;
+            background-size: 100%;
+            position: absolute;
+            top:20px;
+            right: 22px;
+            width: 38px;
+            height: 38px;
+        }
+        .sa-add-btn{
+            display: flex; 
+            justify-content: center;
+            .saa-begin{
+                width:248px;
+                height:76px;
+                background:rgba(51,51,51,1);
+                border-radius:38px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size:32px; 
+                font-weight:bold;
+                color:rgba(255,255,255,1);  
+            }
+            .saa-finish{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width:248px;
+                height:76px;
+                background:#eee;
+                border-radius:38px;
+                font-size:32px; 
+                color:rgba(102,102,102,1);
+            }
+        }
+    }
+    
+    .once{
+        position: relative;
+        font-weight: normal;
+        &::before{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%,-66px);
+            width: 208px;
+            height: 62px;
+            background: url('https://img.qlchat.com/qlLive/business/PUAIHUDO-ZGGL-HTXH-1564381390159-OG6J3JSGS1KK.png') no-repeat left center;
+            background-size: 100%;
+            animation: anmateShow 3s linear;
+            opacity: 0;
+            content: '';
+            z-index: 2;
+        }
+    }
+
+    .sa-step-title-container{
+        text-align: center;
+        margin:80px 0 32px;
+        img{
+            height: 24px;
+            margin-bottom: 8px;
+        }
+        .sa-step-title{ 
+            font-size:48px; 
+            font-weight:bold;
+            color:rgba(51,51,51,1);
+            line-height:66px;
+        }
+    }
+    .un-sa-list{ 
+        flex-wrap: wrap;
+        padding:32px;  
+        background:rgba(255,255,255,1);
+        box-shadow:0px 4px 30px rgba(0,0,0,0.1);
+        border-radius:8px;
+        .sa-class-item{ 
+            margin-bottom: 48px;
+            display: flex; 
+            align-items: center;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            .sa-pic{
+                width: 172px;
+                min-width: 172px;
+                height: 196px;
+                margin-right: 24px;
+                overflow: hidden;
+                border-radius: 8px;
+                background: #e5e5e5; 
+                border: 1px solid #eee;/*no*/
+                font-size: 0;
+                img{
+                    width: 100%;
+                    height: 100% !important;
+                }
+            }
+            .sa-content{ 
+                flex:1;
+                width: 62%;
+                h4{
+                    font-size: 30px; /*px*/
+                    color: #333;
+                    line-height: 1.5;
+                    overflow : hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    padding-right: 10px;
+                    -webkit-box-orient: vertical;
+                    font-weight: bold;
+                }
+                .sa-decs{
+                    font-size: 26px; /*px*/
+                    color: #666;
+                    padding: 8px 0 22px 0;
+                    line-height: 1.4;
+                    overflow : hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap; 
+                }
+            }
+        }
+    }
+    .sa-bottom{  
+        height:100px;
+        background:rgba(255,255,255,1);
+        display: flex;
+        align-items: center;
+        padding:0 38px;  
+        &.withicon{
+            padding: 0;
+            .sa-btn-icon-left{
+                flex: 1;
+                background:rgba(224,65,79,1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height:100%;
+                font-size:40px; 
+                font-weight:bold;
+                color:rgba(255,255,255,1);
+            }
+            .sa-btn-icon-right{
+                width:310px; 
+                background:rgba(255,240,240,1);
+                padding: 16px 78px;
+                color:rgba(224,65,79,1);
+                line-height:34px;
+                box-sizing: border-box;
+                font-size:24px;
+            }
+        }
+        .sa-btn{ 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height:76px;
+            border-radius:50px;
+            font-size:32px; 
+        }
+        .sa-btn-left{
+            width:240px;
+            border:1px solid rgba(224,65,79,1); /*no*/
+            color:rgba(224,65,79,1);
+            margin-right: 32px;
+        }
+        .sa-btn-right{ 
+            flex:1; 
+            background:rgba(238,238,238,1);  
+            color:rgba(153,153,153,1);
+            line-height:44px;
+            &.on{
+                background:rgba(224,65,79,1);
+                color:rgba(255,255,255,1);
+            }
+        }
+    }
+    .un-other-bottom{
+        margin-top: 80px;
+        text-align: center;
+        line-height:44px;
+        font-size:32px;
+        .un-ob-repaly{
+            color:rgba(51,51,51,1);
+        }
+        .un-ob-line{
+            color:rgba(216,216,216,1);
+            margin: 0 40px;  
+        }
+        .un-ob-intro{
+            color:rgba(224,65,79,1);
+        }
+    }
+}
+
+.my-study-advice-join-tip{
+    .co-dialog-btn-line-cancel{
+        display: none;
+    }
+
+}
+.sa-join-dialog{
+    .co-dialog-content{
+        overflow: visible;
+        background: none;
+        width: auto;
+        .sa-join-dialog-container{ 
+            width: 650px;
+            height: 880px;
+            background: url('https://img.qlchat.com/qlLive/business/ALFKPRM8-YTR5-8981-1565351017795-RQS1N36X7IAC.png') no-repeat 0 0 ;
+            background-size: 100%; 
+            padding: 736px 50px 0;
+            box-sizing: border-box;
+            &.sa-app{ 
+                height: 740px;
+                background: url('https://img.qlchat.com/qlLive/business/P6IYZCA8-UQPZ-ZOIE-1565599647672-C5P2M1WXYEK9.png') no-repeat 0 0 ;
+                background-size: 100%; 
+            }
+        }
+        .sa-join-close{
+            position: absolute;
+            top: -52px;
+            right: 0;
+            width: 44px;
+            height: 44px;
+            background: url("https://img.qlchat.com/qlLive/business/8P8VB25E-DRWK-VFDB-1565252842399-3J7QZVBW6KJF.png") no-repeat center;
+            background-size: 100%;   
+            z-index: 10;
+        }
+        .sa-join-btn{ 
+            height:112px; 
+        }
+    } 
+}

@@ -1,0 +1,70 @@
+//主导色
+$main-color:#f73657;//字体与线框
+$main-color--lighter:#f84c69;//大面积使用
+
+//灰色
+$gray-title:#333;//标题、输入框内文字
+$gray-content:#666;//正文，段落
+$gray-tag:#737373;//名字、标签
+$gray-tip:#999;//辅助性文字
+$gray-tip--lighter:#b2b2b2;//次要辅助性文字
+$gray-border:#f0f0f0;//普通分割线
+$gray-border--stronger:#e2e2e2;//加强分割线
+$gray-background:#f5f5f5;//背景
+$gray-input-bg:#fafafa;//输入框背景
+
+//绿色
+$green:#3bda46;//任务层级最高时使用
+$green--lighter:#b0e75a;//任务层级最高大面积使用
+
+/**
+ * flex居中
+ * @param {String} $direction 方向
+ */
+@mixin flex-center($direction:'both'){
+	display:flex;
+	line-height:normal;
+	@if $direction == 'horizontal'{
+		justify-content: center;
+	} @else if $direction == 'vertical'{
+		align-items: center;
+		line-height:normal;
+	} @else {
+		align-items: center;
+		line-height:normal;
+		justify-content: center;
+	}
+}
+
+//图片充满容器
+@mixin filled-img{
+	img{
+		width:100%;
+		height:100%;
+		display:block;
+	}
+}
+
+//圆形头像
+@mixin round-avatar($size){
+	width:$size;
+	height:$size;
+	border-radius:150%;
+	overflow: hidden;
+	@include filled-img;
+}
+
+@mixin border-triangle($border-width,$direction,$color){
+	width:0;
+	height:0;
+	line-height:0;
+	font-size:0;
+	overflow: hidden;
+	display:block;
+	content:'';
+	border-width:$border-width;
+	border-style:dashed;
+	border-color:transparent;
+	border-#{$direction}-style:solid;
+	border-#{$direction}-color:$color;
+}

@@ -1,0 +1,28 @@
+.middle-dialog-wrap_FASDF {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    .middle-dialog_FASDF {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        max-width: 1280px; /*px*/
+        min-width: 640px; /*px*/
+
+        background: rgba(0, 0, 0, 0.5);
+
+        .middle-dialog-wrap {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: auto;
+        }
+    }
+}

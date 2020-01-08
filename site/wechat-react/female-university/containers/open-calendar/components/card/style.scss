@@ -1,0 +1,38 @@
+.oc-card-box{
+    padding: 0 64px 48px;
+    .oc-card-tip{
+        width: 90%;
+        margin: 0 auto 32px;
+        position: relative;
+        height: 100px;
+        border-radius: 100px;
+        background: #9B775A;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size-adjust: 32px; /*px*/
+        color: #fff;
+        font-weight: bold;
+        font-size: 32px; /*px*/
+        position: relative;
+        z-index: 1;
+        &::before{
+            position: absolute;
+            left: 50%;
+            bottom: -12px;
+            width: 32px;
+            height: 32px;
+            background: #9B775A;
+            transform: translateX(-50%) rotate(45deg);
+            z-index: 0;
+            content: '';
+        }
+    }
+    .share-long-image {
+        width: 100%;
+        overflow: hidden;
+        img{
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.p-help-cen-faq {
+    height: 100%;
+    overflow-y: auto;
+    background-color: #fff;
+    line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+
+    .page-content {
+        flex-shrink: 0;
+    }
+
+    .title {
+        color: #333;
+        font-size: 32px;
+        font-weight: bolder;
+        padding: 40px;
+    }
+    .content {
+        color: #666;
+        font-size: 28px;
+        padding: 0 40px;
+    }
+}

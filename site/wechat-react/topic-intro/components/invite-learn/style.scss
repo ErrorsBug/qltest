@@ -1,0 +1,78 @@
+.invite-learn-mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba($color: #000000, $alpha: 0.6);
+    z-index: 100;
+
+    .invite-learn-dialog {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        width: 628px;
+        border-radius: 32px;
+        box-sizing: border-box;
+        padding: 40px 0;
+        text-align: center;
+
+        .avatar-wrap {
+            text-align: center;
+            margin-bottom: 8px;
+            img {
+                width: 100px;
+                height: 100px;
+                overflow: hidden;
+                border-radius: 50%;
+            }
+        }
+
+        .nickname {
+            font-size:32px;
+            font-family:PingFangSC-Medium;
+            font-weight:500;
+            color:rgba(51,51,51,1);
+            line-height:normal;
+            margin-bottom: 13px;
+        }
+
+        .course-name {
+            display: flex;
+            margin: 0 auto 37px auto;
+            font-size:24px;
+            font-family:PingFangSC-Regular;
+            font-weight:400;
+            color:rgba(102,102,102,1);
+            line-height:normal;
+            width: 500px;
+
+
+            .course {
+                flex: 1;
+                text-align: left;
+            }
+        }
+
+        .learn-together {
+            text-align: center;
+            .learn-btn {
+                display: inline-flex;
+                width:468px;
+                height:76px;
+                background:rgba(247,54,87,1);
+                border-radius:50px;
+                line-height: normal;
+                justify-content: center;
+                align-items: center;
+
+                font-size:32px;
+                font-family:PingFangSC-Regular;
+                font-weight:400;
+                color:rgba(255,255,255,1);
+            }
+        }
+    }
+}

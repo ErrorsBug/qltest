@@ -1,0 +1,94 @@
+.coral-tab-bar {
+    position: absolute;
+    width: 100%;
+    height: 100px; /*px*/
+    max-width: 1280px; /*px*/
+    min-width: 640px; /*px*/
+    bottom: 0;
+
+    overflow: hidden; 
+    font-size: 0;
+
+    display: flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+
+    z-index: 200;
+    background-color: #fff;
+    border-top:1px solid #d5d5d5;/*no*/
+
+    .tab-item {
+        flex: 1;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        text-align: center;
+        
+        .tab-icon {
+            width: 42px; /*px*/
+            height: 42px; /*px*/
+        }
+
+        .tab-title {
+            font-size: 22px;/*px*/
+            color: #a89e9e;
+        }
+
+        line-height:normal;
+        &.coral-shop:before{
+            width:44px;/*px*/
+            height:44px;/*px*/
+            content:'';
+            display:block;
+            background:url(./img/icon-shop.png) center center no-repeat;
+            background-size: auto 100% ;
+            // margin-right:6px;
+            margin: 10px auto 4px;
+        }
+        &.coral-bought:before{
+            width:44px;/*px*/
+            height:44px;/*px*/
+            content:'';
+            display:block;
+            background:url(./img/icon-bought.png) center center no-repeat;
+            background-size: auto 100% ;
+            // margin-right:6px;
+            margin: 10px auto 4px;
+        }
+        &.active{
+            &.coral-shop:before{
+                background-image:url(./img/icon-shop-on.png);
+            }
+            &.coral-bought:before{
+                background-image:url(./img/icon-bought-on.png);
+            }
+            &.coral-mine:before{
+                background-image:url(./img/icon-mine-on.png);
+            }
+        }
+        
+        &.coral-mine:before{
+            width:44px;/*px*/
+            height:44px;/*px*/
+            content:'';
+            display:block;
+            background:url(./img/icon-mine.png) center center no-repeat;
+            background-size: auto 100% ;
+            // margin-right:6px;
+            margin: 10px auto 4px;
+        }
+        &.active:last-child
+        &:last-child:after{
+            display:none;
+        }
+    }
+
+    .active .tab-title {
+        color: #f73657;
+    }
+}

@@ -1,0 +1,39 @@
+<view class="co-tab-page-container">
+
+    <view class="co-tab-content">
+        <block
+            wx:for="{{tabs}}"
+            wx:for-item="tab"
+            wx:key="{{index}}"
+        >
+            <slot 
+                name="{{tab.key}}"
+                wx:if="{{tab.active}}"
+            ></slot>
+            
+        </block>
+        
+    </view>
+
+    <view class="co-tab-menu">
+        <block wx:for="{{tabs}}" wx:key="{{key}}" wx:for-index="tabIndex" wx:for-item="tab">
+            <view 
+                class="co-tab-item" 
+                data-url="{{tab.url}}" 
+                data-iscurrent="{{tab.active}}" 
+                data-key="{{tab.key}}"
+                bindtap="handleTabTap"
+            >
+                <image 
+                    class="co-tab-img index-img" 
+                    src="{{tab.active ? tab.activeIcon: tab.icon}}" 
+                    mode="widthFix">
+                </image>
+
+                <view class="co-tab-name {{tab.active ? 'co-active-name': ''}}"> 
+                    {{tab.name}}
+                </view>
+            </view>
+        </block>
+    </view>
+</view>

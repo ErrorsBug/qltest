@@ -1,0 +1,39 @@
+html {
+    overflow: hidden;
+    height: 100%;
+}
+body {
+    background-color: #e5e5e5;
+    max-width: 1280px; /*px*/
+    min-width: 640px; /*px*/
+    height: 100%;
+    line-height: 1;
+    font-family: "微软雅黑";
+    font-size: 12px;
+    color: #5d5b5b;
+    margin: 0px auto;
+    display: block;
+    position: relative;
+}
+#container {
+    background: #f2f2f2;
+    width: 100%;
+    position: absolute;
+    overflow: auto;
+    overflow-x: hidden;
+    top: 0;
+    bottom: 0;
+    -webkit-overflow-scrolling: touch;
+    z-index: 1;
+}
+
+.loading-next, .no-more {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    color: #909499;
+    padding: 20px 0;
+    font-size: 26px; /*px*/
+}

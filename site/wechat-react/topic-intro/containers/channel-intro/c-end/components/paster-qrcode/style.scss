@@ -1,0 +1,70 @@
+.paster-qrcode {
+	padding: 40px 0;
+	>h2 {
+		width: 670px;
+		margin: 0 auto 26px;
+		font-size: 32px;
+		color: #333333;
+		font-weight: bold;
+		line-height: 50px;
+		position: relative;
+	}
+
+	.main.channel {
+		width: 670px;
+		height:176px;
+		display: flex;
+		align-items: center;
+		position: relative;
+		background: url(./img/paster-bg.png);
+		background-size: cover;
+		margin: 0 auto;
+		&.hide {
+			display: none;
+		}
+
+		.desc {
+			// margin-left: 10px;
+			padding-left: 213px;
+			& .desc-title {
+				font-size:30px;
+				font-weight:600;
+				margin-bottom: 15px;
+				color: #BF670D;
+			}
+			& .desc-sub {
+				font-size:24px;
+				color: #D79046;
+			}
+		}
+	
+		>.qrcode {
+			width: 116px;
+			height: 116px;
+			padding: 30px 483px 30px 68px;
+			position: absolute;
+			overflow: hidden;
+			z-index: 2;
+		}
+		>div {
+			>p {
+				font-size: 30px;
+				color: #333333;
+				line-height: 42px;
+		
+				&.red {
+					color: #ff004c;
+				}
+			}
+		}
+		.close {
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 42px;
+			z-index: 3;
+		}
+	}
+}

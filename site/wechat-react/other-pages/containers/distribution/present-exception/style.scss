@@ -1,0 +1,25 @@
+.distribution-none{
+    .distribution-text{
+        display: block;
+        text-align: center;
+        padding: 0 30px;
+        margin-top: 100px;
+        p{
+            display: inline-block;
+            text-align: left;
+            font-size: 40px;/*px*/
+        }
+    }
+
+    .btn-jump-current{
+        display: block;
+        margin: 100px 30px 0;
+        height: 90px;
+        line-height: 90px;
+        text-align: center;
+        font-size: 36px;/*px*/
+        color: #fff;
+        background: #f73657;
+        border-radius: 5px;
+    }
+}

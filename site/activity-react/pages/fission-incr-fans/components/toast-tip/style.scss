@@ -1,0 +1,37 @@
+.do-help-tip {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    padding: 30px;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    border-radius: 6px;
+
+    &.hide {
+        display: none;
+    }
+
+    .tip-icon {
+        display: inline-block;
+        width: 160px;
+    }
+
+    .tip-text {
+        font-size: 26px;/* px */
+        color: #ffffff;
+        font-weight: bold;
+        line-height: 38px;/* px */
+    }
+
+    .tip-content {
+        font-size: 26px;/* px */
+        color: #f4ee16;
+        font-weight: bold;
+        line-height: 38px;/* px */
+    }
+}

@@ -1,0 +1,112 @@
+.represent-list-item {
+    display: flex;
+    padding: 22px 0 16px 24px;
+    &.notuse:last-child {
+        border-bottom: 1px solid #e5e5e5;
+        .right-part {
+            border-bottom: 0px;
+        }
+    }
+    >a {
+        display: flex;
+        width: 100%;
+        color: #333;
+    }
+    .return-flex {
+        display: flex;
+        width: 100%;
+        color: #333;
+    }
+    .portrait {
+        flex: 0 0 94px;
+        width: 94px;
+        height: 94px;
+        border-radius: 47px;
+        font-size: 94px;
+        text-align: center;
+        background: #5dc5f7;
+        color: #d4f1ff;
+        overflow: hidden;
+        > img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .right-part {
+        display: flex;
+        flex: 1;
+        padding-left: 30px;
+        padding-bottom: 26px;
+        border-bottom: 1px solid #e5e5e5;
+         .info {
+             flex: 1;
+            .represent-state {
+                padding: 8px 0 19px;
+                .name {
+                    line-height: 40px;
+                    padding-right: 30px;
+                    font-size: 28px;
+                    color: #333;
+                    vertical-align: bottom;
+                }
+                .operate {
+                    font-size: 24px;
+                    color: #09bb07;
+                    line-height: 40px;
+                    vertical-align: top;
+                    border-radius: 4px;
+                    margin-right:30px;
+                    &.delete, &.active {
+                        color: #09bb07;
+                    }
+                    &.del{
+                        color:#999;
+                    }
+                    &.frozen {
+                        color: #f46262;
+                    }
+                }
+            }
+            .division {
+                font-size: 24px;
+                color: #ccc;
+            }
+            .recommand-state {
+                padding-top: 18px;
+                color: #999;
+                font-size: 24px;
+                font-weight: 400;
+                .recommand-num {
+                    color: #ffa200;
+                }
+            }
+        }
+        .btn-send {
+            flex: 0 0 6.6em;
+            align-self: center;
+            height: 60px;
+            margin-right: 24px;
+            padding: 0 0.3em;
+            border: 1px solid #999;/*no*/
+            text-align: center;
+            color: #666;
+            font-size: 28px;
+            line-height: 60px;
+            border-radius: 8px;
+        }
+        .recommand-money {
+            padding: 16px 24px;
+            font-size: 32px;
+        }
+    }
+        
+}
+
+.auth-represent {
+    //border-top: 26px solid #f2f2f2;
+    .header {
+        padding: 30px 0 8px 24px;
+        color: #999;
+        font-size: 28px;
+    }
+}

@@ -1,0 +1,73 @@
+#container{
+	-webkit-overflow-scrolling: touch;
+}
+
+.topic-list, .channel-list{
+    width:100%;
+    background-color:#fff;
+}
+.topic-list dd, .channel-list dd{
+    padding:30px 30px;
+    border-bottom:1px solid #e5e5e5;/*no*/
+}
+.topic-list dd a,.channel-list dd a{
+    display:block;
+    width:100%;
+    height:100%;
+}
+.topic-name{
+    display:block;
+	line-height:46px;
+	font-size:32px;/*px*/
+	color:#333;
+    max-height:90px;
+	margin-bottom:20px;
+}
+.topic-newestday{
+    font-size:22px;/*px*/
+	color:#999;
+}
+.topic-status{
+    font-size:26px;/*px*/
+    text-align:right;
+    margin-top:30px;
+}
+.status1{
+    color:#ff4b69;
+}
+.status2{
+    color:#999;
+}
+.status1 var{
+    display:inline-block;
+    min-width:26px;
+    height:26px;
+    border-radius:26px;
+    color:#fff;
+    font-size:22px;/*px*/
+    background-color:#ff4b69;
+    text-align: center;
+    line-height: 26px;
+    vertical-align: top;
+    padding:0 5px;
+}
+/* 默认加载更多样式 */
+.channel-loading-next,.channel-no-more,.topic-loading-next,.topic-no-more {
+    display: none;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    color: #909499;
+    padding: 20px 0;
+    font-size: 30px; /*px*/
+}
+.tab-bar {
+    background-color: #ffffff;
+}
+.channel-list-wrap, .topic-list-wrap {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    top: 80px;
+    overflow: scroll;
+}

@@ -1,0 +1,26 @@
+.rank-num-box{
+    position: absolute;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: normal;
+    padding: 0 10px;
+    background: #999;
+    border-radius: 16px 4px 16px 4px;
+    font-size: 20px; /*px*/
+    color:#fff;
+    z-index: 5;
+    top: -16px;
+    left: -16px;
+    font-weight: 500;
+    &.one{
+        background: #FF002C;
+    }
+    &.two{
+        background: #FF5900;
+    }
+    &.three{
+        background: #FFA600;
+    }
+}

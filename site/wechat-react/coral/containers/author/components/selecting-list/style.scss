@@ -1,0 +1,111 @@
+.course-list{
+    .course-li{
+        background-color: #fff;
+        margin-bottom:20px;
+        .course-info{
+            display: flex;
+            flex-direction: row;
+            padding:30px;
+            .head-img{
+                width:240px;
+                height: auto;
+                border-radius: 8px;
+                overflow: hidden;
+                img{
+                    width:100%;
+                    height: auto;
+                    border-radius: 8px;
+                }
+            }
+            .right{
+                flex:1;
+                display: flex;
+                flex-direction: column;
+                margin-left: 20px;
+               
+                .name{
+                    height: 80px;
+                    line-height: 40px;
+                    color:#333;
+                    font-size: 28px;/*px*/
+                    font-weight: 600;
+                }
+                .type{
+                    border-radius: 40px;
+                    border:1px solid #999;/*no*/
+                    color: #999;
+                    padding:2px 8px;
+                    margin-right:10px;
+                    font-size: 20px;/*px*/
+                    font-weight: normal;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-items: center;
+                    line-height: normal;
+                    vertical-align: top;
+                    margin-top: 2px;
+                }
+                .num{
+                    flex:1;
+                    color:#b6b6b6;
+                    font-size: 24px;/*px*/
+                    transform: translateY(10px);
+                    .num-r{
+                        margin-left:30px;
+                    }
+                }
+                .price{
+                    flex:1;
+                    color:#666;
+                    font-size: 24px;/*px*/
+                    
+                    span{
+                        color:#33bb49;
+                        font-size: 24px;/*px*/
+                        font-weight: 600;
+                        var{
+                            font-size: 32px;/*px*/
+                        }
+                    }
+                }
+            }
+        }
+        .btn{
+            border-top:1px solid #e5e5e5;/*no*/
+            height: 80px;
+            line-height: 80px;         
+            font-size: 30px;/*px*/
+            text-align: center;
+            
+            &.btn-push-cancel{
+                color:#666;   
+                &::before{
+                    content:'';
+                    display: inline-block;
+                    width: 20px;
+                    height: 30px;
+                    background: url(../../img/qu.png) center center no-repeat;
+                    background-size: 100% auto;
+                    vertical-align: middle;
+                    margin-top:-2px;
+                    margin-right: 10px;
+                }
+            }
+            &.btn-push-please{
+                color:#33bb49;
+                &::before{
+                    content:'';
+                    display: inline-block;
+                    width: 20px;
+                    height: 30px;
+                    background: url(../../img/tui.png) center center no-repeat;
+                    background-size: 100% auto;    
+                    vertical-align: middle;
+                    margin-top:-2px;                
+                    margin-right: 10px;
+                }
+            }
+        }
+        
+    }
+}

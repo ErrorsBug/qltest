@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="5px" viewBox="0 0 8 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon16x16/next</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="上传视频" transform="translate(-352.000000, -134.000000)" fill="#B2B2B2">
+            <g id="Icon16x16/next" transform="translate(356.000000, 136.500000) rotate(-270.000000) translate(-356.000000, -136.500000) translate(353.500000, 132.500000)">
+                <path d="M1.33072181,4 L4.83855637,7.15396236 C5.05381454,7.34750518 5.05381454,7.66130008 4.83855637,7.85484289 C4.6232982,8.0483857 4.27429575,8.0483857 4.05903758,7.85484289 L0.161443628,4.35044026 C-0.0538145425,4.15689745 -0.0538145425,3.84310255 0.161443628,3.64955974 L4.05903758,0.14515711 C4.27429575,-0.0483857032 4.6232982,-0.0483857032 4.83855637,0.14515711 C5.05381454,0.338699922 5.05381454,0.652494822 4.83855637,0.846037635 L1.33072181,4 Z" id="Combined-Shape" transform="translate(2.500000, 4.000000) rotate(-180.000000) translate(-2.500000, -4.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

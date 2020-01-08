@@ -1,0 +1,21 @@
+{
+    "usingComponents": {
+        "course-item": "../../comp/course-item/course-item",
+        "tab-bar": "../../comp/tab-bar/tab-bar",
+        "gold-bar": "../../comp/gold-bar/gold-bar",
+        "no-more": "../../comp/no-more/no-more",
+        "liveroom-bar": "../../comp/liveroom-bar/liveroom-bar",
+        "channel-name": "./components/channel-name/channel-name",
+        "cover": "./components/cover/cover",
+        "introduce": "./components/introduce/introduce",
+        "buttons": "./components/buttons/buttons",
+        "group-section": "./components/group-section/group-section",
+        "group-list": "./components/group-list/group-list",
+        "payment-details-helper": "../payment-details/components/payment-details-helper/payment-details-helper",
+        "share-model": "./components/share-model/share-model",
+        "extremely-yellow-card": "./components/extremely-yellow-card/extremely-yellow-card",
+        "share-card": "./components/share-card/share-card",
+        "bonuses": "./components/bonuses/bonuses",
+        "dialog-cash-coupon": "./components/dialog-cash-coupon/dialog-cash-coupon"
+    }
+}

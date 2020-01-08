@@ -1,0 +1,114 @@
+.members{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40rpx;
+    .member-portrait{
+        width: 100rpx;
+        height: 100rpx;
+        border-radius: 100%;
+        margin: 0 15rpx;
+        box-sizing: content-box;
+        position: relative;
+        &.haruhi{
+            border: 2rpx solid #ef5670;
+            
+            &::before{
+                content: '团长';
+                position: absolute;
+                width: 60rpx;
+                height: 30rpx;
+                line-height: 30rpx;
+                text-align: center;
+                top: -15rpx;
+                left: 20rpx;
+                color: #fff;
+                background-color: #f84c69;
+                border-radius: 15rpx;
+                font-size: 20rpx;
+            }
+        }
+        .more{
+            border: 2rpx solid #bfbfbf;
+            color: #bdbdbd;
+            position: absolute;
+            width: 60rpx;
+            height: 30rpx;
+            line-height: 30rpx;
+            text-align: center;
+            top: -15rpx;
+            left: 20rpx;
+            background-color: #fff;
+            border-radius: 60rpx;
+            font-size: 20rpx;
+        }
+        .avatar{
+            border-radius: 100%;
+            width: 100%;
+        }
+    }
+}
+
+.group-info{
+    margin-bottom: 20rpx;
+    .mention{
+        font-size: 32rpx;
+        color: #999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .icon{
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-right: 6rpx;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: normal;
+            width: 32rpx;
+            height: 32rpx;
+            transform: translateY(-1rpx);
+        }
+        .icon-success{
+            background-image: url(./img/icon-success.png?__inline);                        
+        }
+        .icon-warning{
+            background-image: url(./img/icon-warning.png?__inline);                        
+        }
+    }
+
+    .member-left{
+        text-align: center;
+        color: #333;
+        font-size: 28rpx;
+        margin-bottom: 12rpx;
+        .num{
+            display: inline-block;
+            font-size: 32rpx;
+            color: #f84c69;
+        }
+    }
+    
+    .time-left{
+        color: #666;
+        font-size: 28rpx;
+        text-align: center;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin-bottom: 20rpx;
+        align-items: center;
+        .count-down{
+            font-size: 32rpx;
+            color: #333;
+            font-weight: bold;
+            margin: 0 12rpx;
+            .ms{
+                display: inline-block;
+                font-size: 26rpx;
+                width: 30rpx;
+            }
+        }
+    }
+}

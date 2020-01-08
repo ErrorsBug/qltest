@@ -1,0 +1,377 @@
+.create-channel-container {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    background:rgba(247,247,247,1);
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    .create-channel-content {
+        flex: 1;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+
+
+    .channel-detail-editor-container {
+        &.interval {
+            margin-top: 20px;
+        }
+        .detail {
+            height: 90px;
+            display: flex;
+            align-items: center;
+            padding: 0 30px;
+            background-color: #fff;
+            border-top: 1px solid rgba(238,238,238,1);/*no*/
+
+            &:last-child {
+                border-bottom: 1px solid rgba(238,238,238,1);/*no*/
+            }
+
+            &.necessary::before {
+                content: '*';
+                color: #F73657;
+                font-size: 30px;/*px*/
+                height: 20px;
+            }
+
+            label {
+                font-size: 30px;/*px*/
+                color: #666;
+                margin-right: 20px;
+            }
+            
+            .detail-name {
+                font-size: 30px;/*px*/
+                color: #333333;
+                margin-right: 20px;
+                height: 30px;
+                line-height: 30px;
+                &.optimize-tip-pao {
+                    display: inline-block;
+                    position: relative;
+                    &::after{
+                        height: 30px;
+                        position: absolute;
+                        content: '';
+                        background: {
+                            image: url(./img/icon-optimize.png);
+                            position: center center;
+                            size: 100% 100%;
+                            repeat: no-repeat;
+                        }
+                        width: 85px;
+                        // right: -98px;
+                    }
+                }
+            }
+
+            .detail-content {
+                flex: 1;
+                font-size: 26px;/*px*/
+                color: #333;
+                line-height: 50px;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+                overflow: hidden;
+                text-align: right;
+                font-weight: bold;
+            }
+            .detail-replace{
+                flex: 1;
+                font-size: 26px;/*px*/
+                color: #999;
+                line-height: 50px;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+                overflow: hidden;
+                text-align: right;
+                &::placeholder{
+                    color: #999;
+                }
+                
+            }
+
+            .btn-example {
+                cursor: pointer;
+                font-size: 28px;/*px*/
+                color: #FF9F00;
+                font-style: normal;
+                margin: 0 10px;
+                display: inline-block;
+            }
+
+            .input-container {
+                flex: 1;
+
+                input {
+                    width: 100%;
+                    height: 40px;
+                    outline: none;
+                    border: none;
+                    background: transparent;
+                    text-align: right;
+                    font-size: 26px;/*px*/
+                    color: #333;
+                    font-weight: bold;
+                    line-height: 40px;
+
+                    &::placeholder {
+                        color: #999;
+                        font-weight: normal;
+                    }
+                }
+
+                // .price-input {
+                //     text-align: right;
+                //     font-size: 26px;/*px*/
+                //     color: #666;
+                // }
+            }
+
+            .unit {
+                font-size: 26px;/*px*/
+                color: #333;
+                margin-left: 8px;
+                font-weight: bold;
+            }
+
+            .icon_enter {
+                font-size: 32px;/*px*/
+                color: #b2b2b2;
+                margin-left: 20px;
+            }
+        }
+        .marketing-contianer {
+            .marketing-title {
+                height: 80px;
+                padding: 0 30px;
+                display: flex;
+                align-items: center;
+                color: #b2b2b2;
+                font-size: 30px;/*px*/
+            }
+            .detail-name{
+                position: relative;
+                &::after {
+                    content: '推荐30%-50%';
+                    position: absolute;
+                    background: {
+                        image: url(./img/icon_tip.png);
+                        position: center center;
+                        size: 100% 100%;
+                        repeat: no-repeat;
+                    }
+                    width: 181px;
+                    height: 43px;
+                    color: #fff;
+                    text-align: center;
+                    font-size: 24px;/*px*/
+                    right: -86%;
+                    top: -50px;
+                    line-height: 38px;
+                    box-sizing: border-box;
+                }
+            }
+            .marketing-input {
+                font-weight: bold;
+                &::placeholder {
+                    font-weight: normal;
+                }
+            }
+            .percentage {
+                font-size: 26px;/*px*/
+                color: #666;
+                font-weight: bolder;
+                margin-left: 4px;
+            }
+            .marketing-tip {
+                padding: 20px 30px;
+                color: #b2b2b2;
+                font-size: 26px;/*px*/
+                line-height: 36px;
+            }
+        }
+        .share-rank {
+            cursor: pointer;
+            height: auto;
+            .detail-name{
+                flex: 1;
+                height: auto;
+                padding-top: 30px;
+            }
+            .share-select {
+                height: 30px;
+                width: 30px;
+                background: {
+                    position: center center;
+                    size: 100% 100%;
+                    repeat: no-repeat;
+                }
+                &.check{
+                    background-image: url(./img/checked.png);
+                }
+                &.uncheck{
+                    background-image: url(./img/unchecked.png);
+                }
+            }
+        }
+        .share-rank-tip {
+            margin: 20px 0;
+            font-size: 26px;/*px*/
+            line-height: 37px;
+            color: #999;
+        }
+        .invite-free {
+            cursor: pointer;
+            height: auto;
+            padding-top: 30px;
+
+            .detail-name{
+                flex: 1;
+                height: auto;
+            }
+            .invite-select {
+                height: 30px;
+                width: 30px;
+                background: {
+                    position: center center;
+                    size: 100% 100%;
+                    repeat: no-repeat;
+                }
+                &.check{
+                    background-image: url(./img/checked.png);
+                }
+                &.uncheck{
+                    background-image: url(./img/unchecked.png);
+                }
+            }
+        }
+        .invite-free-tip {
+            margin: 20px 0;
+            font-size: 26px;/*px*/
+            line-height: 37px;
+            color: #999;
+        }
+    }
+
+    .create-channel-btn {
+        padding: 30px 0;
+        background-color: #fff;
+        .confirmBtn {
+            cursor: pointer;
+            width: 690px;
+            height: 90px;
+            display: flex;
+            background:rgba(247,54,87,1);
+            border-radius:45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 30px;/*px*/
+            margin: 0 auto;
+        }
+    }
+    .distribution-confirm{
+        .co-dialog-content {
+            border-radius: 26px;
+        }
+        .co-dialog-title {
+            font-size: 36px;/*px*/
+        }
+        .content {
+            font-size: 30px;/*px*/
+            color: #666;
+            width: 520px;
+            margin: 24px auto;
+            line-height: 42px;
+        }
+        .co-dialog-btn-line-confirm {
+            font-weight: bold;
+        }
+    }
+
+    .create-type-confirm{
+        .content {
+            
+            width: 520px;
+            margin: 24px auto;
+            line-height: 42px;
+            input{
+                padding: 20px 30px;
+                border-radius: 50px;
+                background: #F7F7F7;
+                width: 100%;
+                font-size: 30px;/*px*/
+                color: #666;
+                outline: none;
+                border: none;
+                &::placeholder{
+                    line-height: 42px;
+                }
+            }
+        }
+    }
+
+    //设置系列课介绍  bar
+    .channel-intro-upload{
+        background-color: #fff;
+        padding: 30px;
+        margin-bottom: 20px;
+        border-top: 1px solid #e5e5e5;/*no*/
+        background-image: url('./img/pic-bg.png');
+        background-size: auto 100px; /*px*/
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-origin: content-box;
+        .label{
+            color: #333;
+            font-size: 30px;/*px*/
+            margin-bottom: 10px;
+            &.optimize-tip-pao {
+                display: inline-block;
+                position: relative;
+                &::after{
+                    height: 30px;
+                    position: absolute;
+                    content: '';
+                    background: {
+                        image: url(./img/icon-optimize.png);
+                        position: center center;
+                        size: 100% 100%;
+                        repeat: no-repeat;
+                    }
+                    width: 85px;
+                    // right: -98px;
+                }
+            }
+        }
+        .example {
+            cursor: pointer;
+            font-size: 28px;/*px*/
+            color: #FF9F00;
+            font-style: normal;
+            margin: 0 10px;
+            display: inline-block;
+        }
+        .optimize-tip {
+            color: #B2B2B2;
+            font-size: 24px;/*px*/
+            line-height: 36px;
+            padding-right: 200px;
+            .style-tips{
+                color: #F63657;
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+    }
+}

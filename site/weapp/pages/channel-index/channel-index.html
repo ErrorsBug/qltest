@@ -1,0 +1,204 @@
+<view class="container">
+
+    <scroll-view 
+        class="scroll-view-container"
+        scroll-top="{{scrollTop}}"
+        scroll-y="{{true}}" 
+        bindscrolltolower="onscrollToLower"
+        lower-threshold="{{100}}"
+        bindscroll="onPageScroll"
+        scroll-with-animation="true"
+        enable-back-to-top="true"
+        style="height: 100%" >
+
+
+        <view class="top-section">
+            <!-- 头图区域 -->
+            <cover
+                channelInfo="{{channelInfo}}"
+                userList="{{userList}}"
+                userCount="{{userCount}}"
+
+                bind:onPlayBtnTap="onCoursePlay"
+            />
+
+            <!-- 课程名称区域 -->
+            <channel-name
+                channelInfo="{{channelInfo}}"
+                vipInfo="{{vipInfo}}"
+                discountInfo="{{getMarket}}"
+                discountGroup="{{discountGroup}}"
+                chargeConfigs="{{chargeConfigs}}"
+                isRebate="{{showRebate}}"
+                switch="{{switch}}"
+                isDistribution="{{isDistribution}}"
+                shareRatio="{{shareRatio}}"
+                system ="{{system}}"
+
+                bind:navToShareCard="navToShareCard"
+            />
+
+            <!-- 金色状态栏 -->
+            <gold-bar
+                showDiscount="{{showDiscount}}"
+                showUpdateStatus="{{showUpdateStatus}}"
+                showRebate="{{showRebate}}"
+                updateStatusText="{{updateStatusText}}"
+            />
+        </view>
+
+        <!-- 直播间条 -->
+        <liveroom-bar wx:if="{{liveInfo}}" liveInfo="{{liveInfo}}"/>
+
+        <!-- 拼课信息区 -->
+        <!-- <view wx:if="{{ queryGroupInfo || selfGroupInfo}}" class="group">
+            <group-section 
+                group="{{ queryGroupInfo || selfGroupInfo }}" 
+                currentServerTime="{{currentServerTime}}" 
+                isJoinedGroup="{{!!selfGroupInfo.id}}"
+            />
+        </view> -->
+
+        <!-- 拼课列表区 -->
+        <view wx:if="{{ discountGroup && groupList.length && (system != 'ios') }}" class="group">
+            <group-list 
+                groupinglists="{{groupList}}" 
+                myGroupId="{{selfGroupInfo.id}}" 
+                currentServerTime="{{currentServerTime}}"
+                channelId="{{channelId}}"
+
+                bind:onJoinGroup="onJoinGroup" 
+                bind:onGroupFormSubmit="onGroupFormSubmit"
+            />
+        </view>
+        
+        <!-- 中间介绍和课程列表区 -->
+        <view class="main" id="main-content">
+            <tab-bar
+                items="{{tabItems}}"
+                fixedBar="{{canFixedBar}}"
+                bindtabclick="onTabClick"
+            />
+
+            <!--课程列表-->
+            <view wx:if="{{activeTab=='topic'}}" class="tab-content">
+                <course-item wx:for="{{course.list}}" wx:key="id" course="{{item}}" system ="{{system}}"/>
+
+                <no-more noMore="{{course.noMore}}" noneOne="{{course.noneOne}}"/>
+                <text wx:if="{{topic.loading}}" class="loading-more">正在加载中...</text>
+            </view>
+
+            <!-- 简介 -->
+            <introduce 
+                wx:if="{{activeTab=='intro'}}" 
+                summary="{{summary}}"
+                notSummary="{{notSummary}}"
+                introduce="{{introduce}}" 
+                isRebate="{{showRebate}}" 
+                rebateDate="{{rebateDate}}"
+            />
+            
+        </view>
+
+    </scroll-view>
+
+    <!-- 底部按钮 -->
+    <buttons
+        wx:if="{{showBtns}}"
+        status="{{btnStatus}}"
+        getMarket="{{getMarket}}"
+        discountGroup="{{discountGroup}}"
+        freeChannel="{{freeChannel}}"
+        isRebate="{{showRebate}}"
+        isDistribution="{{isDistribution}}"
+        channelInfo="{{channelInfo}}"
+        discountInfo="{{getMarket}}"
+        chargeConfigs="{{chargeConfigs}}"
+        shareRatio="{{shareRatio}}"
+        switch="{{switch}}"
+        systemIos = "{{ system ==='ios'}}"
+
+        bind:onCheckInFree="onCheckInFree"
+        bind:onCoursePlay="onCoursePlay"
+        bind:onPurchase="onPurchase"
+        bind:onBeginGroup="onBeginGroup"
+        bind:onJoinGroup="onJoinGroup"
+        bind:onViewGroup="onViewGroup"
+        bind:onShowShareModel="showMessageModal"      
+    />
+
+    <!-- 付款详情页返回提示 -->
+    <payment-details-helper
+        wx:if="{{PDH_isShowModal && system != 'ios'}}"
+        bindconfirm="PDH_continuePay"
+        bindcancel="PDH_hideModal"
+    />
+
+    <!-- 关注领返现：返现课并已购买才显示 -->
+    <button class="follow-then-rebate" open-type="contact" session-from="rebateChannel" wx:if="{{btnStatus.showCoursePlay && showRebate && vipInfo.isVip !== 'Y'}}"></button>
+    <!-- 分享弹窗 -->
+    <share-model
+        wx:if="{{shareModel}}"
+        channelInfo="{{channelInfo}}"
+        discountInfo="{{getMarket}}"
+        chargeConfigs="{{chargeConfigs}}"
+        shareRatio="{{shareRatio}}"
+        isDistribution="{{isDistribution}}"
+        bind:onHideShareModel="hideMessageModal" 
+        bind:onShowShareCard="onShowShareCard"
+        animationData="{{shareModalAnimation}}"
+    />
+
+    <!-- 小程序码 -->
+    <share-card 
+        wx:if="{{shareCard && !special}}"
+        mainImageUrl="{{channelInfo.headImage}}"
+        userName="{{userName}}"
+        title="{{channelInfo.name}}"
+        isDistribution="{{isDistribution}}"
+        channelInfo="{{channelInfo}}"
+        codeUrl="{{codeUrl}}"
+        bind:onHideShareCard="onHideShareCard"
+
+    />
+
+    <extremely-yellow-card
+        wx:if="{{shareCard && special}}"
+        headImage="{{headImage}}"
+        isDistribution="{{isDistribution}}"
+        channelInfo="{{channelInfo}}"
+        codeUrl="{{codeUrl}}"
+        bind:onHideShareCard="onHideShareCard"
+    />
+    <!--系列课红包-->
+    <bonuses
+        wx:if="{{!ownChannel}}"
+        channelId="{{channelId}}"
+        isCreateGroup="{{isCreateGroup}}"
+        isActCourse="{{isActCourse}}"
+        confId="{{confId}}"
+        hadRedpackCoupon="{{!!redpackCouponId}}"
+        bind:updateFormId = "updateFormId"
+    />
+
+    <!-- 已经购买的提示 -->
+    <view class="dialog-box already-buy-dialog" hidden="{{!showAlreadyBuyDialog}}">
+        <view class="dialog-main">
+            <view class='buy-channel-dialog have-bought-dialog'>
+                <text class="des">您已购买该课程，请直接进入学习</text>
+                <text class="red-btn" bindtap="viewBoughtList">进入课程</text>
+                <text class="view-tutorial-wrapper" bindtap="viewTutorial">进入课程失败？点此找回<text class="view-tutorial-btn">查看教程</text></text>
+            </view>
+            <view class="close-btn" bindtap="closeAlreadyBuyDialog"></view>
+        </view>
+    </view>
+
+    <!-- 已拆的红包弹框 -->
+    <dialog-cash-coupon 
+        showCashCouponDialog="{{showCashCouponDialog && system != 'ios'}}" 
+        money="{{redpackCouponMoney}}"
+        bind:closeDialog="closeCashCouponDialog"
+        bind:doUse="useCoupon"
+    ></dialog-cash-coupon>
+
+</view>

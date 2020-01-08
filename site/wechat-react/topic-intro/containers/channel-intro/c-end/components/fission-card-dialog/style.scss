@@ -1,0 +1,49 @@
+.fission-card-container {
+    .co-dialog-content {
+        border-radius: 0;
+        background-color: transparent;
+        width: auto;
+        pointer-events: none;
+
+        .box {
+            width: 1.1 * 630px; /*px*/
+            height: 1.1 * 858 + 1.1 * 124px; /*px*/
+            // background: url("./img/bg.png") 0 124px no-repeat; /*px*/
+            // background-size: 550px 858px; /*px*/
+            position: relative;
+            .card {
+                display: block;
+                width: 1.1 * 450px; /*px*/
+                height: 1.1 * 800px; /*px*/
+                margin: 0 auto;
+                padding: 0 50px 182px; /*px*/
+                pointer-events: visible;
+            }
+            .bottom-btn {
+                box-sizing: border-box;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 1.1 * 146px; /*px*/
+                padding-top: 24px; /*px*/
+                background: url("./img/btn_bg.png") no-repeat center;
+                background-size: contain;
+                text-align: center;
+                color: #fff;
+                pointer-events: visible;
+                line-height: 44px; /*px*/
+                p {
+                    font-size: 24px; /*px*/
+                }
+                p.large {
+                    font-size: 36px; /*px*/
+                    font-weight: 500;
+                    margin-bottom: 6px;
+                }
+            }
+        }
+
+
+    }
+}

@@ -1,0 +1,172 @@
+.join-university-countdown-page{
+    background: #fff;
+    min-height: 100%;
+    .course-info-box{
+        width:100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 64px 40px;
+        box-sizing: border-box;
+        overflow: hidden;
+        background: #fff;
+        box-shadow:0px 14px 80px 0px rgba(0,0,0,0.05);
+        border-radius: 0 0 28px 28px;
+        &.success{
+            padding-top: 80px;
+        }
+        .bg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width:100%;
+            // filter: blur(10px) opacity(20%);
+            // filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false);
+        }
+        .bg-con{
+            display: block;
+            width: 100%;
+        }
+        .title{
+            display: block;
+            width: 100%;
+            color: #333333;
+            font-size: 36px;/* px */
+            line-height: 1.5;
+            position: relative;
+            z-index: 2;
+            margin-top: 32px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding-bottom: 32px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .course-intro-pic{
+            display: block;
+            width:504px;
+            height:308px;
+            margin-bottom: 32px;
+            border-radius: 4px;
+        }
+        .go-back{
+            display: block;
+            line-height: 40px;
+            color: #E0414F;
+            font-size: 26px;/* px */
+            display: inline-block;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+    }
+
+    .course-note-pic{
+        width: 100%;
+        // margin-top: 32px;
+    }
+    .success-tips{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 96px;
+        flex-direction: column;
+        .title{
+            color: #E0414F;
+            font-size: 36px;/* px */
+            font-weight: bold;
+            padding-bottom: 20px;
+        }
+        .tips{
+            text-align: center;
+            height: 88px;
+            margin-bottom: 50px;
+            img{
+                width: auto;
+                height: 100%;
+            }
+        }
+        .btn-enter{
+            display: block;
+            width:280px;
+            height:280px;
+            img{
+                width: 100%;
+                height: auto;
+            }
+            p{
+                font-size: 28px; /*px*/
+                color: #666;
+                line-height: 1.5;
+                text-align: center;
+            }
+        }
+    }
+    .un-app-success{
+        margin-top: 80px;
+        text-align: center;
+        p{
+            font-size: 36px; /*px*/
+            color: #333;
+            font-weight: bold;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        img{
+            height: 89px;
+            width: auto;
+        }
+        .un-success-click{
+            margin-top: 100px;
+            width: 450px;
+            height: 122px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: normal;
+            border-radius: 60px;
+            background: #E0414F;
+            color: #fff;
+            font-size: 40px; /*px*/
+            margin: 100px auto 80px;
+            font-weight: bold;
+        }
+        .un-go-btn{
+            font-size: 41px;/*px*/
+            color: #666;
+            font-weight: bold;
+            span{
+                padding-right: 40px;
+                background: url('./img/icon-jian.png') no-repeat right center;
+                background-size: 32px 22px;
+            }
+        }
+    }
+}
+
+
+.jion-page-follow-dialog{
+    .main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding:0  0 50px;
+
+        span{
+            font-size: 26px;/* px */
+            line-height: 40px;/* px */
+            width: 500px;
+            text-align: center;
+            color: #666;
+        }
+    }
+    .qrcode{
+        display: block;
+        width:280px;
+        height:280px;  
+        margin: 30px 0;
+    }
+}

@@ -1,0 +1,17 @@
+<view class="channel-preview" bindtap="linkToChannel">
+    <view class="content">
+        <image 
+            src="{{channelInfo.headImage + '?x-oss-process=image/resize,m_fill,limit_0,w_240,h_150'}}"
+            mode="widthFix"
+            class="channel-header"   
+        ></image>
+        <view class="info">
+            <view class="title multi-lines">{{channelInfo.name}}</view>
+            <view class="price">
+                拼课价：
+                <view class="discount-charge">￥{{groupInfo.groupDiscount}}</view>
+                <view class="normal-charge">{{groupInfo.amount}}</view>          
+            </view>
+        </view>
+    </view>
+</view>

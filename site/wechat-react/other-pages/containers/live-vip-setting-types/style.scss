@@ -1,0 +1,97 @@
+.live-vip-setting-types {
+    background: #fff;
+    height: 100%;
+
+    .vip-card-list{
+
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding: 30px 36px;
+        .item{
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0 auto 30px;
+            padding-bottom:62.3%;
+            cursor: pointer;
+            border-radius: 20px;
+
+            &.honour{
+                background-image: url('./img/bg-vip-honour.png');
+                box-shadow: 0 0.106667rem 0.4rem 0 rgba(140, 111, 64, 0.26);
+            }
+            &.customized{
+                background-image: url('./img/bg-vip-customized.png');
+                box-shadow: 0 0.106667rem 0.4rem 0 rgba(30, 29, 38, 0.26);
+                .tips {
+                    color: #e0c086;
+                }
+            }
+            &:active {
+                box-shadow: none;
+            }
+
+            .tips{
+                position: absolute;
+                bottom: 30px;
+                left: 40px;
+                font-size: 28px;/* px */
+                color: #fff;
+                display: flex;
+                right: 40px;
+                align-items: center;
+
+                b{
+                    flex: 1;
+                    font-weight: normal;
+                }
+                i{
+                    width: 40px;/* px */
+                    height: 40px;/* px */
+                    display: inline-flex;
+                    border-radius: 50px;/* px */
+                    background: rgba($color: #fff, $alpha: 0.3);
+                    color: #fff;
+                    align-items: center;
+                    justify-content: center;
+
+                }
+            }
+        }
+    }
+
+
+
+    // 弹框
+    .goto-customized{
+        .co-dialog-title {
+            margin-top: 10px;
+        }
+        .co-dialog-content {
+            width: 670px;
+        }
+        .dialog-main{
+            font-size: 28px;
+            line-height: 48px;
+            color: #999999;
+            text-align: left;
+            padding: 0 2em;
+            span {
+                color: #666;
+            }
+            a{
+                color: #c9a96e;
+            }
+            .underline {
+                text-decoration: underline;
+            }
+        }
+        .co-dialog-btn-line-cancel {
+            color: #c9a96e;
+        }
+    }
+}

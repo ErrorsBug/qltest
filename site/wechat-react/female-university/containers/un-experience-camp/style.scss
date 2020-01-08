@@ -1,0 +1,80 @@
+.un-experience-camp-box{ 
+    height: 100vh;
+    background: #fff; 
+    overflow-y: scroll;
+    .uec-top{
+        img{
+            width: 100%;
+        }
+    } 
+    .uec-list{ 
+        .uec-item{
+            img{
+                width: 100%;
+                vertical-align: middle;
+            }
+        }
+    } 
+} 
+.uec-bottom-img-container{
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    height: auto !important;
+    z-index: 10;
+    .uec-float-icon{
+        width:170px;
+        height:170px;
+        margin:24px; 
+        img{
+            width: 100%;
+        }
+    }
+    .uec-bottom-img{ 
+        img{
+            width: 100%;
+            vertical-align: middle;
+        }
+    }
+}
+.university-dialog-payment{
+    z-index: 200 !important;
+    .co-dialog-bottom{
+        background: #fff;
+    }
+}
+
+.university-url{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & > div{
+        position: relative;
+        max-height: 80%;
+        padding: 0 40px;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        &::before {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            width: 80px;
+            height: 80px;
+            background: url("./img/icon-close.png") no-repeat center;
+            background-size: 40px;
+            content: '';
+        }
+        img{
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+<block wx:if="{{purchaseCourse.list.length}}">
+    <view class="course-block">
+        <view class="header">
+            <view class="title">
+                <image class="icon icon-package" src="./img/icon-package.png" mode="aspectFill" />
+                <text>已购课程</text>
+            </view>
+        </view>
+        <view class="course-list">
+            <course-item wx:for="{{purchaseCourse.list}}" wx:key="bussinessId" course="{{item}}"/>
+        </view>
+    </view>
+    <view class="view-more" wx:if="{{!purchaseCourse.noMore}}" bind:tap="onViewMorePurchaseCouse">查看更多</view>
+</block>
+
+<view class="course-block" wx:if="{{planCourseList.length}}">
+    <view class="header">
+        <view class="title">
+            <image class="icon icon-clock" src="./img/icon-clock.png" mode="aspectFill" /> 
+            <text>课程预告</text>
+        </view>
+    </view>
+    <view class="course-list">
+        <course-item wx:for="{{planCourseList}}" wx:key="id" course="{{item}}"/>
+    </view>
+</view>

@@ -1,0 +1,93 @@
+.subscribe-card-container{
+    width:100%;
+    height:100%;
+    position: absolute;
+    left:0;
+    top:0;
+    display: flex;
+    flex-direction: column;
+    
+    .share-card-wrap{
+        background-color:#333;
+        flex:1;
+        display: flex;
+        flex-direction: column;
+    }
+    .card-wrap{
+        flex:1;
+        position:relative;
+    }
+    .share-card-img{
+        position: absolute;
+        top:40px;
+        bottom:0;
+        left:50%;
+        transform: translateX(-50%);
+        background-color: #f2f2f2;
+        border-radius:8px;
+        overflow: hidden;
+        opacity: 0;
+        transition:opacity .5s, box-shadow .5s;
+        img{
+            height:100%;
+            display: block;
+        }
+        &.show{
+            opacity: 1;
+            box-shadow:0 0 20px 0 #000;
+        }
+    }
+    
+    .tips{
+        height:92px;
+        line-height:92px;
+        text-align: center;
+        color:#fff;
+        font-size:24px;/*px*/
+    }
+
+    
+    .invited-ul{
+        background:#fff;
+        display:flex;
+        align-items: center;
+        height: 150px;
+        li{
+            padding:20px 40px;
+            position:relative;
+            .avatar{
+                display: block;
+                width:84px;
+                height:84px;
+                border-radius:84px;
+                position:absolute;
+                top:20px;
+                left:40px;
+                overflow: hidden;
+                img{
+                    width:100%;
+                    height: auto;
+                }
+                
+            }
+            .info{
+                padding-left:100px;
+                line-height: 42px;
+            }
+            .user-name{
+                color:#333;
+                font-size:28px;/*px*/
+            }
+            .detail{
+                color:#999;
+                font-size:24px;/*px*/
+            }
+            .invited-num{
+                color:#ff4b69;
+                font-size:24px;/*px*/
+            }
+        }
+
+    }
+
+}

@@ -1,0 +1,75 @@
+.header{
+	height: 417rpx;
+	position: relative;
+	width: 100%;
+	margin-bottom: 20rpx;
+	.swiper{
+		width: 100%;
+		height: 100%;
+		.swiper-image{
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.live-bg{
+		width: 100%;
+		height: 100%;
+	}
+
+	.focus-section{
+		position: absolute;
+		// min-width: 246rpx;
+		height: 50rpx;
+		border-radius: 100rpx;
+		top: 20rpx;
+		left: 20rpx;
+		background-color: rgba(#000,0.4);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: nowrap;
+		padding: 0 4rpx;
+
+		.logo{
+			width: 46rpx;
+			height: 46rpx;
+			border-radius: 100%;
+		}	
+		.num{
+			color: #fff;
+			font-size: 24rpx;
+			display: inline-block;
+			flex: 1;
+			padding-left: 10rpx;
+		}
+		.focus-form{
+			margin-left: 16rpx;
+		}
+		.btn-wrap{
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;			
+		}
+		.focus-btn{
+			margin: 0;
+			padding: 0;			
+			height: 44rpx;
+			line-height: 44rpx;
+			border-radius: 100rpx;
+			border: none;
+			font-size: 24rpx;
+			display: inline-block;
+			padding: 0 20rpx;
+			background-color: #ff4565;
+			color: #fff;
+			&.focused{
+				background-color: #fff;
+				color: #424242;
+			}
+			&::after{
+				display: none;
+			}
+		}
+	}
+}

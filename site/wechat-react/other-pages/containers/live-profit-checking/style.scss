@@ -1,0 +1,28 @@
+$red: #ff4b69;
+$border: #f0f0f0;
+.live-profit-checkling-container
+{
+	> header
+	{
+		background-color: #fff;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        padding: 0 30px;
+        >span{
+            color: #333;
+            font-size: 30px;/*px*/
+            >var{
+                color: #c0aa98;
+            }
+        }
+	}
+    >p{
+        font-size: 26px;/*px*/
+        color: #999;
+        line-height: 1.36;
+        padding: 30px;
+    }
+}

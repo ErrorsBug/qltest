@@ -1,0 +1,39 @@
+.card-wrap{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width:100%;
+    z-index: 100;
+    .mask{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width:100%;
+        background-color: rgba($color: #000000, $alpha: 0.6);
+    }
+    .painter{
+        z-index: 500;
+        position: absolute;
+        top: 80rpx;
+        width: 486rpx;
+        height: 863rpx;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .save{
+        position: absolute;
+        top: 980rpx;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 270rpx;
+        height: 56rpx;
+        line-height: 56rpx;
+        background-color: #ff4a7a;
+        color: #fff;
+        font-size: 30rpx;
+        text-align: center;
+        border-radius: 100rpx;
+    }
+}

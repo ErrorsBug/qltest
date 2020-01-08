@@ -1,0 +1,15 @@
+.unevaluated-page {
+	position: relative;
+	height:100%;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+
+	.tab-view {
+		flex-shrink: 0;
+	}
+
+	.scroll-view {
+		flex: 1;
+	}
+}

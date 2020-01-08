@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{#if isKnowledgeCodeAuth}}知识店铺{{else}}千聊{{/if}}</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="https://img.qlchat.com/qlLive/ico/favicon.ico" type="image/x-icon" />
+    <script src="../../components_modules/lib-flexible/1.0.0/lib-flexible.js"></script><!--ignore-->
+    <script type="text/javascript" src="../../components_modules/require/2.1.18/require.js"></script>
+    <script src="//res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+    {{#if isProd}}
+    {{else}}
+    <script type="text/javascript" src="https://static.qianliaowang.com/frontend/rs/lib/change-env.js"></script>
+    {{/if}}
+</head>
+<body>
+
+    {{#unless isKnowledgeCodeAuth}}
+    <div class="login-banner">
+        <img src="./img/logo-ql.png" alt="">
+    </div>
+    {{/unless}}
+
+    {{#if showWeiboLogin}}
+    <div class="wb-login">
+        <a href="{{weiboAuthUrl}}" class="btn-weibo">微博登录</a>
+    </div>
+    <!--<div id="wb-login" style="text-align: center;"></div>-->
+    <div class="ql-login-tips">
+        或
+    </div>
+    {{/if}}
+
+    <div id="wxLogin" class="wx-login">
+    </div>
+
+	<!--SCRIPT_PLACEHOLDER-->
+    <script>
+        (function(win) {
+            // var mockData=__inline("./wechat-login.json");
+            var initData = [[LOGINDATA]];
+
+            require(['./login.js'], function (login) {
+                login.init(initData);
+            });
+
+            // WB2.anyWhere(function(W){
+            //     W.widget.connectButton({
+            //         id: "wb-login",
+            //         type:"1,2",
+            //         callback : {
+            //             login:function(o){  //登录后的回调函数
+            //                 console.log('login callback:', o);
+            //                 window.location.href = '[[WEIBOAUTHURL]]';
+            //             },
+            //             logout:function(){  //退出后的回调函数
+            //             }
+            //         }
+            //     });
+            // });
+        })(window);
+    </script><!--ignore-->
+    <script>
+        // 百度统计
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?9f8c5d323a26421cb966b5e405d629c3";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script><!--ignore-->
+
+</body>
+</html>

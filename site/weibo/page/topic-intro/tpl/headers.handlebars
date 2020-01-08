@@ -1,0 +1,67 @@
+<div class="header-section block-section">
+	<!-- topic picture and push button -->
+	<div class="header-image">
+		<img src="{{img-format topicView.topicPo.backgroundUrl '@348h_640w_1e_1c_2o'}}" id="ticketHeaderpic">
+
+		{{#if conditions.isC}}
+			{{#if conditions.hasAudio}}
+			<a href="javascript:;" class="c-audio">语音介绍</a>
+			{{/if}}
+		{{/if}}
+
+		{{#if conditions.hasAudio}}
+			<ul class="rec-intro-list" hidden="true">
+				{{#each processings.audio}}
+				<li attr-url="{{url}}"></li>
+				{{/each}}
+			</ul>
+		{{/if}}
+	</div>
+	<!-- time and view info -->
+	<div class="header-info">
+		<h1>{{topicView.topicPo.topic}}</h1>
+		{{#if conditions.isRelay}}
+		<i class="relay">转播</i>
+		{{/if}}
+		<h4>时间</h4>
+		<div class="time-view"><span class="date">{{dateFormat topicView.topicPo.startTime 'yyyy-MM-dd hh:mm'}}</span> <span class="view"><i class="icon-eye-2"></i>{{defaultVal topicView.topicPo.browseNum  '0'}}人次</span></div>	
+	</div>
+	<!-- share rank list -->
+	{{!--todo: complete share rank after init--}}
+	<a href="javascript:;" id="share-rank-container">
+	
+	</a>
+</div>
+
+{{#if conditions.showIntro}}
+<div class="desc-section block-section">
+    <header>
+        <h1>课程简介</h1>
+    </header>
+    <article>
+		{{#if topicView.topicPo.speaker}}
+        <h2>主讲人：{{topicView.topicPo.speaker}}</h2>
+		{{/if}}
+		{{#if topicView.topicPo.guestIntr}}
+        <p>{{topicView.topicPo.guestIntr}}</p>
+		{{/if}}
+        <h2>
+            直播概要：
+        </h2>
+        <div id="detail-intro" class="detail-intro">
+		{{#if topicView.topicPo.remark}}
+            <p>
+				{{topicView.topicPo.remark}}
+            </p>
+		{{/if}}
+		{{#if conditions.hasImage}}
+		{{#each processings.image}}
+			<img src="{{url}}" alt="">
+			<p>{{msg}}</p>
+		{{/each}}
+		{{/if}}
+        </div>
+        <p class="icon-down-2" id="tab-to-detail" hidden="true"></p>
+    </article>
+</div>
+{{/if}}

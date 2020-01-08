@@ -1,0 +1,15 @@
+{
+    "navigationBarTitleText": "话题详情页",
+    "usingComponents": {
+        "barrage": "./components/barrage/barrage",
+        "operation-dialog": "./components/operation-dialog/operation-dialog",
+        "reward-dialog": "./components/reward-dialog/reward-dialog",
+        "bottom-bar": "./components/bottom-bar/bottom-bar",
+        "top-live-bar": "./components/top-live-bar/top-live-bar",
+        "float-menu": "./components/float-menu/float-menu",
+        "tips-card": "./components/tips-card/tips-card",
+        "topic-intro": "./components/topic-intro/topic-intro",
+        "comment-dialog": "./components/comment-dialog/comment-dialog",
+        "speak-list": "./components/speak-list/speak-list"
+    }
+}

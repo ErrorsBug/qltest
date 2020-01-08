@@ -1,0 +1,88 @@
+.bottom-qrcode-container
+{
+	position: absolute;
+	bottom: 94px; 
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	box-sizing: border-box;
+	z-index: 4;
+	// overflow: hidden;
+
+	.qrcode
+	{
+		position: absolute;
+		width: 17.1%; 
+		border-radius: 17px;
+		overflow: hidden;
+		left: 0;
+		top: 0;
+		padding: 3.5% 100% 80px 16.8%; 
+		z-index: 2;
+	}
+
+	.close-wrap {
+		background: #fff;
+		right: 11%;
+		top: -20px;
+		width: 44px;
+		height: 44px;
+		border-radius: 50%;
+		position: absolute;
+	}
+	.close
+	{
+		position: absolute;
+		cursor: pointer;
+		z-index: 3;
+		top: 50%;
+		width: 16px;
+		height: 16px;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background: {
+			image: url(./img/close.png);
+			position: center center;
+			size: 24px 24px;
+			repeat: no-repeat;
+		}
+	}
+
+	p
+	{
+		font-size: 28px;/*px*/
+		margin-bottom: 23px; /*px*/
+		&.gray {
+			line-height: 36px; /*px*/
+			font-weight: 600;
+			width: 430px;
+			font-size: 28px; /*px*/
+			color: #BF670D;
+		}
+	}
+	.tip {
+		padding: 4px 20px; /*px*/ 
+		font-size: 20px; /*px*/
+		line-height:30px; /*px*/
+		color: #fff;
+		background:rgba(255,159,0,1);
+		border-radius: 30px;/*px*/
+	}
+}
+
+.thousand-live-animation-bottomQrcode-leave {
+	transform: translate(-50%,0);
+}
+  
+.thousand-live-animation-bottomQrcode-leave.thousand-live-animation-bottomQrcode-leave-active {
+	transform: translate(-50%,100%);
+	transition: all 200ms ease-in;
+}
+.thousand-live-animation-bottomQrcode-enter {
+	transform: translate(-50%,100%);
+}
+  
+.thousand-live-animation-bottomQrcode-enter.thousand-live-animation-bottomQrcode-enter-active {
+	transform: translate(-50%,0);
+	transition: all 200ms ease-in;
+}

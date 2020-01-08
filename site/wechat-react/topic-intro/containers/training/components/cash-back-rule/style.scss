@@ -1,0 +1,69 @@
+
+.cash-back-dialog {
+
+    .co-dialog-content {
+        border-radius: 32px;
+    }
+
+    .cash-back-content {
+        max-height: 800px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 0 80px;
+        line-height: 1.4;
+        font-size: 24px; /* px */
+
+        .title {
+            color: #333;
+            font-size: 32px; /* px */
+            padding: 48px 0;
+            font-weight: bold;
+            text-align: center;
+            line-height: 1;
+        }
+
+        .item {
+            margin-bottom: 30px;
+
+            .question {
+                color: #333;
+                font-weight: 500;
+                margin-bottom: 10px;
+                position: relative;
+                line-height: 1;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: -15px;
+                    top: 0;
+                    width: 5px;
+                    height: 100%;
+                    background: #F73657;
+                }
+            }
+
+            .answer {
+                color: #666;
+            }
+
+            strong {
+                color: #F73657;
+                font-weight: normal;
+            }
+
+            &:last-of-type {
+                margin-bottom: 48px;
+            }
+        }
+
+    }
+    .footer-btn {
+        height: 95px;
+        line-height: 95px;
+        text-align: center;
+        color: #333;
+        font-weight: 400;
+        border-top: 1px solid #EEE;
+    }
+}

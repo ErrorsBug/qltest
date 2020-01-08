@@ -1,0 +1,109 @@
+.recomemnd-current-course {
+    background-color: #fff;
+    height: 100%;
+    position: relative;
+    line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+    >.header {
+        padding: 0 30px;
+        font-size: 20px;/*px*/
+        color: #333;
+        margin: 20px 0;
+    }
+    .taps-bar{
+        padding: 0 30px 30px;
+        .tap{
+            padding: 10px 20px;
+            border-radius: 30px;
+            color: #999999;
+            background: #F7F7F7;
+            margin-right: 10px;
+            float: left;
+            &.active{
+                color: #F73657;
+                background: #FFF0F0;
+            }
+        }
+    }
+    .co-tab-view-v2 {
+        margin-top: 12px;
+        .tab-item.active {
+            color: #f73657;
+        }
+    }
+    .co-scroll-view {
+        flex: 1;
+    }
+    >.footer {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        padding: 0 40px;
+        .btn-submit {
+            flex: 1;
+            height: 76px;
+            border-radius: 38px;
+            background-color: #f73657;
+            font-size: 32px;/*px*/
+            color: #fff;
+            outline: none;
+            border: none;
+            &.disabled {
+                background-color: #eee;
+                color: #999;
+                cursor: auto;
+            }
+        }
+    }
+    .course-item {
+        padding: 32px 0;
+        margin: 0 30px;
+        border-top: 1px solid #EEEEEE;/*no*/
+        &:first-child {
+            padding-top: 40px;
+        }
+        &:last-child {
+            padding-bottom: 40px;
+        }
+        display: flex;
+        align-items: center;
+        .info {
+            flex: 1;
+            margin-left: 24px;
+            overflow: hidden;
+            .name {
+                font-size: 30px;/*px*/
+                font-weight: bold;
+                color: #333;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .desc {
+                font-size: 22px;/*px*/
+                color: #999;
+                margin-top: 16px;
+            }
+        }
+        .head-img {
+            width: 160px;
+            height: 100px;
+            position: relative;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .check {
+            width: 36px;
+            height: 36px;
+            background: url(./img/icon-check.png) center no-repeat;
+            background-size: contain;
+            margin-right: 38px;
+        }
+        &.checked {
+            .check {
+                background-image: url(./img/icon-checked.png);
+            }
+        }
+    }
+}

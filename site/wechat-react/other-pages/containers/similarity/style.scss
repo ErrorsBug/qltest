@@ -1,0 +1,183 @@
+
+.similarity-page {
+    background-color: #fff;
+    height: 100%;
+    .collect-list {
+        top: 0;
+        bottom: 0;
+    
+        background-color: #fff;
+    }
+
+    .empty-img {
+        margin: 200px auto 0;
+        width: 247px;
+        height: 210px;
+        background: url('../../../assets/images/empty/empty.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    .empty-des {
+        font-size: 28px; /*px*/
+        color: #999;
+        text-align: center;
+        margin-top: 50px;
+    }
+    
+    .collect-item {
+        display: flex;
+        align-items: center;
+    
+        height: 180px;
+    
+        padding-right: 40px;
+        margin-left: 30px;
+    
+        border-bottom: 1px solid #e6e6e6; /*no*/
+    
+        .headImg {
+            flex: none;
+    
+            display: block;
+            width: 191px;
+            height: 117px;
+            border-radius: 4px;
+        }
+    
+        .info {
+            margin-left: 30px;
+            margin-right: 10px;
+            flex-shrink: 1;
+            flex-grow: 1;
+        }
+    
+        .title {
+            font-size: 28px; /*px*/
+            line-height: 1.4;
+            font-weight: bold;
+    
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+    
+            position: relative;
+    
+            vertical-align: middle;
+            padding-top: 1px;
+           
+            &.channel::before {
+                content: "系列课";
+                display: inline-block;
+                padding: 0 4px; /*px*/
+                border-radius: 4px;
+                font-size: 18px; /*px*/
+                color: #ef5670;
+                border: 1px solid #ef5670; /*no*/
+    
+                position: relative;
+                top: -2px;
+                line-height: normal;
+    
+                margin-right: 6px;
+            }
+        }
+        .topicNum {
+            margin-top: 8px;
+            font-size: 24px; /*px*/
+            color: #bdb5b5;
+
+            display: flex;
+            align-items: center;
+
+            .live-name {
+                display: inline-block;
+                max-width: 300px;
+                overflow: hidden;
+                text-overflow:ellipsis;
+                white-space: nowrap;
+                margin-right: 3px;
+
+                line-height: 1.4;
+            }
+        }
+
+        .learnNum {
+            margin-top: 8px;
+            font-size: 24px; /*px*/
+            color: #bdb5b5;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .price {
+            text-align: right;
+            font-size: 22px; /*px*/
+            color: #f73657;
+        }
+
+        .contrl {
+            flex: none;
+            width: 34px;
+            height: 6px;
+            background: url('../../../assets/images/common/admin.png');
+            background-size: 100%;
+            background-repeat: no-repeat;
+
+            position: relative;
+
+            &::after{
+                display: block;
+                content: "";
+                position: absolute;
+                width: 100px;
+                height: 100px;
+
+                top: -40px;
+                left: -40px;
+            }
+        }
+    }
+    .collect-control-dialog {
+        .main {
+            background-color: #fff;
+            position: relative;
+            height: 360px;
+
+            padding-top: 60px;
+            padding: 80px 40px 0;
+            display: flex;
+            justify-content: space-around;
+
+            .control-icon-con {
+                height: 140px;
+                width: 140px;
+                border: 1px solid #e6e6e6; /*no*/
+                border-radius: 100px;
+                margin-bottom: 20px; 
+            }
+            .control-des {
+                text-align: center;
+            }
+        }
+
+        .btn-close {
+            position: absolute;
+            width: 100%;
+            height: 100px;
+
+            border-top: 1px solid #e6e6e6; /*no*/
+
+            font-size: 32px; /*px*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            left: 0;
+            bottom: 0;
+        }
+
+    }  
+}

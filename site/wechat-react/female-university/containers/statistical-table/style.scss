@@ -1,0 +1,98 @@
+.st-table-box{
+    height: 100%;
+    background: #fff;
+    .st-table-scroll{
+        padding: 0 40px 40px;
+        box-sizing: border-box;
+    }
+    .st-table-header{
+        padding: 40px 0 0;
+        margin-bottom: 20px;
+        .st-table-count{
+            margin-bottom: 24px;
+            p,span{
+                text-align: center;
+                line-height: 1.4;
+            }
+            p{
+                font-size: 36px; /*px*/
+                color: #333;
+                font-weight: bold;
+            }
+            span{
+                display: block;
+                font-size: 22px; /*px*/
+                color: #bbb;
+            }
+        }
+        .st-table-th{
+            height: 100px;
+            background:rgba(255,255,255,1);
+            box-shadow:0px 10px 40px 0px rgba(0,0,0,0.06);
+            border-radius:16px;
+            display: flex;
+            p{
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 30px; /*px*/
+                color: #333;
+                &:first-child{
+                    position: relative;
+                    &::before{
+                        position: absolute;
+                        top: 50%;
+                        right: -1px; /*px*/
+                        width: 2px; /*px*/
+                        height: 60px;
+                        background: #eee;
+                        transform: translateY(-50%);
+                        content: '';
+                    }
+                }
+            }
+        }
+    }
+    .st-table-lists{
+        padding: 0 35px;
+        background:rgba(255,255,255,1);
+        box-shadow:0px 10px 40px 0px rgba(0,0,0,0.06);
+        border-radius:16px;
+        .st-channel-item{
+            display: flex;
+            height: 100px;
+            border-bottom: 2px solid #eee; /*no*/
+            &:last-child{
+                border-bottom: none;
+            }
+            p{
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 30px; /*px*/
+                color: #333;
+                &:first-child{
+                    position: relative;
+                    &::before{
+                        position: absolute;
+                        top: 50%;
+                        right: -1px; /*no*/
+                        width: 2px; /*no*/
+                        height: 60px;
+                        background: #eee;
+                        transform: translateY(-50%);
+                        content: '';
+                    }
+                }
+            }
+        }
+        .no-data{
+            padding: 80px 0;
+            font-size: 26px; /*px*/
+            color: #666;
+            text-align: center;
+        }
+    }
+}

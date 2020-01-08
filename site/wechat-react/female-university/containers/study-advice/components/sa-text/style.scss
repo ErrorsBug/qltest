@@ -1,0 +1,41 @@
+ 
+        .sat-text-container{
+            .sat-text-item{
+                border-top:2px solid #eee; /*no*/ 
+                max-height: 250px;
+                overflow: hidden;
+                padding-top:20px;
+                &.auto-height{
+                    max-height: none;
+                }
+                .ql-editor-h5{
+                    padding: 0;
+                    line-height: 1.8;
+                    color: #666;
+                    img{ 
+                        vertical-align: middle;
+                    }
+                    p{
+                        margin-top: 0;
+                    }
+                    
+                    h1 {
+                        font-size: 36px;
+                    }
+                    
+                    h2 {
+                        font-size: 32px;
+                    }
+                    
+                    h3 {
+                        font-size: 28px;
+                    }
+                    
+                    h4,
+                    h5,
+                    h6 {
+                        font-size: 100%; /*no*/
+                    }
+                }
+            }
+        }

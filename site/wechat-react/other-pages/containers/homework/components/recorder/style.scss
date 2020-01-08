@@ -1,0 +1,107 @@
+@import "../../base-definition";
+
+.recorder-container {
+    position: relative;
+    min-height: 348px;
+    text-align: center;
+    background: #fff;
+	@include flex-center;
+	flex-direction:column;
+
+	.save-button{
+		font-size:0;
+		#flashcontent{
+			font-size:24px;/*px*/
+		}
+	}
+
+    .recording-tips {
+        text-align: center;
+        color: $gray--tip;
+        font-size: 28px;/*px*/
+		line-height:1.5;
+
+       .current-second{
+		   color:$gray--content;
+	   }
+    }
+
+	.rec-btn{
+		position: relative;
+		width: 164px;
+		height: 164px;
+		border-radius: 100%;
+		background: #fff;
+		border: solid 2px $main-color--lighter;/*no*/
+		margin: 25px auto 0;
+		font-size: 34px;/*px*/
+		color: #fff;
+		@include flex-center;
+		cursor:pointer;
+
+		&:before {
+			content: "";
+			width: 140px;
+			height: 140px;
+			border-radius: 50%;
+			background: $main-color--lighter;
+			transition:all .2s linear;
+		}
+
+		&.playing:before{
+			content:'';
+			width: 100px;
+			height: 100px;
+			border-radius: 8px;
+		}
+
+		&.finished{
+			border: solid 2px #fff;/*no*/
+			&:before{
+				width: 164px;
+				height: 164px;
+				background: $green;
+				content:'点击确认';
+				border-radius: 50%;
+				@include flex-center;
+			}
+		}
+	}
+
+
+	.audition-btn{
+		height:28px;
+		line-height:28px;
+		position:absolute;
+		top:50%;
+		left:50%;
+		margin-top:30px;
+		margin-left:-280px;
+		padding-left:30px;
+		font-size:26px;/*px*/
+		background:url(./img/audition.png) no-repeat left;
+		background-size:20px 28px;
+		color:$gray--tip;
+		cursor:pointer;
+		&.playing{
+			background-image:url(./img/audition--playing.png);
+		}
+	}
+	.delete-btn{
+		height:28px;
+		line-height:28px;
+		font-size:26px;/*px*/
+		position:absolute;
+		top:50%;
+		left:50%;
+		margin-top:30px;
+		margin-left:190px;
+		padding-left:35px;
+		background:url(./img/delete.png) no-repeat left center;
+		background-size:24px 24px;
+		color:$gray--tip;
+		cursor:pointer;
+
+	}
+
+}

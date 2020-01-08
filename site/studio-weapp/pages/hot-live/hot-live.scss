@@ -1,0 +1,135 @@
+
+/**index.wxss**/
+.hot-lives {
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+    margin-bottom: 20rpx;
+}
+
+.hot-live {
+    padding: 24rpx 0;
+    margin: 0 30rpx;
+    border-bottom: 1rpx solid #f0f0f0;
+    display: flex;
+    align-items: center;
+}
+
+.hot-live:last-child {
+    border:none;
+}
+
+.live-detail {
+    width: 292rpx;
+    height: 122rpx;
+    flex: 1;
+    margin-left: 20rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hot-live-img {
+    display: block;
+    width: 122rpx;
+    height: 122rpx;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.live-focus-wrap {
+
+    height: 122rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 12rpx;
+}
+
+.live-focus-btn {
+    width: 108rpx;
+    height: 60rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #419cf9;
+    border-radius: 6rpx;
+}
+
+.live-focused {
+    background-color: #ebebeb;
+}
+
+.add-icon {
+    width: 20rpx;
+    height: 20rpx;
+}
+
+.time-icon {
+    width: 22rpx;
+    height: 22rpx;
+}
+
+.start-date {
+    color: #f09534;
+    font-size: 22rpx;
+    margin-left: 8rpx;
+}
+
+.live-focus-text {
+    font-size: 26rpx;
+    color: #fff;
+    margin-left: 8rpx;
+}
+
+.live-title {
+    color: #505559;
+    font-size: 32rpx; /*px*/
+    font-weight: 500;
+    line-height: 1.2;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.live-fans-num {
+    margin-top: 16rpx;
+    color: #909499;
+    font-size: 26rpx;
+}
+
+.live-status {
+    display: flex;
+    align-items: center;
+}
+
+.live-starting-text {
+    color: #2984e2;
+    font-size: 22rpx;
+}
+
+.hot-channels-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 15rpx;
+    font-size: 0;
+    box-sizing: border-box;
+}
+
+
+// empty-intro
+.empty-intro {
+    display: block;
+    width: 296rpx;
+    height: 243rpx;
+    margin: 120rpx auto 30rpx;
+}
+.empty-text {
+    display: block;
+    padding: 20rpx;
+    font-size: 26rpx;
+    color: #999999;
+    text-align: center;
+}

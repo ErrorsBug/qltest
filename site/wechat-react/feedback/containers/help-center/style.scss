@@ -1,0 +1,210 @@
+@import "../../../assets/styles/mixins.scss";
+
+.p-help-cen {
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    line-height: 1.4;
+    overflow-y: auto;
+
+    .cate-list {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 96px;
+    }
+    .cate-item {
+        position: relative;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+        box-sizing: border-box;
+        cursor: pointer;
+        @include beforeBorderBottom1px;
+        &:nth-of-type(odd) {
+            @include afterBorderRight1px;
+        }
+
+        &:active {
+            background-color: #f7f7f7;
+        }
+        .avatar {
+            flex-shrink: 0;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #eee;
+            background-image: url(./img/help-icon-study.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        &.ACCOUNT .avatar {
+            background-image: url(./img/help-icon-id.png);
+        }
+        &.PURCHASE .avatar {
+            background-image: url(./img/help-icon-buy.png);
+        }
+        &.SHARE .avatar {
+            background-image: url(./img/help-icon-Promotion.png);
+        }
+        &.AFTERSALE .avatar {
+            background-image: url(./img/help-icon-after.png);
+        }
+        &.SOFTWARE .avatar, &.USAGE .avatar {
+            background-image: url(./img/help-icon-abnormal.png);
+        }
+        &.OTHER .avatar, &.ELSE .avatar {
+            background-image: url(./img/help-icon-other.png);
+        }
+        &.JOIN .avatar {
+            background-image: url(./img/help-icon-in.png);
+        }
+        &.INCOME .avatar {
+            background-image: url(./img/help-icon-benefit.png);
+        }
+        &.LIVE .avatar {
+            background-image: url(./img/help-icon-dashboard.png);
+        }
+        &.COURSEMANGE .avatar {
+            background-image: url(./img/help-icon-course.png);
+        }
+        &.PUSH .avatar {
+            background-image: url(./img/help-icon-share.png);
+        }
+        .info {
+            flex: 1;
+            padding-left: 16px;
+            overflow: hidden;
+        }
+        .name {
+            color: #333;
+            font-size: 30px;
+            font-weight: bolder;
+            @include ellipsis-text;
+        }
+        .desc {
+            color: #666;
+            font-size: 22px;
+            @include ellipsis-text;
+        }
+    }
+
+    .cate-wrap {
+        &:first-child {
+            .cate-entry {
+                padding-top: 40px;
+            }
+        }
+        &:last-child {
+            .cate-entry {
+                padding-bottom: 40px;
+            }
+        }
+    }
+
+    .loading-status {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #999;
+        padding: 20px 0;
+    }
+
+    .cate-entry {
+        padding: 20px 40px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        .title {
+            font-size: 30px;
+            color: #666;
+            flex-grow: 1;
+        }
+        i {
+            transform-origin: 50% 50%;
+            transition: transform .2s;
+        }
+    }
+
+    .is-open {
+        .cate-entry i {
+            transform: rotate(180deg);
+        }
+    }
+
+    .qa {
+        .q {
+            padding: 20px 40px 0;
+            font-size: 30px;
+            color: #333;
+            font-weight: bolder;
+        }
+        .a {
+            font-size: 28px;
+            color: #666;
+            padding: 20px 40px 20px 92px;
+        }
+    }
+
+    .feedback {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        background-color: #fff;
+        line-height: normal;
+        &>div {
+            flex: 1;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 96px;/*px*/
+            font-size: 32px;/*px*/
+            color: #666;
+            cursor: pointer;
+            @include beforeBorderTop1px;
+            @include afterBorderRight1px;
+            &::after {
+                top: 28px;/*px*/
+                bottom: 28px;/*px*/
+            }
+            &:last-child::after {
+                content: none;
+            }
+            i {
+                width: 40px;/*px*/
+                height: 40px;/*px*/
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                margin-right: 16px;/*px*/
+            }
+            i.red {
+                position: absolute;
+                right: 12%;
+                top: 38%;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background: red;
+                background-image: none;
+                transform: translate(-50%, -50%);
+            }
+        }
+        .my-feedback {
+            i {
+                background-image: url(./img/icon-my-feedback.png);
+            }
+        }
+        .do-feedback {
+            i {
+                background-image: url(./img/icon-do-feedback.png);
+            }
+        }
+    }
+
+}

@@ -1,0 +1,126 @@
+.live-index-bar-guide.novice-guide-step {
+    padding-bottom: 100px;
+
+    .step-block {
+        position: absolute;
+    }
+
+    .ok-btn {
+        position: absolute;
+        left: 50%;
+        bottom: 40%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .jump-btn {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        padding: 5px 10px;
+        font-size: 28px; /* px */
+        color: #FFF;
+    }
+
+    .step-point {
+        transform: translate(-9999px, 9999px); /* no */
+        &.live-workbench-point {
+            left: 23.2%;
+            bottom: 1.5%;
+            width: 16%;
+            padding-top: 8%;
+        }
+    
+        &.live-create-point {
+            left: 44.2%;
+            bottom: 1.5%;
+            width: 11.5%;
+            padding-top: 7.5%;
+        }
+    
+        &.live-student-point {
+            left: 61.2%;
+            bottom: 1.5%;
+            width: 16%;
+            padding-top: 8%;
+        }
+    
+        &.live-message-point {    
+            left: 79.2%;
+            bottom: 1.5%;
+            width: 16%;
+            padding-top: 8%;
+        }
+    }
+
+
+    .live-guide-tips {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .left {
+            align-self: flex-start;
+        }
+        .right {
+            align-self: flex-end;
+        }
+
+        &.live-settting {
+            left: 0;
+            bottom: 8%;
+            width: 100%;
+
+            .guide-tips {
+                width: 634px;
+                height: 56px;
+                background: url('./img/guide-tips-1.png') no-repeat center / contain;
+            }
+            .step-guide-source {
+                margin-left: -37%;
+            }
+        }
+
+        &.live-create {
+            left: 0;
+            bottom: 8%;
+            width: 100%;
+
+            .guide-tips {
+                width: 370px;
+                height: 56px;
+                background: url('./img/guide-tips-2.png') no-repeat center / contain;
+            }
+        }
+
+        &.live-student {
+            left: 0;
+            bottom: 8%;
+            width: 100%;
+
+            .guide-tips {
+                width: 607px;
+                height: 114px;
+                background: url('./img/guide-tips-3.png') no-repeat center / contain;
+            }
+            .step-guide-source {
+                margin-right: -39%;
+            }
+        }
+
+        &.live-message {
+            left: 0;
+            bottom: 8%;
+            width: 100%;
+
+            .guide-tips {
+                width: 587px;
+                height: 152px;
+                background: url('./img/guide-tips-4.png') no-repeat center / contain;
+            }
+            .step-guide-source {
+                margin-right: 10%;
+            }
+        }
+    }
+}

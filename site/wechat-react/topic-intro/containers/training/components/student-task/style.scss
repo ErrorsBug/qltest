@@ -1,0 +1,298 @@
+.student-task-wrap {
+    padding: 0 32px;
+
+    .student-task-item {
+        padding-top: 32px;
+        border-bottom: 1px solid #EEE; /* no */
+
+        .item-user-info {
+            display: flex;
+
+            .user-poster {
+                width: 60px;
+                height: 60px;
+                border:1px solid #E5E5E5;
+                border-radius: 50%;
+                margin-right: 16px;
+                overflow: hidden;
+
+                & img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .user-info {
+                flex: 1;
+                line-height: 1.4;
+            }
+
+            .user-name {
+                font-size: 28px; /* px */
+                color: #666;
+                display: flex;
+                align-items: center;
+
+                .item-hot {
+                    height: 26px;
+                    margin-right: 10px;
+                    padding: 0 8px;
+                    display: flex;
+                    align-items: center;
+                    color: #F73657;
+                    border: 1px solid #F73657;
+                    font-size: 18px; /* px */
+                    line-height: normal;
+                    border-radius:4px;
+                }
+            }
+            .user-class {
+                font-size: 20px; /* px */
+                color: #999;
+            }
+            .essence-btn {
+                height:26px;
+                padding-left:30px;
+                margin-left: 20px;
+                background:url(./img/btn_essence_h.png) no-repeat left top;
+                background-size:auto 100%;
+                color: #F73657;
+                font-size: 22px; /*px*/
+            }
+
+            .icon-share {
+                display: block;
+                width: 40px;
+                height: 40px;
+                background: url('./img/icon_share_it@2x.png') no-repeat center;
+                background-size: cover;
+            }
+        }
+
+        .item-content {
+            margin-top: 16px;
+            margin-left: 76px;
+        }
+
+        .exam-contnet {
+            box-sizing: border-box;
+            padding: 10px;
+            border-radius: 8px;
+            background: #F4F4F4;
+            display: flex;
+            align-items: center;
+
+            .exam-logo {
+                flex-shrink: 0;
+                width: 90px;
+                height: 90px;
+                border-radius: 10px;
+                overflow: hidden;
+                background: url('./img/exam-logo.png') no-repeat center;
+                background-size: cover;
+            }
+            .exam-score {
+                font-size: 26px; /* px */
+                color: #333;
+                line-height: 1.4;
+                font-weight: 400;
+                margin-left: 20px;
+            }
+        }
+
+        .speak-content-box {
+            text-size-adjust: none;
+
+            .speak-content {
+                font-size: 30px; /* px */
+                line-height: 1.4;
+                color: #333;
+                
+                &.normal {
+                    height: 210px; /* px */
+                    overflow: hidden;
+                }
+
+                &.ellipsis {
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    text-overflow: ellipsis;
+                    -webkit-line-clamp: 5;
+                }
+            }
+
+            .shrink {
+                display: inline-block;
+                color: #708DB7;
+                font-size: 24px; /* px */
+                margin: 16px 0;
+            }
+        }
+
+        .audio-wrap {
+            margin-top: 16px;
+        }
+        
+        .img-list{
+            width:620px;
+            margin-top:20px;
+            display:flex;
+            flex-wrap:wrap;
+            &.sp{
+                width:470px;
+            }
+            .img-item{
+                width:195px;
+                height:195px;
+                background-repeat: no-repeat;
+                background-position:center;
+                background-size:cover;
+                margin:0 10px 10px 0;
+                overflow: hidden;
+                position:relative;
+                cursor:pointer;
+                &.sp{
+                    width: auto;
+                    height: auto;
+                    max-width:425px;
+                    max-height:425px;
+                    margin:0;
+                    overflow: inherit;
+                }
+                img{
+                    display:block;
+                }
+            }
+        }
+        .img-sigle{
+            margin-top: 20px;
+        }
+        
+        .video-list {
+            margin-top:20px;
+            .video-wrapper {
+                
+            }
+        }
+
+        // .task-ascription {
+        //     margin-top: 18px;
+        //     font-size: 24px; /* px */
+        //     color: #FF9400;
+        //     display: flex;
+        //     align-items: center;
+
+        //     &::before {
+        //         content: "";
+        //         width: 32px;
+        //         height: 32px;
+        //         background: url('./img/camp_icon_homework.png') no-repeat center;
+        //         background-size: contain;
+        //         margin-right: 8px;
+        //     }
+        // }
+
+        .item-footer {
+            margin-top: 32px;
+            margin-left: 76px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 22px; /* px */
+            color: #999;
+            padding-bottom: 30px;
+            .homework-operate {
+                display: flex;
+            }
+            .comment-btn {
+                width: 32px;
+                height: 32px;
+                background: url('./img/icon_comment.png') no-repeat center;
+                background-size: contain;
+                margin-right: 30px;
+            }
+            .fabulous-btn {
+                color: #666;
+                display: flex;
+                align-items: center;
+
+                &::before {
+                    content: "";
+                    width: 32px;
+                    height: 32px;
+                    background: url('./img/icon_fabulous_n.png') no-repeat center;
+                    background-size: contain;
+                    margin-right: 8px;
+                }
+
+                &.choose {
+                    color: #F73657;
+                    &::before {
+                        content: "";
+                        width: 32px;
+                        height: 32px;
+                        background: url('./img/icon_fabulous.png') no-repeat center;
+                        background-size: contain;
+                        margin-right: 8px;
+                    }
+                }
+
+            }
+        }
+        .commemt-wrap {
+            background: #F4F4F4;
+            border-radius: 8px;
+            padding: 30px 24px 30px 30px;
+            margin-bottom: 20px;
+            margin-left: 76px;
+            text-size-adjust: none;
+            .teacher-comment {
+                padding-bottom: 30px;
+                border-bottom: 1px dotted #DCDCDC;
+                &:last-child{
+                    border-bottom: none;
+                }
+
+                .teacher-name {
+                    //font-size: 32px; /*px*/
+                    display: inline-block;
+                    font-size: 20px; /*px*/
+                    font-weight: 400;
+                    color: #F73657;
+                    //line-height: 28px;
+                    padding: 2px 7px;/*px*/
+                    border: 1px solid #F73657;/*no*/
+                    margin-right: 10px;
+                    vertical-align: text-bottom;
+                    border-radius: 4px;
+                }
+            }
+            .comment-item {
+                padding-top: 20px;
+                line-height: 1.25;
+                font-size: 30px; /*px*/
+                color: #333333;
+                font-weight:400;
+                //display: flex;
+                //align-items: center;
+                &>strong {
+                    color: #F73657;
+                    font-weight: inherit;
+                }
+            }
+            .leave-comment {
+                padding-top: 30px;
+                .leave-name {
+                    color: #333333;
+                    font-size: 32px; /*px*/
+                    font-weight: 500;
+                }
+                .leave-content {
+                    color: #666666;
+                }
+            }
+        }
+    }
+    
+}

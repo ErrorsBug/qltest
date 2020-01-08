@@ -1,0 +1,58 @@
+//加入珊瑚计划引导弹框
+.coral-join-dialog{
+	text-align: center;
+	z-index: 200;
+	
+	.co-dialog-content{
+		background-color:rgba(0,0,0,0);
+		padding-bottom:14%;
+	}
+	.btn-close-ui{
+		top:94%;
+		left:50%;
+		transform: translate(-50% , 0);
+		width: 60px;
+		height: 60px;
+		color:#fff;
+		font-size: 60px;
+	}
+	.coral-join-box{
+		width: 100%;
+		height: auto;
+	}
+	.coral-joined-box{
+		padding-bottom:136%; 
+		background: url(https://img.qlchat.com/qlLive/coral/joined-box-bg.png) top center no-repeat;
+		background-size: 100% 100%;
+	}
+	//https://img.qlchat.com/qlLive/coral/join-box-bg.png
+	//https://img.qlchat.com/qlLive/coral/joined-box-bg.png
+	
+	.btn-join{
+		display: block;
+		height: 70px;
+		width:408px;
+		line-height: 70px;
+		position: absolute;
+		bottom:20%;
+		left:50%;
+		margin-left: -205px;
+		color:#9f7741;
+		font-size: 28px;
+		letter-spacing: 4px;
+		background: linear-gradient(#ffdc7d, #ffca59);
+		border:1px solid #fee8c3;/*no*/
+		border-radius:50px;
+		text-align: center;
+		box-shadow: 0px 10px 20px rgba(248, 150, 3, 0.5);
+	}
+	.head-img{
+		position: absolute;
+		top: 44%;
+		left: 50%;
+		transform: translate(-50.1% , 0);
+		width:14.7%;
+		border-radius: 50%;
+	}
+
+} 

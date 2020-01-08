@@ -1,0 +1,32 @@
+<view class="item">
+    <view class="date" wx:if="{{viewItem.isToday}}">
+        <view class="today">
+            今天
+        </view>
+    </view>
+    <view class="date" wx:if="{{!viewItem.isToday}}">
+        <view class="month">{{viewItem.monthStr}}月</view>
+        <view class="day">{{viewItem.dayStr}}</view>
+    </view>
+    <view class="main">
+        <view class="preview">
+            <view class="title">{{contentText}}
+                <view wx:if="{{!expand}}" class="expand" catch:tap="onExpandTap">...查看全部</view>
+            </view>
+            <view class="content" bind:tap="onLinkTap">
+                <image 
+                    class="timeline-img" 
+                    src="{{viewItem.relateLogo}}" 
+                    mode="aspectFill"
+                />
+                <view class="text">
+                    {{viewItem.relateTitle}}
+                </view>
+            </view>
+        </view>
+        <view class="addon" catch:tap="onLikeTap" data-id="{{viewItem.id}}" data-status="{{viewItem.liked}}">
+            <view class="like-num">{{viewItem.likeNum}}</view>
+            <view class="icon-like {{viewItem.liked?'liked':''}}"></view>
+        </view>
+    </view>
+</view>

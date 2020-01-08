@@ -1,0 +1,38 @@
+<wxs src="../../../../../../comp/util.wxs" module="util" />
+<view class="master">
+    <view class="block-header">
+        <text class="title">{{infos.name}}</text>
+        <view class="more-btn" data-code="{{infos.code}}" data-name="{{infos.name}}" data-log-name="{{infos.name}}" data-log-region="check-more-btn-right" catchtap="getMoreBtnTapHandle"><text>更多</text><text class="check-more-icon"></text></view>
+    </view>
+    <view class="list-wrap">
+        <view class="list-item" wx:for="{{infos.courses}}" wx:for-item="c" wx:key="{{index}}" data-course="{{c}}" catchtap="courseItemTapHandle" data-log-id="{{c.businessId}}" data-log-type="{{c.businessType}}" data-log-region="{{info.code}}" data-log-position="{{index}}">
+            <image class="poster" src="{{c.indexLogo}}"></image>
+            <view class="info">
+                <view class="name"><text class="hottest" wx:if="{{c.flag}}">{{c.flag}}</text> {{c.businessName}}</view>
+                <view class="desc" wx:if="{{c.remark}}">{{c.remark}}</view>
+                <view class="category">
+                    {{c.liveName}}
+                    <block wx:if="{{c.businessType === 'channel'}}">
+                        <text> </text>| 共{{c.planCount || c.topicCount}}节课
+                    </block>
+                </view>
+                <view class="tips">
+                    <view class="count">{{util.digitFormat(c.learningNum)}}次学习</view>
+                    <view class="price" wx:if="{{c.money != 0&& system!=='ios'}}">
+                        <block wx:if="{{c.discount > 0}}">
+                            <text class="origin">¥{{c.money/100}}</text>
+                            <text class="current">¥{{c.discount/100}}</text>
+                        </block>
+                        <block wx:if="{{c.discount < 0}}">
+                            <text class="current">¥{{c.money/100}}</text>
+                        </block>
+                    </view>
+                    <view wx:if="{{c.money == 0}}" class="free">
+                        免费
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="check-more-btn" data-code="{{infos.code}}" data-name="{{infos.name}}" data-log-name="{{infos.name}}" data-log-region="check-more-btn-bottom" catchtap="getMoreBtnTapHandle"><text>查看更多</text><text class="check-more-icon"></text></view>
+</view>

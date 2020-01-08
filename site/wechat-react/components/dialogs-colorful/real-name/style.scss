@@ -1,0 +1,92 @@
+//实名认证弹框
+.real-name-dialog{
+	text-align: center;
+	.co-dialog-content{
+		width:90%;
+	}
+	.co-dialog-close{
+		top:10px;
+	}
+	b{
+		display:block;
+		margin-top: -30px;
+		margin-bottom: 50px;
+		font-size:34px;/*px*/
+	}
+	.icon-real{
+		&:before{
+			content:'';
+			display:block;
+			background:url(../../../assets/images/symbol-icon/checking.png) center center no-repeat;
+			background-size:40% auto;
+			margin:60px auto 20px;
+			padding-bottom:34%;
+			width:70%;
+		}
+		span{
+			display:block;
+			margin-bottom:60px;
+			line-height:40px;
+			font-size:30px;/*px*/
+		}
+	}
+	
+	.isrealing{
+		&:before{
+			background:url(../../../assets/images/symbol-icon/checking.png) center center no-repeat;
+			background-size:40% auto;
+		}
+		span{
+			color:#333;
+		}
+
+	}
+	
+	
+	.isreal{
+		&:before{
+			background:url(../../../assets/images/symbol-icon/checking-head.png) center center no-repeat;
+			background-size:40% auto;
+		}
+		span{
+			color:#0fc853;
+		}
+	}
+	
+	.unreal{
+		padding:40px;
+		&:before{
+			background:url(../../../assets/images/symbol-icon/checking-head.png) center center no-repeat;
+			background-size:40% auto;
+		}
+		span{
+			color:#fff;
+			font-size:34px;/*px*/
+			background-color:#0fc853;
+			border-radius:80px;
+			padding:30px 40px;
+		}
+		ul{
+			text-align:left;
+			line-height:40px;
+			padding-left:40px;
+			margin-bottom:40px;
+			li{
+				margin-bottom:20px;
+				&:before{
+					content:'';
+					display:inline-block;
+					width:20px;
+					height:20px;
+					background:url(./img/li-icon1.png) center center no-repeat;
+					background-size:80% auto;
+					margin-left:-30px;
+					margin-right:10px;
+				}
+			}
+		}
+		
+	}
+	
+
+} 

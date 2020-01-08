@@ -1,0 +1,63 @@
+/**
+ * ============================
+ * flexbox布局相关
+ * ============================
+ */
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-flow: row nowrap;
+}
+
+.flex-col {
+    flex-flow: column nowrap;
+}
+
+.flex-vcenter {
+    align-items: center;
+}
+
+.flex-vstart {
+    align-items: flex-start;
+}
+
+.flex-vend {
+    align-items: flex-end;
+}
+
+.flex-hcenter {
+    justify-content: center;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-hstart {
+    justify-content: flex-start;
+}
+
+.flex-hend {
+    justify-content: flex-end;
+}
+
+.flex-space-between,
+.jc-between {
+    justify-content: space-between;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-no-shrink {
+    flex-shrink: 0;
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}

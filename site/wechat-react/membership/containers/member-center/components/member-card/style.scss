@@ -1,0 +1,165 @@
+@import "../../../../../assets/styles/base-definition";
+.member-center__member-card{
+	margin:0 40px 40px;
+	box-sizing: border-box;
+	position:relative;
+	&:after{
+		width:94.67%;
+		padding-top:8%;
+		content:'';
+		display:block;
+		top:100%;
+		left:50%;
+		transform: translate(-50%, -50%);
+		background:url(./img/card-shadow.png) no-repeat center / 100%;
+		position:absolute;
+	}
+	img{
+		width:100%;
+		display:block;
+		position: relative;
+		z-index: 2;
+	}
+	.tip-box{
+		position: absolute;
+		left:40px;
+		right:40px;
+		top:146px;
+		border-top:1px solid rgba(255,255,255,.12);/*no*/
+		padding-top:40px;
+		line-height:1.5;
+		.span-01{
+			color:#F2DEBB;
+			font-size:30px;/*px*/
+		}
+		.span-02{
+			color:#fff;
+			font-size:26px;/*px*/
+			margin-top:5px;
+		}
+		z-index: 2;
+	}
+	.rule-btn--absolute{
+		position: absolute;
+		top:64px;
+		right:40px;
+		color:#fff;
+		font-size:26px;
+		z-index: 2;
+	}
+	.card-container{
+		position:absolute;
+		height:100%;
+		left:0;
+		right:0;
+		top:0;
+		padding:40px;
+		box-sizing: border-box;
+		z-index: 3;
+		.user-info{
+			display:flex;
+			align-items: center;
+			padding-bottom:26px;
+			border-bottom:1px solid rgba(255,255,255,.12);/*no*/
+			.avatar{
+				@include round-avatar(80px);
+				flex-shrink: 0;
+			}
+			.content{
+				flex:1;
+				margin-left:16px;
+				line-height:1.4;
+
+				.name-box {
+					flex: 1;
+					display:flex;
+					align-items:center;
+				}
+
+				.span-01{
+					display:flex;
+					align-items:center;
+					.name{
+						max-width: 280px;
+						overflow: hidden;
+						white-space: nowrap;
+						text-overflow: ellipsis;
+						font-size:28px;/*px*/
+						color:#fff;
+						font-weight: bolder;
+					}
+					.tag{
+						flex: 0 0 auto;
+						padding:0 10px;
+						height:32px;
+						font-size:20px;
+						border-radius: 100px;
+						background:linear-gradient(-135deg, #F2E3D7 0%, #E9D5C7 100%);
+						@include flex-center;
+						margin-left:20px;
+						color:#71533E;
+						font-weight: bolder;
+					}
+					.rule-btn{
+						flex: 0 0 auto;
+						color:#fff;
+						margin-left:40px;
+					}
+				}
+				.expiration-date{
+					color:#B4ABA1;
+					font-size:20px;/*px*/
+					strong{
+						color:#F35F5F;
+						font-weight: normal;
+					}
+				}
+			}
+			.renew-btn{
+				color:#fff;
+				font-size:24px;
+				width:88px;
+				height:52px;
+				background:#F73657;
+				border-radius: 100px;
+				@include flex-center;
+				margin-left:100px;
+			}
+		}
+		.rights-list{
+			display:flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			position: relative;
+			padding-top:26px;
+			.right-item{
+				width:33%;
+				margin-bottom:40px;
+				img{
+					width:60px;
+					height:60px;
+					display:block;
+					margin:0 auto;
+				}
+				.name{
+					font-size:20px;/*px*/
+					margin-top:5px;
+					line-height:1.4;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					text-align: center;
+					color:#fff;
+				}
+				&.disable{
+					img{
+						filter:grayscale(100%);
+					}
+					.name{
+						color:rgba(255,255,255,.3)
+					}
+				}
+			}
+		}
+	}
+}

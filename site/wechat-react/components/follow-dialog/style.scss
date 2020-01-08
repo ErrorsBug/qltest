@@ -1,0 +1,55 @@
+.follow-qrcode-dialog {
+    .co-dialog-content {
+        width: 68%;
+    }
+    .follow-qrcode-dialog-container {
+        .desc {
+            font-size: 28px; /* px */
+            color: #666;
+            letter-spacing: 0;
+            text-align: center;
+            padding: 0 60px;
+            line-height: 1.5;
+        }
+        .qr-box {
+            background: #F0F5F8;
+            margin-top: 40px;
+            padding: 40px 0 26px 0;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            .qr-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 0;
+
+                .qr, .guide {
+                    width: 132px;
+                }
+                .guide {
+                    margin-left: 12px;
+                }
+            }
+            .qr-tips {
+                margin-top: 12px;
+                font-size: 24px; /* px */
+                color: #57657B;
+                letter-spacing: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &::before, &::after {
+                    content: '';
+                    background: #57657B;
+                    width: 20px;
+                    height: 1px;
+                    margin: 0 12px;
+                }
+            }
+        }
+    }
+}

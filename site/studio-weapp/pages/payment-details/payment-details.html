@@ -1,0 +1,110 @@
+<view class="container" wx:if="{{system !='ios'}}">
+
+  <!-- vip区域,单独分了出来，因为人家的样式和系列课话题那些家伙就是不一样啊不一样 -->
+  <vip-section wx:if="{{businessInfo && businessType==='vip'}}" liveInfo="{{businessInfo}}"/>
+
+  <!-- 业务介绍 -->
+  <view class="section business-intro" wx:if="{{businessInfo && businessType !== 'vip'}}">
+    <view class="main">
+      <image mode="aspectFill" src="{{businessInfo.img}}"/>
+      <view class="right">
+        <view class="name">
+          {{businessInfo.name}}
+        </view>
+        <view class="price">{{businessInfo.originalPriceStr}}</view>
+      </view>
+    </view>
+    <view class="desc" wx:if="{{businessInfo.desc.length}}">
+      <view wx:for="{{businessInfo.desc}}" wx:key="{{index}}">{{item}}</view>
+    </view>
+  </view>
+
+
+  <!-- 相关配置项  -->
+  <view class="section cells" wx:if="{{businessInfo && (chargeConfigs.length > 1 || canUseCoupon)}}">
+    <view class="cell" bind:tap="tapSelectCharge" wx:if="{{chargeConfigs.length > 1}}">
+      <view class="content">购买类型</view>
+      <view class="desc">{{chargeConfigs[activeChargeIndex].chargeStr}}</view>
+      <image class="arrow" src="../../comp/img/arrow_1.png" mode="aspectFit"/>
+    </view>
+
+    <view class="cell" bind:tap="tapSelectCoupon" wx:if="{{canUseCoupon}}">
+      <view class="content">优惠券</view>
+      <view class="desc red" wx:if="{{activeCoupon}}">
+        已使用优惠券抵扣￥{{couponPrice > originalPrice ? originalPrice : couponPrice}}
+        <view class="icon-discount"></view>
+      </view>
+      <view class="desc" wx:else>不使用</view>
+      <image class="arrow" src="../../comp/img/arrow_1.png" mode="aspectFit"/>
+    </view>
+
+    <view class="cell" wx:if="{{activeCoupon}}">
+      <view class="content">还需支付</view>
+      <view class="desc">
+        <view class="need-to-pay">
+          ￥<view class="price">{{finalPrice}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <!-- 购买须知 -->
+  <view class="section purchase-notes" wx:if="{{businessType === 'channel'}}">
+    <view class="title">购买须知</view>
+    <view class="list">
+      <view class="item">
+        <view class="order">①</view>
+        该课程为付费系列课程，定期更新，每节课程可在开课时直播学习，也可反复回听
+      </view>
+      <view class="item">
+        <view class="order">②</view>
+        购买课程后可在「最近学习」或「我的已购」里进入听课
+
+      </view>
+      <view class="item">
+        <view class="order">③</view>
+        该课程为虚拟内容服务，购买成功后概不退款，敬请原谅
+      </view>
+    </view>
+  </view>
+
+  <view class="section purchase-notes" wx:if="{{businessType === 'topic'}}">
+    <view class="title">购买须知</view>
+    <view class="list">
+      <view class="item">
+        <view class="order">①</view>
+        购买课程后可在「最近学习」或「我的已购」里进入听课
+
+      </view>
+      <view class="item">
+        <view class="order">②</view>
+        该课程为虚拟内容服务，购买成功后概不退款，敬请原谅
+      </view>
+    </view>
+  </view>
+
+
+  <!-- 底部按钮 -->
+  <view class="section footer" wx:if="{{businessInfo}}">
+    <view class="pay-btn" bindtap="pay">确认支付￥{{finalPrice}}</view>
+  </view>
+
+
+  <view class="win-select-charge" wx:if="{{showWinSelectCharge}}" bindtap="cancelSelectCoupon">
+    <view class="panel" catchtap>
+      <view class="title">选择购买类型</view>
+      <scroll-view class="list" scroll-y>
+        <view class="item" wx:for="{{chargeConfigs}}" wx:key="{{index}}" data-index="{{index}}" catchtap="tapChargeItem">
+          <view class="content">{{item.chargeStr}}</view>
+          <view class="tick {{index == activeChargeIndex ? 'active' : ''}}"></view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+
+</view>
+
+<view class="container" wx:if="{{system ==='ios'}}">
+  由于相关规范，iOS功能暂不可用
+</view>

@@ -1,0 +1,21 @@
+.camp-status{
+    height: 40px; /*px*/
+    line-height: 40px; /*px*/
+    border-radius: 8px;
+    padding: 0 12px;
+    font-size: 22px; /*px*/
+    font-weight: normal;
+    margin-right: 20px;
+    display: inline-block;
+    vertical-align: text-bottom;
+    &.ing{
+        padding-left: 44px;
+        background: #E0414F url('https://img.qlchat.com/qlLive/business/RQ2CMQCX-G5T1-JXA8-1566453856784-1S6SHUTZSIFE.png') no-repeat 12px center;
+        background-size: 28px;
+        color: #fff;
+    }
+    &.end{
+        background:rgba(247,247,247,1);
+        color: #666;
+    }
+}

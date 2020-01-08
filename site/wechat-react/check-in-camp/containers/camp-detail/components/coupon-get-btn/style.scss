@@ -1,0 +1,32 @@
+.coupon-get-btn{
+    position: absolute;
+    right: 10px ;
+    top: 235px;
+    height: 45px;
+    border-radius: 3px;
+    color: #fff;
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    .title,.money{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        background: #FE6680;
+        padding: 0 10px;
+    }
+    .money{
+        padding: 0 10px 0 5px;
+    }
+    .line{
+        display: inline-flex;
+        width: 24px;
+        height: 100%;
+        background: url('./img/btn_coupon.png') center center no-repeat;
+        background-size: auto 100%;
+        margin: 0 -2px;
+    }
+}

@@ -1,0 +1,27 @@
+<view class="co-audio-box}" hidden="{{!visible}}" animation="{{hideAudioBox ? hideAnimationData : showAnimationData}}">
+    <view class="directToPage" bindtap="viewCourse">
+        <view class="progressbar">
+            <view class="left">
+                <view 
+                    class="left-c"
+                    style="transform: rotate({{leftTransformDeg}}deg);"
+                ></view>
+            </view>
+            <view class="right">
+                <view 
+                    class="right-c"
+                    style="transform: rotate({{rightTransformDeg}}deg);"
+                ></view>
+            </view>
+            <image class="bg" src="{{bg}}"></image>
+        </view>
+        <view class="desc">
+            <view class="title">{{title}}</view>
+            <view class="time" wx:if="{{time}}">{{time}}</view>
+        </view>
+    </view>
+    <view class="icon" bindtap="onPlayClick" wx:if="{{time && !end}}">
+        <image wx:if="{{playStatus}}" class="pause" src="{{img.pause}}"></image>
+        <image wx:else class="play" src="{{img.play}}"></image>
+    </view>
+</view>

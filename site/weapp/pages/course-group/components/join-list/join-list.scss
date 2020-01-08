@@ -1,0 +1,53 @@
+.list-section{
+    margin-top: 20rpx;
+    background-color: #fff;
+    padding: 30rpx 30rpx 0;
+    .list-title{
+        color: #333;
+        font-size: 32rpx;
+    }
+}
+
+.list-item{
+    border-bottom: 1px solid #f0f0f0;
+    height: 110rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .avatar{
+        flex-shrink: 0;
+        width: 50rpx;
+        height: 50rpx;
+        border-radius: 100%;
+        margin-right: 20rpx;
+    }
+    .info{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        .title{
+            color: #333;
+            font-size: 26rpx;
+        }
+        .time{
+            color: #b6b6b6;
+            font-size: 22rpx;
+            margin-top: 12rpx;
+        }
+    }
+}
+
+.tag-haruhi{
+    display: inline-block;
+    width: 60rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    text-align: center;
+    color: #fff;
+    background-color: #f84c69;
+    border-radius: 15rpx;
+    font-size: 20rpx;
+    vertical-align: top;
+}

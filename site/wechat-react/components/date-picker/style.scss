@@ -1,0 +1,42 @@
+
+//时间控件
+.ql-s-picker-box {
+    .normal-time-picker{
+        border-top-left-radius: 26px;
+        border-top-right-radius: 26px;
+    
+        &.ql-s-picker-popup-wrap{
+            .ql-s-picker-popup-body{
+                margin:0 30px;
+                
+                .ql-s-picker-view-box{
+                    border-radius: 26px;
+                    overflow: hidden;
+                    background: #F7F7F7;
+                    -webkit-transform: translate3d(0, 0, 0);
+                    -moz-transform: translate3d(0, 0, 0);
+                    .ql-s-picker-view-window{
+                        background-image: linear-gradient(to bottom, rgba(247, 247, 247, 0.95), rgba(247, 247, 247, 0.4)), linear-gradient(to top, rgba(247, 247, 247, 0.95), rgba(247, 247, 247, 0.4));
+                    }
+                }
+            }
+            .ql-s-picker-popup-header{
+                border-bottom: none;
+                
+                .ql-s-picker-popup-item{
+                    color: #333;
+                    height: 40px;
+                    padding:30px;
+                    line-height: 40px;
+
+                    &.ql-s-header-left,
+                    &.ql-s-header-right{
+                        color:#666;
+                        font-size: 30px;
+                    }
+                }
+            }
+            
+        }
+    }  
+}

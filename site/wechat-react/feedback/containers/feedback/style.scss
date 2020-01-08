@@ -1,0 +1,305 @@
+@import "../../../assets/styles/mixins.scss";
+$red: #F73657;
+.p-feedback {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    line-height: 1.4;
+    overflow-y: auto;
+    text-size-adjust: none;
+    .co-scroll-view {
+        padding-bottom: 100px;
+        box-sizing: border-box;
+        >div {
+            position: relative;
+        }
+    }
+    .fb-item {
+        position: relative;
+        min-height: 124px;
+        box-sizing: border-box;
+        padding: 0 40px;
+        display: flex;
+        align-items: center;
+        color: #333;
+        @include afterBorderBottom1px;
+        &::after {
+            // content: "";
+            // position: absolute;
+            // bottom: 0;
+            // border-bottom: 1px solid #eee;/*no*/
+            left: 40px;
+            right: 40px;
+        }
+        &:last-child::after {
+            content: none;
+        }
+        .fb-item-title {
+            font-size: 32px;
+            color: #333;
+            font-weight: bold;
+            min-width: 5.25em;
+            span {
+                color: $red;
+                font-size: 24px;
+                margin-left: 8px;
+                vertical-align: text-top;
+            }
+        }
+        .fb-item-content {
+            flex: 1;
+            font-size: 26px;
+            color: #333;
+        }
+    }
+    .fb-item-radio {
+        .radio-list {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .radio-item {
+            position: relative;
+            margin-left: 40px;
+            font-size: 24px;
+            color: #333;
+            border: 1px solid #bbb;/*no*/
+            width: 98px;
+            height: 50px;
+            box-sizing: border-box;
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: normal;
+            &.active {
+                border: none;
+                background-color: #FFF0F0;
+                color: $red;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: -20px;
+                left: -20px;
+                padding: 20px;
+            }
+        }
+    }
+    .fb-item-select {
+        .fb-item-content {
+            overflow: hidden;
+        }
+        .select-result {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            font-weight: normal;
+            font-size: 26px;
+            color: $red;
+            .one-row {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            i {
+                margin-left: 12px;
+                font-size: 24px;
+            }
+            &.placeholder {
+                color: #999;
+                i {
+                    color: #bbb;
+                }
+            }
+        }
+        &.is-static {
+            .select-result {
+                justify-content: flex-start;
+                color: #333;
+                .desc {
+                    color: #999;
+                }
+            }
+        }
+    }
+    .fb-item-img-text {
+        display: block;
+        padding: 40px;
+        .textarea-wrap {
+            padding: 40px 0;
+        }
+        textarea {
+            display: block;
+            background-color: #F7F7F7;
+            resize: none;
+            outline: none;
+            height: 276px;
+            width: 100%;
+            font-size: 26px;
+            color: #333;
+            line-height: 1.4;
+            border: 40px solid transparent;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .imgs-wrap {
+            position: relative;
+            @include beforeBorderTop1px;
+            // border-top: 1px solid #eee;/*no*/
+            padding-top: 40px;
+        }
+        .imgs {
+            margin-top: 40px;
+            margin-right: -16px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .img {
+            position: relative;
+            width: 33.33%;
+            box-sizing: border-box;
+            border-right: 16px solid transparent;
+            &::before {
+                content: "";
+                display: block;
+                padding-top: 100%;
+            }
+            .entity {
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 4px;
+                overflow: hidden;
+            }
+            .img-cont {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            .status {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate3d(-50%, -50%, 0);
+                color: #999;
+                font-size: 22px;
+            }
+            &:nth-child(n + 4) {
+                margin-top: 16px;
+            }
+        }
+        .btn-upload-image {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./imgs/icon-choosepic.png);
+            cursor: pointer;
+        }
+        &.is-static {
+            display: flex;
+            align-items: flex-start;
+        }
+        .static-cont {
+            padding-top: 4px;
+            .text {
+                font-size: 26px;
+                color: #333;
+            }
+            .time {
+                margin-top: 40px;
+                font-size: 22px;
+                color: #999;
+            }
+        }
+        &.cs-reply {
+            .text {
+                color: $red;
+            }
+        }
+    }
+    .footer {
+        position: absolute;
+        z-index: 10;
+        bottom: 0;
+        width: 100%;
+        height: 100px;
+        background-color: #fff;
+        .btns {
+            height: 100%;
+            padding: 0 40px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+        }
+        .btn {
+            flex: 1;
+            height: 76px;
+            line-height: normal;
+            font-size: 32px;
+            color: #fff;
+            background-color: $red;
+            border-radius: 76px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            &.white {
+                color: #666;
+                background-color: #fff;
+                border: 1px solid #999;/*no*/
+            }
+            &.disabled {
+                color: #999;
+                background-color: #eee;
+                cursor: not-allowed;
+            }
+            &+.btn {
+                margin-left: 30px;
+            }
+        }
+        .backhome {
+            position: relative;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px;
+            color: #666;
+            box-sizing: border-box;
+            cursor: pointer;
+            // border-top: 1px solid #eee;/*no*/
+            @include beforeBorderTop1px;
+            i {
+                width: 40px;
+                height: 40px;
+                margin-right: 16px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                background-image: url(./imgs/icon-backhome.png);
+            }
+        }
+    }
+    .page-mark-done {
+        position: absolute;
+        z-index: 1;
+        top: 40px;
+        right: 40px;
+        width: 200px;
+        height: 160px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        background-image: url(./imgs/page-mark-done.png);
+    }
+}

@@ -1,0 +1,71 @@
+.notice-dialog-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    padding: 60px;
+    box-sizing: border-box;
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
+    z-index: 11;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    .notice-dialog-img{
+        box-sizing: border-box;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        .notice-dialog-pic{
+            width: 85%;
+            position: relative;
+            margin: 0 auto;
+        }
+        img{
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            border-radius: 10px;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+    &.btm{
+        bottom: 98px; /*px*/
+        height: auto;
+        .notice-dialog-pic{
+            width: 80%;
+        }
+    }
+    &.minTop{
+        .notice-dialog-img{
+            padding-bottom: 130px;
+        }
+    }
+    .notice-dialog-btn{
+        text-align: center;
+        line-height: normal;
+        font-size: 32px; /*px*/
+        font-weight: 32px;
+        line-height: 1.4;
+        font-weight: bold;
+        margin-bottom: 30px;
+        color: #fff;
+    }
+    .btn-notice-dialog-close{
+        position: absolute;
+        top: -44px !important; /*px*/
+        right: -44px !important;
+        width: 88px !important;
+        height: 88px !important;
+        background: url('./img/icon-close.png') no-repeat center;
+        background-size: 60px !important;
+        z-index: 12;
+    }
+}
+

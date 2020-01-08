@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>千聊讲师管理后台</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="keywords" content="千聊，微课，群直播，知识付费，内容付费">
+	<meta name="description" content="1分钟拥有知识店铺。登录后台，一键开课，支持6大课程模式，还可多群裂变，建立私域流量池。适用于知识付费，k12教育，企业培训，微商代理培训等。">
+	<link rel="shortcut icon" href="http://img.qlchat.com/qlLive/ico/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="./index.scss" />
+</head>
+
+<body>
+	<header class="header">
+		<img class="logo" src="./img/common/head-logo-red.png" />
+		<div class="nav">
+			<a href="/official/index">首页</a>
+			<a href="/official/introduction">功能介绍</a>
+			<a href="/official/price" class="active">专业版</a>
+			<!-- <a href="//m.qlchat.com/pc/knowledge-mall/index" target="_blank">知识通商城</a> -->
+			<a href="/official/student">我是学员</a>
+			<a href="/official/about" >关于千聊</a>
+		</div>
+		<!-- <div class="btn-login">登录</div> -->
+		<a class="btn-freeuse" href="http://v.qianliao.tv">管理后台登录</a>
+	</header>
+
+	<div class="customer-service-box">
+		<div class="pop-up-qrcode">
+			<div class="qr-wrap">
+				<img src="./img/qr.png" alt="" class="qr">
+			</div>
+			<p class="customer-service-text">咨询·客服</p>
+			<div class="qrcode-wrap">
+				<img class="qrcode" src="./img/knowQrcode.jpg" />
+				<div class="title">
+					扫码关注千聊知识店铺
+				</div>
+			</div>
+		</div>
+
+		<div class="go-to-top">
+			<img src="./img/go-to-top.png" alt="" class="go-to-top-icon">
+		</div>
+	</div>
+
+	<div class="middle">
+		<div class="section animateUp">
+			<div class="title" style="margin-bottom: 10px; padding-top: 30px; font-weight: 500">
+				千聊知识店铺功能一览
+			</div>
+			<div class="sub-title">
+				选择适合你的版本，立即亲手体验
+			</div>
+		</div>
+
+		<div class="section section-width">
+			<table class="table">
+				<thead>
+					<tr>
+						<th colspan="3" rowspan="2" class="bor-lr">功能介绍</th>
+						<th colspan="2" class="bor-btm">差异对照</th>
+						<th rowspan="2" class="bor-lf">专业版价格</th>
+					</tr>
+					<tr>
+						<th class="bor-lr">基础版</th>
+						<th>专业版</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td rowspan="2" class="first-width">内容变现</td>
+						<td><div>知识通商城</div></td>
+						<td class="td-width-min"><div>付费系列课（专栏）、付费话题、等多种授课方式，满足不同课程展示及分享需求，让知识呈现更立体，内容变现更容易。</div></td>
+						<td><div>同时进行中的课程上限为50个</div></td>
+						<td><div>无限制</div></td>
+						<td rowspan="31">
+							<section class="buy-panel">
+								<div class="money-year">
+									<span class="money" style="font-weight: 500">¥1999</span>
+									<span class="year">/12个月</span>
+								</div>
+								<!-- <div class="subscript">
+												也可按三个月时长购买服务
+											</div> -->
+								<a class="buy-button" href="javascript:;" style="margin-top: 20px">
+									立即订购
+								</a>
+							</section>
+						</td>
+					</tr>
+					<tr>
+						<td><div>付费问答</div></td>
+						<td class="td-width-min"><div>一对一或一对多的付费问答功能，支持匿名提问，旁听分佣等功能，适合医疗、情感、私密问题等多种场景。</div></td>
+						<td class="success"></td>
+						<td class="success"></td>
+					</tr>
+					<tr>
+						<td class="first-width"><div>知识通</div></td>
+						<td><div>知识通商城</div></td>
+						<td class="td-width-min"><div>链接千聊平台最优质内容和流量渠道，实现优质内容的多渠道分发。</div></td>
+						<td class="success"></td>
+						<td class="success"></td>
+					</tr>
+					<tr>
+						<td class="first-width" rowspan="2"><div>个性定制</div></td>
+						<td><div>个性定制</div></td>
+						<td class="td-width-min"><div>自定义分享模板，自定义logo样式、页底标记等等，实现专属定制。</div></td>
+						<td class="error"></td>
+						<td class="success"></td>
+					</tr>
+					<tr>
+						<td><div>店铺装修</div></td>
+						<td class="td-width-min"><div>轮播图、整体配色方案、功能定制、首页标题、模块标题内容、页面排版、分享模板，都可以自主设置，塑造独一无二的知识小铺。</div></td>
+						<td class="error"></td>
+						<td class="success"></td>
+					</tr>
+					<tr>
+						<td class="first-width" rowspan="2"><div>立体授课</div></td>
+						<td><div>上课模式</div></td>
+						<td class="td-width-min"><div>音频图文、视频、语音图文直播、PPT直播等形式，无人数限制，可使学员近距离、强互动地完成学习。</div></td>
+						<td class="success"></td>
+						<td class="success"></td>
+					</tr>
+					<tr>
+						<td><div>师生互动</div></td>
+						<td class="td-width-min"><div>直播间打赏、弹幕、上墙、共享文件、素材等功能，烘托直播气氛、增加额外收入、增强互动性，还有布置作业、音频导出等功能，方便管理课堂。</div></td>
+						<td class="success"></td>
+						<td class="success"></td>
+					</tr>
+					<tr>
+						<td class="first-width" rowspan="8"><div>营销推广</div></td>
+						<td><div>分销</div></td>
+						<td class="td-width-min"><div>收费系列课、收费话题的助推器，借助分销商的分发实现收入翻几番。多达2000名分销课代表，支持查看推广明细、管理课代表。</div></td>
+						<td ><div>2000名课代表</div></td>
+						<td ><div>5000名课代表</div></td>
+					</tr>
+					<tr>
+						<td><div>拼课</div></td>
+						<td class="td-width-min"><div>通过低于原价的团购价以获得高转化的营销工具，95%开启拼课的课程销量明显上升，团长付费、邀请分佣双剑齐下，高效达成高分享、高转化。</div></td>
+						<td class="success"></td>
+						<td class="success"></td>
+					</tr>
+					<tr>
+						<td><div>砍价</div></td>
+						<td class="td-width-min"><div>利用低价引发听众分享，实现拉新促活、品牌曝光的效果，极大程度上帮助直播间提升流量、关注量和订单量。</div></td>
+						<td class="success"></td>
+						<td class="success"></td>
+					</tr>
+					<tr>
+						<td><div>vip会员</div></td>
+						<td class="td-width-min"><div>可自定义设置VIP会员期，按时长设置会员期，可适用于系列课、单次课等付费内容，方便您以多种形式售卖您的内容，更好地管理用户</div></td>
+						<td class="success"></td>
+						<td class="success"></td>
+					</tr>
+					<tr>
+						<td><div>定制VIP</div></td>
+						<td class="td-width-min"><div>实现课程可分类打包，实现会员分层管理，拥有尊贵特权，带有VIP标识。</div></td>
+						<td class="error"></td>
+						<td class="success"></td>
+					</tr>
+					<tr>
+						<td><div>通用优惠劵</div></td>
+						<td class="td-width-min"><div>用户可领取优惠券抵扣部分或全部商品定价金额，配合打折促销、结合CRM管理，助您快速转化和复购率。</div></td>
+						<td class="success"></td>
+						<td class="success"></td>
+					</tr>
+					<tr>
+						<td><div>课程优惠码</div></td>
+						<td class="td-width-min"><div>批量生成优惠码，可设置优惠金额、有效期并定向发送到指定用户群体，让用户尊享优越，促进转化。</div></td>
+						<td class="success"></td>
+						<td class="success"></td>
+					</tr>
+					<tr>
+						<td><div>好友赠送</div></td>
+						<td class="td-width-min"><div>付费用户将指定内容分享给好友，好友可以免费查看，实现内容的快速传播，持续吸引新用户购买。</div></td>
+						<td class="success"></td>
+						<td class="success"></td>
+					</tr>
+					<tr>
+						<td class="first-width" rowspan="2"><div>财务管理</div></td>
+						<td><div>收益管理</div></td>
+						<td class="td-width-min"><div>订单、流水、收益一手掌握，快捷查看多种收益明细。</div></td>
+						<td class="success"></td>
+						<td class="success"></td>
+					</tr>
+					<tr>
+						<td><div>收益提现</div></td>
+						<td class="td-width-min"><div>资金实时到账实时提现，单日提现高达15万，实现资金快速周转。</div></td>
+						<td><div>T+3，T+7，单日提现上限2万</div></td>
+						<td><div>实时结算，提现实时到账，单日上限20万</div></td>
+					</tr>
+					<tr>
+						<td class="first-width"><div>账户管理</div></td>
+						<td><div>账户管理</div></td>
+						<td class="td-width-min"><div>禁言用户管理、课代表管理、黑名单用户管理、管理员管理，便捷管理不同身份用户。</div></td>
+						<td class="success"></td>
+						<td class="success"></td>
+					</tr>
+					<tr>
+						<td class="first-width"><div>数据分析</div></td>
+						<td><div>数据分析</div></td>
+						<td class="td-width-min"><div>粉丝、访客、收益统计和用户行为分析，复购率、完播率、转化率top10等等多维度实时监测店铺运营效果，清晰统计每个课程的独立赞赏明细和入场券明细。</div></td>
+						<td class="success"></td>
+						<td class="success"></td>
+					</tr>
+					<tr>
+						<td class="first-width" rowspan="2"><div>粉丝裂变</div></td>
+						<td><div>任务邀请卡（粉丝通）</div></td>
+						<td class="td-width-min"><div>服务号对接粉丝通后，用户可通过分享任务邀请卡获得免费听课资格，实现快速裂变转播，为您带来粉丝增长，转化更多订单。</div></td>
+						<td class="success"></td>
+						<td class="success"></td>
+					</tr>
+					<tr>
+						<td><div>吸粉增粉</div></td>
+						<td class="td-width-min"><div>多路径引导用户关注服务号，实现快速涨粉；多场景下发消息模板，实现与粉丝的紧密互动。</div></td>
+						<td class="error"></td>
+						<td class="success"></td>
+					</tr>
+					<tr>
+						<td class="first-width" rowspan="4"><div>社群运营</div></td>
+						<td><div>动态</div></td>
+						<td class="td-width-min"><div>讲师可发布动态，学员可点赞，显示到首页，促进优质内容的传播和重要消息公告。</div></td>
+						<td class="success"></td>
+						<td class="success"></td>
+					</tr>
+					<tr>
+						<td><div>用户crm系统</div></td>
+						<td class="td-width-min"><div>记录听众在直播间的学习和消费情况，提供各类数据模型，从而建立一个客户信息的收集、管理、分析、利用的系统，帮助直播间实现以学员为中心的管理模式。</div></td>
+						<td class="error"></td>
+						<td class="success"></td>
+					</tr>
+					<tr>
+						<td><div>获取学员信息</div></td>
+						<td class="td-width-min"><div>轻松采集用户信息，数据分析实现用户精准画像，更可实现精准营销和个性化贴心服务。进行有效管理用户，增强用户黏性，提升课程购买率。</div></td>
+						<td class="error"></td>
+						<td class="success"></td>
+					</tr>
+					<tr>
+						<td><div>作业本</div></td>
+						<td class="td-width-min"><div>可关联课程，分享作业卡，也可在授课过程中发放。支持进行点评互动，监测您学员的学习效果</div></td>
+						<td class="success"></td>
+						<td class="success"></td>
+					</tr>
+					<tr>
+						<td class="first-width"><div>专属小程序</div></td>
+						<td><div>专属小程序</div></td>
+						<td class="td-width-min"><div>专属品牌小程序，无需开发，轻量化、使用更流畅，快速提升用户体验度。</div></td>
+						<td class="error"></td>
+						<td class="success"></td>
+					</tr>
+					<tr>
+						<td class="first-width" rowspan="4"><div>尊享特权</div></td>
+						<td><div>打卡训练营</div></td>
+						<td class="td-width-min"><div>使用打卡瓜分奖金+社群强互动+轻量小图文教学，提高学员粘性与到课率，降低拓新成本。</div></td>
+						<td class="error"></td>
+						<td class="success"></td>
+					</tr>
+					<tr>
+						<td><div>抢先体验</div></td>
+						<td class="td-width-min"><div>抢先体验所有新功能、享受最新优惠政策。</div></td>
+						<td class="error"></td>
+						<td class="success"></td>
+					</tr>
+					<!-- <tr style="border-bottom: none">
+						<th style="border-bottom: none">
+							<div class="item">
+								<div class="abstract">开放平台</div>
+								<div class="intro">
+									通过API接口服务将千聊接入你的应用。
+								</div>
+							</div>
+						</th>
+						<td style="border-bottom: none">
+							<div class="buy-panel">
+								商务洽谈
+							</div>
+						</td>
+
+					</tr > -->
+
+				</tbody>
+			</table>
+
+			<div class="expr">
+				<a class="expr-inner buy-button" href="javascript:;">
+					马上体验全部功能
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="help">
+			
+		<div class="product">
+			<div class="header">
+				产品
+			</div>
+			<a class="item" href="/official/introduction">
+				功能
+			</a>
+			<a class="item" href="/official/price">
+				专业版
+			</a>
+			<a class="item" href="/official/student">
+				我是学员
+			</a>
+		</div>
+		<div class="service">
+			<div class="header">
+				服务
+			</div>
+			<a class="item" href="https://mp.weixin.qq.com/s/gC5ciBTT0vjeFjQXn4yO9Q">
+				千聊功能全套教程
+			</a>
+			<a class="item" href="https://mp.weixin.qq.com/s/B3wg0AjGvN1BUmiW_-bEfQ">
+				常见问题
+			</a>
+			<a class="item" href="https://m.qlchat.com/video/admin/live/select">
+				管理后台
+			</a>
+			<a href="http://kaifang.qlchat.com/wechat/login.jsp" class="item">
+				服务号开放平台
+			</a>
+		</div>
+		
+		<div class="dynamic">
+			<div class="header">
+				动态
+			</div>
+			<a class="item" href="https://mp.weixin.qq.com/s/KZfhdJpqDU5I3DDV9a5uOA">
+				商业人物
+			</a>
+			<a class="item" href="https://www.pencilnews.cn/p/23132.html">
+				铅笔道11月峰会
+			</a>
+			<a class="item" href="https://36kr.com/p/5099176">
+				36氪10月融资
+			</a>
+			<a class="item" href="https://36kr.com/p/5065219">
+				36氪2月融资
+			</a>
+		</div>
+		<div class="contact-us">
+			<div class="header">
+				联系我们
+			</div>
+			<div class="contact-us-box">
+					
+					<img src="http://open.weixin.qq.com/qr/code?username=qianliaoservice" />
+					<div class="contact-us-content">
+						<a class="item" href="https://mp.weixin.qq.com/s?__biz=MzA4MTk0OTY1MQ==&mid=100002267&idx=1&sn=a64845ba9e722f6689a099b1fee72ac3&scene=19#wechat_redirect">
+							市场合作
+						</a>
+						|
+						<a class="item" href="https://www.liepin.com/company/8975743">
+							加入我们
+						</a>
+						<div class="phone">020-88525535 <span >（工作日9:30-19:00）</span></div>
+						<div class="address">地址：广州市天河区棠东东路5号B-328房</div>
+					</div>
+					<span class="qrcode-tips">加入讲师交流群，获取最新行业资讯。</span>
+			</div>
+			
+			
+		</div>
+	</div>
+
+	<footer class="footer">
+		Copyright &copy; 2016-2017 www.qlchat.com lnc. All Rights Reserved
+		<a href="http://www.qlchat.com" style="color: #333;">广州思坞信息科技有限公司</a> 版权所有
+		<div class="info-bar">
+			<a target="_black" href="http://www.miitbeian.gov.cn">粤ICP备15102474号-3</a>
+			<a target="_black" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44010602002623">粤公网安备 44010602002623号</a>
+			<a target="_black" href="http://img.qlchat.com/qlLive/liveCommon/wangwenzheng.jpg">粤网文【2017】8749-2794号</a>
+			<a target="_black" href="http://www.gdca.gov.cn">广东省通信管理局</a>
+			<a target="_black" href="http://www.gdis.cn">互联网清理整顿</a>
+		</div>
+	</footer>
+
+	<script>
+		var ele = document.querySelector('.middle');
+		var header = document.querySelector('header.header');
+		var goToTop = document.querySelector('.go-to-top');
+		var buyButtons = document.querySelectorAll('.buy-button');
+		var middle = document.querySelector('.middle');
+
+		goToTop.onclick = function (e) {
+			window.scrollTo(0, 0)
+		}
+		buyButtons.forEach(function(item){
+			item.onclick = function (e) {
+				var url = "https://m.qlchat.com/topic/live-studio-intro";
+				var search = window.location.search||'';
+				window.location.href=url+search;
+			}
+		})
+		window.onload = function () {
+			document.body.onscroll = function (e) {
+				if (middle.getBoundingClientRect().top < 0) {
+					goToTop.style.display = 'block';
+				} else {
+					goToTop.style.display = 'none';
+				}
+				var top = ele.getBoundingClientRect().top;
+				if (top < -100) {
+					header.style.background = 'white';
+					header.style.borderColor = '#f0f0f0';
+				} else {
+					header.style.background = 'transparent';
+				}
+			}
+		}
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+.un-family-card{
+    height: 100%;
+    background: #FEECED;
+    position: relative;
+    overflow: hidden;
+    & > div{
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 60px;
+        box-sizing: border-box;
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+    .un-family-head{
+        width: 100%;
+        margin-bottom: 90px;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    .un-family-cont{
+        padding: 0 32px;
+        .un-card-item{
+            margin-bottom: 110px;
+            margin-top: -14px;
+            position: relative;
+            box-shadow:0px 14px 22px 0px rgba(255,225,227,1);
+            background: #fff;
+            border-radius: 16px;
+            padding: 90px 32px 40px;
+            .un-card-taost{
+                position: absolute;
+                top: 2px;
+                right: 16px;
+                width: 68px;
+                height: 68px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                line-height: normal;
+                span{
+                    font-size: 32px; /*px*/
+                    color: #8B5A5F;
+                }
+            }
+            .un-card-title{
+                position: absolute;
+                top: -45.5px;
+                left: 0;
+                height: 114px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: url('./img/icon-header.png') no-repeat center;
+                background-size: auto 100%;
+                span{
+                    font-size: 36px; /*px*/
+                    color: #fff;
+                    font-weight: 500;
+                    padding-left: 48px; /*px*/
+                    &.li{
+                        background: url('./img/icon-li.png') no-repeat left center;
+                        background-size: 40px; /*px*/
+                    }
+                    &.card{
+                        background: url('./img/icon-card.png') no-repeat left center;
+                        background-size: 40px; /*px*/
+                    }
+                }
+            }
+        }
+        .un-family-info{
+            margin-bottom: 40px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            h4{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 50px;
+                font-size: 32px; /*px*/
+                color: #8B5A5F;
+                margin-bottom: 20px;
+                line-height: 1.5;
+            }
+            & > div{
+                padding: 20px 40px;
+                background-color: #FDF2EC;
+                background-image: linear-gradient(#FBEBE6 2px,transparent 0),
+                linear-gradient(to right,#FBEBE6 2px,transparent 0),
+                linear-gradient(#FBEBE6 1px,transparent 0),
+                linear-gradient(to right,#FBEBE6 1px,transparent 0);
+                background-position: 0 0;
+                background-size: 20px 20px,20px 20px, 100% 0, 0 100%;
+                border-radius: 16px;
+                p{
+                    font-size: 28px; /*px*/
+                    color: #A47075;
+                    line-height: 1.4;
+                    position: relative;
+                    padding-left: 20px;
+                    margin-bottom: 6px;
+                    &::last-child{
+                        margin-bottom: 0;
+                    }
+                    &::before{
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        background: #A47075;
+                        transform: translateY(-50%);
+                        content: "";
+                    }
+                    i{
+                        font-style: normal;
+                        color: #D0B0B0;
+                        &.red{
+                            color: #F45960;
+                        }
+                    }
+                }
+            }
+        }
+        .un-family-numb{
+            font-size: 32px; /*px*/
+            color: #8B5A5F;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: normal;
+            margin-bottom: 40px;
+            i{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                line-height: normal;
+                width: 36px; /*px*/
+                height: 34px; /*px*/
+                border-radius: 6px;
+                background: #F45960;
+                color: #fff;
+                font-style: normal;
+                margin: 0 5px;
+            }
+            span{
+                color: #F46168;
+            }
+            &.uni-family-more{
+                flex-direction: column;
+            }
+        }
+        .un-family-no-more{
+            margin-bottom: 24px;
+            text-align: center;
+            font-size: 28px; /*px*/
+            line-height: 1.4;
+            color: #AF9698;
+        }
+    }
+}
+.un-family-btn{
+    z-index: 9;
+    bottom: 16px;
+    left: 32px;
+    right: 32px;
+    height: 88px;
+    > div{
+        width: 100%;
+        height: 88px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: normal;
+        font-size: 44px; /*px*/
+        color: #fff;
+        font-weight: 500;
+        border-radius: 88px;
+        background: #879BD0;
+    }
+}
+
+.uni-share-dialog{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background: rgba(0,0,0,0.7);
+    .uni-share-img{
+        margin: 34px 26px 0 auto;
+        padding-top: 160px;
+        background: url('./img/icon-share.png') no-repeat right top;
+        background-size: 116px auto;
+        p{
+            font-size: 40px; /*px*/
+            color: #fff;
+            line-height: 1.4;
+            text-align: right;
+            font-weight: 500;
+        }
+    } 
+}

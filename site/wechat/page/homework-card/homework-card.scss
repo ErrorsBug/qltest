@@ -1,0 +1,79 @@
+html,body{
+	height:100%;
+	font-size: 0;
+	line-height: 0;
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+p {
+	padding: 0;
+	margin: 0;
+}
+
+.homework-card{
+	height: 100%;
+	position:relative;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	background: #EDEDED;
+	
+	.container{
+		flex: 1;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		img {
+			width: 620px;
+			height: auto;
+			box-shadow: 0 20px 40px rgba(0, 0, 0, .05);
+			border-radius: 6px;
+		}
+
+		.tips {
+			margin-top: 50px;
+			font-size: 24px; /* px */
+			color: #333;
+			text-align: center;
+			line-height: 1.4;
+			font-weight: 400;
+
+			p:first-of-type {
+				font-size: 30px; /* px */
+				color: #708DB7;
+				font-weight: bold;
+				padding-bottom: 10px;
+			}
+		}
+	}
+
+	.footer-btn {
+		height: 100px;
+		display: flex;
+		background: #FFF;
+		flex-shrink: 0;
+		box-sizing: border-box;
+		padding: 12px 40px;
+
+		& > span {
+			flex: 1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 32px; /* px */
+			color: #F73657;
+			border: 1px solid #F73657;
+			border-radius: 50px;
+			cursor: pointer;
+		}
+	}
+}
+
+#qrcode {
+	display: none;
+}

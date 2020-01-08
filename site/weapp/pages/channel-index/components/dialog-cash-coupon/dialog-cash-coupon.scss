@@ -1,0 +1,76 @@
+
+.dialog-cash-coupon {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index:9;
+
+    .dialog-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .btn-close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translate(50%, -50%);
+
+        .close-icon {
+            display: inline-block;
+            width: 60rpx;
+            height: 60rpx;
+        }
+    }
+
+    .dialog-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        padding: 50rpx 30rpx;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        border-radius: 10rpx;
+        z-index: 2;
+        width: 70%;
+
+        .dialog-title {
+            font-size: 32rpx;
+            line-height: 36rpx;
+            color: #424242;
+            text-align: center;
+
+            .cash-coupon-money {
+                color: #f85473;
+            }
+        }
+
+        .info {
+            text-align: center;
+            font-size: 24rpx;
+            line-height: 36rpx;
+            color: #999999;
+            margin-top: 20rpx;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            width: 85%;
+            height: 90rpx;
+            background-color: #f85473;
+            border-radius: 45rpx;
+            margin: 0 auto;
+            margin-top: 48rpx;
+        }
+    }
+}

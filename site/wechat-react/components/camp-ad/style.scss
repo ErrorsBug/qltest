@@ -1,0 +1,44 @@
+
+.buy-camp-ad{
+    padding: 32px 32px 0;
+    margin-bottom: 24px;
+    position: relative;
+    &.max-btm{
+        margin: 0 0 48px;
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+    span{
+        position: absolute;
+        top: 4px;
+        right: 16px;
+        width: 36px;
+        height: 36px; 
+        font-size: 16px; /*px*/
+        border: 2px solid #fff; /*px*/
+        background: #666;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        z-index: 10;
+    }
+}
+
+.buy-camp-animate-enter {
+    opacity: 0;
+}
+.buy-camp-animate-enter-active {
+    opacity: 1;
+    transition: opacity 1s, transform 1s
+}
+.buy-camp-animate-exit {
+    opacity: 1;
+}
+.buy-camp-animate-exit-active {
+    opacity: 0;
+    transition: opacity 1s, transform 1s;
+}

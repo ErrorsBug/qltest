@@ -1,0 +1,237 @@
+@import "../../../../assets/styles/mixins.scss";
+$red: #F73657;
+
+.p-search-result-university {
+    position: relative;
+    height: 100%;
+
+    .controller-container {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+
+        .type-list {
+            font-size: 0;
+            white-space: nowrap;
+            padding-left: 20px;
+        }
+        .type-item {
+            position: relative;
+            display: inline-block;
+            height: 64px;
+            color: #666;
+            font-size: 28px;
+            line-height: 40px;
+            padding: 0 20px;
+            &.active {
+                color: #333;
+                font-size: 36px;
+                line-height: 50px;
+                font-weight: bolder;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 36px;
+                    height: 6px;
+                    border-radius: 6px;
+                    background-color: $red;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+
+        .filter-list {
+            font-size: 0;
+            white-space: nowrap;
+            padding-right: 20px;
+        }
+        .filter-item {
+            position: relative;
+            display: inline-block;
+            color: #666;
+            font-size: 28px;
+            line-height: 40px;
+            padding: 0 20px;
+            &.money {
+                &::after {
+                    content: "";
+                    display: inline-block;
+                    width: 28px;
+                    height: 28px;
+                    background-image: url(../img/icon-ascending.png);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                    vertical-align: sub;
+                    margin-left: 8px;
+                    transform-origin: 50% 50%;
+                }
+                &.order-descending::after {
+                    transform: rotateZ(180deg);
+                }
+            }
+            &.active {
+                color: $red;
+                &.money::after {
+                    background-image: url(../img/icon-ascending-active.png);
+                }
+            }
+        }
+    }
+
+    .result-container {
+        position: static;
+        height: 100%;
+        overflow-y: auto;
+        padding-top: 88px;
+        box-sizing: border-box;
+        .result-course-list{
+            padding:32px;
+        }
+        .result-book-list{
+            padding: 32px;
+        }
+        .official-course {
+            .img-wrap {
+                &::before {
+                    content: "官方";
+                    position: absolute;
+                    z-index: 1;
+                    background: #F73657;
+                    box-sizing: border-box;
+                    display: flex;
+                    line-height: 1.1;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 16px; /*px*/
+                    padding: 5px;
+                    font-weight: 500;
+                    color: #fff;
+                    text-align: center;
+                    border-radius: 4px;
+                }
+            }
+        }
+
+        .common-course-item {
+            .info {
+                em {
+                    color: $red;
+                }
+            }
+        }
+
+        .live-item {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            padding: 32px 40px;
+            .avatar {
+                position: relative;
+                flex-shrink: 0;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                background-color: #f7f7f7;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                }
+            }
+            .info {
+                flex-grow: 1;
+                overflow: hidden;
+                padding-left: 24px;
+            }
+            .name {
+                color: #151515;
+                font-weight: bolder;
+                font-size: 30px;
+                line-height: 42px;
+                @include ellipsis-text;
+                em {
+                    color: #F73657;
+                }
+            }
+            .desc {
+                margin-top: 2px;
+                color: #999;
+                font-size: 24px;
+                line-height: 34px;
+                @include ellipsis-text;
+            }
+            .arrow {
+                flex-shrink: 0;
+                color: #979797;
+                font-size: 18px;
+                padding-left: 24px;
+            }
+
+            &.placeholder {
+                @keyframes liveItemPlaceholderWidthChange {
+                    0% {
+                        width: 160px;
+                    }
+                    50% {
+                        width: 320px;
+                    }
+                    100% {
+                        width: 160px;
+                    }
+                }
+                .name {
+                    width: 160px;
+                    height: 32px;
+                    background-color: #f7f7f7;
+                    animation: liveItemPlaceholderWidthChange 2s infinite;
+                }
+                .desc {
+                    margin-top: 12px;
+                    width: 120px;
+                    height: 16px;
+                    background-color: #f7f7f7;
+                }
+            }
+        }
+    }
+
+    .empty-result {
+        padding: 40px 0;
+        >div {
+            width: 148px;
+            height: 148px;
+            background-image: url(//img.qlchat.com/qlLive/liveCommon/empty-page-empty.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            margin: 0 auto;
+        }
+        p {
+            margin-top: 16px;
+            color: #999;
+            font-size: 24px;
+            line-height: 1.4;
+            text-align: center;
+        }
+    }
+    .search-course-item{
+        .cs-item-pic{
+            width: 192px;
+            height: 244px;
+        }
+    } 
+    em {
+        color: #f73657;
+    }
+}

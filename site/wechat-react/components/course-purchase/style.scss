@@ -1,0 +1,94 @@
+@import '../../assets/styles/base-definition.scss';
+
+.course-purchase{
+	flex-shrink: 0;
+	height:100px;/*px*/
+	padding:0 40px;
+	display: flex;
+	align-items: center;
+	background:#fff;
+	box-sizing: border-box;
+	position: relative;
+	z-index: 2;
+
+	.font-size-10 {
+		font-size: 20px; /*px*/
+	}
+
+	.buy-btn{
+		flex:1;
+		height: 76px; /*px*/
+		background:#F73657;
+		color:#fff;
+		border-radius: 76px;/*px*/
+		font-size:32px;/*px*/
+		line-height: 28px;/*px*/
+		@include flex-center;
+		white-space: nowrap;
+		margin-right: 18px;
+		&:last-child {
+			margin-right: 0;
+		}
+		p { 
+			text-align: center;
+		}
+		.discount-status{
+			color:#fff;
+			// margin-top:4px;
+			// font-size:24px;/*px*/
+			// @include flex-center;
+
+		}
+		.origin-price{
+			text-decoration: line-through;
+			opacity: .5;
+			margin-left: .5em;
+		}
+		s {
+			font-size: 20px;/*px*/
+			font-style: normal;
+			text-decoration: none;
+			&.price-more{
+				font-size: 32px !important; /*px*/
+			}
+		}
+		.price-num {
+			font-size: 36px;/*px*/
+			font-weight: bolder;
+		}
+	}
+	.group-btn{
+		border: 1px solid #F73657;/*px*/
+		color:#F73657;
+		background:#fff;
+	}
+	.style-white {
+		border: 1px solid #F73657;/*px*/
+		color:#F73657;
+		background:#fff;
+		.discount-status{
+			color: #F73657 !important;
+			.price-num{
+				font-size: 32px; /*px*/
+				font-weight: normal;
+			}
+		}
+	}
+	
+	.flex-center {
+		@include flex-center;
+	}
+
+	.camp-ti{
+		position: absolute;
+		top: -62px;
+		right: 0;
+		z-index: 100;
+		width: 416px;
+		height: 62px;
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+}

@@ -1,0 +1,25 @@
+{{#each topics}}
+<li class="tap-on tap-bgc on-log" log-region="topic_list" log-name="{{topic}}" log-business_id="{{id}}" log-business_type="topic" data-id="{{id}}" data-url="{{url}}">
+    <div class="detail">
+        <div class="pic">
+            {{#if backgroundUrl}}
+                <img class="img-default" data-imgloaded="false" data-imgsrc="{{img-format backgroundUrl '@200w_200h_1e_1c_2o_1l'}}" />
+            {{else}}
+                <img class="img-default" data-imgloaded="true" src="{{img-empty 'empty'}}" />
+            {{/if}}
+        </div>
+        <div class="desc">
+            <p class="title">{{topic}}</p>
+            <div class="tip">
+                <span class="time">{{dateFormat startTimestamp 'MM-dd hh:mm'}}</span>
+                {{#compare type '===' 'charge'}}
+                <span class="icon-moneycircle money"></span>
+                {{/compare}}
+            </div>
+        </div>
+        <div class="status {{#is-beginning startTimestamp}} beginning {{/is-beginning}}">
+            <span>{{status-show startTimestamp}}</span>
+        </div>
+    </div>
+</li>
+{{/each}}

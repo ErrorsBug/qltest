@@ -1,0 +1,30 @@
+<wxs src="../../../../../../comp/util.wxs" module="util" />
+
+<view class="exclusive">
+    <view class="block-header">
+        <text class="title">{{infos.name}}</text>
+        <view class="more-btn" data-code="{{infos.code}}" data-name="{{infos.name}}" data-log-name="{{infos.name}}" data-log-region="check-more-btn-right" catchtap="getMoreBtnTapHandle"><text>更多</text><text class="check-more-icon"></text></view>
+    </view>
+    <view class="list-wrap">
+        <view class="list-item" wx:for="{{infos.courses}}" wx:for-item="c" wx:key="{{index}}">
+            <image class="poster" src="{{c.indexLogo}}" data-course="{{c}}" catchtap="courseItemTapHandle" data-log-id="{{c.businessId}}" data-log-type="{{c.businessType}}" data-log-region="{{infos.code}}" data-log-position="{{index}}"></image>
+            <view class="info" catchtap="courseItemTapHandle" data-course="{{c}}">
+                <view class="name">{{c.businessName}}</view>
+                <view class="tips">
+                    <view class="tag" wx:if="{{c.flag}}">{{util.substring(c.flag, 0, 6)}}</view>
+                    <view class="category" wx:if="{{!c.flag}}">{{c.liveTagName}}{{c.courseTagName ? '.' + c.courseTagName : c.courseTagName}}</view>
+                    <view class="more-btn" catchtap="moreBtnTapHandle" data-index="{{index}}"></view>
+                </view>
+            </view>
+            <view class="details {{c.showDetails ? 'show' : ''}}" catchtap="detailsPanelTapHandle" data-index="{{index}}">
+                <view class="details-name">{{c.liveName}}</view>
+                <view class="details-category">{{c.businessType == 'channel' ? '共' + (c.planCount || c.topicCount) + '节' : (c.style === 'video' || c.style === 'videoGraphic' ? '视频课' : '音频课')}}·{{c.chargeType === 'flexible' ? '包月反复听' : '永久回听'}}</view>
+                <view class="tip-container">
+                    <view class="tip">{{c.startTimeParsed}}</view>
+                    <view class="tip-icon"></view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="check-more-btn" data-code="{{infos.code}}" data-name="{{infos.name}}" catchtap="getMoreBtnTapHandle" data-log-name="{{infos.name}}" data-log-region="check-more-btn-bottom"><text>查看更多</text><text class="check-more-icon"></text></view>
+</view>

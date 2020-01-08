@@ -1,0 +1,271 @@
+page{
+	padding-bottom: 100rpx;
+}
+
+.card-section
+{
+	height: 350rpx;
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.card
+	{
+		height: 290rpx;
+		width: 690rpx;
+		padding-top: 35rpx;
+		box-sizing: border-box;
+		// background-image: linear-gradient(174deg,#fcf7f0 0%,#eeddbf 100%), linear-gradient(#fef8ee,#fef8ee);
+		background-blend-mode: normal, normal;
+		border-radius: 6px;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		.live-logo
+		{
+			width: 100rpx;
+			height: 100rpx;
+			border-radius: 100%;
+			border: 4px solid #dab473;
+			flex-shrink: 0;
+		}
+
+		.live-name
+		{
+			font-size: 32rpx;
+			color: #544732;
+			font-weight: bold;
+			margin-top: 17rpx;
+		}
+
+		.slogan
+		{
+			margin-top: 28rpx;
+			width: 450rpx;
+			height: 30rpx;
+			color: #a58046;
+			font-size: 28rpx;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			&::before,
+			&::after
+			{
+				content: '';
+				position: absolute;
+				top: 50%;
+				width: 64rpx;
+				height: 1rpx;
+				background-color: #ae956e;
+			}
+			&::before
+			{
+				left: 0;
+			}
+			&::after
+			{
+				right: 0;
+			}
+			.icon-vip
+			{
+				width: 24rpx;
+				height: 27rpx;
+				margin-right: 10rpx;
+			}
+		}
+	}
+}
+
+.price-section
+{
+	background-color: #fff;
+	margin-top: 20rpx;
+}
+
+.space-between-line
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 30rpx;
+	padding-right: 60rpx;
+	position: relative;
+	height: 88rpx;
+	border-bottom: 1rpx solid #ebebeb;
+
+	&:last-child{
+		border-bottom: none;
+	}
+
+	.icon-arrow
+	{
+		width: 14rpx;
+		height: 22rpx;
+		position: absolute;
+		top: 50%;
+		right: 30rpx;
+		transform: translateY(-50%);
+	}
+
+	.left
+	{
+		color: #333;
+		font-size: 32rpx;
+	}
+
+	.coupon-text{
+		font-size: 28rpx;
+		.selected{
+			color: #c59f5f;
+		}
+		.not-select{
+			color: #999090;
+		}
+		.icon-coupon{
+			width: 32rpx;
+			height: 24rpx;
+			margin-left: 18rpx;
+		}
+	}
+
+	.charge-config
+	{
+		font-size: 28rpx;
+		color: #999;
+	}
+
+	.charge-text
+	{
+		color: #c59f5f;
+		.doller
+		{
+			font-size: 30rpx;
+		}
+		.charge
+		{
+			font-size: 50rpx;
+		}
+	}
+}
+
+.notice{
+	background-color: #fff;
+	padding: 30rpx 30rpx 44rpx;
+	margin-top: 20rpx;
+
+	.header{
+		font-size: 30rpx;
+		color: #333;
+	}
+
+	.notice-list{
+		margin-top: 40rpx;
+		.list-item{
+			margin-bottom: 18rpx;
+			color: #999;
+			display: flex;
+			align-items: flex-start;
+
+			.list-decoration{
+				font-size: 30rpx;
+				flex-shrink: 0;
+				margin-right: 17rpx;
+				border: 1rpx solid #999;
+				width: 30rpx;
+				height: 30rpx;
+				line-height: 30rpx;
+				border-radius: 100%;
+				text-align: center;
+			}
+
+			.list-content{
+				flex: 1;
+				font-size: 26rpx;
+				line-height: 36rpx;
+			}
+		}
+	}
+}
+
+.footer{
+	position: fixed;
+	background-color: #c59f5f;
+	width: 100%;
+	height: 98rpx;
+	line-height: 98rpx;
+	text-align: center;
+	font-size: 32rpx;
+	color: #fff;
+	left: 0;
+	bottom: 0;
+}
+
+.modal-bg{
+	position: fixed;
+	background-color: rgba($color: #000000, $alpha: .5);
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.charge-select-modal{
+	background-color: #fff;
+	position: fixed;
+	border-radius: 20rpx;
+	width: 590rpx;
+	padding: 50rpx 30rpx;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+
+	.header{
+		font-size: 36rpx;
+		color: #333;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.charge-list{
+		margin-top: 40rpx;
+		max-height: 583rpx;
+		overflow-y: auto;
+		padding: 0 30rpx;
+
+		.charge-item{
+			height: 106rpx;
+			padding: 0 30rpx;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			border-bottom: 1rpx solid #ebebeb;
+			&:last-child{
+				border-bottom: none;
+			}
+			.charge{
+				font-size: 34rpx;
+				color: #333;
+				font-weight: bold;
+			}
+			.radio-btn{
+				box-sizing: border-box;
+				width: 46rpx;
+				height: 46rpx;
+				border: 4rpx solid #ebebeb;
+				border-radius: 100%;
+				&.on{
+					border: none;
+					background-image: url('./img/icon-check.png?__inline');
+					background-size: cover;
+				}
+			}
+		}
+	}
+}

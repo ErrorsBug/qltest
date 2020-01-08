@@ -1,0 +1,352 @@
+.co-coupon-b-item
+{
+	list-style: none;
+	position: relative;
+	// width: calc(100% - 60px);
+	// margin: 20px auto ;
+	border-radius: 10px;
+	> .bg{
+		padding: 20px 30px;
+		background: url(./img/coupon-playing.png) no-repeat 0 -12px;
+		background-size: 100% 110%; 
+		// box-shadow:0px 4px 40px 0px rgba(0,0,0,0.05);
+	}
+	> .edit-check-wrap 
+	{	
+		position: absolute;
+		left: 42px;
+		top: 50%;
+		transform: translateY(-50%);
+
+		.edit-check-label 
+		{
+			display: inline-block;
+			position: relative;
+			
+			> .edit-checkbox 
+			{
+				display: none;
+			}
+			
+			> .edit-checkboxAvater 
+			{
+				background-color: #fff;
+				border: 1px solid rgba(0, 0, 0, 0.15);
+				border-radius: 100%;
+				display: inline-block;
+				height: 37px;
+				width: 37px;
+				vertical-align: middle;
+				line-height: 1;
+				box-sizing: border-box;
+				cursor: pointer;
+
+				&:after 
+				{
+					content: ' ';
+					display: block;
+					position: absolute;
+					width: 92px;
+					height: 120px;
+					left: -30px;
+					top: -38px;
+				}
+			}
+			> .checked
+			{
+				background: rgb(252, 249, 250) url(./img/coupon-on.png) no-repeat 0 0;
+				background-size: 100%;
+				border: none;
+				color: #fff;
+				text-align: center;
+				font-size: 24px;
+				&:before {line-height: 44px}
+			}
+		}
+		
+	}
+	> div.check-status 
+	{	
+		transform: (translateX(91px));
+		 > .flex-wrap, > .show-in-center 
+		{
+			margin-left: 0;
+		}
+	}
+	.show-in-center {
+ 
+
+		align-items: center;
+		justify-content: flex-start;
+		height: 72px;
+		font-size: 24px; /*px*/
+		color: #333;
+		.cou-left{
+			display: flex;
+			float: left;
+			width: 50%;
+			padding-top: 18px;
+		}
+		.des {  
+			line-height: 40px;
+		}
+
+		.switch-show {
+			color: #333;
+
+			.circle {
+				border-radius: 100px;
+
+				width: 36px; 
+				height: 36px; 
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				line-height: 36px;
+				margin: 0 10px 0 42px;
+
+				border: 2px solid #bbb; /*no*/
+				color: #fff;
+
+				&.active { 
+					color: #fff;
+					background: rgb(252, 249, 250) url(./img/coupon-on.png) no-repeat 0 0;
+					background-size: 100%;
+					border-color:transparent;
+				}
+
+				&.invalid {
+					color: #b7b7b7;
+				}
+				&.right{
+					margin-left: 10px;
+				}
+				position: relative;
+
+				&::after{
+					content: "";
+					position: absolute;
+					display: block;
+					width: 80px; /*px*/
+					height: 80px; /*px*/
+
+					left: -20px; /*px*/
+					top: -20px; /*px*/
+				}
+
+			}
+
+
+		}
+		
+		.icon_ask2 {
+			flex-grow: 1;
+			text-align: right;
+			padding-right: 30px;
+			font-size: 40px; /*px*/;
+			color: #bebebe;
+		}
+
+
+	}
+
+	.flex-wrap {
+		height: 200px;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		align-items: flex-start;
+		overflow: hidden;
+		position: relative;
+		cursor: pointer;
+		color: #fff;
+ 
+
+		&.overdue
+		{
+			&::after
+			{
+				content: '';
+				background-image: url(./img/overdue.png);
+				width: 120px;
+				height: 120px;
+				background-size: cover;
+				background-repeat: no-repeat;
+				position: absolute;
+				bottom: 18px;
+				right: 28px;
+			}
+	
+			.left
+			{
+				background-image: url(./img/coupon-overdue.png);
+			}
+		}
+	
+		.left
+		{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 223px;
+			flex-basis: 223px;
+			flex-shrink: 0;
+			height: 100%; 
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center; 
+			.money
+			{
+				font-size: 26px;
+				var
+				{
+					font-weight: 700;
+					&.large
+					{
+						font-size: 80px;
+					}
+					&.middle
+					{
+						font-size: 54px;
+					}
+					&.small
+					{
+						font-size: 40px;
+					}
+				}
+			}
+			.text
+			{
+				font-size: 20px;
+				margin-top: 20px;
+			}
+		}
+		.right
+		{
+			box-sizing: border-box; 
+			// background: radial-gradient(circle at top left,
+			// transparent 10px, #fff 0) top left,
+			// radial-gradient(circle at bottom left,
+			// transparent 10px, #fff 0) bottom left;
+			background-size: 100% calc(50% + 1px);/* no */
+			background-repeat: no-repeat;
+			height: 100%;
+			position: relative;
+			margin-left: 212px; 
+			border-left: none;
+			padding: 20px 0;
+			.info
+			{
+				height: 160px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: flex-start;
+				border-left: 1px dashed  #eee;
+				padding-left: 28px;
+				padding-top: 16px;
+				li
+				{
+					font-size: 22px;/* px */
+					margin-bottom: 6px ;
+					line-height: 28px;
+					.desc
+					{ 
+						margin-right: 20px;
+					}
+					.content
+					{ 
+						&:after
+						{
+							display: block;
+							content: '';
+						}
+					}
+				}
+			}
+			.remark
+			{ 
+				width: 100%;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				line-height: normal;
+			}
+	
+			.share-button
+			{
+				width: 40px;
+				height: 40px;
+				border-radius: 100%;
+				background-color: #f79964;
+				border: none;
+				outline: none;
+				position: absolute;
+				right: 50px;
+				top: 80px; 
+				cursor: pointer;
+	
+				&.overdue
+				{
+					background-color: #bcbcbc;
+				}
+	
+				&:before
+				{
+					position: absolute;
+					top: 0;
+					left:0;
+					content: '';
+					background-image: url(./img/coupon-share.png);
+					background-size: contain;
+					width: 40px;
+					height: 40px;
+				}
+				&::after
+				{
+					content: '';
+					width: 100px;
+					height: 100px;
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					transform: translate(-50%,-50%);
+				}
+			}
+		}
+
+	}
+
+	&.overdue{
+		
+		.bg{
+			background: url(./img/coupon-timeout.png) no-repeat 0 -12px;
+			background-size: 100% 110%; 
+		}
+		&.finish{ 
+			.bg{
+				background: url(./img/coupon-finish.png) no-repeat 0 -12px;
+				background-size: 100% 110%; 
+			}
+		}
+		.flex-wrap {
+			color:rgba(178,178,178,1);
+		}
+		.share-button{
+			display: none;
+		}
+		.show-in-center {
+			color:rgba(178,178,178,1);
+			.switch-show .circle{
+				color:#eee;
+				background: #eee;
+				border-color:transparent; 
+				&.active { 
+					background: #eee url(./img/coupon-un.png) no-repeat 0 0; 
+					background-size: 100%;
+				}
+			}
+		}
+	}
+
+}

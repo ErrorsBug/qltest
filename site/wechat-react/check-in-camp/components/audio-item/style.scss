@@ -1,0 +1,77 @@
+.components-audio-item-container {
+    position: relative;
+    height: 60px;
+    width: 300px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    background-color: #00C353;
+	border-radius: 60px;
+    border: solid 1px #00C353;
+    float: left;
+    
+    .left {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        
+        .audio {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            border-radius: 50%;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .audio-pause {
+            background-image: url("./img/icon-audio-play.png");
+        }
+
+        .audio-playing {
+            background-image: url("./img/icon-audio-playing.png");
+        }
+
+        // .text {
+        //     font-size: 28px;
+        //     color: #fff;
+        // }
+    }
+    .process{
+        flex: 1;
+        display: block;
+        height: 4px;/*px*/
+        width: 100%;
+        background: rgba(#fff, 0.5);
+        border-radius: 8px;
+
+        &.playing{
+            >div{
+                height: 100%;
+                width: 0;
+                background: #fff;
+            }
+        }
+        
+
+    }
+
+    .right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        
+
+        .count-down {
+            font-size: 22px;/*px*/
+            color: #fff;
+            margin-left: 10px;
+        }
+    }
+}

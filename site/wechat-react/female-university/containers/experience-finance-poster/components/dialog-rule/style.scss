@@ -1,0 +1,33 @@
+
+.efp-dialog{
+    position: fixed !important;
+    .efp-dialog-cont{
+        padding: 48px 72px 32px;
+    }
+    h4{
+        text-align: center;
+        font-size: 32px; /*px*/
+        color: #333;
+        margin-bottom: 16px;
+        font-weight: bold;
+        line-height: 1.5;
+    }
+    p{
+        font-size: 28px; /*px*/
+        color: #666;
+        line-height: 1.5;
+        margin-bottom: 10px;
+        &.txt-center{
+            text-align: center;
+        }
+    }
+    .efp-dialog-btn{
+        border-top: 1px solid #eee; /*no*/
+        height: 94px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 32px; /*px*/
+        color: #333;
+    }
+}

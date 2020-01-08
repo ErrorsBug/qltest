@@ -1,0 +1,329 @@
+.lucky-money-dialog{
+
+    .lucky-money-bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 4;
+    }
+    
+    .lucky-money-main{
+        position: absolute;
+        top:50%;
+        left: 50%;
+        width: 610px;
+        height: 500px;
+        border-radius: 20px;
+        transform: translate(-50%,-50%);
+        background:#fff;
+        padding: 120px 40px 0;
+        box-sizing: border-box;
+        z-index: 5;
+
+        .close-lucky-money{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            color: #fff;
+            border: solid 1px #fff;/*no*/
+            border-radius: 30px;
+            cursor: pointer;
+        }
+
+        .pay-for-head{
+            display: block;
+            width: 200px;
+            height: 200px;
+            border-radius: 200px;
+            position: absolute;
+            border: 2px solid #FFFFFF;
+            box-shadow: 0 3px 10px 0 rgba(0,0,0,0.20);
+            left: 50%;
+            top: -100px;
+            transform: translateX(-50%);
+
+        }
+        .pay-for-name{
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            color: #333;
+            font-size: 28px;/*px*/
+            margin-top: 10px;
+            max-width: 400px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 40px;
+            height: 40px;
+        }
+        .lucky-tips{
+            display: block;
+            color: #999;
+            font-size:28px;/*px*/
+            text-align: center;
+            margin-top: 10px;
+            line-height: 40px;
+            height: 40px;
+
+            p{
+                display: inline-block;
+                text-align: left;
+            }
+        }
+
+        .select-money{
+            margin-top: 30px;
+            .price-list{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+    
+                // &::before{
+                //     content: '';
+                //     position:absolute; 
+                //     display: block;
+                //     margin: 0 10px;
+                //     height: 1px;/*no*/
+                //     top: 0;
+                //     width: 100%;
+                //     background-color: #e5e5e5;
+                // }
+                // &::after{
+                //     content:'￥'; 
+                //     position:absolute; 
+                //     left: 50%; 
+                //     top: 0; 
+                //     display:block; 
+                //     text-align: center;
+                //     width: 20px; 
+                //     height: 20px; 
+                //     line-height: 20px; 
+                //     margin: -10px 0 0 -10px; 
+                //     font-size: 10px; 
+                //     color: #ccc; 
+                //     border-radius: 20px; 
+                //     border: solid 1px #ccc; 
+                //     background: #fff; 
+                //     box-shadow: 0 0 0 5px #fff;
+                // }
+    
+                li{
+                    width: 150px;
+                    height: 64px;
+                    background: #FBF0F0;
+                    border: 2px solid #F73657;
+                    border-radius: 8px;
+                    box-sizing: border-box;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 28px;/*px*/
+                    color: #F73657;
+                    cursor: pointer;
+                    margin-bottom: 20px;
+                    position: relative;
+    
+                    &.other {
+                        font-size: 24px;/*px*/
+                    }
+
+                    > span {
+                        position: absolute;
+                        width: 45px;
+                        height: 20px;
+                        color: #fff;
+                        border-radius: 8px 0 8px 0;
+                        background: #F73657;
+                        top: 0;
+                        left: 0;
+                        font-size: 14px;/*px*/
+                        text-align: center;
+                        line-height: 20px;
+                    }
+    
+                    // p{
+                    //     width: 100%;
+                    //     height: 80px;
+                    //     line-height: 80px;
+                    //     display: block;
+                    //     color: #d74751;
+                    //     font-size: 24px;
+                    //     text-align: center;
+                    //     border: 1px solid #d74751;/*no*/
+                    //     border-radius: 5px;
+                    //     box-sizing: border-box;
+                        
+                    // }
+                }
+    
+            }
+        }
+
+        .input-money {
+            .input-area {
+                width: 340px;
+                margin: 0 auto;
+                height: 100px;
+                border-bottom: 1px solid #979797;/*px*/
+                display: flex;
+
+                .icon {
+                    margin-left: 50px;
+                    width: 70px;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 70px;/*px*/
+                    color: #000;
+                }
+                .input-number {
+                    flex: 1;
+                    height: 100%;
+                    input {
+                        width: 100%;
+                        height: 100%;
+                        font-size: 70px;/*px*/
+                        color: #000;
+                        background-color: transparent;
+                        border: none;
+                        outline: none;
+                    }
+                }
+            }
+            .confirm-btn {
+                height: 70px;
+                width: 350px;
+                background-color: #F73657;
+                margin: 30px auto 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 36px;/*px*/
+                color: #fff;
+                cursor: pointer;
+                border-radius: 100px;
+            }
+            .return {
+                font-size: 24px;/*px*/
+                display: block;
+                margin: 20px auto 0;
+                cursor: pointer;
+                color: #66799E;
+                width: 100px;
+                text-align: center;
+            }
+        }
+
+        .support{
+            display: block;
+            height: 40px;
+            line-height: 40px;
+            color: #66799E;
+            font-size: 26px;/*px*/
+            text-align: center;
+            margin-top: 10px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .reward-pic {
+            margin: 25px auto;
+            display: block;
+            width: 440px;
+        }
+    }
+
+    .hide {
+        display: none;
+    }
+
+    // .other-money-dialog {
+    //     position: absolute;
+    //     top: 0;
+    //     z-index: 5;
+    //     background-color: rgba(0,0,0,.5);
+    //     width: 100%;
+    //     height: 100%;
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+
+    //     .main {
+    //         border-radius: 15px;
+    //         border: 1px solid #999;
+    //         width: 75%;
+    //         max-width: 600px;
+    //         background-color: #fff;
+    //         font-size: 27px;/*px*/
+
+    //         .header {
+    //             position: relative;
+    //             height: 100px;
+    //             width: 100%;
+    //             border-bottom: 1px solid #999;
+    //             display: flex;
+    //             justify-content: center;
+    //             align-items: center;
+
+    //             .icon_cancel {
+    //                 position: absolute;
+    //                 top: 10px;
+    //                 right: 10px;
+    //                 font-size: 40px;
+    //                 color: #999;
+    //             }
+    //         }
+
+    //         .body {
+    //             height: 240px;
+    //             width: 100%;
+    //             display: flex;
+    //             justify-content: center;
+    //             align-items: center;
+    //             flex-direction: column;
+
+    //             .input-area {
+    //                 width: 85%;
+    //                 position: relative;
+    //                 margin-bottom: 20px;
+    //                 input {
+    //                     border: 1px solid #999;
+    //                     width: 100%;
+    //                     height: 80px;
+    //                     font-size: 30px;/*px*/
+    //                     padding-left: 180px;
+    //                 }
+    //                 span {
+    //                     position: absolute;
+    //                     top: 50%;
+    //                     left: 20px;
+    //                     transform: translateY(-50%);
+    //                 }
+    //             }
+
+    //             .confirm-btn {
+    //                 width: 85%;
+    //                 height: 80px;
+    //                 background-color: #00acff;
+    //                 color: #fff;
+    //                 display: flex;
+    //                 justify-content: center;
+    //                 align-items: center;
+    //             }
+    //         }
+    //     }
+            
+
+    // }
+}

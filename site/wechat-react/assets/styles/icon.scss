@@ -1,0 +1,100 @@
+@mixin icon-success($size: 30px, $color: #fff) {
+    border-left: 2px solid $color;  /*no*/
+    border-bottom: 2px solid $color; /*no*/
+    width: $size * 0.6 ; /*px*/
+    height: $size * 0.6 / 16 * 8; /*px*/
+    transform: rotate(-45deg) translate(0,50%);
+}
+
+@mixin icon-play ($size: 30px, $color: #000, $backgroundColor: #fff) {
+    display: inline-block;
+    position: relative;
+    width: $size; /*px*/
+    height: $size; /*px*/
+    border: 2px solid $color; /*px*/ 
+    border-radius: 50%;
+    box-sizing: border-box;
+    background-color: $backgroundColor;
+
+    &:after {
+        content: ' ';
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 50%;
+        left: $size * 0.5; /*px*/
+        border-left: $size * 0.35 solid $color; /*px*/
+        border-top: $size * 0.25 solid transparent; /*px*/
+        border-bottom: $size * 0.25 solid transparent; /*px*/
+        transform: translate(-50%, -50%); /*px*/
+        box-sizing: border-box;
+    }
+}
+
+@mixin icon-pause ($size: 30px, $color: #000, $backgroundColor: #fff) {
+    display: inline-block;
+    position: relative;
+    width: $size; /*px*/
+    height: $size; /*px*/
+    border: 2px solid $color; /*px*/
+    border-radius: 50%;
+    box-sizing: border-box;
+    background-color: $backgroundColor;
+
+    &:after {
+        content: ' ';
+        position: absolute;
+        box-sizing: border-box;
+        width: 2px; /*px*/
+        background: $color;
+        height: 0.33 * $size;
+        top: 50%;
+        right: 50%;
+        transform: translate(4px, -50%); /*px*/
+    }
+
+    &:before {
+        content: ' ';
+        position: absolute;
+        box-sizing: border-box;
+        width: 2px; /*px*/
+        background: $color;
+        height: 0.33 * $size;
+        top: 50%;
+        left: 50%;
+        transform: translate(-4px, -50%); /*px*/
+    }
+}
+
+@mixin switch($color: #fff, $width: 52px) {
+    position: relative;
+    width: $width; /*px*/
+    height: $width * 8 / 13; /*px*/
+    border-radius: 16 / 52 * $width; /*px*/
+    background-color: $color;
+    outline: 0;
+    border: 1px solid #dfdfdf; /*no*/
+    box-sizing: border-box;
+    transition: background-color 0.1s, border 0.1s;
+
+    &:after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: ' ';
+        width: $width * 15 / 26; /*px*/
+        height: $width * 15 / 26; /*px*/
+        border-radius: 50%;
+        background-color: $color;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+        transition: transform 0.35s cubic-bezier(0.4, 0.4, 0.25, 1.35);
+    }
+}
+
+@mixin switch-open ($color, $width) {
+    background-color: $color;
+    border-color: $color;
+    &:after {
+        transform: translateX(20 / 52 * $width); /*px*/
+    }
+}

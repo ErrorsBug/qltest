@@ -1,0 +1,41 @@
+<view class="header">
+    <swiper 
+        wx:if="{{viewBanners.length}}"
+        class="swiper"
+        indicator-dots="{{true}}" 
+        indicator-active-color="#fff"
+        indicator-color="rgba(255,255,255,.3)"
+        autoplay="{{true}}"
+        interval="4000"
+        duration="{{800}}"
+        circular="{{true}}"
+    >
+
+        <swiper-item wx:for="{{viewBanners}}" wx:key="id" data-index="{{index}}" bind:tap="onBannerTap">
+            <image 
+                class="swiper-image"
+                src="{{item.imgUrl}}" 
+                mode="widthFix"
+            />
+        </swiper-item>
+    </swiper>
+
+    <image 
+        class="live-bg" 
+        mode="aspectFill" 
+        src="{{liveBg}}"
+        wx:if="{{!viewBanners.length}}"
+    ></image>    
+
+    <view class="focus-section" wx:if="{{showFollow}}">
+        <image wx:if="logoUrl" class="logo" src="{{logoUrl}}" mode="widthFix"></image>
+        <view class="num" wx:if="{{followNum}}">{{followNum}}</view>
+        <form class="focus-form" bind:submit="onFormSubmit" report-submit>
+            <!-- 多加一层隔绝form的黑盒样式 -->
+            <view class="btn-wrap">
+                <button class="focus-btn" formType="submit" wx:if="{{!isFollow}}" bind:tap="onFocusBtnTap">+ 关注</button>
+                <button class="focus-btn focused" formType="submit" wx:if="{{isFollow}}" bind:tap="onFocusBtnTap">已关注</button>
+            </view>
+        </form>
+    </view>
+</view>

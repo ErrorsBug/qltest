@@ -1,0 +1,206 @@
+
+/* 留言列表 */
+#container{
+	-webkit-overflow-scrolling: touch;
+}
+
+.message-list{
+	background-color:#fff;
+	padding:0;	
+}
+
+.message-list dd{
+	padding:30px 30px 30px 130px;
+	position:relative;
+	border-bottom: 1px solid #f0f0f0;/*no*/
+}
+.message-head{
+	display:block;
+	width:74px;
+	height:74px;
+	border-radius:80px;
+	overflow:hidden;
+	position:absolute;
+	left:30px;
+	top:36px;
+}
+.message-head img{
+	width:100%;
+	height:100%;
+}
+.message-author{
+	line-height:60px;
+	font-size:30px;/*px*/
+	color:#666;
+}
+.message-zan{
+	float:right;
+	font-size:28px;/*px*/
+	color:#888;
+	line-height:60px;
+}
+.message-zan:before{
+	content:'';
+	display:inline-block;
+	width:32px;
+	height:32px;
+	margin-right:20px;
+	background: url(../img/live/message-praise.png) center center no-repeat;
+	background-size:100% 100%;
+}
+.message-zan.on:before{
+	background: url(../img/live/message-praise-active.png) center center no-repeat;
+}
+.message-content{
+	display:block;
+	line-height:46px;
+	font-size:32px;/*px*/
+	color:#333;
+	margin-bottom:10px;
+}
+.message-day{
+	font-size:22px;/*px*/
+	color:#999;
+}
+
+.message-reply{
+	padding-left:20px;	
+}
+.message-reply-title{
+	display:block;
+	border-top:1px solid #e5e5e5;/*no*/
+	color:#666;
+	font-size:30px;/*px*/
+	padding:20px;
+	margin-top:20px;
+	line-height:40px;
+	position:relative;
+}
+.message-reply-title:before{
+	content:'';
+	display:block;
+	position:absolute;
+	top:20px;
+	left:0;
+	width:6px;
+	height:40px;
+	background-color:#59d365;
+	
+}
+.message-btn{
+    text-align:right;
+}
+.message-btn-reply{
+	color:#59d365;
+	font-size:28px;/*px*/
+	margin-right:30px;
+}
+.message-btn-into{
+	color:#fcac11;
+	font-size:28px;/*px*/
+}
+.message-btn-out{
+	color:#999;
+	font-size:28px;/*px*/
+}
+.message-reply-bg{
+	width:100%;
+	height:100%;
+	background-color:rgba(0,0,0,0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor:pointer;
+}
+.message-reply-top{
+	display:block;
+	margin-bottom:30px;
+	text-align:center;
+	font-size:30px;/*px*/
+	color:#333;
+	font-weight:bolder;
+	position:relative;
+}
+.main{
+	position:absolute;
+	top:50%;
+	left:0;
+	width:100%;
+	padding:0 30px;
+}
+.close-btn{
+	font-size:22px;/*px*/
+	right:-10px;
+	top:-10px;
+	position:absolute;
+	cursor:pointer;
+}
+.message-reply-sendbox{
+	padding:30px 40px 40px;
+	background-color:#fff;
+	margin-top:-250px;
+	border-radius:8px;
+}
+.message-reply-content{
+	display:block;
+	width:100%;
+	border:1px solid #f0f0f0;/*no*/
+	background-color:#f8f8f8;
+	color:#333;
+	border-radius:8px;
+	padding:20px;
+	font-size:28px;/*px*/
+	height:200px;
+	line-height:30px;
+	resize:none;
+}
+.message-reply-content:placeholder{
+	color:#ccc;
+}
+.message-reply-send{
+	display:block;
+	height:88px;
+	background-color:#ff4b69;
+	color:#fff;
+	font-size:32px;/*px*/
+	line-height:88px;
+	border-radius:8px;
+	text-align:center;
+	margin-top:40px;
+}
+/* 默认加载更多样式 */
+.loading-next,.no-more {
+    display: none;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    color: #909499;
+    padding: 20px 0;
+    font-size: 30px; /*px*/
+}
+
+.consult-dialog-container .co-dialog-ft button:first-child{
+	color:#333;
+	border-right:1px solid #f0f0f0;/*no*/
+}
+.consult-dialog-container .co-dialog-ft button:last-child{
+	color:#ff4b69;
+}
+.consult-dialog-container.co-dialog-cnt{
+	width:600px;
+	
+}
+.consult-dialog-container .co-content{
+	padding:60px 40px;
+	text-align:center;
+	line-height:44px;
+}
+.consult-dialog-container .dialog-msg{
+	color:#333;
+}
+.co-dialog-ft{
+	border-top:1px solid #f0f0f0;/*no*/
+}
+.consult-dialog-container .co-dialog-ft button{
+	font-family: "微软雅黑";
+}

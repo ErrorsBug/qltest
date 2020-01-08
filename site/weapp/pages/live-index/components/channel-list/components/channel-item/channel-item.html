@@ -1,0 +1,27 @@
+<view class="image-container" bindtap="handleItemClick">
+    <image class="channel-bg" mode="aspectFill" src="{{channel.headImage || '//img.qlchat.com/qlLive/liveCommon/normalLogo.png'}}"></image>
+
+    <view class="image-mask">
+        <image class="auth-num-icon" src="./img/join-num.png"></image>
+        {{channel.learningNum}}次学习
+    </view>
+</view>
+
+<text class="channel-title"> {{channel.name}} </text>
+
+<view class="channel-cate">
+    <view class="channel-money">
+        <block wx:if="{{system!=='ios'&&chargeItem.chargeMonths > 0}}"> ￥{{chargeItem.amount}} / {{chargeItem.chargeMonths}} 月 </block>
+        <block wx:elif="{{chargeItem.amount == 0}}"> <view class="free">免费</view> </block>
+        <block wx:elif="{{system!=='ios'&&chargeItem.discountStatus == 'Y'}}">￥{{chargeItem.discount}}</block>
+        <block wx:elif="{{system!=='ios'&&(chargeItem.discountStatus == 'P' || chargeItem.discountStatus == 'GP')}}">
+            <view class="group-money">￥{{chargeItem.discount}}</view> 
+        </block>
+        <block wx:elif="{{system!=='ios'}}">￥{{chargeItem.amount}}</block>
+    </view>
+    <view class="banned-money" wx:if="{{system!=='ios'&&(chargeItem.discountStatus == 'Y' || chargeItem.discountStatus == 'P' || chargeItem.discountStatus == 'GP')}}">
+        ￥{{chargeItem.amount || 0}}
+    </view>
+
+    <view class="lessens" > {{channel.topicCount}}节课 </view>
+</view>

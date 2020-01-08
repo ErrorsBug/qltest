@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<scroll-view scroll-y="true" lower-threshold="200" bindscrolltolower="lower">
+    <view class="focus-list">
+        <view wx:for="{{followers}}" wx:for-item="live" wx:key="id" class="list-item" data-liveid="{{live.id}}" bindtap="linkTolive">
+            <image class="logo" mode="aspectFill" src="{{live.logo ? live.logo:'http://img.qlchat.com/qlLive/liveCommon/liveLogo.png'}}"></image>
+            <view class="info">
+                <view class="title multi-elli">
+                    {{live.name}}
+                </view>
+                <view class="focus-num" wx:if="{{!live.isAuth}}">
+                    {{live.fansNum}}人关注
+                </view>
+                <view class="auth-tag" wx:if="{{live.isAuth}}">
+                </view>
+                <view class="focus-state focused">
+                    已关注
+                </view>
+            </view>
+        </view>
+        <view style="min-height:150rpx;">
+            <view wx:if="{{followers&&followers.length<=0}}">
+                <include src="../../comp/none-page/none-page.wxml" />
+            </view>
+            <view class="none-pay-text" wx:if="{{!hasLoad&&followers&&followers.length>0}}">没有更多</view>
+        </view>
+    </view>
+</scroll-view>
+<!-- <audio-box/> -->

@@ -1,0 +1,210 @@
+.fission-pay-success-page {
+    background: linear-gradient(360deg, rgba(255, 143, 92, 1) 0%, rgba(255, 49, 118, 1) 100%);
+    min-height: 100%;
+    position: relative;
+
+    & > .bg {
+        position: absolute;
+        width: 100%;
+        left: 0;
+    }
+
+    .bg-top {
+        height: 500px; /*px*/
+        top: 0;
+        background: url("./img/bg_1.png") 0 0 no-repeat;
+        background-size: 100% 500px; /*px*/
+    }
+
+    .bg-middle {
+        top: 500px; /*px*/
+        height: calc(100% - 500px - 456px); /*px*/
+        background: url("./img/bg_2.png") 0 0 no-repeat;
+        background-size: 100% 100%; /*px*/
+    }
+
+    .bg-bottom {
+        height: 456px; /*px*/
+        bottom: 0;
+        background: url("./img/bg_3.png") 0 0 no-repeat;
+        background-size: 100% 456px; /*px*/
+    }
+
+    .main-wrapper {
+        position: relative;
+        z-index: 1;
+    }
+
+    .header {
+        padding-top: 96px;/*px*/
+
+        & > i {
+            display: block;
+            width: 108px;/*px*/
+            height: 108px;/*px*/
+            margin: 0 auto;
+            background: url("./img/icon_success.png") 0 0 no-repeat;
+            background-size: 100% 100%;
+        }
+
+        & > p {
+            margin: 26px 60px 0;/*px*/
+            font-size: 44px;/*px*/
+            color: #fff;
+            text-align: center;
+            font-weight: bold;
+            position: relative;
+
+            &:before, &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-size: 136px 20px;/*px*/
+                width: 136px;/*px*/
+                height: 20px;/*px*/
+            }
+
+            &:before {
+                background-image: url("./img/icon_left.png");
+                left: 0;
+            }
+
+            &:after {
+                background-image: url("./img/icon_right.png");
+                right: 0;
+            }
+        }
+    }
+
+    .main-card {
+        margin: 50px auto 0;/*px*/
+        width: 710px;/*px*/
+        height: 786px;/*px*/
+        box-sizing: border-box;
+        background: url("./img/card.png") 6px 0 no-repeat;/*px*/
+        background-size: 710px 786px;/*px*/
+        padding: 20px 40px 60px;/*px*/
+        border-radius: 16px;/*px*/
+        position: relative;
+
+        .title {
+            font-size: 32px;/*px*/
+            font-weight: 500;
+            color: #333333;
+            line-height: 44px;/*px*/
+            text-align: center;
+            margin-top: 50px;/*px*/
+        }
+
+        .tip {
+            font-size: 40px;/*px*/
+            font-weight: 500;
+            color: #fff;
+            text-align: center;
+            margin-top: 24px;/*px*/
+        }
+
+        .tipbar {
+            width: 404px;/*px*/
+            height: 68px;/*px*/
+            line-height: 68px;/*px*/
+            display: block;
+            margin: 0 auto;
+            background: url('./img/tip_bg.jpg') no-repeat center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .arrow-wrapper {
+            display: block;
+            position: absolute;
+            height: 100%;
+            top: 50%;
+            transform: translateY(-50%);           
+        }
+        
+        .arrow-wrapper.left {
+            left: 20px;
+        }
+        
+        .arrow-wrapper.right {
+            right: 20px;
+        }
+        
+        .arrow-icon {
+            display: inline-block;
+            width: 12px;/*px*/
+            height: 22px;/*px*/
+            position: relative;
+            top: -2px;
+            opacity: 0;
+        }
+        
+        .arrow-left {
+            background: url('./img/tip_arrow_left.png') no-repeat center;
+            background-size: cover;
+        }
+        
+        .arrow-right {
+            background: url('./img/tip_arrow_right.png') no-repeat center;
+            background-size: cover;
+        }
+
+        $arrow-list: 1 2 3;
+
+        @for $i from 1 to length($arrow-list)+1 {
+            .ani-#{$i} {
+                animation: arrowDisplay#{$i} 1s ease-in infinite;
+            }
+        }
+
+        @keyframes arrowDisplay1 {
+            0% {opacity: 0;}
+            25% {opacity: 1;}
+            100% {opacity: 1;}
+        }
+        
+        @keyframes arrowDisplay2 {
+            0% {opacity: 0;}
+            25% {opacity: 0;}
+            50% {opacity: 1;}
+            75% {opacity: 1;}
+            100% {opacity: 1;}
+        }
+
+        @keyframes arrowDisplay3 {
+            0% {opacity: 0;}
+            50% {opacity: 0;}
+            75% {opacity: 1;}
+            100% {opacity: 1;}
+        }
+
+        .qrCode {
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            
+            img {
+                padding: 304px 192px 144px;/*px*/
+                width: 338px;/*px*/
+                height: 338px;/*px*/
+                display: block;
+            }
+        }
+
+        .bottomText {
+            font-size: 24px;/*px*/
+            font-weight: 400;
+            color: #999999;
+            line-height: 34px;/*px*/
+            text-align: center;
+            margin-bottom: 30px;/*px*/
+            margin-top: 446px;/*px*/
+        }
+    }
+}

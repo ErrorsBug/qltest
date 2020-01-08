@@ -1,0 +1,20 @@
+.uni-activity-url{
+    height: 100%;
+    position: relative;
+    .scroll-content-container{
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        overflow-y: scroll;
+        background-color: #fff;
+    }
+    .uni-activity-img{
+        width: 100%;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}

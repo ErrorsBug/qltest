@@ -1,0 +1,36 @@
+.live-main-top-tab-bar {
+    background-color: #ededed;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 88px;
+    line-height: 88px;
+    font-size: 28px; /*px*/
+    color: #666666;
+    display: flex;
+    .tab {
+        flex: 1;
+        position: relative;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        &.active {
+            color: #333333;
+            font-size: 32px; /*px*/
+            font-weight: bold;
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                width: 36px;
+                height: 6px;
+                background: #F73657;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}

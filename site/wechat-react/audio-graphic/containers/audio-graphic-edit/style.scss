@@ -1,0 +1,164 @@
+.audio-grapic-edit{
+    position: absolute;
+
+    .edit-ul{
+        display: block;
+        background: #fff;
+        margin-top: 20px;
+
+        li{
+            display: flex;
+            height: 90px;
+            align-items: center;
+            padding: 0 10px 0 30px;
+            cursor: pointer;
+            border-bottom: solid 1px #f0f0f0;/* px */
+
+            &:last-child{
+                border: none;
+            }
+
+            .title{
+                display: block;
+                color: #444444;
+                font-size: 30px;/* px */
+            }
+            .content{
+                flex: 1;
+                display: block;
+                height: 50px;
+                line-height: 50px;
+                color: #999999;
+                font-size: 29px;/* px */
+                text-align: right;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin-left: 20px;
+            }
+            .icon_enter{
+                display: inline-block;
+                margin:0 20px;
+                color: #ccc;
+            }
+        }
+    }
+
+    .topic-name-dialog{
+
+        .change-topic-name{
+            color: #b2b2b2;
+            height: 90px;
+            margin: 0 40px;
+            position: relative;
+
+            input {
+                width: 100%;
+                height: 90px;
+                line-height: normal;
+                font-size: 30px; /*px*/
+                padding: 0 16px;
+                border: none;
+                outline: none;
+                background: #f6f6f6;
+                padding-right:40px;
+            }
+        }
+    }
+
+    .topic-background-dialog{
+        text-align: center;
+
+        .change-topic-bg{
+            position: relative;
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            overflow: hidden;
+
+            img{
+                width: 100%;
+                height: 100%;
+            }
+
+            div,input{
+                position: absolute !important;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                border: none;
+                display: block;
+                cursor: pointer;
+            }
+
+        }
+
+    }
+
+
+    .channel-list-dialog{
+        ul{
+            display: block;
+            padding: 0 30px;
+            box-sizing:  border-box;
+            max-height: 500px;
+            overflow: auto;
+            overflow-x:hidden; 
+            li{
+                display: flex;
+                width: 100%;
+                align-items: center;
+                font-size: 24px;/* px */
+                height: 80px;
+                color: #999999;
+                border-bottom: solid 1px #f0f0f0;/* no */
+                cursor: pointer;
+
+                &:last-child{
+                    border: none;
+                }
+
+                pre{
+                    flex: 1;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                i{  
+                    color: #f73657;
+                    font-size: 30px;/* px */
+                    margin-left: 20px;
+                }
+
+            }
+        }
+    }
+
+    .tips-box{
+        text-align: center;
+        color: #999999;
+        font-size: 24px;/* px */
+        padding: 20px;
+        line-height: 35px;/* px */
+
+        b{
+            color: #f73657;
+            font-weight: normal;
+        }
+    }
+
+    .btn-submit{
+        display: block;
+        height: 90px;
+        border-radius: 100px;
+        color: #fff;
+        background: #f73657;
+        text-align: center;
+        line-height: 90px;
+        font-size: 30px;/* px */
+        margin: 30px 30px;
+    }
+
+}

@@ -1,0 +1,22 @@
+
+.ch-idea-empty{
+    text-align: center; 
+    flex: 1;
+    display: flex;
+    /* align-items: center; */
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .ch-idea-to-share{
+        font-size:28px; 
+        color:rgba(102,102,102,1);
+        margin-bottom: 16px;
+        line-height:40px;
+    }
+    .ch-idea-to-edit{
+        font-size:26px; 
+        color:rgba(224,65,79,1);
+        line-height:36px;
+    }
+}

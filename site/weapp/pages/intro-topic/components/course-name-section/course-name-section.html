@@ -1,0 +1,11 @@
+<view class="course-name-section">
+    <text class="name multi-lines"> {{topicPo.topic}}</text>
+    <view class="other-info">
+        <view class="time">时间: {{startTime}}</view>
+        {{topicPo.browseNum}}次学习
+    </view>
+    <view class="charge-info" wx:if="{{showCharge&&!systemIos}}">
+        <image class="vip-tag" src="./img/vip-tag.png" mode="widthFix" wx:if="{{vipInfo.isOpenVip==='Y'}}"></image>
+        ￥{{topicCharge}}
+    </view>
+</view>            

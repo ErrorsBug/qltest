@@ -1,0 +1,17 @@
+.company-box{
+    padding: 49px 81px;
+    .real-head{
+        background: url("./img/ec.png") no-repeat center top;
+        padding-top: 180px;
+        background-size: 161px;
+        font-size: 32px; /*px*/
+        color: #333;
+        margin-bottom: 45px;
+    }
+    p{
+        font-size: 28px; /*px*/
+        color:#999;
+        line-height: 1.4;
+        text-align: left;
+    }
+}

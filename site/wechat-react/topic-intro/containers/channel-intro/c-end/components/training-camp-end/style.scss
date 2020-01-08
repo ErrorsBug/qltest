@@ -1,0 +1,18 @@
+.camp-end-box{
+  display: flex;
+  margin-top: 35px;
+  align-items: center;
+  .camp-cutoff-date, .camp-start-date,span{
+    font-size: 28px; /*px*/
+    line-height: 1.4;
+  }
+  .camp-cutoff-date{
+    color: #F73657;
+  }
+  .camp-start-date,span{
+    color: #666;
+  }
+  span{
+    padding: 0 5px;
+  }
+}

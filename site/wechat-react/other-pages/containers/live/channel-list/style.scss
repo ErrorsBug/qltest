@@ -1,0 +1,47 @@
+.live-channel-list-container {
+    .channel-tab-bar {
+        background-color: #fbfbfb;
+        border-bottom: 1px solid #e9e9e9; /*no*/
+        overflow: hidden;
+        
+        ul {
+            overflow: auto;
+            height: 80px;
+            white-space: nowrap;
+            padding-right: 30px;
+
+            li {
+                display: inline-block;
+                height: 100%;
+                padding: 0 30px;
+                color: #3a3a3a;
+                font-size: 30px; /*px*/
+                text-align: center;
+                line-height: 80px;
+                cursor: pointer;
+
+                &.active {
+                    color: #f73657;
+                    border-bottom: 4px solid #f73657; /*px*/
+                }
+            }
+        }
+    }
+
+    .scroll-container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-top: 2px;
+
+        &.has-top {
+            top: 80px;
+        }
+
+        .scroll-to-load {
+            padding-bottom: 30px;
+        }
+    }
+}

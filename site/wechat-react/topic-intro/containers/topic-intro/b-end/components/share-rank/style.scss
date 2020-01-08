@@ -1,0 +1,46 @@
+
+// 分享榜
+.share-rank-container {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    padding: 0 60px 0 30px;
+    margin-top: 20px;
+    background: #fff;
+    position: relative;
+
+    &:before {
+        position: absolute;
+        right: 30px;
+        color: #807878;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .share-rank-label {
+        color: #333;
+        font-size: 28px;/* px */
+    }
+
+    .share-rank-tip {
+        color: #807878;
+        font-size: 28px;/* px */
+        text-align: right;
+        padding-right: 30px;
+        flex: 1;
+    }
+
+    .share-list {
+        flex: 1;
+        text-align: right;
+
+        img {
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 1px solid #f0f0f0;/* no */
+            margin-left:-20px;
+        }
+    }
+}

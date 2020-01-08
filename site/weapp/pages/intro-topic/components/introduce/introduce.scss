@@ -1,0 +1,93 @@
+@import '../../../../comp/wxParse/wxParse.wxss';
+
+/*介绍信息区域*/
+.detail-section{
+    background-color: #fff;
+    margin-top: 17rpx;
+    display: block;
+    width: 100%;
+}
+
+.detail-intro{
+    height: 104rpx;
+    line-height: 104rpx;
+    color: #45494c;
+    font-size: 32rpx;
+    padding: 0 30rpx;
+    font-weight: bold;
+}
+
+.detail-main{
+    padding: 0 30rpx 0;
+    overflow: hidden;
+}
+
+.show-detail {
+    padding-bottom: 40rpx;
+}
+
+.hide-detail {
+    height: 400rpx;
+}
+
+.detail-title{
+    font-size: 32rpx;
+    color: #424242;
+    line-height: 40rpx;
+    padding: 0 0 30rpx;
+    display: block;
+}
+
+.detail-text{
+    font-size: 28rpx;
+    color: #736c6c;
+    margin-top: 10rpx;
+    line-height: 42rpx;
+    word-break: break-all;
+}
+
+.detail-profile-text{
+    display: block;
+    font-size: 28rpx;
+    color: #736c6c;
+    margin-top: 10rpx;
+    line-height: 42rpx;
+    word-break: break-all;
+}
+
+.expand-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 88rpx;
+    font-size: 26rpx;
+    color: #999090;
+    border-top: 1rpx solid #f0f0f0;
+}
+
+.detail-profile-image-container{
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.detail-profile-image{
+    margin-top: 20rpx;
+    max-width: 100%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.no-content{
+    height: 200rpx;
+    line-height: 200rpx;
+    text-align: center;
+    font-size: 26rpx;
+    color: #999090;
+}
+.rich-text-box{
+    background: #fff;
+    image{
+        max-width: 100%;
+    }
+}

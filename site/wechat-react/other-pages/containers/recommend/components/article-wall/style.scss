@@ -1,0 +1,52 @@
+@import "~slick-carousel/slick/slick.css";
+.article-wall-container{
+    width: 100%;
+    background-color: #fff;
+    display: none;
+    &.show{
+        display: block;
+    }
+    h1{
+        padding: 42px 30px 13px;
+        font-size: 32px;/* px */
+        font-weight: bold;
+        line-height: 1;
+        color: #424242;
+    }
+    .article-list{
+        padding: 12px 0 18px;
+        height: 200px;
+    }
+    .article-list-item{
+            padding: 8px 32px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: nowrap;
+            cursor: pointer;
+            .flag{
+                padding: 4px 5px;
+                font-size: 18px;/* px */
+                border-radius: 4px;
+                border: 1px solid #f73657;
+                color: #f73657;
+                flex-shrink: 0;
+                margin-right: 18px;
+            }
+            >p{
+                color: #4d4d4d;
+                font-size: 28px;/* px */
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                line-height: normal;
+            }
+            .name{
+                font-size: 28px;/* px */
+                color: #b8b0b0;
+                flex-shrink: 0;
+                margin-left: 15px;
+            }
+        }
+}

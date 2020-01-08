@@ -1,0 +1,32 @@
+.riding-latern {
+    padding: 20px;
+    cursor: pointer;
+    background: #FFF9E6;
+    color: #FF9F00;
+    font-size: 24px; /* px */
+
+    .riding-latern-wrap {
+        display: flex;
+        align-items: center;
+
+        .img-wrap {
+            margin-right: 10px;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            background: url(./img/icon-paomadeng.png) center center no-repeat;
+            background-size: 100% auto;
+        }
+        .content-wrap {
+            flex: 1;
+            width: 0;
+            overflow: hidden;
+            .content {
+                display: inline-block;
+                white-space: nowrap;
+                line-height: normal;
+            }
+        }
+    }
+}

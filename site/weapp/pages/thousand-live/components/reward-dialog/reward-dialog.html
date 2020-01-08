@@ -1,0 +1,19 @@
+<view class="reward-dialog" hidden="{{!isShow}}">
+    <view class="reward-dialog-main">
+        <view class="reward-dialog-btn-close-lm" bindtap="onHide">
+            <image class="reward-dialog-close-icon" src="./img/icon-close-lm.png" mode="widthFix"></image>
+        </view>
+        <image class="reward-dialog-pay-for-head" src="{{speakCreateByHeadImgUrl}}" mode="widthFix"></image>
+        <text class="reward-dialog-pay-for-name"> {{speakCreateByName}}</text>
+        <text class="reward-dialog-tips"> {{introduce}}</text>
+        <view class="reward-dialog-line">
+        </view>
+        <view class="reward-dialog-items">
+            <view class="reward-dialog-price-item" wx:for="{{prices}}" wx:key="index" data-money="{{item}}" bindtap="onMoneyclick">
+                <text class="reward-dialog-lm-price-text"> {{item}}元</text>
+            </view>
+        </view>
+        <!--<view class="btn-other-price">其他金额</view>-->
+        <image wx:if="{{pic !=''}}" class="reward-dialog-banner" mode="widthFix" src="{{pic}}"></image>
+    </view>
+</view>

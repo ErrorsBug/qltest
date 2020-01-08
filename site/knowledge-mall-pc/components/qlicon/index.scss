@@ -1,0 +1,16 @@
+/**
+ * 借用ant的样式
+ * （持续维护）
+ */
+
+.ant-menu-item .qlicon, .ant-menu-submenu-title .qlicon {
+  min-width: 14px;
+  margin-right: 8px;
+  transition: font-size 0.15s cubic-bezier(0.215, 0.61, 0.355, 1), margin 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+
+.qlicon-spin:before {
+  display: inline-block;
+  animation: loadingCircle 1s infinite linear;
+}

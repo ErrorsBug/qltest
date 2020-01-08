@@ -1,0 +1,36 @@
+.complain {
+    .complain-reason {
+        margin: 30px 0px 30px 0px;
+        padding: 0px 30px 0px 30px;
+        color: #999;
+        font-size: 28px;
+    }
+    .complain-reason-list {
+        background-color: #fff;
+        overflow: hidden;
+        position: relative;
+            dd {
+                color: black;
+                font-size: 28px;/*px*/
+                padding-top: 30px;
+                padding-bottom: 30px;
+                margin:0 30px;
+                border-top: solid 1px #f0f0f0;/*no*/
+
+                &::after {
+                    content: "";
+                    float: right;
+                    width: 28px;/*px*/
+                    height: 36px;/*px*/
+                    background-image: url(./img/link.png);
+                    background-size:14px 24px;/*px*/
+			        background-repeat: no-repeat;
+                }
+
+                &:first-of-type{
+                    border:none;
+                }
+            }
+      
+    }
+}

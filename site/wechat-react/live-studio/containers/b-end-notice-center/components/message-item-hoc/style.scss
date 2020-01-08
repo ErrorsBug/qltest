@@ -1,0 +1,43 @@
+.message-item {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 23px 20px 30px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 6px;
+
+    &:not(:last-child) {
+        margin-bottom: 40px;
+    }
+
+    &.never-read::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        width: 14px;
+        height: 14px;
+        background: rgba(247, 54, 87, 1);
+    }
+    .header {
+        margin-bottom: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .title {
+            font-size: 30px; /*px*/
+            font-weight: 500;
+            color: rgba(51, 51, 51, 1);
+            line-height: 42px;
+        }
+        .time {
+            font-size: 22px; /*px*/
+            font-weight: 400;
+            color: rgba(153, 153, 153, 1);
+            line-height: 30px;
+        }
+    }
+}

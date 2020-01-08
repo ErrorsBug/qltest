@@ -1,0 +1,49 @@
+@import "../../common.scss";
+
+.channel-preview{
+    height: 210rpx;
+    padding: 0 30rpx;
+    background-color: #fff;
+
+    .content{
+        height: 100%;
+        width: 100%;
+        border-bottom: 1rpx solid #f0f0f0;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        box-sizing: border-box;
+        .channel-header{
+            width: 240rpx;
+            border-radius: 8rpx;
+            margin-right: 20rpx;
+            flex-shrink: 0;
+        }
+
+        .info{
+            .title{
+                color: #383838;
+                font-size: 30rpx;
+                line-height: 44rpx;
+                font-weight: 700;
+            }
+            .price{
+                margin-top: 30rpx;
+                font-size: 24rpx;
+                color: #333;
+                .discount-charge{
+                    color: #f84c69;
+                    display: inline-block;
+                }
+                .normal-charge{
+                    color: #b2b2b2;
+                    font-size: 22rpx;
+                    text-decoration: line-through;
+                    display: inline-block;
+                    margin-left: 8rpx;
+                }
+            }
+        }
+    }
+}

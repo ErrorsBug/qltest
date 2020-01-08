@@ -1,0 +1,81 @@
+<view class="share-card-container" wx:if="{{system != 'ios'}}">
+    <view class="header">
+        <view class="notice-wrap">
+            <image class="notice-icon" src="./img/notice-icon.png" mode="aspectFit"></image>
+            <view class="notice">
+                <text wx:if="{{!!notice1}}" class="notice-content" animation="{{animationData1}}"> {{notice1}} </text>
+                <text wx:if="{{!!notice2}}" class="notice-content next-notice" animation="{{animationData2}}"> {{notice2}} </text>
+            </view>
+        </view>
+
+        <view class="share-earning" wx:if="{{switch === 'Y' && isDistribution}}">
+            <image class="earning-icon" src="./img/money-icon.png" mode="aspectFit"></image>
+            分享赚
+            <view class="earning-text">￥{{shareData.shareMoney}}元</view>
+        </view>
+    </view>
+
+    <swiper 
+        class="swiper"
+        style="{{shareCardWrapHeight}}"
+        indicator-dots="true" 
+        previous-margin="100rpx"
+        next-margin="100rpx"
+        indicator-active-color="#f85473"
+        indicator-color="#e5e5e5"
+
+        bindchange="onChangeSwiper"
+        bindanimationfinish="onAnimatinoFinish"
+    >
+        <block wx:for="{{imgUrls}}" wx:for-index="idx" wx:for-item="shareCardItem">
+            <swiper-item class="swiper-item">
+                <view 
+                    id="shareCardItem"
+                    class="image-wrap"
+                    style="{{shareCardHeight}}"
+                >
+                    <image class="icon-loading" src="./img/loading.gif" mode="widthFix"></image>
+                    <image 
+                        src="{{shareCardItem}}"
+                        class="card {{activeIndex == idx && 'active'}}"
+                        mode="aspectFill"
+                    />
+                </view>
+            </swiper-item>
+        </block>
+    </swiper>
+
+    <view class="point-for-attention">
+        <!-- <form >
+            <button class="btn-focus" open-type="contact" plain="true" session-from="shareCard" bind:tap="onFocusClick">
+                <image src="./img/focus-icon.png"></image>
+            </button>
+        </form> -->
+        
+        
+        <view class="attention-header">
+            <image src="./img/share-notice-icon.png" mode="aspectFit"></image>
+            分享须知
+        </view>
+
+        <view class="attention-content">
+            <view>·直接转发，或保存邀请卡发给好友即可分享；</view>
+            <block wx:if="{{switch === 'Y' && isDistribution}}">
+                <view>·分享给朋友购买后，赚取奖学金<view class="price-text">{{shareData.shareMoney}}元</view>；</view>
+                <view>·所获得的奖学金提现需移步[千聊]公众号操作</view>
+            </block>
+        </view>
+    </view>
+</view>
+
+<view class="buttons"  wx:if="{{system != 'ios'}}">
+    <button class="btn-share-to-friend" bind:tap="shareToFriend" open-type="share" data-log_category="shareToFriend">分享给好友</button>
+    <button class="btn-save-share-card" bind:tap="saveShareCard" data-log_category="saveShareCard">保存邀请卡</button>
+</view>
+
+<canvas canvas-id="shareCard" class="share-card-canvas" />
+
+
+<view class="container" wx:if="{{system == 'ios'}}">
+    由于相关规范，iOS功能暂不可用
+  </view>

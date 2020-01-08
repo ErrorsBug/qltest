@@ -1,0 +1,40 @@
+{   
+    "data":[
+        {
+            "id":"1234564879",
+            "createTime":"21346546465",
+            "createBy":"232132132513",
+            "isReplay":"N",
+            "createByHeadImgUrl":"http://img.qlchat.com/qlLive/userHeadImg/127XO218-KOB4-P4VN-1477646149624-3T76FL9CVXHJ.jpg",
+            "createByName":"dodomon",
+            "createTimeView":"2016-11-30 14:22",
+            "isQuestion":"Y",
+            "type":"text",
+            "content":"yohohohohohoyohohohohohoyohohohohohoyohohohohohoyohohohohohoyohohohohohoyohohohohohoyohohohohohoyohohohohoho"
+        },
+        {
+            "id":"1234535",
+            "createTime":"21346546465",
+            "createBy":"232132132513",
+            "isReplay":"N",
+            "createByHeadImgUrl":"http://img.qlchat.com/qlLive/userHeadImg/127XO218-KOB4-P4VN-1477646149624-3T76FL9CVXHJ.jpg@132h_132w_1e_1c_2o",
+            "createByName":"girumon",
+            "createTimeView":"2016-11-30 14:22",
+            "isQuestion":"Y",
+            "type":"image",
+            "content":"http://img.qlchat.com/iOSImg/9450E568-982C-493D-A124-02AEB6004B04-4386-0000054DBF451A67.jpeg@240h_1e_1c_2o"
+        },
+        {
+            "id":"1234534543579",
+            "createTime":"21346546465",
+            "createBy":"232132132513",
+            "isReplay":"N",
+            "createByHeadImgUrl":"http://img.qlchat.com/qlLive/userHeadImg/127XO218-KOB4-P4VN-1477646149624-3T76FL9CVXHJ.jpg@132h_132w_1e_1c_2o",
+            "createByName":"agumon",
+            "createTimeView":"2016-11-30 14:22",
+            "isQuestion":"N",
+            "type":"text",
+            "content":"发电公司的公司的风格的风格多个大锅饭的鬼地方该罚的公司法定图尔就多条交通拥堵解疑答惑发送到隔壁规范化广泛的好哈哈"
+        }
+    ]
+}

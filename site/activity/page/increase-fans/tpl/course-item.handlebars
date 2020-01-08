@@ -1,0 +1,28 @@
+{{#each courses}}
+<div class="course-wrap {{#if isSelected}}course-selected{{/if}}">
+    <p class="title">
+        {{!-- {{#if unJoined}} --}}
+        <span data-id={{id}} data-liveId={{liveId}} class="select-btn {{#if isSelected}}icon-checked selected{{/if}} {{#if isGot}}icon-checked check-got{{/if}}"></span>
+        {{!-- {{/if}} --}}
+        <span>{{title}}</span>
+        {{#if isGot}}<span class="already-got">领取成功</span>{{/if}}
+    </p>
+    <div class="course-data" data-id={{id}}>
+    {{#each data}}
+        <div class="course-img" style="background-image:url({{imgUrl}})">
+            {{#if ../isGot}}
+            <span class="icon-audio-play play-btn" data-src={{audioUrl}}></span>
+            {{/if}}
+        </div>
+    {{/each}}
+    </div>
+</div>
+{{/each}}
+{{#if isShared}}
+    <section class="shared-text">
+        <span>/好课程值得与好友分享, 你有3次免费送课资格/</span>
+    </section>
+{{/if}}
+<div class="get-course-btn {{#if isShared}}shared-btn{{/if}} on-log" data-log-region="getcourse" data-log-pos="{{logPos}}">
+    <span>{{shareBtnText}}</span>
+</div>

@@ -1,0 +1,427 @@
+.experience-finance-box{ 
+    height: 100vh;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+    background: #fff; 
+    overflow-y: scroll;
+    img{
+        vertical-align: middle;
+    }
+    .experience-finance-top{
+        img{
+            width: 100%;
+        }
+    }
+    .experience-finance-list{
+        .experience-finance-item{
+            &.experience-finance-first{
+                position: relative;
+                height: 376px;
+                border-bottom: 20px solid #F7F7F7;
+                overflow: hidden;
+                .experience-finance-count{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    padding-top: 40px;
+                    h4{
+                        font-size: 44px; /*px*/
+                        color: #fff;
+                        font-weight: 500;
+                        margin-bottom: 16px;
+                        line-height: 1.4;
+                        background:linear-gradient(180deg, rgba(255,233,194,1) 0%, rgba(241,177,95,1) 100%);
+                        -webkit-background-clip:text;
+                        -webkit-text-fill-color:transparent;
+                    }
+                    p{
+                        font-size: 44px;  /*px*/
+                        font-weight: 500;
+                        color: #fff;
+                    }
+                }
+            }
+            img{
+                width: 100%;
+                vertical-align: middle;
+            }
+        }
+    }
+    .experience-finance-camp{
+        min-height: 100%;
+        background: #eee;
+        display: flex;
+        flex-direction: column;
+        .experience-finance-main-list{
+            flex:1;
+            display: flex;
+            .experience-finance-list-container{
+                background:rgba(255,255,255,1);
+                border-radius:30px 30px 0px 0px;
+                overflow: hidden;
+                margin:0 20px;
+                padding: 40px 20px 200px; 
+                flex: 1;
+            }
+            .experience-finance-item{
+                display: flex;
+                align-items: center;
+                margin-bottom: 60px;
+                &:last-child{
+                    margin:0;
+                }
+                .finance-item-img{
+                    width:267px;
+                    height:166px;
+                    border-radius:8px;
+                    margin-right: 30px;
+                    overflow: hidden;
+                }
+                .finance-item-content{
+                    flex:1;
+                    .finance-item-title{
+                        font-size:36px;
+                        font-weight:bold;
+                        color:rgba(51,51,51,1);
+                        line-height:50px;
+                        margin-bottom: 23px;
+                        display: -webkit-box;
+                        text-overflow: ellipsis;
+                        -webkit-line-clamp: 1;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                    }
+                    .finance-item-time{
+                        font-size:24px; 
+                        color:rgba(153,153,153,1);
+                        line-height:33px;
+                        margin-bottom: 23px;
+                    }
+                    .finance-item-bottom{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        .finance-item-price{ 
+                            color:rgba(224,65,79,1);
+                            line-height:33px;
+                        }
+                        .finance-item-btn{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            height:34px;
+                            border-radius:4px;
+                            border:1px solid rgba(224,65,79,1);  /*no*/
+                            color:rgba(224,65,79,1);
+                            padding:0 20px ;
+                        }
+                    }
+                }
+            }
+            .experience-finance-buy-num{
+                position: relative;
+                margin-top: 71px;
+                margin-bottom: 40px;
+                .experience-finance-avator{
+                    position: absolute;
+                    top:0;
+                    left:33px;
+                    img{
+                        width:40px;
+                        height:40px;
+                        border:1px solid rgba(255,255,255,1);
+                        border-radius: 50%;
+                        position: absolute;
+                        top:0;
+                        left:0;
+                        &.on{
+                            animation: avatorToTop 2s  linear ; 
+                            z-index: 1;
+                        }
+                    }
+                    
+                    @keyframes avatorToTop
+                    {
+                        0%   {transform:translate(0,0) scale(1);opacity: 1;}          
+                        50%   {transform:translate(30px,-30px) scale(0.8);opacity: 0.5;}          
+                        100%   {transform:translate(-10px,-60px) scale(0.6);opacity: 0;}          
+                    }
+                }
+                .experience-finance-buy-text{ 
+                    padding-left: 103px;
+                    color:rgba(153,153,153,1);
+                    line-height:33px;
+                    span{
+                        color:#E0414F;
+                    }
+                }
+            }
+            .experience-finance-rule{
+                color:rgba(224,65,79,1);
+                line-height:33px;
+                text-align: center;
+                span{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.experience-finance-rule-dialog{
+    .co-dialog-content{
+        .ef-rule-title{
+            padding:40px 0;
+            text-align: center;
+            font-size:32px; 
+            font-weight:bold;
+            color:rgba(51,51,51,1);
+            line-height:45px;
+        }
+        .ef-rule-content{
+            padding:0 80px; 
+            color:rgba(102,102,102,1);
+            line-height:33px;
+            ol{
+                padding-left: 34px;
+                li{
+                    position: relative;
+                    margin-bottom: 20px;
+                    span{
+                        position: absolute;
+                        left:-34px;
+                        top:0;
+                    }
+                }
+            }
+            .ef-rule-qrcode{
+                text-align: center;
+                margin-bottom: 40px;
+                img{
+                    width:246px;
+                    height:246px;
+                }
+            }
+        }
+        .ef-rule-bottom{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 95px;
+            border-top: 1px solid rgba(238,238,238,1);/*no*/
+            font-size:32px; 
+            color:rgba(51,51,51,1);
+        }
+    }
+}
+.un-fixed-top-right{ 
+    height: 66px !important;
+    .experience-finance-icon{ 
+        animation: rotateIconFinance 2s linear infinite;
+        img{
+            vertical-align: middle;
+        } 
+        @keyframes rotateIconFinance {
+            0%{
+                transform:rotateY(0deg)
+            }
+            50%{
+                transform:rotateY(360deg)
+            }
+            100%{
+                transform:rotateY(360deg)
+            }
+        }
+    }
+}
+.experience-finance-bottom{ 
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    height: auto !important;
+    img{
+        width: 100%;
+        vertical-align: middle;
+    }
+}
+.university-dialog-payment{
+    z-index: 200 !important;
+    .co-dialog-bottom{
+        background: #fff;
+    }
+}
+
+.experience-pay-btn{
+    bottom: 0;
+    left: 0;
+    width: 100%; 
+    &.max-hei{
+        height: 166px;
+    }
+    & > div{
+        display: flex;
+    }
+    .uni-pay-timer{
+        width: 100%;
+        height: 66px;
+        padding: 0 40px;
+        box-sizing: border-box;
+        align-items: center;
+        justify-content: center;
+        color: #fff; 
+        background: rgba(0,0,0,.6);
+        box-shadow:0px 0px 80px 0px rgba(0,0,0,0.07);
+        font-size:24px; 
+        font-weight:bold;
+        color:rgba(255,255,255,1);
+        span{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding:0 3px;
+            line-height: normal;
+            background:rgba(255,255,255,1);
+            border-radius:3px;
+            color:rgba(247,54,87,1);
+            margin:0 8px;
+        }
+    }
+    .experience-pay-start{
+        background:rgba(247,54,87,1);
+        box-shadow:0px 0px 40px 0px rgba(0,0,0,0.07);
+        line-height: normal;
+        justify-content: center;
+        align-items: center;
+        font-size: 48px; 
+        color: #fff;
+        font-weight: bold;
+        height: 100px;
+        display: flex;
+        flex: 1;
+    }
+    .experience-pay-end{
+        background:rgba(187,187,187,1);
+        box-shadow:0px 0px 40px 0px rgba(0,0,0,0.07);
+        line-height: normal;
+        justify-content: center;
+        align-items: center;
+        font-size: 48px; 
+        color:rgba(102,102,102,1);
+        font-weight: bold;
+        height: 100px;
+        display: flex;
+        flex: 1;
+    }
+    .experience-one{
+        .finance-payment{
+            flex: 1;
+        }
+        .uni-pay-com{ 
+            height: 100px;
+            display: flex;
+            &.uni-pay-red{
+                background:rgba(247,54,87,1);
+                line-height: normal;
+                justify-content: center;
+                align-items: center;
+                font-size: 48px; 
+                color: #fff;
+                font-weight: bold; 
+                flex: 1;
+                .pay-price-count{ 
+                    color:rgba(254,255,0,1);
+                    margin-right: 10px;
+                }
+                .pay-price{ 
+                    font-size:18px; 
+                    font-weight:normal;
+                    color:rgba(255,255,255,1);
+                    margin-right: 10px;
+                    div{
+                        text-decoration: line-through;
+                    }
+                }
+            }
+            &.uni-pay-info { 
+                align-items: center;
+                justify-content: center; 
+                background: #fff;
+                font-size:48px; 
+                font-weight:bold;
+                color:rgba(51,51,51,1);
+                padding:0 42px;
+                img{
+                    width:45px;
+                    height:45px;
+                    margin-right: 21px;
+                }
+            }
+            &.uni-pay-original{
+                font-size: 40px; /*px*/
+                color: #E0414F;
+                font-weight: 500;
+                justify-content: center;
+                align-items: center;
+            }
+            &.experience-bottom-btn{
+                flex: 1;
+                div{
+                    flex: 1;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    
+    .experience-list{
+        .uni-pay-com{ 
+            height: 100px;
+            display: flex;
+            &.uni-pay-red{
+                width:499px;
+                background:rgba(247,54,87,1);
+                line-height: normal;
+                justify-content: center;
+                align-items: center;
+                font-size: 48px; /*px*/
+                color: #fff;
+                font-weight: 500;
+            }
+            &.uni-pay-info { 
+                display: flex;;
+                align-items: center;
+                justify-content: center;
+                background: #fff;
+                flex:1; 
+                font-size:48px;
+                .pay-price-count{ 
+                    color:rgba(247,54,87,1);
+                }
+                .pay-price{ 
+                    font-size:18px; 
+                    font-weight:normal;
+                    color:rgba(153,153,153,1);
+                    margin: 0 10px;
+                    div{
+                        text-decoration: line-through;
+                    }
+                } 
+            }
+            &.uni-pay-original{
+                font-size: 40px; /*px*/
+                color: #E0414F;
+                font-weight: 500;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+

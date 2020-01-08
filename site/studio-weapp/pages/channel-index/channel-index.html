@@ -1,0 +1,300 @@
+<view class="container">
+
+    <scroll-view 
+        class="scroll-view-container"
+        scroll-top="{{scrollTop}}"
+        scroll-y="{{true}}" 
+        bindscrolltolower="onLoadData"
+        lower-threshold="{{100}}"
+        bindscroll="onPageScroll"
+        scroll-with-animation="true"
+        enable-back-to-top="true"
+        style="height: {{scrollHeight}};" >
+
+        <view class="header">
+            <view class="header-row">
+                <image mode="scrllFill" class="channel-head-img" src="{{channelInfo.headImage || '//img.qlchat.com/qlLive/liveCommon/liveHead.png'}}@148h_240w_1e_1c_2o"></image>
+
+                <view class="channel-base-info">
+                    <text class="channel-base-info-row channel-base-info-name {{chargePos ? 'single-line' : 'multi-lines'}}"> {{channelInfo.name}} </text>
+
+                    <view class="channel-info-live-and-price">
+                        <view class="channel-base-info-live-wrapper">
+                            <text class="channel-base-info-row channel-base-info-live" bindtap="onLinkToLiveIndex"> {{channelInfo.liveName}} </text>
+                            <image class="channel-base-info-arrow" src="../../comp/img/arrow_1.png"></image>
+                        </view>
+                        
+    
+                        <!--已付款-->
+                        <block wx:if="{{chargePos}}">
+                            <block wx:if="{{channelInfo.chargeType == 'absolutely'&& system!='ios'}}">
+                                <view class="channel-base-info-row channel-base-info-charge">
+                                    <block wx:if="{{chargeConfigs[0].discountStatus == 'Y'}}"> 
+                                        <view class="del-text">￥{{chargeConfigs[0].amount}}</view>
+                                        ￥{{chargeConfigs[0].discount}} 
+                                    </block>
+                                    <!-- <block wx:elif="{{chargeConfigs[0].discountStatus == 'P' || chargeConfigs[0].discountStatus == 'GP'}}">
+                                        <view class="del-text">￥{{chargeConfigs[0].amount}}</view>
+                                        ￥{{chargeConfigs[0].discount}} 
+                                    </block> -->
+                                    <block wx:else> ￥{{chargeConfigs[0].amount}} </block>
+                                </view>
+                            </block>
+    
+                            <block wx:if="{{channelInfo.chargeType == 'flexible'}}">
+                                <!-- 会员和非会员情况 -->
+                                <block wx:if="{{vipInfo.isVip === 'Y'}}">
+                                    <view class="channel-base-info-row channel-base-info-charge">
+                                        <view class="channel-base-info-member" bindtap="openDialog">
+                                            会员剩余：{{vipInfo.expiryDay}}天
+                                        </view>
+                                    </view>
+                                </block>
+                                <block wx:elif="{{system!='ios'}}">
+                                    <view class="channel-base-info-row channel-base-info-charge">
+                                        <view class="channel-base-info-expire">有效期：{{expiryTimeParsed}}</view>
+                                        <button class="channel-base-info-member" open-type="contact" session-from="pay_channel_{{channelId}}_{{channelInfo.name}}">
+                                            续费
+                                        </button>
+                                    </view>
+                                </block>
+                            </block>
+                        </block>
+    
+                        <!--未付款-->
+                        <block wx:if="{{!chargePos}}">
+    
+                            <block wx:if="{{channelInfo.chargeType == 'absolutely'}}">
+                                <view 
+                                    wx:if="{{chargeConfigs[0] && chargeConfigs[0].amount > 0 && system!='ios'}}"
+                                    class="channel-base-info-row channel-base-info-charge">
+                                    <block wx:if="{{chargeConfigs[0].discountStatus == 'Y'}}"> 
+                                        <view class="del-text">￥{{chargeConfigs[0].amount}}</view>
+                                        ￥{{chargeConfigs[0].discount}} 
+                                    </block>
+                                    <!-- <block wx:elif="{{chargeConfigs[0].discountStatus == 'P' || chargeConfigs[0].discountStatus == 'GP'}}">
+                                        <view class="del-text">￥{{chargeConfigs[0].amount}}</view>
+                                        ￥{{chargeConfigs[0].discount}} 
+                                    </block> -->
+                                    <block wx:else> ￥{{chargeConfigs[0].amount}} </block>
+                                </view>
+    
+                                <view
+                                    wx:if="{{chargeConfigs[0] && chargeConfigs[0].amount == 0}}"
+                                    class="channel-base-info-row channel-base-info-charge">
+                                    免费
+                                </view>
+                            </block>
+    
+                            <block wx:if="{{channelInfo.chargeType == 'flexible'}}">
+                                <view class="channel-base-info-row channel-base-info-charge">会员专享</view>
+                            </block>
+    
+                        </block>
+                    </view>
+                </view>
+            </view>
+
+            <view class="user-list" wx:if="{{userCount != 0}}">
+                <view class="join-num">
+                    <view class="join-num-text"> {{userCount}}人 </view>
+                    正在参加
+                </view>
+
+                <view class="user-portrait-list">
+                    <image 
+                        wx:for="{{userList}}"
+                        wx:for-item="user"
+                        wx:key="key"
+                        wx:if="{{index < 5}}"
+                        class="user-portrait" 
+                        src="{{user.headImgUrl}}"></image>
+
+                    <image class="portrait-arrow" src="../../comp/img/arrow_1.png"></image>
+                </view>
+            </view>
+        </view>
+
+        <view class="main">
+            <tab-bar
+                items="{{tabItems}}"
+                fixedBar="{{canFixedBar}}"
+                bindtabclick="onTabClick"
+            />
+
+            <!--话题列表-->
+            <view wx:if="{{activeTab=='topic'}}" class="tab-content">
+                <block
+                    wx:for="{{topic.list}}" 
+                    wx:key="topic.id" 
+                    wx:for-item="topic"
+                >
+                    <topic-item
+                        topic = "{{topic}}"
+                        system = "{{system}}"
+                    />
+                </block>
+
+                <block wx:if="{{isEmpty}}">
+                    <image class="empty-intro" src="../../comp/img/empty-intro.png"></image>
+                    <text class="empty-text">暂时还没有内容哦~</text>
+                </block>
+
+                <text wx:if="{{topic.loading}}" class="loading-more">正在加载中...</text>
+                <text wx:if="{{topic.nomore && topic.page != 1}}" class="loading-more">没有更多了</text>
+            </view>
+
+            <block wx:if="{{activeTab=='intro'}}">
+                <view class="channel-intro">
+                    <view wx:if="{{descArr.length == 0 && notSummary}}" class="empty-intro-text">
+                        暂无简介
+                    </view>
+                    <!--  非富文本  -->
+                    <view 
+                        class="channel-intro-item"
+                        wx:if="{{notSummary}}"
+                        wx:for="{{descArr}}"
+                        wx:key="index"
+                        wx:for-item="desc"
+                    >
+                        <view class="channel-intro-title">
+                            {{desc.title}}
+                        </view>
+                        <view class="channel-intro-content">
+                            <view 
+                                class="channel-intro-content-item"
+                                wx:for="{{desc.dataset}}"
+                                wx:key="content.id"
+                                wx:for-item="content"
+                            >
+                                <image wx:if="{{content.type == 'image'}}" src="{{content.content}}" mode="widthFix" class="content-image"></image>
+                                <text wx:if="{{content.type == 'text'}}" class="content-text">
+                                    {{content.content}}
+                                </text>
+                            </view>
+                        </view>
+                    </view>
+                    <!-- 富文本的介绍 -->
+                    <view wx:if="{{!notSummary}}" class="rich-text-box">
+                        <rich-text nodes="{{summary}}" bindtap="tap"></rich-text>
+                    </view>
+                </view>
+            </block>
+            
+        </view>
+
+    </scroll-view>
+    <view class="buttons" wx:if="{{!power.allowMGLive}}">
+
+        <view wx:if="{{system !='ios'&&(chargePos || vipInfo.isVip == 'Y')}}" class="payed-btn">你已购买此系列课</view>
+
+        <block wx:if="{{!chargePos && vipInfo.isVip != 'Y'}}">
+
+            <!-- 20180309 更改支付方案 点击小程序端的支付后调用小程序的客服会话接口，给用户弹会话图文消息，点击图文消息后跳转到该课程的H5支付页面，完成支付动作 -->
+            <block wx:if="{{channelInfo.chargeType == 'absolutely'}}">
+                <!-- 0元直接报名 -->
+                <view wx:if="{{(chargeConfigs[0].discountStatus == 'Y' && chargeConfigs[0].discount == 0) || (chargeConfigs[0].discountStatus == 'N' && chargeConfigs[0].amount == 0)}}" class="pay-btn" bindtap="onCheckInFree">
+                    点击免费报名
+                </view>
+
+                <!-- <button wx:else class="pay-btn" open-type="contact" session-from="pay_channel_{{channelId}}_{{channelInfo.name}}"> -->
+                <view wx:elif="{{system !='ios'}}" class="pay-btn" bind:tap="onBuy">
+                    <block wx:if="{{chargeConfigs[0].discountStatus == 'Y'}}">
+                        点击付费(￥{{chargeConfigs[0].discount}})
+                    </block>
+                    <block wx:else>
+                        点击付费(￥{{chargeConfigs[0].amount}})
+                    </block>
+                </view>
+                <!-- </button> -->
+            </block>
+            
+            <view wx:if="{{channelInfo.chargeType == 'flexible' && system !='ios'}}" class="pay-btn" bind:tap="onBuy">
+                购买系列课：{{chargeConfigsStr}}
+            </view>
+            <!-- <button wx:if="{{channelInfo.chargeType == 'flexible'}}" class="pay-btn" open-type="contact" session-from="pay_channel_{{channelId}}_{{channelInfo.name}}">
+                购买系列课：{{chargeConfigsStr}}
+            </button> -->
+
+            <!-- <view wx:if="{{channelInfo.chargeType == 'absolutely'}}" class="pay-btn" bindtap="onBuy">
+                <block wx:if="{{chargeConfigs[0].discountStatus == 'Y'}}">
+                    点击付费(￥{{chargeConfigs[0].discount}})
+                </block>
+                <block wx:else>
+                    点击付费(￥{{chargeConfigs[0].amount}})
+                </block>
+            </view> -->
+
+            <!-- <view
+                wx:if="{{channelInfo.chargeType == 'flexible'}}"
+                class="pay-btn"
+                bindtap="onOpenCharge">购买系列课：{{chargeConfigsStr}}</view> -->
+        </block>
+    </view>
+
+    <pay-by-contact-modal wx:if="{{system !='ios'}}"
+        visible="{{contactModalVisible}}" 
+        sessionFrom="pay_channel_{{channelId}}_{{channelInfo.name}}"
+        payTipsContent="{{payTipsContent}}"
+        bind:hidePayContactModal="hidePayContactModal"
+    />
+
+    <!--选择付费类型action-sheet-->
+    <view class="action-sheet" wx:if="{{showActionSheet&&system !='ios'}}">
+        <view class="bg" bindtap="onCloseCharge"></view>
+        <view class="action-sheet-main">
+            <view class="action-sheet-title">选择购买类型</view>
+            
+            <view class="action-sheet-item-container">
+                <view 
+                    wx:for="{{chargeConfigs}}"
+                    wx:for-item="item"
+                    wx:key="item.id"
+                    class="action-sheet-item"
+                    data-index="{{index}}"
+                    bindtap="onSelectCharge">
+
+                    <view class="action-sheet-item-content {{item.active && 'action-sheet-item-content-active'}}">
+                        {{'￥' + item.amount + '/' + item.chargeMonths + '个月'}}
+                    </view>
+                </view>
+            </view>
+
+            <view class="pay-btn-container">
+                <text 
+                    class="pay-btn"
+                    bindtap="onBuy">购买系列课：{{chargeConfigsStr}}</text>
+            </view>
+        </view>
+    </view>
+
+
+    <view class="dialog-box" hidden="{{!showExpiryDialog}}">
+        <view class="dialog-main">
+            <text class="dialog-title">会员详情</text>
+            <view class="dialog-content">
+                <view class="member-detail-wrap">
+                    <text>你的会员将于 <text class="expiry-time-parsed"> {{expiryTimeParsed}}</text> 到期</text>
+                </view>
+            </view>
+            <view class="dialog-bottom-type-one" wx:if="{{system !='ios'}}">
+                <button class="dialog-btn-confirm" bindtap="closeDialogOnly" open-type="contact" session-from="pay_vip_{{channelInfo.liveId}}_{{channelInfo.liveName}}">点击续费</button>
+            </view>
+        </view>
+    </view>
+
+    <!-- 已经购买的提示 -->
+    <view class="dialog-box already-buy-dialog" hidden="{{!showAlreadyBuyDialog}}">
+        <view class="dialog-main">
+            <view class='buy-channel-dialog have-bought-dialog'>
+                <text class="des">您已购买该课程，请直接进入学习</text>
+                <text class="red-btn" bindtap="viewBoughtList">进入课程</text>
+                <text class="view-tutorial-wrapper" bindtap="viewTutorial">进入课程失败？点此找回<text class="view-tutorial-btn">查看教程</text></text>
+            </view>
+            <view class="close-btn" bindtap="closeAlreadyBuyDialog"></view>
+        </view>
+    </view>
+
+
+</view>
+<!-- <audio-box/> -->

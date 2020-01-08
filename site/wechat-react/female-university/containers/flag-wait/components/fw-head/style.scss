@@ -1,0 +1,150 @@
+
+.fw-head{
+    background:rgba(133,46,54,1) url('https://img.qlchat.com/qlLive/business/M8LITERE-VAIL-T29R-1558865729800-T4DV7BEP9RXB.png') no-repeat 0 0;
+    background-size: 100% 100%;
+    padding-bottom: 332px;
+    position: relative;
+    .fw-rule{
+        position: absolute;
+        right:0;
+        top:112px;
+        width:68px;
+        line-height:48px;
+        background:rgba(67,48,50,1);
+        border-radius:200px 0px 0px 200px;
+        font-weight: bold;
+        text-align: center;
+        font-size:22px;
+        color:rgba(255,255,255,0.7);
+    }
+
+    .fw-step{
+        img{
+            width: 100%;
+        }
+    }
+    .fw-title{
+        font-size:44px;  
+        font-weight:bold;
+        color:rgba(255,255,255,1);
+        line-height:56px;
+        text-align: center;
+        padding:48px 0 8px;
+    }
+    .fw-inveite-list{
+        text-align: center;
+        margin-bottom: 48px;
+        img{
+            width:112px;
+            height:112px;
+            margin-right: 32px;
+            border-radius: 50%;
+            &:last-child{
+                margin:0;
+            }
+        }
+    }
+    .fw-intro{
+        font-size:26px; 
+        color:rgba(255,255,255,0.7);
+        line-height:40px;
+        width: 550px;
+        text-align: center;
+        margin: 0 auto 44px;
+        span{
+            color: #F5D9A9;
+            font-size: 32px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+    }
+    .fw-btn-container{
+        padding: 0 0 10px;
+        text-align: center;
+    }
+    .fw-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        line-height: normal;
+        width:516px;
+        height:80px;
+        background:linear-gradient(136deg,rgba(246,218,170,1) 0%,rgba(229,168,89,1) 100%);
+        box-shadow:0px 8px 12px 0px rgba(0,0,0,0.1);
+        border-radius:40px;
+        text-align: center;
+        font-size:36px; 
+        font-weight:bold;
+        color:rgba(80,66,54,1);
+        animation: scaleBtn 1s  linear infinite;
+        
+        &:active{
+            transform: scale(0.9)
+        }
+        
+        @keyframes scaleBtn
+        {
+            0%   {transform:scale(1);}         
+            33%   {transform:scale(1.1); }   
+            66%   {transform:scale(0.9); }   
+            100%   {transform:scale(1); }   
+        }
+    }
+    .fw-tip{
+        font-size:22px; 
+        color:rgba(255,255,255,0.7);
+        line-height:32px;
+        text-align: center;
+    }
+    
+    .fs-scroll-tip{
+        padding:0 90px;
+        margin-top: 38px;
+        .fs-item{ 
+            padding: 28px 0;
+            background:rgba(0,0,0,0.3); 
+            border-radius:32px ;
+            font-size:22px; 
+            color:rgba(255,255,255,1);
+            line-height:56px;
+            position: relative;
+            overflow: hidden;
+            width: 464px;
+            margin:0 auto;
+            div{
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left:0;
+                transform: translateY(100%);
+                // top:100%;
+                transition: 0s; 
+                text-align: center;
+                width: 100%; 
+                color: rgba(255,255,255,0.7);
+                &.pre{
+                    // top:-100%; 
+                    transform: translateY(-100%);
+                    // transition-delay: 0.1s;
+                    transition: 0.9s;
+                }
+                
+                &.current{
+                    // top:0; 
+                    transform: translateY(0);
+                    transition-delay: 0.2s;
+                    transition: 0.9s;
+                }
+                img{
+                    width:40px;
+                    height:40px;
+                    border-radius: 50%;
+                    margin-right: 8px; 
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
+  

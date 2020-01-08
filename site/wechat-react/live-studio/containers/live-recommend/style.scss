@@ -1,0 +1,192 @@
+.live-recommend-container {
+    height: 100%;
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    flex-direction: column;
+
+    .top-label {
+        height: 240px;
+        display: flex;
+        align-items: center;
+        padding: 0 40px;
+        background-color: #fff;
+        box-shadow: 0 2px 0 0 rgba(217,217,217,0.50);
+
+        .date-container {
+            position: relative;
+            background: #FFFFFF;
+            border: 2px solid #F73657;
+            border-radius: 10px;
+            height: 170px;
+            width: 180px;
+            display: flex;
+            flex-direction: column;
+            bottom: -6px;
+            margin-right: 16px;
+
+            .month {
+                height: 70px;
+                text-align: center;
+                font-size: 30px;/*px*/
+                color: #fff;
+                line-height: 42px;
+                padding-top: 18px;
+                box-sizing: border-box;
+                background: #F73657;
+            }
+
+            .day {
+                font-size: 80px;/*px*/
+                color: #666;
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                background: #FFFFFF;
+                border: 2px solid #F73657;
+                border-radius: 6px;
+                height: 28px;
+                width: 12px;
+                box-sizing: border-box;
+                top: -14px;
+                left: 28px;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                background: #FFFFFF;
+                border: 2px solid #F73657;
+                border-radius: 6px;
+                height: 28px;
+                width: 12px;
+                box-sizing: border-box;
+                top: -14px;
+                right: 28px;
+            }
+        }
+
+        .desc-container {
+            .title {
+                font-size: 34px;/*px*/
+                line-height: 46px;
+                margin-bottom: 10px;
+            }
+            .tip {
+                font-size: 24px;/*px*/
+                color: #666;
+                line-height: 34px;
+            }
+        }
+    }
+
+    .course-label {
+        flex: 1;
+        position: relative;
+
+        .course-scroll-box {
+            padding-bottom: 0;
+            .list {
+                width: 710px;
+                margin: 20px auto 0;
+                background-color: #fff;
+                box-shadow: 0 2px 0 0 rgba(217,217,217,0.50);
+                border-radius: 6px;
+                height: 190px;
+                display: flex;
+                align-items: center;
+                padding: 0 20px;
+                box-sizing: border-box;
+
+                .img {
+                    width: 240px;
+                    height: 150px;
+                    border-radius: 6px;
+                    margin-right: 20px;
+                }
+
+                .course-desc {
+                    flex: 1;
+                    height: 150px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    .title {
+                        font-size: 26px;/*px*/
+                        line-height: 36px;
+                        color: #666;
+                        position: relative;
+                        top: -5px;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 3;
+                        overflow: hidden;
+                    }
+                    .info {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: flex-end;
+
+                        .liveName {
+                            font-size: 18px;/*px*/
+                            color: #666;
+                            flex: 1;
+                            margin-right: 10px;
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 1;
+                            overflow: hidden;
+                            line-height: 30px;
+                            position: relative;
+                            bottom: -6px;
+                        }
+
+                        .learnNum {
+                            border: 1px solid #F73657;/*no*/
+                            border-radius: 6px;
+                            height: 40px;
+                            line-height: 40px;
+                            font-size: 26px;/*px*/
+                            color: #F73657;
+                            min-width: 110px;
+                            padding: 0 24px;
+                            box-sizing: border-box;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom-label {
+        height: 100px;
+        background-color: #fff;
+        display: flex;
+
+        >div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px;/*px*/
+            cursor: pointer;
+            height: 100%;
+        }
+
+        .manage {
+            color: #F73657;
+            width: 250px;
+        }
+
+        .more {
+            background: #F73657;
+            color: #fff;
+            flex: 1;
+        }
+    }
+}

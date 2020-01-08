@@ -1,0 +1,172 @@
+.activity-gift-container {
+    background-color: #fff;
+    // padding: 70px 0 70px;
+    padding-bottom: 70px;
+
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    -webkit-overflow-scrolling: touch;
+
+    .gift-header {
+        margin: 0 auto 70px;
+        text-align: center;
+
+        .icon-gift {
+            img {
+                display: block;
+                width: 100%;
+            }
+
+            margin: 0 auto 40px;
+        }
+
+        .title {
+            margin: 0 70px;
+            font-size: 40px; /*px*/
+            color: #000;
+            margin-bottom: 18px;
+        }
+
+        .des {
+            margin: 0 70px;
+            font-size: 28px; /*px*/
+            color: #666;
+        }
+    }
+
+    .des-con {
+        margin: 0 70px;
+
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+
+        height: 80px;
+        line-height: 80px;
+
+        border-top: 1px solid #e6e6e6; /*no*/
+        border-bottom: 1px solid #e6e6e6; /*no*/
+
+        font-size: 28px; /*px*/
+
+        .type {
+            color: #666;
+        }
+        .course {
+            color: #000;
+        }
+    }
+
+    .gift-con {
+        margin-top: 60px; 
+        .scroll-x {
+            display: flex;
+            align-items: center;
+
+            overflow-x: scroll;
+            overflow-y: hidden;
+
+            margin:0 70px 40px;
+        }
+
+        .gift-item-con {
+            width: 374px;
+            height: 230px;
+            border-radius: 10px;
+            flex-shrink: 0;
+
+            margin-right: 20px;
+            overflow: hidden;
+
+            position: relative;
+        }
+
+        .unavailable-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            background: rgba(0,0,0, .55);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+
+            font-size: 30px; /*px*/
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .check-tag {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+
+            right: 14px;
+            bottom: 16px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 26px; /*px*/
+            color: #fff;
+            background-color: #ccc;
+
+            border-radius: 100px;
+            border: 2px solid #fff; /*no*/
+
+            &.checked {
+                background-color: #fe4b69;
+            }
+        }
+
+        .gift {
+            img {
+                width: 100%;
+            }
+        }
+
+        .gift-btn {
+            margin: 0 70px;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: #fff;
+            font-size: 32px; /*px*/
+
+            border-radius: 100px;
+
+            background-color: #f7bbc5;
+            &.chosen {
+                cursor: pointer;
+                background-color: #ed3b59;
+            }
+        }
+    }
+
+    .gift-dialog-container {
+        padding: 70px 120px 0;
+        text-align: center;
+        font-size: 28px; /*px*/
+        img {
+            display: block;
+            width: 380px;
+            height: 246px;
+            margin: 0 auto 50px;
+        }
+
+    }
+
+
+}

@@ -1,0 +1,93 @@
+.sa-learn-info{
+    display: flex;
+    .sac-bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+        height: 44px;
+        flex:1;
+    }
+    .sac-number{
+        span{ 
+            font-size: 24px; /*px*/
+            color: #999;
+            padding-right: 20px; 
+        }
+    } 
+    p{ 
+        color: #E0414F;
+        font-size: 24px; /*px*/  
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500; 
+        background:rgba(247,247,247,1) url('https://img.qlchat.com/qlLive/business/QWXM76CV-ZYRK-1XCA-1564972362741-NOP4U3XT8XVT.png') no-repeat 18px center; /*px*/
+        background-size: 22px; /*px*/ 
+        border-radius:27px;
+        padding: 0 18px; 
+        padding-left: 44px; /*px*/
+        &.must-join{
+            color: #999;
+            position: relative;
+            font-weight: normal;
+            line-height: normal; 
+            background:rgba(247,247,247,1) url('https://img.qlchat.com/qlLive/business/TIYPBNXK-ZP91-ZD37-1564972359364-7A8LXMQVNGSK.png') no-repeat 18px center; /*px*/
+            background-size: 22px; /*px*/ 
+        }
+        &.lock{
+            background:rgba(247,247,247,1) url('https://img.qlchat.com/qlLive/business/QXERYHBQ-GIJH-US2I-1565575979235-WGFXNJQXX2EV.png') no-repeat 18px center; /*px*/
+            background-size: 22px; /*px*/ 
+        }
+        &.once{
+            position: relative;
+            font-weight: normal;
+            &::before{
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%,-66px);
+                width: 208px;
+                height: 62px;
+                background: url('./img/icon-popover.png') no-repeat left center;
+                background-size: 100%;
+                animation: anmateShow 3s linear;
+                opacity: 0;
+                content: '';
+                z-index: 2;
+            }
+        }
+    }
+}
+
+@keyframes anmateShake1 {
+	10% {
+		transform: rotate(15deg);
+	}
+	20% {
+		transform: rotate(-10deg);
+	}
+	30% {
+		transform: rotate(5deg);
+	}
+	40% {
+		transform: rotate(-5deg);
+	}
+	50%, 100% {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes anmateShow{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}

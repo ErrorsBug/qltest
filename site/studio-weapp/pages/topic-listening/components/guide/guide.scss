@@ -1,0 +1,22 @@
+.guide-container{
+    position: fixed;
+	top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    .guide-01{
+        width: 215rpx;
+        position: absolute;
+        top: 0;
+        left: 24rpx;
+        z-index: 10;
+    }
+    .guide-02{
+        width: 215rpx;
+        position: absolute;
+        top: 472rpx;
+        right: 72rpx;
+        z-index: 10;
+    }
+}

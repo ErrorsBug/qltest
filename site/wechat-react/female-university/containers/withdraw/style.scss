@@ -1,0 +1,169 @@
+.wd-box{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .scroll-content-container{
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        overflow-y: scroll;
+        background-color: #fff;
+        padding: 80px 40px;
+        box-sizing: border-box;
+    }
+    .wd-invite-detail{
+        position: absolute;
+        top:78px;
+        right: 40px;
+        font-size:24px; 
+        font-weight: bold;
+        color:rgba(224,65,79,1);
+        line-height:34px;
+        background:rgba(247,247,247,1);
+        border-radius:32px;
+        padding: 8px 24px;
+    }
+    .wd-input-group{
+        margin-bottom: 60px;
+        &:first-child{
+            margin-bottom: 80px;
+        }
+        p{
+            font-size: 40px; /*px*/
+            color: #bbb;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .wd-input-price{
+            position: relative;
+            height: 140px;
+            &::before{
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-15px); /*px*/
+                content: '￥';
+                font-size: 60px; /*px*/
+                color: #333;
+                font-weight: bold;
+            }
+            &::after{
+                position: absolute;
+                left:0;
+                width: 100%;
+                bottom: -20px;
+                height: 2px; /*no*/
+                background: #eee;
+                content: '';
+            }
+            input {
+                width: 100%;
+                padding-left: 60px; /*px*/
+                box-sizing: border-box;
+                height: 140px;
+                line-height: 140px;
+                font-size: 100px; /*px*/
+                color: #333;
+                font-weight: bold;
+                border: none;
+                outline: none;
+            }
+            ::-webkit-input-placeholder{
+                color: #333;
+            }
+        }
+    }
+    .wd-list{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 60px;
+        &.wd-last{
+            padding-bottom: 100px;
+            p{
+                display: inline-block;
+                background: url("./img/money_icon_question.png") no-repeat right center;
+                padding-right: 40px; /*px*/
+                background-size:  32px; /*px*/
+            }
+        }
+        p{
+            font-size: 32px; /*px*/
+            color: #666;
+        }
+        span{
+            font-size: 32px; /*px*/
+            color: #999;
+            &.red{
+                color: #E0414F;
+            }
+        }
+    }
+    .wd-btn{
+        width: 100%;
+        height: 76px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px; /*px*/
+        color: #fff;
+        background: #E0414F;
+        border-radius: 50px;
+        margin-bottom: 40px;
+        &.no{
+            color: #999;
+            background: #f7f7f7;
+        }
+    }
+    .wd-tishi{
+        font-size:24px; /*px*/
+        color: #999;
+        text-align: center;
+        line-height: 1.4;
+        margin-bottom: 112px;
+    }
+    .wd-rule{
+        text-align: center;
+        span{
+            font-size:24px; /*px*/
+            color: #666;
+            text-decoration: underline;
+        }
+    }
+}
+
+.wd-dialog{
+    .wd-dialog-cont{
+        padding: 48px 72px 32px;
+    }
+    h4{
+        text-align: center;
+        font-size: 32px; /*px*/
+        color: #333;
+        margin-bottom: 16px;
+        font-weight: bold;
+        line-height: 1.5;
+    }
+    p{
+        font-size: 28px; /*px*/
+        color: #666;
+        line-height: 1.5;
+        margin-bottom: 10px;
+        &.txt-center{
+            text-align: center;
+        }
+    }
+    .wd-dialog-btn{
+        border-top: 1px solid #eee; /*no*/
+        height: 94px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 32px; /*px*/
+        color: #333;
+    }
+}

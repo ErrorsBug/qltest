@@ -1,0 +1,21 @@
+.float-right-top-btn{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top:32px;
+    height:74px !important;
+    font-size:30px;
+    font-weight:bold;
+    color:rgba(255,255,255,1);
+    z-index: 10;
+    background:rgba(0,0,0,0.7);
+    border-radius:200px 0px 0px 200px;
+    padding:0 16px 0 24px;
+    img{
+        width: 36px;
+        margin-right: 8px;
+        vertical-align: middle;
+    }
+}

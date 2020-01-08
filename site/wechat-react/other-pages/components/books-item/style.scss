@@ -1,0 +1,84 @@
+.ls-book-item{
+    width:204px;
+    color: #333;
+    padding-bottom: 10px;
+    align-items: center;
+    padding-right: 32px;
+    .cover{
+        width: 204px;
+        height: 260px;
+        border-radius: 8px;
+        border: 1px solid #EEE;
+        display:block;
+        overflow: hidden;
+        position: relative;
+        .play-btn{
+            width:64px;
+            height:64px;
+            background:url(../../../assets/images/play-btn.png) no-repeat center / 100%;
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    .book-des{
+        margin-top: 16px;
+        h4{
+            font-size: 28px; /*px*/
+            color: #333;
+            margin-bottom: 8px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            line-height: 1.4;
+        }
+        p{
+            font-size: 26px; /*px*/
+            color: #666;
+            line-height: 1.5;
+            height: 72px; /*px*/
+            margin-bottom: 38px;
+            overflow:hidden; 
+            text-overflow:ellipsis;
+            display:-webkit-box; 
+            -webkit-box-orient:vertical;
+            -webkit-line-clamp:2; 
+        }
+        .book-status{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            margin-top:12px;
+            .desc{
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            span{
+                display: block;
+                font-size: 22px;/*px*/
+                color: #999;
+            }
+            i{
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-size: 22px; /*px*/
+                color: #F73657;
+                font-style: normal;
+            &.play{
+                display: back;
+                width: 57px;
+                height: 57px;
+                transform: translateY(-30%);
+                background: url("./img/icon-play1.png") no-repeat center;
+                background-size: 57px;
+            }
+            }
+        }
+    }
+}

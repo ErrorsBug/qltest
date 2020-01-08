@@ -1,0 +1,21 @@
+.btn-group{
+    margin-top: 40rpx;
+    .btn{
+        width: 100%;
+        height: 88rpx;
+        border-radius: 88rpx; 
+        box-sizing: border-box;
+        border: none;
+        background-color: #ef5670;
+        color: #fff;
+        font-size: 34rpx;
+        &:nth-child(n+2){
+            margin-top: 20rpx;
+            color: #ef5670;
+            border: 2rpx solid #ef5670;
+            height: 88rpx;
+            border-radius: 88rpx;
+            background-color: transparent;
+        }
+    }
+}

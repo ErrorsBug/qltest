@@ -1,0 +1,43 @@
+.wechat-info-container {
+    padding: 10px 40px;
+    label {
+        color: #666666;
+    }
+    input {
+        border: none;
+        background-color: #fcfbf9;
+        + span {
+            border: none;
+            cursor: pointer;
+            background-color: #fcfbf9;
+        }
+    }
+    select {
+        border: none;
+    }
+}
+.head-tip {
+    color: #333333;
+    font-size: 16px;
+    padding: 0 0 0 10px;
+    margin: 20px 0;
+    border-left: 5px solid #bebebe;
+}
+.wechat-categories {
+    > div {
+        border: none !important;
+        background-color: #fcfbf9;
+    }
+}
+.wechat-account {
+    position: relative;
+}
+.wechat-account-tip {
+    position: absolute;
+    right: 0;
+    top: 18px;
+    z-index: 9;
+    img {
+        width: 240px;
+    }
+}

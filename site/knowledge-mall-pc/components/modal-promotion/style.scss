@@ -1,0 +1,188 @@
+.push-dailog{
+    width: 720px;
+    min-height: 700px;
+    // position: relative;
+
+    .reprint-channel-detail {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 20px;
+        border-bottom: 1px solid #f0f0f0;
+
+        .head-img {
+            width: 200px;
+            height: 122px;
+            background-color: #c8c8c8;
+            border-radius: 4px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            flex-shrink: 0;
+            margin-right: 22px;
+        }
+
+        .right {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-direction: column;
+            height: 122px;
+            flex: 1;
+            padding: 10px 0;
+            .title {
+                width: 240px;
+                font-size: 14px;
+                line-height: 1.5;
+                font-weight: normal;
+                font-stretch: normal;
+                line-height: 18px;
+                letter-spacing: 0px;
+                color: #333333;
+                overflow : hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+
+            .bottom-info {
+                .price {
+                    font-size: 14px;
+                    color: #999999;
+                    margin-bottom: 10px;
+                }
+
+                .income {
+                    font-size: 16px;
+                    line-height: 1.5;
+                    color: #333333;
+                    .money {
+                        color: #c9a96e;
+                    }
+                }
+            }
+        }
+    }
+    
+
+    .radio-area{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    .content-area {
+        position: relative;
+    }
+
+    .distribute-func-row{
+        display: flex;
+        padding: 0 20px;
+        align-items: stretch;
+        justify-content: flex-start;
+        
+
+        .distribute-func-box {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+
+            .content-detial {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                flex-direction: column; 
+                width: 100%;     
+                min-height: 295px;
+                background-color: #f8f8f8;
+                border-radius: 4px;
+                .title {
+                    margin: 30px 0 20px 0;
+                    font-size: 14px;
+                    color: #333;
+                }
+                .tips {
+                    font-size: 12px;
+                    color: #999;
+                }
+
+                .qr {
+                    text-align: center;
+                    margin-top:20px;
+                    img{
+                        width:40%;
+                        height: auto;
+                    }
+                }
+
+                .url {
+                    margin-top: 50px;
+                    width: 270px;
+                    color: #c9a96e;
+                    font-size: 12px;
+                    line-height: 18px;
+                    word-wrap: break-word;
+                    text-align: center;
+                }
+
+                .haibao1 {
+                    width: 282px;
+                    height: auto;
+                    margin-top: 20px;
+                }
+
+                .haibao2 {
+                    width: 282px;
+                    height: auto;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+            }
+
+            .save-box {
+                cursor: pointer;
+                margin: 20px 0;
+
+                height: 40px;
+                line-height: 40px;
+                width: 140px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #c9a96e;
+                border-radius: 4px;
+                font-size: 14px;
+                color: #fff;
+
+                &>a{
+                    font-size: 14px;
+                    color: #fff;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    text-decoration: none;
+                }
+
+                >span {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                }
+            }
+
+        }
+
+
+    }
+}

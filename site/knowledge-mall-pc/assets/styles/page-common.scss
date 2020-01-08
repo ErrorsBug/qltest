@@ -1,0 +1,65 @@
+// 通用flex布局
+.flex-body {
+    display: flex; 
+    flex-direction:column;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.flex-main-h,
+.flex-main-s {
+    position: relative;
+    height: 100%;
+    width:100%;
+    flex:1;
+    overflow: hidden;
+}
+.flex-main-s
+{
+    -webkit-overflow-scrolling: touch;
+    overflow: auto;
+    overflow-x: hidden;
+}
+.flex-other {
+    flex-shrink: 0;
+}
+
+
+// 闭合一切浮动
+.clearfix {
+    *zoom:1;
+}
+.clearfix:after {
+    visibility:hidden;
+    display:block;
+    font-size:0;
+    content:" ";
+    clear:both;
+    height:0;
+}
+.clearline {
+    *zoom:1;
+    height:0px;
+    line-height:0px;
+    font-size:0px;
+    overflow:hidden;
+    clear:both;
+}
+.clearperfect {
+    clear:both;
+    height:0px;
+    overflow:hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

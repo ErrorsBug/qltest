@@ -1,0 +1,20 @@
+<view class="count-down-wrap" wx:if="{{!hide}}">
+    距开始： 
+    <view class="count-down">
+        <view class="cube">
+            {{days}} <view class="unit">天</view> 
+        </view>
+        :
+        <view class="cube">
+            {{hours}} <view class="unit">时</view> 
+        </view>
+        :
+        <view class="cube">
+            {{mins}} <view class="unit">分</view> 
+        </view>
+        :
+        <view class="cube">
+            {{secs}} <view class="unit">秒</view> 
+        </view>
+    </view>
+</view>

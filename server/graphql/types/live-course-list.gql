@@ -1,0 +1,48 @@
+
+# 已购课程对象
+type PurchaseCourseItem {
+    # 话题id
+    bussinessId: String
+    # 课程类型：topic=话题，channel=系列课
+    type: String
+    # 标题
+    title: String
+    # 课程头像
+    pic: String
+    # 支付金额
+    money: String
+    # 多少次学习
+    learningCount: Int
+    # 购买时间
+    time: String
+    # 多少次学习
+    learningCount: Int
+}
+
+# 已购课程列表
+type PurchaseCourseList {
+    list: [PurchaseCourseItem]
+}
+
+# 未开播课程对象
+type PlanCourseItem {
+    # 话题id
+    id: String
+    # 话题名称
+    topic: String
+    # 话题背景图
+    backgroundUrl: String
+    # 浏览人数
+    browseNum: Int
+    # 预计开播时间
+    startTime: String
+    # 显示状态
+    displayStatus: String
+}
+
+extend type Query {
+    # 获取已购课程列表
+    purchaseCourse(page: Int, size: Int, liveId: String): PurchaseCourseList
+    # 获取未开播话题列表
+    planCourseList(liveId: String, page: Int, size: Int): [PlanCourseItem]
+}

@@ -1,0 +1,37 @@
+<dd class="comment-dd " attr-id="{{data.id}}" attr-time="{{data.createTime}}" attr-createby="{{data.createBy}}">
+    {{#if powerEntity.allowReplyComment}}
+    {{#compare topicPo.status "==" "beginning"}}
+        {{#compare data.isReplay "==" "N"}}
+        <span class="right-info"><i class="btn-wall">上墙</i></span>
+        {{else}}
+        <i class="btn-iswalled">已上墙</i> 
+        {{/compare }}
+    {{/compare}}
+    {{/if}}
+    <a class="avatar">
+        {{#compare topicPo.status "!=" "ended"}}
+            <img class="hasTempHead" attr-realsrc="{{data.createByHeadImgUrl}}" src="https://img.qlchat.com/qlLive/liveCommon/normalLogo.png">
+        {{else}}
+            <img class="" src="{{data.createByHeadImgUrl}}" >
+        {{/compare }}
+    </a>
+    <a class="author-name">{{data.createByName}}</a><b class="time">{{data.createTimeView}}</b>
+    {{#if isShowMgr }}
+    <i class="commentManage">管理
+        <span class="commentManageTab" style="display:none;">
+            <a class="delCommentMsg">删除</a>
+            {{#if powerEntity.allowMGBanned }}
+            <a class="shutUpSet">禁言</a>
+            {{/if}}
+        </span>
+    </i>
+    {{/if}}
+    <p class="content">
+        {{#compare data.isQuestion "==" "Y"}}<em class="ask-label">问</em>{{/compare }}
+        {{#compare data.type "==" "image"}}
+            <img src="{{data.content}}">
+        {{else}}
+            {{data.content}}
+        {{/compare }}
+    </p>
+</dd>

@@ -1,0 +1,65 @@
+.uni-college-box{
+    margin-top: 40px;
+    height: 126px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    box-sizing: border-box;
+    border-radius:8px;
+    position: relative;
+    .uni-college-bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(170, 41, 57,1);
+        opacity: 0.05;
+        border-radius:8px;
+        z-index: 0;
+    }
+    .uni-college-info{
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        .uni-college-img{
+            width: 72px;
+            height: 86px;
+            margin-right: 28px;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        .uni-college-cont{
+            h4{
+                font-size: 28px; /*px*/
+                color: #AA2939;
+                line-height: 1.5;
+                margin-bottom: 5px;
+            }
+            p{
+                color: rgba(170, 41, 57, 1);
+                font-size: 22px; /*px*/
+                opacity: 0.5;
+            }
+        }
+    }
+    .uni-college-btn{
+        position: relative;
+        z-index: 1;
+        width: 146px;
+        height:50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px; /*px*/
+        color: #8F313C;
+        border-width: 1px; /*px*/
+        border-style: solid;
+        border-color: #8F313C;
+        border-radius: 50px;
+    }
+}

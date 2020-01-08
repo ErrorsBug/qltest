@@ -1,0 +1,103 @@
+.receive-activity-coupon {
+    background-color: #fff;
+
+    padding-top: 80px;
+
+    box-sizing: border-box;
+    .coupon {
+        width: 665px;
+        height: 851px;
+        margin: auto;
+        background: url('./coupon-dialog.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+
+
+        text-align: center;
+        font-size: 24px; /*px*/
+        color: #999;
+
+        position: relative;
+
+        .money {
+            padding-top: 260px;
+            font-size: 70px; /*px*/
+            font-weight: bold;
+            color: #ed4d4e;
+            &::before{
+                content: "￥";
+                font-size: 40px; /*px*/
+            }
+        }
+        .cou-des {
+            margin-top: 30px;
+        }
+        .time {
+            margin-top: 70px;
+        }
+        .course-pre {
+
+            position: absolute;
+            bottom: 240px;
+            left: 0;
+            right : 0;
+            margin: auto;
+
+            margin-top: 80px;
+            font-size: 24px; /*px*/
+            color: #fff;
+        }
+        .course-name {
+
+            position: absolute;
+            bottom: 130px;
+            height: 90px; /*px*/
+            left: 0;
+            right : 0;
+            margin: auto;
+
+            margin-top: 20px;
+            font-size: 32px; /*px*/
+            font-weight: bold;
+            color: #fff;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            line-height: 1.4;
+            padding: 0 100px;
+        }
+
+        .get-now-btn {
+            position: absolute;
+            bottom: 40px;
+            left: 0;
+            right : 0;
+            margin: auto;
+
+            width: 340px;
+            height: 70px;
+            background-color: #f4b51e;
+            border-radius: 100px;
+
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: #fff;
+            font-size: 34px; /*px*/
+            font-weight: bold;
+        }
+    }
+
+    .des {
+        margin-top: 40px;
+        font-size: 26px; /*px*/
+        text-align: center;
+        color: #424242;
+        em {
+            color: #f73657;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+<view class="introduce">
+    <view class="course-name"> {{info.name}} </view>
+    <view class="course-preview">
+        <view class="icon-person"></view>
+        <view class="text-by-icon"> {{info.browseNum}}人次</view>
+        <view class="icon-comment"></view>
+        <view class="text-by-icon"> {{info.commentNum}}评价</view>
+    </view>
+    <view class="start-time"> {{info.startTime}} </view>
+
+    <view class="intro-section">
+        <text class="intro-text" wx:if="{{topicInfo.remark}}">{{topicInfo.remark}}</text>
+        <!-- 非富文本的介绍 -->
+        <block wx:if="{{notSummary}}"  wx:for="{{viewProfiles}}" wx:key="id">
+            <view class="intro-pic-container" wx:if="{{item.url}}">
+                <image class="intro-pic" mode="widthFix" lazy-load="{{true}}" src="{{item.url}}" />
+            </view>
+            <text class="intro-text" wx:if="{{item.msg}}">
+                {{item.msg}}
+            </text>
+        </block>
+        <!-- 富文本的介绍 -->
+        <view wx:if="{{!notSummary}}"class="rich-text-box">
+            <rich-text nodes="{{summary}}" bindtap="tap"></rich-text>
+        </view>
+    </view>
+</view>

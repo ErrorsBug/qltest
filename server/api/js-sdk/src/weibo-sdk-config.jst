@@ -1,0 +1,40 @@
+/**
+ * 微博 配置
+ * @type {Array}
+ */
+window.WeiboJS.init({
+    'appkey' : '[[appKey]]',
+    'debug': [[debug]],
+    'timestamp': '[[timestamp]]',
+    'noncestr': '[[nonceStr]]',
+    'signature': '[[signature]]',
+    'scope': [
+        'getNetworkType',
+        'networkTypeChanged',
+        'getBrowserInfo',
+        'checkAvailability',
+        'setBrowserTitle',
+        'openMenu',
+        'setMenuItems',
+        'menuItemSelected',
+        'setSharingContent',
+        'openImage',
+        'scanQRCode',
+        'pickImage',
+        'getLocation',
+        'pickContact',
+        'apiFromTheFuture',
+        'login',
+        'menuItemAvailable',
+        'invokeMenuItem',
+        'audioMetersChange',
+        'cashier',
+        'menuItemSelected',
+        'orientationChanged'
+    ]
+}, function(ret){
+    if (window.console && window.console.log) {
+        console.log('init done\n' + JSON.stringify(ret));
+    }
+});
+window.WeiboJS._appkey='[[appkey]]';

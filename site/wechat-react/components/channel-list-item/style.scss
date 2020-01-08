@@ -1,0 +1,166 @@
+.__channel-list-item {
+    cursor: pointer;
+    margin-left: 30px; // padding-right: 30px;
+    padding: 30px 30px 30px 0;
+    border-bottom: 1px solid #f0f0f0;
+    /*no*/
+    &:nth-last-of-type(1) {
+        border: 0;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo-con {
+        flex-grow: 0;
+        flex-shrink: 0;
+        margin-right: 30px;
+        .logo {
+            height: 148px;
+            /*px*/
+            width: 240px;
+            /*px*/
+            background-color: #b3abab;
+            overflow: hidden;
+            border-radius: 4px;
+            position: relative;
+            .show-hide-icon {
+                position: absolute;
+                color: #666;
+                padding: 0 2px;
+                /*no*/
+                background: rgba(0, 0, 0, 0.5);
+                top: 0;
+                right: 0;
+                color: #ffffff;
+            }
+            img {
+                width: 240px;
+                /*px*/
+            }
+            .is-relay {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                font-size: 22px;
+                /*px*/
+                color: #fff;
+                letter-spacing: 0;
+                background: rgba(0, 0, 0, 0.5);
+                border-radius: 0 0 4px 0;
+                opacity: 0.5;
+                padding: 7px;
+            }
+        }
+    }
+    .main-con {
+        flex-grow: 1;
+        flex-shrink: 1;
+        .channel-name {
+            margin-bottom: 12px;
+            /*px*/
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            .admin {
+                margin-left: 30px;
+                display: inline-block;
+                height: 6px;
+                /*px*/
+                width: 34px;
+                /*px*/
+                background-image: url('./img/admin.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                position: relative; // top: -20px; /*px*/
+            }
+            .left {
+                .title {
+                    color: #424242;
+                    font-weight: bold;
+                    font-size: 28px;
+                    /*px*/
+                    line-height: 1.3;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                    overflow: hidden;
+                    vertical-align: middle;
+                }
+            }
+            .right {
+                cursor: pointer;
+                position: relative;
+                flex-grow: 0;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 200%;
+                    height: 400%;
+                    top: -100%;
+                    left: -50%;
+                }
+            }
+        }
+        .course-num {
+            margin-bottom: 16px;
+            /*px*/
+            min-height: 30px;
+            font-size: 24px;
+            /*px*/
+            color: #b8b0b0;
+        }
+        .last-con {
+            // margin-bottom: 30px;
+            // height: 34px; /*px*/
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .learning-num {
+                display: flex;
+                align-items: center;
+                font-size: 22px;
+                /*px*/
+                color: #b8b0b0;
+            }
+            .charge {
+                display: flex;
+                align-items: center;
+                font-size: 22px;
+                /*px*/
+                color: #f73657;
+                span {
+                    margin-right: 4px;
+                }
+                .free {
+                    color: #6ee27e;
+                }
+                .promotion {
+                    height: 26px;
+                    /*px*/
+                    width: 26px;
+                    /*px*/
+                    display: inline-block;
+                    background: url('./img/promotion.png');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+                .group {
+                    height: 26px;
+                    /*px*/
+                    width: 26px;
+                    /*px*/
+                    display: inline-block;
+                    background: url('./img/group.png');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+
+    .abandon {
+        color: #999090;
+        text-decoration: line-through;
+    }
+}

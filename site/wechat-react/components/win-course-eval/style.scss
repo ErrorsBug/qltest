@@ -1,0 +1,143 @@
+@import "../../assets/styles/mixins.scss";
+.co-win-course-eval {
+    position: absolute;
+    // middle-dialog为20，首页tab为200
+    z-index: 200;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+    text-size-adjust: none;
+    .win {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: #fff;
+        box-sizing: border-box;
+        line-height: 1.4;
+        overflow-y: auto;
+        max-height: 100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        
+        .win-title {
+            font-size: 32px;/*px*/
+            color: #333;
+            font-weight: bolder;
+            text-align: center;
+            padding: 32px 0;
+        }
+        .course-title {
+            position: relative;
+            font-size: 28px;/*px*/
+            color: #666;
+            padding-bottom: 32px;
+            margin-bottom: 40px;
+            @include afterBorderBottom1px;
+            p {
+                padding: 0 40px;
+                @include webkitLineClamp();
+            }
+        }
+        .score-star {
+            display: flex;
+            justify-content: space-between;
+            font-size: 48px;/*px*/
+            padding: 0 40px;
+
+            .btn-publish {
+                line-height: 52px;/*px*/
+                border-radius: 52px;
+                font-size: 28px;/*px*/
+                font-weight: bolder;
+                color: #fff;
+                text-align: center;
+                padding: 0 1.4em;
+                background-color: #f73657;
+                &.disabled {
+                    color: #999;
+                    background-color: #eee;
+                    font-weight: normal;
+                }
+            }
+        }
+        .desc {
+            font-size: 32px;/*px*/
+            color: #FF9400;
+            padding: 16px 40px 0;
+            .empty-str {
+                color: #999;/*px*/
+            }
+        }
+        .content-wrap {
+            padding: 40px;
+        }
+        .textarea-wrap {
+            background-color: #f7f7f7;
+            padding: 0 40px 40px;
+            textarea {
+                display: block;
+                width: 100%;
+                height: 4.2em;
+                box-sizing: content-box;
+                font-size: 30px;/*px*/
+                color: #333;
+                line-height: 1.4;
+                border: none;
+                padding-top: 40px;
+                background-color: transparent;
+                outline: none;
+                resize: none;
+            }
+            .str-len {
+                margin-top: 40px;
+                font-size: 24px;/*px*/
+                color: #999;
+                text-align: right;
+            }
+        }
+
+        .btn-close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 2;
+            padding: 40px;
+            font-size: 40px;/*px*/
+            color: #999;
+        }
+
+        .eval-later {
+            padding: 20px 0;
+            margin: -20px 0 20px;
+            text-align: center;
+            font-size: 24px;/*px*/
+            color: #999;
+        }
+    }
+    &.co-win-course-eval-enter {
+        transition: opacity .3s;
+        opacity: 0;
+        .win {
+            transform: translate3d(0, 100%, 0);
+            transition: transform .5s;
+        }
+    }
+    &.co-win-course-eval-enter-active {
+        opacity: 1;
+        .win {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+    &.co-win-course-eval-exit {
+        .win {
+            transform: translate3d(0, 0, 0);
+            transition: transform .3s;
+        }
+    }
+    &.co-win-course-eval-exit-active {
+        .win {
+            transform: translate3d(0, 100%, 0);
+        }
+    }
+}

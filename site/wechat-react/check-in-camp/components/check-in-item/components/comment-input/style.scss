@@ -1,0 +1,95 @@
+.check-in-item-comment{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 200;
+
+    .comment-bg{
+        width: 100%;
+        height: 100%;
+        background: rgba(#000, 0.3);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .comment-input-container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        min-height:100px; 
+        padding: 20px 30px;
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        align-items: stretch;
+        justify-content: flex-start;
+        background-color: #EEEEEE;
+        box-shadow: 0px -1px 0px 0px #e0e0e0;
+        z-index: 10;
+    
+        
+        .btn-audio-comment{
+            width: 60px;
+            height: 60px;
+            background: url("../../img/icon_recording.png") center center no-repeat;
+            background-size: 60% auto;
+        }
+    
+        .stretch-area {
+            flex: 1;
+            margin-right: 20px;
+            position: relative;
+    
+            .fake-content {
+                display: block;
+                visibility: hidden;
+                font-size: 30px;
+                line-height: 40px;
+                padding: 10px 30px;
+                border-radius: 30px;
+                background-color: #fff;
+                box-sizing: border-box;
+                white-space: pre-wrap;
+            }
+    
+            .comment-input {
+                position:absolute;
+                top:0;
+                left:0;
+                right: 0;
+                height:100%;
+                width: 100%;
+                outline: none;
+                border: none;
+                font-size: 30px;
+                line-height: 40px;
+                color: #333;
+                padding: 10px 30px;
+                border-radius: 30px;
+                background-color: #fff;  
+                box-sizing: border-box;
+            }
+        }
+    
+        .req-comment {
+            flex-shrink: 0;
+            width: 100px;
+            height: 66px;
+            border-radius: 33px;
+            background-color: #ef5670;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-self: flex-end;
+            color: #fff;
+            font-size: 26px;/*px*/
+        }
+    
+    }
+        
+}
+

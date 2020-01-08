@@ -1,0 +1,10 @@
+<view class="timer-box {{stylestr}}">
+    
+    <view class="time-time{{stylestr?stylestr:''}} time-h{{stylestr?stylestr:''}}">{{time.hours}}</view> 
+    <view class="time-semic{{stylestr?stylestr:''}}">:</view>
+    <view class="time-time{{stylestr?stylestr:''}} time-m">{{time.minutes}}</view>
+    <view class="time-semic{{stylestr?stylestr:''}}">:</view>
+    <view class="time-time{{stylestr?stylestr:''}} time-s">{{time.second}}</view>
+    {{noMsecond?'':'.'}}
+    <view class="time-time{{stylestr?stylestr:''}} time-s" hidden="{{noMsecond}}">{{time.msecond}}</view>
+</view>

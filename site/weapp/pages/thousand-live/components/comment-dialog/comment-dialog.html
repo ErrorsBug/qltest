@@ -1,0 +1,56 @@
+<view class="comment-view" wx:if="{{isShow}}">
+    <view class="comment-view-flex">
+        <view class="hide-commnet-box" catchtap="onHideCommentViewClick">
+            <!-- <button class="btn-hide-comment" type="default" >回到课程</button> -->
+        </view>
+        <view class="comment-main-view">
+            <view class="comment-num">
+                <text>讨论({{commentNum}})</text>
+                <image class="close-comment-btn" catchtap="onHideCommentViewClick" src="./img/tips-modal-close.png" mode="widthFix"/>
+            </view>
+            <scroll-view
+                bindscrolltolower="onScrollToLower"
+                scroll-y="{{true}}"
+                lower-threshold="200"
+                class="comment-list">
+                <block
+                    wx:for="{{commentList}}"
+                    wx:for-item="comment"
+                    >
+                    <view class="comment-dd cmt-dd-flex-box">
+                      <view class="cmt-head-view">
+                        <image class="cmt-user-head" src="{{comment.createByHeadImgUrl}}"></image>
+                      </view>
+                      <view class="cmt-dd-flex cmt-detail">
+                        <view class="cmt-dd-flex-box">
+                          <view class="cmt-dd-flex">
+                            <text class="cmt-create-name">{{comment.createByName}}</text>
+                            <text class="cmt-time">{{comment.createTimeView}}</text>
+                            <block wx:if="{{userPo.id == comment.createBy}}">
+                              <view class="btn-del-cmt" data-id="{{comment.id}}" bindtap="onDeleteComment">删除</view>
+                            </block>
+
+                          </view>
+                        </view>
+                        <view class="cmt-content">
+                            <block wx:if="{{comment.type == 'text'}}">
+                                <view class="cmt-type-text">
+                                    <view class="sp-cmt-ask" wx:if="{{comment.isQuestion == 'Y'}}">
+                                        <image class="sp-cmt-ask-image" src="./img/question.png" mode="widthFix"/>
+                                    </view>
+                                    <text>{{comment.content}}</text>
+                                </view>
+                            </block>
+                            <block wx:elif="{{comment.type == 'image'}}">
+                              <image class="cmt-type-iamge" src="{{comment.content}}" mode="widthFix"></image>
+                            </block>
+                        </view>
+                      </view>
+                    </view>
+                </block>
+                <view hidden="{{!isLoadingMore}}" class="loading-status">加载中...</view>
+                <view hidden="{{!isNoMore}}" class="loading-status">没有更多</view>
+            </scroll-view>
+        </view>
+    </view>
+</view>

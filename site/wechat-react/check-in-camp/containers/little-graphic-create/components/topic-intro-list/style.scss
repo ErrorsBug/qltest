@@ -1,0 +1,263 @@
+.little-graphic-page{
+    @keyframes fakeHLine
+    {
+        0% {opacity: 1;}
+        50% {opacity: 1;}
+        51% {opacity: 0;}
+        100% {opacity: 0;}
+    }
+
+    .topic-title{
+        margin: 30px 0;
+        position: relative;
+        width: 100%;
+
+        .text-textarea{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            overflow: hidden;
+            border: none;
+            background: none;
+            display: none;
+        
+        }
+        .text-textarea,
+        .main-content{
+            width: 100%;
+            font-size: 50px;/* px */
+            color: #333333;
+            line-height: 65px;/* px */
+            min-height: 65px;/* px */
+            white-space: pre-wrap;
+            word-break: break-word;
+            font-weight: 500;
+        }
+
+
+        &.editing{
+            .main-content{
+                padding-bottom: 65px;/* px */
+                visibility: hidden ;
+            }
+            .text-textarea{
+                display: block;
+            }
+        }
+
+
+    }
+
+    // 文本类型
+    .item-text{
+        position: relative;
+        width: 100%;
+        margin: 10px 0;
+
+        .text-textarea{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            overflow: hidden;
+            border: none;
+            background: none;
+            display: none;
+        }
+        
+        .text-textarea,
+        .main-content{
+            width: 100%;
+            font-size: 30px;/* px */
+            color: #766868;
+            line-height: 50px;/* px */
+            min-height: 40px;/* px */
+            white-space: pre-wrap;
+            word-break: break-word;
+            
+        }
+
+        &.editing{
+            .main-content{
+                padding-bottom: 40px;/* px */
+                visibility: hidden ;
+            }
+            .text-textarea{
+                display: block;
+            }
+
+        }
+
+    } 
+
+
+    // 图片类型
+    .item-image{
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+
+
+        .main{
+            display: inline-block;
+            position: relative;
+            width: 100%;
+        }
+        .img-box{
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            &.i-m-focus{
+                &::after{
+                    content: '';
+                    width:2px;/* px */
+                    height: 100%;
+                    max-height: 30px;
+                    position: absolute;
+                    background: #333;
+                    right: -7px;
+                    bottom: 0;
+                    animation: fakeHLine 1s infinite;
+                }
+                
+            }
+        }
+
+        img{
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            max-width: 100%;
+
+        }
+
+        .btn-del{
+            position: absolute;
+            display: inline-flex;
+            height: 36px;/* px */
+            width: 36px;/* px */
+            right: 0;
+            top: 0;
+            transform: translate(50%,-50%);
+            background: #c6c6c6;
+            color: #fff;
+            border-radius: 40px;/* px */
+            align-items: center;
+            justify-content:center;
+            font-size: 30px;/* px */
+
+            &::after{
+                content: "";
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+            }
+            
+        }
+    }
+    
+    
+    
+    // 图片类型
+    .item-audio{
+        margin: 5px 0;
+        
+
+        .main{
+            display: block;
+            width: 100%;
+            position: relative;
+        }
+
+        .audio-bar{
+            position:relative;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            background: #f5f5f5;
+            height: 90px;
+            width: 100%;
+            margin: 20px 0;
+            box-sizing: border-box;
+            padding: 0 20px;
+            border: solid 1px #e5e5e5;/* no */
+            border-radius: 3px;
+
+            &.i-m-focus{
+                &::after{
+                    content: '';
+                    width:2px;/* px */
+                    height: 100%;
+                    max-height: 30px;
+                    position: absolute;
+                    background: #333;
+                    right: -7px;
+                    bottom: 0;
+                    animation: fakeHLine 1s infinite;
+                }
+                
+            }
+
+            
+
+
+            .btn-play{
+                display: block;
+                width: 60px;/* px */
+                height: 60px;/* px */
+
+                img{
+                    width: 100%;
+                }
+            }
+
+            .tips{
+                flex: 1;
+                display: inline-flex;
+                align-items: center;
+                color: #736c6c;
+                font-size: 28px;/* px */
+                height: 100%;
+                margin-left: 20px;
+            }
+
+            .second{
+                font-size: 26px;/* px */
+                color: #999090;
+            }
+
+        }
+
+        .btn-del{
+            position: absolute;
+            display: inline-flex;
+            height: 36px;/* px */
+            width: 36px;/* px */
+            right: 0;
+            top: 0;
+            transform: translate(50%,-50%);
+            background: #c6c6c6;
+            color: #fff;
+            border-radius: 40px;/* px */
+            align-items: center;
+            justify-content:center;
+            font-size: 30px;/* px */
+
+            &::after{
+                content: "";
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+            }
+            
+        }
+    }
+
+}

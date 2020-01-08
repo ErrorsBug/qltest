@@ -1,0 +1,22 @@
+<!-- <template name="speak-tpl-audio"> -->
+  <view class="sp-content-box">
+    <view class="sp-type-audio" id="{{speak.id}}" data-id="{{speak.id}}" bindtap="onPlayAudioBtnClick" data-content="{{speak.content}}">
+        <view wx:if="{{speak.id == playingSpeakId && playingSpeakStatus === 'waiting'}}" class="btn-sp-play-waiting">
+            <image class="icon-audio-waiting" src="../img/audio-loading.gif" mode="widthFix"></image>
+        </view>
+        <view wx:else class="btn-sp-play-audio">
+            <block wx:if="{{speak.id == playingSpeakId && playingSpeakStatus === 'playing'}}">
+              <image class="icon-audio-play" src="../img/icon-audio-pause.png" mode="widthFix"></image>
+              </block>
+            <block wx:else>
+              <image class="icon-audio-play" src="../img/icon-audio-play.png" mode="widthFix"></image>
+            </block>
+        </view>
+        <view class="audio-slider-box {{speak.second < 20? 'audio-w1': (speak.second < 40? 'audio-w2': '')}}">
+            <ql-slider  disabled="{{speak.id != playingSpeakId}}" percent = "{{speak.id == playingSpeakId? playingSpeakPercent:0}}" backgroundColor="#9cd543" activeColor="#fff"  bindonTouchAudioSliderStart="onTouchAudioSliderStart" bindonTouchAudioSliderEnd="onTouchAudioSliderEnd" bindonTouchAudioSliderCancel="onTouchAudioSliderCancel"/>
+        </view>
+        <view class="sp-audio-second">{{speak.secondView}}</view>
+    </view>
+    <view class="noread"></view>
+  </view>
+<!-- </template> -->

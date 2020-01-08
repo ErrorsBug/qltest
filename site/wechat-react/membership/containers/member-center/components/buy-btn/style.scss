@@ -1,0 +1,44 @@
+.member-center__buy-btn{
+	padding:12px 40px;
+	background:#fff;
+	.content{
+		height:76px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		line-height: normal;
+		color:#fff;
+		border-radius: 200px;
+		background:url(./img/buy-btn.png) no-repeat center / 100%;
+		font-size:32px;
+		.price{
+			font-size:42px;
+			font-weight: bolder;
+			margin-right: 16px;
+		}
+		.original-price {
+			color: #fff;
+			opacity: .5;
+			font-size: 30px;
+			text-decoration: line-through;
+			margin-right: 16px;
+		}
+		.vertical-bottom {
+			height: 40px;
+			display: flex;
+			align-items: flex-end;
+			line-height: 1;
+		}
+	}
+}
+.member-center__counter {
+	margin: 0 40px;
+	background-color: #FFF0F0;
+	border-top-left-radius: 28px;
+	border-top-right-radius: 28px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #F73657;
+}

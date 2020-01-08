@@ -1,0 +1,43 @@
+.jion-page-barrage{
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    z-index: 1;
+    height: auto !important;
+    .barrage-item{
+        height:66px;
+        background:rgba(0,0,0,0.6);
+        border-radius:32px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 16px;
+
+        img{
+            width:50px;
+            height:50px;
+            border-radius: 50px;
+            margin-right: 10px;
+        }
+        span{
+            font-size:24px;/* px */
+            color: #fff;
+            white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            b{
+                max-width: 150px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                display: inline-block;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    
+    
+
+}

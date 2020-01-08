@@ -1,0 +1,207 @@
+/*
+ * 打卡后给.btn-sign 添加 .signed即可添加打卡后样式
+ */
+
+.subscribe-lesson-container {
+    background: #f5f5f5;
+
+    .search {
+        cursor: pointer;
+        z-index: 10;
+        position: absolute;
+        height: 80px; /*px*/
+        width: 80px; /*px*/
+        right: 30px;
+        bottom: 60px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: rgba(255,255,255, 0.9);
+        // background-image: url('./img/search.png');
+        // background-position: center;
+        // background-size: 33px 34px;
+        // background-repeat: no-repeat;
+        img {
+            display: block;
+            width: 33px;
+            height: 34px;
+        }
+
+        border-radius : 100px; 
+        border: 1px solid #b8b0b1; /*no*/
+    }
+
+    header {
+        // height: 350px;
+        width: 100%;
+        
+        // background: url(~assets/images/subscribe/lesson_bg_header.jpg) no-repeat center;
+        // background-size: 750px 478px;
+        overflow: hidden;
+        .lesson-top-head{
+            width:100%;
+            display: block;
+            height: auto;
+        }
+        .lesson-top{
+            display: block;
+            width:100%;
+            position: absolute;
+            top:25px;
+            text-align: center;
+        }
+        .lesson-time {
+            padding: 44px 0 40px;
+            color: #fff;
+            font-size: 30px;/*px*/
+            font-weight: 400;
+            text-align: center;
+        }
+        .small-ag-wrap {
+            max-width: 640px;
+            margin: auto;
+            cursor: pointer;
+        }
+        .btn-sign {
+            display: inline-block;
+            margin: 30px auto 0;
+            padding:5px 20px;
+            min-width: 220px;
+            height: 62px;
+            text-align: center;
+            color: #fff;
+            font-size: 30px;/*px*/
+            border-radius: 36px;
+            line-height: 62px;
+            background: #f84c69;
+            &.signed {
+                height: 58px;
+                min-width: 212px;
+                line-height: 58px;
+                border: 2px solid #fff; 
+                background: transparent;
+            }
+        }
+    }
+    .tip {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 30px;
+        height: 110px;
+        background: #fff;
+        // .txt {
+        //     flex: 1 1;
+        //     padding-left: 38px; 
+        //     font-size: 32px;/*px*/
+        //     color: #999;
+        //     line-height: 1.2;
+        //     background: url(~assets/images/subscribe/icon_crown.png) no-repeat left center;
+        //     background-size: 30px 28px;
+        // }
+        // .btn-manage {
+        //     flex: 0 0 5em;
+        //     font-size: 24px;/*px*/
+        //     color: #f84c69;
+        //     text-align: right;
+        //     vertical-align: middle;
+        //     >span {
+        //         padding: 0 4px;
+        //         vertical-align: middle;
+        //     }
+        //     .icon_settings {
+        //         line-height: 36px;
+        //         font-size: 36px;/*px*/
+        //     }
+
+        // }
+        .trailer-tip {
+            padding: 0 26px;
+            height: 68px;
+            border-radius: 34px;
+            line-height: 68px;
+            font-size: 24px; /*px*/
+            color: #999;
+            background: #fff6f6;
+            .trailer-word {
+                display: block;
+                padding: 0 18px 0 34px;
+                background: url(../../../assets/images/subscribe/icon_clock.png) no-repeat left center;
+                background-size: 21px 24px;
+                line-height: 68px;
+                float:left;
+                vertical-align: middle;
+            }
+            .trailer-time {
+                display: block;
+                color: #f84c69;
+                font-size: 26px; /*px*/
+                line-height: 70px;
+                float:left;
+                vertical-align: middle;
+            }
+        }
+        .btn-subscribe {
+            position: absolute;
+            right: 30px;
+            top: 32px;
+            z-index: 1001;
+            height: 46px;
+            padding: 0 24px 0 56px;
+            border: 1px solid #e5e5e5; /*px*/
+            border-radius: 23px;
+            font-size: 24px;
+            color: #999;
+            line-height: 46px;
+            background: #fff url(../../../assets/images/subscribe/icon_pencil.png) no-repeat 24px center / 24px 23px;
+            >.barrier-tip {
+                // content: ' ';
+                position: absolute;
+                left: 158px - 750px + 66px;
+                bottom: -112px;
+                width: 619px;
+                height: 112px;
+                background: url(../../../assets/images/subscribe/subscribe_tips.png) no-repeat center / 619px 112px;
+                pointer-events:none;
+
+            }
+        }
+    }
+    .lookMore{
+        background: #fff;
+        border-radius: 10px;
+        padding: 30px 20px;
+        font-size: 24px;/*px*/
+        color: #999;
+        display: block;
+        margin:30px;
+        line-height: 40px;
+        .icon_enter{
+            float: right;
+            line-height: 40px;
+            &:before{
+                color:#999;
+            }
+            
+        }
+    }
+
+    .barrier {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1000;
+        background: rgba(0,0,0,0.8);
+    }
+    .barrierbody{
+        >ul{
+            height: 100%;
+            overflow: hidden;
+        }
+    }
+}

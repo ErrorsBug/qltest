@@ -1,0 +1,40 @@
+<view class="bottom-bar">
+    <view class="bottom-bar-text-input-box">
+        <input
+            id="bottom-input"
+            class = "bottom-bar-text-input"
+            placeholder = "{{isCommentBanned ? '本话题已被禁言': topicEnded? '本话题已经结束': '来说点什么吧...'}}"
+            placeholder-style="color:#999090"
+            value = "{{inputText}}"
+            focus="{{isInputFocus}}"
+            bindinput = "inputOnChange"
+            bindfocus = "inputOnFocus"
+            bindblur = "inputOnBlur"
+            confirm-type="发送"
+            disabled = "{{isCommentBanned || topicEnded}}"
+        />
+        <label for="bottom-input" wx:if="{{(isInputFocus || inputText) && !topicEnded}}" class="bottom-bar-comment-question"
+            catchtap="questionBoxOnClick"
+            >
+            <view class="{{isQuestion ? 'bottom-bar-check-box-selected': 'bottom-bar-check-box-unselected'}}"></view>
+            <text class="bottom-bar-needsclick" catchtap="questionBoxOnClick">提问</text>
+        </label>
+    </view>
+    <view wx:if="{{isInputFocus || inputText || isShowComment}}" class="bottom-bar-btn-send-text" catchtap="inputComplete">
+        <text>发送</text>
+    </view>
+    <view wx:else class="bottom-bar-control-area">
+        <view class="bottom-bar-btn-chat">
+            <view class = "bottom-bar-barrage-btn-client" catchtap="onBarrageBtnClick">
+                <image wx:if="{{isShowBarrage}}" src="./img/barrage-open-c.png" mode="widthFix"/>
+                <image wx:else src="./img/barrage-close-c.png" mode="widthFix"/>
+            </view>
+            <view class = "bottom-bar-comment-btn-client" catchtap="onCommentBoxBtnClick">
+                <image src="./img/comment-icon.png" mode="widthFix"/>
+            </view>
+        </view>
+        <view class="bottom-bar-btn-opration" catchtap="onOperationBtnClick">
+            <image src="./img/operation-icon.png" mode="widthFix"/>
+        </view>
+    </view>
+</view>

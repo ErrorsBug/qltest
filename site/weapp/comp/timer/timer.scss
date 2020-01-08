@@ -1,0 +1,88 @@
+.timer-box{
+    color:#333;
+    font-size: 25rpx;
+    display: inline-block;
+    vertical-align: top;
+    width:180rpx;
+    font-weight: 600;
+}
+.time-time{
+    display:inline-block;
+    width:30rpx;
+    overflow: hidden;
+    vertical-align: top;
+    text-align: center;
+}
+
+.timer-style1{
+    font-size: 32rpx;
+    vertical-align: top;
+    width:260rpx;
+    font-weight: 600;
+}
+.time-timetimer-style1{
+    display:inline-block;
+    width:40rpx;
+    overflow: hidden;
+    vertical-align: top;
+    text-align: center;
+}
+
+.timer-style2{
+    font-size: 32rpx;
+    vertical-align: top;
+    width:300rpx;
+}
+.time-timetimer-style2{
+    display:inline-block;
+    width:40rpx;
+    overflow: hidden;
+    vertical-align: top;
+    text-align: center;
+}
+//没有毫秒的，挂历式样式。
+.timer-style3{
+    font-size: 35rpx;
+    vertical-align: top;    
+    line-height: 120rpx;
+    width:600rpx;
+    color:#fff;
+    font-size: 60rpx;
+}
+.time-timetimer-style3{
+    display:inline-block;
+    width:120rpx;
+    height: 120rpx;
+    overflow: hidden;
+    vertical-align: top;
+    text-align: center;
+    color:#fff;
+    font-size: 50rpx;
+    background:url(https://img.qlchat.com/qlLive/liveCommon/timer-style3-bg.png) center center no-repeat;
+    background-size: 100% auto;
+    margin:8rpx 20rpx;
+}
+
+// 小型的那种倒计时
+.timer-style-mini {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .time-timetimer-style-mini {
+        text-align: center;
+        line-height: 30rpx;
+        height: 30rpx;
+        background-color: #ffffff;
+        padding: 5rpx;
+        color: #d3363e;
+        font-size: 26rpx;
+        border-radius: 10rpx;
+    }
+
+    .time-semictimer-style-mini {
+        color: #ffffff;
+        padding: 0 10px;
+    }
+}

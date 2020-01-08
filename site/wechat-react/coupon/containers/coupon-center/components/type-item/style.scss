@@ -1,0 +1,26 @@
+@import "../../../../../assets/styles/base-definition";
+@import "../../../../../assets/styles/mixins.scss";
+.list-container-col .type-item-list{
+	display:flex;
+	align-items: center;
+	padding:40px 20px 0 40px;
+	overflow: hidden;
+    flex-wrap:wrap;
+    flex-shrink: 0;
+	.type-item{
+		height:52px;
+		padding:0 20px;
+		background:#F7F7F7;
+		border-radius: 100px;
+		color:#666;
+		@include flex-center;
+		margin:0 20px 20px 0;
+		cursor: pointer;
+		&.current{
+			color:$main-color;
+		}
+		&:last-child{
+			margin-right:0;
+		}
+	}
+}

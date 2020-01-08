@@ -1,0 +1,37 @@
+@mixin module-box($common-img-path){
+	margin:0 40px;
+	padding:40px 0;
+	border-bottom:1px solid #eee;
+	display: flex;
+	flex-direction: column;
+	.title{
+		font-size:44px;
+		font-weight: bolder;
+		position: relative;
+		padding:0 50px;
+		align-self: center;
+		&:before,
+		&:after{
+			position: absolute;
+			top:50%;
+			width:36px;
+			height:16px;
+			content:'';
+			margin-top:-8px;
+		}
+		&:before{
+			left:0;
+			background:url(#{$common-img-path}/title-decoration-left.png) no-repeat center / 100%;
+		}
+		&:after{
+			right:0;
+			background:url(#{$common-img-path}/title-decoration-right.png) no-repeat center / 100%;
+		}
+	}
+	.module-tip{
+		margin-top:20px;
+		color:#A0836B;
+		font-size:24px;
+		text-align: center;
+	}
+}

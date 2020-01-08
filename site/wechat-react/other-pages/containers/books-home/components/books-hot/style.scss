@@ -1,0 +1,25 @@
+.ls-hot-books{
+    padding: 0 32px;
+    .ls-books-title{
+    }
+    .ls-books-items{
+        padding-bottom: 48px;
+        margin-bottom: 36px;
+        position: relative;
+        &:before{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 32px;
+            height: 2px; /*no*/
+            background: #F7F7F7;
+            content: '';
+        }
+        .ls-recommend-item{
+            margin-bottom: 32px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+}

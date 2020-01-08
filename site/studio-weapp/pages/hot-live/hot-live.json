@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "",
+    "usingComponents": {
+        "audio-box": "../../comp/audio-box/audio-box"
+    }
+}

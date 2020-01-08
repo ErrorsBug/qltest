@@ -1,0 +1,191 @@
+// @import "../../../basis-definition";
+//主导色
+$main-color:#f73657;//字体与线框
+$main-color--lighter:#f84c69;//大面积使用
+
+//灰色
+$gray--title:#333;//标题
+$gray--content:#666;//正文，段落
+$gray--tip:#999;//辅助性文字
+$gray--lighter-tip:#b2b2b2;//次要辅助性文字
+$gray--split-line:#f0f0f0;//普通分割线
+$gray--background:#f5f5f5;//背景
+
+.push-course-dialog{
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;left:0;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	background:rgba(#000,.5);
+	z-index: 100;
+	font-size:28px;/*px*/
+	line-height:1.2;
+	.container{
+		width:690px;
+		border-radius: 15px;
+		overflow: hidden;
+		background:#fff;
+		.main{
+			padding: 40px 40px;
+			header{
+				text-align: center;
+				color: #313131;
+				font-size: 34px;/* px */	
+				font-weight: 700;
+				margin-bottom: 30px;
+				var{
+					color: #f62f4d;
+				}
+
+			}
+
+			.select_ul{
+				border-bottom: solid 1px #f8f4ed;/* no */
+				padding:20px 0;
+
+				li{
+					font-size: 26px;/* px */
+					line-height: 40px;
+					color: #424242;
+					padding: 10px 0;
+					cursor: pointer;
+					display: block;
+					position: relative;
+					padding: 10px 0 10px 40px;
+					
+					
+					b{
+						color: #424242;
+					}
+
+					i{
+						font-style: normal;
+						color: #999999;
+					}
+
+					.new::after{
+						content: 'new';
+						font-size: 20px;/* px */
+						color: rgb(255, 255, 255);
+						background-color: rgb(246, 47, 77);
+						border-radius: 2px;
+						margin-left: 8px;
+						padding: 2px 4px;
+					}
+
+					.tips{
+						display: block;
+						color: #f85973;
+						font-size: 24px;/* px */
+					}
+
+					.checkbox{
+						display: inline-block;
+						width: 20px;/* px */
+						height: 20px;/* px */
+						border: solid 2px #999999;/* px */
+						border-radius: 2px;
+						font-size: 20px;/* px */
+						text-align: center;
+						line-height: 20px;
+						vertical-align: top;
+						margin: 8px 13px 0 -38px;
+						color: #807878;
+						position: relative;
+						&::before{
+							position: absolute;
+							left: 50%;
+							top: 50%;
+							transform: translate(-50%,-50%);
+						}
+					
+					}
+
+					&.disable{
+						color: #b3b3b3 !important;
+
+						b,i{
+							color: #b3b3b3 !important;	
+						}
+						.checkbox{
+							border-color:#d6d6d6 ;
+							&::before{
+								display: none;
+								content: '';
+							}
+						}
+
+					}
+
+					.goto-tuto{
+						width: 50px;
+						height:  50px;
+						display: block;
+						position: absolute;
+						right: 0;
+						top: 50%;
+						transform: translateY(-50%);
+						color: #e6e6e6;
+						text-align: center;
+						line-height: 50px;
+					}
+
+
+				}
+
+
+			}
+
+
+
+			> a
+			{
+				color: #d1c1b4;
+				font-size: 24px; /*px*/
+				line-height: 1;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-top: 30px;
+				> .how-to-push{
+					display: inline-block;
+					width: 24px;/* px */
+					height: 24px;/* px */
+					background-image: url(./img/how-to-push-by-your-own.png);
+					background-size: contain;
+					background-repeat: no-repeat;
+					margin-right: 8px;
+				}
+			}
+		}
+		
+		.operation{
+			border-top:1px solid $gray--split-line;/*no*/
+			display:flex;
+			justify-content: center;
+			align-items: center;
+			font-size:30px;/*px*/
+			.cancel-btn,
+			.confirm-btn{
+				height:90px;
+				display:flex;
+				justify-content: center;
+				align-items: center;
+				flex-grow:1;
+				cursor:pointer;
+				flex-basis: 200px;
+			}
+			.confirm-btn{
+				border-left:1px solid $gray--split-line;/*no*/
+				color:$main-color;
+			}
+		}
+
+		.operation:hover {
+			cursor: pointer;
+		}
+	}
+}

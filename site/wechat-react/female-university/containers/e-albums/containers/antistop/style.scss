@@ -1,0 +1,142 @@
+.six-page{
+    // height: 100%;
+    color: white;
+    font-family:"PingFangSC-Regular","PingFang SC";
+    font-weight:400;
+    color:rgba(255,255,255,1);
+    line-height:50px;
+    .six-page-cont{
+        position: relative;
+        z-index: 5;
+    }
+    .honor-title{
+        font-weight: bold;
+    }
+    .year{
+        margin-top: 126px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        img{
+            width: 450px;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+    .one-flash{
+        opacity: 0;
+        animation: deferAni 1s ease-in-out 1s forwards;
+    }
+    .antistop-title{
+        text-align: center;
+        font-size: 32px;
+        margin-top: 80px;
+    }
+    .three-flash{
+        opacity: 0;
+        animation: deferAni 1s ease-in-out 3s forwards;
+    }
+    .honor{
+        font-size: 100px;
+        text-align: center;
+        margin-top: 46px;
+        line-height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .honor-img{
+            display: flex;
+            .wire{
+                margin-top: 38px;
+                height: 1px;
+                width: 338px;
+                border: 1px solid #fdb392;
+            }
+            .zsleft,.zsright{
+                width: 88px;
+                height: 100px;
+                position: relative;
+                top: -60px;
+            }
+            .zsleft{
+                right: 42px;
+            }
+            .zsright{
+                left: 42px;
+            }
+        }
+    }
+    .five-flash{
+        opacity: 0;
+        animation: deferAni 1s ease-in-out 5s forwards;
+    }
+    .copywriter{
+        font-size: 32px;
+        line-height:54px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        p{
+            width: 416px;
+        }
+        span{
+            font-size: 40px;
+            color: #ffdfa7;
+        }
+    }
+    .seven-flash{
+        opacity: 0;
+        animation: deferAni 1s ease-in-out 7s forwards;
+        font-weight: bold;
+    }
+    .jt{
+        width: 100%;
+        position: absolute;
+        bottom: 34px;
+        display: flex;
+        justify-content: center;
+        z-index: 5;
+        animation: JtFlash 4s infinite;
+        img{
+            width: 44px;
+        }
+    }
+    .bg7{
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        img{
+            display: block;
+            width: 100%;
+        }
+    }
+    .bg1-flash{
+        animation:FaleInMove 1s 
+    }
+}
+@keyframes deferAni {
+    0% { 
+        opacity: 0;
+    }
+    100% { 
+        opacity: 1;
+    }
+}
+@keyframes FaleIn {
+    0% { 
+        opacity: 0;
+    }
+    100% { 
+        opacity: 1;
+    }
+}
+@keyframes FaleInMove {
+    0% { 
+        opacity: 0;
+        bottom: -600px;
+    }
+    100% { 
+        opacity: 1;
+        bottom: 0;
+    }
+}

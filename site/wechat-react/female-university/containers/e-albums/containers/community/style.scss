@@ -1,0 +1,176 @@
+.five-page{
+    // height: 100%;
+    color: white;
+    font-family:"PingFangSC-Regular","PingFang SC";
+    font-weight:400;
+    color:rgba(255,255,255,1);
+    line-height:50px;
+    .five-page-box{
+        margin-top: 60px;
+        margin-left:60px;
+        position: relative;
+        z-index: 5;
+        span{
+            font-size: 40px;
+            color: #ffdfa7;
+            font-weight: bold;
+        }
+        .timer{
+            width: 414px;
+            position: relative;
+            top: 0;
+            font-size: 32px;
+            opacity: 1;
+        }
+        .one-flash{
+            opacity: 0;
+            animation: deferAni 1s ease-in-out 1s forwards;
+        }
+        .cont-one,.like-num{
+            width: 628px;
+            position: relative;
+            top: 0;
+            margin-top: 40px;
+            font-size: 32px;
+            display: -webkit-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+        .three-flash{
+            opacity: 0;
+            animation: deferAni 1s ease-in-out 3s forwards;
+        }
+        .like-num{
+            margin-top: 0px;
+        }
+        .f-bottom{
+            position: relative;
+            top: 0;
+            margin-top: 48px;
+            width: 592px;
+            font-size:48px;
+            color:rgba(255,255,255,1);
+            line-height:70px;
+            i{
+                display: inline-block;
+                font-size: 32px;
+                vertical-align: top;
+                &:nth-of-type(2){
+                    transform:rotate(180deg);
+                }
+            }
+        }
+        .five-flash{
+            opacity: 0;
+            animation: deferAni 1s ease-in-out 5s forwards;
+            font-weight: bold;
+        }
+    }
+    .five-page-bg{
+        display: flex;
+        img{
+            position: absolute;
+            bottom: 0;
+            z-index: 1;
+            width: 100%;
+        }
+        .dm{
+            position: absolute;
+            width: 100%;
+            height: 122px;
+            bottom: 418px;
+            z-index: 5;
+            display: flex;
+            justify-content: center;
+            .dm-box{
+                width: 634px;
+                height: 100%;
+                background: url(../../img/dm.png) no-repeat;
+                background-size: 100% 100%;
+                .dm-swiper{
+                    width: 480px;
+                    height: 64px;
+                    margin-left: 104px;
+                    padding-top: 18px;
+                    .dm-title,.dm-interact{
+                        overflow: hidden;
+                        text-overflow:ellipsis;
+                        white-space: nowrap;
+                    }
+                    .dm-title{
+                        color: #A82637;
+                        font-size: 28px;
+                        line-height: 28px;
+                        font-weight:600;
+                        font-family:SourceHanSerifCN-Heavy,SourceHanSerifCN;
+                    }
+                    .dm-interact{
+                        margin-top: 10px;
+                        font-size: 20px;
+                        line-height: 1.5;
+                        color: #855A60;
+                        font-weight:bold;
+                    }
+                }
+            }
+        }
+        .bg1-flash{
+            animation:FaleInMove 1s 
+        }
+        .bg2-flash{
+            opacity: 0;
+            animation: deferAni .5s ease-in-out 1s forwards;
+        }
+    }
+    .like{
+        width: 110px;
+        height: 110px;
+        position: absolute;
+        bottom: 36px;
+        right: -20px;
+        z-index: 3;
+        img{
+            width: 100%;
+        }
+    }
+    .jt{
+        width: 100%;
+        position: absolute;
+        bottom: 34px;
+        display: flex;
+        justify-content: center;
+        z-index: 5;
+        animation: JtFlash 4s infinite;
+        img{
+            width: 44px;
+        }
+    }
+}
+@keyframes deferAni {
+    0% { 
+        opacity: 0;
+    }
+    100% { 
+        opacity: 1;
+    }
+}
+@keyframes FaleIn {
+    0% { 
+        opacity: 0;
+    }
+    100% { 
+        opacity: 1;
+    }
+}
+@keyframes FaleInMove {
+    0% { 
+        opacity: 0;
+        bottom: -600px;
+    }
+    100% { 
+        opacity: 1;
+        bottom: 0;
+    }
+}

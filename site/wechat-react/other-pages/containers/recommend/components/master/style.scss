@@ -1,0 +1,16 @@
+@import "../../../../../assets/styles/mixins.scss";
+
+.recommend-master{ 
+    position: relative;
+    @include afterBorderBottom1px;
+    &::after {
+        left: 40px;
+        right: 40px;
+    }
+    .block-header {
+        padding-bottom: 0 !important;
+    }
+    .common-course-item .learn-num{
+        background: none;
+    }
+}

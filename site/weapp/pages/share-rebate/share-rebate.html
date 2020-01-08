@@ -1,0 +1,37 @@
+<view class="container">
+  <view>
+    <view class="main-img" bindtap="tapMainImg">
+      <view class="shadow"></view>
+      <image src="{{mainImg}}" mode="aspectFill"/>
+    </view>
+    <view class="name">{{name}}</view>
+    <view class="triangle"></view>
+    <view class="desc-list">
+        <view class="desc" wx:for="{{desc}}" wx:key="{{index}}">{{item}}</view>
+    </view>
+
+    <button open-type="share" wx:if="{{name}}" disabled="{{!parentChargeId}}">
+      <image mode="aspectFit" style="width: 51rpx; height: 42rpx" src="../../comp/img/icon-wechat-51x42.png" />
+      分享给好友
+    </button>
+    <button bindtap="tapShareToMoments" wx:if="{{name}}">
+      <image mode="aspectFit" style="width: 51rpx; height: 42rpx" src="../../comp/img/icon-moments-46x46.png" />
+      分享到朋友圈
+    </button>
+  </view>
+
+
+  <!-- 生成图片分享到朋友圈 -->
+  <view class="share-img-mask" wx:if="{{isShowShareImg}}" bindtap="closeShareImg">
+    <view class="share-img-wrap" catchtap>
+      <canvas canvas-id="share-img"
+        style="width: {{canvasW}}rpx; height: {{canvasH}}rpx"/>
+      <view class="save-img" bindtap="saveImg">保存图片</view>
+    </view>
+  </view>
+
+
+  <!-- 关注领返现 -->
+  <button class="follow-then-rebate" open-type="contact" session-from="rebateChannel"></button>
+
+</view>

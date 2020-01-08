@@ -1,0 +1,46 @@
+.no-intro{
+    text-align: center;
+    padding: 50rpx;
+    font-size: 26rpx;
+    color: #b8b0b0;
+}
+
+.introduce{
+    background-color: #ffffff;
+    .intro-block {
+        padding: 0 45rpx 20rpx 45rpx;
+        background-color: #ffffff;
+        .title{
+            padding: 40rpx 0 26rpx 0;
+            font-size: 32rpx;
+            color: #424242;
+            font-weight: bold;
+        }
+        .content-image {
+            display: block;
+            width: 100%;
+        }
+
+        .content-text {
+            font-size: 30rpx;
+            color: #807878;
+            padding: 16rpx 0;
+            word-break: break-all;
+        }
+
+        .bold {
+            display: inline;
+            font-weight: bold;
+        }
+    }
+}
+
+
+.rich-text-box{
+    background: #fff;
+    padding: 30rpx;
+
+    image{
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,309 @@
+.community-center-page{
+    i{
+        vertical-align: middle;
+    }
+    .cc-scroll-box{
+        padding: 0; 
+        box-sizing: border-box;
+        background: #fff; 
+        &.pointer-events-none{
+            pointer-events: none; 
+        }
+        
+        &.cen-btm{
+            .ch-idea-empty,.un-empty-status{
+                padding-bottom: 100px;/*px*/
+            }
+            
+            .list-nomore,.list-loading{
+                margin-bottom: 100px;
+            }
+        }
+    }
+    .community-center-container{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        .community-center-container-home{
+            position: absolute;
+            top:84px;
+            right: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding:0 24px;
+            height:60px;
+            background:rgba(0,0,0,0.5);
+            border-radius:30px;
+            font-size:26px; 
+            font-weight:bold;
+            color:rgba(255,255,255,1);
+            img{
+                width: 32px;
+                margin-right: 8px;
+            }
+        }
+    }
+    .cc-head{ 
+        position: relative;
+        overflow: hidden;
+        .cc-head-bg{
+            min-height: 488px;
+            &.max-width{
+                height: 550px;
+            }
+            img{
+                width: 100%;
+                height: auto;
+            }
+        } 
+    }
+    .un-tab-box{
+        padding:0 32px; 
+        background: #fff; 
+        .un-tab-lists{ 
+            height: 90px;
+            .un-tab-item {
+                padding-right: 48px;
+                div{ 
+                    font-size:28px; 
+                    font-weight:normal;
+                    color:rgba(102,102,102,1);
+                }
+                &.active{
+                    div{ 
+                        font-size: 36px;/*px*/
+                        font-weight:bold;
+                        color:rgba(51,51,51,1);
+                        &::before{
+                            bottom: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .cc-main{ 
+        position: relative;
+        z-index: 1;
+        min-height: 16px;
+        background: #f7f7f7; 
+        .un-home-topic-box{
+            background:rgba(248,242,236,1) url("https://img.qlchat.com/qlLive/business/VWPOMI5N-HVI3-GPPA-1569722933126-1LOI7RP442QA.png") no-repeat right 0;
+            background-size: 128px 136px;
+            border-radius:16px;
+            padding: 32px;
+            margin:-182px 16px 32px;
+            .un-topic-title{
+                margin-bottom: 48px;
+            }
+            .un-topic-list{
+                background: none;
+                box-shadow:none;
+                padding: 0;
+            }
+        }
+        .idea-item-userinfo{
+            background: #fff; 
+            &:last-child{
+                border-bottom: 0;
+            }
+        }
+        .cc-userinfo{
+            position: relative;
+            padding: 0 32px;
+            .cc-avator{
+                position: absolute;
+                top:0;
+                left:32px;
+                width: 160px;
+                height: 160px;
+                transform: translateY(-50%);
+                border-radius: 50%;
+            }
+            .chu-btn{
+                position: absolute;
+                top:20px;
+                right:32px;
+                display: flex;
+                .chu-btn-share{ 
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0 32px;
+                    height:60px;
+                    background:rgba(224,65,79,1);
+                    border-radius:50px;
+                    font-size:32px; 
+                    font-weight:bold;
+                    color:rgba(255,255,255,1);
+                    &.on{
+                        background:rgba(247,247,247,1);
+                        color:rgba(102,102,102,1);
+                        font-weight:normal;
+                    }
+                    i{ 
+                        font-size: 32px;
+                        margin-right: 8px;
+                        font-weight: normal;
+                    }
+                }
+                .chu-btn-file{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width:60px;
+                    height:60px;
+                    background:rgba(102,102,102,1);
+                    border-radius:50px;
+                    font-size:22px; 
+                    font-weight:bold;
+                    color:rgba(255,255,255,1);
+                    margin-left: 16px;
+                }
+            }
+            .chu-name{
+                font-size:40px; 
+                font-weight:bold;
+                color:rgba(51,51,51,1);
+                line-height:56px;
+                padding: 112px 0 16px;
+                max-width: 320px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .chu-certify{ 
+                font-size:26px; 
+                color:rgba(224,65,79,1);
+                line-height:36px;
+                margin-bottom: 16px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                i{
+                    font-size: 28px;
+                    margin-right: 8px;
+                    vertical-align: top;
+                }
+            }
+            .chu-fans-list{
+                padding:0 0 32px;
+                display: flex;
+                font-size:26px; 
+                color:rgba(102,102,102,1);
+                line-height:36px;
+                border-bottom: 1px solid #F7F7F7; /*no*/
+                .chu-fans-item{
+                    margin-right: 16px;
+                }
+            }
+        }
+        .cc-new-icon{
+            position: relative;
+            &::after{
+                position: relative;
+                left: 8px;
+                top:-10px;
+                content: '';
+                width:16px;
+                height:16px;
+                background:rgba(224,65,79,1);
+                border-radius: 50%;
+            }
+        }
+    } 
+    .ch-to-university{
+        .un-right-bottom-icon{
+            bottom: 150px !important;
+            right: 22px;
+        }
+    }
+    .cc-to-join{
+        position: absolute;
+        right: 16px;
+        bottom:18px;
+        width:176px;
+        height:176px;
+        z-index: 11;
+    } 
+    .cc-with-tab{
+        .cc-to-join{ 
+            bottom:114px; 
+        } 
+        .ch-to-edit .un-right-bottom-icon{
+            bottom:114px !important; 
+        }
+    }
+    .un-topic-title .public-title-head h3{
+        font-family: inherit !important;
+        max-width: 500px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+    }
+    .un-topic-title .public-title-decs{
+        color:rgba(160,137,119,1);
+    }
+    .un-topic-item .un-topic-info p span{
+        color:rgba(186,169,156,1);
+    }
+    
+    .ch-idea-empty{
+        margin-top: 32px;
+        margin-bottom: 100px;
+    }
+}
+ 
+.cc-idea-spec-box{
+    position: absolute;
+    left: 0;
+    top:0;
+    z-index: 10; 
+    width: 100%;
+    .cc-idea-spec{ 
+        .cc-idea-spec-item{
+            width: auto;
+            margin-right: 48px;
+            display: flex;
+            align-items: center;
+            height:48px;
+            background:rgba(0,0,0,0.6);
+            border-radius:32px;
+            font-size:20px; 
+            color:rgba(255,255,255,0.8);
+            padding: 0 16px;
+            img{
+                width:32px;
+                height:32px;
+                border-radius: 50%;
+                margin-right: 8px;
+            }
+        }
+    }
+}
+
+.un-community-guide{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 12;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding-bottom: 32px;
+    &.max-tab{
+        padding-bottom: 122px; 
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+}

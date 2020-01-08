@@ -1,0 +1,39 @@
+.wl-page-box{
+    text-size-adjust: none;
+    .wl-scroll-box{
+        padding: 40px 32px;
+        background: #fff;
+        box-sizing: border-box;
+    }
+    .wl-record-item{
+        margin-bottom: 32px;
+        padding: 32px;
+        width: 100%;
+        box-sizing: border-box;
+        background: #F7F7F7;
+        border-radius: 8px;
+        p{
+            font-size: 32px; 
+            line-height: 1.4;
+            color: #999;
+            margin-bottom: 12px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            span{
+                padding-left: 5px;
+                color: #333;
+                margin-left: 10px;
+                &.end{
+                    color: #10BE5A;
+                }
+                &.ing{
+                    color: #F73657;
+                }
+            }
+        }
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}

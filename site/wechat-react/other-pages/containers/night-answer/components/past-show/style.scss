@@ -1,0 +1,127 @@
+.night-answer-container{
+    .past-show-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        &.p-show{
+            background-color: rgba(0,0,0,.5);
+            .content{
+                transform: translateY(0)
+            }
+        }
+        &.p-hide {
+            pointer-events: none;
+            background-color: rgba(0,0,0,0);
+            .content{
+                transform: translateY(100%)
+            }
+        }
+        .list-nomore{
+            display: none;
+        }
+        .past-show {    
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            .black{
+                flex: 1;
+            }
+            .content{
+                height: 75%;
+                width: 100%;
+                background-color: #fff;
+                transition: transform ease .3s;
+                display: flex;
+                flex-direction: column;
+                .head {
+                    height: 100px;
+                    padding: 0 30px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-bottom: 1px solid rgb(240,240,240);
+                    >span{
+                        color: rgb(66,66,66);
+                        font-size: 30px; /*px*/
+                        font-weight: bold;
+                    }
+                    .close{
+                        background: {
+                            image: url(../../img/icon-close.png);
+                            repeat: no-repeat;
+                            size: 28px 28px;
+                            position: center center;
+                        }
+                        height: 50px;
+                        width: 50px;
+                        cursor: pointer;
+                    }
+                }
+                .show-container{
+                    flex: 1;
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    width: 100%;
+                    -webkit-overflow-scrolling: touch;
+                    li{
+                        padding: 0 30px 0 18px;
+                        display: flex;
+                        align-items: center;
+                        height: 110px;
+                        cursor: pointer;
+                        &:not(:last-child){
+                            border-bottom: 1px solid rgb(240,240,240);
+                        }
+                        &.active {
+                            background-color: rgb(245,242,242);
+                        }
+                        >span.icon_audio_play {
+                            height: 56px;
+                            width: 56px;
+                            color: rgb(184,176,176);
+                            font-size: 28px; /*px*/
+                            border-radius: 56px;
+                            display: inline-block;
+                            text-align: center;
+                            line-height: 56px;
+                        }
+                        >span.active_icon{
+                            display: inline-block;
+                            background: {
+                                image: url(../../img/active.gif);
+                                repeat: no-repeat;
+                                size: 100% 100%;
+                            }
+                            height: 40px;
+                            width: 40px;
+                            margin: 0 10px;
+                        }
+                        .title{
+                            flex: 1;
+                            box-sizing: border-box;
+                            padding: 0 30px 0 20px;
+                            font-size: 30px; /*px*/
+                            color: rgb(66,66,66);
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 2;
+                            line-height: 38px;/*px*/
+                            overflow: hidden;
+                        }
+                        .period {
+                            color: rgb(153,144,144);
+                            font-size: 24px; /*px*/
+                        }
+                    }
+                    .co-scroll-to-load{
+                        padding-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

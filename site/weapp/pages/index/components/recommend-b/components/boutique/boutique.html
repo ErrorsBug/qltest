@@ -1,0 +1,24 @@
+<wxs src="../../../../../../comp/util.wxs" module="util" />
+
+<view class="boutique">
+    <view class="block-header">
+        <text class="title">{{infos.name}}</text>
+        <view class="more-btn" data-code="{{infos.code}}" data-name="{{infos.name}}" data-log-name="{{infos.name}}" data-log-region="check-more-btn" catchtap="getMoreBtnTapHandle"><text>更多</text><text class="check-more-icon"></text></view>
+    </view>
+    <view class="boutique-container">
+        <view class="main-item" wx:for="{{infos.courses}}" wx:for-item="c" wx:if="{{index === 0}}" wx:key="{{index}}" data-course="{{c}}" catchtap="courseItemTapHandle" data-log-id="{{c.businessId}}" data-log-type="{{c.businessType}}" data-log-region="{{infos.code}}" data-log-position="{{index}}">
+            <view class="tag" wx:if="{{c.flag}}">{{util.substring(c.flag, 0, 6)}}</view>
+            <view class="name">{{c.businessName}}</view>
+            <view class="aud-count">{{util.digitFormat(c.learningNum)}}次学习</view>
+            <image class="bg" src="{{c.indexLogo}}"></image>
+        </view>
+        <view class="sub-item-wrap">
+            <view class="sub-item" wx:for="{{infos.courses}}" wx:for-item="c" wx:if="{{index > 0}}" wx:key="{{index}}" data-course="{{c}}" catchtap="courseItemTapHandle" data-log-id="{{c.businessId}}" data-log-type="{{c.businessType}}" data-log-region="{{infos.code}}" data-log-position="{{index}}">
+                <view class="tag" wx:if="{{c.flag}}">{{util.substring(c.flag, 0, 6)}}</view>
+                <view class="name">{{c.businessName}}</view>
+                <view class="aud-count">{{util.digitFormat(c.learningNum)}}次学习</view>
+                <image class="bg" src="{{c.indexLogo}}"></image>
+            </view>
+        </view>
+    </view>
+</view>

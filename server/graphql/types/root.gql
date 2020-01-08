@@ -1,0 +1,70 @@
+# 权限对象
+type Power {
+    # 是否允许管理禁言
+    allowMGBanned: Boolean
+    # 是否允许创建
+    allowCreateTopic: Boolean
+    # 是否允许删除评论
+    allowDelComment: Boolean
+    # 是否允许删除管理员
+    allowDelInviteMg: Boolean
+    # 是否允许删除发言
+    allowDelSpeak: Boolean
+    # 是否允许邀请管理员
+    allowInviteMg: Boolean
+    # 是否允许管理直播间
+    allowMGLive: Boolean
+    # 是否允许管理打赏
+    allowMGReward: Boolean
+    # 是否允许管理话题
+    allowMGTopic: Boolean
+    # 是否允许删除嘉宾或主持人
+    allowMGTopicInvite: Boolean
+    # 是否允许上墙
+    allowReplyComment: Boolean
+    # 是否允许查看打赏
+    allowSearchReward: Boolean
+    # 是否允许发言
+    allowSpeak: Boolean
+    # 是否允许邀请嘉宾或主持人
+    allowTopicInvite: Boolean
+    # 直播间ID
+    liveId: String
+    # 话题ID
+    topicId: String
+}
+
+# 用户基本信息对象
+type UserInfo {
+    # 用户ID
+    userId: String
+    # 用户头像
+    headImgUrl: String
+    # 用户名
+    name: String
+    # and so on...
+}
+
+
+type State {
+    code: Int
+    msg: String
+}
+type Response {
+    state: State
+}
+
+
+
+############# Types定义到此为止 :>
+
+type Query {
+    # 获取权限
+    power(liveId: String, topicId: String, channelId: String): Power
+    # 获取当前用户信息
+    curUserInfo: UserInfo
+}
+
+type Mutation {
+    test(id: ID): String
+}

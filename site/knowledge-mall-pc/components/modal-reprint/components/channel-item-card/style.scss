@@ -1,0 +1,143 @@
+.channel-item-card {
+    width: 100%;
+    // height: 350px;
+    background-color: #ffffff;
+    position: relative;
+
+    .base-info {
+        width: 100%;
+        height: 210px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    
+        .left-head {
+            // align-self: center;
+            margin: 0 20px 0 28px;
+            width: 240px;
+            height: 148px;
+            // border: 1px solid #999;
+            border-radius: 6px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .middle-info {
+            flex: 1;
+            height: 148px;
+            margin-right: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            position: relative;
+            width: 0;
+
+            .top {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+                font-size: 28px;/*px*/
+                font-weight: bold;
+                line-height: 1.2;
+                max-width: 430px;
+            }
+
+            .middle {
+                position: absolute;
+                left: 0;
+                bottom: 38px;
+                font-size: 22px;/*px*/
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+                overflow: hidden;
+                color: #999;
+                max-width: 250px;
+                white-space: nowrap;
+            }
+
+            .bottom {
+                font-size: 22px;/*px*/
+                color: #666;
+                width: 100%;
+                padding-right: 5px; /*no*/
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                & > .income {
+                    color: #c9a96e;
+                }
+            }
+
+            .profile {
+                font-size: 24px; /*px*/
+                color: #c9a96e;
+                .left {
+                    
+                }
+
+                .right {
+                    font-size: 30px; /*px*/
+                }
+            }
+        }
+
+        .right-btn {
+            width: 160px;
+            height: 54px;
+            border-radius: 27px;
+            background-color: #c9a96e;
+            font-size: 28px;/*px*/
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: 30px;
+            bottom: 30px;
+        }
+
+        .right-mark {
+            width: 84px;
+            align-self: stretch;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+
+            & > span {
+                height: 30px;
+                width: 100%;
+                background-color: #c9a96e;
+                border-radius: 0px 0px 0px 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                font-size: 20px;/*px*/
+            }
+        }
+
+        .disable-mark {
+            & > span {
+                background-color: #b2b2b2;
+            }
+        }
+    }
+
+    .income-info {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 28px;
+        padding-bottom: 20px;
+        color: #c9a96e;
+        font-size: 26px;/*px*/
+    }
+
+    .disable-income {
+        color: #999;
+    }
+}

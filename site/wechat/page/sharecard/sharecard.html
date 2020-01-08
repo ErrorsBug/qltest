@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>邀请卡</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="../../components_modules/swiper/3.4.2/swiper.min.css">
+        <script type="text/javascript" src="../../components_modules/require/2.1.18/require.js"></script>
+    </head>
+    <body>
+        <div class="barrage-list-wrap">
+            <ul class="barrage-list">
+                <li class="barrage-item">
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="share-card-container">
+            <div class="share-card-inner-container">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper" id="swiper" style="visibility: hidden">
+                        {{#if customBg}}
+                        <div class="swiper-slide">
+                            <img id="image-Z" class="main-img" src = "{{customBg}}">
+                        </div>
+                        {{/if}}
+                        {{#each cardList}}
+                        <div class="swiper-slide">
+                            <img id="image-{{template}}" class="main-img on-log"  src = "{{shareCard}}"  data-log-region="shareCard" data-log-index="{{shareCard}}" data-card="{{shareCard}}" data-style="{{template}}">
+                        </div>
+                        {{/each}}
+                        {{#if notCamp}}
+                        <div class="swiper-slide">
+                            <img id="image-common" class="main-img" src = "https://img.qlchat.com/qlLive/liveCommon/template-11.jpg">
+                        </div>
+                        {{/if}}
+                    </div>
+                    <div class="swiper-pagination"></div>
+
+                </div>
+                <!-- <img id="image" > -->
+                {{#if power.allowMGLive}}
+                <div class="side-btn-box">
+                    <div class="side-btn edit"></div>
+                    <div class="side-btn delete"></div>
+                    <div class="side-btn qrcode"></div>
+                </div>
+                {{/if}}
+                {{#if showCourseTips}}
+                    <div class="share-tip-btn"><i></i>课代表规则</div>
+                {{/if}}
+            </div>
+            <div class="loading-bg hidden" id="loading">
+                <img class="loading-icon" src="./img/loading.gif" />
+            </div>
+            <div class="finger-guide hide" id="finger-guide">
+                {{#if power.allowMGLive}}
+                    <div class="part1">
+                        <div class="content">您可以设置推荐语，为课程加分！<br/>用户一键复制，分享到朋友圈~</div>
+                        <img src="./img/icon-guide.png" alt="">
+                    </div>
+                {{else}}
+                    <div class="part part1">
+                        <div class="content">老师贴心为你准备了推荐语呢~<br/>一键复制，分享到朋友圈成功率更高哦</div>
+                        <img src="./img/icon-guide.png" alt="">
+                    </div>
+                    <div class=" part part2 hide">
+                        <div class="content">Step1：长按图片任意位置</div>
+                        <img src="./img/icon-finger.png" alt="">
+                    </div>
+                    <div class="part part3 hide">
+                        <div class="content">Step2：选择【发送给朋友】或【保存图片】</div>
+                        <img src="./img/remark.png" alt="">
+                    </div>
+                {{/if}}
+            </div>
+
+            <div class="share-card-inner-container custom-card-container">
+                <div 
+                    style="
+                    background: #ededed;
+                    width: 100%;
+                    height: 100%;
+                    position: fixed;"></div>
+                <div class="default-tip-wrap">
+                </div>
+                <img src="{{customBg}}" alt="" class="custom-card">
+                <!-- {{#if customBg}}
+                <div class="tip">请留意头像位置与二维码位置</div>
+                {{else}}
+                <div class="tip">请上传您设计好的推广海报图片</div>
+                {{/if}} -->
+            </div>
+
+        </div>
+        
+        <div class="bottom">
+
+            <p class="how-to-share">长按图片，保存或发送给朋友 </p>
+            {{#if notLive}}
+                {{#if ../power.allowMGLive}}
+                    <div class="btn-wrap">
+                        <div class="btn set-recommend">
+                            设置推荐文案
+                        </div>
+                        <div class="btn add-custom custom-card ">
+                            自定义海报
+                        </div>
+                    </div>
+                {{else}}
+                    <div class="share-text">                        
+                        <div class="bg">
+                            <img src="./img/share-text.png" alt="">
+                            <span>分享文案</span>
+                        </div>
+                    </div>
+                {{/if}}
+            {{else}}
+                {{#if ../power.allowMGLive}}
+                <div class="btn-wrap">
+                    <div class="btn add-custom custom-card ">
+                        自定义海报
+                    </div>
+                </div>
+                {{/if}}
+            {{/if}}
+        </div>
+
+        <div class="footer">
+            <div class="thumb-list-container">
+                {{#if notLive}}
+                    {{#if ../power.allowMGLive}}
+                        <div class="set-recommend">设置推荐语</div>
+                    {{else}}
+                        <div class="get-recommend">推荐语</div>
+                    {{/if}}
+                {{/if}}
+                <div id="thumb-list" class="thumb-inner-list">
+                    {{#if customBg}}
+                        <div class="add-custom thumb-item" data-style="Z" data-card="{{customBg}}" style="background-image:url('{{customBg}}?x-oss-process=image/resize,m_fill,limit_0,h_126,w_126')"></div>
+                    {{else}}
+                        {{#if power.allowMGLive}}
+                            <div class="add-custom"></div>
+                        {{/if}}
+                    {{/if}}
+                    <!--缩略图列表-->
+                    {{#each cardList}}
+                        <span class="thumb-item" data-card="{{shareCard}}" data-style="{{template}}"><img src="{{minShareCard}}" /></span>
+                    {{/each}}
+                    {{#if notCamp}}
+                    <span class="thumb-item" data-style="common"><img src="./img/covers/style-11.jpg" /></span>
+                    {{/if}}
+                </div>
+            </div>
+
+        </div>
+
+        <div class="custom-operation">
+            <div class="btn-wrap">
+                <div class="return-btn">返回</div>
+                <div class="upload-btn"></div>
+            </div>
+            <!-- <div class="tip">
+                <p>1、上传您设计好的推广海报图片，尺寸为<i>1136x640px</i></p>
+                <p>2、上传成功后即可生成自定义邀请卡，您的听众都会优先看到哦</p>
+            </div> -->
+            <div class="confirm-btn">确认</div>
+        </div>
+        <div class="set-recommend-dialog">
+            <div class="bg"></div>
+            <div class="set-recommend-container">
+                <span class="bottom-close">
+                    <img src="./img/btn-close.png" alt="">
+                </span>
+                            
+                <div class="content">
+                    {{#if power.allowMGLive}}
+                        <div class="header">设置推荐语，方便用户分享课程</div>
+                    {{else}}
+                        <div class="header">选择分享文案</div>
+                    {{/if}}
+                    {{#if power.allowMGLive}}
+                        <div class="textarea-container">
+                            <textarea class="textarea" placeholder="请简短描述课程的亮点吧，吸引更多用户来报名~"></textarea>
+                            <div id="word-num">0/<span>140</span></div>
+                        </div>
+                        <div class="examples-btn">示例</div>
+                        <div class="examples-area">
+                            <div class="examples-area-content"></div>
+                            <div class="operate-btn">
+                                <span class="fill-in">填充到输入框</span>
+                                <span class="replace">切换文案</span>
+                            </div>
+                        </div>
+                    {{else}}
+                        <div class="c-examples-area">
+                            <ul class="c-examples-list">
+                                
+                            </ul>
+                            <!-- <div class="c-examples-area-content" id="c-examples-area-content"></div> -->
+                            <!-- <span class="replace-another">换一个</span> -->
+                        </div>
+                    {{/if}}
+                </div>
+                <div class="recomment-btn-wrap">
+                    {{#if power.allowMGLive}}
+                        <div class="save-recommend">保存</div>
+                    {{else}}
+                        <div class="copy-recommend" data-clipboard-action="copy" data-clipboard-target=".c-examples-item.active">一键复制</div>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    <!-- 用来存储后端返回的推荐语 -->
+    <textarea id="hidden-textarea" style="display: none;">{{recommendWord}}</textarea>
+    <!-------------------------->
+    {{#if isVconsole}}
+        <script type="text/javascript" src="https://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/vconsole/2.5.1/vconsole.min.js"></script><!--ignore-->
+    {{/if}}
+    </body>
+    <script type="text/javascript" src="../../components_modules/swiper/3.4.2/swiper.umd.js"></script><!--ignore-->
+    <script>
+        var initData = {};
+
+        initData.LSHARE_KEY = '[[LSHARE_KEY]]';
+        initData.TYPE = '[[TYPE]]';
+        initData.SHARE_DATA = '[[SHARE_DATA]]';
+        initData.SHARE_DATA = (initData.SHARE_DATA || '{}')
+                                .replace(/\r/g, "")
+                                .replace(/\n/g, "");
+        initData.POWER = [[POWER]];
+        initData.IS_LIVE_ADMIN = [[IS_LIVE_ADMIN]];
+        initData.IS_WHITE_LIST_LIVE = [[IS_WHITE_LIST_LIVE]];
+        initData.IS_QLCHAT_LIVE = [[IS_QLCHAT_LIVE]];
+        initData.liveId = '[[liveId]]';
+        initData.CUSTOM_BG = '[[CUSTOM_BG]]';
+        initData.wcl = '[[wcl]]';
+        initData.redEnvelopeId = '[[redEnvelopeId]]';
+        initData.coral = '[[CORAL]]';
+        initData.userId = '[[userId]]';
+        initData.ACTIVITY_DOMAIN = '[[ACTIVITY_DOMAIN]]';
+        initData.courseIndexStatus = '[[courseIndexStatus]]';
+        initData.knowledgeId = '[[knowledgeId]]';
+        initData.thirdAppConf = '[[THIRD_APP_CONF]]';
+
+        // var initData = {};
+
+        //     initData.TYPE = 'topic';
+        //     initData.SHARE_DATA = '{"startTime":1498110480000,"headImgUrl":"https://img.qlchat.com/qlLive/channelLogo/UWKTNOVU-OKI9-IOAM-1499052199621-131DOX5JWYQU.jpg","liveName":"上善莫若喝水","shareEarningPercent":"","remark":"","speaker":null,"sharekey":"dc57dbe50b10fc9ec792f0670c8196d7","shareUrl":"https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQE08DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAybXFkclpVamhhT1QxR0FoMU5wMWwAAgSkBFpZAwQAjScA","userName":"上善莫若喝水","businessId":"210000527025990","serverCurrentTime":1499071652565,"topicName":"ddd"}';
+        //     initData.SHARE_DATA = (initData.SHARE_DATA || '{}')
+        //         .replace(/\r/g, "")
+        //         .replace(/\n/g, "");
+        //     initData.BG_LIST = '["https://img.qlchat.com/qlLive/adminImg/H7J8YHYD-5WQR-IF6C-1494218726230-Z1DIEBX3PB9A.jpg","https://img.qlchat.com/qlLive/adminImg/3XBO2DPS-53PM-7MFO-1494218986686-VTGUWSU63FGX.jpg","https://img.qlchat.com/qlLive/adminImg/X961JG7S-JKH3-RMDN-1494218977845-VNUEG4SIOYHB.jpg","https://img.qlchat.com/qlLive/adminImg/S619KGMT-94ZD-SRQM-1494218997982-A1OC7IG9S8HI.jpg","https://img.qlchat.com/qlLive/adminImg/LEL17234-8OD5-T4HY-1494219016145-ARSFSK93HXHY.jpg","https://img.qlchat.com/qlLive/adminImg/YDV7ZY6M-C82U-XRWV-1494219675603-YIEQTVUM3GZ4.jpg","https://img.qlchat.com/qlLive/adminImg/82TOODPS-59SA-DT69-1494219687704-79HO9A4ZW3VM.jpg","https://img.qlchat.com/qlLive/adminImg/NHH8LSBL-UX48-QTY3-1494219697603-WSMJLJ3MTM71.jpg","https://img.qlchat.com/qlLive/adminImg/TU7PWQHJ-XX1K-89X6-1494219712422-AJ7BHEGULPW9.jpg","https://img.qlchat.com/qlLive/adminImg/EXWKUC7K-7T5Y-IMTH-1494219724306-LYX72Q75441L.jpg"]';
+
+        require(['./fontfaceobserver', './sharecard'], function (FontFaceObserver, init) {  
+            // 展示loading
+            var loading = document.getElementById('loading');
+            if (loading) {
+                loading.classList.remove('hidden');
+            }
+            init(initData);
+            // 如果字体加载完毕，开始绘制卡片
+            // var fontsLoaded = 0;
+            // var start = function() {
+            //     fontsLoaded += 1;
+            //     if (fontsLoaded >= 2) {
+            //     }
+            // }
+            // // 加载思源黑体的regular变体
+            // var regularFont = new FontFaceObserver('SourceHanSans', {
+            //     weight: 400
+            // }).load('中国', 60000);
+            // regularFont.then(start).catch(start);
+            // // 加载思源黑体的bold变体
+            // var boldFont = new FontFaceObserver('SourceHanSans', {
+            //     weight: 700
+            // }).load('中国', 60000);
+            // boldFont.then(start).catch(start);
+        });
+    </script><!--ignore-->
+    <script type="text/javascript" src="/api/js-sdk/wx?actions=hide_all&__date"></script>
+    <script type="text/javascript">
+        var _uaq = window._uaq || [];
+        // 配置站点名,默认值为： ql-h5
+        _uaq.push(['set', 'site', 'wechat']);
+
+        // 配置站点版本, 默认值为: 1.0.0
+        _uaq.push(['set', 'sitever', '1.0.2']);
+
+        _uaq.push(['set', 'page', '邀请卡']);
+
+        // 配置日志采集服务地址，用于发送采集日志,默认地址为： //collect.qlchat.com
+        _uaq.push(['set', 'server', '[[collectApiPrefix]]']);
+
+        // 其它自定义日志参数配置
+        // 配置采集当前url参数key2作为日志参数log_key
+        _uaq.push(['set', 'ch', 'query.ch']);
+
+    </script><!--ignore-->
+    <script type="text/javascript" src="[[collectjs]]"></script><!--ignore-->
+    <script>
+        // 百度统计
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?9f8c5d323a26421cb966b5e405d629c3";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script><!--ignore-->
+</html>

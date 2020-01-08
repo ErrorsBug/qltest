@@ -1,0 +1,125 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+table,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+cite,
+em,
+var {
+    font-style: normal;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+body,
+input,
+textarea,
+select,
+button {
+    font-family: "微软雅黑";
+    color: #333;
+    font-size: 12px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-feature-settings: "liga", "kern"
+}
+
+img {
+    border: 0;
+}
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+h2 {
+    font-weight: normal;
+}
+
+
+/*闭合一切浮动*/
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearline {
+    *zoom: 1;
+    height: 0px;
+    line-height: 0px;
+    font-size: 0px;
+    overflow: hidden;
+    clear: both;
+}
+
+.clearperfect {
+    clear: both;
+    height: 0px;
+    overflow: hidden;
+}
+
+/* 公共样式 */
+a {
+    text-decoration: none;
+}
+body {
+    width: 100%;
+    min-width: 1300px;
+}
+.section {
+    width: 100%;
+}
+.section-wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+.con {
+    float: left;
+}

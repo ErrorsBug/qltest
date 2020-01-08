@@ -1,0 +1,182 @@
+<form class="btn-group" bindsubmit="updateFormId" report-submit>
+<view class="bonuses-page" wx:if="{{system != 'ios'}}">
+    <view class="head">
+        <view class="notice-row">
+            <image class="notice-icon" src="./img/notice.png" mode="aspectFit"></image>
+            <view class="notice">
+                <text wx:if="{{!!notice1}}" class="notice-content" animation="{{animationData1}}"> {{notice1}} </text>
+                <text wx:if="{{!!notice2}}" class="notice-content next-notice" animation="{{animationData2}}"> {{notice2}} </text>
+            </view>
+            
+            <view class="rule-wrap" catch:tap="onRuleBtnTap">
+                <image class="rule-icon" src="./img/question.png" mode="aspectFit"></image>
+                <text class="rule-text">活动规则</text>
+            </view>
+        </view>
+        
+        <view class="course-pannel" bind:tap="navigateToBusinessPage">
+            <image class="course-image" src="{{channel.headImage}}@240w_148h_1e_1c_2o" mode="aspectFit"></image>
+            <view class="course-info">
+                <view class="name text-elli">{{channel.name}}</view>
+                <view class="price">原价: <var>￥{{chargeConfig.discountStatus&&chargeConfig.discountStatus!='N'?chargeConfig.discount:chargeConfig.amount}}</var></view>
+            </view>
+
+            <view class="course-plus">
+                <image class="share-icon" src="./img/share-icon.png" mode="aspectFit"></image>
+                转发得现金券
+            </view>
+        </view>
+    </view>
+
+    <view class="page-content">
+        <view wx:if="{{status === 'ing'}}" class="count-down-wrap">
+            <view class="count-down-head">
+                <view class="line-left"></view>
+                <text class="count-down-label">倒计时后过期</text>
+                <view class="line-right"></view>
+            </view>
+
+            <timer 
+                wx:if="{{!!endTime&&endTime - serverTime>1}}"
+                duration="{{endTime - serverTime}}"
+                stylestr="timer-style-mini"
+                noMsecond="{{true}}"
+                bind:onFinish="navigateToBusinessPage"
+                class="count-down-timer"
+            />
+        </view>
+        <view wx:else class="over-text">
+            <text wx:if="{{alreadyJoined}}"> 恭喜已获得{{myRedpack && (myRedpack.couponMoney / 100)}}元红包 </text>
+            <text wx:else> 来晚一步！好友已拆红包 </text>
+        </view>
+
+        <!-- 如果团是进行中，或者已过期 -->
+        <view wx:if="{{status === 'ing' || status === 'over'}}" class="redpacks-wrap">
+            <view class="line-verticle"></view>
+            <view class="line-horizontal"></view>
+
+            <view class="redpack-item-wrap">
+                <block wx:for="{{redpackList}}" wx:for-item="redpackItem">
+                    <view wx:if="{{redpackItem}}" class="redpack-item redpack-opened">
+                        <text class="blessing-text">{{redpackItem.congratulationText}}</text>
+                        <image class="user-img" src="{{redpackItem.userHeadImage || 'https://img.qlchat.com/qlLive/liveCommon/normalLogo.png'}}?x-oss-process=image/resize,h_40,w_40,m_fill" mode="aspectFit"></image>
+                        <image class="redpack-bg" src="https://img.qlchat.com/qlLive/liveComment/TN1ESJG2-7K6P-MSA2-1520847491592-FHXMH4V2XBFF.png" mode="aspectFit"></image>
+                        <view class="fake-redpack"></view>
+                    </view>
+                    <button 
+                        wx:elif="{{alreadyJoined}}" 
+                        class="redpack-item redpack-closed" 
+                        formType="submit" 
+                        open-type="share" 
+                        plain="true"
+                        bind:tap="doInvite"
+                        data-log_category="invit"
+                    >
+                        <!-- 邀 -->
+                        <image 
+                            class="redpack-bg" 
+                            mode="aspectFit"
+                            src="https://img.qlchat.com/qlLive/liveComment/KSYSVZWR-ETJK-OAVU-1520847497502-ZQKPAYRJI9PV.png" 
+                        ></image>
+                    </button>
+                    <button 
+                        wx:else 
+                        class="redpack-item redpack-closed" 
+                        formType="submit" 
+                        plain="true" 
+                        bind:tap="doCongratulate"
+                        data-log_category="favor"
+                    >
+                        <!-- 赞 -->
+                        <image 
+                            class="redpack-bg" 
+                            mode="aspectFit"
+                            src="https://img.qlchat.com/qlLive/liveComment/6BFN1OOX-2EWS-GUL2-1520847503064-LV3QZ1SN4Q37.png" 
+                        ></image>
+                    </button>
+                </block>
+            </view>
+
+            <view class="share-tip">还可以邀请{{groupNum - joinNum}}位好友一起瓜分{{totalMoney / 100}}元！</view>
+        </view>
+        <!-- 如果团是已完成拼团 -->
+        <view wx:elif="{{status === 'pass'}}" class="redpacks-wrap user-list">
+            <view wx:for="{{redpackList}}" wx:for-index="idx" wx:for-item="redpackItem" wx:if="{{!!redpackItem}}" class="user-item">
+                <image class="user-head" src="{{redpackItem.userHeadImage}}?x-oss-process=image/resize,h_40,w_40,m_fill" mode="aspectFit"></image>
+
+                <view class="user-info">
+                    <text class="username"> {{redpackItem.userName}} </text>
+                    <view class="congratulation">
+                        {{congratulationText[idx]}}
+                    </view>
+                </view>
+
+                <view class="money">
+                    {{redpackItem.couponMoney / 100}} <view class="yuan">元</view>
+                </view>
+
+                <image wx:if="{{redpackItem.isBest}}" class="best-mark" src="./img/best-mark.png" mode="aspectFit"></image>
+            </view>
+        </view>
+    </view>
+
+    <view class="btn-row">
+
+        <!-- 正在拼团中 -->
+        <block wx:if="{{status === 'ing'}}">
+            <block wx:if="{{alreadyJoined || isSponser}}">
+                <button 
+                    class="btn btn-yellow btn-animation" 
+                    formType="submit" 
+                    plain="true" 
+                    open-type="share"
+                    bind:tap="doInvite"
+                    data-log_category="invit_lg"
+                >
+                    <image class="btn-icon" src="./img/weixin-icon.png" mode="aspectFit"></image>
+                    邀请好友一起拆红包
+                </button>
+            </block>
+            <block wx:else>
+                <button class="btn btn-yellow btn-animation" plain="true" bind:tap="doCongratulate">
+                    祝福TA，一起瓜分{{totalMoney / 100}}元红包
+                </button>
+            </block>
+
+            <block wx:if="{{!isSponser}}">
+                <button class="btn-text" bind:tap="startNewGroup" formType="submit" plain="true">
+                    <image class="btn-icon-pack" src="./img/pack-icon.png" mode="aspectFit"></image>
+                    拆新红包，集赞拆红包 >
+                </button>
+            </block>
+        </block>
+        <!-- 当前拼团已完成 -->
+        <block wx:else>
+            <block wx:if="{{alreadyJoined}}">
+                <view class="btn btn-yellow" bind:tap="startNewGroup">
+                    继续拆红包，好运翻倍
+                </view>
+                <button class="btn btn-white" bind:tap="onBackBuyPage" formType="submit" plain="true">
+                    使用{{myRedpack && (myRedpack.couponMoney / 100)}}元红包
+                </button>
+            </block>
+            <block wx:else>
+                <button class="btn btn-yellow btn-animation" bind:tap="startNewGroup" formType="submit" plain="true">
+                    拆新红包，瓜分{{totalMoney / 100}}元
+                </button>
+                <view class="btn-text">好友已集齐，快去沾喜气</view>
+            </block>
+        </block>
+    </view>
+
+    <rule-intro wx:if="{{ruleIntroVisible}}" bind:onRuleIntroWrapperTap="onRuleIntroWrapperTap" validDay="{{validDay}}" />
+
+
+</view>
+
+<view class="container" wx:if="{{system == 'ios'}}">
+    由于相关规范，iOS功能暂不可用
+</view>
+
+
+</form>

@@ -1,0 +1,122 @@
+.course-portal-container {
+    .co-dialog-bottom {
+        height: 900px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .head {
+        background-color: #fff;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 36px;/*px*/
+        font-weight: bold;
+    }
+    .course-portal-content {
+        flex: 1;
+        overflow: hidden;
+        position: relative;
+        background-color: rgb(245,245,245);
+        .course-scroll-box {
+            padding-bottom: 0;
+        }
+        .list {
+            height: 100px;
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            padding: 0 40px;
+            border-bottom: 1px solid rgb(232,232,232);
+            &:last-child{
+                border-bottom: none;
+            }
+            .title {
+                color: rgb(69,73,77);
+                font-size: 30px;/*px*/
+                flex: 1;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+                overflow: hidden;
+                line-height: 40px;
+            }
+            .same {
+                width: 35px;
+                margin-left: 40px;
+                display: inline-block;
+                height: 30px;
+                line-height: 40px;
+                text-align: center;
+                position: relative;
+                vertical-align: bottom;
+                span {
+                    display: inline-block;
+                    width: 3px;
+                    margin-bottom: 0;
+                    background-color: red;
+                    margin-right: -12px;
+                }
+                .line1 {
+                    // alternate意为应该轮流反向播放动画
+                    animation: line 0.6s infinite ease-in-out forwards;
+                    animation-fill-mode: forwards;
+                }
+
+                .line2 {
+                    animation: line 0.6s 0.2s infinite ease-in-out forwards;
+                    animation-fill-mode: forwards;
+                }
+
+                .line3 {
+                    animation: line 0.6s 0.3s infinite ease-in-out forwards;
+                    animation-fill-mode: forwards;
+                }
+
+                .line4 {
+                    animation: line 0.6s 0.15s infinite ease-in-out forwards;
+                    animation-fill-mode: forwards;
+                }
+            }
+            &.select{
+                .title{
+                    color: #f73657
+                }
+            }
+            &.is-lock{
+                .title{
+                    color: #878787
+                }
+            }
+        }
+    }
+    .cancel {
+        position: absolute;
+        top: 30px;
+        right: 40px;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        background: url("./img/close.png") no-repeat center;
+        background-size: cover;
+    }
+}
+
+@keyframes line {
+    from {
+        height: 8px;
+    }
+    to {
+        height: 28px;
+    }
+}
+
+@-webkit-keyframes line {
+    from {
+        height: 5px;
+    }
+    to {
+        height: 28px;
+    }
+}

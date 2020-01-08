@@ -1,0 +1,156 @@
+.search-index-container
+{
+	.hot-and-history {
+		width: 100%;
+		padding: 0px 32px;
+		box-sizing: border-box;
+		position: relative;
+		h1
+		{
+			color: #333;
+			font-size: 32px;/* px */
+			line-height: 44px;/* px */
+			font-weight: bolder;
+			position: relative;
+			.delete
+			{
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				background-image: url(../img/delete.png);
+				background-size: 32px 32px;
+				background-repeat: no-repeat;
+				background-position: center;
+				width: 60px;
+				height: 60px;
+			}
+		}
+		.main{
+			overflow: hidden;
+			&.height-limit {
+				height: (60 + 20)*2px;
+			}
+			.main-content{
+				font-size: 0;
+				div{
+					position: relative;
+					display: inline-block;
+					margin-right: 16px;
+					margin-top: 16px;
+					background-color: #f7f7f7;
+					color: #666;
+					font-size: 28px;/*px*/
+					height: 60px;
+					line-height: 60px;
+					border-radius: 60px;
+					padding: 0 0.8em;
+					cursor: pointer;
+					&.not-too-long
+					{
+						max-width: 330px;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+						text-align: center;
+					}
+
+					&.icon-hot {
+						&::before {
+							content: "";
+							display: inline-block;
+							width: 32px;/*px*/
+							height: 32px;/*px*/
+							background-image: url(../img/icon-fire.png);
+							background-repeat: no-repeat;
+							background-position: center;
+							background-size: contain;
+							vertical-align: sub;
+							margin-right: 8px;
+						}
+					}
+					
+				}
+
+				p{
+					padding-top: 20px;
+					color: #ccc;
+				}
+
+				.show-block{
+					display: inline-block;
+				}
+				.show-none{
+					display: none;
+				}
+				.showmore-btn{
+					// position: absolute;
+					// bottom:32px;
+					// right:30px;
+					width: 60px;
+					height: 60px;
+					line-height: 60px;
+					text-align: center;
+					border-radius: 30px;
+					padding: 0;
+					// background-color: #f7f7f7;
+					font-size: 16px;/*px*/
+					color:#666666;
+					font-weight: lighter;
+		
+				}
+			}
+			.showmore-btn-hidden{
+				width: 60px;
+				height: 60px;
+				display: none;
+			}
+		}
+	}
+	.hot-and-history.hot-search{
+		padding-top: 21px;
+	}
+	.hot-and-history.history-search{
+		padding-top: 48px;
+	}
+}
+
+
+.search-result-box{
+	// height: 100vh; /*px*/
+	width: 100%;
+	box-sizing: border-box;
+	padding: 40px 32px 0;
+	background: #fff;	
+	.search-result-head{
+		padding-bottom: 30px;
+		border-bottom: 2px solid #eee; /*px*/
+		color: #333;
+		span{
+			padding-left: 58px;
+			background: url("../img/icon-search.png") no-repeat left center;
+			background-size: 40px; /*px*/
+			font-size: 30px; /*px*/
+			font-weight: 500;
+			line-height: 1.4;
+			em{
+				color:#F73657;
+			}
+		}
+	}
+	.search-result-item{
+		padding:30px 0;
+		font-size: 30px; /*px*/
+		line-height: 1.4;
+		border-bottom: 2px solid #eee; /*px*/
+		em{
+			color:#F73657;
+		}
+	}
+	.search-result-more{
+		padding: 96px 0;
+		font-size: 22px; /*px*/
+		color: #B2B2B2;
+		text-align: center;
+	}
+}

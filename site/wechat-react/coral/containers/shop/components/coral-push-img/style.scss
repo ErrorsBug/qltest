@@ -1,0 +1,20 @@
+//加入珊瑚计划引导弹框
+.co-dialog-container{
+	&.coral-push-img-box{
+		text-align: center;
+		z-index: 200;
+		
+		.co-dialog-content{
+			background-color:rgba(0,0,0,0);
+		}
+		.btn-close-ui{
+			color:#fff;
+			font-size: 40px;
+		}
+		.coral-push-pic{
+			width:100%;
+			height: auto;
+		}
+	
+	} 
+}

@@ -1,0 +1,7 @@
+<view class="message-board">
+    <view class="header">精选留言 <text class="message-num">{{list.length}}</text></view>
+    
+    <message-list serverTime="{{serverTime}}" list="{{list[0] ? [list[0]] : []}}" bind:onPraiseClick="onPraiseClick"/>
+    
+    <view class="view-more" bind:tap="viewMore">查看更多精选留言</view>
+</view>

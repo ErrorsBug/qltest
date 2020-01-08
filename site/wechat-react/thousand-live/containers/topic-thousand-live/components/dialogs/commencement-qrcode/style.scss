@@ -1,0 +1,78 @@
+.commencement-dialog-container {
+    display: block;
+    width: 100%;
+    padding: 50px 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    .top-info {
+        display: flex;
+        padding: 0 50px;
+
+        .live-logo{
+            display: block;
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+            
+        }
+
+        .live-info{
+            display: block;
+            flex: 1;
+            color: #333333;
+
+            b{
+                font-size: 30px;/*px*/
+                line-height: 50px;
+                font-weight: normal;
+            }
+
+            pre{
+                font-size: 26px;
+                line-height: 40px;
+                display: block;
+                word-break: word-wrap;
+                white-space: pre-wrap;
+                font-weight: normal;
+            }
+        }
+
+    }
+
+    .center-qrcode{
+        display: block;
+        text-align: center;
+        padding: 50px 0;
+
+        img{
+            display: inline-block;
+            width: 300px;
+            height: 300px;
+            padding: 160px 300px;
+            margin: -160px -300px;
+        }
+    }
+
+    .bottom-tips{
+        display: block;
+        text-align: center;
+        font-size: 32px;/*px*/
+        color: #ff4b69;
+        padding-bottom: 20px;
+    }
+
+    .btn-close{
+        width: 40px;
+        height: 40px;
+        font-size: 30px;
+        text-align: center;
+        line-height: 40px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: #c9c9c9;
+        cursor: pointer;
+    }
+}

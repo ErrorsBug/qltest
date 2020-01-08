@@ -1,0 +1,146 @@
+.experience-camp-scholarship{
+    .experience-camp-scroll-box{
+        background:rgba(255,255,255,1);
+    } 
+    .camp-scholarship-head{
+        height: 562px;
+        background:linear-gradient(360deg,rgba(247,54,87,1) 0%,rgba(249,126,105,1) 100%);
+        background-size: 100%;
+        text-align: center;
+        color:rgba(255,255,255,1);
+        .scholarship-head-title{
+            font-size:32px;
+            font-weight:bold;
+            line-height:44px;
+            margin-bottom:8px;
+            padding-top: 48px;
+        }
+        .scholarship-head-intro{
+            font-size:20px;
+            line-height:28px;
+            margin-bottom:48px;
+            color:rgba(255,255,255,0.6);
+        }
+        .scholarship-head-money{
+            font-size:100px;
+            font-weight:bold;
+            line-height:80px;
+            margin-bottom:48px;
+            span{
+                font-size:48px;
+            }
+        }
+        .scholarship-head-btn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width:374px;
+            height:90px;
+            background:rgba(255,255,255,1);
+            border-radius:45px;
+            font-size:32px; 
+            font-weight:bold;
+            color:rgba(247,54,87,1);
+            margin: 0 auto;
+        }
+    } 
+    .camp-scholarship-money{
+        display: flex;
+        align-items: center;
+        height:162px;
+        background:rgba(255,240,240,1);
+        border-radius:8px;
+        margin:-81px 32px 64px;
+        .scholarship-money-item{
+            flex: 1;
+            text-align: center;
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                right: -1px;
+                top:50%;
+                transform: translateY(-50%);
+                width:2px;
+                height:74px;
+                background:rgba(252,228,228,1);
+            }
+            &:last-child{
+                &::after{
+                    display: none;
+                }
+            }
+            .scholarship-money-item-title{
+                color:rgba(174,135,135,1);
+                line-height:34px;
+                margin-bottom: 8px;
+            }
+            .scholarship-money-item-num{
+                font-size:40px;
+                font-weight:bold;
+                color:rgba(247,54,87,1);
+                line-height:56px;
+            }
+        }
+    }
+    .camp-scholarship-list{
+        padding:0 32px;
+        .scholarship-list-title{
+            font-size:32px;
+            font-weight:bold;
+            color:rgba(51,51,51,1);
+            line-height:44px;
+            margin-bottom: 32px;
+        }
+        .scholarship-list-item{
+            display: flex;
+            align-items: center;
+            margin-bottom: 48px;
+            .scholarship-list-item-avator{
+                img{
+                    width:100px;
+                    height:100px;
+                    border-radius: 50%;
+                    margin-right: 20px;
+                }
+            }
+            .scholarship-list-item-content{
+                flex:1;
+                .scholarship-list-item-name{
+                    font-size:30px; 
+                    color:rgba(51,51,51,1);
+                    line-height:42px;
+                    margin-bottom: 8px;
+                }
+                .scholarship-list-item-camp{
+                    font-size:26px; 
+                    color:rgba(102,102,102,1);
+                    line-height:36px;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1;
+                    overflow: hidden;
+                    padding-right: 32px;
+                }
+            }
+            .scholarship-list-item-num{
+                text-align: right;
+                .scholarship-list-item-money{
+                    font-size:30px; 
+                    color:rgba(224,65,79,1);
+                    line-height:42px;
+                    margin-bottom: 12px;
+                }
+                .scholarship-list-item-time{
+                    font-size:20px; 
+                    color:rgba(153,153,153,1);
+                    line-height:28px;
+                }
+            }
+        }
+    }
+    .common-empty{
+        position: relative;
+        transform: translate(-50%, 15%);
+    }
+}

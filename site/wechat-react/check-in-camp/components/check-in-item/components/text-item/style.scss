@@ -1,0 +1,33 @@
+.text-item-container {
+    position: relative;
+    margin-bottom: 20px;
+    .text-area {
+        max-height: 132px;
+        overflow: hidden;
+        transition: max-height 300ms ease-in;
+
+        .text-content {
+            font-size: 30px; /*px*/
+            line-height: 44px;
+            color: #333333;
+        }
+    }
+
+    .show-btn {
+        height: 44px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        color: #b8b0b0;
+        font-size: 24px;/*px*/
+        // position: absolute;
+        // bottom: 0;
+        z-index: 999;
+        background-color: #fff;
+    }
+
+    .show-btn:hover {
+       cursor: pointer;
+    }
+}

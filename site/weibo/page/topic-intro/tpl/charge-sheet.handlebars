@@ -1,0 +1,10 @@
+<ul class="charge-action-sheet">
+    <li class="title">成为学员</li>
+    {{#each charge}}
+    <li class="item">
+        <h1>{{amount}}元</h1>
+        <p>{{chargeMonths}}个月会员</p>
+        <span data-id="{{id}}" data-amount="{{amount}}" class="buy">点击购买</span>
+    </li>
+    {{/each}}
+</ul>

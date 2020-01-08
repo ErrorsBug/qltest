@@ -1,0 +1,147 @@
+.live-distribution-content{
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    background-color: rgb(245,245,245);
+    .live-distribution {
+        padding-top: 20px;
+        .state-content {
+            background-color: #fff;
+            height: 140px;
+            display: flex;
+            padding: 0 30px;
+            align-items: center;
+            margin-bottom: 20px;                
+            h3 {
+                font-size: 32px;/*px*/
+                color: rgb(51,51,51);
+                margin-bottom: 20px;
+            }
+            .state-content-title {
+                margin-right: 30px;
+                flex: 1;
+                .btn-protocol-link {
+                    font-size: 26px;/*px*/
+                    color: rgb(153,153,153);
+                    span{
+                        color: rgb(45,178,64);
+                    }
+                }
+            }
+            .have-opened {
+                font-size: 26px;/*px*/
+                color: rgb(194,194,194);
+            }
+            .open {
+                background-color: rgb(51,187,73);
+                height: 50px;
+                width: 100px;
+                border-radius: 25px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: rgb(255,255,255);
+                font-size: 26px;/*px*/
+            }
+            .proportion-content {
+                .proportion {
+                    font-size: 26px;/*px*/
+                    color: rgb(153,153,153);
+                    span{
+                        color: rgb(51,187,73);
+                    }
+                }
+            }
+            .advisory-content {
+                flex: 1;
+                margin-right: 30px;
+                .tip {
+                    font-size: 26px;/*px*/
+                    color: rgb(153,153,153);
+                }
+            }
+        }
+        .advisory {
+            cursor: pointer;
+            img {
+                height: 22px;
+                width: 14px;
+            }
+        }
+    }
+    .live-distribution-dialog {
+        .content {
+            display: flex;
+            height: 334px;
+            flex-direction: column;
+            .text {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 34px;/*px*/
+                color: rgb(45,45,45);
+                font-weight: bold;
+            }
+            .btn-group {
+                height: 98px;
+                border-top: 1px solid rgb(225,225,225);
+                display: flex;
+                > span {
+                    height: 100%;
+                    font-size: 34px;/*px*/
+                    color: rgb(91,91,91);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    flex: 1;
+                }
+                .confirm {
+                    border-left: 1px solid rgb(225,225,225);
+                    color: rgb(45,178,64);
+                }
+            }
+        }
+    }
+    .live-distribution-tip{
+        .content{
+            overflow: hidden;
+            .title{
+                color: #404040;
+                padding: 40px 0;
+                font-weight: bold;
+                text-align: center;
+                font-size: 30px;/*px*/
+            }
+            .tip-content {
+                padding: 0 40px;
+                >p{
+                    color: #666;
+                    font-size: 26px;/*px*/
+                    line-height: 36px;
+                    margin-bottom: 16px;
+                    a {
+                        color: #33bb49;
+                    }
+                }
+                .qr-img {
+                    text-align: center;
+                    margin-top: 10px;
+                    padding-bottom: 40px;
+                    img {
+                        width: 288px;
+                        height: 288px;
+                    }
+                    p {
+                        color: #333;
+                        font-size: 24px;/*px*/
+                    }
+                }
+            }
+        }
+    }
+}

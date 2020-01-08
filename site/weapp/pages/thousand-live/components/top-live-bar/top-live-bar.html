@@ -1,0 +1,24 @@
+<view class="top-live-bar">
+    <navigator class="left-item" open-type="redirect" url="/pages/live-index/live-index?liveId={{liveId}}">
+        <image wx:if="{{liveLogo}}" class='live-logo'
+            src="{{liveLogo + '?x-oss-process=image/resize,h_100,w_100,m_fill'}}"
+        />
+    </navigator>
+    <view class='live-name'>
+        <view class="row"><text> {{liveName}}</text></view>
+        <view class="row">
+            <text class="online-num"> {{onlineNum}}人次</text>
+            <block wx:if="{{onlineNum}}">
+                <text wx:if="{{liveStatus == 'ended'}}" class='ended'>已结束</text>
+                <text wx:elif="{{startTime > currentTimeMillis}}" class='beginning'>即将开始</text>
+                <text wx:else class='beginning'>课程进行中</text>
+            </block>
+        </view>
+    </view>
+    <view class='right-item'>
+        <view wx:if="{{ isPPTMode }}" class="btn-switch-ppt" catchtap="onOpenPPTBtnClick">
+                <text wx:if="{{isShowPPT}}">收起</text>
+                <text wx:else>幻灯</text>
+        </view>
+    </view>
+</view>

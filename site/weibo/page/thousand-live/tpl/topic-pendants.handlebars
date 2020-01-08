@@ -1,0 +1,32 @@
+<div class="ql-start-box">
+	<div class="align-first-line-center name">
+		<p>{{#if topicPo.topic}}{{topicPo.topic}}{{else}}暂无话题名字{{/if}}</p>
+	</div>
+	<div class="ql-start-date qlStartDate"></div>
+	<div class="ql-timer"> 
+		<dl>
+			<dd><var class="qlDays">00</var>天</dd>
+			<dd><var class="qlHours">00</var>时</dd>
+			<dd><var class="qlMinutes">00</var>分</dd>
+			<dd><var class="qlSeconds">00</var>秒</dd>
+		</dl>
+	</div>
+
+	{{#if isShowQrcode}}
+	<div class="follow-live-QRCode">
+		<span>
+			<p>本直播由<b>{{entity.subscriptionName}}</b>赞助</p>
+		</span>
+		<img data-src="{{entity.qrCode}}" src="" hidden/>
+	</div>
+	{{/if}}
+
+</div>
+{{#compare topicPo.status "==" "beginning"}}
+{{#compare instructionGuid "==" "Y"}}
+<div class="ql-state-box useStateBox">点此查看使用说明<a href="javascript:;" class="icon-cross gtb-close"></a></div>
+{{/compare}}
+{{/compare}}
+
+
+

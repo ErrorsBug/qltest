@@ -1,0 +1,143 @@
+.jion-page-bottom-bar{
+    position: absolute;
+    bottom: -121px; /*px*/
+    padding: 0;
+    margin: 0;
+    box-shadow:0px 0 80px rgba(0,0,0,0.08);
+    background: #fff;
+    width: 100%;
+    transition: 0.3s;
+    z-index: 2;
+    &.show{
+        bottom: -1px;/* no */
+    }
+    &.tab{
+        bottom: 97px !important; /*px*/
+    }
+    .jion-page-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding: 0 0 0 20px;
+        box-sizing: border-box;
+        height: 120px; /*px*/
+        width: 100%;
+        height: 100%;
+    }
+    .jpbb-left{
+        flex: 1;
+        display: flex;
+    }
+    .seek-advice{
+        display: flex;
+        flex-direction: column;
+        width: 80px;
+        padding-right: 40px;
+        font-size: 20px;/* px */
+        color: #786E6E;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        &::before{
+            position: absolute;
+            top: 50%;
+            right: 25px;
+            content: "";
+            height: 60px;
+            width: 1px; /*px*/
+            background: #EAE8E8;
+            transform: translateY(-50%);
+        }
+        img{
+            width: 50px;
+            height: 45px;
+            display: block;
+        }
+    }
+
+    .price-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
+        .on-sale{
+            color: #DA3A46;
+            font-size: 38px;/* px */
+            font-weight: bold;
+        }
+        .price{
+            color: #544141;
+            font-size: 20px;/* px */
+            line-height: 1.5;
+            padding-left: 10px; /*px*/
+            padding-top: 8px;
+            strong{
+                color:#362B2B;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .btn-jion{
+        width: 375px;
+        height: 120px; /*px*/
+        background: linear-gradient(to bottom, #EE4654, #D43642);
+        color: #fff;
+        font-size: 56px;/* px */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold; 
+    }
+    .jion-page-container-with-icon{
+        height:120px; /*px*/
+        display: flex;
+        .jpbb-left-with-icon{ 
+            height:  100%;
+            .un-exper-icon{
+                width: auto;
+                height:  100%;
+            }
+        }
+        .jpbb-right{ 
+            flex: 1; 
+            background:linear-gradient(180deg,rgba(238,70,84,1) 0%,rgba(212,54,66,1) 100%);
+            font-size:38px; 
+            color: #fff; 
+            font-weight: bold; 
+            &  > div{ 
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+            }
+        }
+    }
+}
+
+.jion-page-seek-advice-dialog{
+    .main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 0 50px;
+
+        span{
+            font-size: 26px;
+            line-height: 45px;
+            color: #666;
+        }
+    }
+    .jion-page-decs{
+        display: block;
+        padding-top: 20px;
+    }
+    .qrcode{
+        display: block;
+        width:280px;
+        height:280px;       
+    }
+
+}

@@ -1,0 +1,63 @@
+<view class="members">
+    <!-- 团长头像 -->
+    <view class="member-portrait haruhi">
+        <image class="avatar" src="{{leader.userHead}}" lazy-load="{{true}}" 
+            mode="widthFix"></image>
+    </view>
+    
+    <!-- 团员头像列表 -->
+    <view 
+        class="member-portrait"
+        wx:for="{{list}}"
+        wx:if="{{index<2}}"
+        wx:key="id"
+    >
+        <image class="avatar" src="{{item.userHead}}" lazy-load="{{true}}"
+            mode="widthFix"></image>
+    </view>
+
+    <!-- 未参与的空位 -->
+    <view class="member-portrait" wx:if="{{groupInfo.joinNum < groupInfo.groupNum}}">
+        <view class="more" wx:if="{{true || joinList.length + 1 >= maxDisplayNum}}">
+            {{groupInfo.groupNum - groupInfo.joinNum}}人
+        </view>
+        <image class="avatar" src="./img/member-more.png" mode="widthFix"/>
+    </view>
+</view>
+
+<view class="group-info">
+    <!-- 拼课的状态信息提示，进行中的拼课不显示这个 -->
+    <block>
+        <view class="mention" wx:if="{{groupInfo.groupStatus==='PASS' && (isMember || isHaruhi)}}">
+            <view class="icon icon-success"></view>
+            {{groupInfo.groupNum}}人拼课成功
+        </view>
+        
+        <view class="mention" wx:if="{{groupInfo.groupStatus==='OVER'}}">
+            <view class="icon icon-warning"></view>
+            拼课失败
+        </view>
+        
+        <view class="mention" wx:if="{{groupInfo.groupStatus==='PASS' && !isMember && !isHaruhi}}">
+            <view class="icon icon-warning"></view>
+            拼课已满
+        </view>
+    </block>
+
+    <!-- 拼课进行中的倒计时 -->
+    <block wx:if="{{groupInfo.groupStatus==='ING'}}">
+        <view class="member-left">
+            仅剩
+            <view class="num">{{groupInfo.groupNum - groupInfo.joinNum}}</view>
+            个优惠名额
+        </view>
+        
+        <view class="time-left" >
+            剩余时间
+            <view class="count-down">
+                {{hours}} : {{mins}} : {{secs}}. <view class="ms">{{mss}}</view>
+            </view>
+            结束
+        </view>
+    </block>
+</view>

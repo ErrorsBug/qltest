@@ -1,0 +1,74 @@
+ 
+.fcd-head{
+    background: rgba(19,39,69,0.49) url('https://img.qlchat.com/qlLive/business/6VTMBWP4-GI3S-BMQ1-1563439446419-U1K2DEC81JXJ.png') no-repeat 0 0;
+    background-size: 750px 420px;
+    padding:48px 0 194px 50px;   
+    position: relative;
+    max-height: 1500px;
+    &::before{
+        content: '';
+        position: absolute;
+        top:0;
+        left:0;
+        right: 0;
+        bottom:0;
+        background:rgba(0,0,0,0.2);
+    }
+    .fcd-date{
+        width:178px;
+        height:178px;
+        padding: 10px 0 18px 20px;
+        box-sizing: border-box;
+        position: relative;
+        background: hsla(0,0%,100%,.1); 
+        border-radius:12px; 
+        .fcd-d-bg{
+            // background-color:rgba(255,255,255,0.89);
+            background-image:  url("https://img.qlchat.com/qlLive/business/6VTMBWP4-GI3S-BMQ1-1563439446419-U1K2DEC81JXJ.png");
+            background-position: -50px -48px; 
+            background-size: 750px 420px;
+            content:'';
+            position: absolute;
+            left:0;
+            right:0;
+            bottom:0;
+            top:0; 
+            filter: blur(15px); /*px*/
+            border-radius:12px; 
+        }
+        .fcd-content{
+            position: relative;
+        }
+        .fcd-day{ 
+            font-size:80px;
+            font-weight:bold;
+            color:rgba(255,255,255,1);
+            line-height:80px;
+        }
+        .fcd-line{
+            width:44px;
+            height:2px;
+            background: #fff;
+            margin:16px 0 22px;
+        }
+        .fcd-month{
+            font-size:30px; 
+            color:rgba(255,255,255,.59);
+            line-height:30px;
+        }
+    }
+    .fcd-info{
+        position: absolute;
+        right: 10px;
+        bottom:-68px;
+        height: 132px;
+        display: flex; 
+        .fcd-name{
+            font-size:36px; 
+            font-weight:bold;
+            color:rgba(255,255,255,1);
+            line-height:50px;
+            margin-right: 12px;
+        } 
+    }
+}

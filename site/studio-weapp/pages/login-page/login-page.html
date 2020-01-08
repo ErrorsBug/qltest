@@ -1,0 +1,13 @@
+<view class="login-page">
+    <view class="app-logo-container">
+        <image class="topic-type-icon" src="{{appLogo}}"></image>
+        <view class="app-name">{{appName}}</view>
+    </view>
+    <view class="guide-box">
+        <text class="title">请允许小程序获得以下权限</text>
+        <text class="content">以下信息仅用于您登陆小程序，我们讲严格保密绝不对外泄漏，更不会对您发送垃圾信息造成骚扰。</text>
+        <text class="title">获取您的公开信息（昵称、头像等）</text>
+        <text class="content">需获取您的公开信息，方便您使用小程序的全部功能。</text>
+    </view>
+    <button class="btn-login" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo" plain="true">授权公开信息</button>
+</view>

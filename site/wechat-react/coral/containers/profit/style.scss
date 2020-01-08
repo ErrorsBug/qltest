@@ -1,0 +1,128 @@
+@import "../../../assets/styles/base-definition";
+
+.page-my-profit{
+	.banner{
+		height:400px;
+		background:url(./img/banner-bg.png) #fa283f no-repeat center bottom / 100% auto;
+		@include flex-center;
+		.content{
+			color:#fff;
+			text-align: center;
+			.num{
+				font-size:70px;/*px*/
+				margin-top:10px;
+				font-weight: 500;
+			}
+			.withdraw-btn{
+				width:158px;
+				height:58px;/*px*/
+				font-size:28px;/*px*/
+				border:1px solid #fff;/*no*/
+				@include flex-center;
+				margin-top:10px;
+				border-radius: 60px;
+				margin: 0 auto;
+			}
+		}
+	}
+	.collect-box{
+		padding:0 28px;
+		color:$gray-content;
+		background:#fff;
+		.row{
+			height:136px;
+			display:flex;
+			&:last-child{
+				border-top:1px solid $gray-border;/*no*/
+				.col:last-child:after{
+					bottom:auto;
+					top:0;
+				}
+			}
+			.col{
+				flex:1;
+				@include flex-center;
+				font-size:30px;/*px*/
+				position:relative;
+				flex-direction: column;
+				&:last-child:after{
+					width:1px;/*no*/
+					height:108px;
+					background:$gray-border;
+					content:'';
+					position:absolute;
+					left:0;
+					bottom:0;
+				}
+				.tip{
+					color:$gray-tip;
+					font-size:20px;/*px*/
+					margin-top:15px;
+				}
+			}
+		}
+	}
+	.withdraw-record{
+		margin-top:20px;
+		background:#fff;
+		.title{
+			height:80px;
+			@include flex-center(vertical);
+			padding-left:28px;
+			color:$gray-tip;
+			font-size: 22px;/*px*/
+			&:before{
+				width: 6px;
+				height:22px;
+				background:#f83657;
+				content:'';
+				margin-right:10px;
+			}
+		}
+		.withdraw-list{
+			.item{
+				padding:20px 28px;
+				border-top:1px solid $gray-border;/*no*/
+				display: flex;
+				justify-content: space-between;
+				color:$gray-title;
+				line-height:1.5;
+				&:last-child{
+					border-bottom:1px solid $gray-border;/*no*/
+				}
+				.info{
+					font-size:26px;/*px*/
+					.verify-again {
+						color: #f86666;
+						margin-left: 20px;
+						cursor: pointer;
+					}
+					.date{
+						font-size:22px;/*px*/
+						color:$gray-tip;
+					}
+				}
+				.num{
+					text-align: right;
+				}
+				.status{
+					color:$gray-tip;
+					&.AWAITING,
+					&.QAWAITING{
+						color:#ff711b;
+					}
+					&.FAIL,
+					&.NO_PASS{
+						color:#f86666;
+					}
+				}
+			}
+		}
+	}
+	.list-nomore{
+		position: relative;
+		.co-empty{
+			transform: translate(-50%, 10%);
+		}
+	}
+}

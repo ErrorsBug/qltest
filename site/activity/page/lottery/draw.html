@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>抽奖赢券</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="https://img.qlchat.com/qlLive/ico/favicon.ico" type="image/x-icon" />
+    <script src="../../components_modules/lib-flexible/1.0.0/lib-flexible.js"></script><!--ignore-->
+    <script src="//res.wx.qq.com/open/js/jweixin-1.2.0.js"></script><!--ignore-->
+    <script type="text/javascript" src="../../components_modules/require/2.1.18/require.js"></script><!--ignore-->
+</head>
+
+<body>
+    <div id="containers" class="containers">
+        <div class="lottery">
+            <div class="code-entry">
+                <div class="icon"></div>
+                <div>我的优惠券</div>
+            </div>
+            <div class="roll">
+                <div class="item pos0" data-id="{{id5}}" data-flag="5"><div class="gift gift5"></div></div>
+                <div class="item pos1" data-id="{{id10}}" data-flag="10"><div class="gift gift10"></div></div>
+                <div class="item pos2" data-id="{{id20}}" data-flag="20"><div class="gift gift20"></div></div>
+                <div class="item pos3" data-id="{{id99}}" data-flag="99"><div class="gift gift99"></div></div>
+                <div class="item pos4" data-id="{{id5}}" data-flag="5"><div class="gift gift5"></div></div>
+                <div class="item pos5" data-id="{{id10}}" data-flag="10"><div class="gift gift10"></div></div>
+                <div class="item pos6" data-id="{{id5}}" data-flag="5"><div class="gift gift5"></div></div>
+                <div class="item pos7" data-id="{{id20}}" data-flag="20"><div class="gift gift20"></div></div>
+
+                <div class="draw-btn btn pos8 tap-on on-log" data-log-name="抽奖" data-log-pos="lottery-roll"></div>
+                <!-- <div class="draw-btn-active btn pos8"></div> -->
+            </div>
+            <div class="rule">
+                <h2>活动规则：</h2>
+                <p>1.每个微信号限抽一次。</p>
+                <p>2.优惠券仅当前微信号使用。</p>
+                <p>3.优惠券仅可用于抵免课程《普通人快速崛起的31堂修炼课》的报名费，不可用于其它课程。</p>
+                <p>4.优惠券有效期24小时，逾期无效。</p>
+                <p>5.如有发现恶意操作，千聊有权永久取消其活动资格。</p>
+                <p>6.活动时间：即日起至2017年9月13日8:00</p>
+            </div>
+        </div>
+        <footer>活动最终解释权归于千聊所有</footer>
+    </div>
+    <div class="modal">
+
+    </div>
+    <!--SCRIPT_PLACEHOLDER-->
+    <script>
+        (function (win) {
+            require(['./draw'], function (lotteryDraw) {
+                lotteryDraw.init();
+            });
+        })(window);
+    </script><!--ignore-->
+    <script type="text/javascript">
+        var _uaq = window._uaq || [];
+        // 配置站点名,默认值为： ql-h5
+        _uaq.push(['set', 'site', 'activity']);
+
+        // 配置站点版本, 默认值为: 1.0.0
+        _uaq.push(['set', 'sitever', '1.0.0']);
+
+        // 配置日志采集服务地址，用于发送采集日志,默认地址为： //collect.qlchat.com
+        _uaq.push(['set', 'server', '[[collectApiPrefix]]']);
+
+        // 配置渠道参数
+        _uaq.push(['set', 'ch', 'query.ch']);
+
+    </script><!--ignore-->
+    <script type="text/javascript" src="[[collectjs]]"></script><!--ignore-->
+</body>
+
+</html>

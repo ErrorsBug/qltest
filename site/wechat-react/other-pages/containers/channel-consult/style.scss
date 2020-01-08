@@ -1,0 +1,65 @@
+.channel-consult {
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+
+    padding-top: 30px;
+
+    .textarea{
+        border: 0;
+        resize: none;
+        width: 90%;
+        height: 280px;
+        margin: auto;
+        padding: 30px;
+        display: block;
+        color: #333;
+        background-color: #f5f5f5;
+        border: 1px solid #e6e6e6; /*no*/
+        border-radius: 10px;
+        font-size: 28px; /*px*/
+        &:placeholder {
+            color: #999;
+        }
+        &:focus{
+            border: 0;
+            outline: none !important;
+        }
+    }
+
+    .btn-submit {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: 90px;
+        font-size: 32px; /*px*/
+        color: #fff;
+        border-radius: 100px;
+
+        margin: 40px 30px 60px;
+
+        background-color: #ed3b59;
+
+    }
+
+    .consult-question {
+        font-size: 30px; /*px*/
+        color: #333;
+        margin: 30px;
+    }
+
+    .consult-des {
+        font-size: 28px; /*px*/
+        line-height: 1.4;
+        color: #999;
+        margin: 30px 30px 50px 30px;
+    }
+
+    
+}

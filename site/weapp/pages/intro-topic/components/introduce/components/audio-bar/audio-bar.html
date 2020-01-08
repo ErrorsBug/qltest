@@ -1,0 +1,10 @@
+<view class="audio-bar" bind:tap="onAudioBarTap">
+    <image 
+        class="status-btn" 
+        src="{{ status === 'playing' ? uri_icon_playing : uri_icon_play}}" 
+        mode="aspectFill"
+    />
+
+    <view class="course-name">{{courseName}}</view>
+    <view class="duration">{{totalDuration}}s</view>
+</view>

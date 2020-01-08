@@ -1,0 +1,23 @@
+.sp-head-view{
+  display: inline-block;
+  padding-right: 20rpx;
+  text-align: center;
+}
+.sp-user-head{
+  display: block;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 100%;
+}
+.sp-pay-like{
+  display: inline-block;
+  width: 45rpx;
+  height: 45rpx;
+  line-height: 45rpx;
+  margin-top: 10rpx;
+  text-align: center;
+  color: #b98d42;
+  border-radius: 45rpx;
+  font-size: 20rpx;
+  background-color: rgb(237, 203, 145);
+}

@@ -1,0 +1,50 @@
+.profit-channel-knowledge-container {
+    .knowledge-profit-tip {
+        display: inline-block;
+        line-height: 70px;
+        font-size: 26px; /*px*/
+        color: #666666;
+        padding-left: 28px;
+        cursor: pointer;
+        .icon-ask {
+            padding-left: 10px;
+            color: #999999;
+        }
+    }
+    .all-profit-stream {
+        position: absolute;
+        left: 0;
+        top: 295px;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .media-dialog .co-dialog-content {
+        width: 670px;
+    }
+    .media-put-title {
+        font-size: 34px; /*px*/
+        color: #333333;
+        text-align: center;
+        line-height: 2.5;
+        margin-top: 20px;
+    }
+    .media-put-text {
+        font-size: 26px; /*px*/
+        color: #666666;
+        line-height: 2;
+        margin: 0 50px 30px 50px;
+    }
+    .close-dialog-btn {
+        display: block;
+        width: 100%;
+        outline: none;
+        border: none;
+        border-top: 1px solid #e5e5e5;
+        font-size: 32px; /*px*/
+        color: #ff4b69;
+        text-align: center;
+        line-height: 3;
+        background-color: #ffffff;
+    }
+}

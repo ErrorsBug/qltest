@@ -1,0 +1,66 @@
+.user-manager-container {
+	background-color: #F2F2F2;
+	min-height: 100%;
+
+	.user_manage_list {
+
+		.user_dd {
+			padding: 0px 36px;
+			position: relative;
+			background-color: #fff;
+
+			a {
+				display: block;
+				line-height: 90px;
+				color: #717171;
+				font-size: 28px;
+			}
+
+			&::after {
+				content: "";
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 36px;
+				height: 100%;
+				background: url('./img/right-arrow.png') no-repeat center / 15px 20px;
+				pointer-events: none;
+			}
+		}
+
+		.user_dt {
+			margin-bottom: 20px;
+
+			.user_dd {
+				border-bottom: 1px solid #EEE;
+			}
+		}
+		& > .user_dd {
+			margin-bottom: 20px;
+		}
+	}
+
+	.back-btn {
+		height: 80px;
+		font-size: 32px;
+		position: absolute;
+		width: 100%;
+		cursor: pointer;
+		left: 0;
+		bottom: 0;
+		line-height: 80px;
+		background: #fff;
+		text-align: center;
+		border-top: 1px solid #e5e5e5;
+		color: #f73657;
+
+		a {
+			display: block;
+			width: 100%;
+			height: 100%;
+			line-height: inherit;
+			text-align: inherit;
+			color: inherit;
+		}
+	}
+}

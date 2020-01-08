@@ -1,0 +1,50 @@
+<view class="footer">
+    <view 
+        class="fake-comment-input {{value?'':'placeholder'}}"
+        bindtap="onFakeInputClick"
+    >
+        {{value ? value : '发表评论'}}
+    </view>
+    <view 
+        class="send-comment-btn {{valid?'valid':''}}" 
+        bindtap="sendComment" 
+        wx:if="{{value && value.length}}"
+    >发送</view>
+
+    <view 
+        class="switch-mode" 
+        bindtap="redirectToThousanLive" 
+        wx:if="{{!value}}"
+    >
+        <image 
+            class="icon-backto-topic" 
+            src="../../img/icon-backto-topic.png?__inline" 
+            mode="widthFix"
+        />
+    </view>
+</view>
+
+<view class="textarea-section-wrap" hidden="{{textareaHidden}}" bindtap="onTextareaWrapClick">
+    <view class="textarea-section" catchtap="catchTextareaSectionClick">
+        <textarea 
+            value="{{value}}" 
+            class="comment-input" 
+            type="text" 
+            placeholder="发表评论" 
+            fixed="{{true}}"
+            show-confirm-bar="{{false}}"
+            focus="{{inputFocus}}"
+            autofocus="{{true}}"
+            cursor-spacing="{{125}}"
+            maxlength="200"
+            placeholder-style="color:#999090;"
+            confirm-type="send" 
+            bindinput="onInputChange" 
+            bindconfirm="sendComment" 
+        />
+        <view 
+            class="send-comment-btn {{valid?'valid':''}}" 
+            catchtap="sendComment" 
+        >发送</view>
+    </view>
+</view>

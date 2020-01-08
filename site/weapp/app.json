@@ -1,0 +1,46 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/live-index/live-index",
+    "pages/intro-topic/intro-topic",
+    "pages/channel-index/channel-index",
+    "pages/thousand-live/thousand-live",
+    "pages/mine-focus/mine-focus",
+    "pages/mine-buy/mine-buy",
+    "pages/hot-live/hot-live",
+    "pages/topic-listening/topic-listening",
+    "pages/course-group/course-group",
+    "pages/web-page/web-page",
+    "pages/payment-details/payment-details",
+    "pages/coupon-select/coupon-select",
+    "pages/mine-coupons/mine-coupons",
+    "pages/coupon-details/coupon-details",
+    "pages/share-rebate/share-rebate",
+    "pages/studio-pay/studio-pay",
+    "pages/view-more/view-more",
+    "pages/share-card/share-card",
+    "pages/login-page/login-page"
+  ],
+  "requiredBackgroundModes": ["audio"],
+  "subPackages": [
+    {
+      "root": "pages/channel-bonuses",
+      "pages": [
+        "channel-bonuses"
+      ]
+    }
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle":"black",
+    "navigationBarTitleText": "",
+    "backgroundColor": "#f0f0f0",
+    "backgroundTextStyle":"dark",
+    "enablePullDownRefresh": false
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "weappVer":"2.4.23"
+}

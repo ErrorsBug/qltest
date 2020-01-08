@@ -1,0 +1,24 @@
+{{#each commentList}}
+    <li data-id="{{this.id}}">
+        <div class="header">
+            <img src="{{this.headImgUrl}}" alt="" class="head-image">
+            <div class="detail">
+                <span class="id">{{this.userName}}</span>
+                <div class="time">{{dateFormat this.createTime 'yyyy-MM-dd'}}</div>
+            </div>
+            {{#compare this.isLike '==' 'Y'}}
+                <div class="agree like">
+                    <span class="count">{{this.likeNum}}</span>
+                    <span class="img"></span>
+                </div>
+            {{/compare}}
+            {{#compare this.isLike '==' 'N'}}
+                <div class="agree">
+                    <span class="count">{{this.likeNum}}</span>
+                    <span class="img"></span>
+                </div>
+            {{/compare}}
+        </div>
+        <p>{{this.content}}</p>
+    </li>
+{{/each}}

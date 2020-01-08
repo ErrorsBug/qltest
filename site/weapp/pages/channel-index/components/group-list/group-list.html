@@ -1,0 +1,39 @@
+<view class="group-list">
+    <text class="group-list-title">以下小伙伴正在发起拼课，您可以直接参与</text>
+    
+    <view
+        wx:for="{{groupinglists}}"
+        wx:for-item="groupinglist"
+        wx:key="groupingkey"
+        wx:if="{{index < 2}}"
+        class="{{index ==1 ?'grouping-list grouping-list-last':'grouping-list'}}">
+        <view class="group-head">
+            <image class="head-box-img" src="{{groupinglist.leaderHead|| '//img.qlchat.com/qlLive/topicHeaderPic/thp-3.jpg'}}@180h_180w_1e_1c_2o"></image>
+            <image 
+                wx:for="{{list}}"
+                wx:for-item="grouppic"
+                wx:key="key"
+                wx:if="{{index < 3}}"
+                class="head-box-img" 
+                src="{{grouppic.headUrl}}"></image>
+        </view>
+        <view class="group-info">
+                <text class="group-str">还差{{groupinglist.groupNum - groupinglist.joinNum}}人成团</text> 
+                <view class="group-str-also">剩余时间 <timer duration="{{groupinglist.endTime - currentServerTime}}" /> 结束
+                </view>
+        </view>
+        <view wx:if="{{myGroupId&&myGroupId==groupinglist.id}}" class="group-btn" data-index="{{index}}" bindtap="onCheckGroupClick">查看拼课</view>
+        <form bindsubmit="onFormSubmit" report-submit>
+            <button 
+                formType="submit"
+                wx:if="{{!myGroupId}}" 
+                class="group-btn" 
+                data-index="{{index}}" 
+                bindtap="onJoinGroupClick"
+                >
+                立即参团
+            </button>
+        </form>
+    </view>
+    
+</view>

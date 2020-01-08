@@ -1,0 +1,49 @@
+{{#if powerEntity.allowMGLive}}
+    {{#compare topicPo.status "==" "beginning"}}{{#compare topicPo.isRelay "!=" "Y"}}
+    <dd class="caozuo-guest"><a href="${CtxPath}/wechat/page/guest-list?liveId=${entityPo.id}&topicId={{topicPo.id}}"><b class="cz-logo icon-couple"></b>邀请嘉宾</a></dd>
+    {{/compare}}{{/compare}}
+    {{#compare topicPo.type "==" "encrypt"}}{{#compare topicPo.isRelay "!=" "Y"}}
+    <dd class="caozuo-set"><a href="${CtxPath}/wechat/page/topic-intro-edit?topicId={{topicPo.id}}&showPwdBox=Y"><b class="cz-logo icon-settings"></b>密码设置</a></dd>
+    {{/compare}}{{/compare}}
+    <dd class="caozuo-shutup {{#compare topicPo.isBanned "==" "Y"}}on{{/compare}}"><b class="cz-logo icon-ban"></b>禁言模式</dd>
+    {{#compare topicPo.isRelay "!=" "Y"}}
+    <dd class="caozuo-dao">
+        <a href='{{#compare topicPo.audioAssemblyUrl "!=" ""}}{{topicPo.audioAssemblyUrl}}{{else}}javascript:;{{/compare}}' {{#compare topicPo.audioAssemblyUrl "!=" ""}}download="{{topicPo.topic}}.mp3"{{/compare}} class="getrecord-btn-{{defaultVal topicPo.audioAssemblyStatus '0'}}">
+            <b class="cz-logo icon-loading"></b>
+            <b class="cz-logo icon-download"></b>
+            <b class="cz-logo icon-cancel"></b>
+            <b class="cz-logo icon-moveout"></b>
+            <i>
+            {{#compare topicPo.audioAssemblyStatus "==" "1"}}下载语音
+            {{else}}{{#compare topicPo.audioAssemblyStatus "==" "2"}}语音合成中
+            {{else}}{{#compare topicPo.audioAssemblyStatus "==" "4"}}重新下载
+            {{else}}导出语音
+            {{/compare}}{{/compare}}{{/compare}}
+            </i>
+        </a>
+    </dd>
+    {{/compare}}
+    {{#compare topicPo.type "==" "charge"}}{{#compare topicPo.channelId "!=" "channelId"}}{{#compare topicPo.isRelay "!=" "Y"}}
+    <dd class="caozuo-coupon"><a href="${CtxPath}/live/coupon/codeList.htm?topicId={{topicPo.id}}"><i class="cz-logo icon-coupon"></i>优惠码</a></dd>
+    {{/compare}}{{/compare}}{{/compare}}
+{{/if}}
+
+{{#compare topicPo.status "==" "beginning"}}
+<dd class="caozuo-zidong"><b class="cz-btn"><a id="btnAutoPlay" class="btn-switch swon" ></a></b>自动播放</dd>
+{{/compare}}
+<dd class="caozuo-intro"><a href="/wechat/page/topic-intro?topicId={{topicPo.id}}"><i class="cz-logo icon-page"></i>课程介绍</a></dd>
+{{#if powerEntity.allowMGLive}}
+{{#compare topicPo.status "==" "beginning"}}
+<dd class="caozuo-over"><a class="btn-finish-live" href="javascript:;"><b class="cz-logo icon-record-stop"></b>结束课程</a></dd>
+{{/compare}}
+{{#compare topicPo.type "==" "charge"}}{{#compare topicPo.channelId "!=" "channelId"}}{{#compare topicPo.isRelay "!=" "Y"}}
+<dd class="caozuo-gift"><span><b class="cz-logo icon-gift2"></b>送给好友</span></dd>
+{{/compare}}{{/compare}}{{/compare}}
+{{/if}}
+
+<dd class="shared-file"><a href="/topic/common.html?#/document/{{topicPo.id}}" id="shared-file-btn"><b class="icon-remote-file cz-logo"></b>共享文件</a></dd>
+<dd class="caozuo-refresh" onclick="if(/\?/.test(window.location.href))window.location.href = (window.location.href).replace(/(\&?)(restime\=)(\w+)/,'')+'&restime='+new Date().getTime();else window.location.href = (window.location.href).replace(/(\&?)(restime\=)(\w+)/,'')+'?restime='+new Date().getTime();"><i class="cz-logo icon-refresh"></i>刷新</dd>
+
+{{#compare powerEntity.allowMGLive "!=" true}}
+<a href="/wechat/page/create-live" class="caozuo-create-btn create-live" >一键创建直播间</a>
+{{/compare}}

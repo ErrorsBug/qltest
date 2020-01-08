@@ -1,0 +1,93 @@
+.timeline-container {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+
+    .co-dialog-container {
+        z-index: 202;
+    }
+    .create-span {
+        position: absolute;
+        right: 30px;
+        bottom: 12%;
+        width: 90px;
+        height: 90px;
+        border-radius: 100px;
+        background-image: url('./img/create-span.png');
+        background-size: contain; 
+        z-index: 202;
+    }
+    .co-tab-bar {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .more-top {
+        .scroll-box {
+            top: 80px; /*px*/
+        }
+    }
+
+    .reminder {
+        top: 0;
+        z-index: 201;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(#111,0.4);
+        .reminder-content {
+            box-sizing: border-box;
+            z-index: 201;
+            position: absolute;
+            right: 45px;
+            bottom: 23%;
+            background-image: url('./img/push-reminder.png');
+            background-size: contain; 
+            background-repeat: no-repeat;
+            width: 394px;
+            height: 127px;
+            padding: 20px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .text {
+                position: relative;
+                top: -5px;
+                color: #fff;
+                font-size: 26px; /*px*/
+                line-height: 50px; /*px*/
+                width: 240px;
+                flex-basis: 240px;
+            }
+
+            .get {
+                position: relative;
+                top: -5px;
+                display: inline-block;
+                color: #f62b4a;
+                background-color: #fff;
+                height: 80px;
+                width: 80px;
+                margin-right: 10px;
+                border-radius: 100px;
+                line-height: 80px;
+                vertical-align: center;
+                text-align: center;
+            }
+        }
+    }
+
+    .admin-dialog {
+        z-index: 300;
+    }
+
+    .confirm-text {
+        padding: 30px 30px 0 30px;
+        font-size: 32px; /*px*/
+        line-height: 50px; /*px*/
+        color: #333;
+    }
+}
+

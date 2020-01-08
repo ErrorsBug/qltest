@@ -1,0 +1,161 @@
+@import "../../common";
+
+.exclusive{
+    margin-top:20rpx;
+    background:#fff;
+    .block-header {
+        .more-btn {
+            display: flex;
+            align-items: center;
+            .check-more-icon {
+                height: 14rpx;
+                width: 8rpx;
+                margin-left: 10rpx;
+                background: {
+                    image: url(../../img/right.png);
+                    position: center center;
+                    size: 100% 100%;
+                    repeat: no-repeat;
+                }
+            }
+        }
+    }
+    .list-wrap{
+        padding:0 30rpx;
+        display:flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .list-item{
+            width:335rpx;
+            border-radius: 4rpx;
+            overflow: hidden;
+            margin-bottom:30rpx;
+            position: relative;
+            &:nth-child(even){
+                margin-left: 16rpx;
+            }
+            .poster{
+                width:100%;
+                height:209rpx;
+                display:block;
+            }
+            .info{
+                background:rgb(245,245,245);
+                padding:15rpx 20rpx;
+                height: 155rpx;
+                box-sizing: border-box;
+                display:flex;
+                flex-direction: column;
+                justify-content: space-between;
+                position:relative;
+                overflow: hidden;
+                .name{
+                    font-size:26rpx;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    text-overflow: ellipsis;
+                    -webkit-line-clamp: 2;
+                    line-height: 1.4;
+                }
+                .tips{
+                    display:flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .tag{
+                        height:28rpx;
+                        display: flex;
+                        color:#fff;
+                        align-items: center;
+                        justify-content: center;
+                        background:#fa3936;
+                        font-size:18rpx;
+                        padding: 0 5rpx;
+                    }
+                    .category{
+                        font-size:22rpx;
+                        color:#999090;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    .more-btn{
+                        width:50rpx;
+                        height:30rpx;
+                        background: url(../../img/icon-ellipsis.png?__inline) no-repeat right / 5rpx 23rpx;
+                        background-position: center center;
+                        margin-right: -20rpx;
+                    }
+                }
+            }
+            .details{
+                position:absolute;
+                top:205rpx;
+                left:0;
+                width:100%;
+                bottom: 0;
+                background: rgb(245,245,245);
+                overflow: hidden;
+                padding:15rpx 20rpx;
+                box-sizing: border-box;
+                transform: translate3d(0, 100%, 0);
+                transition:transform .2s;
+                line-height:1.2;
+                display:flex;
+                flex-direction: column;
+                justify-content: space-between;
+                &.show{
+                    transform: translate3d(0, 0, 0);
+                }
+                .details-name{
+                    font-size:26rpx;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    text-overflow: ellipsis;
+                    -webkit-line-clamp: 1;
+                    line-height: 36rpx;
+                }
+                .details-category{
+                    font-size:24rpx;
+                    color:#999090;
+                }
+                .tip-container {
+                    display: flex;
+                    .tip{
+                        font-size:22rpx;
+                        color:#999090;
+                        flex: 1;
+                    }
+                    .tip-icon {
+                        width:50rpx;
+                        height:23rpx;
+                        background: url(../../img/icon-ellipsis.png?__inline) no-repeat right / 5rpx 100%;
+                        background-position: center center;
+                        margin-right: -20rpx;
+                    }
+                }
+            }
+        }
+    }
+    .check-more-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color:#999090;
+        font-size:26rpx;
+        height: 30rpx;
+        padding-bottom:30rpx;
+        .check-more-icon {
+            height: 14rpx;
+            width: 8rpx;
+            margin-left: 10rpx;
+            background: {
+                image: url(../../img/right.png);
+                position: center center;
+                size: 100% 100%;
+                repeat: no-repeat;
+            }
+        }
+    }
+}

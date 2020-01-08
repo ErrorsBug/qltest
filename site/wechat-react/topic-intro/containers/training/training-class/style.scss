@@ -1,0 +1,65 @@
+.training-class-wrap {
+  .training-header {
+    color: #F63657;
+    padding: 40px;
+    font-size: 22px; /*px*/
+    background: url('./img/head_bj.png') no-repeat center;
+    background-size: cover;
+    .header-title {
+      font-size: 36px; /*px*/
+      font-weight: 600;
+    }
+    .class-nums {
+      font-size: 22px; /*px*/
+      margin-top: 20px;
+    }
+  }
+  .training-content {
+    padding: 53px 38px;
+  }
+  .timeline {
+    box-sizing: border-box;
+    color: rgba(0,0,0,0.65);
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5;
+    -webkit-font-feature-settings: 'tnum';
+    font-feature-settings: 'tnum';
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    .timeline-item {
+      position: relative;
+      margin: 0;
+      padding: 0 0 20px;
+      font-size: 14px; /*px*/
+      list-style: none;
+    }
+    .timeline-item-tail {
+      position: absolute;
+      top: .75em;
+      left: 12px;
+      height: 100%;
+      border-left: 3px solid #e8e8e8;/*no*/
+    }
+    .timeline-item-head {
+      position: absolute;
+      top: 2px;
+      width: 24px;
+      height: 24px;
+      background-color: #fff;
+      border: 3px solid #EEEEEE; /*no*/
+      border-radius: 100px;
+    }
+    .timeline-date {
+      margin-left: 40px;
+      margin-bottom: 20px;
+      color: #333333;
+      font-size: 22px; /*px*/
+    }
+    .learn-li {
+      margin-left: 40px;
+      background: #fff;
+    }
+  }
+}

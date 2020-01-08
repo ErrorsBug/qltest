@@ -1,0 +1,160 @@
+@import '../../../../assets/styles/base-definition.scss';
+.promo-rank-page{
+	height:100%;
+	box-sizing: border-box;
+	overflow: auto;
+	padding-top:140px;
+	padding-bottom:30px;
+	background:url(./img/banner.png) no-repeat center top / 100% auto;
+	position: relative;
+	.scroll-box {
+		top: 140px;
+		bottom: 30px;
+	}
+	.my-info{
+		margin:0 30px;
+		background:#fff;
+		border-radius: 10px;
+		padding:40px;
+		@include flex-center(vertical);
+		box-shadow: 0 2px 6px 0 rgba(#000,.2);
+		.avatar{
+			@include round-avatar(90px);
+			background:$gray-background;
+			flex-shrink: 0;
+		}
+		.details{
+			flex:1;
+			width:10px;
+			padding:0 26px;
+			.name{
+				font-size:30px;/*px*/
+				color:$gray-title;
+				@include flex-center(vertical);
+				span{
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+				}
+			}
+			.tip{
+				color:$gray-tip;
+				margin-top:20px;
+				font-size:22px;/*px*/
+				b{
+					color:#f85473;
+					font-weight:normal;
+				}
+			}
+		}
+		.invite-btn{
+			width:146px;
+			height:58px;
+			border:1px solid #f85473;/*no*/
+			border-radius: 100px;
+			color:#f85473;
+			font-size:28px;/*px*/
+			@include flex-center;
+			flex-shrink: 0;
+		}
+	}
+	.ranking-list{
+		margin:30px 30px 0;
+		background:#fff;
+		border-radius: 10px;
+		padding-left:40px;
+		.item{
+			padding:30px 0;
+			border-bottom:1px solid $gray-border;/*no*/
+			position:relative;
+			&:last-child{
+				border:0;
+			}
+			@include flex-center(vertical);
+			.avatar{
+				@include round-avatar(90px);
+				background:$gray-background;
+			}
+			.details{
+				flex:1;
+				padding-left:26px;
+				.name{
+					font-size:30px;/*px*/
+					color:$gray-title;
+					@include flex-center(vertical);
+				}
+				.tip{
+					color:$gray-tip;
+					margin-top:20px;
+					font-size:22px;/*px*/
+					b{
+						color:#f85473;
+						font-weight:normal;
+					}
+				}
+			}
+			.order{
+				width:40px;
+				height:34px;
+				box-sizing: border-box;
+				padding-right:5px;
+				background:url(./img/icon-no-none.png) no-repeat center / 100%;
+				position:absolute;
+				left:-44px;
+				top:50%;
+				margin-top:-18.5px;
+				color:#fff;
+				@include flex-center;
+				font-size:22px;/*px*/
+				font-weight: bolder;
+			}
+			&:nth-child(1) .order{
+				height:37px;
+				padding-bottom:3px;
+				background-image: url(./img/icon-no1.png);
+			}
+			&:nth-child(2) .order{
+				height:37px;
+				padding-bottom:3px;
+				background-image: url(./img/icon-no2.png);
+			}
+			&:nth-child(3) .order{
+				height:37px;
+				padding-bottom:3px;
+				background-image: url(./img/icon-no3.png);
+			}
+		}
+	}
+	.ranking-badge{
+		height:30px;/*px*/
+		padding:0 7px;
+		background:$gray-background;
+		border-radius: 5px;
+		color:$gray-tag;
+		margin-left:20px;
+		font-size:20px;/*px*/
+		@include flex-center(vertical);
+		flex-shrink: 0;
+		&.no1{
+			color:#fff;
+			background:#ffcc42;
+			&:after{
+				content:'人气大咖';
+			}
+		}
+		&.no2{
+			color:#fff;
+			background:#bdb8ff;
+			&:after{
+				content:'推荐达人';
+			}
+		}
+		&.no3{
+			color:#fff;
+			background:#ffc79a;
+			&:after{
+				content:'推荐小能手';
+			}
+		}
+	}
+}

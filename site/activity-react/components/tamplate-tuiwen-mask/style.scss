@@ -1,0 +1,49 @@
+.tuiwen-mask-bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+
+    z-index: 10;
+
+    background-color: rgba(0, 0, 0, .4);
+
+    .on-top {
+        position: absolute;
+        top: 15%;
+
+        left: 0;
+        right: 0;
+        margin: auto;
+
+        &::after{
+            position: absolute;
+            top: -144px;
+            right: 20px;
+            content: "";
+            display: block;
+            width: 187px;
+            height: 144px;
+            background: url('./img/pointer.png');
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .share-tips {
+        margin: auto;
+        width: 559px;
+        height: 247px;
+        background: url('./img/border.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+
+        padding: 30px;
+
+        font-size: 34px; /*px*/
+        color: #fff;
+        line-height: 1.4;
+
+    }
+}

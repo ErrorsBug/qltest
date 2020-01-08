@@ -1,0 +1,148 @@
+.how-to-promote-course-index {
+    height: 100%;
+    background-color: rgba(247,247,247,1);
+    position: relative;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+
+    .promote-list {
+        width:690px;
+        background:rgba(255,255,255,1);
+        box-shadow:0px 11px 30px 0px rgba(161,161,161,0.18);
+        border-radius:20px;
+        display: flex;
+        margin: 40px auto 0;
+        padding: 34px 30px;
+        box-sizing: border-box;
+        cursor: pointer;
+        background: {
+            position: right bottom;
+            repeat: no-repeat;
+            size: 90px 90px;
+        }
+        //&:nth-child(1){
+        //    background-size: 90px 90px;
+        //    background-image: url(./img/icon_marketing.png);
+        //}
+        //&:nth-child(2){
+        //    background-size: 90px 90px;
+        //    background-image: url(./img/icon_coupons.png);
+        //}
+        //&:nth-child(3){
+        //    background-size: 90px 105px;
+        //    background-image: url(./img/icon_audition.png);
+        //}
+        .content {
+            flex: 1;
+            margin-right: 50px;
+            .title {
+                color: #333;
+                font-size: 36px;/*px*/
+                line-height: 50px;
+                font-weight: bold;
+            }
+            .tip1,.tip2 {
+                margin-top: 10px;
+                font-size: 24px;/*px*/
+                line-height: 33px;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+            .tip1 {
+                -webkit-line-clamp: 2;
+                color: #333;
+            }
+            .tip2 {
+                -webkit-line-clamp: 1;
+                color: #999;
+            }
+        }
+        .set {
+            display: flex;
+            align-items: center;
+            color: #F73657;
+            font-size: 26px;/*px*/
+            font-weight: bold;
+            height: 50px;
+            i {
+                font-size: 22px;/*px*/
+                font-weight: bold;
+            }
+        }
+        .has-seted {
+            color: #999;
+            font-size: 26px;/*px*/
+        }
+    }
+
+    .set-audition-dialog {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.6);
+        z-index: 10;
+
+        .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%; 
+        }
+        .set-audition {
+            height: 970px;
+            width: 600px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 26px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            .content {
+                flex: 1;
+                padding: 40px 35px 0;
+                .title {
+                    font-size: 36px;/*px*/
+                    text-align: center;
+                    font-weight: bold;
+                    color: #333;
+                    line-height: 44px;
+                    margin-bottom: 40px;
+                }
+                .item {
+                    margin-bottom: 40px;
+                    .tip {
+                        font-size: 26px;/*px*/
+                        color: #666;
+                        margin-bottom: 20px;
+                        line-height: 36px;
+                        em {
+                            font-weight: bold;
+                            color: #F73657;
+                        }
+                    }
+                    >img {
+                        width: 530px;
+                        height: 280px;
+                        border-radius: 6px;
+                    }
+                }
+            }
+            .set-audition-btn{
+                height: 100px;
+                border-top: 1px solid rgba(238,238,238,1);/*px*/
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #F53556;
+                font-size: 30px;/*px*/
+            }
+        }
+    }
+}

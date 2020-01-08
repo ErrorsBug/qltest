@@ -1,0 +1,15 @@
+$fontC1: #333;
+$fontC2: #666;
+$fontC3: #999;
+
+$red: #fe5670;
+
+$border: #ebebeb;
+
+@mixin webkitLineClamp($num) {
+  display: -webkit-box;
+  -webkit-line-clamp: $num;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

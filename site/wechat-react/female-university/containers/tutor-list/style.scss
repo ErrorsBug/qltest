@@ -1,0 +1,16 @@
+.tutor-list-page{
+    background: #fff;
+    .tl-scroll-box{
+        padding:0 40px;  
+        box-sizing: border-box;
+        background: url("./img/file-bg.png") no-repeat center top;
+        background-size: 100%;
+        .sort-info-bar{
+            color: #bbb;
+            font-size: 24px;/* px */
+            line-height: 34px;
+            display: block;
+            margin:38px 0 ;
+        }
+    }
+}

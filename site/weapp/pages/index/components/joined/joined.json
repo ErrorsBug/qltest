@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "最近学习",
+    "component": true,
+    "usingComponents": {
+        "audio-box": "../../../../comp/audio-box/audio-box"
+    }
+}

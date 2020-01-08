@@ -1,0 +1,557 @@
+@import '../../assets/styles/mixins.scss';
+$main-color: #ff4b69;
+
+.co-dialog-container
+{
+	position: absolute;
+	width: 100%;
+	max-width: 1280px; /*px*/
+	min-width: 640px; /*px*/
+	height: 100%;
+	top: 0;
+	z-index: 201;
+	overflow: hidden;
+}
+
+.co-dialog-bg
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	background-color: rgba(0, 0, 0, .6);
+}
+
+.co-dialog-title
+{
+	width: 100%;
+	min-height: 80px;
+	font-size: 32px; /*px*/
+	text-align: center;
+	box-sizing: border-box;
+	font-weight: 700;
+	flex-shrink: 0;
+}
+.co-dialog-title.white
+{
+	color: #333;
+	padding: 48px 0 32px;/*px*/
+	line-height: 44px;/*px*/
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.co-dialog-title.blue
+{
+	color: #fff;
+	background-color: #2984e2;
+	line-height: 50px;/*px*/
+	padding: 30px;
+	font-size: 28px; /*px*/
+}
+.co-dialog-title.red
+{
+	color: #fff;
+	background-color: $main-color;
+	line-height: 50px;/*px*/
+	padding: 20px;
+}
+
+.co-dialog-close
+{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	right: 10px;
+	top: 10px;
+	text-align: center;
+	font-size: 50px;/* px */
+	color: #c9c9c9;
+	cursor: pointer;
+	&.icon_cross {
+		width: auto;
+		height: auto;
+		color: #979797;
+		font-size: 32px;
+		top: .5em;
+    	right: .6em;
+	}
+}
+
+.co-dialog-content
+{
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	width: 83%;
+	min-height: 200px; /*px*/
+	overflow: hidden;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background-color: #fff;
+	z-index: 2;
+	border-radius: 20px;
+}
+
+.co-dialog-content main
+{
+	flex: 1;
+	flex-basis: auto;
+}
+
+
+/* 线条隔开的按钮 */
+
+.co-dialog-btn-line
+{
+	display: flex;
+	min-height: 102px; /*px*/
+	font-size: 32px; /*px*/
+	height: 102px; /*px*/
+	line-height: 102px;/*px*/
+	text-align: center;
+	border-top: 1px solid #e5e5e5; /*no*/
+	margin-top: 48px;
+}
+
+.co-dialog-btn-line > span:nth-child(2):before
+{
+	content: '';
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	width: 1px; /*no*/
+	background-color: #e5e5e5;
+	top: 0;
+	height: 100%;
+}
+
+.co-dialog-btn-line > span
+{
+	position: relative;
+	flex: 1;
+	cursor: pointer;
+	display: block;
+}
+
+.co-dialog-btn-line-cancel
+{
+	color: #333;
+}
+
+.co-dialog-btn-line-confirm
+{
+	color: $main-color;
+	&.disabled {
+		color: #999;
+		cursor: initial;
+	}
+}
+
+
+/* 方块形状的按钮 */
+
+.co-dialog-btn-block
+{
+	display: flex;
+	min-height: 100px;
+	font-size: 32px; /*px*/
+	height: 100px; /*px*/
+	text-align: center;
+}
+
+.co-dialog-btn-block-wrap
+{
+	flex: 1;
+	text-align: center;
+	padding: 20px;
+}
+
+.co-dialog-btn-block-wrap > span
+{
+	display: inline-flex;
+	width: 80%;
+	height: 100%;
+	line-height: 60px; /*px*/
+	border-radius: 10px; /*px*/
+	font-size: 24px; /*px*/
+	cursor: pointer;
+	justify-content: center;
+	align-items: center;
+}
+
+.co-dialog-btn-block-cancel
+{
+	border: 1px solid $main-color;
+	color: $main-color;
+}
+
+.co-dialog-btn-block-confirm
+{
+	background-color: $main-color;
+	color: #fff;
+}
+
+
+/* 底部弹框样式 */
+.co-dialog-bottom
+{
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+    min-height: 200px; /*px*/
+	background-color: #f5f5f5;
+    z-index: 2;
+
+    @at-root .co-dialog-container.flex-scroll-h-lt-80 {
+        .co-dialog-bottom {
+            display: flex;
+            flex-direction: column;
+            max-height: 80%;
+            overflow-y: auto;
+        }
+    }
+    
+    .cdb-header {
+        position: relative;
+        display: flex;
+        flex-shrink: 0;
+        justify-content: center;
+        align-items: center;
+        height: 90px;
+        font-size: 30px;
+        color: #333333;
+        @include afterBorderBottom1px;
+    }
+    .cdb-header-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        color: #c0c0c0;
+        font-size: 28px;
+        padding: 0 30px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .cdb-header-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        color: #c0c0c0;
+        font-size: 28px;
+        padding: 0 30px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .cdb-body {
+				overflow-y: auto;
+				flex-grow: 1;
+    }
+    .cdb-line {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 110px;
+        @include afterBorderBottom1px;
+        &::after {
+            left: 30px;
+            right: 30px;
+        }
+
+        .cdb-line-main {
+            flex-grow: 1;
+        }
+
+    }
+    .cdb-line-main {
+        font-size: 30px;
+        color: #333;
+        padding-left: 30px;
+    }
+    .cdb-line-desc {
+        flex-shrink: 0;
+        font-size: 28px;
+        color: #999;
+        padding-right: 30px;
+    }
+}
+
+.co-dialog-bottom .scroll-warp {
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.co-dialog-bottom-list li
+{
+	line-height: 102px;
+	height: 102px;
+	font-size: 32px; /*px*/
+	padding: 0 20px;
+	cursor: pointer;
+}
+
+.co-dialog-bottom-list li:not(:first-child)
+{
+	border-top: 1px solid #f5f5f5; /*no*/
+}
+
+.co-dialog-bottom-list li:before
+{
+	margin-right: 20px;
+	vertical-align: middle;
+	position: relative;
+	bottom: 3px;
+}
+.co-dialog-bottom-item
+{
+	display: flex;
+	align-items: center;
+	position: relative;
+	background: #fff;
+	
+	max-width: 100%;
+
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+
+	.disabled-action {
+		color: #bbbbbb;
+	}
+}
+.co-dialog-bottom-item.danger
+{
+	color: #f46262;
+}
+.co-dialog-bottom-item.danger:before
+{
+	color: #f46262;
+}
+
+.co-dialog-bottom-item:before
+{
+	color: #999;
+}
+
+.co-dialog-bottom-title
+{
+	display: flex;
+    background: #fff;
+}
+
+.co-dialog-bottom-title-label
+{
+	color: #999;
+	font-size: 28px; /*px*/
+	margin-right: 20px;
+}
+
+.co-dialog-bottom-title-content
+{
+	font-size: 28px; /*px*/
+	flex: 1;
+	word-break: break-all;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.dialog-sure{
+	font-size: 26px; /*px*/
+	color: #a5a5a5;
+}
+
+.co-dialog-bottom-close
+{
+	color: #333;
+	background-color: #fff;
+	text-align: center;
+    margin-top: 12px;
+}
+.normal-style{
+	&:before{
+		content:'×',
+	}
+}
+
+.co-dialog-bottom-item-switch
+{
+	position: absolute !important;
+	right: 30px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+
+/* Confirm 样式 */
+.co-dialog-confirm
+{
+	width: 100%;
+}
+
+.confirm-tip
+{
+	display: block;
+	font-size: 30px; /*px*/
+	min-height: 200px;
+	text-align: center;
+	line-height: 50px; /*px*/
+	padding: 20px;
+}
+
+.co-dialog-top-title {
+    display: block;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    margin: 40px auto 0;
+    font-size: 34px; /*px*/
+    color: #404040;
+}
+.co-dialog-main-content {
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 50px 80px 60px;
+    font-size: 28px; /*px*/
+    color: #404040;
+
+    p {
+        display: inline-block;
+        text-align: left;
+    }
+}
+
+
+// 列表式的弹框
+.co-list-dialog {
+	// position: relative;
+
+	.co-list-container {
+		position: relative;
+		min-height: 200px;
+	}
+
+	.co-list-wrap {
+		padding: 0 40px;
+		max-height: 350px;
+		overflow: auto;
+		box-sizing: border-box;
+	}
+
+	.co-list-dialog-item {
+		line-height: 110px;
+		font-size: 30px; /*px*/
+		color: #45494d;
+		padding-left: 10px;
+		cursor: pointer;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		
+		&:not(:last-child) {
+			border-bottom: 1px solid #f0f0f0; /*no*/
+		}
+
+		&:before {
+			float: right;
+			color: #f73657;
+		}
+	}
+}
+
+.is-buy-dialog {
+	& .co-dialog-content {
+		padding: 48px 80px;
+		letter-spacing: 0;
+		text-align: center;
+		box-sizing: border-box;
+	}
+	& .title {
+		font-size: 32px; /* px */
+		color: #333333;
+		font-weight: bold;
+	}
+	& .desc {
+		margin-top: 20px;
+		font-size: 28px; /* px */
+		color: #666666;
+	}
+	& .btn-group {
+		margin-top: 48px;
+		& .btn {
+			height: 76px;
+			line-height: 76px;
+			font-size: 32px; /* px */
+			border-radius: 76px;
+			margin-bottom: 32px;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+
+		& .confirm {
+			background: #F73657;
+			color: #FFF;
+		}
+
+		& .money {
+			margin-left: 20px;
+			&::before {
+				content: '￥';
+				font-size: 20px;
+			}
+		}
+
+		& .cancel {
+			border: 1px solid #F73657;
+			color: #F73657;
+		}
+	}
+}
+
+
+.co-dialog-container.common-confirm {
+	.co-dialog-content {
+		padding-top: 48px;
+		min-height: auto;
+	}
+	.co-dialog-title.white {
+		padding: 0 40px 30px;
+		min-height: auto;
+		font-size: 32px;/* px */
+		line-height: 1.4;
+	}
+	main {
+		padding: 0 40px 48px;
+		font-size: 28px;/* px */
+		color: #333;
+		line-height: 1.4;
+		text-align: center;
+		input {
+			border: none;
+			display: block;
+			width: 100%;
+			height: 74px;
+			border-radius: 74px;
+			background-color: #f7f7f7;
+			padding: 0 40px;
+			color: #333;
+			font-size: 28px;/* px */
+			outline: none;
+		}
+	}
+	.co-dialog-btn-line {
+		margin-top: 0;
+	}
+}

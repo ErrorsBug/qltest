@@ -1,0 +1,62 @@
+<view class="course-item" bindtap="handleItemClick">
+    <view class="img-box">
+        <image wx:if="{{course.flag == 'boutique'}}" class="flag-boutique" src="../../img/boutique.png"></image>
+        <image class="img-content" src="{{course.logo}}@296h_480w_1e_1c_2o" lazy-load="true"></image>
+    </view>
+
+    <view class="detail">
+        <text class="title"> {{course.businessName}} </text>
+
+        <block wx:if="{{course.businessType == 'charge' || course.businessType == 'absolutely' || course.channelId}}">
+            <block wx:if="{{course.money > 0}}">
+                <view class="other-info">
+                    <view class="tip-name">
+                        <block wx:if="{{course.type == 'channel'}}">
+                            <view class="tip-name-body">
+                                <view class="live-name">
+                                    {{course.liveName}}
+                                </view> | 共{{course.topicNum}}节课
+                            </view>
+                        </block>
+                        <block wx:else>
+                            {{course.liveName}}
+                        </block>
+                    </view>
+                    <view class="tag">
+                        <view class="view-num">
+                            <block wx:if="{{course.type == 'channel'}}"> {{learningNum}}次学习 </block>
+                            <block wx:else> {{authNum}}次学习 </block>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </block>
+        <block wx:else>
+            <view class="other-info">
+                <view class="tip-name">
+                    <block wx:if="{{course.type == 'channel'}}">
+                        <view class="tip-name-body">
+                            <view class="live-name">
+                                {{course.liveName}}
+                            </view> | 共{{course.topicNum}}节课
+                        </view>
+                    </block>
+                    <block wx:else>
+                        {{course.liveName}}
+                    </block>
+                </view>
+                <view class="tag">
+                    <view class="view-num">
+                        <block wx:if="{{course.type == 'channel'}}"> {{learningNum}}次学习 </block>
+                        <block wx:else> {{authNum}}次学习 </block>
+                    </view>
+                    <view wx:if="{{course.money == 0}}" class="free">
+                        免费
+                    </view>
+                </view>
+            </view>
+        </block>
+
+
+    </view>
+</view>

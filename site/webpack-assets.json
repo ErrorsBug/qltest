@@ -1,0 +1,14 @@
+{
+  "javascript": {
+    "mine_bundle": "/wechat-react/mine_bundle.chunk.js",
+    "runtime": "/wechat-react/runtime.js",
+    "vendors": "/wechat-react/vendors.chunk.js"
+  },
+  "styles": {
+    "mine_bundle": "/wechat-react/mine_bundle.css"
+  },
+  "assets": {},
+  "webpack": {
+    "version": "4.27.1"
+  }
+}

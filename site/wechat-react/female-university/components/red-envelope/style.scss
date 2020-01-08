@@ -1,0 +1,149 @@
+.fun-red-envelope-box{
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.6);
+    & > div{
+        width: 100%;
+        height: 100%;
+        padding: 28% 28px 0;
+        box-sizing: border-box;
+        position: relative;
+        .close-btn{
+            position: absolute;
+            width: 88px;
+            height: 88px;
+            right: 26px;
+            top: 120px;
+            background: url('./img/icon-close.png') no-repeat center;
+            background-size: 44px;
+        }
+        
+        .red-envelope-cont{
+            width: 694px;
+            height: 70%;
+            background: url('./img/icon-red.png') no-repeat center;
+            background-size:auto 100%;
+            margin: 0 auto 26px;
+            position: relative;
+            padding-top: 440px;
+            box-sizing: border-box;
+            &.vip{
+                background: url('https://img.qlchat.com/qlLive/business/Y53JXJY4-OW3I-XSNT-1562233377787-Q3RPMMW2U4C5.png') no-repeat center;
+                background-size:auto 100%; 
+            }
+            .red-envelope-money{
+                color: #F17C57;
+                font-size: 140px;/*px*/
+                font-weight: 700;
+                position: absolute;
+                top: 20%;
+                left: 47%;
+                transform: translate(-50%,-50%);
+                width: 100%;
+                text-align: center;
+                &::before{
+                    content: '￥';
+                    font-size: 40px;/*px*/
+                }
+            }
+
+            p{
+                text-align: center;
+                color: #A64141;
+                font-size: 24px; /*px*/
+                line-height: 1.5;
+                position: absolute;
+                top: 51%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                .countdown-time{
+                    font-size: 24px !important; /*px*/
+                    color: #A64141 !important;
+                    i {
+                        font-size: 24px !important; /*px*/
+                        color: #A64141 !important;
+                        background: transparent !important;
+                        padding: 0 !important;
+                    }
+                }
+            }
+            .red-envelope-btn{
+                width: 440px;
+                height:20%;
+                position: absolute;
+                bottom: 5%;
+                left: 50%;
+                transform: translate(-50%,0);
+            }
+        }
+        .witness-header{
+            display: flex;
+            margin-left: 30px;
+            img{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                margin-right: 20px;
+            }
+            .witness-message{
+                flex: 1;
+                .name{
+                    color: #fff;
+                    font-size: 30px;/*px*/
+                    line-height: 50px;
+                }
+                .tips{
+                    background: #fff;
+                    border-top-right-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                    border-bottom-left-radius: 20px;
+                    padding: 20px;
+                    max-width: 400px;
+                    margin-bottom: 20px;
+                    font-size: 26px;/*px*/
+                    line-height: 40px;
+                }
+            }
+        }
+        .red-envelope-user{
+            display: flex;
+            justify-content: center;
+            img{
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+            p{
+                display: flex;
+                align-items: center;
+                margin-left: 20px;
+                color: #fff;
+                font-size: 36px; /*px*/
+                font-weight: bold;
+                line-height: 1.5;
+                span{
+                    display: inline-block;
+                    max-width: 230px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}
+
+// @media screen and (min-width: 639px) {
+//     .red-envelope-cont{
+//         width: 550px !important;
+//         background: url('../../img/icon-red.png') no-repeat center;
+//         background-size: 530px !important;
+//         margin: 0 auto;
+//     }
+//   }
+  

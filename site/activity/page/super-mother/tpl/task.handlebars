@@ -1,0 +1,29 @@
+<div class="banner"><img src={{backgroundUrl}} alt=""></div>
+<main>
+    <h1>{{title}}</h1>
+    
+    <p class="task-des">{{task}}</p>
+
+    {{#if showInput}}
+        <section class="txa-warp">
+            <textarea id="mta" placeholder="完成任务，闯关领取精美勋章和礼品"></textarea>
+            <span class="num"><var>0</var>/300</span>
+        </section>
+        <div class="btn" id="btn-submit">提交任务</div>
+    {{else}}
+        <div class="done">{{content}}</div>
+
+        {{#if checkTask}}
+            {{#if isJoind}}
+                <div class="btn" id="btn-check-task">查看任务</div>
+            {{else}}
+                <div class="btn" id="btn-check-task">立即参与</div>
+            {{/if}}
+        {{else}}
+            <div class="btn" id="btn-check-task">参与活动</div>
+        {{/if}}
+
+    {{/if}}
+    
+    <div class="cut-off">看看别的小伙伴怎么说</div>
+</main>

@@ -1,0 +1,12 @@
+{
+    "navigationBarTitleText": "千聊",
+    "backgroundColor": "#f0f0f0",
+    "usingComponents": {
+        "tab-page": "../../comp/tab-page/tab-page",
+        "recommend-b": "./components/recommend-b/recommend",
+        "ios-recommend-b": "./components/ios-recommend-b/recommend",
+        "joined": "./components/joined/joined",
+        "mine": "./components/mine/mine",
+        "audio-box": "../../comp/audio-box/audio-box"
+    }
+}

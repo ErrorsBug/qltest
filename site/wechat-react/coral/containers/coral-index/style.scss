@@ -1,0 +1,222 @@
+.coral-index{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	
+	.not-joined-box{
+		background: #fff6f7;
+		height: 100%;
+		.coral-index-top{
+			background: url(./img/coral-head-bg.png) center center no-repeat;
+			background-size: 100% auto;
+			padding-bottom:71.1%;
+		}
+
+		.coral-index-buttons{
+			padding:20px;
+			background: #fff6f7;
+			.title{
+				display: block;
+				text-align: center;
+				color:#666;
+				font-size: 22px;
+				margin-top:-30px;
+				&:before{
+					content: '';
+					display: inline-block;
+					width: 30px;
+					height: 1px;/*no*/
+					background-color: #666;
+					vertical-align: middle;
+					margin-right:12px;
+				}
+				&:after{
+					content: '';
+					display: inline-block;
+					width: 30px;
+					height: 1px;/*no*/
+					background-color: #666;
+					vertical-align: middle;
+					margin-left:12px;
+				}
+			}
+			dl{
+				width: 100%;
+				display: flex;
+				padding:40px 0 0;
+				dd{
+					flex: 1;
+					>div{
+						width:100%;
+						text-align: center;
+						color:#333;
+						font-size: 24px;/*px*/
+						&:before{
+							content:'';
+							display: block;
+							width: 62%;
+							padding-bottom: 110px;
+							margin: 0 auto 20px;
+						}
+					}
+					&.push-list{
+						div{
+							&:before{
+								background: url(./img/coral_1.png) center center no-repeat;
+								background-size: 110px auto;
+							}
+						}
+						
+					}
+					&.push-order{
+						div{
+							&:before{
+								background: url(./img/coral_2.png) center center no-repeat;
+								background-size: 110px auto;
+							}
+						}
+						
+					}
+					&.mine-income{
+						div{
+							&:before{
+								background: url(./img/coral_3.png) center center no-repeat;
+								background-size: 110px auto;
+							}
+						}
+					}
+					&.grounp-manage{
+						div{
+							&:before{
+								background: url(./img/coral_4.png) center center no-repeat;
+								background-size: 110px auto;
+							}
+						}
+					}
+					&.performance-manage{
+						div{
+							&:before{
+								background: url(./img/coral_5.png) center center no-repeat;
+								background-size: 110px auto;
+							}
+						}						
+					}
+					&.coral-course{
+						div{
+							&:before{
+								background: url(./img/coral_6.png) center center no-repeat;
+								background-size: 110px auto;
+							}
+						}
+					}
+				}
+			}
+			.join-coral-box{
+				text-align: center;
+				margin-top:80px;
+				.tip{
+					color:#999;
+					font-size: 24px;/*px*/
+				}
+				.btn-join{
+					display: block;
+					padding:30px;
+					border-radius: 60px;
+					color:#fff;
+					font-size: 32px;/*px*/
+					background:#ed3b59;
+					margin: 20px 50px;
+				}
+			}
+		}
+	}
+
+	.joined-box{
+		background: url(./img/coral-index-bg1.png) top center no-repeat;
+		background-size: 100% 100%;
+		padding:0 54px 8%;
+		min-height: 100%;
+		.top-pic{
+			background: url(./img/coral-index-bg2.png) center center no-repeat;
+			background-size: 100% auto;
+			width: 100%;
+			padding-bottom:78.8%;
+		}
+		.joined{
+			border-radius: 20px;
+			overflow: hidden;
+			background: #fff;
+			.title{
+				background: url(./img/joined-box-top.jpg) center center no-repeat;
+				background-size: 100% auto;
+				padding-bottom: 18%;
+				position: relative;
+				span{
+					position: absolute;
+					top:40%;
+					margin-top:-15px;
+					width: 100%;
+					text-align: center;
+					line-height: 30px;
+					color:#fff;
+					font-size: 30px;/*px*/
+					&:before{
+						content:'';
+						display: inline-block;
+						height: 1px;/*no*/
+						width:40px;
+						background: #fff;
+						vertical-align: middle;
+						margin-right:10px;
+					}
+					&:after{
+						content:'';
+						display: inline-block;
+						height: 1px;/*no*/
+						width:40px;
+						background: #fff;
+						vertical-align: middle;
+						margin-left:10px;
+					}
+				}
+			}
+			.content{
+				padding:24px 54px 40px;
+				text-align: center;
+				>div{
+					text-align: center;
+					padding:30px;
+					border-radius: 50px;
+					margin-bottom:30px;
+					font-size: 32px;/*px*/
+				}
+				>span{
+					color: #999;
+					font-size: 24px;/*px*/
+					
+				}
+				.btn-zhuan{
+					color:#fff;
+					background-color: #ed3b59;
+					border:1px solid #ed3b59;/*no*/
+					margin-top:35px;
+					
+				}
+				.btn-income{
+					color:#666;
+					border:2px solid #bbb;/*no*/
+				}
+				.btn-yao{
+					color:#666;
+					border:2px solid #bbb;/*no*/
+				}
+
+
+			}
+
+		}
+	}
+		
+	
+
+}

@@ -1,0 +1,118 @@
+.tab-content-lucky-man {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../../images/tab-content-bg.png');
+    background-size: cover;
+    background-position: center top;
+    padding-bottom: 30px;
+
+    header.lucky-man-title {
+        margin-top: 30px;
+
+        img {
+            display: block;
+            height: 93px;
+        }
+    }
+
+    main.lucky-man-content {
+        width: 83%;
+        margin-top: 35px;
+        border: 8px solid #d66f22;
+        border-radius: 30px;
+        background-color: #ffffff;
+        overflow: hidden;
+
+        .table-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f18433;
+            font-size: 26px;/* px */
+            color: #ffffff;
+            height: 70px;
+
+            >span {
+                flex: 1;
+                display: inline-block;
+                height: 41px;
+                line-height: 41px;
+                text-align: center;
+                font-weight: bold;
+            }
+
+            >span:first-child {
+                border-right: 2px solid #ffffff;/* no */
+            }
+
+        }
+
+        ul {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: auto;
+            padding: 20px 0;
+
+            &:after {
+                content: '';
+                width: 0;
+                border: 1px dashed #999999; /* no */
+                position: absolute;
+                left: 50%;
+                top: 20px;
+                bottom: 20px;
+                margin-left: -1px;/* no */
+                padding: 20px 0;
+            }
+
+            >span {
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            li {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                height: 60px;
+                line-height: 60px;
+
+                >span {
+                    flex: 1;
+                    text-align: center;
+                    font-size: 24px;/* px */
+                    color: #666666;
+                }
+
+                // .with-border {
+                //     border-right: 2px dashed #999999; /* no */
+                // }
+            }
+        }
+    }
+
+    .lucky-item-enter {
+        transform: translateY(100%);
+    }
+    
+    .lucky-item-enter.lucky-item-enter-active {
+        transform: translateY(0);
+        transition: transform 500ms linear;
+    }
+    
+    .lucky-item-leave {
+        transform: translateY(0);
+    }
+    
+    .lucky-item-leave.lucky-item-leave-active {
+        transform: translateY(100%);
+        transition: transform 300ms linear;
+    }
+}

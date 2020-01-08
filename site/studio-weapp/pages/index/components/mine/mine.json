@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "我的",
+    "component": true,
+    "usingComponents": {
+        "audio-box":"../../../../comp/audio-box/audio-box"
+    }
+}

@@ -1,0 +1,283 @@
+.annual-rank-page {
+
+    .annual-rank-page-scroll-wrap {
+        height: 100%;
+    }
+    .annual-rank-page-inner {
+        position: relative;
+        background: #000 url('./assets/background.png') no-repeat;
+        background-size: contain;
+        padding: 0 32px;
+        height: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .header-wrap {
+        position: relative;
+        display: flex;
+        padding-top: 20px;
+        margin-bottom: 10px;
+
+        .header {
+            position: relative;
+            display: flex;
+            margin: auto;
+            width: 100%;
+        }
+    }
+
+    .rank-rule-wrap {
+        text-align: right;
+    }
+
+    .rank-rule {
+        position: relative;
+        display: inline-block;
+        font-family: PingFang-SC-Bold;
+        font-size: 24px; /*px*/
+        line-height: 36px; /*px*/
+        letter-spacing: 0px; /*px*/
+        color: #a0988a;
+        margin-right: 20px; /*px*/
+        cursor: pointer;
+        margin-bottom: 18px;
+
+        &::after {
+            content: ' ';
+            position: absolute;
+            left: 100%;
+            top: 0;
+            bottom: 0;
+            background-image: url('./assets/right-arrow.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 11px;  /*px*/
+            height: 20px; /*px*/
+            margin-left: 9px; /*px*/
+            margin-top: 6px; /*px*/
+        }
+    }
+
+    .teacher-list {
+        border: solid 1px #d3bf65; /*no*/
+        margin: 0 30px;
+
+        .teacher-item {
+            display: flex;
+            &:nth-child(odd) {
+                background: #322828;
+            }
+            &:nth-child(even) {
+                background: #181413;
+            }
+
+            &:first-child {
+                .avatar-wrap {
+                    border-color: #faa92f;
+                }
+                .counter {
+                    width: 40px;
+                    height: 40px;
+                    background: url(./assets/first.png) no-repeat;
+                    background-size: cover;
+                }
+            }
+
+            &:nth-child(2) {
+                .avatar-wrap {
+                    border-color: #809b9a;
+                }
+                .counter {
+                    background: url(./assets/second.png) no-repeat;
+                    background-size: cover;
+                }
+            }
+
+            &:nth-child(3) {
+                .avatar-wrap {
+                    border-color: #917b5b;
+                }
+                .counter {
+                    background: url(./assets/third.png) no-repeat;
+                    background-size: cover;
+                }
+            } 
+
+            .avatar-wrap {
+                position: relative;
+                width: 108px;
+                height: 108px;
+                margin: 22px;
+                overflow: hidden;
+            }
+
+            .avatar {
+                display: block;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                border: 1px solid #a5a5a5;
+                overflow: hidden;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            .counter {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 30px;
+                height: 30px;
+                background: #a5a5a5;
+                color: #ffffff;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 30px;
+            }
+
+            .content {
+                padding: 22px 0;
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                justify-content: space-around;
+                width: 0;
+
+                .nickname {
+                    font-family: PingFang-SC-Medium;
+                    font-size: 26px; /*px*/
+                    line-height: 43px; /*px*/
+                    height: 43px; /*px*/
+                    letter-spacing: 0px;
+                    color: #ffffff;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    margin-right: 60px;
+                }
+
+                .vote-num {
+                    font-family: PingFang-SC-Bold;
+                    font-size: 26px; /*px*/
+                    font-weight: normal;
+                    font-stretch: normal;
+                    line-height: 36px; /*px*/
+                    height: 36px; /*px*/
+                    letter-spacing: 0px;
+                    color: #dcae56;
+                }
+                
+                .vote-unit {
+                    font-family: PingFang-SC-Bold;
+                    font-size: 20px; /*px*/
+                    color: #dcae56;
+                }
+
+                .intro {
+                    display: inline-block;
+                    position: relative;
+                    font-family: PingFang-SC-Medium;
+                    font-size: 20px; /*px*/
+                    line-height: 43px; /*px*/
+                    height: 43px; /*px*/
+                    letter-spacing: 0px;
+                    user-select: none;
+                    cursor: pointer;
+                    margin-right: 70px;
+
+                    .intro-inner {
+                        display: inline-block;
+                        color: #b1aea2;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        position: relative;
+                        max-width: 100%;
+                    }
+
+                    &::after {
+                        content: ' ';
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        background-image: url('./assets/right-arrow.png');
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        width: 11px;  /*px*/
+                        height: 20px; /*px*/
+                        margin-left: 9px; /*px*/
+                        margin-top: 12px; /*px*/
+                    }
+                }
+
+            }
+
+            .btn-panel {
+                width: 164px;
+                display: flex;
+
+                .vote-btn {
+                    display: block;
+                    margin: auto;
+                    width: 120px;
+                    height: 50px;
+                    line-height: 50px;
+                    border: solid 2px #dcae56;
+                    font-size: 24px; /*px*/
+                    color: #dcae56;
+                    text-align: center;
+                    cursor: pointer;
+                }
+
+                .has-vote-btn {
+                    border: solid 2px #a0988a;
+                    color: #a0988a;
+                }
+            }
+        }
+    }
+
+    .show-rank-rule {
+        padding: 0 33px;
+        background: #000;
+        height: 100%;
+        padding-bottom: 40px;
+
+        .annual-rank-rule {
+            padding-top: 40px;
+            font-family: PingFang-SC-Bold;
+
+            .header { 
+                font-size: 32px; /*px*/
+                color: #dcae56;
+                margin-bottom: 15px;
+            }
+
+            .content {
+                color: white;
+                font-size: 24px; /*px*/
+                line-height: 40px; /*px*/
+            }
+
+            .prompt {
+                font-size: 20px; /*px*/
+                line-height: 40px; /*px*/
+                color: #b1aea2;
+            }
+        }
+        .go-back {
+            display: block;
+            margin: 20px auto 0;
+            width: 120px;
+            height: 50px;
+            line-height: 50px;
+            border: solid 2px #dcae56;
+            font-size: 24px; /*px*/
+            color: #dcae56;
+            text-align: center;
+            cursor: pointer;
+        }
+    }
+}

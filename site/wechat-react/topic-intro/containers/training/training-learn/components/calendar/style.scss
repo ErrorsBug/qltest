@@ -1,0 +1,292 @@
+.calendar-box {
+  box-shadow: 0px 1px 40px 0px rgba(0,0,0,0.05);
+  .week-calendar {
+    display: flex;
+    justify-content: space-between;
+    padding: 38px 40px 0 40px;
+    .date-name {
+      color: #999999;
+      font-size: 24px; /*px*/
+      text-align: center;
+    }
+    .date {
+      color: #333333;
+      font-size: 30px; /*px*/
+      margin: 10px 0;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      font-weight: 600;
+      .today {
+        background: #F63657;
+        color: #fff;
+        border-radius: 50%;
+        width: 54px;
+        height: 54px;
+        line-height: 54px;
+        display: inline-block;
+        text-align: center;
+      }
+    }
+    .all-calendar {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,.6);
+    }
+  }
+  .show {
+    display: flex;
+  }
+  .hide {
+    display: none;
+  }
+  .circle {
+    margin-right: 5px;
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+  }
+
+}
+.arrow {
+  text-align: center;
+  padding: 20px;
+  cursor: pointer;
+  .top, .bottom {
+    display: inline-block;
+    transition: all .3s;
+  }
+  .top {
+    transform: rotate(-90deg);
+  }
+  .bottom {
+    transform: rotate(90deg);
+  }
+}
+.absolute-calendar-box {
+  position: absolute;
+  background: rgba(0,0,0,.6);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  .arrow {
+    margin-top: -60px;
+  }
+}
+.calendar-wrap {
+  width: 100%;
+  .font-28 {
+    font-size: 28px; /*px*/
+  }
+  .calendar {
+      padding: 38px 40px 60px 40px;
+      background-color: #fff;
+      border-radius: 0 0 30px 30px ;
+      .month-switcher {
+          height: 98px;
+          width: 50%;
+          margin: 0 auto;
+          padding-top: 20px;
+          .icon_enter {
+            color: #999;
+            padding: 20px;
+            cursor: pointer;
+          }
+          .back {
+            transform: rotate(180deg);
+          }
+      }
+      .weeks {
+          color: #999;
+          justify-content: space-between;
+          span {
+              width: 60px;
+              display: inline-block;
+              text-align: center;
+              font-size: 24px; /*px*/
+          }
+      }
+      .dates {
+          max-height: 70px;
+          overflow: hidden;
+          transition: all ease .6s;
+          &.expand {
+              max-height: 800px;
+          }
+          .normal {
+              display: inline-block;
+              width: 60px;
+              height: 60px;
+              text-align: center;
+              line-height: 60px;
+              margin: 20px 0;
+              color: #333333;
+              border-radius: 50%;
+              font-weight: 600;
+              &.placeholder {
+                color: #999999;
+                background-color: transparent;
+              }
+              &.disabled {
+                background-color: #ccc;
+              }
+              .circle {
+                margin-right: 5px;
+              }
+              .today {
+                background: #F63657;
+                color: #fff;
+                border-radius: 50%;
+                width: 54px;
+                height: 54px;
+                line-height: 54px;
+                display: inline-block;
+                margin-bottom: 10px;
+                text-align: center;
+              }
+          }
+      }
+      .tips {
+          color: #999;
+          padding: 30px 0;
+          .tip-checkin {
+              margin-right: 50px;
+          }
+      }
+      .circle {
+        margin-right: 5px;
+        display: block;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+      }
+
+      .orange-circle {
+        background-color: #FFB964;
+      }
+      .bule-circle {
+        background-color: #468CF2;
+      }
+      .green-circle {
+        background-color: #00C353;
+      }
+  }
+  .general-button {
+      width: 672px;
+      margin: 40px auto 10px; 
+  }
+  .total-checkin-count {
+      color: #666;
+      text-align: center;
+      margin: 12px auto 82px;
+  }
+}
+.jc-between {
+  //两端对齐，项目之间的间隔都相等
+  justify-content: space-between;
+}
+.orange-circle {
+  background-color: #FFB964;
+}
+.bule-circle {
+  background-color: #468CF2;
+}
+.green-circle {
+  background-color: #00C353;
+}
+// 奖励模块
+.calendar-reword {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  border-top: 1px solid #EEEEEE; /*no*/
+  .reword-times {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .big-day {
+      color: #F73657;
+      font-size: 55px; /*px*/ 
+      margin: 5px;
+    }
+  }
+  .reword-left {
+    font-size: 30px; /*px*/
+    color: #333333;
+    font-weight: 600;
+  }
+  .reword-right {
+    display: flex;
+    text-align: center;
+    .reword-day {
+      margin-right: 40px;
+      &:last-child {
+        margin-right: 0;
+      }
+      .reword-num {
+        color: #333333;
+        font-size: 36px; /*px*/
+      }
+      .reword-word {
+        margin-top: 5px;
+        color: #999999;
+        font-size: 24px; /*px*/
+      }
+    }
+  }
+  .reword-wrap {
+    display: flex;
+    margin: 25px 0;
+    overflow-x: auto;
+    .reword-item {
+      width: 110px;
+      min-width: 110px;
+      height: 110px;
+      text-align: center;
+      padding: 18px 0;
+      margin-right: 30px; 
+      border: 2px solid #EEEEEE;
+      border-radius: 10px;
+      box-sizing: border-box;
+      &:last-child {
+        margin-right: 0;
+      }
+      &.active {
+        border-color: #F73657;
+      }
+    }
+    .day {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333333;
+      font-size: 24px; /*px*/
+      margin-bottom: 15px;
+    }
+    .gift {
+      width: 28px;
+      height: 28px;
+      background: url('../../img/icon_gift.png') no-repeat center;
+      background-size: contain;
+      margin: 0 auto;
+    }
+    .dui {
+      width: 16px;
+      height: 12px;
+      display: inline-block;
+      background: url('../../img/dg.png') no-repeat center;
+      background-size: contain;
+    }
+    .grey {
+      color: #999999;
+    }
+  }
+  .reword-tip {
+    text-align: center;
+    color: #999999;
+    font-size: 22px; /*px*/
+  }
+}

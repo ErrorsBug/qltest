@@ -1,0 +1,49 @@
+
+/*热门频道*/
+
+.channel
+{
+	width: 33.3%;
+	min-width: 33.3%;
+	max-width: 33.3%;
+	padding: 0 15px;
+	margin-bottom: 30px;
+	display: inline-block;
+}
+
+.channel > span
+{
+	width: 100%;
+	height: 0;
+	padding-bottom: 100%;
+	position: relative;
+	display: block;
+	margin-bottom: 16px;
+}
+
+.channel > span > img
+{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-radius: 6px;
+}
+
+.channel-detail > h2
+{
+	font-size: 26px;/*px*/
+	color: #505559;
+	line-height: 1.4;
+	height: 73px;/*px*/
+	margin-bottom: 10px;
+	white-space: pre-wrap;
+	font-weight: 500;
+}
+
+.channel-detail > p
+{
+	color: #a8adb2;
+	font-size: 24px;/*px*/
+}

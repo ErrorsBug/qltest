@@ -1,0 +1,219 @@
+@import '../../comp/style-variables.scss';
+
+@mixin couponItemClass($couponItemClassName: 'coupon-item') {
+
+  .#{$couponItemClassName} {
+    padding: 22rpx 30rpx 0;
+
+    &:last-child {
+      padding-bottom: 22rpx;
+    }
+
+    &.active {
+      .#{$couponItemClassName}-wrap {
+        box-shadow: 0rpx 2rpx 18rpx 0rpx rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    &.disabled {
+      .#{$couponItemClassName}-wrap {
+        .edge {
+          background-image: url("../../comp/img/coupon-left-edge-disabled.png");
+        }
+        .left {
+          background: #b3b3b3;
+          &::after {
+            border-right: 4rpx dotted #a4a4a4;
+          }
+        }
+        .right {
+          .main {
+            padding-right: 100rpx;
+          }
+        }
+      }
+    }
+  }
+
+  .#{$couponItemClassName}-wrap {
+    position: relative;
+    display: flex;
+    height: 220rpx;
+    overflow: hidden;
+    box-shadow: 0rpx -1rpx 0rpx 0rpx rgba(235, 235, 235, 0.004);
+
+    .edge {
+      width: 5rpx;
+      height: 100%;
+      background-position: left top;
+      background-size: 100%;
+      background-image: url("../../comp/img/coupon-left-edge.png");
+    }
+
+    .coupon-gap {
+      &::before {
+        content: "";
+        width: 20rpx;
+        height: 20rpx;
+        border-radius: 10rpx;
+        background-color: #f2f4f5;
+        position: absolute;
+        top: -10rpx;
+        left: 210rpx;
+      }
+      &::after {
+        content: "";
+        width: 20rpx;
+        height: 20rpx;
+        border-radius: 10rpx;
+        background-color: #f2f4f5;
+        position: absolute;
+        bottom: -10rpx;
+        left: 210rpx;
+      }
+    }
+
+    .left {
+      position: relative;
+      flex-shrink: 0;
+      width: 215rpx;
+      color: #fff;
+      line-height: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to right, #fabb8d, #f7935c);
+      .main {
+        font-size: 26rpx;
+        margin-left:-8rpx;
+        .price {
+          font-size: 80rpx;
+          display: inline-block;
+          font-weight: bold;
+          &.md {
+            font-size: 54rpx;
+          }
+          &.sm {
+            font-size: 40rpx;
+          }
+        }
+      }
+      .desc {
+        font-size: 22rpx;
+        margin-top: .5em;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        right: 5rpx;
+        height: 100%;
+        width: 0;
+        border-right: 4rpx dotted #db8349;
+      }
+    }
+
+    .right {
+      position: relative;
+      flex-grow: 1;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 25rpx;
+      overflow: hidden;
+
+      &.overtimesoon {
+        .main {
+          padding-right: 40rpx;
+        }
+        .mark-overtimesoon {
+          display: block;
+        }
+      }
+
+      .main {
+        font-size: 26rpx;
+        color: $fontC1;
+        line-height: 40rpx;
+        z-index: 1;
+        @include webkitLineClamp(2);
+      }
+
+      .desc {
+        display: flex;
+        align-items: center;
+        margin-top: 30rpx;
+        min-height: 50rpx;
+      }
+      .date {
+        flex-grow: 1;
+        font-size: 22rpx;
+        color: $fontC3;
+      }
+      .use {
+        flex-shrink: 0;
+        font-size: 24rpx;
+        color: $red;
+        border: 1rpx solid $red;
+        height: 50rpx;
+        line-height: 48rpx;
+        border-radius: 50rpx;
+        padding: 0 1.2em;
+        box-sizing: border-box;
+      }
+
+      .mark-used {
+        position: absolute;
+        bottom: 20rpx;
+        right: 24rpx;
+        width: 124rpx;
+        height: 124rpx;
+        background: url("../../comp/img/coupon-mark-used.png") no-repeat center;
+        background-size: contain;
+      }
+
+      .mark-overdue {
+        position: absolute;
+        bottom: 20rpx;
+        right: 24rpx;
+        width: 124rpx;
+        height: 124rpx;
+        background: url("../../comp/img/coupon-mark-overdue.png") no-repeat center;
+        background-size: contain;
+      }
+
+      .mark-overtimesoon {
+        display: none;
+        position: absolute;
+        top: 22rpx;
+        right: -52rpx;
+        transform: rotate(35deg);
+        transform-origin: 50% 50%;
+        font-size: 20rpx;
+        color: #fff;
+        line-height: 30rpx;
+        padding: 0 3em;
+        background: #c2c2c2;
+      }
+
+      .tick {
+        position: absolute;
+        bottom: 20rpx;
+        right: 20rpx;
+        width: 44rpx;
+        height: 44rpx;
+        box-sizing: border-box;
+        border: 2rpx solid #e0e0e0;
+        border-radius: 50%;
+        background-color: #eee;
+
+        &.active {
+          border: none;
+          background: url('../../comp/img/icon-tick-red-44x44.png') no-repeat center;
+          background-size: contain;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+<view class="view-more-grand-master">
+    <scroll-view class="view-more-scroll" scroll-y="true" lower-threshold="200" bindscrolltolower="loadPage">
+        <view class="container">
+            <!-- 列表数据 -->
+            <view class="course-list">
+                <view class="list-item" 
+                    wx:for="{{courseList}}" 
+                    wx:key="{{item.businessId}}" 
+                    bindtap="locationTo" 
+                    data-topicid="{{item.businessId}}" 
+                    data-url="{{item.url}}"
+                    data-type="{{item.businessType}}" 
+                    data-log_id="{{item.businessId}}"
+                    data-log_type="{{item.businessType}}"  
+                    data-log_region="view-more-course"
+                >
+                    <image class="course-header" src="{{item.logo}}"></image>
+                    <view class="info">
+                        <view class="title"> {{item.businessName}}</view>
+                        <view class="tip">{{item.remark}}</view>
+                        <view class="desc">
+                            <text class="liveName">{{item.liveName}}</text>
+                            <view class="courseCount" wx:if="{{item.businessType == 'channel'}}">共{{item.planCount? item.planCount : item.topicCount}}节课</view>
+                        </view>
+                        <view class="num">
+                            <text class="learnNum">{{item.learningNum}}人在学</text>
+                            <view class="price" wx:if="{{item.discount > 0 && !systemIos}}">
+                                <text class="money" style="text-decoration: line-through;">¥{{item.money}}</text>
+                                <text class="discount">¥{{item.discount}}</text>
+                            </view>
+                            <view class="price" wx:else>
+                                <text class="discount" wx:if="{{item.money && !systemIos}}">¥{{item.money}}</text>
+                                <text class="free"  wx:elif="{{!item.money}}">免费</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+    
+            <!-- 列表状态 -->
+            <view style="min-height:180rpx; padding-top: 30rpx;" wx:if="{{noneOne || noMore}}">
+                <view wx:if="{{noneOne}}">
+                    <include src="../../../../comp/none-page/none-page.wxml" />
+                </view>
+                <view class="none-pay-text" wx:if="{{noMore && !noneOne}}">没有更多数据了</view>
+            </view>
+        </view>
+    </scroll-view>
+</view>

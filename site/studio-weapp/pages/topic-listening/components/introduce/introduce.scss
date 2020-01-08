@@ -1,0 +1,77 @@
+.introduce
+{
+	background-color: #fff;
+	margin-top: 14rpx;
+	padding: 40rpx 45rpx;
+	.course-name
+	{
+		font-size: 30rpx;
+		color: #484848;
+		font-weight: 700;
+	}
+	.course-preview
+	{
+		margin-top: 20rpx;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		.icon-person
+		{
+            background-size: cover;
+			background-repeat: no-repeat;
+			width: 21rpx;
+			height: 22rpx;
+			background-image: url(../../img/icon-person.png?__inline);
+		}
+		.icon-comment
+		{
+            background-size: cover;
+			background-repeat: no-repeat;
+			width: 22rpx;
+			height: 22rpx;
+			background-image: url(../../img/icon-comment.png?__inline);
+		}
+		.text-by-icon
+		{
+			font-size: 24rpx;
+			color: #999090;
+			margin-left: 7rpx;
+			margin-right: 30rpx;
+		}
+	}
+	.start-time
+	{
+		margin-top: 20rpx;
+		font-size: 22rpx;
+		color: #999090;
+	}
+
+	.intro-section
+	{
+		padding-top: 30rpx;
+		.intro-pic-container
+		{
+			width: 100%;
+			.intro-pic
+			{
+				max-width: 100%;
+				margin-left: 50%;
+				transform: translateX(-50%);
+				width: 100%;
+			}
+		}
+
+		.intro-text
+		{
+			font-size: 28rpx;
+			color: #736d6d;
+			margin: 30rpx 0;
+		}
+	}
+}
+.rich-text-box{
+    background: #fff;
+    image{
+        max-width: 100%;
+    }
+}

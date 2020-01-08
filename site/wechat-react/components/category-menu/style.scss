@@ -1,0 +1,146 @@
+$red: #F73657;
+
+.co-category-menu {
+    position: absolute;
+    top: 80px;
+    z-index: 200;
+
+    display: flex;
+    width: 100%;
+    height: 80px; /*px*/
+    flex-shrink: 0;
+    max-width: 1280px; /*px*/
+    min-width: 640px; /*px*/
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+
+    background-color: #fff;
+    border-bottom: 1px solid #eee; /*no*/
+    transform: translate3d(0, 0, 0);
+
+    // &:after {
+    //     content: '';
+    //     position: absolute;
+    //     left: 0;
+    //     bottom: 0;
+    //     width: 100%;
+    //     height: 14px;
+    //     background: #fff;
+    // }
+    .category-wrap {
+        // display: flex;
+        // flex-direction: row;
+        // justify-content: flex-start;
+        // align-items: flex-start;
+
+        position: relative;
+        height: 98px; /*px*/
+        flex: 1;
+
+        overflow: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+
+        .categorys {
+            transition: 2s transform ease;
+            transform: translate3d(0, 0, 0);
+            height: 98px; /*px*/
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 0 16px;
+
+            li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-width: 300px; /*px*/
+                min-width: 80px; /*px*/
+                padding-top: 1px; /*no*/
+                height: 80px; /*px*/
+                // margin-bottom: 7px;
+                padding: 0 32px;
+                cursor: pointer;
+                overflow: hidden;
+                flex-shrink: 0;
+                position: relative;
+
+
+                span {
+                    display: block;
+                    width: 100%;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    color: #333;
+                    font-size: 28px; /*px*/
+                    line-height: 1.4;
+                }
+
+                &.redPoint::after {
+                    content: '';
+                    position: absolute;
+                    left: 85%;
+                    top: 20%;
+                    bottom: 0;
+                    width: 15px;/* px */
+                    height: 15px; /* px */
+                    background: $red;
+                    border-radius: 100%;
+                }
+
+                &.active:before {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    width: 36px;/* px */
+                    height: 4px;/* px */
+                    background: $red;
+                    transform: translate(-50%, 0);/* no */
+                    border-radius: 10px;
+                    // border-bottom: 4px solid #f73657;
+                }
+
+                &.active span {
+                    color: $red;
+                    font-weight: bolder;
+                }
+            }
+        }
+    }
+
+    .search-btn {
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px; /*px*/
+        padding-left: 20px;
+        padding-right: 30px;
+        position: relative;
+        background-color: #fafafa;
+        cursor: pointer;
+
+        &:before {
+            content: '';
+            width: 40px;
+            height: 80px; /*px*/
+            position: absolute;
+            left: -39px;
+            top: 0;
+            background-image: linear-gradient(to left, rgba(250,250,250, 1) 0%, rgba(250,250,250, 0.6) 40%, rgba(250,250,250, 0.3) 80%, rgba(250,250,250, 0.1) 100%);
+            pointer-events: none;
+        }
+
+        i {
+            display: block;
+            width: 40px;
+            height: 40px;
+            background: url(./img/search-icon.png) no-repeat center;
+            background-size: 40px 40px;
+        }
+    }
+}

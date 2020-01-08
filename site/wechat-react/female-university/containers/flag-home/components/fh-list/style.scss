@@ -1,0 +1,113 @@
+
+.fh-list{
+    margin-top: 40px;
+    .fhl-content{ 
+        background:rgba(255,255,255,1);
+        box-shadow:0px 4px 80px 0px rgba(0,0,0,0.1);
+        border-radius:8px;
+        padding:40px 40px 200px; 
+        &.none{
+            padding-bottom: 50px;
+        }
+        .fhl-tab{
+            display: flex;
+            .fhl-item{   
+                font-size:28px; 
+                color:rgba(153,153,153,1);
+                line-height:40px;
+                margin-right: 40px;
+                padding-bottom: 20px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                &.on{ 
+                    font-size:32px; 
+                    font-weight:bold;
+                    color:rgba(51,51,51,1); 
+                    position: relative;
+                    &::after{
+                        content:'';
+                        position: absolute;
+                        left:50%;
+                        bottom:0;
+                        transform: translate(-50%,0);
+                        width:36px;
+                        height:6px;
+                        background:rgba(224,65,79,1);
+                        border-radius:3px;
+                    }
+                }
+            }
+        }
+    }
+    .fhl-details{ 
+        margin-top: 48px;  
+    }
+    .fhl-invite{
+        margin-top: 48px; 
+        .fhli-head{
+            display: flex; 
+            align-items: center;
+            line-height:36px;
+            font-size:26px; 
+            margin-bottom: 58px;
+            .fhli-num{
+                flex: 1;
+                color:rgba(153,153,153,1);
+            }
+            .fhli-money{ 
+                font-weight:600;
+                color:rgba(224,65,79,1); 
+            }
+        }
+        .fhli-list{
+            .fhli-item{
+                display: flex; 
+                align-items: center;
+                margin-bottom: 48px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                .fhli-avator{
+                    margin-right:20px; 
+                    border: 1px solid #eee;/*no*/
+                    border-radius: 50%;
+                    img{
+                        width:100px;
+                        height:100px;
+                        border-radius: 50%;
+                    }
+                }
+                .fhli-right-path{
+                    flex: 1;
+                    .fhli-top{
+                        display: flex; 
+                        align-items: center;
+                        margin-bottom: 8px;
+                        .fhli-name{
+                            flex: 1;
+                            font-size:30px; 
+                            color:rgba(51,51,51,1);
+                            line-height:42px;
+                        }
+                        .fhli-money{
+                            font-size:26px; 
+                            color:rgba(224,65,79,1);
+                            line-height:36px;
+                        }
+                    }
+                    .fhli-intro{
+                        font-size:26px; 
+                        color:rgba(102,102,102,1);
+                        line-height:36px;
+                    }
+    
+                }
+            }
+        }
+    }
+    .un-footer-box{
+        padding: 120px 0 0;
+    }
+}
+ 

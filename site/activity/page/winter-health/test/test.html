@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>专属养生测试</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="https://img.qlchat.com/qlLive/ico/favicon.ico" type="image/x-icon" />
+    <script src="../../../components_modules/lib-flexible/1.0.0/lib-flexible.js"></script><!--ignore-->
+    <script type="text/javascript" src="../../../components_modules/require/2.1.18/require.js"></script><!--ignore-->
+</head>
+
+<body>
+    <div id="container">
+        <div id="content">
+            <div class="header">
+                <span id="count">1/7</span>
+                <div class="progress">
+                    <div id="pro"></div>
+                </div>
+            </div>
+            <ul id="ul">
+                <li>
+                    <div class="title">
+                        <div class="num">第1题</div>
+                        <div class="content">你感到乏力，常常犯困，精神跟体力都不足吗？</div>
+                    </div>
+                    <div class="btn-group">
+                        <div class="btn n"></div>
+                        <div class="btn y"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="title">
+                        <div class="num">第2题</div>
+                        <div class="content">是否觉得肩颈容易酸痛，或者手脚发凉，或经常便秘？</div>
+                    </div>
+                    <div class="btn-group">
+                        <div class="btn n"></div>
+                        <div class="btn y"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="title">
+                        <div class="num">第3题</div>
+                        <div class="content">是否觉得什么都不尽如人意，容易发脾气或烦躁不安？</div>
+                    </div>
+                    <div class="btn-group">
+                        <div class="btn n"></div>
+                        <div class="btn y"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="title">
+                        <div class="num">第4题</div>
+                        <div class="content">感觉注意力不集中、健忘，甚至转身就不记得自己前几分钟要做什么了？</div>
+                    </div>
+                    <div class="btn-group">
+                        <div class="btn n"></div>
+                        <div class="btn y"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="title">
+                        <div class="num">第5题</div>
+                        <div class="content">生活中有了解过禅修、吃素、辟谷之类的养生方法吗？</div>
+                    </div>
+                    <div class="btn-group">
+                        <div class="btn n"></div>
+                        <div class="btn y"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="title">
+                        <div class="num">第6题</div>
+                        <div class="content">平时会留意一些滋阴养颜的煲汤的方法跟食材吗？</div>
+                    </div>
+                    <div class="btn-group">
+                        <div class="btn n"></div>
+                        <div class="btn y"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="title">
+                        <div class="num">第7题</div>
+                        <div class="content">对中医的推拿、针灸、热敷、艾灸、食疗，你最想了解的是哪个？</div>
+                    </div>
+                    <div class="group">
+                        <div class="last-btn t"></div>
+                        <div class="last-btn z"></div>
+                        <div class="last-btn r"></div>
+                        <div class="last-btn a"></div>
+                        <div class="last-btn s"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="generate">
+            <div class="complete">
+                <img src="../img/complete.png" alt="">
+                <p>题目已经全部完成</p>
+            </div>
+            <div class="result">
+                <p>结果生成中~</p>
+                <div class="result-progress">
+                    <div class="tip"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--SCRIPT_PLACEHOLDER-->
+    <script>
+        (function (win) {
+            require(['./test'], function (index) {
+                index.init();
+            });
+        })(window);
+    </script><!--ignore-->
+    <script type="text/javascript">
+        var _uaq = window._uaq || [];
+        // 配置站点名,默认值为： ql-h5
+        _uaq.push(['set', 'site', 'activity']);
+        // 配置站点版本, 默认值为: 1.0.0
+        _uaq.push(['set', 'sitever', '1.0.0']);
+        // 配置日志采集服务地址，用于发送采集日志,默认地址为： //collect.qlchat.com
+        _uaq.push(['set', 'server', '[[collectApiPrefix]]']);
+        // 配置渠道参数
+        _uaq.push(['set', 'ch', 'query.ch']);
+    </script><!--ignore-->
+    <script type="text/javascript" src="/api/js-sdk/wx?actions=hide_all&__date"></script>
+    <script type="text/javascript" src="[[collectjs]]"></script><!--ignore-->
+    <script>
+            // 百度统计
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "//hm.baidu.com/hm.js?9f8c5d323a26421cb966b5e405d629c3";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script><!--ignore-->
+</body>
+
+</html>

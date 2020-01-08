@@ -1,0 +1,63 @@
+.distribution-auth-index{
+	overflow: hidden;
+	.auth-type-item{
+		display: block;
+		background:#fff;
+		margin:20px 30px 0;
+		padding:30px;
+		border-radius: 10px;
+
+		.flex-box{
+			display:flex;
+			justify-content: space-between;
+			&:before{
+				width:80px;/* px */
+				height:80px;/* px */
+				content:'';
+				flex-shrink: 0;
+				display:block;
+			}
+			.info{
+				margin: 0 26px;
+				flex:1;
+				width:10px;
+				padding-right: 26px;
+				border-right: 1px solid #eee;
+				.name{
+					color:#333;
+					font-size:32px;/*px*/
+				}
+				.details{
+					font-size: 26px;/* px */
+					color: #999999;
+					margin-top: 10px;/* px */
+					line-height: 34px;/* px */
+				}
+				.data{
+					padding-top: 16px;
+					color:#999;
+					font-size:26px;/*px*/
+					flex: 1;
+					var{
+						color: #333333;
+					}
+				}
+			}
+			.enter-btn{
+				color:#ccc;
+				font-size:20px;/* px */
+				align-self: center;
+			}
+			
+		}
+		&:nth-child(1) .flex-box:before{
+			background:url(./img/icon-knowledge-mall.png) no-repeat center / 100%;
+		}
+		&:nth-child(2) .flex-box:before{
+			background:url(./img/icon-coral.png) no-repeat center / 100%;
+		}
+		&:nth-child(3) .flex-box:before{
+			background:url(./img/icon-live-center.png) no-repeat center / 100%;
+		}
+	}
+}

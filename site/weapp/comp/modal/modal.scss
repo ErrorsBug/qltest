@@ -1,0 +1,60 @@
+@import "../style-variables.scss";
+
+
+.modal {
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+
+  .panel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    min-width: 500rpx;
+    max-width: 670rpx;
+    max-height: 90%;
+    background-color: #fff;
+    border-radius: 20rpx;
+    box-sizing: border-box;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70rpx 80rpx;
+    font-size: 34rpx;
+    font-weight: bold;
+    line-height: 1.5;
+    color: $fontC1;
+  }
+  .btns {
+    display: flex;
+    width: 100%;
+    .btn {
+      flex-grow: 1;
+      flex-shrink: 0;
+      white-space: nowrap;
+      width: 50%;
+      border-top: 1rpx solid $border;
+      border-right: 1rpx solid $border;
+      height: 98rpx;
+      line-height: 98rpx;
+      box-sizing: border-box;
+      text-align: center;
+      font-size: 34rpx;
+      color: $fontC2;
+      &.red {
+        color: $red;
+      }
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+}

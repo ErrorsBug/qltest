@@ -1,0 +1,40 @@
+.job-reminder-box{
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  bottom: 180px;
+  background: #FFF9E6;
+  height: 64px;
+  padding: 0 30px;
+  width: 190px; /*px*/
+  border-radius: 64px 0 0 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FF9400;
+  transition: all 0.3s linear;
+  span{
+    background: url("./img/job.png") no-repeat left center;
+    background-size: 36px auto;
+    padding-left: 42px;
+    height: 100%;
+    width: 100%;
+    font-size: 26px; /*px*/
+    line-height: 64px;
+    align-items: center;
+    overflow: hidden;
+    display: inline-block;
+    transition: all 0.3s linear;
+    flex-shrink: 0;
+  }
+  &.no-show{
+    width: 16px;
+    transition: width 0.3s linear;
+    span{
+      // padding-left: 36;
+      width: 0;
+      overflow: hidden;
+      transition: all 0.3s linear;
+    }
+  }
+}

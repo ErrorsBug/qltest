@@ -1,0 +1,74 @@
+.check-in-detail-container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    // overflow: hidden;
+
+    .camp-list-container{
+        flex: 1;
+        position: relative;
+        height: 100%;
+    }
+    .bottom-menu-container {
+        height: 100px;
+    }
+
+    .my-check-in-diary {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding:0 30px;
+        height: 100px;
+        position: relative;
+        background-color: #fff;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        font-size: 28px;/* px */
+        color: #424242;
+
+        .user-head-img {
+            width: 64px;
+            height: 64px;
+            margin-right: 16px;
+            border-radius: 50%;
+        }
+
+        .go-icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 30px;
+            color: #b3b3b3;
+        }
+    }
+}
+
+
+
+
+
+.common-bg-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.common-multi-text {
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.group-entrance-understand-dialog {
+    .content {
+        padding: 0 80px;
+        p {
+            color: #666;
+            span {
+                color: #F73657;
+            }
+        }
+    }
+}

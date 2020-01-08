@@ -1,0 +1,181 @@
+$gold: #c9a96e;
+
+.header-container-wrap {
+    border-bottom: 1px solid #e5e5e5;
+    .header-container {
+        width: 1280px;
+        margin: 0 auto;
+        height: 90px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 40px;
+    
+        .left {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            
+            .logo {
+                width: 40px;
+                height: 40px;
+                background-image: url("./img/ql-logo.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                margin-right: 10px;
+            }
+    
+            .title {
+                // height: 40px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-between;
+    
+                .text {
+                    font-size: 20px;
+                    color: #333;
+                }
+                .sologan {
+                    font-size: 12px;
+                    color: #bbb;
+                }
+            }
+    
+            .search-box {
+                width: 335px;
+                height: 40px;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+                border-radius: 20px;
+                padding: 0 20px;
+                background-color: #f5f5f5;
+                border: 1px solid #f1f1f1;
+                margin-left: 40px;
+                
+                .search-text {
+                    border: none;
+                    outline: none;
+                    width: 260px;
+                    background-color: transparent;
+                }
+                .search-icon {
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    cursor: pointer;
+                    background-image: url(./img/icon_search.png);
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: 20px 20px;
+                }
+            }
+        }
+    
+        .right {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+    
+            .nav {
+                margin-right: 40px;
+                * {
+                    display: inline-block;
+                    color: #333;
+                    margin-right: 40px;
+                }
+    
+                .active {
+                    color: $gold;
+                    position: relative;
+                    &::before {
+                        position: absolute;
+                        bottom: -10px;
+                        height: 3px;
+                        width: 100%;
+                        content: '';
+                        display: block;
+                        background-color: $gold;
+                    }
+                }
+            }
+    
+            .login {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                .head-img {
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+    
+                .name {
+                    font-size: 14px;
+                    color: #666;
+                    margin-right: 16px;
+                    cursor: pointer;
+                }
+    
+                .triangle {
+                    width: 0;
+                    height: 0;
+                    border-left: 6px solid transparent;
+                    border-right: 6px solid transparent;
+                    border-top: 6px solid #b9b9b9;
+                    transition: all 0.3s ease-in-out;
+                    cursor: pointer;
+                }
+    
+                &:hover {
+                    .triangle {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+    
+            .login-btn {
+                cursor: pointer;
+                width: 80px;
+                height: 34px;
+                color: #c9a96e;
+                border-radius: 17px;
+                border: solid 1px #c9a96e;
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+    
+        }
+    
+    }
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    color: #666;
+    // border-bottom: 1px solid #f0f0f0;
+}
+
+.menu-logout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    color: #d1b686;
+}

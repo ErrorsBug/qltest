@@ -1,0 +1,43 @@
+@import "../../../assets/styles/base-definition";
+
+.promotion-temp{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	.scroll-box{
+		flex:1;
+		overflow: auto;
+	}
+	.bottom-panel{
+		height:100px;
+		background:#fff;
+		display: flex;
+		.prices{
+			width:250px;
+			@include flex-center;
+			.origin{
+				color:$gray-tip;
+				font-size:26px;/*px*/
+				text-decoration:line-through;
+			}
+			.discount{
+				color:$main-color;
+				font-size:40px;/*px*/
+				margin-left:10px;
+			}
+		}
+		.buy-btn{
+			flex:1;
+			@include flex-center;
+			color:#fff;
+			background: $main-color--lighter;
+			height:100%;
+			font-size:36px;/*px*/
+		}
+	}
+}

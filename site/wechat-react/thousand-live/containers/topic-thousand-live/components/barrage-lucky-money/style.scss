@@ -1,0 +1,83 @@
+/*红包弹幕*/
+.lucky-money-bullet {
+    display: block;
+    z-index: 2;
+    margin-bottom: 30px;
+
+    &.is-absolute{
+        position:absolute;
+        right:20px;
+        bottom:0px;
+    }
+
+    .lmb-item{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        left: 120%;
+        padding:10px;
+        white-space: nowrap;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        -webkit-transition: 0.1s;
+        transition: 0.1s;
+
+        &.hideon{
+            display: none;
+        }
+        &.on{
+            left: 0;
+        }
+
+        &:before{
+            content: "";
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background:url(./img/icon-lucky-money.png) center center no-repeat;
+            background-size: 100%;
+        }
+    }
+
+    .money{
+        display: inline-block;
+        height: 50px;
+        line-height: 50px;
+        font-size: 44px;
+        color: #ffd780;
+        vertical-align: top;
+    }
+
+    .money::before{
+        content: "￥"
+        }
+    .msg{
+        display: inline-block;vertical-align: top;
+        padding: 0 10px;
+
+        b{
+            font-weight: normal;
+            font-size: 20px;/*px*/ height: 25px;
+            line-height: 25px;
+        }
+        .b-one{
+            display: block;
+            color: #fff;;
+        }
+        .b-two{
+            display: inline-block;
+            color:rgba(255,255,255,0.6);
+
+            &:before{
+                content: "打赏 "
+            }
+        }
+    }
+    .head{
+        display: inline-block;
+        height: 50px;
+        width: 50px;
+        border-radius:120px;
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,46 @@
+.channel-distribution-list-share-dialog-container {
+    .share-dialog-content {
+        padding: 34px 60px 0;
+        color: #999;
+        font-size: 26px;
+        line-height: 59px;
+        vertical-align: top;
+        
+        .cl-blue {
+            color: #00acff;
+            vertical-align: top;
+        }
+        .cl-grey {
+            color: #949fa4;
+            vertical-align: top;
+            .icon_dots_horizontal {
+                padding: 0 16px;
+            }
+        }
+        .cl-black {
+            color: #333;
+            vertical-align: top;
+        }
+        .icon-share-friends {
+            display: inline-block;
+            padding: 0 16px;
+            width: 59px;
+            height: 59px;
+            background: url(../../../../../assets/images/wx-icon/icon-share-friends.png) no-repeat center;
+            background-size: 59px 59px;
+            vertical-align: top;
+        }
+        .icon-share-circle {
+            display: inline-block;
+            padding: 0 16px;
+            width: 59px;
+            height: 59px;
+            background: url(../../../../../assets/images/wx-icon/icon-share-circle.png) no-repeat center;
+            background-size: 59px 59px;
+            vertical-align: top;
+        }
+    }
+    .co-dialog-btn-line-cancel {
+        color: #00acff;
+    }
+}

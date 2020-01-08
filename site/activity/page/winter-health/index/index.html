@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>千聊秋冬养生</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="https://img.qlchat.com/qlLive/ico/favicon.ico" type="image/x-icon" />
+    <script src="../../../components_modules/lib-flexible/1.0.0/lib-flexible.js"></script><!--ignore-->
+    <script type="text/javascript" src="../../../components_modules/require/2.1.18/require.js"></script><!--ignore-->
+</head>
+
+<body>
+    <div id="container">
+        <div class="container-header">
+            <div class="top1"></div>
+            <div class="top2">
+                <div class="test-title"></div>
+                <div class="test">
+                    <div class="test-btn" data-test="{{isTest}}"></div>
+                </div>
+            </div>
+        </div>
+        <div class="course-area">
+            <div class="item">
+                <div class="item-header"></div>
+                <ul class="course-container">
+                    {{#each recuperateCourse}}
+                    <li data-url="{{this.url}}" class="on-log" log-business_Type="{{this.businessType}}" log-business_Id="{{this.businessId}}" log-region="course">
+                        <img src="{{this.headImage}}" alt="">
+                        <div class="content">
+                            <div class="title">{{this.name}}</div>
+                            <ul class="list">
+                                <li>{{this.remark}}</li>
+                            </ul>
+                            <div class="price-content">
+                                <div class="money">
+                                    <del>原价：{{calc this.money '/100'}}元</del>
+                                    <div class="price">活动价：{{calc this.discount '/100'}}元</div>
+                                </div>
+                                <div class="purcase"></div>
+                            </div>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="item">
+                <div class="item-header"></div>
+                <ul class="course-container">
+                    {{#each healthCourse}}
+                        <li data-url="{{this.url}}" class="on-log" log-business_Type="{{this.businessType}}" log-business_Id="{{this.businessId}}" log-region="course">
+                            <img src="{{this.headImage}}" alt="">
+                            <div class="content">
+                                <div class="title">{{this.name}}</div>
+                                <ul class="list">
+                                    <li>{{this.remark}}</li>
+                                </ul>
+                                <div class="price-content">
+                                    <div class="money">
+                                        <del>原价：{{calc this.money '/100'}}元</del>
+                                        <div class="price">活动价：{{calc this.discount '/100'}}元</div>
+                                    </div>
+                                    <div class="purcase"></div>
+                                </div>
+                            </div>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+        <div class="comment-area">
+            <div class="commemt-header"></div>
+            <div class="comment-content">
+                <div class="tip">
+                </div>
+                <ul id="comment">
+                </ul>
+            </div>
+            <div class="bottom-bg"></div>
+        </div>
+    </div>
+    <div id="message"></div>
+
+    <!--SCRIPT_PLACEHOLDER-->
+    <script>
+        (function (win) {
+            var initData={};
+            initData.isTest = "[[isTest]]";
+            require(['./index'], function (index) {
+                index.init(initData);
+            });
+        })(window);
+    </script><!--ignore-->
+    <script type="text/javascript">
+        var _uaq = window._uaq || [];
+        // 配置站点名,默认值为： ql-h5
+        _uaq.push(['set', 'site', 'activity']);
+        // 配置站点版本, 默认值为: 1.0.0
+        _uaq.push(['set', 'sitever', '1.0.0']);
+        // 配置日志采集服务地址，用于发送采集日志,默认地址为： //collect.qlchat.com
+        _uaq.push(['set', 'server', '[[collectApiPrefix]]']);
+        // 配置渠道参数
+        _uaq.push(['set', 'ch', 'query.ch']);
+    </script><!--ignore-->
+    <script type="text/javascript" src="/api/js-sdk/wx?actions=hide_all&__date"></script>
+    <script type="text/javascript" src="[[collectjs]]"></script><!--ignore-->
+    <script>
+        // 百度统计
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?9f8c5d323a26421cb966b5e405d629c3";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script><!--ignore-->
+</body>
+
+</html>

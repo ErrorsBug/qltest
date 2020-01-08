@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{entity.name}}</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="https://img.qlchat.com/qlLive/ico/favicon.ico" type="image/x-icon" />
+    <script src="../../components_modules/lib-flexible/1.0.0/lib-flexible.js"></script><!--ignore-->
+    <script type="text/javascript" src="../../components_modules/require/2.1.18/require.js"></script>
+</head>
+<body>
+    <div id="container">
+        <header class="header-img" data-bg="{{entity.headerBgUrl}}">
+            <img class="portrait" src="{{entity.logo}}" alt="">
+
+            <div class="baseinfo-box">
+                <p class="live-name {{#if bothT_V}}both{{/if}} {{#if isLiveT}}single{{/if}} {{#if isLiveV}}single{{/if}}">
+                    {{entity.name}}
+                    <span class="icons-span">
+                        <img id="live-v" class="{{#if isLiveT}}show{{/if}}" src="./img/v.png" alt="">
+                        <img id="live-t" class="{{#if isLiveV}}show{{/if}}" src="./img/t.png" alt="">
+                    </span>
+                </p>
+
+                <div class="attention-box">
+                    <i class="icon-couple"></i>
+                    <var id="attention-num">{{followerNum}}</var>
+                    人关注
+                </div>
+
+                <div class="btn-row">
+                    <span id="attention" data-isatt="{{isAttention}}">{{#if isAttention}}取消关注{{else}}关注直播间{{/if}}</span>
+                    <span id="notice" data-notice="{{isOpenNotice}}">{{#if isOpenNotice}}关闭通知{{else}}开启通知{{/if}}</span>
+                </div>
+            </div>
+        </header>
+
+        <!--Tab bar-->
+        <section class="tab-bar"></section>
+
+        <!-- List(Tab content) -->
+        <section class="tab-content-list">
+            <ul id="list">
+
+            </ul>
+            <aside class="empty" id="empty-list">
+                <img src="./img/ico_norecord2.png" alt="">
+                <p>暂无系列课课程</p>
+            </aside>
+            <aside class="empty" id="empty-intro">
+                <img src="./img/empty-intro.png" alt="">
+                <p>您还没有填写相关哦~</p>
+            </aside>
+            <div class="loading-next">加载数据中...</div>
+            <div class="no-more">已全部加载完毕</div>
+        </section>
+    </div>
+
+    <section class="fixed-user-row">
+        <img src="{{userData.headImgUrl}}">
+        <span class="user-name">{{userData.name}}</span>
+
+        <a href="/api/logout" class="log-out">退出登录</a>
+        <!--<div id="weibo-login"></div>-->
+    </section>
+
+    <!--SCRIPT_PLACEHOLDER-->
+    <script>
+        (function(win) {
+            var initData = {};
+
+            initData.LIVE_INFO = [[LIVE_INFO]];
+
+            initData.LIVE_ID = '[[LIVE_ID]]';
+
+            initData.TOPIC_LIST = '[[TOPIC_LIST]]';
+
+            initData.CHANNEL_LIST = '[[CHANNEL_LIST]]';
+
+            initData.CHANNEL_INTRO = '[[CHANNEL_INTRO]]';
+
+            initData.TOPIC_COUNT = [[TOPIC_COUNT]];
+
+            initData.CHANNEL_COUNT = [[CHANNEL_COUNT]];
+
+            require(['./live-index'], function (liveCenter) {
+                liveCenter.init(initData);
+            });
+
+            // WB2.anyWhere(function(W){
+            //     W.widget.connectButton({
+            //         id: "weibo-login",
+            //         type:"1,2",
+            //         callback : {
+            //             login:function(o) {  //登录后的回调函数
+            //             },
+            //             logout:function() {  //退出后的回调函数
+            //                 window.location.href = '/api/logout';
+            //             }
+            //         }
+            //     });
+            // });
+        })(window);
+    </script><!--ignore-->
+    <script>
+        // 百度统计
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?9f8c5d323a26421cb966b5e405d629c3";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script><!--ignore-->
+</body>
+</html>

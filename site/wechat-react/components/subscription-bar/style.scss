@@ -1,0 +1,45 @@
+.subscription-label-container {
+    height: 80px;
+    background-image: linear-gradient(90deg, #F73757 0%, #FA816A 100%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    &.hide {
+        display: none;
+    }
+
+    p {
+        flex: 1;
+        margin-left: 40px;
+        font-size: 28px;/*px*/
+        color: #fff;
+    }
+
+    .subscription {
+        border: 2px solid #FFFFFF;
+        border-radius: 100px;
+        height: 50px;
+        width: 137px;
+        cursor: pointer;
+        display: flex;
+        font-size: 28px;/*px*/
+        color: #fff;
+        align-items: center;
+        justify-content: center;
+        margin-right: 30px;
+    }
+
+    .close {
+        height: 60px;
+        width: 60px;
+        cursor: pointer;
+        margin-right: 20px;
+        background: {
+            image: url(./img/home-icon-delete.png);
+            position: center center;
+            size: 38px 38px;
+            repeat: no-repeat;
+        }
+    }
+}

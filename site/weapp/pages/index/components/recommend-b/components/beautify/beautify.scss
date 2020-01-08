@@ -1,0 +1,150 @@
+@import "../../common";
+
+.beautify{
+    margin-top:20rpx;
+    background:#fff;
+    .block-header {
+        .more-btn {
+            display: flex;
+            align-items: center;
+            .check-more-icon {
+                height: 14rpx;
+                width: 8rpx;
+                margin-left: 10rpx;
+                background: {
+                    image: url(../../img/right.png);
+                    position: center center;
+                    size: 100% 100%;
+                    repeat: no-repeat;
+                }
+            }
+        }
+    }
+    .ad-list{
+        display:flex;
+        justify-content: center;
+        padding:0 30rpx 35rpx 34rpx;
+        image{
+            width:330rpx;
+            height:206rpx;
+            border-radius: 4rpx;
+            &:first-child {
+                margin-right: 16rpx;
+            }
+        }
+    }
+    .list-wrap{
+        padding-left:34rpx;
+        .list-item{
+            padding-bottom:30rpx;
+            padding-right:30rpx;
+            margin-bottom:30rpx;
+            border-bottom:1rpx solid #f0f0f0;
+            display:flex;
+            align-items: center;
+            .poster{
+                width:240rpx;
+                height:148rpx;
+                display:block;
+                flex-shrink: 0;
+                border-radius: 6rpx;
+            }
+            .info{
+                margin-left:33rpx;
+                flex:1;
+                width:10rpx;
+                .name{
+                    font-size:30rpx;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    text-overflow: ellipsis;
+                    -webkit-line-clamp: 2;
+                    color: #333;
+                    font-weight: bold;
+                    line-height: 1.3;
+                }
+                .category{
+                    font-size:24rpx;
+                    color:#b8b0b0;
+                    margin-top:6rpx;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                .tips{
+                    margin-top:6rpx;
+                    display:flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size:24rpx;
+                    color:#b8b0b0;
+                    .count {
+                        font-size: 22rpx;
+                    }
+                    .price{
+                        .origin{
+                            text-decoration: line-through;
+                        }
+                        .current{
+                            color:#f74e5e;
+                            margin-left:10rpx;
+                        }
+                    }
+                    .free {
+                        font-size: 22rpx;
+                        color: #3eba3d;
+                    }
+                }
+                .details{
+                    position:absolute;
+                    top:0;
+                    left:0;
+                    width:100%;
+                    height:100%;
+                    background:#f7f7f7;
+                    overflow: hidden;
+                    padding:15rpx 20rpx 0;
+                    box-sizing: border-box;
+                    transform: translate3d(0, 100%, 0);
+                    transition:transform .2s;
+                    line-height:1.6;
+                    &.show{
+                        transform: translate3d(0, 0, 0);
+                    }
+                    .details-name{
+                        font-size:26rpx;
+                    }
+                    .details-category{
+                        font-size:24rpx;
+                        color:#999090;
+                    }
+                    .tip{
+                        font-size:22rpx;
+                        color:#b8b0b0;
+                    }
+                }
+            }
+        }
+    }
+    .check-more-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color:#999090;
+        font-size:26rpx;
+        height: 30rpx;
+        padding-bottom:30rpx;
+        .check-more-icon {
+            height: 14rpx;
+            width: 8rpx;
+            margin-left: 10rpx;
+            background: {
+                image: url(../../img/right.png);
+                position: center center;
+                size: 100% 100%;
+                repeat: no-repeat;
+            }
+        }
+    }
+}

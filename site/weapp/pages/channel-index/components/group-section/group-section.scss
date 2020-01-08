@@ -1,0 +1,114 @@
+// @import '../../../../comp/timer/timer';
+
+.group-section{
+    padding:40rpx;
+    background-color: #fff;
+    border-top:20rpx solid #f0f0f0;
+    text-align: center;
+}
+.group-status{
+    color:#333;
+    font-size: 28rpx;
+    margin-top:30rpx;
+    font-weight: 600;
+}
+.num-var{
+    color:#ef5670;
+    font-size: 32rpx;
+    padding:0 10rpx;
+}
+.group-user-img{
+    width:100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+}
+.group-img-box{
+    display: inline-block;
+    width:100rpx;
+    height: 100rpx;    
+    margin:10rpx;
+    border-radius: 50%;
+    position: relative;
+}
+.group-img-last{
+    display: inline-block;
+    width: 100rpx;
+    height: 100rpx;
+    margin:10rpx;
+    border:2rpx dashed #bdbdbd;
+    border-radius: 50%;
+    position: relative;
+    vertical-align:top;
+}
+.group-img-last-num{
+    color:#bdbdbd;
+    font-size: 18rpx;
+    background-color: #fff;
+    padding:0 10rpx;
+    height:30rpx;
+    line-height: 30rpx;
+    position: absolute;
+    left:50%;
+    top:-16rpx;
+    transform: translate(-50% , 0);
+    border: 2rpx solid #bdbdbd;
+    border-radius: 30rpx;
+    white-space:nowrap;
+}
+.group-img-no-icon{
+    width: 25rpx;
+    height: 40rpx;
+    position: absolute;
+    top:50%;
+    margin:0 auto;
+    transform: translate(-50%,-50%);
+}
+.group-time{
+    display: block;
+    color:#666666;
+    line-height: 70rpx;
+}
+.first-box{
+    border:2px solid #ef5670;
+}
+.first{
+    position: absolute;
+    width: 60rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    text-align: center;
+    top: -15rpx;
+    left: 20rpx;
+    color: #fff;
+    background-color: #f84c69;
+    border-radius: 15rpx;
+    font-size: 20rpx;
+}
+
+.status-fail{
+    font-weight: 600;
+    color:#999;
+    
+}
+.group-time{
+    color:#666;
+}
+
+.icon{
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 10rpx;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    width: 32rpx;
+    height: 32rpx;
+    margin-top: -2rpx;
+}
+.icon-success{
+    background-image: url(./img/icon-success.png?__inline);   
+                      
+}
+.icon-warning{
+    background-image: url(./img/icon-warning.png?__inline);                
+}

@@ -1,0 +1,112 @@
+.camp-reward-container {
+    width: 100%;
+    height: 160px;
+    background-image: url("../../img/bg-reward.png");
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    .total-reward {
+        font-size: 50px;/*px*/
+        color: #c09f61;
+        margin-bottom: 20px;
+        margin-left: 50px;
+    }
+
+    .tips {
+
+        margin-left: 50px;
+        span {
+            font-size: 26px;/*px*/
+            color: #b8b0b0;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        span:hover {
+            cursor: pointer;
+        }
+
+    }
+
+}
+
+.camp-reward-tip-container {
+    position: relative;
+    width: 650px;
+    min-height: 875px;
+
+
+    .tip-head-img {
+        height: 240px;
+        width: 100%;
+        background-image: url("../../img/bg-reward-tips.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .tip-info {
+        position: relative;
+        padding: 40px 40px 0 40px;
+
+        .title {
+            margin-bottom: 30px;
+            span {
+                font-size: 30px;/*px*/
+                color: #c09f61;
+                vertical-align: middle;
+                margin-right: 10px;
+            }
+            .money-icon{
+                height: 30px;
+                width: 28px;
+                display: inline-block;
+                background-image: url("../../img/icon-reward-money.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            .info-icon{
+                height: 30px;
+                width: 30px;
+                display: inline-block;
+                background-image: url("../../img/icon-reward-info.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        } 
+
+        .info {
+            * {
+                font-size: 26px;/*px*/
+                color: #999;
+                line-height: 40px;
+            }
+            padding: 0 20px;
+            box-sizing: border-box;
+            margin: 0 20px 40px 20px;
+            list-style-type: disc;
+        }
+    }
+
+    .info-btn {
+        margin: 0 auto 40px;
+        width: 350px;
+        height: 88px;
+        border-radius: 44px;
+        border: solid 1px #d8b876;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;/*px*/
+        color: #c09f61;
+    }
+    .info-btn:hover{
+        cursor: pointer;
+    }
+}

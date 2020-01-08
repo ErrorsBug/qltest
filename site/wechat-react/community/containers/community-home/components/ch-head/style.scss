@@ -1,0 +1,29 @@
+
+.ch-head{
+    min-height: 350px;
+    position: relative;
+    background: #eee;
+    &.ch-head-local{
+        height: 380px;
+        overflow: hidden;
+    }
+    img{
+        width: 100%;
+    }
+}
+.chh-share{
+    position: absolute;
+    right: 32px;
+    top:32px;
+    img{
+        width:60px;
+        height:60px;
+    }
+    &.chh-change{
+        right: 124px;
+        .img-upload-btn{
+            position: relative;
+        }
+    }
+}
+ 

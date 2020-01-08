@@ -1,0 +1,11 @@
+
+.none-page{color:#ccc;text-align: center;margin-top:200px;}
+.none-pay-page{width:300px;height:300px;}
+.none-pay-text{display: block;}
+.none-pay-text{
+  font-size: 32px;
+  color: #ccc;
+  display: block;
+  text-align: center;
+  margin-top:20px;
+}

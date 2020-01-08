@@ -1,0 +1,42 @@
+.flag-tab-box{
+  position: absolute;
+  top: 1px; /*px*/
+  left: 1px; /*px*/
+  z-index: 10;
+  font-size: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  .flag-txt{
+    position: relative;
+    background: #F73657;
+    box-sizing: border-box;
+    display: flex;
+    line-height: 1.1;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px; /*px*/
+    padding: 5px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    // &::before{
+    //   position: absolute;
+    //   left: 0;
+    //   bottom: 0;
+    //   transform: translateY(18px);
+    //   width: 100%;
+    //   content: '';
+    //   height: 54px;
+    //   z-index: 1;
+    //   background: url("./img/jian.png") no-repeat center;
+    //   background-size: contain;
+    // }
+    // span{
+    //   display: inline-block;
+    //   position: relative;
+    //   z-index: 10;
+    //   width: 16px; 
+    // }
+  }
+}

@@ -1,0 +1,13 @@
+<view class="course-item">
+    <view class="time-wrap">
+        <view class="tag" wx:if="{{timeTag}}">{{timeTag}}</view>
+        <text class="time">{{timeStr}}</text>
+    </view>
+    <view class="content" bind:tap="onCourseItemTap">
+        <image src="{{imageUrl}}" class="course-image" mode="aspectFill"/>
+        <view class="info">
+            <view class="course-name">{{course.title}}</view>
+            <view class="learn-num">{{learnNum}}次学习</view>
+        </view>
+    </view>
+</view>

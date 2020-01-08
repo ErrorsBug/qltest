@@ -1,0 +1,65 @@
+.check-in-reward-tip-container {
+    position: relative;
+    width: 650px;
+    min-height: 720px;
+
+
+    .tip-head-img {
+        height: 190px;
+        width: 100%;
+        background-image: url("./img/bg-checkin-reward-tip.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .tip-info {
+        position: relative;
+        padding: 30px 30px 0 30px;
+        margin-bottom: 40px;
+
+        .total-bonus {
+            font-size: 50px;/*px*/
+            color: #c09f61;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        } 
+
+        .info {
+            font-size: 22px;/*px*/
+            color: #b8b0b0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .tip-area{
+            background-color: #f6f6f6;
+            border-radius: 10px;
+            padding: 30px 30px 30px 60px;
+            font-size: 26px;/*px*/
+            line-height: 40px;
+            color: #666666;
+            list-style: decimal
+        }
+    }
+
+    .info-btn {
+        margin: 0 auto 40px;
+        width: 350px;
+        height: 88px;
+        border-radius: 44px;
+        border: solid 1px #d8b876;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;/*px*/
+        color: #c09f61;
+    }
+    .info-btn:hover{
+        cursor: pointer;
+    }
+}

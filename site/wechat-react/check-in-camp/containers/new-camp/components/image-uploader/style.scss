@@ -1,0 +1,81 @@
+/*----- 图片上传组件 -----*/
+.co-image-uploader {
+    width: 400px;
+    height: 250px;
+    margin: 20px auto;
+    border-style: dashed;
+    border-color: #d9d9d9;
+    border-width: 2px; /*px*/
+    border-radius: 16px; /*px*/
+    text-align: center;
+    color: #999999;
+    font-size: 28px; /*px*/
+    cursor: pointer;
+    position: relative;
+    >div,input{
+        position: absolute !important;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        display: block;
+        cursor: pointer;
+    }
+    // 隐藏文件上传控件
+    .co-image-uploader-input {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        opacity: 0;
+        margin: 0px;
+        padding: 0px;
+        cursor: pointer;
+        z-index: 10;
+        border: none;
+    }
+    // 图片上传操作区域
+    .co-image-uploader-workarea {
+        height: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+        .icon-placeholder {
+            font-size: 50px;
+        }
+        .upload-tip {
+            line-height: 1.8;
+        }
+        .aspect-ratio {
+            font-size: 22px; /*px*/
+            line-height: 2;
+        }
+    }
+    // 图片预览区域
+    .co-image-uploader-preview {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        .preview-image {
+            width: 100%;
+            height: 100%;
+            border-radius: 16px; /*px*/
+        }
+        .preview-tip {
+            width: 100%;
+            font-size: 24px; /*px*/
+            line-height: 2;
+            color: #ffffff;
+            background-color: rgba(0, 0, 0, .5);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            border-radius: 0 0 16px 16px; /*px*/
+        }
+    }
+}

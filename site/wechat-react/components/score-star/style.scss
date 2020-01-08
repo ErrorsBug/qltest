@@ -1,0 +1,56 @@
+
+.co-score-star {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	white-space: nowrap;
+	height: 1em;
+	overflow-y: hidden;
+	i {
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		background-repeat: no-repeat;
+		background-position: left top;
+		background-size: 1em auto;
+		vertical-align: top;
+		border-left: 4px solid transparent;
+		border-right: 4px solid transparent;
+		&:first-child {
+			border-left: none;
+		}
+		&:last-child {
+			border-right: none;
+		}
+	}
+	// 编辑状态
+	&.editing {
+		i {
+			cursor: pointer;
+		}
+		&:hover {
+			i {
+				background-image: url(https://img.qlchat.com/qlLive/liveComment/UQ76YYZI-275H-XAJU-1535626137079-3OR46OV33VO9.png);
+				&:hover~i {
+					background-image: url(https://img.qlchat.com/qlLive/liveComment/YQG7GJJI-6E6S-RAVY-1535626147354-13K69KABT6DS.png);
+				}
+			}
+			.star-real {
+				display: none;
+			}
+		}
+	}
+	.star-bg {
+		i {
+			background-image: url(https://img.qlchat.com/qlLive/liveComment/YQG7GJJI-6E6S-RAVY-1535626147354-13K69KABT6DS.png);
+		}
+	}
+	.star-real {
+		position: absolute;
+		top: 0;
+		left: 0;
+		i {
+			background-image: url(https://img.qlchat.com/qlLive/liveComment/UQ76YYZI-275H-XAJU-1535626137079-3OR46OV33VO9.png);
+		}
+	}
+}

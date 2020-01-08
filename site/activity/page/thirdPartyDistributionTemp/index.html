@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="https://img.qlchat.com/qlLive/ico/favicon.ico" type="image/x-icon" />
+    <script src="../../components_modules/lib-flexible/1.0.0/lib-flexible.js"></script><!--ignore-->
+    <script type="text/javascript" src="../../components_modules/require/2.1.18/require.js"></script><!--ignore-->
+    <link rel="stylesheet" type="text/css" href="../../components_modules/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../components_modules/fonts/style.css">
+    <style>
+        html,body{
+            height:100%;
+        }
+        .third-party-temp-container{
+            position:relative;
+            max-width:750px;
+            margin:0 auto;
+            height:100%;
+            display:-webkit-box;
+            display:-ms-flexbox;
+            display:flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+        .third-party-temp-container .scroll-box{
+            -webkit-box-flex:1;-ms-flex:1;flex:1;
+            overflow:auto;
+            background:#fff;
+            -webkit-overflow-scrolling:touch;
+        }
+        .third-party-temp-container .bottom-panel{
+            height:100px;
+            background:#000;
+            cursor:pointer;
+        }
+        .third-party-temp-container img{
+            width:100%;
+            display:block;
+        }
+        .third-party-temp-container .bottom-panel img{
+            height:100%;
+        }
+        .guide-mask{
+            width:100%;
+            height:100%;
+            position:absolute;
+            top:0;left:0;
+            background:rgba(0,0,0,.5);
+            display:none;
+        }
+        .guide-mask .content{
+            padding:30px;
+            width:548px;
+            box-sizing: border-box;
+            border:6px dotted #fff;
+            border-radius: 8px;
+            position:absolute;
+            left:50%;
+            margin-left:-277px;
+            top:140px;
+            color:#fff;
+            font-size:30px;
+            line-height:2;
+        }
+        .guide-mask:after{
+            width:187px;
+            height:144px;
+            content:'';
+            position:absolute;
+            top:0;
+            right:40px;
+            background:url(./img/guide-arrow.png) no-repeat center;
+            background-size:100%;
+        }
+    </style>
+</head>
+<body>
+<div class="third-party-temp-container">
+    <div class="scroll-box">
+        <img src="{{contentUrl}}" alt="" />
+    </div>
+    <div class="bottom-panel on-log" data-url="{{businessUrl}}" data-log-name="外部分销模板">
+        <img src="{{buttonUrl}}" alt="" />
+    </div>
+    <div class="guide-mask">
+        <div class="content">
+            {{#if pointWord}}
+            点击右上角 <span class="icon-dots-horizontal"></span> ，选择分享给“微信好友”或“朋友圈”，{{pointWord}}。
+            {{else}}
+            点击右上角 <span class="icon-dots-horizontal"></span> ，选择分享给“微信好友”或“朋友圈”。
+            {{/if}}
+        </div>
+    </div>
+</div>
+<script>
+    require(['./index'],function(main){
+	    main.init();
+    });
+</script>
+<script type="text/javascript">
+	var _uaq = window._uaq || [];
+	// 配置站点名,默认值为： ql-h5
+	_uaq.push(['set', 'site', 'activity']);
+
+	// 配置站点版本, 默认值为: 1.0.0
+	_uaq.push(['set', 'sitever', '1.0.0']);
+
+	// 配置日志采集服务地址，用于发送采集日志,默认地址为： //collect.qlchat.com
+	_uaq.push(['set', 'server', '[[collectApiPrefix]]']);
+
+	// 配置渠道参数
+	_uaq.push(['set', 'ch', 'query.ch']);
+
+</script><!--ignore-->
+<script type="text/javascript" src="[[collectjs]]"></script><!--ignore-->
+<script>
+	// 百度统计
+	var _hmt = _hmt || [];
+	(function() {
+		var hm = document.createElement("script");
+		hm.src = "//hm.baidu.com/hm.js?9f8c5d323a26421cb966b5e405d629c3";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hm, s);
+	})();
+</script><!--ignore-->
+</body>
+</html>

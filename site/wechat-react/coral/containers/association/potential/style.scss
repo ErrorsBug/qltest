@@ -1,0 +1,51 @@
+@import "../../../../assets/styles/base-definition";
+
+.page-association-potential {
+	.tips{
+		padding:20px 30px;
+		color:$gray-tip;
+		background:#fff;
+		line-height:1.5;
+		&:before{
+			color:$main-color;
+			content:'Tips: ';
+		}
+	}
+	.user-list{
+		background:#fff;
+		margin-top:20px;
+		.item{
+			padding:20px 30px;
+			border-bottom:1px solid $gray-border;/*no*/
+			@include flex-center(vertical);
+			.avatar{
+				width:60px;
+				height:60px;
+				overflow: hidden;
+				border-radius: 100%;
+				@include filled-img;
+				background:$gray-tip;
+				flex-shrink: 0;
+			}
+			.info{
+				flex:1;
+				padding-left:20px;
+				.name{
+					font-size:24px;/*px*/
+				}
+				.content{
+					color:$gray-content;
+					margin-top:15px;
+					line-height:1.2;
+				}
+			}
+		}
+	}
+	.no-data{
+		margin-top:200px;
+		padding-top:280px;
+		background:url(./img/no-data.png) no-repeat center top / 288px 230px;
+		text-align: center;
+		font-size:28px;/*px*/
+	}
+}

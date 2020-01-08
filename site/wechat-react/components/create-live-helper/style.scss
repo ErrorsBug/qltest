@@ -1,0 +1,34 @@
+.create-live-enter{
+    padding: 30px;
+    display: flex;
+    .head{
+        width: 80px;
+        height: 80px;
+        overflow: hidden;
+        border-radius: 40px;
+        img{
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+    .content{
+        flex: 1;
+        padding-left: 20px;
+        line-height: 40px;
+        .name{
+            color: #666;
+            font-size: 28px;/*px*/
+        }
+        .tips{
+            color: #333;
+            font-size: 30px;/*px*/
+            >span{
+                color: #F73657;
+                font-size: 26px;/*px*/
+                float: right;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,148 @@
+.cou-lists{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  .co-dialog-bg {
+    background: transparent;
+  }
+  .co-dialog-bottom{
+    border-radius: 20px 20px 0 0;
+    height: 760px;
+    display: flex;
+    flex-direction: column;
+  }
+  .cou-head{
+    flex-shrink: 0;
+    position: relative;
+    background: #fff;
+    height: 108px;
+    z-index: 21;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    h4{
+      font-size: 32px;
+      color: #333;
+      font-weight: normal;
+      text-align: center;
+      line-height: 108px;
+    }
+    .cou-close{
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100px;
+      height: 100%;
+      z-index: 1;
+      background: url("./img/close.png") no-repeat center;
+      background-size: 30px;
+    }
+  }
+  .cou-cont{
+    flex: 1;
+    background: #fff;
+    width: 100%;
+    padding: 0 35px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+    .cou-item{
+      width: 100%;
+      padding-bottom: 32px;
+      .cou-list{
+        position: relative;
+        padding: 28px 0 28px 28px;
+        height: 166px;
+        box-sizing: border-box;
+        background: url("./img/ticket.png") no-repeat center;
+        background-size: 100% 99%;
+        display: flex;
+        justify-content: space-between;
+        &.cou-select{
+          background: url("./img/ticket-s.png") no-repeat center;
+          background-size: 100% 100%;
+        }
+        &.disable{
+          background: url("./img/ticket-disable.png") no-repeat center;
+          background-size: 100% 100%;
+          .cou-detail .cou-title, .cou-detail > p {
+            color: #999;
+          }
+          .cou-detail > span, .cou-price {
+            color: #BBB;
+          }
+          .limit-tips {
+            background: #BBB;
+          }
+        }
+        .limit-tips {
+          flex-shrink: 0;
+          display: inline-block;
+          padding: 0 8px;
+          height: 32px;
+          color: #FFF;
+          font-size: 16px !important; /* px */
+          background: #FF9400;
+          margin-left: 8px;
+          border-radius: 2px;
+          line-height: 32px;
+        }
+        .cou-detail{
+          width: 0;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          .cou-title{
+            display: flex;
+            align-items: center;
+            font-size: 28px; /* px */
+            padding-bottom: 16px;
+            color: #FF9400;
+          }
+          > p{
+            font-size: 24px;
+            color: #333;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding-bottom: 10px;
+          }
+          > span{
+            font-size: 22px;
+            color: #666;
+          }
+        }
+        .cou-price{
+          flex-shrink: 0;
+          width: 29%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #FF9400;
+          > p{
+            font-size: 46px;
+            font-weight: bold;
+            > span{
+              font-size: 20px;
+              font-weight: normal;
+            }
+          }
+        }
+        .label-app-type {
+          position: absolute;
+          right: 42px;
+          top: 0;
+          width: 100px;
+          height: 28px; 
+          background: url(https://img.qlchat.com/qlLive/liveComment/TG7LIOG4-8RY5-KF82-1552632154320-DG92FQOSZS5W.png) center top no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+  }
+}

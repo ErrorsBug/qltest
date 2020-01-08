@@ -1,0 +1,27 @@
+
+.roll-down-box{
+    .roll-down-inner{
+        display: flex;
+        align-items: center;
+        transition: top 30s linear;
+        &.scroll{
+            position: fixed;
+            max-width: 1280px; /*px*/
+            min-width: 640px; /*px*/
+            width: 100%;
+            left: 50%;
+            top: 0;
+            box-sizing: border-box;
+            transform: translateX(-50%);
+            z-index: 11;
+            background: #fff;
+            transition: top 0.3s linear;
+            &.fixed{
+                top: -100%;
+            }
+            &.down{
+                top: 0
+            }
+        }
+    }
+}

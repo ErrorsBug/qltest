@@ -1,0 +1,488 @@
+.containers {
+    .container {
+        overflow-x: hidden;
+        overflow-y:  auto;
+        position: absolute;
+        padding-bottom: 30px;
+        width: 100%;
+        height: 100%;
+
+        background: linear-gradient(60deg, #dd3c53 5%, #ff7084); 
+
+        .inform-con {
+            overflow: hidden;
+            height: 60px; /*px*/
+            background-color: #ffe7bb;
+
+            .inform-list {
+                position: relative;
+                top: 0;
+
+                // transition: all .5s ease-out;
+
+                &:hover {
+                    top: -60px; /*px*/
+                }
+
+                .inform {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    overflow: hidden;
+                    text-overflow:ellipsis;
+                    white-space: nowrap;
+            
+                    height: 60px; /*px*/
+                    font-size: 24px; /*px*/
+                    color: #bc7729;
+                    .inform-tag {
+                        display: inline-block;
+                        height: 21px; /*px*/
+                        width: 25px; /*px*/
+                        background: url('./img/inform.png') no-repeat;
+                        background-size: contain;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+
+        .rank-back {
+            margin: auto;
+            height: 177px; 
+            width: 602px; 
+            background: url('./img/rank-back.png') no-repeat;
+            background-size: contain;
+            margin-top: 30px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .current-rank-con {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                line-height: normal;
+                margin-bottom: 20px;
+                font-size: 26px; /*px*/
+                color: #333;
+                margin-right: 5px;
+                .current-rank {
+                    font-size: 40px; /*px*/
+                    color: #bc7729;
+                }
+            }
+            .distance {
+                text-align: center;
+                font-size: 23px; /*px*/
+                color: #8f8e8e;
+
+                span {
+                    color: #bc7729;
+                }
+
+                .go-chose-type {
+                    cursor: pointer;
+                    color: #bc7729;
+
+                }
+
+                .click-to-sort {
+                    cursor: pointer;
+                    position: relative;
+                    top: 10px;
+                }
+            }
+        }
+
+        .button-con {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin: 20px 70px 30px 70px;
+            
+            .shadow-btn {
+                flex-grow: 0;
+                flex-shrink: 0;
+                cursor: pointer;
+                height: 80px;
+                width: 290px;
+                cursor: pointer;
+                background-color: #f8304b;
+                border-radius: 100px;
+                font-size: 28px; /*px*/
+                color: #fefefe;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                line-height: normal;
+                
+                box-shadow: 0 4px 0 1px #d44357;
+
+                &:last-child{
+                    margin-left: 50px;
+                }
+            }
+        }
+
+        .active-dsc-con {
+            width: 90%;
+            margin: auto;
+            border-radius: 20px;
+            background-color: #fff;
+            padding: 30px 90px 45px 90px;
+
+            .title-with-back {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: url('./img/title-back.png') no-repeat;
+                background-size: contain;
+                background-position-x: center;
+                height: 53px; /*px*/
+                font-size: 24px; /*px*/
+                color: #fff;
+                span {
+                    position: relative;
+                    top: -2px; /*px*/
+                }
+            }
+
+            .factor {
+                font-size: 26px; /*px*/
+                color: #333;
+                margin: 55px 0 20px 0;
+            }
+            .factor-dsc {
+                font-size: 24px; /*px*/
+                line-height: 1.4;
+                color: #666;
+                border-bottom: 1px solid #e6e6e6; /*no*/
+                padding-bottom: 30px;
+            }
+
+            .reward-item-con {
+                border-bottom: 1px solid #e6e6e6; /*no*/
+                padding-bottom: 30px;
+                .reward-name {
+                    font-size: 26px; /*px*/
+                    color: #333;
+                    margin:30px 0 30px 0;
+                }
+                .flex-con {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    .reward-item {
+                        text-align: center;
+                        flex-grow: 0;
+                        flex-shrink: 1;
+                        // margin: 0 10px 0 10px;
+                        .push-time-1 {
+                            margin: auto;
+                            height: 70px; /*px*/
+                            width: 70px; /*px*/
+                            background: url('./img/small-push-chance-1.png') no-repeat;
+                            background-size: contain;
+                        }
+                        .push-time-3 {
+                            margin: auto;
+                            height: 70px; /*px*/
+                            width: 70px; /*px*/
+                            background: url('./img/small-push-chance-3.png') no-repeat;
+                            background-size: contain;
+                        }
+                        .great-lecturer {
+                            margin: auto;
+                            height: 70px; /*px*/
+                            width: 70px; /*px*/
+                            background: url('./img/great-lecturer.png') no-repeat;
+                            background-size: contain;
+                        }
+                        .official-tee {
+                            margin: auto;
+                            height: 70px; /*px*/
+                            width: 70px; /*px*/
+                            background: url('./img/official-tee.png') no-repeat;
+                            background-size: contain;
+                        }
+                        .reward-dsc {
+                            font-size: 26px; /*px*/
+                            color: #666;
+                            line-height: 1.4;
+                            margin-top: 15px;
+                        }
+                    }
+                }
+            }
+
+            .left-time-con {
+                padding-top: 30px;
+                text-align: center;
+                .dsc {
+                    font-size: 22px; /*px*/
+                    color: #333;
+                    margin-bottom: 20px;
+                }
+                .time {
+                    font-size: 24px; /*px*/
+                    color: #bc7729;
+                }
+            }
+
+        }
+
+        .rank-con.active-dsc-con {
+            margin-top: 30px;
+
+            padding: 30px 30px 40px 30px;
+
+            .type-con {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                padding: 24px 0 29px 0;
+                font-size: 22px; /*px*/
+                color: #666;
+                
+                border-bottom: 1px solid #e6e6e6; /*no*/
+            }
+
+            .rank-list-item.rank1 {
+                height: 80px;
+                .rank-con {
+                    .rank {
+                        height: 50px;
+                        width: 50px;
+                        background-color: #ff7070;
+                    } 
+                }
+            }
+            .rank-list-item.rank2 {
+                height: 80px;
+                .rank-con {
+                    .rank {
+                        height: 50px;
+                        width: 50px;
+                        background-color: #ffb845;
+                    } 
+                }
+            }
+            .rank-list-item.rank3 {
+                height: 80px;
+                .rank-con {
+                    .rank {
+                        height: 50px;
+                        width: 50px;
+                        background-color: #fcd3a5;
+                    } 
+                }
+            }
+            .rank-list-item.my-rank {
+                height: 80px;
+                .rank-con {
+                    .rank {
+                        color: #666;
+                        height: 50px;
+                        width: 50px;
+                        background-color: #fcd3a5;
+                    } 
+                }
+            }
+            .rank-list-item {
+                height: 80px;
+                &:nth-child(2n) {
+                    background: #f5f5f5;
+                }
+
+                
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 24px; /*px*/
+                .rank-con {
+                    flex: 0 0 auto;
+                    margin-right: 20px;
+                    width: 70px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .rank {
+                        border-radius: 100px;
+                        background-color: #ccc;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        line-height: normal;
+                        width: 40px;
+                        height: 40px;
+                        color: #fff;
+                    }
+                }
+
+                .name-con {
+                    flex: 1 1 auto;
+
+                    display: flex;
+                    align-items: center;
+
+                    font-size: 26px; /*px*/
+                    .header {
+                        border-radius: 100px;
+                        height: 40px;
+                        width: 40px;
+                        margin-right: 10px;
+                        // background-color: #dd3c53;
+                        img {
+                            height: 40px;
+                            width: 40px;
+                            border-radius: 100px;
+                        }
+                    }
+                }
+                .active-value {
+                    flex: 0 0 auto;
+                    text-align: right;
+                    margin-right: 10px;
+                }
+            }
+
+
+
+        }
+
+        .return-btn {
+            cursor: pointer;
+            width: 280px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 50px auto 0 auto;
+            color: #bc7729;
+            border-radius: 100px;
+            background-color: #ffe7bb;
+        }
+
+    }
+
+    .dialog-back {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .6);
+        cursor: pointer;
+        .dialog {
+            cursor: default;
+            position: absolute;
+            width: 80%;
+            left: 10%;
+            top: 20%;
+
+            border-radius: 12px;
+            background-color: #ff7084;
+
+            .logo {
+                width: 258px; /*px*/
+                height: 280px; /*px*/
+                background: url('./img/rank-big-red-back.png') no-repeat;
+                background-size: contain;
+                margin: 40px auto 60px auto;
+            }
+            .congratulation {
+                text-align: center;
+                font-size: 32px; /*px*/
+                color: #fff;
+            }
+            .reward-time {
+                text-align: center;
+                margin: 30px 0 70px 0;
+                font-size: 24px; /*px*/
+                color: #fff;
+            }
+
+            .bottom-con {
+                cursor: pointer;
+                height: 102px;
+                border-bottom-left-radius: 12px;
+                border-bottom-right-radius: 12px;
+                background-color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                font-size: 32px; /*px*/
+                color: #f73657;
+            }
+        }
+        
+    }
+
+    .type-tip-dialog-back {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .6);
+        cursor: pointer;
+        .dialog {
+            cursor: default;
+            position: absolute;
+            width: 80%;
+            left: 10%;
+            top: 20%;
+
+            border-radius: 12px;
+            background-color: #ff7084;
+
+            .logo {
+                width: 258px; /*px*/
+                height: 280px; /*px*/
+                background: url('./img/rank-big-red-back.png') no-repeat;
+                background-size: contain;
+                margin: 40px auto 60px auto;
+            }
+            .congratulation {
+                text-align: center;
+                font-size: 32px; /*px*/
+                margin-top: 40px;
+                color: #fff;
+
+
+            }
+            .reward-time {
+                line-height: 1.6;
+                text-align: center;
+                margin: 30px 0 70px 0;
+                font-size: 24px; /*px*/
+                color: #fff;
+                padding: 0 60px 0 60px;
+
+                .blod {
+                    font-weight: bold;
+                }
+                
+  
+            }
+
+            .bottom-con {
+                cursor: pointer;
+                height: 102px;
+                border-bottom-left-radius: 12px;
+                border-bottom-right-radius: 12px;
+                background-color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                font-size: 32px; /*px*/
+                color: #f73657;
+            }
+        }
+        
+    }
+}

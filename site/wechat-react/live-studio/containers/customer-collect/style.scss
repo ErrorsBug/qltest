@@ -1,0 +1,376 @@
+.customer-collect-container{
+    background: #FFF;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;   
+    
+
+    // 头部信息
+    .user-info{
+        display: flex;
+        background: #fff;
+        padding: 30px;
+
+        .head{
+            display: block;
+            width: 120px;
+            height: 120px;
+            border-radius: 120px;
+            margin-right: 20px;
+        }
+
+        .info{
+            display: block;
+            flex: 1;
+            
+
+            b{
+                display: block;
+                font-size: 32px;/* px */
+                color: #333333;
+                line-height: 50px;
+                font-weight: normal;
+                margin-top: 10px;
+                
+            }
+            i{
+                display: block;
+                font-size: 28px;/* px */
+                color: #999999;
+                line-height: 35px;
+                font-style: normal;
+            }
+        }
+
+
+
+    }
+
+    // 用户列表
+    .data-ul{
+        display: block;
+        margin-bottom: 100px; 
+
+        li{
+            display: block;
+            border-top: 1px solid #EEE;
+            padding: 20px 40px;
+
+            
+            .main-flex{
+
+                .title{
+                    display: flex;
+                    padding: 15px 0;
+                    // height: 70px;/* px */
+                    align-items: center;
+                    color: #333;
+                    font-size: 32px;/* px */
+                    font-weight: 400;
+
+                    i{
+                        color: #F73657;
+                        font-style: normal;
+                    }
+                }
+                .value-box{
+                    display: flex;
+                    background: #F7F7F7;
+                    padding: 10px;
+                    min-height: 50px;/* px */
+                    align-items: center;
+                    position: relative;
+                    margin-bottom: 10px;
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+
+                    .picker-bar{
+                        flex: 1;
+                    }
+
+                    .text{
+                        display: block;
+                        height: 50px;/* px */
+                        line-height: 50px;/* px */
+                        width: 100%;
+                        font-size: 30px;/* px */
+                    }
+
+                    .icon_right{
+                        color: #999;
+                    }
+
+                    .place-holder {
+                        color: #999;
+                    }
+                }
+
+                .sex {
+                    justify-content: space-between;
+                    font-size: 30px; /* px */
+                }
+
+                .check-code-btn {
+                    position: absolute;
+                    right: 10px;
+                    top: 10px;
+                    bottom: 10px;
+                    width: 164px;
+                    background: #FF9400;
+                    color: #FFF;
+                    border-radius: 8px;
+                    font-size: 26px; /* px */
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &.disable {
+                        background: #CCC;
+                        color: #999;
+                    }
+                }
+
+                .text-input{
+                    display: block;
+                    height: 50px;/* px */
+                    line-height: 50px;/* px */
+                    color: #333333;
+                    font-size: 30px;/* px */
+                    border: none;
+                    background: none;
+                    width: 100%;
+
+                }
+                .text-textarea{
+                    display: block;
+                    width: 100%;
+                    height: 50px;/* px */
+                    line-height: 50px;/* px */
+                    color: #333333;
+                    font-size: 30px;/* px */
+                    border: none;
+                    background: none;
+                }
+
+                .address-box{
+                    position: relative;
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        height: 1px;/* no */
+                        width: 100%;
+                        top: 0;
+                        left: 30px;
+                        background: #f0f0f0;
+                    }
+                }
+
+            }
+        }
+
+
+
+    }
+
+    // 底部按钮
+    .bottom-container{
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 32px;/* px */
+        text-align: center;
+        padding: 12px 40px;
+        box-sizing: border-box;
+
+        .btn {
+            display: flex;
+            flex: 1;
+            height: 100%;
+            margin-right: 30px;
+            border: 1px solid #F73657;
+            border-radius: 50px;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+
+            &.btn-send-pay{
+                color: #fff;
+                background: #F73657;
+                justify-content: center;
+                align-items: center;
+
+            }
+            &.btn-pass-pay{
+                color: #F73657;
+                background: #fff;
+                justify-content: center;
+                align-items: center;
+            }
+            &.disable {
+                background: #EEE;
+                border: none;
+                color: #999;
+            }
+        }
+    }
+
+    .success-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .icon-success {
+            width: 278px;
+            height: 426px;
+            background: url('./img/icon-success.png') no-repeat center / contain;
+        }
+        .tips {
+            font-size: 36px; /* px */
+            font-weight: bolder;
+            margin-top: 40px;
+
+        }
+        .close-btn {
+            margin-top: 156px;
+            width: 290px;
+            height: 76px;
+            border-radius: 50px;
+            background: #F73657;
+            color: #FFF;
+            font-size: 32px; /* px */
+            font-weight: 400;
+            text-align: center;
+            line-height: 76px;
+        }
+    }
+
+    .step-view {
+
+        height: 150px;
+        
+        &.step-1 {
+            background: url('./img/step-1.png') no-repeat center / auto 70px;
+        }
+
+        &.step-2 {
+            background: url('./img/step-2.png') no-repeat center / auto 70px;
+        }
+    }
+
+    .qr-content {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .qr-box {
+            width: 400px;
+            height: 400px;
+            padding: 20px;
+            box-sizing: border-box;
+            background: url('./img/qr-bg.png') no-repeat center / contain;
+
+            & > img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .tips {
+            margin-top: 40px;
+            font-size: 32px; /* px */
+            color: #333;
+            font-weight: 400;
+
+        }
+        .tips-2 {
+            margin-top: 10px;
+            font-size: 28px; /* px */
+            color: #F83657;
+            font-weight: 500;
+        }
+    }
+}
+
+.sex-options-dialog {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+
+    .layer {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .6);
+    }
+    .container {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: #FFF;
+        border-radius: 20px 20px 0px 0px;
+
+        .sex-options {
+            height: 350px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            & > .item {
+                & > .item-icon {
+                    width: 148px;
+                    height: 148px;
+                    border-radius: 50%;
+
+                    &.boy {
+                        background: url('./img/icon-boy.png') no-repeat center / contain;
+                    }
+                    &.girl {
+                        background: url('./img/icon-girl.png') no-repeat center / contain;
+                    }
+                }
+                & > .item-text {
+                    margin-top: 20px;
+                    font-size: 32px; /* px */
+                    color: #333;
+                    font-weight: 400;
+                    text-align: center;
+                }
+            }
+        }
+
+        .footer {
+            height: 100px;
+            box-sizing: border-box;
+            border-top: 1px solid #EEE;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 12px 40px;
+
+            .btn {
+                flex: 1;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #F73657;
+                color: #FFF;
+                font-size: 32px;
+                font-weight: 400;
+                border-radius: 50px;
+            }
+        }
+    }
+}

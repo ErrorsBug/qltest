@@ -1,0 +1,10 @@
+.scholarship-box{
+    width: 56px; /*px*/
+    height: 56px; /*px*/
+    padding-left: 32px;
+    & > div{
+        height: 100%;
+        background:  url('../../img/collegehome_icon_scollarship.png') no-repeat right center;
+        background-size: 56px; /*px*/
+    }
+}

@@ -1,0 +1,259 @@
+body {
+    min-width: 640px; /*px*/
+    max-width: 1280px; /*px*/
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #F2F2F2;
+}
+
+#container {
+    background: #fff;
+    overflow: hidden;
+    /*padding-bottom: 0.666667rem;*/
+}
+
+.banner {
+    position: relative;
+    /*min-width: 750px;*/
+    height: 407.8px;
+    overflow: hidden;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.banner ul {
+    height: 100%;
+}
+
+.banner li {
+    width: 100%;
+    height: 100%;
+}
+
+.banner img {
+    width: 100%;
+    height: 407.8px;
+}
+
+.banner .page-tip {
+    position: absolute;
+    height: 18px;
+    line-height: 18px;
+    bottom: 16px;
+    right: 30px;
+    z-index: 1;
+}
+
+.banner .page-tip li {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: #f0f0f0;
+    text-indent: -9999px;
+    overflow: hidden;
+    margin: 0 6px;
+}
+
+.banner .page-tip li.on {
+    background-color: #3e95e0;
+}
+
+.head-wrap {
+    overflow: hidden;
+    height: 64px;
+}
+
+.head-menu {
+    width: 100%;
+    height: 64px;
+    line-height: 64px;
+    background-color: #f2f4f5;
+    color: #909499;
+    font-size: 28px; /*px*/
+    position: relative;
+}
+
+.head-menu-to-bottom {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    z-index: 5;
+}
+
+.icon-pd {
+    margin-left: 30px;
+    margin-right: 10px;
+}
+
+.list-wrap {
+    overflow: hidden;
+}
+
+.list-wrap.fixed-to-bottom {
+    position: relative;
+}
+
+.topic-list ul {
+    background-color: #fff;
+}
+
+.topic-list li {
+    
+}
+
+.topic-list li .detail {
+    position: relative;
+    height: 180px;
+    border-bottom: 1px solid #f5f5f5; /*no*/
+    margin: 0 30px;
+    display: flex;
+}
+
+.topic-list li .pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.topic-list li img {
+    width: 124px;
+    height: 124px;
+    margin-top: -2px;
+    margin-left: -2px;
+}
+
+.topic-list li .desc {
+    position: relative;
+    flex: 1;
+    height: 120px;
+
+    margin: 30px 50px 30px 28px;
+}
+
+.topic-list li .status {
+    position: absolute;
+    bottom: 23px;
+    right: -10px;
+    height: 36px;
+    line-height: 36px;
+    border: 1px solid #f09534; /*no*/
+    border-radius: 25px;
+    /*overflow: hidden;*/
+    color: #f09534;
+    background: #fff;
+    font-size: 22px; /*px*/
+}
+
+.topic-list li .status.beginning {
+    border: none;
+    color: #fff;
+    padding-top: 1px; /*no*/
+    padding-bottom: 1px; /*no*/
+    background: #3e95e0;
+}
+
+.topic-list li .status span {
+    padding: 0 10px;
+}
+
+.topic-list .desc .title {
+    line-height: 1.2;
+    color: #4d4d4d;
+    font-size: 32px; /*px*/
+
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.topic-list .desc .tip {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #a8adb3;
+    font-size: 22px; /*px*/
+    height: 35px;
+    line-height: 35px;
+}
+
+.topic-list .desc .tip span  {
+    display: inline-block;
+    vertical-align: middle;
+    /*margin-top: 2px;*/
+}
+
+.money {
+    color: #f4aa53;
+    margin-left: 12px;
+    font-size: 30px; /*px*/
+}
+
+.topic-list .load-more {
+    height: 88px;
+    line-height: 88px;
+    /*background: #f5f5f5;*/
+    /*border-radius: 0.08rem;*/
+    /*margin: 0.266667rem 30px;*/
+    color: #909499;
+    font-size: 26px; /*px*/
+    text-align: center;
+}
+
+.no-more {
+    height: 169px;
+    background: #f5f5f5;
+    color: #bfbfbf;
+    font-size: 26px; /*px*/
+    overflow: hidden;
+    position: relative;
+}
+
+.no-more p {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 12px;
+}
+
+.no-more .logo {
+    width: 98px;
+    height: 36px;
+    background: url(./img/logo.png) no-repeat center center;
+    background-size: 98px 36px;
+    position: absolute;
+    left: 50%;
+    margin-left: -49px;
+}
+
+.btn-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 136px;
+    width: 78px;
+    height: 78px;
+    line-height: 78px;
+    color: #fff;
+    background: rgba(0,0,0,.24);
+    text-align: center;
+    z-index: 10;
+}
+
+.btn-to-top span {
+    font-weight: bold;
+}
+
+.fixed-head-menu {
+    display: block;
+    width: 100%;
+    max-width: 1280px; /*px*/
+    position: fixed;
+    top: 0;
+    z-index: 5;
+}
+

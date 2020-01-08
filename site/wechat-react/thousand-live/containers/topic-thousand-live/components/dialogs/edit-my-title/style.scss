@@ -1,0 +1,78 @@
+.set-title {
+    z-index: 10;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    .dialog {
+        position: absolute;
+        z-index: 101;
+        width: 90%;
+        left: 5%;
+        top: 30%;
+        background: #fff;
+        border-radius: 5px;
+        overflow: hidden;
+        transition: 0.2s;
+    }
+    .container {
+        position: relative;
+        background-color: #00acff;
+        padding: 30px 0 30px 0;
+        text-align: center;
+        .close {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            border-radius: 50%;
+            border: 1px solid #ffffff;
+            padding: 3px;
+            color: #ffffff;
+            cursor: pointer;
+        }
+        .head-img {
+            display: inline-block;
+            border-radius: 100%;
+            padding: 1px;
+            width: 1.5rem;
+            height: 1.5rem;
+            border: 3px solid #fff;
+        }
+        .name {
+            display: block;
+            margin: .3rem;
+            font-size: .45rem;
+            color: #fff;
+        }
+        .title-tag {
+            display: inline-block;
+            color: #00acff;
+            font-size: .3rem;
+            padding: .1rem;
+            background-color: #99deff;
+            border-radius: .05rem;
+        }
+        
+    }
+    .edit {
+        text-align: center;
+        color: #999;
+        font-size: .3rem;
+        width: 50%;
+        display: inline-block;
+        margin: .4rem 0;
+        border-right: 1px solid #bbb;
+        cursor: pointer;
+    }
+    .change-title {
+        text-align: center;
+        color: #999;
+        font-size: .3rem;
+        width: 49%;
+        display: inline-block;
+        margin: .4rem 0;
+        cursor: pointer;
+    }
+}

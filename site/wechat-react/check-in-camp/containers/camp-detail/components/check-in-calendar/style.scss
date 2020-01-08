@@ -1,0 +1,84 @@
+.check-in-calendar {
+    // height: 300px;
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-top: 30px;
+
+    .title {
+        font-size: 32px;/*px*/
+        color: #333333;
+        margin-bottom: 30px
+    }
+
+    .calendar {
+        position: relative;
+        width: 204px;
+        height: 140px;
+        background-image: url('../../img/bg-checkin-date.png');
+        margin-bottom: 30px;
+
+        .bg-alpha {
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            width: 104px;
+            height: 50px;
+            background-image: url('../../img/bg-checkin-alpha.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .days {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 104px;
+            height: 82px;
+            font-size: 68px;/*px*/
+            color: #fe5670;
+            position: absolute;
+            left: 24px;
+            top: 24px;
+        }
+
+        .text {
+            position: absolute;
+            font-size: 40px;/*px*/
+            color: #ffffff;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 24px;
+        }
+
+    }
+
+    .calendar-big {
+        width: 270px;
+        height: 140px;
+        background-image: url('../../img/bg-checkin-date-big.png');
+
+        .bg-alpha {
+            left: 18px;
+        }
+
+        .days {
+            left: 18px;
+        }
+
+        .text {
+            right: 18px;
+        }
+    }
+    
+    .date {
+        font-size: 24px;/*px*/
+        color: #b8b0b0;
+        margin-bottom: 40px;
+    }
+}

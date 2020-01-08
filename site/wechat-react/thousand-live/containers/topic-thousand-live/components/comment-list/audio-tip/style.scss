@@ -1,0 +1,54 @@
+.audio-tip{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:rgba(#000,.5);
+	z-index: 1000;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	.container{
+		width:710px;
+		background:#fff;
+		border-radius:10px;
+		padding:0 40px;
+		.header{
+			height:120px;
+			font-size:40px;/*px*/
+			line-height:120px;
+			text-align: center;
+		}
+		.content{
+			line-height:1.5;
+			font-size:34px;/*px*/
+			p{
+				text-indent:2em;
+				margin-top:10px;
+			}
+		}
+		.operation{
+			display:flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-top:50px;
+			padding-bottom:30px;
+			font-size:34px;/*px*/
+			.download-btn,
+			.cancel-btn{
+				width:300px;
+				height:100px;
+				display:flex;
+				align-items: center;
+				justify-content: center;
+				border-radius:5px;
+				cursor:pointer;
+			}
+			.download-btn{
+				background:#00acff;
+				color:#fff;
+			}
+		}
+	}
+}

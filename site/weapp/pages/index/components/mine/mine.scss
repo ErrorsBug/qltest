@@ -1,0 +1,111 @@
+@import '../../../../comp/tab-menu/tab-menu';
+
+/* pages/mine/mine.wxss */
+page,.container{
+  background-color:#f5f5f5;
+}
+
+.mine-head-box{
+  background-color: #fff;
+  width:100%;
+  margin-bottom:20rpx;
+
+}
+.userinfo {
+  // display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top:-98rpx;
+  // position: relative;
+  // max-width:277rpx;
+  text-align:center;
+  position: relative;
+  z-index: 2;
+  padding-bottom: 40rpx;
+}
+.mine-head-name{
+    max-width: 400rpx;
+    margin: 10rpx auto 0;
+
+}
+.mine-pen{width: 20rpx;height: 36rpx;}
+
+.container .userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  // margin: 20rpx;
+  border-radius: 50%;
+  border:3px solid #fff;
+  // box-shadow:0rpx 1rpx 2rpx rgba(0,0,0,.2);
+}
+
+.userinfo-nickname {
+  display: inline-block;
+  color: #4c4c4c;
+  font-weight: bold;
+  font-size: 32rpx;
+  max-width:277rpx;
+  overflow: hidden; white-space: nowrap; text-overflow: ellipsis; word-break: break-all;
+}
+
+.mine-box{width:100%;}
+.mine-box-ul{
+  display: block;
+  width:100%;
+  padding:0;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+.mine-box-ul .mine-box-li{
+  // padding:30rpx 40rpx 30rpx 60rpx;
+  height: 100rpx;
+  margin: 0 34rpx;
+  border-bottom:1px solid #f3f4f5;
+  font-size: 32rpx;
+  color:#4c4c4c;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+
+}
+
+.contact-btn{
+  background-color: #fff;
+  border: none;
+  padding: 0;
+  &::after{
+    display: none;
+  }
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mine-box-ul .mine-box-li .follow-count{
+  font-size: 24rpx;
+  color: #b8b0b0;
+  float: right;
+  margin-right: 20rpx;
+}
+.mine-box-ul .mine-box-li:last-child{border:none;}
+
+.head-wrap {
+    width: 100%;
+    height: 0;
+    padding-bottom: 34.6667%;
+    position: relative;
+    z-index: 1;
+}
+
+.mine-head{
+    position: absolute;
+    left: 0;
+    right: 0;
+    width:100%;
+    height: 100%;
+}
+.mine-li-icon{width:36rpx;height:36rpx;margin-right:20rpx;}
+.mine-enter-icon{width:14rpx;height:22rpx;float:right;margin-top:7rpx;}

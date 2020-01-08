@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试音频播放</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="https://img.qlchat.com/qlLive/ico/favicon.ico" type="image/x-icon" />
+    <script src="../../components_modules/lib-flexible/1.0.0/lib-flexible.js"></script><!--ignore-->
+    <script type="text/javascript" src="https://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/vconsole/2.5.1/vconsole.min.js"></script><!--ignore-->
+    <script type="text/javascript" src="../../components_modules/require/2.1.18/require.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="audio-wrap">
+            <div class="audio-name">正在播放的音频：<span>（无）</span></div>
+            <audio controls id="audioPlayer" preload="auto" src="">Your browser does not support the audio element.您的浏览器不支持 audio 标签。</audio></div>
+        <div class="input-wrap btn">
+            <span>选择音频</span>
+            <input class="audio-file" type="file" name="audioFile" accept="audio/*">
+        </div>
+        <div class="btn play-btn" data-src="">播放</div>
+        <div class="btn pause-btn">暂停</div>
+        <select class="select-menu">
+            <option value="1">正常速率</option>
+            <option value="0.5">速率0.5</option>
+            <option value="0.6">速率0.6</option>
+            <option value="0.7">速率0.7</option>
+            <option value="0.8">速率0.8</option>
+            <option value="0.9">速率0.9</option>
+            <option value="1">速率1</option>
+            <option value="1.1">速率1.1</option>
+            <option value="1.2">速率1.2</option>
+            <option value="1.3">速率1.3</option>
+            <option value="1.4">速率1.4</option>
+            <option value="1.5">速率1.5</option>
+            <option value="1.6">速率1.6</option>
+            <option value="1.7">速率1.7</option>
+            <option value="1.8">速率1.8</option>
+            <option value="1.9">速率1.9</option>
+            <option value="2">速率2</option>
+        </select>
+    </div>
+    <!--SCRIPT_PLACEHOLDER-->
+
+    <script>
+        (function(win) {
+
+            require(['./test-audio'], function (testAudio) {
+                testAudio.init();
+            });
+        })(window);
+    </script><!--ignore-->
+
+    <script type="text/javascript" src="/api/js-sdk/wx?actions=hide_all&__date"></script>
+</body>
+</html>

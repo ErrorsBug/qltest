@@ -1,0 +1,53 @@
+.co-image-viewer {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 1280px; /*px*/
+    min-width: 640px; /*px*/
+    margin: 0 auto;
+    text-align: center;
+    height: 100%;
+    overflow: hidden;
+
+    .bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: .5;
+        z-index: 1001;
+    }
+
+    .close-btn {
+        position: absolute;
+        z-index: 1003;
+        right: 30px;
+        top: 30px;
+        width: 68px;
+        height: 68px;
+        line-height: 68px;
+        text-align: center;
+        font-size: 40px; /*px*/
+        background-position: 0 0;
+        background-color: rgba(0,0,0,.5);
+        border: solid 2px #fff; /*no*/
+        border-radius: 50%;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transition-property: margin,width,height;
+        // transition-duration: .5s;
+        z-index: 1002;
+    }
+}

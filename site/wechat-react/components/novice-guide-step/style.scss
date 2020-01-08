@@ -1,0 +1,76 @@
+.novice-guide-step {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 99;
+    display: flex;
+
+    .novice-guide-step-bottom {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100px;
+        background: yellow;
+    }
+
+    .novice-guide-step-container {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .novice-guide-step-bg {
+        position: relative;
+        min-height: 100%;
+        & > img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .step-point {
+        position: absolute;
+        border-radius: 5px;
+        transform: translate(-9999px, -9999px); /* no */
+        border: 9999px solid rgba(0,0,0,.6); /* no */
+
+        &.border::after {
+            content: "";
+            position: absolute;
+            left: -10px;
+            right: -10px;
+            top: -10px;
+            bottom: -10px;
+            border: 1px dashed #FFF; /* px */
+            border-radius: 5px;
+        }
+    }
+
+    .novice-guide-step-content {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+    }
+
+    .step-guide-source {
+        &.up {
+            width: 36px;
+            height: 173px;
+            background: url('./img/guide-up.png') no-repeat center / contain;
+        }
+        &.down {
+            width: 36px;
+            height: 173px;
+            background: url('./img/guide-down.png') no-repeat center / contain;
+        }
+        &.ok {
+            width: 348px;
+            height: 90px;
+            background: url('./img/guide-ok.png') no-repeat center / contain;
+        }
+    }
+}

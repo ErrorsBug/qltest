@@ -1,0 +1,67 @@
+@import "../../../../assets/styles/base-definition";
+
+.page-performance-details {
+	.title{
+		height:120px;
+		background:#fff;
+		padding:0 30px;
+		border-bottom:1px solid $gray-border;/*no*/
+		@include flex-center(vertical);
+		justify-content: space-between;
+		font-size:28px;/*px*/
+		.data{
+			color:$gray-content;
+		}
+	}
+	.details-list{
+		margin-top:20px;
+		background:#fff;
+		.item{
+			padding:0 30px;
+			border-bottom:1px solid $gray-border;
+			height:100px;
+			@include flex-center(vertical);
+			color:$gray-content;
+			.avatar{
+				width:60px;
+				height:60px;
+				overflow: hidden;
+				border-radius: 100%;
+				@include filled-img;
+				flex-shrink: 0;
+				background:$gray-tip--lighter;
+			}
+			.name{
+				flex:1;
+				margin-left:20px;
+				@include flex-center(vertical);
+			}
+		}
+	}
+
+	.badge{
+		@include flex-center;
+		height:26px;
+		width: 71px;
+		margin-left:20px;
+		&.professor{
+			background:#ffe691;
+			color:#ba7d51;
+			background: url(../../../../assets/images/coral/professor.png) center center no-repeat;
+			background-size: auto 100%;
+		}
+		&.doctor{
+			background:#e8e8e8;
+			color:#9e9d9d;
+			background: url(../../../../assets/images/coral/doctor.png) center center no-repeat;
+			background-size: auto 100%;
+		}
+		&.bachelor{
+			border-color:#d9b782;
+			background:#eacfa5;
+			color:#aa6a3b;
+			background: url(../../../../assets/images/coral/bachelor.png) center center no-repeat;
+			background-size: auto 100%;
+		} 		
+	}
+}

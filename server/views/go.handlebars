@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Cache-Control" content="no-siteapp">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="format-detection" content="email=no">
+        <meta name="format-detection" content="address=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    </head>
+    <body class="gra_1">
+
+    <script>
+        /**
+        * 检查重定向的地址是否合法，防止url跳转漏洞和跨站脚本漏洞
+        * @param {String} url 用于跳转的url地址 
+        */
+        function checkRedirectUrl(url) {
+            if (!url || typeof url != 'string') {
+                return false;
+            } else if (target.indexOf('data:') >= 0) {
+                return false;
+            } else if (target.indexOf('javascript:') >= 0) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        /**
+        *
+        * 获取cookie
+        * @param {any} c_name
+        * @returns
+        */
+        function getCookie(c_name){
+            if (document.cookie.length > 0) {
+                var c_start = document.cookie.indexOf(c_name + "=");
+                if (c_start != -1) {
+                    c_start = c_start + c_name.length + 1;
+                    var c_end = document.cookie.indexOf(";", c_start);
+                    if (c_end == -1) {
+                        c_end = document.cookie.length;
+                    }
+                    return decodeURIComponent(document.cookie.substring(c_start, c_end));
+                };
+            };
+            return "";
+        }
+
+        /*
+        * 兼容有些目标页有静默授权导致兜底页历史记录丢失。  
+        */
+        function goPreIntavel(){
+            var goPre;
+            setInterval(function(){
+                goPre = sessionStorage.getItem('go-pre');
+                if(goPre && history.length > 2 ){
+                    history.replaceState(null, null, pre);
+                    window.location.reload();
+                }
+
+            },2000)
+
+        }
+
+        /**
+         * query中必须包含target字段，pre字段可选
+         * 包含pre字段时在该目标地址前插入pre历史记录
+         */
+        
+        //console.log(history.length);
+        
+        var search = window.location.search.slice(1),
+            target,
+            pre,
+            needRef,
+            other = '';
+        for (var i = 0, searchArr = search.split('&'); i < searchArr.length; i++) {
+            var temp = searchArr[i].split('=');
+            if (temp[0] == 'target') {
+                target = decodeURIComponent(temp[1]);
+            } else if (temp[0] == 'pre') {
+                pre = decodeURIComponent(temp[1]);
+            } else if(temp[0] === 'needRef'){
+                needRef = temp[1];
+            } else {
+                other += '&' + searchArr[i];
+            }
+        }
+
+
+        // console.log(search, target, pre);
+        if (target) {
+            if (checkRedirectUrl(target)) {
+                if (pre) {
+                    sessionStorage.setItem('go-pre',pre);
+                    history.replaceState(null, null, pre);
+                    if(needRef){
+                        history.pushState(null, null, pre);
+                    }else{
+                        history.pushState(null, null, '/');
+                    }
+                }
+
+                //console.log(history.length);
+                
+                if (target.indexOf('?') === -1) {
+                    target += '?';
+                    other = other.slice(1);
+                }
+                window.location.href = target + other;
+                goPreIntavel();
+            }
+        } else {
+            //console.log('reload');
+            window.location.reload();
+        }
+    </script>
+    </body>
+</html>

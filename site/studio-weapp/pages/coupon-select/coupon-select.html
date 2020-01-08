@@ -1,0 +1,63 @@
+<view class="container" wx:if="{{system != 'ios'}}">
+
+  <view class="empty-list" wx:if="{{async_couponList.data && availableCoupons.length === 0}}">
+    <view class="icon"></view>
+    <view class="desc">没有可用优惠券</view>
+  </view>
+
+  <scroll-view class="coupon-list" scroll-y wx:else>
+    <view class="coupon-item {{item.couponId == activeCoupon.couponId ? 'active' : ''}}" wx:for="{{availableCoupons}}" wx:key="{{item.couponId}}" bindtap="tapCouponItem" data-index="{{index}}">
+      <view class="coupon-item-wrap">
+        <view class="edge"></view>
+        <view class="left">
+          <view class="main">
+            ￥<view class="price {{item.moneyStyle}}">{{item.money}}</view>
+          </view>
+          <view class="desc">
+            {{item.minMoney ? '满'+item.minMoney+'元可用' : '优惠金额'}}
+          </view>
+        </view>
+        <view class="right">
+          <view class="main">{{item.title}}</view>
+          <view class="desc">
+            <view class="date">{{item.isForever ? '永久有效' : item.timeStr }}</view>
+          </view>
+          <view class="mark-overtimesoon" wx:if="{{item.isOverTimeSoon}}">即将过期</view>
+          <view class="tick {{item.couponId == activeCoupon.couponId ? 'active' : ''}}"></view>
+        </view>
+      </view>
+    </view>
+
+    <view class="list-loading-status">
+      <view wx:if="{{async_couponList.status==='pending'}}">加载中...</view>
+      <view wx:elif="{{async_couponList.status==='success'}}">没有更多了</view>
+    </view>
+  </scroll-view>
+
+  <view class="footer">
+    <view class="coupon-code" bindtap="showWinCouponCode">
+      <view class="icon-coupon-code"></view>
+      优惠码
+    </view>
+    <view class="btn-submit" bindtap="tapSubmit">确定</view>
+  </view>
+
+  <view class="win-coupon-code" wx:if="{{showWinCouponCode}}">
+    <view class="panel">
+      <view class="title">优惠码</view>
+      <view class="content">
+        <input type="text" placeholder="请输入优惠码" focus confirm-type="go" placeholder-class="coupon-code-ph" cursor-spacing="100" bindinput="changeCouponCodeInput"/>
+        <view class="message {{async_exchangeCouponCode.status === 'error' ? 'red' : ''}}">
+          {{async_exchangeCouponCode.message}}
+        </view>
+      </view>
+      <view class="btns">
+        <view class="btn" bindtap="hideWinCouponCode">取消</view>
+        <view class="btn red" bindtap="exchangeCouponCode">确定</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="container" wx:if="{{system == 'ios'}}">
+  由于相关规范，iOS功能暂不可用
+</view>

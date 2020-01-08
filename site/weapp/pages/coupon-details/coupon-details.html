@@ -1,0 +1,34 @@
+<view class="container" wx:if="{{system != 'ios'}}">
+  <view class="coupon">
+    <view class="mark{{async_bind.message ? ' disabled' : ''}}"></view>
+    <view class="price{{async_bind.message ? ' disabled' : ''}}">
+      ￥<view class="num">{{coupon.money}}</view>
+    </view>
+    <view class="disabled-tips">{{async_bind.message}}</view>
+
+    <view class="coupon-desc">{{couponDesc}}</view>
+
+    <view class="source" wx:if="{{coupon.liveName}}">
+      来自直播间
+      <view class="name">
+        “<view>{{coupon.liveName}}</view>”
+      </view>
+    </view>
+  </view>
+
+  <view class="btns">
+    <navigator wx:if="{{async_bind.message}}" class="btn" url="/pages/index/index" open-type="reLaunch">开启知识之旅</navigator>
+
+    <block wx:if="{{coupon && !async_bind.message}}">
+      <view class="btn" bindtap="bindAndUseCoupon" wx:if="{{!couponUserId && !isMine}}">领取并使用</view>
+
+      <view class="btn" bindtap="useCoupon" wx:if="{{isMine}}">立即使用</view>
+
+      <button class="btn hollow" open-type="share" wx:if="{{!(couponUserId && !isMine)}}">分享给好友</button>
+    </block>
+  </view>
+</view>
+
+<view class="container" wx:if="{{system == 'ios'}}">
+    由于相关规范，iOS功能暂不可用
+</view>

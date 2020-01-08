@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText":"话题介绍",
+    "usingComponents": {
+        "audio-box": "../../comp/audio-box/audio-box",
+        "pay-by-contact-modal": "../../comp/pay-by-contact-modal/pay-by-contact-modal"
+    }
+}

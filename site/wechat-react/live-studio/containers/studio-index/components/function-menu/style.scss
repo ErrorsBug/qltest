@@ -1,0 +1,14 @@
+.comp-live-function-btn{
+    width: 76px;
+    height: 50px;
+    background-image: url(./img/function-btn.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    // position: fixed;
+    // bottom: 130px;
+    // right: calc(50% - 350px);
+    border-radius:6px;
+    cursor: pointer;
+    z-index: 9;
+    margin: 0 33px;
+}

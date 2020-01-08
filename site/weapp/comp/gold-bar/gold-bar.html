@@ -1,0 +1,26 @@
+<view class="gold-bar">
+    <view class="item">
+        <image mode="widthFix" wx:if="{{showReplay}}" class="icon icon-replay" src="{{replayUri}}"></image>
+        永久回听
+    </view>
+    <view class="item" wx:if="{{showDiscount && !showRebate && system !='ios'}}" >
+        <image mode="widthFix" class="icon icon-discount" src="{{discountUri}}"></image>
+        支持优惠
+    </view>
+    <view class="item" wx:if="{{showRebate}}">
+        <image mode="widthFix" class="icon icon-rebate" src="{{rebateUri}}"></image>
+        购买返现
+    </view>
+    <view class="item" wx:if="{{showVip}}">
+        <image mode="widthFix" class="icon icon-vip" src="{{vipUri}}"></image>
+        会员免费听
+    </view>
+    <view class="item" wx:if="{{showLive}}">
+        <image mode="widthFix" class="icon icon-live" src="{{liveUri}}"></image>
+        {{liveStatus}}
+    </view>
+    <view class="item" wx:if="{{showUpdateStatus}}">
+        <image mode="widthFix" class="icon icon-live" src="{{liveUri}}"></image>
+        {{updateStatusText}}
+    </view>
+</view>

@@ -1,0 +1,72 @@
+.bottom-menu-container {
+    .bottom-menu-wrapper {
+        // position: fixed;
+        // bottom: 0;
+        width: 100%;
+        max-width: 1280px; /*px*/
+        height: 100px;
+        display: flex;
+        flex-flow: row nowrap;
+        background-color: #ffffff;
+        border-top-color: #e5e5e5;
+        border-top-style: solid;
+        border-top-width: 2px; /*px*/
+        .bottom-menu-item {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            font-size: 22px; /*px*/
+            color: #706464;
+            height: 100px;
+            line-height: 1.5;
+            flex:1;
+            cursor: pointer;
+           
+          
+            &::before{
+                content: "";
+                width: 40px;
+                height: 40px;
+                background: center center no-repeat;
+                background-size: 100% 100%;
+                margin: 10px 0;
+
+            }
+
+            &.icon-coupon::before{
+                background-image: url('./img/icon_coupon.png');
+            }
+            &.icon-push::before{
+                background-image: url('./img/icon_push.png');
+            }
+            &.icon-new::before{
+                background-image: url('./img/icon_new.png');
+            }
+            &.icon-edit::before{
+                background-image: url('./img/icon_edit.png');
+            }
+        }
+    }
+}
+
+.checkin-camp-push-dialog {
+    width: 655px;
+}
+
+.checkin-camp-new-dialog {
+    .new-item {
+        height: 100px;
+        text-align: center;
+        line-height: 100px;
+        font-size: 32px; /*px*/
+        color: #333333;
+        cursor: pointer;
+        &:nth-child(1) {
+            border-bottom-style: solid;
+            border-bottom-width: 2px; /*px*/
+            border-bottom-color: #f0f0f0;
+        }
+    }
+}

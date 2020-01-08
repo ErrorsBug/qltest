@@ -1,0 +1,86 @@
+.dialog-data-statistics {
+    .co-dialog-content{
+        max-height: 80%;
+        main{
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+    }
+    .content {
+        flex:1;
+        padding: 0 50px 60px 50px;
+        overflow: auto;
+        overflow-x: hidden;
+        .course-index-pop-content {
+            &:first-child{
+                margin-bottom: 40px;
+            }
+            .l-title {
+                color: #333;
+                font-size: 30px;/*px*/
+                margin-bottom: 15px;
+                line-height: 42px;
+            }
+            >p{
+                color: #666;
+                font-size: 28px;/*px*/
+                line-height: 40px;
+            }
+        }
+        .text {
+            color: #999;
+            font-size: 30px;/*px*/
+            line-height: 40px;/*px*/
+            padding-bottom: 10px; /*px*/
+            color: #666;
+
+            &.tips{
+                color: #b2b2b2;
+            }
+            &.min-tips{
+                color: #b2b2b2;
+                padding-left: 30px;/*px*/
+            }
+        }
+        .modify-textarea {
+            color: #8e8e8e;
+            border-color: #e6e6e6;
+            background-color: #e8e8e8;
+            width: 100%;
+            resize: none;
+            overflow-x: hidden;
+            overflow-y: auto;
+            border: none;
+            line-height: 40px; /*px*/ 
+            font-size: 30px; /*px*/
+            padding: 10px 20px; /*px*/
+            vertical-align: middle;
+            outline: 0;
+            height: 60px;/*px*/
+            border-radius:16px;
+        }
+    }
+    .bottom {
+        flex-shrink: 0;
+        border-top: 1px solid #e5e5e5; /*px*/
+        display: flex;
+        .bottom-text {
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            font-size: 30px;
+            /*px*/
+            cursor: pointer;
+            &:nth-child(2n) {
+                border-left: 1px solid #e5e5e5; /*px*/
+            }
+        }
+        .red {
+            color: #f73657;
+        }
+    }
+}

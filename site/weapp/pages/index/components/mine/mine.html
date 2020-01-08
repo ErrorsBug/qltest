@@ -1,0 +1,61 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="mine-head-box">
+    <view class="head-wrap">
+        <image class="mine-head" src="./img/mine-bg.png"></image>
+    </view>
+    <view class="userinfo">
+      <image wx:if="{{userInfo.avatarUrl}}" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <image wx:else class="userinfo-avatar" src="./img/default_avatar.png" background-size="cover"></image>
+      <view class="mine-head-name">
+        <text class="userinfo-nickname"> {{userInfo.nickName}} </text>
+        <!--<image class="mine-pen" src="img/icon-pen.png"></image>-->
+      </view>
+    </view>
+  </view>
+  <view class="mine-box-ul">
+    <view class="mine-box-li" bindtap="mineBuyRecord">
+        <view class="flex-center">
+          <image class="mine-li-icon" src="./img/icon-package.png?__inline" mode="widthFix"></image>
+          <text wx:if="{{system !='ios'}}" >购买记录</text>
+          <text wx:if="{{system =='ios'}}">我的课程</text>
+      </view>
+      <image class="mine-enter-icon" src="./img/icon-enter.png?__inline"></image>
+    </view>
+    <view class="mine-box-li" bindtap="mineFocusLive">
+      <view  class="flex-center">
+          <image class="mine-li-icon" src="./img/icon-favorite.png?__inline" mode="widthFix"></image>
+          <text>我的关注</text>
+      </view>
+      <view>
+          <image class="mine-enter-icon" src="./img/icon-enter.png?__inline" ></image>
+          <text class="follow-count" wx:if="{{minePreview.followerCount}}">{{minePreview.followerCount}}</text>
+      </view>
+    </view>
+    <view class="mine-box-li" bindtap="mineCoupons" wx:if="{{system !='ios'}}">
+      <view  class="flex-center">
+          <image class="mine-li-icon" src="./img/icon-coupon.png?__inline" mode="widthFix"></image>
+          <span>我的优惠券</span>
+      </view>
+      <view>
+          <image class="mine-enter-icon" src="./img/icon-enter.png?__inline" ></image>
+      </view>
+    </view>
+  </view>
+
+  <form class="mine-box-ul">
+    <button 
+      open-type="contact" session-from="customerFeedBack"
+      class="mine-box-li contact-btn"  
+      bind:tap="onFeedbackClick"
+    >
+      <view class="flex-center">
+        <image class="mine-li-icon" src="./img/icon-feedback.png?__inline" mode="widthFix"></image>
+        <text>意见反馈</text>
+      </view>
+      <image class="mine-enter-icon" src="./img/icon-enter.png?__inline"></image>
+    </button>
+  </form>
+
+  <tab-menu activeTabKey='mine'></tab-menu>
+</view>

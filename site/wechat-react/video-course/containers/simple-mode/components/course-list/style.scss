@@ -1,0 +1,112 @@
+.course-list-wrap{
+	position: relative;
+	padding: 40px 0 35px;
+	background:#fff;
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 40px;
+		right: 40px;
+		border-bottom: 1px solid #eee;/*no*/
+	}
+	.title-wrap{
+		padding:0 40px;
+		display:flex;
+		align-items: center;
+		justify-content: space-between;
+		line-height: normal;
+		.title{
+			position:relative;
+			font-size: 32px;/*px*/
+			color: #333;
+			font-weight: bolder;
+			flex-shrink: 0;
+			align-items: center;
+			display:flex;
+		}
+		.desc{
+			margin-left:30px;
+			color:#999;
+			font-size: 24px;/*px*/
+			display:flex;
+			align-items: center;
+			justify-content: flex-end;
+			cursor: pointer;
+			position:relative;
+			.icon_enter {
+				margin-left: 12px;/*px*/
+				font-size: 20px;/*px*/
+			}
+			&:after{
+				width:100%;
+				height:300%;
+				position: absolute;
+				top:50%;
+				left:0;
+				content:'';
+				transform: translate(0, -50%);
+			}
+		}
+	}
+	.course-list-container{
+		margin-top: 35px;
+		overflow: hidden;
+		width: 100%;
+		.course-item-wrap{
+			display:flex;
+			padding:5px 40px 10px;
+			margin-bottom:-10px;
+			overflow-x: auto;
+			overflow-y: hidden;
+			&:after{
+				width:1px;/*no*/
+				flex-shrink: 0;
+				height:100px;
+				content:' ';
+				display:block;
+			}
+		}
+		.placeholder{
+			width:100px;/*no*/
+			height:100px;
+			content:' ';
+		}
+		.course-item{
+			display:flex;
+			align-items: center;
+			justify-content: center;
+			width:292px;
+			height:108px;
+			box-sizing: border-box;
+			padding:0 20px;
+			margin-right:40px;
+			flex-shrink: 0;
+			margin-bottom:5px;
+			background: #f6f6f6;
+			cursor: pointer;
+			border-radius: 4px;
+
+			.name{
+				font-size:24px;/*px*/
+				font-weight: 500;
+				line-height:1.5;
+				display: block;
+				display: -webkit-box;
+				-webkit-line-clamp:2;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				font-weight: bold;
+			}
+			&.current{
+				color: #F73657;
+				background: #fff;
+				border: 1px solid #F73657;/*no*/
+			}
+			&.disable{
+				color:#b2b2b2;
+			}
+		}
+	}
+}

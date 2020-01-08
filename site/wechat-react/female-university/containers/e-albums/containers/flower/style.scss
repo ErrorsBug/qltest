@@ -1,0 +1,205 @@
+.flower{
+    position: absolute;
+    bottom: 0;
+    margin-left: 32px;
+    margin-bottom: 82px;
+    width: 136px;
+    height: 136px;
+    z-index: 1;
+    .flower-num{
+        color: #8B4C26;
+        position: absolute;
+        top: 40px;
+        right: 24px;
+        font-size: 26px;
+        font-family:PingFangSC-Semibold,PingFang SC;
+        font-weight:600;
+    }
+    .dz{
+        width: 100%;
+        position: absolute;
+        bottom: 14px;
+        text-align: center;
+        color: #A72636;
+        font-family:PingFangSC-Semibold,PingFang SC;
+        font-weight:600;
+    }
+    img{
+        width: 100%;
+    }
+    .rose{
+        position: absolute;
+        top: 20px;
+        left: 22px;
+        width: 62px;
+        height: 66px;
+    }
+    .mg{
+        width: 40px;
+        position: absolute;
+        top: 0;
+        left: 34px;
+        opacity: 0;
+        img{
+            width: 100%;
+        }
+        p{
+            width: 100px;
+            position: absolute;
+            top: 20px;
+            left: 40px;
+            color: white;
+        }
+    }
+    .mgFly{
+        animation: fly1 3s;
+    }
+}
+.ripple,.ripple2,.ripple3,.ripple4{
+    position: absolute;
+    bottom: 82px;
+    margin-left: 32px;
+    width: 136px;
+    height: 136px;
+    background: white;
+    border-radius: 100%;
+    opacity: .5;
+}
+.ripple{
+    animation: ripple 6s infinite ;
+}
+.ripple2{
+    animation: ripple 6s infinite ;
+    animation-delay:1.5s;
+}
+.ripple3{
+    animation: ripple 6s infinite ;
+    animation-delay:3s;
+}
+.ripple4{
+    animation: ripple 6s infinite ;
+    animation-delay:4.5s;
+}
+.user{
+    position: absolute;
+    bottom: 26px;
+    display: flex;
+    margin-left: 38px;
+    .user-box{
+        width: 40px;
+        height: 40px;
+        border: 2px solid white;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-left: -10px;
+        &:nth-of-type(1){
+            z-index: 4;
+        }
+        &:nth-of-type(2){
+            z-index: 3;
+        }
+        &:nth-of-type(3){
+            z-index: 2;
+        }
+        &:nth-of-type(4){
+            z-index: 1;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+@keyframes fly1 {
+    0%{
+        opacity: 1;
+        top: 0;
+    }
+    100%{
+        opacity: 0;
+        top: -300px;
+    }
+}
+@keyframes ripple {
+    0%{
+        opacity: .5;
+        transform: scale(1);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}
+
+.flower-tip-box{
+    bottom: 300px;
+    left: 32px;
+    & > div {
+        height: 114px;
+        position: relative;
+        background: rgba(#FFDB93,0.9);
+        border-radius: 114px;
+        padding: 0 34px 0 16px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        &::before, &::after{
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(#FFDB93,0.9);
+            content: "";
+        }
+        &::before{
+            bottom: -52px;
+            left: 114px;
+            width: 32px;
+            height: 32px;
+        }
+        &::after{
+            bottom: -80px;
+            left: 86px;
+            width: 24px;
+            height: 24px;
+        }
+        .flower-tip-close{
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i{
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                border: 2px solid #fff; /*no*/
+                background: rgba(#000, 0.5);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 22px; /*px*/
+                color: #fff;
+            }
+        }
+        img{
+            width: 84px;
+            height: 84px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin-right: 28px;
+        }
+        p{
+            max-width: 350px; /*px*/
+            font-size: 30px; /*px*/
+            color: #502C16;
+            line-height: 1.5;
+            font-weight: 600;
+            span{
+                color: #A92738;
+                border-bottom: 2px solid #A92738; /*px*/
+            }
+        }
+    }
+}

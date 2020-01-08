@@ -1,0 +1,35 @@
+.recommend-night-answer{
+    padding:0 40px;
+    background:#fff;
+    display:flex;
+    align-items: center;
+    height: 144px;
+    border-top:1px solid #f5f5f5;/*no*/
+    .night-answer-icon{
+        width:60px;
+        height:64px;
+        background: url(./img/night-answer.png) no-repeat center / 100%;
+    }
+    .info{
+        font-size:26px;/*px*/
+        margin-left:30px;
+        flex:1;
+        width:10px;
+        color: #424242;
+        .span{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .tips{
+            color:#999090;
+            font-size:22px;/*px*/
+        }
+    }
+    .play-btn{
+        margin-left:10px;
+        background:url(./img/icon-play.png) no-repeat center / 100%;
+        width:48px;
+        height:48px;
+    }
+}

@@ -1,0 +1,16 @@
+.top-notice{
+    background-color: #fff;
+    text-align: center;
+    height: 80rpx;
+    line-height: 80rpx;
+    
+    font-size: 32rpx;
+    border-bottom: 1rpx solid #f0f0f0;
+    font-weight: 700;
+    .normal{
+        color: #ef5670;
+    }
+    .fail{
+        color: #666;
+    }
+}

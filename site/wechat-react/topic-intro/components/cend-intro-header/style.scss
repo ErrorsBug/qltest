@@ -1,0 +1,122 @@
+@import "../../../assets/styles/base-definition";
+.cend-intro-header{
+	position:relative;
+	padding-bottom: 62.5%;
+
+	.knowledge-wrap {
+		top: 76px;
+	}
+	.banner{
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		display: block;
+	}
+	.tip-info{
+		display:flex;
+		justify-content: space-between;
+		align-items: center;
+		background:rgba(#000,.5);
+		height: 72px;
+		padding: 0 40px;
+		width:100%;
+		position: absolute;
+		bottom:0;
+		left:0;
+		box-sizing: border-box;
+		color:#fff;
+		.service-note-btn{
+			height:40px;
+			box-sizing: border-box;
+			border:1px solid rgba(#fff,.3);/*no*/
+			border-radius: 4px;
+			padding-left:50px;
+			padding-right:16px;
+			background:url(./img/icon-forever.png) no-repeat 14px center / 24px;
+			@include flex-center(vertical);
+		}
+	}
+
+	.count-down-box{
+		position:absolute;
+		width:100%;
+		height:100%;
+		top:0;
+		left:0;
+		display:flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background:rgba(#000, .6);
+		.tip{
+			color:#fff;
+			font-size:28px;
+			display: flex;
+			align-items: center;
+			&:before,
+			&:after{
+				height:1px;/*no*/
+				width:49px;
+				background:#fff;
+				content:'';
+			}
+			&:before{
+				margin-right:20px;
+			}
+			&:after{
+				margin-left:20px;
+			}
+		}
+		.clocking{
+			display: flex;
+			align-items: center;
+			color:#9fa9ad;
+			font-size:40px;
+			margin-top:50px;
+			span{
+				font-size:40px;
+			}
+			.block{
+				width:100px;
+				height:72px;
+				border-radius: 10px;
+				font-size:22px;
+				background:rgba(#fff, .8);
+				display:flex;
+				align-items: center;
+				justify-content: center;
+				color:#333;
+				.c{
+					display:flex;
+					align-items: flex-end;
+				}
+			}
+		}
+	}
+
+	.play-btn{
+		top:50%;
+		left:50%;
+		transform: translate(-50%, -50%);
+		position:absolute;
+	}
+
+	.play-btn-topic{
+		width:129px;
+		height:129px;
+		background:url(./img/icon-play.png) no-repeat center / 100%;
+		top:50%;
+		left:50%;
+		margin-left:-65px;
+		margin-top:-65px;
+		position:absolute;
+	}
+
+	.intro-barrage {
+		position: absolute;
+		left: 40px;
+		top: 40px;
+	}
+}

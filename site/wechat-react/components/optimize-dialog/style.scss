@@ -1,0 +1,123 @@
+.optimize-tip-dialog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+    z-index: 10;
+
+    .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; 
+    }
+    .optimize-tip-content {
+        height: 920px;
+        width: 628px;
+        background:rgba(255,255,255,1);
+        box-shadow:0px 11px 30px 0px rgba(161,161,161,0.18);
+        border-radius:26px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        padding: 48px 30px 0;
+        box-sizing: border-box;
+        .close {
+            position: absolute;
+            font-size: 32px;/*px*/
+            color: #979797;
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        .content {
+            flex: 1;
+
+            .title {
+                font-size: 32px;/*px*/
+                color: #333;
+                line-height: 45px;
+                margin-bottom: 16px;
+                font-weight: bold;
+                text-align: center;
+            }
+            .tip {
+                font-size: 28px;/*px*/
+                color: #666;
+                line-height: 40px;
+                margin-bottom: 36px;
+                text-align: center;
+                padding: 0 50px;
+            }
+            .img {
+                position: relative;
+                background: {
+                    position: center bottom;
+                    repeat: no-repeat;
+                }
+                height: 55px;
+                margin: 0 auto;
+                &::before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 40px;
+                    text-align: center;
+                    color: #666;
+                    font-size: 28px;/*px*/
+                }
+                &.p-cover {
+                    background-image: url(./img/cover-optimize.png);
+                    background-size: 100% 594px;
+                    padding-bottom: 594px;
+                    width: 468px;
+                    &::before {
+                        content: '优秀示例';
+                    }
+                }
+                &.p-title {
+                    background-image: url(./img/title-optimize.png);
+                    background-size: 100% 574px;
+                    padding-bottom: 574px;
+                    width: 560px;
+                    &::before {
+                        content: '转化率60%以上的参考标题';
+                    }
+                }
+                &.p-summary {
+                    background-image: url(./img/summary-optimize.png);
+                    background-size: 100% 562px;
+                    padding-bottom: 562px;
+                    width: 487px;
+                    &::before {
+                        content: '优秀课程概要参考';
+                    }
+                }
+                &.p-barrage {
+                    background-image: url(./img/course-barrage.png);
+                    background-size: 100% 504px;
+                    padding-bottom: 504px;
+                    width: 536px;
+                }
+            }
+        }
+
+        &.course-barrage {
+            height: auto;
+            padding-bottom: 50px;
+        }
+    }
+}

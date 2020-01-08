@@ -1,0 +1,33 @@
+.comp-channel-reprint-btn{
+    position: fixed;
+    right: calc(50% - 340px);
+    bottom: 250px;
+    width: 82px;
+    height: 82px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 24px;/* px */
+    background-color: rgba(201, 169, 110, 0.9);
+    opacity: 0.9;
+    border-radius: 100%;
+    z-index:10;
+}
+
+.comp-channel-reprint-bar{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 100px;/* px */
+    width: 100%;
+    max-width: 1280px; /*px*/
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 24px;/* px */
+    background-color: rgba(201, 169, 110, 0.9);
+    opacity: 0.9;
+}

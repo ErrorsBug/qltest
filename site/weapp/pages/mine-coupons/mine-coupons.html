@@ -1,0 +1,73 @@
+<view class="container" wx:if="{{system != 'ios'}}">
+  <!-- 分类 -->
+  <view class="cate-wrap">
+    <view class="cate-pri">
+      <view wx:for="{{catePri}}" wx:key="{{index}}" data-index="{{index}}"
+        class="{{catePriActiveIndex==index ? 'cate-pri-item active' : 'cate-pri-item'}}"
+        bindtap="onTapCatePri"
+      >
+        {{item.name}}
+        <block wx:if="{{item.totalNum}}">({{item.totalNum}})</block>
+      </view>
+    </view>
+    <view class="cate-sec">
+      <view wx:for="{{cateSec}}" wx:key="{{index}}" data-index="{{index}}"
+        class="{{cateSecActiveIndex==index ? 'cate-sec-item active' : 'cate-sec-item'}}"
+        bindtap="onTapCateSec"
+      >
+        {{item.name}}
+      </view>
+    </view>
+  </view>
+
+
+  <!-- 列表 -->
+  <scroll-view class="list-wrap" scroll-y
+    bindscrolltolower="getCouponListByCouponType_continue">
+
+    <view class="coupon-item {{item.status}} {{item.status === 'bind' ? '' : 'disabled'}}" wx:for="{{activeData.data}}" wx:key="{{item.couponId}}" bindtap="onTapCouponItem" data-index="{{index}}" data-status="{{item.status}}">
+      <view class="coupon-item-wrap">
+        <view class="edge"></view>
+        <view class="left">
+          <view class="main">
+            ￥<view class="price {{item.moneyStyle}}">{{item.money}}</view>
+          </view>
+          <view class="desc">
+            {{item.minMoney ? '满'+item.minMoney+'元可用' : '优惠金额'}}
+          </view>
+        </view>
+        <view class="right{{item.isOverTimeSoon ? ' overtimesoon' : ''}}">
+          <view class="main">{{item.title}}</view>
+          <view class="desc">
+            <view class="date">{{item.isForever ? '永久有效' : item.timeStr }}</view>
+            <view class="use" wx:if="{{item.status === 'bind'}}" catchtap="onTapCouponItemUse" data-index="{{index}}" data-status="{{item.status}}">
+              去使用
+            </view>
+          </view>
+          <view class="mark-used" wx:if="{{item.status === 'used'}}"></view>
+          <view class="mark-overdue" wx:if="{{item.status === 'overdue'}}"></view>
+          <view class="mark-overtimesoon">即将过期</view>
+        </view>
+
+        <view class="coupon-gap"></view>
+      </view>
+    </view>
+
+    <view class="list-loading-status">
+      <view wx:if="{{activeData.status==='pending'}}">加载中...</view>
+      <view wx:elif="{{activeData.status==='end'}}">没有更多了</view>
+      <view wx:elif="{{activeData.status==='success'}}" bindtap="getCouponListByCouponType_continue">加载更多</view>
+    </view>
+  </scroll-view>
+  
+
+  <!-- 领券中心 -->
+  <view class="footer-wrap" bindtap="onTapCouponCenter">
+    <image src="../../comp/img/icon-coupon-center.png" mode="widthFix"/>
+    领券中心
+  </view>
+</view>
+
+<view class="container" wx:if="{{system == 'ios'}}">
+  由于相关规范，iOS功能暂不可用
+</view>

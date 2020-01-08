@@ -1,0 +1,44 @@
+$red: #F73657;
+
+
+.fb-actionsheet {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    .as-list {
+        flex: 1;
+        overflow-y: auto;
+        padding: 20px 0;
+    }
+    .as-item {
+        padding: 20px 40px;
+        display: flex;
+        align-items: center;
+        line-height: normal;
+        font-size: 28px;
+        color: #333;
+        &.active {
+            color: $red;
+        }
+        &:active {
+            background-color: #f7f7f7;
+        }
+    }
+    .as-item-content {
+        flex: 1;
+    }
+}
+
+// 此部分为业务样式
+.fb-actionsheet {
+    .as-item {
+        .desc {
+            color: #999;
+        }
+        &.active {
+            span {
+                color: $red;
+            }
+        }
+    }
+}

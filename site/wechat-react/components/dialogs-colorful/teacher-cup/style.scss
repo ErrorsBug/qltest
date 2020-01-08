@@ -1,0 +1,61 @@
+.teacher-cup-dialog{
+    .co-dialog-content{
+		width:90%;
+	}
+	.qlMT_top{
+		display: block;
+		width: 100%;
+		min-height: 80px;
+		padding: 60px 0 20px;
+		background-color: #fff;
+		color: #404040;
+		font-size: 32px; /*px*/
+		text-align: center;
+		line-height: 40px;
+		white-space: nowrap;
+
+		font-weight: bold;
+	}
+	.qlMT_content{
+		padding:20px 30px;
+		font-size: 28px; /*px*/
+
+		.thanks {
+			margin-bottom: 30px;
+		}
+
+		.special {
+			margin-bottom: 15px;
+		}	
+		.t-live-list {
+			color: #f73657;
+			margin-bottom: 30px;
+		}
+		li {
+			margin-bottom: 7px;
+		}
+
+		.v-live-tips {
+			color: #999;
+		}
+
+		p {
+			line-height: 1.4;
+		}
+
+	}
+	.tlbtn_cancel{color: #333; }
+	.qlMTBottom2{
+		border-top:1px solid #f0f0f0;/*no*/
+		line-height: 90px;
+		height: 90px;
+        font-size: 30px;/*px*/
+        text-align: center;
+		a{
+			display: block;
+			width:100%;
+			height: 100%;
+		}
+	}
+
+}

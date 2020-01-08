@@ -1,0 +1,12 @@
+<view class="float-menu">
+    <!-- <view class="float-menu-li btn-goto-backplay" catchtap="showBackModal">后台播放</view> -->
+    <view class="float-menu-li btn-goto-top" catchtap="onToTopBtnClick">
+        <image class="float-menu-li-icon" src="./img/icon-up.png" mode="widthFix"></image>
+    </view>
+    <view class="float-menu-li btn-goto-bottom" catchtap="onToBottomBtnClick">
+        <image class="float-menu-li-icon" src="./img/icon-down.png" mode="widthFix"></image>
+    </view>
+</view>
+<navigator class="float-menu-listen-mode" open-type="redirect" url="/pages/topic-listening/topic-listening?topicId={{topicId}}">
+    <image class="float-menu-listen-mode-icon" src="./img/listen-float-icon.png" mode="widthFix"/>
+</navigator>

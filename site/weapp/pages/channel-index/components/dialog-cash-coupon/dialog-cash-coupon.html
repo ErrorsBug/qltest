@@ -1,0 +1,13 @@
+<view class="dialog-cash-coupon" hidden="{{!showCashCouponDialog}}">
+    <view class="dialog-bg" bindtap="closeCashCouponDialog"></view>
+    <view class="dialog-content">
+        <view class="btn-close" bindtap="closeCashCouponDialog"><image class="close-icon" src="../../img/close.png"></image></view>
+        <view class="dialog-title">
+            有<text class="cash-coupon-money">￥{{money / 100}}</text>现金券可以使用
+        </view>
+        <view class="info">
+            可在「我的优惠券」中查看使用
+        </view>
+        <view class="btn" bind:tap="doUse">立即使用</view>
+    </view>
+</view>

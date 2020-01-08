@@ -1,0 +1,15 @@
+<view class="channel-list">
+    <block
+        wx:for="{{list}}" 
+        wx:key="index" 
+        wx:for-item="channel" 
+    >
+        <channel-item
+            class="channel-item"
+            channel="{{channel}}"
+            system= "{{system}}"
+        />
+    </block>
+
+</view>
+<no-more noMore="{{noMore}}" noneOne="{{noneOne}}" />

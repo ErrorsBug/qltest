@@ -1,0 +1,25 @@
+<view class="co-tab-bar">
+    <view 
+        wx:for="{{items}}"
+        wx:key="{{index}}"
+        wx:for-item="tab"
+        data-key="{{tab.key}}"
+        class="co-tab-item" 
+        bindtap="onTabItemClick" 
+    >
+        <view class="co-tab-text {{tab.active ? 'co-tab-item-active' : ''}}"> {{tab.name}} </view>
+    </view>
+</view>
+
+<view class="co-tab-bar-fixed" wx:if="{{showFixedBar}}">
+    <view 
+        wx:for="{{items}}"
+        wx:key="{{index}}"
+        wx:for-item="tab"
+        data-key="{{tab.key}}"
+        class="co-tab-item" 
+        bindtap="onTabItemClick" 
+    >
+        <view class="co-tab-text {{tab.active ? 'co-tab-item-active' : ''}}"> {{tab.name}} </view>
+    </view>
+</view>

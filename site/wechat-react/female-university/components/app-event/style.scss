@@ -1,0 +1,57 @@
+.un-app-show{
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    z-index: 20;
+    max-width: 1280px; /*px*/
+    min-width: 640px; /*px*/
+    width: 100%;
+    height: 280px !important;
+    background: #eee;
+    border-radius:41px 41px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    -webkit-transform: translate3d(-50%, 0,0);
+    -moz-transform: translate3d(-50%, 0,0);
+    transform: translate3d(-50%, 0,0);
+    will-change: transform;
+    .un-app-com{
+        padding-top: 120px;
+        min-width: 140px; /*px*/
+        &.icon-save{
+            background: url('./img/icon-save.png') no-repeat center top;
+            background-size: 100px; /*px*/
+        }
+        &.icon-wx{
+            padding: 120px 60px 0;
+            background: url('./img/icon-wx.png') no-repeat center top;
+            background-size: 100px; /*px*/
+        }
+        &.icon-friend{
+            background: url('./img/icon-friend.png') no-repeat center top;
+            background-size: 100px; /*px*/
+        }
+    }
+    p{
+        font-size: 28px; /*px*/
+        color: #333;
+        text-align: center;
+    }
+}
+.un-app-show-enter {
+    transform: translate(-50%, 100%);
+}
+.un-app-show-enter-active {
+    transform: translate(-50%, 0);
+    transition: transform 800ms;
+}
+.un-app-show-exit {
+    transform: translate(-50%, 0);
+}
+.un-app-show-exit-active {
+    transform: translate(-50%, 100%);
+    transition: transform 800ms;
+}
+  

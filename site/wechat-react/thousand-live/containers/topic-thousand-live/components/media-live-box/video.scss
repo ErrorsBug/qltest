@@ -1,0 +1,139 @@
+.video-live-player-module{
+	width: 100%;
+	height: 100%;
+	position: relative;
+
+	.video-player{
+		// position:absolute;
+		width:100%;
+		// height:100%; 
+		top:0;
+		left:0;
+		background:#000;
+    }
+    
+    .vcp-poster-pic{
+        position: absolute;
+    }
+
+	.cover-wrap {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+		z-index: 5;
+		overflow: hidden;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,.6);
+            z-index: 1;
+		}
+		
+		.bg-img{
+			width: 100%;
+			height: 100%;
+		}
+
+		.tips{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			color: #fff;
+			z-index: 2;
+			font-size: 30px;/* px */
+            text-shadow: 0 0 5px  rgba(255,255,255,.5);
+            white-space: nowrap;
+
+		}
+	}
+	
+	.count-tip {
+        font-size: 28px; /*px*/
+        color: #fff;
+        position: relative;
+        display: inline-block;
+
+        padding: 0 80px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,.8);
+            height: 2px; /*no*/
+            width: 50px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,.8);
+            height: 2px; /*no*/
+            width: 50px;
+        }
+    }
+	.count-down-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        text-align: center;
+
+        .time-show {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: 48px;
+
+            .flag {
+                margin: 0 10px;
+                color: rgba(255, 255, 255, .7);
+                font-weight: 500;
+                font-size: 40px; /*px*/
+            }
+
+            .time-block {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 8px;
+                background-color: rgba(255, 255, 255,.7);
+                width: 100px;
+                height: 72px;
+                overflow: hidden;
+
+                .time-wrap {
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                }
+
+                .num {
+                    color: #333;
+                    font-size: 40px; /*px*/
+                }
+
+                .name {
+                    color: #333;
+                    font-size: 22px; /*px*/
+                }
+            }
+
+        }
+    }
+}

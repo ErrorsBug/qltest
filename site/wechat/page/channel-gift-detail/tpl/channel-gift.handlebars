@@ -1,0 +1,77 @@
+<div class="gift-head">
+
+    {{#if gift.isSelf}}
+        {{#compare gift.remaindNum ">" 0}}
+            <span class="gift-status">剩余{{gift.remaindNum}}份</span>
+        {{/compare}} 
+        {{#compare gift.remaindNum "<=" 0}}
+            <span class="gift-status">赠礼已被领取完毕</span>
+        {{/compare}}
+    {{/if}}
+    
+    
+    
+    {{#if gift.isSelf}}
+        
+        {{#if gift.IsOverTime}}
+            <div class="gift-tips">赠礼已过期</div>
+        {{else}}
+            {{#compare gift.remaindNum "<" 0}}
+                <div class="gift-tips">赠礼全部送出</div>
+            {{/compare}}
+
+            {{#compare gift.remaindNum ">=" 0}}
+                <div class="gift-tips">赠礼将于{{gift.overTime}}天后过期</div>
+            {{/compare}}
+            
+        {{/if}}
+    {{/if}}
+    
+</div>
+<section class="gift-box ">
+    <div class="gift-top">
+        <span class="gift-top-title">赠礼</span>
+        {{#compare channelInfo.chargeType "==" "absolutely"}}
+            <span class="gift-top-money">￥{{money-format gift.price}}</span>
+        {{/compare}}
+        {{#compare channelInfo.chargeType "==" "flexible"}}
+            <span class="gift-top-money">￥{{money-format gift.price}}/{{gift.month}}个月</span>
+        {{/compare}}
+        
+        
+    </div>
+    <div class="gift-mid multi-elli">
+        <span>
+        {{channelname}}</span>
+    </div>
+    <div class="gift-bottom">
+        <div>系列课类型  <span>{{channeltype}}</span></div>
+        <div>直播间  <span>{{livename}}</span></div>
+    </div>
+</section>
+<div class="gift-btn-box">
+     {{#if gift.isSelf}}
+        {{#if gift.IsOverTime}}
+            <a class="gift-btn none" attr-href="javascript:;">赠送给好友</a>
+                <a class="gift-btn-more none" href="javascript:;">还剩{{gift.remaindNum}}份赠礼未领取，点击群发</a>
+        {{else}}
+            {{#compare gift.remaindNum ">=" 1}}
+                <a class="gift-btn" id="gift-btn" href="javascript:;" attr-href="/wechat/page/channel/giftsend/">赠送给好友</a>
+             {{/compare}}
+            {{#compare gift.remaindNum ">=" 2}}
+                <a class="gift-btn-more goto-webpage" href="javascript:;" attr-href="/wechat/page/channel/giftGroupsend/{{gift.id}}">还剩{{gift.remaindNum}}份赠礼未领取，点击群发</a>
+            {{/compare}}
+            {{#compare gift.remaindNum ">=" 1}}
+                <a class="gift-btn-more gift-self" id="gift-self" href="javascript:;" attr-href="/wechat/page/channel/giftGroupget/{{gift.id}}?useByMe=true">我来使用</a>
+            {{/compare}}
+            {{#compare gift.remaindNum "<=" 0}}
+                <a class="gift-btn none" attr-href="javascript:;">赠送给好友</a>
+                <a class="gift-btn-more none" href="javascript:;">还剩{{gift.remaindNum}}份赠礼未领取，点击群发</a>
+            {{/compare}}
+        {{/if}}
+        
+     {{else}}  
+        <a class="gift-btn" id="goto-channel" href="javascript:;" attr-channelId="{{channelInfo.channelId}}">继续前往系列课</a>
+        <a class="gift-btn-more goto-webpage" href="javascript:;" attr-href="/liveCenter/index.htm">查看其他话题</a>
+     {{/if}}
+</div>

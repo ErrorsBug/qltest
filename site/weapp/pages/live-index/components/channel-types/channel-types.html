@@ -1,0 +1,16 @@
+<scroll-view 
+    scroll-x
+    class="channel-tab-bar" 
+    scroll-left="0"
+>
+    <view 
+        wx:for="{{list}}" 
+        wx:for-item="typeItem"
+        wx:key="index"
+        data-id="{{typeItem.id}}"
+        class="channel-tab-item {{currentChannelTab===typeItem.id?'channel-tab-item-on':''}}"
+        bind:tap="switchChannelTab"
+    >
+        {{typeItem.name}}
+    </view>
+</scroll-view>

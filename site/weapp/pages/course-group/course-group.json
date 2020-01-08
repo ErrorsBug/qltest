@@ -1,0 +1,10 @@
+{
+    "usingComponents": {
+        "top-notice":"./components/top-notice/top-notice",
+        "channel-preview":"./components/channel-preview/channel-preview",
+        "group-section":"./components/group-section/group-section",
+        "btn-section":"./components/btn-section/btn-section",
+        "join-list":"./components/join-list/join-list",
+        "tips":"./components/tips/tips"
+    }
+}

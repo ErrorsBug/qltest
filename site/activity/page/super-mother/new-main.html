@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>幸福人生管理术</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="https://img.qlchat.com/qlLive/ico/favicon.ico" type="image/x-icon" />
+    <script src="../../components_modules/lib-flexible/1.0.0/lib-flexible.js"></script><!--ignore-->
+    <script src="//res.wx.qq.com/open/js/jweixin-1.2.0.js"></script><!--ignore-->
+    <script type="text/javascript" src="../../components_modules/require/2.1.18/require.js"></script><!--ignore-->
+</head>
+
+<body>
+    <div id="container">
+        <div class="main-container">    
+
+            <div class="redbg">
+                <div class="new-hader"></div>
+                
+                <div class="des">购课先领优惠券更划算</div>
+    
+                <div class="get-coupon on-log"
+                    data-log-name="获取优惠券"
+                    data-log-region="get-coupon"
+                ></div>
+    
+                <div class="mine-coupon on-log"
+                    data-log-name="我的优惠券"
+                    data-log-region="mine-coupon"
+                >  <span class="icon"></span>我的优惠券</div>
+    
+                <div class="intro-text"></div>
+    
+                <div class="video-container">
+                    <!-- <iframe frameborder="0" width="640" height="498" src="https://v.qq.com/iframe/player.html?vid=f0564fwe5va&tiny=0&auto=0" allowfullscreen></iframe> -->
+                </div>
+    
+                <div class="bottom-bg">
+    
+                </div>
+            </div>
+
+
+            <div class="tuiwen-imgs">
+
+            </div>
+        </div>
+
+        <div class="modal" id="share-modal">
+            <div class="bg darker"></div>
+            <main class="on-top">
+                <div class="share-tips"> 点击页面右上角
+                    <span class="option"></span> → <span class="timeline"></span> 分享到朋友圈， 即可获得20元优惠券，购买《叶一茜亲授：每个女人都该懂的幸福人生管理术》课程立即 <var class="red">减免20元!<var>
+                </div>
+            </main>
+        </div>
+
+        <footer class="page-footer">
+            <aside id="order-origin" class="on-log"
+                data-log-name="原价99元购买"
+                data-log-region="buy-course"
+                data-log-pos="footer"
+            >
+                <div class="price">原价99元购买</div>
+            </aside>
+            <div id="order-channel" class="order-con on-log"
+                data-log-name="立减20元购买"
+                data-log-region="buy-course"
+                data-log-pos="footer"
+            >
+                立减20元购买
+            </div>
+        </footer>
+
+    </div>
+
+    <!--SCRIPT_PLACEHOLDER-->
+    <script>
+        (function (win) {
+            require(['./new-main'], function (index) {
+                initData = {
+                    // sysTime: [[SYSTIME]]
+                }
+                index.init(initData);
+            });
+        })(window);
+    </script><!--ignore-->
+    <script type="text/javascript">
+        var _uaq = window._uaq || [];
+        // 配置站点名,默认值为： ql-h5
+        _uaq.push(['set', 'site', 'activity']);
+        // 配置站点版本, 默认值为: 1.0.0
+        _uaq.push(['set', 'sitever', '1.0.0']);
+        // 配置日志采集服务地址，用于发送采集日志,默认地址为： //collect.qlchat.com
+        _uaq.push(['set', 'server', '[[collectApiPrefix]]']);
+        // 配置渠道参数
+        _uaq.push(['set', 'ch', 'query.ch']);
+    </script><!--ignore-->
+    <script type="text/javascript" src="[[collectjs]]"></script><!--ignore-->
+    <script>
+            // 百度统计
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "//hm.baidu.com/hm.js?9f8c5d323a26421cb966b5e405d629c3";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script><!--ignore-->
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+{{#compare topicPo.style '===' 'ppt'}}
+<div class="ppt-window" id="ppt-window">
+    {{#if powerEntity.allowSpeak}}
+        <a href="javascript:;" class="btn-cancel-ppt">撤回<span class="btn-ppt-index"></span></a>
+    {{else}}
+        <span class="btn-ppt-index alone"></span>
+    {{/if}}
+    
+    <div class="ppt-window-tips" id="ppt-none-tips">
+        <div class="tips-main">
+            {{#if powerEntity.allowSpeak}}
+                <p class="align-left" data-index="1">点击底部[课件]即可课前上传课件</p>
+                <p class="align-left" data-index="2">如需上传PPT文件，请将PPT导出为图片后批量上传，最佳比例为16:9</p>
+                <p class="align-left" data-index="3">在电脑微信端打开千聊也可上传课件</p>
+                {{else}}
+                <p> <span class="icon-ppt"></span> </p>
+                <p>当前暂无课件</p>
+            {{/if}}
+        </div>
+    </div>
+</div>
+{{/compare}}

@@ -1,0 +1,56 @@
+.experience-activity-barrage{
+    position: absolute;
+    bottom: 170px;
+    right: 0;
+    z-index: 1;
+    height: auto !important; 
+    &.jion-experience-page-status{
+        bottom: 130px;
+    }
+    &.jion-experience-page-status-center{
+        right: 50%;
+        transform: translateX(50%);
+    } 
+    .barrage-item{
+        height:66px;
+        background:rgba(0,0,0,0.8);
+        border-radius:32px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 16px;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            bottom:0;
+            left: 50%;
+            transform: translate(-50%,50%) rotate(45deg);
+            border: 10px solid rgba(0,0,0,0.8);
+            border-top-color:transparent ;
+            border-left-color:transparent ;
+        }
+        img{
+            width:36px;
+            height:36px;
+            border-radius: 36px;
+            margin-right: 10px;
+        }
+        span{
+            font-size:24px; 
+            color: #fff;
+            white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            b{
+                max-width: 150px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                display: inline-block;
+                // margin-right: 10px;
+            }
+        }
+    }
+}

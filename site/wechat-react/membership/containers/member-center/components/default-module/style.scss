@@ -1,0 +1,16 @@
+@import "../../common/lib";
+
+.member-center__default-module{
+	@include module-box('../../common/img');
+	.module-image{
+		margin:40px -40px 0;
+		position:relative;
+		&.with-no-title{
+			margin:0 -40px;
+		}
+		img{
+			width:100%;
+			display:block;
+		}
+	}
+}

@@ -1,0 +1,31 @@
+<view class="container">
+    <view class="header">推荐课程 </view>
+
+    <view class="course" wx:for="{{viewList}}" wx:key="id" bind:tap="linkToTopic" data-id="{{item.id}}">
+        <image class="course-image" src="{{item.imageUrl}}" mode="aspectFill"></image>
+        <view class="info">
+            <view class="name multi-lines">
+                <image wx:if="{{item.style==='audio'}}" src="{{uri_icon_audio}}" mode="aspectFill" class="icon-audio"/>
+                <image wx:if="{{item.style==='video'}}" src="{{uri_icon_video}}" mode="aspectFill" class="icon-video"/>
+                {{item.topic}}
+            </view>
+            <view class="nums">
+                <text class="learn-num">{{item.timeStr}}</text>
+            </view>
+            <view class="status">
+                <view class="left">
+                    <view wx:if="{{item.status==='plan'}}" class="status-plan">
+                        <image class="icon-clock" src="{{uri_icon_clock}}" mode="aspectFill"/>
+                        {{item.timeAfterStr}}
+                    </view>
+                    
+                    <image wx:if="{{item.status==='ongoing'}}" class="status-ongoing" src="{{uri_status_ongoing}}" mode="aspectFill"/>
+                    
+                    <text class="time">{{item.learnNum}}人在学</text>
+                </view>
+
+                <view wx:if="{{item.type === 'charge'&&!systemIos}}" class="money">￥{{item.money}}</view>
+            </view>
+        </view>
+    </view>
+</view>

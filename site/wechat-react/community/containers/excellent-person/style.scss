@@ -1,0 +1,23 @@
+.ct-person-box{
+    height: 100%;
+    overflow: hidden;
+    .ct-person-scroll{
+        padding-bottom: 40px;
+        background: #fff;
+    }
+    .ct-person-cont{
+        margin-top: -16px;
+        border-radius: 16px 16px 0 0;
+        background: #fff;
+        min-height: 300px;
+        position: relative;
+        z-index: 2;
+    }
+    .ct-person-list{
+        padding: 0 32px;
+        .fan-info-pic{
+            height: 128px;
+            width: 128px;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+ 
+.fcd-bottom{ 
+    padding:60px 40px 0;
+    position: relative;  
+    .fcd-info{
+        display: flex; 
+        .fcd-avator{
+            width:100px;
+            height:100px;
+            margin-right:20px;
+            img{
+                width:100%;
+                height:100%;
+                border-radius:50%;
+                border-radius: 8px;
+            } 
+        }
+        .fcd-word{
+            flex:1;
+            background:rgba(247,247,247,1);
+            border-radius:0px 32px 32px 32px;
+            color:rgba(51,51,51,1);
+            line-height:32px;
+            padding: 20px 50px;
+        }
+    }
+    .fs-intro{ 
+        margin:40px 0 0;
+        img{
+            width: 100%;
+        }
+    }
+}

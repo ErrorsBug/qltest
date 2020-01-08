@@ -1,0 +1,93 @@
+@import "../../../../../assets/styles/base-definition";
+.member-center__rights-dialog{
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	background:rgba(0,0,0,.3);
+	@include flex-center;
+	z-index: 90;
+	&.hide{
+		display:none;
+	}
+	.dialog-container{
+		flex:1;
+		margin:0 60px;
+		height:650px;
+		border-radius: 10px;
+		display:flex;
+		flex-direction: column;
+		z-index: 99;
+		background:#fff;
+		overflow: hidden;
+	}
+	.rights-list{
+		flex:1;
+		display:flex;
+		overflow: hidden;
+		.rights-list-swiper{
+			width:100%;
+			height:100%;
+			& > div{
+				height:100%;
+			}
+		}
+		.right-item{
+			height:100%;
+			display:flex;
+			flex-direction: column;
+			.header{
+				height:180px;
+				flex-shrink: 0;
+				background:url(./img/header-bg.png) no-repeat center / 100%;
+				@include flex-center;
+				flex-direction: column;
+				img{
+					width:88px;
+					height:88px;
+					display:block;
+				}
+				.title{
+					color:#5A483A;
+					font-size:32px;/*px*/
+					line-height:1.5;
+					font-weight: bolder;
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+				}
+			}
+			.content{
+				flex:1;
+				margin:40px;
+				font-size:28px;/*px*/
+				line-height:1.5;
+				color:#666;
+				overflow: auto;
+			}
+		}
+	}
+	.indicator{
+		height:24px;
+		@include flex-center;
+		.dot{
+			width:8px;
+			height:8px;
+			border-radius: 100px;
+			margin:0 5px;
+			background:rgba(176,152,132,.3);
+			&.current{
+				background:rgba(176,152,132,1);
+			}
+		}
+	}
+	.close-btn{
+		height:94px;
+		border-top:1px solid $gray-border;/*no*/
+		@include flex-center;
+		color:#A0836B;
+		font-size: 32px;/*px*/
+		font-weight: bolder;
+	}
+}

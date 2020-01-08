@@ -1,0 +1,142 @@
+.gift-dialog-container {
+
+}
+
+.gift-dialog {
+    padding: 30px;
+
+    >header {
+
+        .gift-dialog-title {
+            display: block;
+            color: #333333;
+            font-size: 28px;/* px */
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .gift-dialog-tip {
+            display: block;
+            font-size: 24px;/* px */
+            color: #999999;
+            line-height: 1.4;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+
+    >main {
+
+        .gift-detail-row {
+            position: relative;
+            border-bottom: 1px solid #e5e5e5;/* no */
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            height: 100px;
+            padding: 0 20px;
+
+            .row-label {
+                font-size: 26px;/* px */
+                color: #999999;
+            }
+
+            .row-content {
+                flex: 1;
+                color: #333333;
+                display: inline-flex;
+                justify-content: flex-end;
+            }
+        }
+
+        .counter {
+            display: flex;
+            border: 1px solid #e5e5e5; /*no*/
+            border-radius: 10px;
+            align-items: center;
+            width: 200px;
+
+            i {
+                font-style: normal;
+                font-size: 40px;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 66px;
+                height: 53px;
+                cursor: pointer;
+                color: #cccccc;
+    
+                &.left {
+                    border-right: 1px solid #e5e5e5; /*no*/
+                }
+                &.right {
+                    border-left: 1px solid #e5e5e5; /*no*/
+                }
+            }
+    
+            .gift-count {
+                font-size: 24px;/*px*/
+                color: #666666;
+                width: 50px;
+                height: 52px;
+                display: flex;
+                align-items: center;
+                flex: 1;
+    
+                input {
+                    flex: 1;
+                    background: none;
+                    background-color: #fafafa;
+                    border: none;
+                    text-align: center;
+                    width: 100%;
+                    height: 100%;
+                    outline: none;
+                    font-size: 24px; /*px*/
+                }
+            }
+        }
+
+    }
+
+    >footer {
+        padding-top: 20px;
+
+        .btn-pack {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background-color: #f24461;
+            font-size: 28px;/* px */
+            height: 80px;
+            border-radius: 8px;
+            color: #ffffff;
+            cursor: pointer;
+
+            &.disable {
+                color: #ffffff;
+                background-color: #999999;
+            }
+        }
+    }
+
+    .gift-order-success{
+        padding: 10px 0 30px;
+        .content{
+            display: block;
+            line-height: 40px;/* px */
+            font-size: 30px;/* px */
+            color: #333333;
+            text-align: center;
+
+            b{
+                font-weight: normal;
+                color: #ffb400;
+            }
+        }
+    }
+}

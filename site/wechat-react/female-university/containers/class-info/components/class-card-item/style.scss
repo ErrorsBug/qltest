@@ -1,0 +1,25 @@
+.class-card-item{
+    display: flex;
+    margin-top:40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #eee; /*no*/
+    .cci-avator{
+        width:100px;
+        height:100px;
+        border-radius:70px;
+        overflow: hidden;
+        margin-right: 20px;
+        img{
+            width: 100%;
+        }
+    }
+    .cci-card-info{
+        flex: 1;
+        .cci-name{
+            font-size:32px;  
+            color:rgba(112,141,183,1);
+            line-height:44px;
+            margin-bottom: 16px;
+        } 
+    }
+}

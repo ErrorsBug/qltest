@@ -1,0 +1,19 @@
+.co-scroll-to-load {
+    position: absolute;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+	-webkit-overflow-scrolling: touch;
+	padding-bottom: 120px;
+
+	.list-loading, .list-nomore {
+		padding: 30px 15px;
+		text-align: center;
+		color: #999999;
+		font-size: 26px;/*px*/
+	}
+
+	.need-space{height:50px;}
+}

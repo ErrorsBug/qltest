@@ -1,0 +1,51 @@
+<view class="co-category-bar-container">
+    <scroll-view class="parent-list" scroll-x scroll-with-animation scroll-left="{{scrollLeft}}" bindscroll="onCateBarScroll">
+        <view class="parant-inner-list">
+            <view class="parent-item {{activeTag == '0' ? 'active' : ''}}" bindtap="onItemClick" data-tagid="0" id="tag0">
+                    <view class="inner-view">
+                        推荐
+                    </view>
+                </view>
+        
+                <view 
+                    class="parent-item {{activeTag == cate.id ? 'active' : ''}}"
+                    wx:for="{{cateList}}"
+                    wx:for-item="cate"
+                    wx:key="id"
+                    data-tagid="{{cate.id}}"
+                    bindtap="onItemClick"
+                    id="tag{{cate.id}}"
+                >
+                    <view class="inner-view">
+                        {{cate.name}}
+                    </view>
+                </view>
+        </view>
+        
+    </scroll-view>
+
+    <scroll-view class="child-list" scroll-x wx:if="{{activeTag != '0' && children.length > 0}}">
+        <view 
+            class="child-item" 
+            data-tagid="{{activeTag}}" 
+            bindtap="onChildItemClick"
+        >
+            <view class="child-inner-view {{activeChildTag == activeTag ? 'active' : ''}}">
+                全部
+            </view>
+        </view>
+
+        <view
+            class="child-item"
+            wx:for="{{children}}"
+            wx:for-item="child"
+            wx:key="{{child.id}}"
+            data-tagid="{{child.id}}"
+            bindtap="onChildItemClick"
+        >
+            <view class="child-inner-view {{activeChildTag == child.id ? 'active' : ''}}">
+                {{child.name}}
+            </view>
+        </view>
+    </scroll-view>
+</view>

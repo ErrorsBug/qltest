@@ -1,0 +1,31 @@
+.fhl-d-item{
+    min-height: 100px;
+    text-size-adjust: none; 
+    position: relative;
+    padding-bottom: 40px; 
+    margin-bottom: 40px;
+    border-bottom:2px solid #EEEEEE;/*no*/
+    &:last-child{ 
+        border-bottom: none;
+    } 
+    .fhl-share-ico{
+        position: absolute;
+        right:-8px;
+        top:-13px;
+        width:60px;
+        height:60px;
+        background: url('https://img.qlchat.com/qlLive/business/4UK5Y4OQ-8V97-MH4Y-1564109463227-BSJSQ31C9UFW.png') no-repeat center center;
+        background-size: 48px 48px;
+    }
+    .fhl-d-title{
+        font-size:26px; 
+        color:rgba(153,153,153,1);
+        line-height:32px; 
+        .on{    
+            padding-left: 52px;
+            background:url('https://img.qlchat.com/qlLive/business/R3LOBS6V-5QEF-118T-1559728755448-DITOXWZOD4MK.png') no-repeat 0 center;
+            background-size: 32px 32px;   
+        }
+    } 
+}
+ 

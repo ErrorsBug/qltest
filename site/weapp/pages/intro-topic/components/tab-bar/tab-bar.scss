@@ -1,0 +1,41 @@
+.tab-bar{
+    height: 100rpx;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1rpx solid #f0f0f0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+
+    .tab{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .text{
+            color: #424242;
+            font-size: 30rpx;
+            height: 100rpx;
+            line-height: 100rpx;
+
+            &.active{
+                color: #f73657;
+                position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    background-color: #f73657;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 4rpx;
+                    border-radius: 4rpx;
+                }
+            }
+        }
+    }
+}

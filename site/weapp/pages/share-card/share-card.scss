@@ -1,0 +1,222 @@
+
+.share-card-canvas {
+    width: 640rpx;
+    height: 1136rpx;
+    visibility: hidden;
+    position: absolute;
+    top: -1000rpx;
+    left: -1000rpx;
+}
+
+.share-card-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    overflow: auto;
+    padding-bottom: 100rpx;
+
+    .header {
+        display: flex;
+        align-items: center;
+        border-bottom: 1rpx solid #f0f0f0;
+        padding: 30rpx;
+
+        .notice-wrap {
+            flex: 1;
+            display: inline-flex;
+            align-items: center;
+
+            .notice-icon {
+                width: 27rpx;
+                height: 24rpx;
+                margin-right: 10rpx;
+            }
+
+            .notice {
+                flex: 1;
+                position: relative;
+            }
+
+            .notice-content {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                color: #bca182;
+                font-size: 24rpx;
+                line-height: 28rpx;
+            }
+
+            .next-notice {
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                transform: translateY(100%);
+            }
+        }
+
+        .share-earning {
+            display: inline-flex;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: nowrap;
+            font-size: 24rpx;
+            color: #f85473;
+            font-weight: bold;
+
+            .earning-icon {
+                width: 24rpx;
+                height: 24rpx;
+                margin-right: 5rpx;
+            }
+        }
+    }
+
+    .swiper {
+        position: relative;
+        overflow: visible;
+        margin-top: 30rpx;
+        height: 848rpx;
+        padding-bottom: 30rpx;
+        border-bottom: 1rpx solid #f0f0f0;
+
+        .swiper-item {
+            box-sizing: border-box;
+            padding: 0 40rpx;
+
+            .image-wrap {
+                position: relative;
+                display: flex;
+                align-items: center;
+                border-radius: 8rpx;
+                width: 100%;
+
+                image.icon-loading {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    width: 50rpx;
+                    height: 50rpx;
+                    transform: translate(-50%, -50%);
+                    z-index: 2;
+                }
+
+                image.card {
+                    position: relative;
+                    z-index: 3;
+                    border-radius: 8rpx;
+                    width: 100%;
+                    height: 90%;
+                    box-shadow: 0 11rpx 30rpx rgba(74, 57, 57, .2);
+                    transition: linear .3s all;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0, 0, 0, .5);
+                        transition: linear .3s all;
+                    }
+
+                    &.active {
+                        height: 100%;
+                        box-shadow: 0 11rpx 30rpx rgba(74, 57, 57, .2);
+
+                        &::before {
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .point-for-attention {
+        position: relative;
+        padding: 40rpx 30rpx;
+
+        .btn-focus {
+            position: absolute;
+            right: 35rpx;
+            top: 0;
+            transform: translateY(-50%);
+            padding: 0;
+            border: none;
+    
+            image {
+                width: 135rpx;
+                height: 135rpx;
+                box-shadow: 0 7rpx 21rpx rgba(19, 3, 3, .1);
+                border-radius: 50%;
+            }
+        }
+
+        .attention-header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            font-size: 28rpx;
+            color: #424242;
+            padding-bottom: 20rpx;
+
+            image {
+                width: 30rpx;
+                height: 30rpx;
+                margin-right: 10rpx;
+            }
+        }
+
+        .attention-content {
+            font-size: 24rpx;
+            color: #999999;
+            line-height: 40rpx;
+
+            .price-text {
+                display: inline;
+                color: #f85473;
+            }
+        }
+    }
+
+}
+
+.buttons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10rpx 15rpx;
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    box-shadow: 0 0 50rpx rgba(19, 3, 3, .1);
+
+    button {
+        height: 80rpx;
+        background-color: transparent;
+        border: none;
+        border-radius: 10rpx;
+        color: #ffffff;
+        font-size: 32rpx;
+        width: 100%;
+        margin: 0 15rpx;
+    }
+
+    .btn-share-to-friend {
+        background-color: #fd7b94;
+    }
+
+    .btn-save-share-card {
+        background-color: #f85473;
+    }
+}

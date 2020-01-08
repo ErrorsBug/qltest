@@ -1,0 +1,116 @@
+@import "../../assets/styles/mixins.scss";
+
+.__tab-view {
+    .tab-list {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 100px;
+        background-color: #fff;
+        @include afterBorderBottom1px;
+        .tab-item {
+            flex: 1 0;
+            color: #424242;
+            font-size: 30px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+            span {
+                position: relative;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            &.active {
+                color: #333;
+                span::after {
+                    content: "";
+                    position: absolute;
+                    height: 4px;
+                    border-radius: 10px;
+                    background-color: #f73657;
+                    width: 100%;
+                    bottom: 2px;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                }
+            }
+
+        }
+    }
+
+    .content-list {
+        .content-item {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
+    }
+}
+
+
+
+.co-tab-view-v2 {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    .tab-item {
+        position: relative;
+        flex: 1;
+        height: 88px;/*px*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        color: #666;
+        font-size: 28px;/*px*/
+        line-height: 88px;/*px*/
+        cursor: pointer;
+        p {
+            position: relative;
+            height: 100%;
+            // span {
+            //     position: absolute;
+            //     font-size: 22px;/*px*/
+            //     line-height: 32px;/*px*/
+            //     min-width: 32px;/*px*/
+            //     color: #fff;
+            //     background-color: #F73657;
+            //     border-radius: 32px;/*px*/
+            //     margin-left: 16px;/*px*/
+            //     top: 50%;
+            //     left: 100%;
+            //     transform: translateY(-50%);
+            //     white-space: nowrap;
+            //     padding: 0 .4em;
+            //     box-sizing: border-box;
+            //     text-align: center;
+            // }
+        }
+        &.active {
+            color: #333;
+            font-weight: bolder;
+            font-size: 32px;/*px*/
+            p {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 36px;/*px*/
+                    height: 6px;/*px*/
+                    background-color: #F73657;
+                    border-radius: 3px;/*px*/
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: 1px;/*px*/
+                }
+            }
+        }
+        @include afterBorderBottom1px;
+    }
+}

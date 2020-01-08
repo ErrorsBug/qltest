@@ -1,0 +1,39 @@
+.coral-focus{
+    height: 100%;
+
+    .focus-box{
+        width:100%;
+        position: relative;
+        .img-bg {
+            width: 750px;
+            margin: 0 auto;
+            display: block;
+            pointer-events: none;
+        }
+        .name{
+            width:92px;
+            height: 92px;
+            border-radius: 100%;
+            position: absolute;
+            top:522px;
+            left:50%;
+            transform: translateX(-47%);
+        }
+        .qrcode{
+            position: absolute;
+            top:854px;
+            left:50%;
+            transform: translateX(-50%);
+            display: block;
+            
+            // height: 202px;
+            // padding-bottom:100%;
+            img{
+                padding: 977px 270px 150px; 
+                margin: -977px -270px -150px; 
+                width: 201px;
+                height: 201px;
+            }
+        }
+    }
+}

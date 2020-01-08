@@ -1,0 +1,206 @@
+.business-payment-takeincome {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .scroll {
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    .form {
+        .form-item {
+            display: flex;
+            padding: 23px 40px;
+            background: #fff;
+            font-size: 30px; /*px*/
+            line-height: 42px; /*px*/
+
+            &:not(:last-child) {
+                margin-bottom: 2px; /*px*/
+            }
+
+            .title {
+                width: 150px;
+            }
+            .input {
+                flex: 1;
+
+                input {
+                    text-align: right;
+                    line-height: 42px; /*px*/
+                    font-size: 30px; /*px*/
+                    width: 100%;
+                    border: 0 none;
+                    background: transparent;
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    .text {
+        font-size: 22px; /*px*/
+        text-size-adjust: none;
+        padding: 0 40px 22px;
+        color: #999999;
+        line-height: 30px; /*px*/
+        span {
+            color: #333;
+        }
+
+        & .link {
+            color: #f73657;
+        }
+    }
+
+    .moneyrate {
+        padding: 25px 40px;
+        span {
+            color: #f73657;
+        }
+    }
+
+    .desc-box {
+        padding-top: 40px;
+        line-height: 30px;
+        .title {
+            font-size: 28px; /*px*/
+            line-height: 36px; /*px*/
+            color: #333;
+        }
+    }
+
+    .upload-box {
+        font-size: 30px; /*px*/
+        margin-top: 20px;
+        .header {
+            padding: 0 40px;
+            position: relative;
+            height: 88px;
+            line-height: 88px;
+            background: #fff;
+            border-bottom: 1px solid #f7f7f7;
+        }
+
+        .upload-tip {
+            display: inline-block;
+            height: 26px;
+            width: 26px;
+            margin-left: 10px;
+            position: relative;
+            top: 2px;
+            background: url("./img/search.png") no-repeat;
+            background-size: 100%;
+        }
+
+        .content {
+            background: #fff;
+            padding: 40px 0;
+
+            .upload-img-wrap {
+                margin: 0 auto;
+                width: 670px;
+                height: 367px;
+                background: #f7f7f7;
+                border-radius: 10px;
+                border: 2px solid #d0d0d0;
+                position: relative;
+
+                .upload-empty {
+                    box-sizing: border-box;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    padding: 183px 65px 0;
+                    text-align: center;
+                }
+                .upload-title {
+                    font-size: 30px; /*px*/
+                    line-height: 42px; /*px*/
+                    font-weight: 500;
+                    margin-bottom: 10px;
+                }
+                .upload-desc {
+                    color: #999999;
+                    font-size: 22px; /*px*/
+                    line-height: 30px; /*px*/
+                }
+                .icon-upload {
+                    position: absolute;
+                    top: 73px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    display: block;
+                    background: url("./img/icon_upload.png") no-repeat;
+                    background-size: 100%;
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+            .file {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+            }
+        }
+        .download-btn {
+            font-size: 26px; /*px*/
+            position: absolute;
+            top: 50%;
+            right: 40px;
+            transform: translateY(-50%);
+            width: 164px; /*px*/
+            height: 60px; /*px*/
+            line-height: 60px; /*px*/
+            text-align: center;
+            background: #f73657;
+            border-radius: 30px;
+            color: #fff;
+        }
+    }
+
+    .bottom-btn-wrap {
+        padding: 12px 0;
+        background: #fff;
+        .bottom-btn {
+            &.disabled {
+                background: #ececec;
+            }
+            margin: 0 auto;
+            width: 670px;
+            height: 76px;
+            background: #f73657;
+            border-radius: 50px;
+            font-size: 32px; /*px*/
+            color: #fff;
+            text-align: center;
+            line-height: 76px;
+        }
+    }
+
+    .promise-dialog {
+        .content {
+            padding: 0 76px 0 80px;
+            font-size: 28px; /*px*/
+            color: #666666;
+            line-height: 40px;
+            a {
+                color: #f73657;
+            }
+        }
+        .promise-item {
+            display: flex;
+
+            .content-text {
+                padding: 0;
+                // line-height:40px; /*px*/
+            }
+        }
+    }
+}

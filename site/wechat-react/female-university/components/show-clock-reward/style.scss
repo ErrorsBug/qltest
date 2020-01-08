@@ -1,0 +1,169 @@
+
+.clock-reward-container{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 12;
+    box-sizing: border-box;
+    overflow: hidden;
+    @keyframes lightMove {
+        0% {transform: rotate(0deg);}
+        25% {transform: rotate(90deg);}
+        50% {transform: rotate(180deg);}
+        75% {transform: rotate(270deg);}
+        100% {transform: rotate(360deg);}
+    }
+    @keyframes scaleBox {
+        0% {transform: scale(0.9);}
+        50% {transform: scale(1.1);}
+        100% {transform: scale(1);}
+    }
+    .light{
+        width: 100%;
+        height: 750px;
+        position: absolute;
+        top:50%;
+        margin-top: -523px;
+        z-index: 12;
+        background: url('./img/linght.png') no-repeat;
+        background-size: cover;
+        animation: lightMove 2s linear infinite;
+    }
+    .head-logo{
+        z-index: 12;
+        position: absolute;
+        left: 50%;
+        margin-left: -306px;
+        top:50%;
+        margin-top: -522px;
+        width: 612px;
+        height: 342px;
+        animation: scaleBox 0.3s linear;
+        &.money{
+            background: url('./img/money.png') no-repeat;
+            background-size: cover;
+        }
+        &.popular{
+            background: url('./img/popular.png') no-repeat;
+            background-size: cover;
+        }
+        &.present{
+            background: url('./img/present.png') no-repeat;
+            background-size: cover;
+        }
+        &.time{
+            background: url('./img/time.png') no-repeat;
+            background-size: cover;
+        }
+    }
+    .clock-reward-center{
+        position: absolute;
+        z-index: 13;
+        left:50%;
+        top:50%;
+        width: 628px;
+        height: 558px;
+        margin-left: -314px;
+        margin-top: -279px;
+        background-color: #E0414F;
+        border-radius: 32px;
+        animation: scaleBox 0.3s linear;
+
+        >h4{
+            color:#fff;
+            font-size: 48px;
+            text-align: center;
+            margin: 48px auto 32px;
+            span{
+                position: relative;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 26px;
+                    height: 32px;
+                    background-image: url('./img/left-horn.png');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    left:-36px;
+                    top:-10px;
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 26px;
+                    height: 32px;
+                    background-image: url('./img/right-horn.png');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    right:-36px;
+                    top:-10px;
+                }
+            }
+        }
+        .reward{
+            width:548px;
+            height:314px;
+            margin: 0 auto;
+            background:linear-gradient(180deg,rgba(255,247,227,1) 0%,rgba(255,237,194,1) 100%);
+            border-radius:32px;
+            text-align: center;
+            overflow: hidden;
+            line-height: 1.4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .pr-dialog-box{
+                p.name{
+                    font-size: 36px; /*px*/
+                    color:#8D4147;
+                    font-weight: bold;
+                }
+                p.content{
+                    font-size: 100px; /*px*/
+                    color:#E0414F;
+                    font-weight: bold;
+                    span{
+                        font-size: 60px; /*px*/
+                    }
+                }
+                // div.reward-pic{
+                //     width: 182px;
+                //     height: 182px;
+                //     background-color: #ccc;
+                //     margin: 38px auto 16px;
+                // }
+                // div.reward-pic-name{
+                //     color:#8D4147;
+                //     text-align: center;
+                //     font-size: 30px;/*px*/
+                // }
+            }
+            
+        }
+        .deadline-tips{
+            margin-top: 24px;
+            font-size: 24px; /*px*/
+            color:#fff;
+            text-align: center;
+        }
+        .get-present{
+            position: absolute;
+            left:50%;
+            margin-left: -168px;
+            bottom:-136px;
+            width: 336px;
+            height: 88px;
+            line-height: 88px;
+            border-radius:44px;
+            background-color: #FFF7E1;
+            color:#8D4147;
+            cursor: pointer;
+            font-size: 40px; /*px*/
+            text-align: center;
+            font-weight: bold;
+        }
+
+    }
+}

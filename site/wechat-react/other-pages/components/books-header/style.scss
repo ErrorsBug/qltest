@@ -1,0 +1,68 @@
+@font-face {
+    font-family: "SourceHanSans";
+    font-weight: 900;
+    font-display: swap;
+    src: local('SourceHanSans'),
+         url('https://static.qianliaowang.com/rs/library/fonts/SourceHanSerifCN-Bold.woff2') format('woff2'),
+         url('https://static.qianliaowang.com/rs/library/fonts/SourceHanSerifCN-Bold.woff') format('woff'),
+         url('https://static.qianliaowang.com/rs/library/fonts/SourceHanSerifCN-Bold.ttf') format('ttf');
+}
+
+
+.br-book-header{
+    height: 308px;
+    width: 100%;
+    background: url('./img/bg.png') no-repeat center;
+    background-size: 100% ;
+    padding: 32px 12px 0 32px;
+    box-sizing: border-box;
+    .br-book-title{
+        padding-right: 20px;
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        &.hot{
+            background: url('./img/icon-hot.png') no-repeat right center;
+            background-size: 176px; /*px*/
+        }
+        &.new{
+            background: url('./img/icon-new.png') no-repeat right center;
+            background-size: 176px;/*px*/
+        }
+        &.books{
+            background: url('./img/icon-books.png') no-repeat right center;
+            background-size: 176px;/*px*/
+        }
+        &::before{
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 74px;
+            height: 2px; /*px*/
+            background: #E7E3DB;
+            content:'';
+        }
+        h3{
+            font-size: 60px; /*px*/
+            background:linear-gradient(135deg, rgba(166,132,67,1) 0%, rgba(118,86,52,1) 100%);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+            color:rgba(51,51,51,1);
+            line-height: 1.5;
+            margin-bottom: 4px;
+            font-family: 'SourceHanSans', 'Times New Roman', Times, serif !important;
+        }
+        p{
+            font-size: 26px; /*px*/
+            color: #B1A290;
+            line-height: 1.4;
+            max-width: 540px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            box-sizing: border-box;
+            overflow: hidden;
+            font-family: 'SourceHanSans', 'Times New Roman', Times, serif !important;
+        }
+    }
+}

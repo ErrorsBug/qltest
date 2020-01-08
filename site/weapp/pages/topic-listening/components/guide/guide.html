@@ -1,0 +1,18 @@
+<view 
+    class="guide-container" 
+    wx:if="{{visible}}"
+    bindtap="hideGuide" 
+    animation="{{animationData}}" 
+     catchtouchmove="onTouchMove"
+    >
+    <image 
+        class="guide-01" 
+        src="../../img/guide-01.png" 
+        mode="widthFix"
+    ></image>
+    <image 
+        class="guide-02" 
+        src="../../img/guide-02.png" 
+        mode="widthFix"
+    ></image>
+</view>

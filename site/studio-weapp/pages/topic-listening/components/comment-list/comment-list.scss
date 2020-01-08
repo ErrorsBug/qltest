@@ -1,0 +1,99 @@
+.comment-section
+{
+	background-color: #fff;
+	margin-top: 14rpx;
+	padding: 30rpx 0;
+	.comment-preview
+	{
+		padding: 10rpx 45rpx 10rpx 33rpx;
+		font-size: 30rpx;
+		color: #424242;
+		font-weight: bold;
+		.sum
+		{
+			color: #f73657;
+			margin-left: 10rpx;
+		}
+	}
+	.comment-list
+	{
+		padding: 0 30rpx;
+		.list-item
+		{
+			position: relative;
+			padding: 30rpx 0 30rpx 104rpx;
+			border-bottom: 1rpx solid #f0f0f0;
+			.avatar
+			{
+				width: 70rpx;
+				height: 70rpx;
+				border-radius: 100%;
+				position: absolute;
+				top: 30rpx;
+				left: 15rpx;
+			}
+			.info
+			{
+				.name
+				{
+					font-size: 30rpx;
+					color: #999090;
+					margin-bottom: 10rpx;
+				}
+				.content
+				{
+					font-size: 30rpx;
+					color: #333;
+					line-height: 1.6;
+				}
+				.addition
+				{
+					margin-bottom: 25rpx;
+					line-height: 1;
+					.time
+					{
+						font-size: 24rpx;
+						color: #999090;
+					}
+					// 点赞去掉 
+					// .praise{
+					//     float: right;
+					//     font-size: 24rpx;
+					//     color: #999090;
+					//     display: flex;
+					//     align-items: center;
+					//     justify-content: flex-start;
+					//     &::before{
+					//         content: '';
+					//         display: inline-block;
+					//         vertical-align: top;
+					//         background-image: url(./img/icon-praise.png);
+					//         background-size: 29rpx 29rpx;
+					//         background-position: center;
+					//         height: 40rpx;
+					//         width: 40rpx;
+					//         background-repeat: no-repeat;
+					//         margin-right: 14rpx;
+					//     }
+					// }
+				}
+			}
+		}
+	}
+	.comment-nomore
+	{
+		height: 60rpx;
+		line-height: 60rpx;
+		font-size: 24rpx;
+		color: #999090;
+		text-align: center;
+	}
+	.comment-noneone
+	{
+		height: 180rpx;
+		line-height: 180rpx;
+		font-size: 32rpx;
+		color: #999090;
+		text-align: center;
+	}
+}

@@ -1,0 +1,120 @@
+{{#compare data.type "==" "end"}}
+    <dt class="bubble-dt end-tips" attr-id="{{data.id}}"><b>直播已结束
+        {{#compare topicExtendPo.isWhisperOpen "==" "Y"}}
+            ，<a class="over-ask" href="CtxPath/live/whisper/list.htm?topicId={{topicPo.id}}">有问题点此处继续问老师</a>
+        {{/compare}}
+    </b></dt>
+{{/compare}}
+{{#compare data.type "==" "redpacket"}}
+    <dt class="luckyMoney"  
+        attr-id="{{data.id}}" 
+        attr-createby="{{data.createBy}}" 
+        attr-time="{{createTime}}" >
+
+        <div class="lm-main" 
+             attr-myself="{{#compare data.commentId "==" userPo.id}}true{{else}}false{{/compare}}" 
+             attr-imgUrl="{{speakCreateByHeadImgUrl}}" 
+             attr-money="{{data.rewardMoney}}" 
+             attr-response="{{data.rewardResponse}}"> 
+
+             <var>{{data.speakCreateByName}}</var> 赞赏了 <var>{{data.content}}</var> 一个<b>{{data.rewardMoney}}元红包</b>
+        </div>
+    </dt>
+{{/compare}}
+{{#compare data.type "==" "prompt"}}
+    <dt class="bubble-dt end-tips" attr-id="{{data.id}}"><b>{{data.content}}</b></dt>
+{{/compare}}
+{{#compare data.type "==" "whisper"}}
+    <dd class="whisperDd {{isL}}" attr-id="{{data.id}}" attr-commentId="{{data.commentId}}" attr-createby="{{data.createBy}}" attr-time="{{createTime}}" >
+        <div class="speak-time">{{speakTime}}</div>
+        <div class="head-portrait"><img src="{{defaultVal data.commentcreateByHeadImgUrl speakCreateByHeadImgUrl}}"></div>'
+        <div class="speaker-name"><b>{{data.commentCreateByName}}</b></div>
+        <div class="bubble-content isWhisper">
+            <p><i>{{answerRole}}</i><var>{{data.speakCreateByName}}</var>回复了</p>
+            <p class="content-q">{{data.content}}<i>点击听回答</i></p>
+            <div class="whisper-div"><span>私问</span><i class="icon-question"></i></div>
+        </div>
+    </dd>'
+{{/compare}}
+{{#compare data.msgType "==" "else"}}
+<dd class="{{isL}}" attr-id="{{data.id}}" data-fileid="{{data.fileId}}" attr-time="{{createTime}}" attr-createby="{{data.createBy}}">
+    <div class="speak-time">{{speakTime}}</div>
+    <div class="head-portrait">
+        <img src="{{speakCreateByHeadImgUrl}}"></div>
+    <div class="speaker-name"><b>{{data.speakCreateByName}}</b>{{guestrole}}</div>
+    <div class="bubble-content {{contentType}}">
+        {{#if isGif}}
+        <span class="gifShadow"><b>GIF</b></span>
+        {{/if}}
+        {{#if isComment}}
+        <p><b>{{data.commentCreateByName}}</b>
+            {{#compare data.isReplyQuestion "==" "Y"}}<em class="ask-label">问</em>{{/compare}}
+            {{#compare data.commentType "==" "text"}}{{data.commentContent}}{{/compare}}
+            {{#compare data.commentType "==" "image"}}<img src="{{data.commentContent}}">{{/compare}}
+        </p>
+        {{/if}}
+            {{#compare data.type "==" "text"}}
+                {{#compare data.content "!=" ""}}
+                <p>{{#if isShowRe}}<b>回复:</b>{{/if}}
+                    {{{bubbleContent}}}
+                </p>
+                {{/compare}}
+            {{/compare}}
+            {{#compare data.type "==" "image"}}<img src="{{bubbleContent}}">{{/compare}}
+            {{#compare data.type "==" "audio"}}
+                <i class="audio-info icon-audio-play" attr-src="{{bubbleContent}}"></i>
+                <span class="audio-bar-area">
+                    <span class="before"></span>
+                    <span class="front-bar"></span>
+                    <span class="block" data-second="{{data.second}}" data-current="0″"><b></b></span>
+                </span>
+                <var>{{secondView}}</var>
+            {{/compare}}
+            {{#compare data.type "==" "video"}}
+                {{#if isVideo}} 
+                <iframe frameborder="0" id="imIf" name="imIf" src="{{data.content}}" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+                    {{#if isAndroidBoolean}} 
+                    <div class="play-video"></div>
+                    {{/if}}
+                {{/if}}
+            {{/compare}}
+            {{#compare data.type "==" "doc"}}
+                <a class="download-link" href="{{files.convertUrl}}">
+                    <main class="file-msg">
+                        <span style="background-image:url({{files.icon}})"></span>
+                        <section data-fileimage="{{files.icon}}" 
+                                data-filename="{{files.name}}" 
+                                data-filesize="{{files.size}}" 
+                                data-url="{{files.convertUrl}}" 
+                                data-type="{{files.type}}" 
+                                data-download="{{files.downloadCount}}" 
+                                data-uploadtime="{{files.createTime}}" 
+                                data-charge="{{files.amount}}" data-haspay="{{files.isPaid}}" data-docid="{{docId}}">
+                            <h1 class="multi-elli">{{files.name}}</h1>
+                            <p>{{files.size}}</p>
+                        </section>
+
+                        {{#compare payTepl "==" "default"}}
+                            {{#if data.isPaid}}
+                                <p class="paid">已支付<span>￥{{files.amounts}}</span><i>点击下载</i></p>
+                            {{else}}
+                                <p>支付<span>￥{{files.amounts}}</span><i>立即下载</i></p>
+                            {{/if}}
+                        {{/compare}}
+                        {{#compare payTepl "==" "mgr"}}
+                            <p class="paid">￥{{files.amounts}}<span></span><i>点击下载</i></p>
+                        {{/compare}}
+                        {{#compare payTepl "==" "free"}}
+                            <p>免费<span></span><i>立即下载</i></p>
+                        {{/compare}}
+                    </main>
+                </a>
+            {{/compare}}
+
+        <div class="zan" data-id="{{data.id}}"><b class="icon-praise"></b><span class="count"></span></div>
+    </div><a class="btn-ilike" href="javascript:;">赏</a>
+    {{#if isMgr}}
+    <a class="btn-revoke icon-return" href="javascript:;"></a>
+    {{/if}}
+</dd>
+{{/compare}}

@@ -1,0 +1,26 @@
+.tips-card {
+    position: relative;
+    display: block;
+    margin: 30rpx;
+    padding: 30rpx;
+    border: solid 1rpx #e6e6e6;
+    border-radius: 6rpx;
+    background-color: #fafafa;
+}
+
+.tips-card-title {
+    display: block;
+    height: 60rpx;
+    line-height: 60rpx;
+    font-size: 32rpx;
+    color: #424242;
+}
+
+.tips-card-content{
+    list-style-type: decimal;
+    line-height: 1.4;
+    font-size: 26rpx;
+    padding: 0 10rpx 0 4rpx;
+    // margin-left: 40rpx;
+    color: #736c6c;
+}

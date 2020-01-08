@@ -1,0 +1,50 @@
+.invite-item-box{
+    padding-top: 48px;
+    overflow: hidden;
+    position: relative;
+    .tr-item-pic{
+        float: left;
+        position: relative; 
+        >div{
+            background: #e5e5e5;
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            border-radius:100px;
+            display: block;
+            border: 1px solid #eee;/*no*/
+        }
+    }
+    .tr-item-info{
+        margin-left: 144px;
+        position: relative; 
+        display: flex;
+        align-items: center; 
+        min-height: 100px;
+        .name{
+            display: flex;
+            font-size: 30px;/* px */
+            align-items: center;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 8px;
+            line-height: 1.5;
+            position: relative;
+            padding-right: 78px; 
+        }
+        .info{
+            display: block;
+            font-size: 26px;/* px */
+            color: #999;
+            line-height: 36px;/* px */
+        }
+    }
+    .ivi-money{
+        position: absolute;
+        top:50%;
+        right:8px;
+        font-size:26px; /* px */
+        color:rgba(224,65,79,1);
+        line-height:36px;
+    }
+}

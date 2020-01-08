@@ -1,0 +1,161 @@
+/*热门直播间*/
+.lives
+{
+	/*padding-top: 20px;*/
+	padding-left: 30px;
+	/*padding-right: 30px;*/
+	/*padding-bottom: 30px;*/
+	padding-right: 30px;
+	margin-bottom: 16px;
+	background-color: #fff;
+}
+
+.live:first-child
+{
+	border-top: none;
+}
+
+.live
+{
+	padding-top: 26px;
+	/*padding-right: 30px;*/
+	padding-bottom: 26px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	cursor: pointer;
+	border-top: 1px solid #f0f0f0;/*no*/
+}
+
+.live > span
+{
+	display: inline-block;
+	vertical-align: top;
+	width: 104px;
+	height: 0;
+	padding-bottom: 104px;
+	position: relative;
+}
+
+.live > span > img
+{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 100%;
+}
+
+.live-detail
+{
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 26px;
+	position: relative;
+	overflow: hidden;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	display: -webkit-flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	/*align-items: center;*/
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+.live-detail > h2
+{
+	color: #333;
+	font-size: 32px;/*px*/
+	line-height: 1;
+	height: 32px;/*px*/
+	max-height: 36px;/*px*/
+	overflow: hidden;
+	/*font-weight: normal;*/
+	padding-right: 120px;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	font-weight: normal;
+}
+
+.live-detail > span
+{
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	color: #a8adb2;
+	font-size: 26px;/*px*/
+	height: 26px;/*px*/
+	max-height: 26px;/*px*/
+	line-height: 1;
+	margin-top: 10px;
+}
+
+.live-detail p
+{
+	font-size: 22px;/*px*/
+	color: #909499;
+	bottom: 0;
+	position: absolute;
+	height: 22px;/*px*/
+	width: 100%;
+	overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+
+.live-detail .live-focus
+{
+	position: absolute;
+	right: 1px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	color: #fff;
+	display: block;
+	font-size: 26px;/*px*/
+	width: 108px;
+	height: 58px;
+	line-height: 58px;
+	text-align: center;
+	border-radius: 6px;
+	background-color: #419cf9;
+	cursor: pointer;
+}
+
+.live-detail .live-focus.on
+{
+	color: #fff;
+	cursor: default;
+	background-color: #ebebeb;
+}
+
+.live-detail .live-focus::before
+{
+	display: inline-block;
+	content: '';
+	width: 20px;
+	height: 20px;
+	vertical-align: top;
+	margin-top: 17px;
+	margin-right: 8px;
+	background-image: url(./img/add.png?__inline);
+	background-size: contain;
+	-webkit-transform: translateY(1px);
+	        transform: translateY(1px);
+}
+
+.live-focus.on::before
+{
+	display: none;
+}

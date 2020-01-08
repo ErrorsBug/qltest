@@ -1,0 +1,192 @@
+@import "../../../assets/styles/mixins.scss";
+
+.live-vip-income{
+
+    // tab切换
+    .tab-type{
+        display: flex;
+        height: 88px;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        border-bottom: solid 1px #e5e5e5;/* no */
+
+        .item{
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            height: 88px;
+            font-size: 30px;/* px */
+            color:#2d2d2d;
+            cursor: pointer;
+
+            &.on{
+                color: #ff415e;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 110px;
+                    height: 4px;
+                    background: #ff415e;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+
+        }
+    }
+
+    //vip数据展示
+    .vip-income-detail{
+        display: flex;
+        height: 120px;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+
+        .item{
+            position: relative;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            height: 120px;
+            cursor: pointer;
+
+            &::before{
+                content: "";
+                position: absolute;
+                width: 1px;/* no */
+                height: 40px;
+                background: #e5e5e5;
+                top: 50%;
+                right:0;
+                transform: translateY(-50%);
+            }
+
+            &:last-child::before{
+                display: none;
+            }
+
+            b{
+                color: #333333;
+                font-size: 32px;/* px */
+                line-height: 46px;/* px */
+            }
+            i{
+                font-style: normal;
+                font-size: 20px;/* px */
+                color: #999999;
+            }
+
+
+        }
+    }
+
+
+
+    //购买记录列表
+    .live-vip-income-list{
+        padding-top: 20px;
+        
+        .user-item{
+            display: flex;
+            padding: 30px;
+            background: #fff;
+            position: relative;
+            @include afterBorderBottom1px;
+            &::after {
+                left: 30px;
+            }
+            &:last-child::after {
+                content: none;
+            }
+            
+            .head{
+                width: 100px;
+                img{
+                    width: 80px;
+                    height: 80px;
+                    display: block;
+                    overflow: hidden;
+                    border-radius: 100px;
+                }
+            }
+
+            .main{
+                flex: 1;
+                .name{
+                    color: #333333;
+                    font-size: 28px;/* px */
+                    display: flex;
+                    align-items: center;
+                    height: 40px;/* px */
+                    i{
+                        font-style: normal;
+                        font-size: 24px;/* px */
+                        color: #999999;
+                        margin-left: 10px;
+                    }
+                }
+
+                .money{
+                    display: inline-flex;
+                    height: 40px;
+                    font-size: 24px;/* px */
+                    color: #999999;
+                    align-items: center;
+                    i{
+                        font-style: normal;
+                        font-size: 24px;/* px */
+                        color: #ff4b69;
+                    }
+
+                }
+
+                .date{
+                    display: inline-flex;
+                    height: 40px;
+                    font-size: 22px;/* px */
+                    color: #999999;
+                    align-items: center;
+                    margin-left: 20px;
+                }
+                .ios-wrap{
+                    margin-top: 8px;
+                }
+                .ios-plan{
+                    display: inline-block;
+                    color: #999999;
+                    padding: 6px 8px;
+                    border: 1px solid #999;
+                    font-size: 22px;/* px */
+                    .ios-icon{
+                        display: inline-block;
+                        vertical-align: text-bottom;
+                        width: 20px; 
+                        height: 25px;
+                        margin-left: 8px;
+                        background: url(../../../assets/images/common/ios.png) center center no-repeat;
+                        background-size: 100%;
+                    }
+                }
+
+                .info{
+                    margin-top: 20px;
+                    font-size: 24px;/* px */
+                    color: #666666;
+                    background: #fbf8f8;
+                    padding: .3em .7em;
+                    line-height: 36px;/* px */
+                    border-radius: 8px;
+                }
+            }
+        }
+    }
+
+
+}

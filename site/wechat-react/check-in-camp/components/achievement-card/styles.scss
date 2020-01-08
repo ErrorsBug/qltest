@@ -1,0 +1,55 @@
+.achevement-card {
+    background-color: rgba(0,0,0,0)!important;
+    .achevement-card-container {
+        width: 528px;
+        img {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            .head-img {
+                flex-shrink: 0;
+                height: 90px;
+                width: 90px;
+                border: solid 2px #f2f2f2;
+                margin-right: 40px;
+                border-radius: 50%;
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            .text {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 26px;/*px*/
+                color: #333;
+                background-color: #fff;
+                height: 78px;
+                flex: 1;
+                border-radius: 4px;
+                position: relative;
+
+                &::before {
+                    display: block;
+                    content: '';
+                    width: 0;
+                    height: 0;
+                    border: 14px solid transparent;
+                    border-right: 14px solid #fff;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: -26px;
+                }
+            }
+        }
+
+    }
+}

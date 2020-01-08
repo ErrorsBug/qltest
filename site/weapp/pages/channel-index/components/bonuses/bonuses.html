@@ -1,0 +1,9 @@
+<view class="bonuses" wx:if="{{isActCourse === 'Y' && isCreateGroup === 'N' && !hadRedpackCoupon}}" bind:tap="onWrapperTap">
+    <view class="red-envelope">
+        <form class="btn-group" bindsubmit="onFormSubmit" report-submit>
+            <button class="main-body" catch:tap="onMainBodyTap"  formType="submit"></button>
+        </form>
+    </view>
+</view>
+
+<view class="bonuses-small-entry" wx:if="{{isActCourse === 'Y'}}" catch:tap="onSmallEntryTap"></view>

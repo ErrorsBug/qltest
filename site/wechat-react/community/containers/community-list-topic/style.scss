@@ -1,0 +1,16 @@
+.community-lt-box{
+    min-height: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    .community-lt-1{
+        box-sizing: border-box;
+        flex-grow: 1;
+        flex-basis: 0;
+        max-width: 100%;
+        position: relative;
+    }
+    .ln-scroll-box{
+        box-sizing: border-box;
+    }
+}

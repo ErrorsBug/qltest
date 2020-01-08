@@ -1,0 +1,60 @@
+.co-white-pd {
+    height: 84rpx;
+    border: none;
+}
+.co-scroll-view {
+    // margin-bottom: 1rpx;
+    -webkit-overflow-scrolling: touch;
+    background-color: rgba(255,255,255,.95);
+    border-bottom: 1rpx solid #ccc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    height: 84rpx;
+}
+
+.co-scroll-body {
+    height: 84rpx;
+    white-space: nowrap;
+}
+
+.co-scroll-body:before {
+    content: '';
+    display: inline-block;
+    width: 30rpx;
+    height: 10rpx;
+}
+
+.co-scroll-body:after {
+    content: '';
+    display: inline-block;
+    width: 30rpx;
+    height: 10rpx;
+}
+
+.co-scroll-item {
+    min-width: 40rpx;
+    max-width: 180rpx;
+    padding: 0 30rpx;
+    margin: 0;
+    overflow: hidden;
+    display: inline-block;
+    color: #505559;
+}
+
+.co-scroll-item-active {
+    color: #f73657;
+    border-bottom: 4rpx solid #ef5670;
+}
+
+.co-scroll-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 81rpx;
+}
+
+.co-scroll-item-text {
+    font-size: 28rpx;
+}

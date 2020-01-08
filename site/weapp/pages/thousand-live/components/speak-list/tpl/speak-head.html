@@ -1,0 +1,8 @@
+<!-- <template name="speak-tpl-head"> -->
+  <view class="sp-head-view">
+    <image class="sp-user-head" src="{{speak.speakCreateByHeadImgUrl}}"></image>
+    <block wx:if="{{topicView.topicPo.isEnableReward == 'Y'}}">
+      <text class="sp-pay-like" data-id="{{speak.id}}" bindtap="openReward" wx:if="{{system !='ios'}}">赏 11{{system}}</text>
+    </block>
+  </view>
+<!-- </template> -->

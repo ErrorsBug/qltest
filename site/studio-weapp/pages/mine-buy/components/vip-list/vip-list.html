@@ -1,0 +1,22 @@
+<scroll-view 
+    scroll-y="true" 
+    lower-threshold="200" 
+    bindscrolltolower="loadList" 
+    name="channel" 
+    hidden="{{!visible}}"
+    class="vip-purchase-list-wrap"
+>
+    <view class="vip-purchase-list">
+        <block wx:for="{{list}}" wx:key="key" wx:for-index="buyIndex">
+            <view class="list-item {{item.overtime?'overtime':''}}" data-liveid="{{item.businessId}}" bindtap="linkToLive">
+                <image class="image" wx:if="{{item.pic}}" src="{{item.pic}}"></image>
+                <view class="info">
+                    <view class="title elli"> {{item.name}}</view>
+                    <view class="time elli" wx:if="{{item.overtime}}">已过期</view>
+                    <view class="time elli" wx:if="{{!item.overtime}}">有效期至{{item.expiryTimeStr}}</view>
+                </view>
+            </view>
+        </block>
+    </view>
+    <no-more noMore="{{noMore}}" noneOne="{{noneOne}}" />
+</scroll-view>

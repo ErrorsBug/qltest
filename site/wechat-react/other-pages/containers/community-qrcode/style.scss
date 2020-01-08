@@ -1,0 +1,237 @@
+.community-qrcode-container {
+    height: 100%;
+
+    .community-qrcode-container-inner {
+        padding-top: 20px;
+        height: 100%;
+        position: relative;
+        background-image: url(./assets/background.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        box-sizing: border-box;
+
+        &.no-service-qrcode {
+            padding-top: 100px;
+        }
+
+        .qrcode-container,
+        .qrcode-tips-2,
+        .community-qrcode-tips {
+            width: 90%;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        .community-qrcode-tips {
+            margin-bottom: 15px;
+            height: 60px;
+            line-height: 60px;
+            text-align: right;
+
+            .content-box {
+                margin: 0 0 0 auto;
+                width: fit-content;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+            }
+
+            img{
+                width: 30px;
+                height: 30px;
+            }
+
+            .text {
+                margin-left: 10px;
+                font-size: 26px;
+                color: #666666;
+            }
+        }
+
+        .qrcode-container,
+        .qrcode-tips-2 {
+            background: #fff;
+            box-shadow: rgba(0, 0, 0, 0.1) 0 2px 30px;
+            border-radius: 16px;
+        }
+
+        .qrcode-tips-2 {
+            padding: 30px;
+            font-size: 32px;
+            box-sizing: border-box;
+            text-align: center;
+
+            p:first-child {
+                margin-bottom: 15px;
+            }
+
+            .trigger {
+                cursor: pointer;
+                color: #2b7dd9;
+            }
+        }
+
+        .qrcode-container {
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+
+            .qrcode-error-mask {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: #fff;
+                padding: 0 71px 0 69px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                p {
+                    font-size: 28px;
+                    font-weight: bold;
+                    color: #333333;
+                    line-height: 40px;
+                }
+                .img-wrap {
+                    width: 307px;
+                    margin-bottom: 40px;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .qrcode-title {
+                display: flex;
+                align-items: center;
+                .nickname {
+                    width: 115px;
+                    height: 115px;
+                    margin-right: 20px;
+                }
+
+                .title {
+                    flex: 1;
+                    font-size: 30px;
+                    text-align: left;
+                    font-weight: 600;
+                    overflow: hidden;
+                    line-height: normal;
+                    max-height: 3em;
+                }
+            }
+
+            .qrcode-info {
+                color: #808080;
+            }
+
+            .qrcode-wrap {
+                margin: 20px auto;
+                padding: 0;
+            }
+
+            .qrcode {
+                display: inline-block;
+                height: 480px;
+                width: 480px;
+            }
+        }
+
+        .prompt {
+            font-family: PingFangSC-Regular;
+            font-size: 36px;
+            color: #666666;
+            letter-spacing: 4px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .join-in {
+            font-family: PingFangSC-Regular;
+            font-size: 36px;
+            color: #f73657;
+            letter-spacing: 4px;
+            text-align: center;
+
+            &:before {
+                content: " ";
+                display: inline-block;
+                vertical-align: middle;
+                height: 5px;
+                width: 28px;
+                border-radius: 2.5px;
+                background: #f83657;
+                margin-right: 22px;
+            }
+
+            &:after {
+                content: " ";
+                display: inline-block;
+                vertical-align: middle;
+                height: 5px;
+                width: 28px;
+                border-radius: 2.5px;
+                background: #f83657;
+                margin-left: 22px;
+            }
+        }
+    }
+}
+
+.feedback-toast {
+    width: 60%;
+    padding: 10px 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+
+    p {
+        margin: 15px 0;
+    }
+
+    .copy-text {
+        margin-left: 5px;
+        color: #f73657;
+    }
+}
+
+.qrcode-teacher {
+    width: 100%;
+    background: #eee;
+
+    &-container {
+        width: 400px;
+        min-height: 400px;
+        margin: 0 auto;
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+    }
+
+    &-tips {
+        margin-top: 40px;
+        color: #fff;
+        font-size: 32px;
+        font-weight: bolder;
+        letter-spacing: 0.2em;
+        text-align: center;
+
+        p:first-child {
+            margin-bottom: 20px;
+        }
+    }
+}
